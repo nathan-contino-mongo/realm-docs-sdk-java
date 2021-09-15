@@ -1,0 +1,188 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+io.realm.OrderedCollectionChangeSet
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_OrderedCollectionChangeSet:
+
+This interface describes the changes made to a collection during the last update.**OrderedCollectionChangeSet (?)**is passed to the **OrderedRealmCollectionChangeListener (?)**which is registered by **RealmResults#addChangeListener(OrderedRealmCollectionChangeListener) (?)**.
+
+
+
+The change information is available in two formats: a simple array of row indices in the collection for each type of change, or an array of **Range (?)**s.
+
+
+
+
+Nested Class Summary
+====================
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Class and Description
+   
+   * - public static final
+     - io.realm.OrderedCollectionChangeSet.State
+   
+   * - public static
+     - io.realm.OrderedCollectionChangeSet.Range
+   
+   
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - public :ref:`OrderedCollectionChangeSet.State <io_realm_OrderedCollectionChangeSet_State>`
+     - :ref:`getState <io_realm_OrderedCollectionChangeSet_getState____>` ()
+       
+       Returns the state represented by this change.
+       
+       
+       
+   
+   * - public **int (?)**
+     - :ref:`getDeletions <io_realm_OrderedCollectionChangeSet_getDeletions____>` ()
+       
+       The deleted indices in the previous version of the collection.
+       
+       
+       
+   
+   * - public **int (?)**
+     - :ref:`getInsertions <io_realm_OrderedCollectionChangeSet_getInsertions____>` ()
+       
+       The inserted indices in the new version of the collection.
+       
+       
+       
+   
+   * - public **int (?)**
+     - :ref:`getChanges <io_realm_OrderedCollectionChangeSet_getChanges____>` ()
+       
+       The modified indices in the new version of the collection.
+       
+       
+       
+   
+   * - public :ref:`OrderedCollectionChangeSet.Range <io_realm_OrderedCollectionChangeSet_Range>`
+     - :ref:`getDeletionRanges <io_realm_OrderedCollectionChangeSet_getDeletionRanges____>` ()
+       
+       The deleted ranges of objects in the previous version of the collection.
+       
+       
+       
+   
+   * - public :ref:`OrderedCollectionChangeSet.Range <io_realm_OrderedCollectionChangeSet_Range>`
+     - :ref:`getInsertionRanges <io_realm_OrderedCollectionChangeSet_getInsertionRanges____>` ()
+       
+       The inserted ranges of objects in the new version of the collection.
+       
+       
+       
+   
+   * - public :ref:`OrderedCollectionChangeSet.Range <io_realm_OrderedCollectionChangeSet_Range>`
+     - :ref:`getChangeRanges <io_realm_OrderedCollectionChangeSet_getChangeRanges____>` ()
+       
+       The modified ranges of objects in the new version of the collection.
+       
+       
+       
+   
+   * - public `Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__
+     - :ref:`getError <io_realm_OrderedCollectionChangeSet_getError____>` ()
+       
+       Returns any error that happened.
+       
+       
+       
+   
+   
+Method Detail
+=============
+
+.. _io_realm_OrderedCollectionChangeSet_getState____:
+
+getState
+--------
+
+public :ref:`OrderedCollectionChangeSet.State <io_realm_OrderedCollectionChangeSet_State>` getState ()
+
+Returns the state represented by this change. See **State (?)**for a description of the different states a changeset can be in.
+
+
+See Also
+~~~~~~~~
+
+State.. _io_realm_OrderedCollectionChangeSet_getDeletions____:
+
+getDeletions
+------------
+
+public **int (?)** getDeletions ()
+
+The deleted indices in the previous version of the collection.
+.. _io_realm_OrderedCollectionChangeSet_getInsertions____:
+
+getInsertions
+-------------
+
+public **int (?)** getInsertions ()
+
+The inserted indices in the new version of the collection.
+.. _io_realm_OrderedCollectionChangeSet_getChanges____:
+
+getChanges
+----------
+
+public **int (?)** getChanges ()
+
+The modified indices in the new version of the collection.For **RealmResults (?)**, this means that one or more of the properties of the object at the given index were modified (or an object linked to by that object was modified).
+
+
+
+
+.. _io_realm_OrderedCollectionChangeSet_getDeletionRanges____:
+
+getDeletionRanges
+-----------------
+
+public :ref:`OrderedCollectionChangeSet.Range <io_realm_OrderedCollectionChangeSet_Range>` getDeletionRanges ()
+
+The deleted ranges of objects in the previous version of the collection.
+.. _io_realm_OrderedCollectionChangeSet_getInsertionRanges____:
+
+getInsertionRanges
+------------------
+
+public :ref:`OrderedCollectionChangeSet.Range <io_realm_OrderedCollectionChangeSet_Range>` getInsertionRanges ()
+
+The inserted ranges of objects in the new version of the collection.
+.. _io_realm_OrderedCollectionChangeSet_getChangeRanges____:
+
+getChangeRanges
+---------------
+
+public :ref:`OrderedCollectionChangeSet.Range <io_realm_OrderedCollectionChangeSet_Range>` getChangeRanges ()
+
+The modified ranges of objects in the new version of the collection.
+.. _io_realm_OrderedCollectionChangeSet_getError____:
+
+getError
+--------
+
+public `Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__ getError ()
+
+Returns any error that happened. If an error has happened, the state of the collection and other changeset information is undefined. It is possible for a collection to go into an error state after being created and starting to send updates.
+

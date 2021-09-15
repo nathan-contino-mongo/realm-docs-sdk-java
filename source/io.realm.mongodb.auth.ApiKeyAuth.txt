@@ -1,0 +1,456 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+io.realm.mongodb.auth.ApiKeyAuth
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_mongodb_auth_ApiKeyAuth:
+
+*Superclass:*
+
+- `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
+
+This class exposes functionality for a user to manage API keys under their control.
+Constructors
+============
+
+- io.realm.mongodb.auth.ApiKeyAuth(User)
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - public :ref:`User <io_realm_mongodb_User>`
+     - :ref:`getUser <io_realm_mongodb_auth_ApiKeyAuth_getUser____>` ()
+       
+       Returns the **User (?)**that this instance in associated with.
+       
+       
+       
+       
+       
+   
+   * - public :ref:`App <io_realm_mongodb_App>`
+     - :ref:`getApp <io_realm_mongodb_auth_ApiKeyAuth_getApp____>` ()
+       
+       Returns the **App (?)**that this instance in associated with.
+       
+       
+       
+       
+       
+   
+   * - public :ref:`ApiKey <io_realm_mongodb_auth_ApiKey>`
+     - :ref:`create <io_realm_mongodb_auth_ApiKeyAuth_create__String__>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ name)
+       
+       Creates a user API key that can be used to authenticate as the user.
+       
+       
+       
+   
+   * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`
+     - :ref:`createAsync <io_realm_mongodb_auth_ApiKeyAuth_createAsync__String__App_Callback_ApiKey___>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ name, :ref:`io.realm.mongodb.App.Callback\<io.realm.mongodb.auth.ApiKey> <io_realm_mongodb_App_Callback>` callback)
+       
+       Asynchronously creates a user API key that can be used to authenticate as the user.
+       
+       
+       
+   
+   * - public :ref:`ApiKey <io_realm_mongodb_auth_ApiKey>`
+     - :ref:`fetch <io_realm_mongodb_auth_ApiKeyAuth_fetch__ObjectId__>` (**ObjectId (?)** id)
+       
+       Fetches a specific user API key associated with the user.
+       
+       
+       
+   
+   * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`
+     - :ref:`fetchAsync <io_realm_mongodb_auth_ApiKeyAuth_fetchAsync__ObjectId__App_Callback_ApiKey___>` (**ObjectId (?)** id, :ref:`io.realm.mongodb.App.Callback\<io.realm.mongodb.auth.ApiKey> <io_realm_mongodb_App_Callback>` callback)
+       
+       Fetches a specific user API key associated with the user.
+       
+       
+       
+   
+   * - public `List <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__
+     - :ref:`fetchAll <io_realm_mongodb_auth_ApiKeyAuth_fetchAll____>` ()
+       
+       Fetches all API keys associated with the user.
+       
+       
+       
+   
+   * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`
+     - :ref:`fetchAll <io_realm_mongodb_auth_ApiKeyAuth_fetchAll__App_Callback_List_ApiKey____>` (:ref:`io.realm.mongodb.App.Callback\<java.util.List\<io.realm.mongodb.auth.ApiKey>> <io_realm_mongodb_App_Callback>` callback)
+       
+       Fetches all API keys associated with the user.
+       
+       
+       
+   
+   * - public **void (?)**
+     - :ref:`delete <io_realm_mongodb_auth_ApiKeyAuth_delete__ObjectId__>` (**ObjectId (?)** id)
+       
+       Deletes a specific API key created by the user.
+       
+       
+       
+   
+   * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`
+     - :ref:`deleteAsync <io_realm_mongodb_auth_ApiKeyAuth_deleteAsync__ObjectId__App_Callback_Void___>` (**ObjectId (?)** id, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
+       
+       Deletes a specific API key created by the user.
+       
+       
+       
+   
+   * - public **void (?)**
+     - :ref:`disable <io_realm_mongodb_auth_ApiKeyAuth_disable__ObjectId__>` (**ObjectId (?)** id)
+       
+       Disables a specific API key created by the user.
+       
+       
+       
+   
+   * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`
+     - :ref:`disableAsync <io_realm_mongodb_auth_ApiKeyAuth_disableAsync__ObjectId__App_Callback_Void___>` (**ObjectId (?)** id, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
+       
+       Disables a specific API key created by the user.
+       
+       
+       
+   
+   * - public **void (?)**
+     - :ref:`enable <io_realm_mongodb_auth_ApiKeyAuth_enable__ObjectId__>` (**ObjectId (?)** id)
+       
+       Enables a specific API key created by the user.
+       
+       
+       
+   
+   * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`
+     - :ref:`enableAsync <io_realm_mongodb_auth_ApiKeyAuth_enableAsync__ObjectId__App_Callback_Void___>` (**ObjectId (?)** id, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
+       
+       Enables a specific API key created by the user.
+       
+       
+       
+   
+   * - public **boolean (?)**
+     - :ref:`equals <io_realm_mongodb_auth_ApiKeyAuth_equals__Object__>` (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ o)
+       
+       
+       
+       
+       
+   
+   * - public **int (?)**
+     - :ref:`hashCode <io_realm_mongodb_auth_ApiKeyAuth_hashCode____>` ()
+       
+       
+       
+       
+       
+   
+   * - public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__
+     - :ref:`toString <io_realm_mongodb_auth_ApiKeyAuth_toString____>` ()
+       
+       
+       
+       
+       
+   
+   * - protected abstract **void (?)**
+     - :ref:`call <io_realm_mongodb_auth_ApiKeyAuth_call__int__String__OsJavaNetworkTransport_NetworkTransportJNIResultCallback__>` (**int (?)** functionType, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ arg, **OsJavaNetworkTransport.NetworkTransportJNIResultCallback (?)** callback)
+       
+       
+       
+       
+       
+   
+   
+Method Detail
+=============
+
+.. _io_realm_mongodb_auth_ApiKeyAuth_getUser____:
+
+getUser
+-------
+
+public :ref:`User <io_realm_mongodb_User>` getUser ()
+
+Returns the **User (?)**that this instance in associated with.
+
+
+.. _io_realm_mongodb_auth_ApiKeyAuth_getApp____:
+
+getApp
+------
+
+public :ref:`App <io_realm_mongodb_App>` getApp ()
+
+Returns the **App (?)**that this instance in associated with.
+
+
+.. _io_realm_mongodb_auth_ApiKeyAuth_create__String__:
+
+create
+------
+
+public :ref:`ApiKey <io_realm_mongodb_auth_ApiKey>` create (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ name)
+
+Creates a user API key that can be used to authenticate as the user.The value of the key must be persisted at this time as this is the only time it is visible.
+
+The key is enabled when created. It can be disabled by calling **#disable(ObjectId) (?)**.
+
+
+
+
+Parameters
+~~~~~~~~~~
+
+- name - the name of the key
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_mongodb_auth_ApiKeyAuth_createAsync__String__App_Callback_ApiKey___:
+
+createAsync
+-----------
+
+public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` createAsync (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ name, :ref:`io.realm.mongodb.App.Callback\<io.realm.mongodb.auth.ApiKey> <io_realm_mongodb_App_Callback>` callback)
+
+Asynchronously creates a user API key that can be used to authenticate as the user.The value of the key must be persisted at this time as this is the only time it is visible.
+
+The key is enabled when created. It can be disabled by calling **#disable(ObjectId) (?)**.
+
+
+
+
+Parameters
+~~~~~~~~~~
+
+- name - the name of the key
+   
+- callback - callback when key creation has completed or failed. The callback will always happen on the same thread as this method is called on.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_mongodb_auth_ApiKeyAuth_fetch__ObjectId__:
+
+fetch
+-----
+
+public :ref:`ApiKey <io_realm_mongodb_auth_ApiKey>` fetch (**ObjectId (?)** id)
+
+Fetches a specific user API key associated with the user.
+Parameters
+~~~~~~~~~~
+
+- id - the id of the key to fetch.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_mongodb_auth_ApiKeyAuth_fetchAsync__ObjectId__App_Callback_ApiKey___:
+
+fetchAsync
+----------
+
+public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` fetchAsync (**ObjectId (?)** id, :ref:`io.realm.mongodb.App.Callback\<io.realm.mongodb.auth.ApiKey> <io_realm_mongodb_App_Callback>` callback)
+
+Fetches a specific user API key associated with the user.
+Parameters
+~~~~~~~~~~
+
+- id - the id of the key to fetch.
+   
+- callback - callback used when the key was fetched or the call failed. The callback will always happen on the same thread as this method was called on.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_mongodb_auth_ApiKeyAuth_fetchAll____:
+
+fetchAll
+--------
+
+public `List <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__ fetchAll ()
+
+Fetches all API keys associated with the user.
+Throws
+~~~~~~
+
+.. _io_realm_mongodb_auth_ApiKeyAuth_fetchAll__App_Callback_List_ApiKey____:
+
+fetchAll
+--------
+
+public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` fetchAll (:ref:`io.realm.mongodb.App.Callback\<java.util.List\<io.realm.mongodb.auth.ApiKey>> <io_realm_mongodb_App_Callback>` callback)
+
+Fetches all API keys associated with the user.
+Parameters
+~~~~~~~~~~
+
+- callback - callback used when the keys were fetched or the call failed. The callback will always happen on the same thread as this method was called on.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_mongodb_auth_ApiKeyAuth_delete__ObjectId__:
+
+delete
+------
+
+public **void (?)** delete (**ObjectId (?)** id)
+
+Deletes a specific API key created by the user.
+Parameters
+~~~~~~~~~~
+
+- id - the id of the key to delete.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_mongodb_auth_ApiKeyAuth_deleteAsync__ObjectId__App_Callback_Void___:
+
+deleteAsync
+-----------
+
+public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` deleteAsync (**ObjectId (?)** id, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
+
+Deletes a specific API key created by the user.
+Parameters
+~~~~~~~~~~
+
+- id - the id of the key to delete.
+   
+- callback - callback used when the was deleted or the call failed. The callback will always happen on the same thread as this method was called on.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_mongodb_auth_ApiKeyAuth_disable__ObjectId__:
+
+disable
+-------
+
+public **void (?)** disable (**ObjectId (?)** id)
+
+Disables a specific API key created by the user.
+Parameters
+~~~~~~~~~~
+
+- id - the id of the key to disable.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_mongodb_auth_ApiKeyAuth_disableAsync__ObjectId__App_Callback_Void___:
+
+disableAsync
+------------
+
+public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` disableAsync (**ObjectId (?)** id, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
+
+Disables a specific API key created by the user.
+Parameters
+~~~~~~~~~~
+
+- id - the id of the key to disable.
+   
+- callback - callback used when the key was disabled or the call failed. The callback will always happen on the same thread as this method was called on.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_mongodb_auth_ApiKeyAuth_enable__ObjectId__:
+
+enable
+------
+
+public **void (?)** enable (**ObjectId (?)** id)
+
+Enables a specific API key created by the user.
+Parameters
+~~~~~~~~~~
+
+- id - the id of the key to enable.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_mongodb_auth_ApiKeyAuth_enableAsync__ObjectId__App_Callback_Void___:
+
+enableAsync
+-----------
+
+public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` enableAsync (**ObjectId (?)** id, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
+
+Enables a specific API key created by the user.
+Parameters
+~~~~~~~~~~
+
+- id - the id of the key to enable.
+   
+- callback - callback used when the key was enabled or the call failed. The callback will always happen on the same thread as this method was called on.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_mongodb_auth_ApiKeyAuth_equals__Object__:
+
+equals
+------
+
+public **boolean (?)** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ o)
+
+
+.. _io_realm_mongodb_auth_ApiKeyAuth_hashCode____:
+
+hashCode
+--------
+
+public **int (?)** hashCode ()
+
+
+.. _io_realm_mongodb_auth_ApiKeyAuth_toString____:
+
+toString
+--------
+
+public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ toString ()
+
+
+.. _io_realm_mongodb_auth_ApiKeyAuth_call__int__String__OsJavaNetworkTransport_NetworkTransportJNIResultCallback__:
+
+call
+----
+
+protected abstract **void (?)** call (**int (?)** functionType, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ arg, **OsJavaNetworkTransport.NetworkTransportJNIResultCallback (?)** callback)
+
+
+

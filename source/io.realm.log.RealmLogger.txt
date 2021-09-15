@@ -1,0 +1,59 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+io.realm.log.RealmLogger
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_log_RealmLogger:
+
+Interface for custom loggers that can be registered at **RealmLog#add(RealmLogger) (?)**. The different log levels are described in **LogLevel (?)**.
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - public **void (?)**
+     - :ref:`log <io_realm_log_RealmLogger_log__int__String__Throwable__String__>` (**int (?)** level, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ tag, `Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__ throwable, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ message)
+       
+       Handles a log event.
+       
+       
+       
+   
+   
+Method Detail
+=============
+
+.. _io_realm_log_RealmLogger_log__int__String__Throwable__String__:
+
+log
+----
+
+public **void (?)** log (**int (?)** level, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ tag, `Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__ throwable, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ message)
+
+Handles a log event.
+Parameters
+~~~~~~~~~~
+
+- level - for this log event. It can only be a value between :ref:`LogLevel#TRACE <io_realm_log_LogLevel_TRACE>`and :ref:`LogLevel#FATAL <io_realm_log_LogLevel_FATAL>`
+   
+   
+   
+- tag - for this log event.
+   
+- throwable - optional exception to log.
+   
+- message - optional additional message.
+   
+
+
