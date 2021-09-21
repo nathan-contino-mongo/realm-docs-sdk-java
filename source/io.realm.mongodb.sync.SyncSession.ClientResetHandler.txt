@@ -32,8 +32,8 @@ The client reset process can be initiated in one of two ways:
    
 
 **WARNING:** Any writes to the Realm file between this callback and Client Reset has been executed, will not be synchronized to MongoDB Realm. Those changes will only be present in the backed up file. It is therefore recommended to close all open Realm instances as soon as possible.
-Method Summary
-==============
+``Method Summary``
+==================
 
 .. list-table::
    :header-rows: 1
@@ -41,7 +41,7 @@ Method Summary
    * - Modifier and Type
      - Method and Description
    
-   * - public **void (?)**
+   * - ``public`` **void (?)**
      - :ref:`onClientReset <io_realm_mongodb_sync_SyncSession_ClientResetHandler_onClientReset__SyncSession__ClientResetRequiredError__>` (:ref:`SyncSession <io_realm_mongodb_sync_SyncSession>` session, :ref:`ClientResetRequiredError <io_realm_mongodb_sync_ClientResetRequiredError>` error)
        
        Callback that indicates a Client Reset has happened.
@@ -50,25 +50,25 @@ Method Summary
        
    
    
-Method Detail
-=============
+``Method Detail``
+=================
 
 .. _io_realm_mongodb_sync_SyncSession_ClientResetHandler_onClientReset__SyncSession__ClientResetRequiredError__:
 
 onClientReset
 -------------
 
-public **void (?)** onClientReset (:ref:`SyncSession <io_realm_mongodb_sync_SyncSession>` session, :ref:`ClientResetRequiredError <io_realm_mongodb_sync_ClientResetRequiredError>` error)
+``public`` **void (?)** onClientReset (:ref:`SyncSession <io_realm_mongodb_sync_SyncSession>` session, :ref:`ClientResetRequiredError <io_realm_mongodb_sync_ClientResetRequiredError>` error)
 
 Callback that indicates a Client Reset has happened. This should be handled as quickly as possible as any further changes to the Realm will not be synchronized with the server and must be moved manually from the backup Realm to the new one.
-Parameters
-~~~~~~~~~~
+``Parameters``
+~~~~~~~~~~~~~~
 
-- session - **SyncSession (?)**this error happened on.
+- ``session - ``**SyncSession (?)**this error happened on.
    
    
    
-- error - **ClientResetRequiredError (?)**the specific Client Reset error.
+- ``error - ``**ClientResetRequiredError (?)**the specific Client Reset error.
    
    
    
