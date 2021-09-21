@@ -186,7 +186,7 @@ Method Detail
 ``getUser``
 -----------
 
-``public`` :ref:`User <io_realm_mongodb_User>``` getUser ``()
+public :ref:`User <io_realm_mongodb_User>` getUser ()
 
 Returns the **User (?)**that this instance in associated with.
 
@@ -196,7 +196,7 @@ Returns the **User (?)**that this instance in associated with.
 ``getApp``
 ----------
 
-``public`` :ref:`App <io_realm_mongodb_App>``` getApp ``()
+public :ref:`App <io_realm_mongodb_App>` getApp ()
 
 Returns the **App (?)**that this instance in associated with.
 
@@ -206,7 +206,7 @@ Returns the **App (?)**that this instance in associated with.
 ``create``
 ----------
 
-``public`` :ref:`ApiKey <io_realm_mongodb_auth_ApiKey>``` create ``(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ name)
+public :ref:`ApiKey <io_realm_mongodb_auth_ApiKey>` create (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ name)
 
 Creates a user API key that can be used to authenticate as the user.The value of the key must be persisted at this time as this is the only time it is visible.
 
@@ -218,7 +218,7 @@ The key is enabled when created. It can be disabled by calling **#disable(Object
 Parameters
 ~~~~~~~~~~
 
-- name - the name of the key
+- ``name - ``the name of the key
    
 
 Throws
@@ -229,7 +229,7 @@ Throws
 ``createAsync``
 ---------------
 
-``public`` :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>``` createAsync ``(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ name, :ref:`io.realm.mongodb.App.Callback\<io.realm.mongodb.auth.ApiKey> <io_realm_mongodb_App_Callback>` callback)
+public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` createAsync (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ name, :ref:`io.realm.mongodb.App.Callback\<io.realm.mongodb.auth.ApiKey> <io_realm_mongodb_App_Callback>` callback)
 
 Asynchronously creates a user API key that can be used to authenticate as the user.The value of the key must be persisted at this time as this is the only time it is visible.
 
@@ -241,9 +241,9 @@ The key is enabled when created. It can be disabled by calling **#disable(Object
 Parameters
 ~~~~~~~~~~
 
-- name - the name of the key
+- ``name - ``the name of the key
    
-- callback - callback when key creation has completed or failed. The callback will always happen on the same thread as this method is called on.
+- ``callback - ``callback when key creation has completed or failed. The callback will always happen on the same thread as this method is called on.
    
 
 Throws
@@ -254,13 +254,13 @@ Throws
 ``fetch``
 ---------
 
-``public`` :ref:`ApiKey <io_realm_mongodb_auth_ApiKey>``` fetch ``(**ObjectId (?)** id)
+public :ref:`ApiKey <io_realm_mongodb_auth_ApiKey>` fetch (**ObjectId (?)** id)
 
 Fetches a specific user API key associated with the user.
 Parameters
 ~~~~~~~~~~
 
-- id - the id of the key to fetch.
+- ``id - ``the id of the key to fetch.
    
 
 Throws
@@ -271,15 +271,15 @@ Throws
 ``fetchAsync``
 --------------
 
-``public`` :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>``` fetchAsync ``(**ObjectId (?)** id, :ref:`io.realm.mongodb.App.Callback\<io.realm.mongodb.auth.ApiKey> <io_realm_mongodb_App_Callback>` callback)
+public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` fetchAsync (**ObjectId (?)** id, :ref:`io.realm.mongodb.App.Callback\<io.realm.mongodb.auth.ApiKey> <io_realm_mongodb_App_Callback>` callback)
 
 Fetches a specific user API key associated with the user.
 Parameters
 ~~~~~~~~~~
 
-- id - the id of the key to fetch.
+- ``id - ``the id of the key to fetch.
    
-- callback - callback used when the key was fetched or the call failed. The callback will always happen on the same thread as this method was called on.
+- ``callback - ``callback used when the key was fetched or the call failed. The callback will always happen on the same thread as this method was called on.
    
 
 Throws
@@ -290,7 +290,7 @@ Throws
 ``fetchAll``
 ------------
 
-``public`` `List <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__`` fetchAll ``()
+public `List <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__ fetchAll ()
 
 Fetches all API keys associated with the user.
 Throws
@@ -301,13 +301,13 @@ Throws
 ``fetchAll``
 ------------
 
-``public`` :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>``` fetchAll ``(:ref:`io.realm.mongodb.App.Callback\<java.util.List\<io.realm.mongodb.auth.ApiKey>> <io_realm_mongodb_App_Callback>` callback)
+public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` fetchAll (:ref:`io.realm.mongodb.App.Callback\<java.util.List\<io.realm.mongodb.auth.ApiKey>> <io_realm_mongodb_App_Callback>` callback)
 
 Fetches all API keys associated with the user.
 Parameters
 ~~~~~~~~~~
 
-- callback - callback used when the keys were fetched or the call failed. The callback will always happen on the same thread as this method was called on.
+- ``callback - ``callback used when the keys were fetched or the call failed. The callback will always happen on the same thread as this method was called on.
    
 
 Throws
@@ -318,13 +318,13 @@ Throws
 ``delete``
 ----------
 
-``public`` **void (?)**`` delete ``(**ObjectId (?)** id)
+public **void (?)** delete (**ObjectId (?)** id)
 
 Deletes a specific API key created by the user.
 Parameters
 ~~~~~~~~~~
 
-- id - the id of the key to delete.
+- ``id - ``the id of the key to delete.
    
 
 Throws
@@ -335,15 +335,15 @@ Throws
 ``deleteAsync``
 ---------------
 
-``public`` :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>``` deleteAsync ``(**ObjectId (?)** id, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
+public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` deleteAsync (**ObjectId (?)** id, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
 
 Deletes a specific API key created by the user.
 Parameters
 ~~~~~~~~~~
 
-- id - the id of the key to delete.
+- ``id - ``the id of the key to delete.
    
-- callback - callback used when the was deleted or the call failed. The callback will always happen on the same thread as this method was called on.
+- ``callback - ``callback used when the was deleted or the call failed. The callback will always happen on the same thread as this method was called on.
    
 
 Throws
@@ -354,13 +354,13 @@ Throws
 ``disable``
 -----------
 
-``public`` **void (?)**`` disable ``(**ObjectId (?)** id)
+public **void (?)** disable (**ObjectId (?)** id)
 
 Disables a specific API key created by the user.
 Parameters
 ~~~~~~~~~~
 
-- id - the id of the key to disable.
+- ``id - ``the id of the key to disable.
    
 
 Throws
@@ -371,15 +371,15 @@ Throws
 ``disableAsync``
 ----------------
 
-``public`` :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>``` disableAsync ``(**ObjectId (?)** id, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
+public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` disableAsync (**ObjectId (?)** id, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
 
 Disables a specific API key created by the user.
 Parameters
 ~~~~~~~~~~
 
-- id - the id of the key to disable.
+- ``id - ``the id of the key to disable.
    
-- callback - callback used when the key was disabled or the call failed. The callback will always happen on the same thread as this method was called on.
+- ``callback - ``callback used when the key was disabled or the call failed. The callback will always happen on the same thread as this method was called on.
    
 
 Throws
@@ -390,13 +390,13 @@ Throws
 ``enable``
 ----------
 
-``public`` **void (?)**`` enable ``(**ObjectId (?)** id)
+public **void (?)** enable (**ObjectId (?)** id)
 
 Enables a specific API key created by the user.
 Parameters
 ~~~~~~~~~~
 
-- id - the id of the key to enable.
+- ``id - ``the id of the key to enable.
    
 
 Throws
@@ -407,15 +407,15 @@ Throws
 ``enableAsync``
 ---------------
 
-``public`` :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>``` enableAsync ``(**ObjectId (?)** id, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
+public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` enableAsync (**ObjectId (?)** id, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
 
 Enables a specific API key created by the user.
 Parameters
 ~~~~~~~~~~
 
-- id - the id of the key to enable.
+- ``id - ``the id of the key to enable.
    
-- callback - callback used when the key was enabled or the call failed. The callback will always happen on the same thread as this method was called on.
+- ``callback - ``callback used when the key was enabled or the call failed. The callback will always happen on the same thread as this method was called on.
    
 
 Throws
@@ -426,7 +426,7 @@ Throws
 ``equals``
 ----------
 
-``public`` **boolean (?)**`` equals ``(`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ o)
+public **boolean (?)** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ o)
 
 
 .. _io_realm_mongodb_auth_ApiKeyAuth_hashCode____:
@@ -434,7 +434,7 @@ Throws
 ``hashCode``
 ------------
 
-``public`` **int (?)**`` hashCode ``()
+public **int (?)** hashCode ()
 
 
 .. _io_realm_mongodb_auth_ApiKeyAuth_toString____:
@@ -442,7 +442,7 @@ Throws
 ``toString``
 ------------
 
-``public`` `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__`` toString ``()
+public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ toString ()
 
 
 .. _io_realm_mongodb_auth_ApiKeyAuth_call__int__String__OsJavaNetworkTransport_NetworkTransportJNIResultCallback__:
@@ -450,7 +450,7 @@ Throws
 ``call``
 --------
 
-``protected abstract`` **void (?)**`` call ``(**int (?)** functionType, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ arg, **OsJavaNetworkTransport.NetworkTransportJNIResultCallback (?)** callback)
+protected abstract **void (?)** call (**int (?)** functionType, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ arg, **OsJavaNetworkTransport.NetworkTransportJNIResultCallback (?)** callback)
 
 
 

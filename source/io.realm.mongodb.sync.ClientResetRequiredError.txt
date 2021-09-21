@@ -65,7 +65,7 @@ Method Detail
 ``executeClientReset``
 ----------------------
 
-``public`` **void (?)**`` executeClientReset ``()
+public **void (?)** executeClientReset ()
 
 Calling this method will execute the Client Reset manually instead of waiting until next app restart. This will only be possible if all instances of that Realm have been closed, otherwise a `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException/.html>`__will be thrown.
 
@@ -82,7 +82,7 @@ Throws
 ``getBackupFile``
 -----------------
 
-``public`` `File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__`` getBackupFile ``()
+public `File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__ getBackupFile ()
 
 Returns the location of the backed up Realm file. The file will not be present until the Client Reset has been fully executed.
 .. _io_realm_mongodb_sync_ClientResetRequiredError_getBackupRealmConfiguration____:
@@ -90,7 +90,7 @@ Returns the location of the backed up Realm file. The file will not be present u
 ``getBackupRealmConfiguration``
 -------------------------------
 
-``public`` :ref:`RealmConfiguration <io_realm_RealmConfiguration>``` getBackupRealmConfiguration ``()
+public :ref:`RealmConfiguration <io_realm_RealmConfiguration>` getBackupRealmConfiguration ()
 
 The configuration that can be used to open the backup Realm offline. This configuration can only be used in combination with a **DynamicRealm (?)**.
 
@@ -100,7 +100,7 @@ The configuration that can be used to open the backup Realm offline. This config
 ``getOriginalFile``
 -------------------
 
-``public`` `File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__`` getOriginalFile ``()
+public `File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__ getOriginalFile ()
 
 Returns the location of the original Realm file. After the Client Reset has completed, the file at this location will be deleted.
 

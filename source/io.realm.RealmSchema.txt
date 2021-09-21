@@ -115,7 +115,7 @@ Method Detail
 ``get``
 -------
 
-``public abstract`` :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>``` get ``(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ className)
+public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` get (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ className)
 
 Returns the **RealmObjectSchema (?)**for a given class. If this **RealmSchema (?)**is immutable, an immutable **RealmObjectSchema (?)**will be returned. Otherwise, it returns an mutable **RealmObjectSchema (?)**.
 
@@ -123,7 +123,7 @@ Returns the **RealmObjectSchema (?)**for a given class. If this **RealmSchema (?
 Parameters
 ~~~~~~~~~~
 
-- className - name of the class
+- ``className - ``name of the class
    
 
 .. _io_realm_RealmSchema_getAll____:
@@ -131,7 +131,7 @@ Parameters
 ``getAll``
 ----------
 
-``public abstract`` `Set <https://docs.oracle.com/javase/7/docs/api/java/util/Set.html>`__`` getAll ``()
+public abstract `Set <https://docs.oracle.com/javase/7/docs/api/java/util/Set.html>`__ getAll ()
 
 Returns the **RealmObjectSchema (?)**s for all RealmObject classes that can be saved in this Realm. If this **RealmSchema (?)**is immutable, an immutable **RealmObjectSchema (?)**set will be returned. Otherwise, it returns an mutable **RealmObjectSchema (?)**set.
 
@@ -141,13 +141,13 @@ Returns the **RealmObjectSchema (?)**s for all RealmObject classes that can be s
 ``create``
 ----------
 
-``public abstract`` :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>``` create ``(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ className)
+public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` create (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ className)
 
 Adds a new class to the Realm.
 Parameters
 ~~~~~~~~~~
 
-- className - name of the class.
+- ``className - ``name of the class.
    
 
 Throws
@@ -158,21 +158,21 @@ Throws
 ``createWithPrimaryKeyField``
 -----------------------------
 
-``public abstract`` :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>``` createWithPrimaryKeyField ``(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ className, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ primaryKeyFieldName, `java.lang.Class\<?> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__ fieldType, :ref:`io.realm.FieldAttribute[] <io_realm_FieldAttribute>` attributes)
+public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` createWithPrimaryKeyField (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ className, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ primaryKeyFieldName, `java.lang.Class\<?> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__ fieldType, :ref:`io.realm.FieldAttribute[] <io_realm_FieldAttribute>` attributes)
 
 Adds a new class to the Realm with a primary key field defined.
 Parameters
 ~~~~~~~~~~
 
-- className - name of the class.
+- ``className - ``name of the class.
    
-- primaryKeyFieldName - name of the primary key field.
+- ``primaryKeyFieldName - ``name of the primary key field.
    
-- fieldType - type of field to add. Only ``byte``, ``short``, ``int``, ``long``and their boxed types or the ``String``is supported.
+- ``fieldType - ``type of field to add. Only ``byte``, ``short``, ``int``, ``long``and their boxed types or the ``String``is supported.
    
    
    
-- attributes - set of attributes for this field. This method implicitly adds **FieldAttribute#PRIMARY_KEY (?)**and **FieldAttribute#INDEXED (?)**attributes to the field.
+- ``attributes - ``set of attributes for this field. This method implicitly adds **FieldAttribute#PRIMARY_KEY (?)**and **FieldAttribute#INDEXED (?)**attributes to the field.
    
    
    
@@ -185,7 +185,7 @@ Throws
 ``remove``
 ----------
 
-``public abstract`` **void (?)**`` remove ``(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ className)
+public abstract **void (?)** remove (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ className)
 
 Removes a class from the Realm. All data will be removed. Removing a class while other classes point to it will throw an `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException/.html>`__. Removes those classes or fields first.
 
@@ -193,7 +193,7 @@ Removes a class from the Realm. All data will be removed. Removing a class while
 Parameters
 ~~~~~~~~~~
 
-- className - name of the class to remove.
+- ``className - ``name of the class to remove.
    
 
 Throws
@@ -204,15 +204,15 @@ Throws
 ``rename``
 ----------
 
-``public abstract`` :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>``` rename ``(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ oldClassName, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ newClassName)
+public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` rename (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ oldClassName, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ newClassName)
 
 Renames a class already in the Realm.
 Parameters
 ~~~~~~~~~~
 
-- oldClassName - old class name.
+- ``oldClassName - ``old class name.
    
-- newClassName - new class name.
+- ``newClassName - ``new class name.
    
 
 Throws
@@ -223,13 +223,13 @@ Throws
 ``contains``
 ------------
 
-``public`` **boolean (?)**`` contains ``(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ className)
+public **boolean (?)** contains (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ className)
 
 Checks if a given class already exists in the schema.
 Parameters
 ~~~~~~~~~~
 
-- className - class name to check.
+- ``className - ``class name to check.
    
 
 .. _io_realm_RealmSchema_getColumnInfo__String__:
@@ -237,7 +237,7 @@ Parameters
 ``getColumnInfo``
 -----------------
 
-``protected final`` **ColumnInfo (?)**`` getColumnInfo ``(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ className)
+protected final **ColumnInfo (?)** getColumnInfo (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ className)
 
 
 .. _io_realm_RealmSchema_createKeyPathMapping____:
@@ -245,7 +245,7 @@ Parameters
 ``createKeyPathMapping``
 ------------------------
 
-``public`` **void (?)**`` createKeyPathMapping ``()
+public **void (?)** createKeyPathMapping ()
 
 Create the underlying keypath mapping. Should only be called by typed Realms.
 

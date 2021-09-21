@@ -111,7 +111,7 @@ Method Detail
 ``getSession``
 --------------
 
-``public synchronized`` :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>``` getSession ``(:ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>` syncConfiguration)
+public synchronized :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>` getSession (:ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>` syncConfiguration)
 
 Gets a cached **SyncSession (?)**for the given **SyncConfiguration (?)**or throw if no one exists yet. A session should exist after you open a Realm with a **SyncConfiguration (?)**.
 
@@ -119,7 +119,7 @@ Gets a cached **SyncSession (?)**for the given **SyncConfiguration (?)**or throw
 Parameters
 ~~~~~~~~~~
 
-- syncConfiguration - configuration object for the synchronized Realm.
+- ``syncConfiguration - ``configuration object for the synchronized Realm.
    
 
 Throws
@@ -130,7 +130,7 @@ Throws
 ``getAllSessions``
 ------------------
 
-``public synchronized`` `Collection <https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html>`__`` getAllSessions ``()
+public synchronized `Collection <https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html>`__ getAllSessions ()
 
 Gets a collection of all the cached **SyncSession (?)**.
 
@@ -140,7 +140,7 @@ Gets a collection of all the cached **SyncSession (?)**.
 ``getOrCreateSession``
 ----------------------
 
-``public synchronized`` :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>``` getOrCreateSession ``(:ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>` syncConfiguration)
+public synchronized :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>` getOrCreateSession (:ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>` syncConfiguration)
 
 Gets any cached **SyncSession (?)**for the given **SyncConfiguration (?)**or create a new one if no one exists. Note: This is mainly for internal usage, consider using **#getSession(SyncConfiguration) (?)**instead.
 
@@ -148,7 +148,7 @@ Gets any cached **SyncSession (?)**for the given **SyncConfiguration (?)**or cre
 Parameters
 ~~~~~~~~~~
 
-- syncConfiguration - configuration object for the synchronized Realm.
+- ``syncConfiguration - ``configuration object for the synchronized Realm.
    
 
 Throws
@@ -159,7 +159,7 @@ Throws
 ``reconnect``
 -------------
 
-``public`` **void (?)**`` reconnect ``()
+public **void (?)** reconnect ()
 
 Realm will automatically detect when a device gets connectivity after being offline and resume syncing.However, as some of these checks are performed using incremental backoff, this will in some cases not happen immediately.
 
