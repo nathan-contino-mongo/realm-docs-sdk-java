@@ -15,8 +15,8 @@ io.realm.mongodb.App.Result<T>
 - `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
 
 Result class representing the result of an async request from this app towards MongoDB Realm.
-``Method Summary``
-==================
+Method Summary
+==============
 
 .. list-table::
    :header-rows: 1
@@ -24,7 +24,7 @@ Result class representing the result of an async request from this app towards M
    * - Modifier and Type
      - Method and Description
    
-   * - ``public static`` :ref:`App.Result <io_realm_mongodb_App_Result>`
+   * - public static :ref:`App.Result <io_realm_mongodb_App_Result>`
      - :ref:`success <io_realm_mongodb_App_Result_success____>` <**T (?)** >()
        
        Creates a successful request result with no return value.
@@ -32,7 +32,7 @@ Result class representing the result of an async request from this app towards M
        
        
    
-   * - ``public static`` :ref:`App.Result <io_realm_mongodb_App_Result>`
+   * - public static :ref:`App.Result <io_realm_mongodb_App_Result>`
      - :ref:`withResult <io_realm_mongodb_App_Result_withResult__T__>` <**T (?)** >(**T (?)** result)
        
        Creates a successful request result with a return value.
@@ -40,7 +40,7 @@ Result class representing the result of an async request from this app towards M
        
        
    
-   * - ``public static`` :ref:`App.Result <io_realm_mongodb_App_Result>`
+   * - public static :ref:`App.Result <io_realm_mongodb_App_Result>`
      - :ref:`withError <io_realm_mongodb_App_Result_withError__AppException__>` <**T (?)** >(:ref:`AppException <io_realm_mongodb_AppException>` exception)
        
        Creates a failed request result.
@@ -48,7 +48,7 @@ Result class representing the result of an async request from this app towards M
        
        
    
-   * - ``public`` **boolean (?)**
+   * - public **boolean (?)**
      - :ref:`isSuccess <io_realm_mongodb_App_Result_isSuccess____>` ()
        
        Returns whether or not request was successful
@@ -56,7 +56,7 @@ Result class representing the result of an async request from this app towards M
        
        
    
-   * - ``public`` **T (?)**
+   * - public **T (?)**
      - :ref:`get <io_realm_mongodb_App_Result_get____>` ()
        
        Returns the response in case the request was a success.
@@ -64,7 +64,7 @@ Result class representing the result of an async request from this app towards M
        
        
    
-   * - ``public`` **T (?)**
+   * - public **T (?)**
      - :ref:`getOrDefault <io_realm_mongodb_App_Result_getOrDefault__T__>` (**T (?)** defaultValue)
        
        Returns the response if the request was a success.
@@ -72,7 +72,7 @@ Result class representing the result of an async request from this app towards M
        
        
    
-   * - ``public`` **T (?)**
+   * - public **T (?)**
      - :ref:`getOrThrow <io_realm_mongodb_App_Result_getOrThrow____>` ()
        
        If the request was successful the response is returned, otherwise the provided error is thrown.
@@ -80,7 +80,7 @@ Result class representing the result of an async request from this app towards M
        
        
    
-   * - ``public`` :ref:`AppException <io_realm_mongodb_AppException>`
+   * - public :ref:`AppException <io_realm_mongodb_AppException>`
      - :ref:`getError <io_realm_mongodb_App_Result_getError____>` ()
        
        Returns the error in case of a failed request.
@@ -89,86 +89,86 @@ Result class representing the result of an async request from this app towards M
        
    
    
-``Method Detail``
-=================
+Method Detail
+=============
 
 .. _io_realm_mongodb_App_Result_success____:
 
-success
--------
+``success``
+-----------
 
-``public static`` :ref:`App.Result <io_realm_mongodb_App_Result>` success <**T (?)** >()
+``public static`` :ref:`App.Result <io_realm_mongodb_App_Result>``` success ``<**T (?)** >()
 
 Creates a successful request result with no return value.
 .. _io_realm_mongodb_App_Result_withResult__T__:
 
-withResult
-----------
+``withResult``
+--------------
 
-``public static`` :ref:`App.Result <io_realm_mongodb_App_Result>` withResult <**T (?)** >(**T (?)** result)
+``public static`` :ref:`App.Result <io_realm_mongodb_App_Result>``` withResult ``<**T (?)** >(**T (?)** result)
 
 Creates a successful request result with a return value.
-``Parameters``
-~~~~~~~~~~~~~~
+Parameters
+~~~~~~~~~~
 
-- ``result - ``the result value.
+- result - the result value.
    
 
 .. _io_realm_mongodb_App_Result_withError__AppException__:
 
-withError
----------
+``withError``
+-------------
 
-``public static`` :ref:`App.Result <io_realm_mongodb_App_Result>` withError <**T (?)** >(:ref:`AppException <io_realm_mongodb_AppException>` exception)
+``public static`` :ref:`App.Result <io_realm_mongodb_App_Result>``` withError ``<**T (?)** >(:ref:`AppException <io_realm_mongodb_AppException>` exception)
 
 Creates a failed request result. The request failed for some reason, either because there was a network error or the Realm Object Server returned an error.
-``Parameters``
-~~~~~~~~~~~~~~
+Parameters
+~~~~~~~~~~
 
-- ``exception - ``error that occurred.
+- exception - error that occurred.
    
 
 .. _io_realm_mongodb_App_Result_isSuccess____:
 
-isSuccess
----------
+``isSuccess``
+-------------
 
-``public`` **boolean (?)** isSuccess ()
+``public`` **boolean (?)**`` isSuccess ``()
 
 Returns whether or not request was successful
 .. _io_realm_mongodb_App_Result_get____:
 
-get
-----
+``get``
+-------
 
-``public`` **T (?)** get ()
+``public`` **T (?)**`` get ``()
 
 Returns the response in case the request was a success.
 .. _io_realm_mongodb_App_Result_getOrDefault__T__:
 
-getOrDefault
-------------
+``getOrDefault``
+----------------
 
-``public`` **T (?)** getOrDefault (**T (?)** defaultValue)
+``public`` **T (?)**`` getOrDefault ``(**T (?)** defaultValue)
 
 Returns the response if the request was a success. If it failed, the default value is returned instead.
 .. _io_realm_mongodb_App_Result_getOrThrow____:
 
-getOrThrow
-----------
+``getOrThrow``
+--------------
 
-``public`` **T (?)** getOrThrow ()
+``public`` **T (?)**`` getOrThrow ``()
 
 If the request was successful the response is returned, otherwise the provided error is thrown.
-``Throws``
-~~~~~~~~~~
+Throws
+~~~~~~
 
 .. _io_realm_mongodb_App_Result_getError____:
 
-getError
---------
+``getError``
+------------
 
-``public`` :ref:`AppException <io_realm_mongodb_AppException>` getError ()
+``public`` :ref:`AppException <io_realm_mongodb_AppException>``` getError ``()
 
 Returns the error in case of a failed request.
 
