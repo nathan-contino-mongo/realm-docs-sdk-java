@@ -1,0 +1,120 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+io.realm.mongodb.push.Push
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_mongodb_push_Push:
+
+*Superclass:*
+
+- `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
+
+The Push client allows to register/deregister for push notifications from a client app.
+Constructors
+============
+
+- ``io.realm.mongodb.push.Push(OsPush)``
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - public **void (?)**
+     - :ref:`registerDevice <io_realm_mongodb_push_Push_registerDevice__String__>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ registrationToken)
+       
+       Registers the given FCM registration token with the currently logged in user's device on MongoDB Realm.
+       
+       
+       
+   
+   * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`
+     - :ref:`registerDeviceAsync <io_realm_mongodb_push_Push_registerDeviceAsync__String__App_Callback_Void___>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ registrationToken, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
+       
+       Registers the given FCM registration token with the currently logged in user's device on MongoDB Realm.
+       
+       
+       
+   
+   * - public **void (?)**
+     - :ref:`deregisterDevice <io_realm_mongodb_push_Push_deregisterDevice____>` ()
+       
+       Deregisters the FCM registration token bound to the currently logged in user's device on MongoDB Realm.
+       
+       
+       
+   
+   * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`
+     - :ref:`deregisterDeviceAsync <io_realm_mongodb_push_Push_deregisterDeviceAsync__App_Callback_Void___>` (:ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
+       
+       Deregisters the FCM registration token bound to the currently logged in user's device on MongoDB Realm.
+       
+       
+       
+   
+   
+Method Detail
+=============
+
+.. _io_realm_mongodb_push_Push_registerDevice__String__:
+
+``registerDevice``
+------------------
+
+public **void (?)** registerDevice (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ registrationToken)
+
+Registers the given FCM registration token with the currently logged in user's device on MongoDB Realm.
+Parameters
+~~~~~~~~~~
+
+- ``registrationToken - ``The registration token to register.
+   
+
+.. _io_realm_mongodb_push_Push_registerDeviceAsync__String__App_Callback_Void___:
+
+``registerDeviceAsync``
+-----------------------
+
+public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` registerDeviceAsync (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ registrationToken, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
+
+Registers the given FCM registration token with the currently logged in user's device on MongoDB Realm.
+Parameters
+~~~~~~~~~~
+
+- ``registrationToken - ``The registration token to register.
+   
+- ``callback - ``The callback used when the device has been registered or the call failed - it will always happen on the same thread as this method was called on.
+   
+
+.. _io_realm_mongodb_push_Push_deregisterDevice____:
+
+``deregisterDevice``
+--------------------
+
+public **void (?)** deregisterDevice ()
+
+Deregisters the FCM registration token bound to the currently logged in user's device on MongoDB Realm.
+.. _io_realm_mongodb_push_Push_deregisterDeviceAsync__App_Callback_Void___:
+
+``deregisterDeviceAsync``
+-------------------------
+
+public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` deregisterDeviceAsync (:ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
+
+Deregisters the FCM registration token bound to the currently logged in user's device on MongoDB Realm.
+Parameters
+~~~~~~~~~~
+
+- ``callback - ``The callback used when the device has been registered or the call failed - it will always happen on the same thread as this method was called on.
+   
+
+

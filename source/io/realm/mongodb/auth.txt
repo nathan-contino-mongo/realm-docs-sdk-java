@@ -5,21 +5,40 @@
    :depth: 2
    :class: singlecol
 
-io.realm.mongodb.auth.ApiKeyAuth
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+io.realm.mongodb.auth.EmailPasswordAuth
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. _io_realm_mongodb_auth_ApiKeyAuth:
+.. _io_realm_mongodb_auth_EmailPasswordAuth:
 
 *Superclass:*
 
 - `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
 
-This class exposes functionality for a user to manage API keys under their control.
+Class encapsulating functionality provided when **User (?)**'s are logged in through the **Credentials.Provider#EMAIL_PASSWORD (?)**provider.
+
+
 Constructors
 ============
 
-- ``io.realm.mongodb.auth.ApiKeyAuth(User)``
+- ``io.realm.mongodb.auth.EmailPasswordAuth(App)``
 
+Field Summary
+=============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Field and Description
+   
+   * - ``protected finalio.realm.mongodb.App``
+       
+       
+     - ``app``
+       
+       
+   
+   
 Method Summary
 ==============
 
@@ -29,148 +48,124 @@ Method Summary
    * - Modifier and Type
      - Method and Description
    
-   * - public :ref:`User <io_realm_mongodb_User>`
-     - :ref:`getUser <io_realm_mongodb_auth_ApiKeyAuth_getUser____>` ()
+   * - public **void (?)**
+     - :ref:`registerUser <io_realm_mongodb_auth_EmailPasswordAuth_registerUser__String__String__>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ email, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ password)
        
-       Returns the **User (?)**that this instance in associated with.
-       
-       
-       
-       
-       
-   
-   * - public :ref:`App <io_realm_mongodb_App>`
-     - :ref:`getApp <io_realm_mongodb_auth_ApiKeyAuth_getApp____>` ()
-       
-       Returns the **App (?)**that this instance in associated with.
-       
-       
-       
-       
-       
-   
-   * - public :ref:`ApiKey <io_realm_mongodb_auth_ApiKey>`
-     - :ref:`create <io_realm_mongodb_auth_ApiKeyAuth_create__String__>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ name)
-       
-       Creates a user API key that can be used to authenticate as the user.
+       Registers a new user with the given email and password.
        
        
        
    
    * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`
-     - :ref:`createAsync <io_realm_mongodb_auth_ApiKeyAuth_createAsync__String__App_Callback_ApiKey___>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ name, :ref:`io.realm.mongodb.App.Callback\<io.realm.mongodb.auth.ApiKey> <io_realm_mongodb_App_Callback>` callback)
+     - :ref:`registerUserAsync <io_realm_mongodb_auth_EmailPasswordAuth_registerUserAsync__String__String__App_Callback_Void___>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ email, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ password, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
        
-       Asynchronously creates a user API key that can be used to authenticate as the user.
-       
-       
-       
-   
-   * - public :ref:`ApiKey <io_realm_mongodb_auth_ApiKey>`
-     - :ref:`fetch <io_realm_mongodb_auth_ApiKeyAuth_fetch__ObjectId__>` (**ObjectId (?)** id)
-       
-       Fetches a specific user API key associated with the user.
-       
-       
-       
-   
-   * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`
-     - :ref:`fetchAsync <io_realm_mongodb_auth_ApiKeyAuth_fetchAsync__ObjectId__App_Callback_ApiKey___>` (**ObjectId (?)** id, :ref:`io.realm.mongodb.App.Callback\<io.realm.mongodb.auth.ApiKey> <io_realm_mongodb_App_Callback>` callback)
-       
-       Fetches a specific user API key associated with the user.
-       
-       
-       
-   
-   * - public `List <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__
-     - :ref:`fetchAll <io_realm_mongodb_auth_ApiKeyAuth_fetchAll____>` ()
-       
-       Fetches all API keys associated with the user.
-       
-       
-       
-   
-   * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`
-     - :ref:`fetchAll <io_realm_mongodb_auth_ApiKeyAuth_fetchAll__App_Callback_List_ApiKey____>` (:ref:`io.realm.mongodb.App.Callback\<java.util.List\<io.realm.mongodb.auth.ApiKey>> <io_realm_mongodb_App_Callback>` callback)
-       
-       Fetches all API keys associated with the user.
+       Registers a new user with the given email and password.
        
        
        
    
    * - public **void (?)**
-     - :ref:`delete <io_realm_mongodb_auth_ApiKeyAuth_delete__ObjectId__>` (**ObjectId (?)** id)
+     - :ref:`confirmUser <io_realm_mongodb_auth_EmailPasswordAuth_confirmUser__String__String__>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ token, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ tokenId)
        
-       Deletes a specific API key created by the user.
+       Confirms a user with the given token and token id.
        
        
        
    
    * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`
-     - :ref:`deleteAsync <io_realm_mongodb_auth_ApiKeyAuth_deleteAsync__ObjectId__App_Callback_Void___>` (**ObjectId (?)** id, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
+     - :ref:`confirmUserAsync <io_realm_mongodb_auth_EmailPasswordAuth_confirmUserAsync__String__String__App_Callback_Void___>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ token, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ tokenId, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
        
-       Deletes a specific API key created by the user.
+       Confirms a user with the given token and token id.
        
        
        
    
    * - public **void (?)**
-     - :ref:`disable <io_realm_mongodb_auth_ApiKeyAuth_disable__ObjectId__>` (**ObjectId (?)** id)
+     - :ref:`resendConfirmationEmail <io_realm_mongodb_auth_EmailPasswordAuth_resendConfirmationEmail__String__>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ email)
        
-       Disables a specific API key created by the user.
+       Resend the confirmation for a user to the given email.
        
        
        
    
    * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`
-     - :ref:`disableAsync <io_realm_mongodb_auth_ApiKeyAuth_disableAsync__ObjectId__App_Callback_Void___>` (**ObjectId (?)** id, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
+     - :ref:`resendConfirmationEmailAsync <io_realm_mongodb_auth_EmailPasswordAuth_resendConfirmationEmailAsync__String__App_Callback_Void___>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ email, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
        
-       Disables a specific API key created by the user.
+       Resend the confirmation for a user to the given email.
        
        
        
    
    * - public **void (?)**
-     - :ref:`enable <io_realm_mongodb_auth_ApiKeyAuth_enable__ObjectId__>` (**ObjectId (?)** id)
+     - :ref:`retryCustomConfirmation <io_realm_mongodb_auth_EmailPasswordAuth_retryCustomConfirmation__String__>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ email)
        
-       Enables a specific API key created by the user.
+       Retries the custom confirmation on a user for a given email.
        
        
        
    
    * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`
-     - :ref:`enableAsync <io_realm_mongodb_auth_ApiKeyAuth_enableAsync__ObjectId__App_Callback_Void___>` (**ObjectId (?)** id, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
+     - :ref:`retryCustomConfirmationAsync <io_realm_mongodb_auth_EmailPasswordAuth_retryCustomConfirmationAsync__String__App_Callback_Void___>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ email, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
        
-       Enables a specific API key created by the user.
-       
-       
-       
-   
-   * - public **boolean (?)**
-     - :ref:`equals <io_realm_mongodb_auth_ApiKeyAuth_equals__Object__>` (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ o)
-       
-       
+       Retries the custom confirmation on a user for a given email.
        
        
        
    
-   * - public **int (?)**
-     - :ref:`hashCode <io_realm_mongodb_auth_ApiKeyAuth_hashCode____>` ()
+   * - public **void (?)**
+     - :ref:`sendResetPasswordEmail <io_realm_mongodb_auth_EmailPasswordAuth_sendResetPasswordEmail__String__>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ email)
+       
+       Sends a user a password reset email for the given email.
+       
+       
+       
+   
+   * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`
+     - :ref:`sendResetPasswordEmailAsync <io_realm_mongodb_auth_EmailPasswordAuth_sendResetPasswordEmailAsync__String__App_Callback_Void___>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ email, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
+       
+       Sends a user a password reset email for the given email.
+       
+       
+       
+   
+   * - public **void (?)**
+     - :ref:`callResetPasswordFunction <io_realm_mongodb_auth_EmailPasswordAuth_callResetPasswordFunction__String__String__Object_____>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ email, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ newPassword, `java.lang.Object[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ args)
+       
+       Call the reset password function configured to the **Credentials.Provider#EMAIL_PASSWORD (?)**provider.
        
        
        
        
        
    
-   * - public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__
-     - :ref:`toString <io_realm_mongodb_auth_ApiKeyAuth_toString____>` ()
+   * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`
+     - :ref:`callResetPasswordFunctionAsync <io_realm_mongodb_auth_EmailPasswordAuth_callResetPasswordFunctionAsync__String__String__Object[]__App_Callback_Void___>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ email, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ newPassword, `java.lang.Object[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ args, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
+       
+       Call the reset password function configured to the **Credentials.Provider#EMAIL_PASSWORD (?)**provider.
        
        
+       
+       
+       
+   
+   * - public **void (?)**
+     - :ref:`resetPassword <io_realm_mongodb_auth_EmailPasswordAuth_resetPassword__String__String__String__>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ token, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ tokenId, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ newPassword)
+       
+       Resets the password of a user with the given token, token id, and new password.
+       
+       
+       
+   
+   * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`
+     - :ref:`resetPasswordAsync <io_realm_mongodb_auth_EmailPasswordAuth_resetPasswordAsync__String__String__String__App_Callback_Void___>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ token, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ tokenId, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ newPassword, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
+       
+       Resets the newPassword of a user with the given token, token id, and new password.
        
        
        
    
    * - protected abstract **void (?)**
-     - :ref:`call <io_realm_mongodb_auth_ApiKeyAuth_call__int__String__OsJavaNetworkTransport_NetworkTransportJNIResultCallback__>` (**int (?)** functionType, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ arg, **OsJavaNetworkTransport.NetworkTransportJNIResultCallback (?)** callback)
+     - :ref:`call <io_realm_mongodb_auth_EmailPasswordAuth_call__int__OsJavaNetworkTransport_NetworkTransportJNIResultCallback__String_____>` (**int (?)** functionType, **OsJavaNetworkTransport.NetworkTransportJNIResultCallback (?)** callback, `java.lang.String[] <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ args)
        
        
        
@@ -178,279 +173,312 @@ Method Summary
        
    
    
+Field Detail
+============
+
+.. _io_realm_mongodb_auth_EmailPasswordAuth_app:
+
+``app``
+-------
+
+
 Method Detail
 =============
 
-.. _io_realm_mongodb_auth_ApiKeyAuth_getUser____:
+.. _io_realm_mongodb_auth_EmailPasswordAuth_registerUser__String__String__:
 
-``getUser``
------------
-
-public :ref:`User <io_realm_mongodb_User>` getUser ()
-
-Returns the **User (?)**that this instance in associated with.
-
-
-.. _io_realm_mongodb_auth_ApiKeyAuth_getApp____:
-
-``getApp``
-----------
-
-public :ref:`App <io_realm_mongodb_App>` getApp ()
-
-Returns the **App (?)**that this instance in associated with.
-
-
-.. _io_realm_mongodb_auth_ApiKeyAuth_create__String__:
-
-``create``
-----------
-
-public :ref:`ApiKey <io_realm_mongodb_auth_ApiKey>` create (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ name)
-
-Creates a user API key that can be used to authenticate as the user.The value of the key must be persisted at this time as this is the only time it is visible.
-
-The key is enabled when created. It can be disabled by calling **#disable(ObjectId) (?)**.
-
-
-
-
-Parameters
-~~~~~~~~~~
-
-- ``name - ``the name of the key
-   
-
-Throws
-~~~~~~
-
-.. _io_realm_mongodb_auth_ApiKeyAuth_createAsync__String__App_Callback_ApiKey___:
-
-``createAsync``
----------------
-
-public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` createAsync (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ name, :ref:`io.realm.mongodb.App.Callback\<io.realm.mongodb.auth.ApiKey> <io_realm_mongodb_App_Callback>` callback)
-
-Asynchronously creates a user API key that can be used to authenticate as the user.The value of the key must be persisted at this time as this is the only time it is visible.
-
-The key is enabled when created. It can be disabled by calling **#disable(ObjectId) (?)**.
-
-
-
-
-Parameters
-~~~~~~~~~~
-
-- ``name - ``the name of the key
-   
-- ``callback - ``callback when key creation has completed or failed. The callback will always happen on the same thread as this method is called on.
-   
-
-Throws
-~~~~~~
-
-.. _io_realm_mongodb_auth_ApiKeyAuth_fetch__ObjectId__:
-
-``fetch``
----------
-
-public :ref:`ApiKey <io_realm_mongodb_auth_ApiKey>` fetch (**ObjectId (?)** id)
-
-Fetches a specific user API key associated with the user.
-Parameters
-~~~~~~~~~~
-
-- ``id - ``the id of the key to fetch.
-   
-
-Throws
-~~~~~~
-
-.. _io_realm_mongodb_auth_ApiKeyAuth_fetchAsync__ObjectId__App_Callback_ApiKey___:
-
-``fetchAsync``
---------------
-
-public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` fetchAsync (**ObjectId (?)** id, :ref:`io.realm.mongodb.App.Callback\<io.realm.mongodb.auth.ApiKey> <io_realm_mongodb_App_Callback>` callback)
-
-Fetches a specific user API key associated with the user.
-Parameters
-~~~~~~~~~~
-
-- ``id - ``the id of the key to fetch.
-   
-- ``callback - ``callback used when the key was fetched or the call failed. The callback will always happen on the same thread as this method was called on.
-   
-
-Throws
-~~~~~~
-
-.. _io_realm_mongodb_auth_ApiKeyAuth_fetchAll____:
-
-``fetchAll``
-------------
-
-public `List <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__ fetchAll ()
-
-Fetches all API keys associated with the user.
-Throws
-~~~~~~
-
-.. _io_realm_mongodb_auth_ApiKeyAuth_fetchAll__App_Callback_List_ApiKey____:
-
-``fetchAll``
-------------
-
-public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` fetchAll (:ref:`io.realm.mongodb.App.Callback\<java.util.List\<io.realm.mongodb.auth.ApiKey>> <io_realm_mongodb_App_Callback>` callback)
-
-Fetches all API keys associated with the user.
-Parameters
-~~~~~~~~~~
-
-- ``callback - ``callback used when the keys were fetched or the call failed. The callback will always happen on the same thread as this method was called on.
-   
-
-Throws
-~~~~~~
-
-.. _io_realm_mongodb_auth_ApiKeyAuth_delete__ObjectId__:
-
-``delete``
-----------
-
-public **void (?)** delete (**ObjectId (?)** id)
-
-Deletes a specific API key created by the user.
-Parameters
-~~~~~~~~~~
-
-- ``id - ``the id of the key to delete.
-   
-
-Throws
-~~~~~~
-
-.. _io_realm_mongodb_auth_ApiKeyAuth_deleteAsync__ObjectId__App_Callback_Void___:
-
-``deleteAsync``
----------------
-
-public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` deleteAsync (**ObjectId (?)** id, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
-
-Deletes a specific API key created by the user.
-Parameters
-~~~~~~~~~~
-
-- ``id - ``the id of the key to delete.
-   
-- ``callback - ``callback used when the was deleted or the call failed. The callback will always happen on the same thread as this method was called on.
-   
-
-Throws
-~~~~~~
-
-.. _io_realm_mongodb_auth_ApiKeyAuth_disable__ObjectId__:
-
-``disable``
------------
-
-public **void (?)** disable (**ObjectId (?)** id)
-
-Disables a specific API key created by the user.
-Parameters
-~~~~~~~~~~
-
-- ``id - ``the id of the key to disable.
-   
-
-Throws
-~~~~~~
-
-.. _io_realm_mongodb_auth_ApiKeyAuth_disableAsync__ObjectId__App_Callback_Void___:
-
-``disableAsync``
+``registerUser``
 ----------------
 
-public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` disableAsync (**ObjectId (?)** id, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
+public **void (?)** registerUser (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ email, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ password)
 
-Disables a specific API key created by the user.
+Registers a new user with the given email and password.
 Parameters
 ~~~~~~~~~~
 
-- ``id - ``the id of the key to disable.
+- ``email - ``the email to register with. This will be the username used during log in.
    
-- ``callback - ``callback used when the key was disabled or the call failed. The callback will always happen on the same thread as this method was called on.
+- ``password - ``the password to associate with the email. The password must be between 6 and 128 characters long.
    
 
 Throws
 ~~~~~~
 
-.. _io_realm_mongodb_auth_ApiKeyAuth_enable__ObjectId__:
+.. _io_realm_mongodb_auth_EmailPasswordAuth_registerUserAsync__String__String__App_Callback_Void___:
 
-``enable``
-----------
+``registerUserAsync``
+---------------------
 
-public **void (?)** enable (**ObjectId (?)** id)
+public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` registerUserAsync (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ email, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ password, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
 
-Enables a specific API key created by the user.
+Registers a new user with the given email and password.
 Parameters
 ~~~~~~~~~~
 
-- ``id - ``the id of the key to enable.
+- ``email - ``the email to register with. This will be the username used during log in.
+   
+- ``password - ``the password to associated with the email. The password must be between 6 and 128 characters long.
+   
+- ``callback - ``callback when registration has completed or failed. The callback will always happen on the same thread as this method is called on.
    
 
 Throws
 ~~~~~~
 
-.. _io_realm_mongodb_auth_ApiKeyAuth_enableAsync__ObjectId__App_Callback_Void___:
+.. _io_realm_mongodb_auth_EmailPasswordAuth_confirmUser__String__String__:
 
-``enableAsync``
+``confirmUser``
 ---------------
 
-public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` enableAsync (**ObjectId (?)** id, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
+public **void (?)** confirmUser (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ token, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ tokenId)
 
-Enables a specific API key created by the user.
+Confirms a user with the given token and token id.
 Parameters
 ~~~~~~~~~~
 
-- ``id - ``the id of the key to enable.
+- ``token - ``the confirmation token.
    
-- ``callback - ``callback used when the key was enabled or the call failed. The callback will always happen on the same thread as this method was called on.
+- ``tokenId - ``the id of the confirmation token.
    
 
 Throws
 ~~~~~~
 
-.. _io_realm_mongodb_auth_ApiKeyAuth_equals__Object__:
+.. _io_realm_mongodb_auth_EmailPasswordAuth_confirmUserAsync__String__String__App_Callback_Void___:
 
-``equals``
-----------
+``confirmUserAsync``
+--------------------
 
-public **boolean (?)** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ o)
+public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` confirmUserAsync (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ token, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ tokenId, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
+
+Confirms a user with the given token and token id.
+Parameters
+~~~~~~~~~~
+
+- ``token - ``the confirmation token.
+   
+- ``tokenId - ``the id of the confirmation token.
+   
+- ``callback - ``callback when confirmation has completed or failed. The callback will always happen on the same thread as this method is called on.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_mongodb_auth_EmailPasswordAuth_resendConfirmationEmail__String__:
+
+``resendConfirmationEmail``
+---------------------------
+
+public **void (?)** resendConfirmationEmail (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ email)
+
+Resend the confirmation for a user to the given email.
+Parameters
+~~~~~~~~~~
+
+- ``email - ``the email of the user.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_mongodb_auth_EmailPasswordAuth_resendConfirmationEmailAsync__String__App_Callback_Void___:
+
+``resendConfirmationEmailAsync``
+--------------------------------
+
+public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` resendConfirmationEmailAsync (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ email, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
+
+Resend the confirmation for a user to the given email.
+Parameters
+~~~~~~~~~~
+
+- ``email - ``the email of the user.
+   
+- ``callback - ``callback when resending the email has completed or failed. The callback will always happen on the same thread as this method is called on.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_mongodb_auth_EmailPasswordAuth_retryCustomConfirmation__String__:
+
+``retryCustomConfirmation``
+---------------------------
+
+public **void (?)** retryCustomConfirmation (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ email)
+
+Retries the custom confirmation on a user for a given email.
+Parameters
+~~~~~~~~~~
+
+- ``email - ``the email of the user.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_mongodb_auth_EmailPasswordAuth_retryCustomConfirmationAsync__String__App_Callback_Void___:
+
+``retryCustomConfirmationAsync``
+--------------------------------
+
+public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` retryCustomConfirmationAsync (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ email, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
+
+Retries the custom confirmation on a user for a given email.
+Parameters
+~~~~~~~~~~
+
+- ``email - ``the email of the user.
+   
+- ``callback - ``callback when retrying the custom confirmation has completed or failed. The callback will always happen on the same thread as this method is called on.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_mongodb_auth_EmailPasswordAuth_sendResetPasswordEmail__String__:
+
+``sendResetPasswordEmail``
+--------------------------
+
+public **void (?)** sendResetPasswordEmail (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ email)
+
+Sends a user a password reset email for the given email.
+Parameters
+~~~~~~~~~~
+
+- ``email - ``the email of the user.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_mongodb_auth_EmailPasswordAuth_sendResetPasswordEmailAsync__String__App_Callback_Void___:
+
+``sendResetPasswordEmailAsync``
+-------------------------------
+
+public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` sendResetPasswordEmailAsync (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ email, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
+
+Sends a user a password reset email for the given email.
+Parameters
+~~~~~~~~~~
+
+- ``email - ``the email of the user.
+   
+- ``callback - ``callback when sending the email has completed or failed. The callback will always happen on the same thread as this method is called on.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_mongodb_auth_EmailPasswordAuth_callResetPasswordFunction__String__String__Object_____:
+
+``callResetPasswordFunction``
+-----------------------------
+
+public **void (?)** callResetPasswordFunction (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ email, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ newPassword, `java.lang.Object[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ args)
+
+Call the reset password function configured to the **Credentials.Provider#EMAIL_PASSWORD (?)**provider.
 
 
-.. _io_realm_mongodb_auth_ApiKeyAuth_hashCode____:
+Parameters
+~~~~~~~~~~
 
-``hashCode``
-------------
+- ``email - ``the email of the user.
+   
+- ``newPassword - ``the new password of the user.
+   
+- ``args - ``any additional arguments provided to the reset function. All arguments must be able to be converted to JSON compatible values using ``toString()``.
+   
+   
+   
 
-public **int (?)** hashCode ()
+Throws
+~~~~~~
+
+.. _io_realm_mongodb_auth_EmailPasswordAuth_callResetPasswordFunctionAsync__String__String__Object[]__App_Callback_Void___:
+
+``callResetPasswordFunctionAsync``
+----------------------------------
+
+public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` callResetPasswordFunctionAsync (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ email, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ newPassword, `java.lang.Object[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ args, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
+
+Call the reset password function configured to the **Credentials.Provider#EMAIL_PASSWORD (?)**provider.
 
 
-.. _io_realm_mongodb_auth_ApiKeyAuth_toString____:
+Parameters
+~~~~~~~~~~
 
-``toString``
-------------
+- ``email - ``the email of the user.
+   
+- ``newPassword - ``the new password of the user.
+   
+- ``args - ``any additional arguments provided to the reset function. All arguments must be able to be converted to JSON compatible values using ``toString()``.
+   
+   
+   
+- ``callback - ``callback when the reset has completed or failed. The callback will always happen on the same thread as this this method is called on.
+   
 
-public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ toString ()
+Throws
+~~~~~~
 
+.. _io_realm_mongodb_auth_EmailPasswordAuth_resetPassword__String__String__String__:
 
-.. _io_realm_mongodb_auth_ApiKeyAuth_call__int__String__OsJavaNetworkTransport_NetworkTransportJNIResultCallback__:
+``resetPassword``
+-----------------
+
+public **void (?)** resetPassword (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ token, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ tokenId, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ newPassword)
+
+Resets the password of a user with the given token, token id, and new password.
+Parameters
+~~~~~~~~~~
+
+- ``token - ``the reset password token.
+   
+- ``tokenId - ``the id of the reset password token.
+   
+- ``newPassword - ``the new password for the user identified by the ``token``. The password must be between 6 and 128 characters long.
+   
+   
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_mongodb_auth_EmailPasswordAuth_resetPasswordAsync__String__String__String__App_Callback_Void___:
+
+``resetPasswordAsync``
+----------------------
+
+public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` resetPasswordAsync (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ token, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ tokenId, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ newPassword, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
+
+Resets the newPassword of a user with the given token, token id, and new password.
+Parameters
+~~~~~~~~~~
+
+- ``token - ``the reset password token.
+   
+- ``tokenId - ``the id of the reset password token.
+   
+- ``newPassword - ``the new password for the user identified by the ``token``. The password must be between 6 and 128 characters long.
+   
+   
+   
+- ``callback - ``callback when the reset has completed or failed. The callback will always happen on the same thread as this this method is called on.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_mongodb_auth_EmailPasswordAuth_call__int__OsJavaNetworkTransport_NetworkTransportJNIResultCallback__String_____:
 
 ``call``
 --------
 
-protected abstract **void (?)** call (**int (?)** functionType, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ arg, **OsJavaNetworkTransport.NetworkTransportJNIResultCallback (?)** callback)
+protected abstract **void (?)** call (**int (?)** functionType, **OsJavaNetworkTransport.NetworkTransportJNIResultCallback (?)** callback, `java.lang.String[] <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ args)
 
 
 

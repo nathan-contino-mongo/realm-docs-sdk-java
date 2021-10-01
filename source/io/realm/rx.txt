@@ -5,25 +5,12 @@
    :depth: 2
    :class: singlecol
 
-io.realm.rx.RealmObservableFactory
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+io.realm.rx.RxObservableFactory
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. _io_realm_rx_RealmObservableFactory:
+.. _io_realm_rx_RxObservableFactory:
 
-*Superclass:*
-
-- `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
-
-*Implemented interfaces:*
-
-- :ref:`io.realm.rx.RxObservableFactory <io_realm_rx_RxObservableFactory>`
-
-Factory class for creating Observables for RxJava (<=2.0.*).
-Constructors
-============
-
-- ``io.realm.rx.RealmObservableFactory(boolean)``
-
+Factory interface for creating Rx Observables for Realm classes.
 Method Summary
 ==============
 
@@ -34,7 +21,9 @@ Method Summary
      - Method and Description
    
    * - public **<any> (?)**
-     - :ref:`from <io_realm_rx_RealmObservableFactory_from__Realm__>` (:ref:`Realm <io_realm_Realm>` realm)
+     - :ref:`from <io_realm_rx_RxObservableFactory_from__Realm__>` (**Realm** realm)
+       
+       Creates a Flowable for a **Realm (?)**.
        
        
        
@@ -42,7 +31,9 @@ Method Summary
        
    
    * - public **<any> (?)**
-     - :ref:`from <io_realm_rx_RealmObservableFactory_from__DynamicRealm__>` (:ref:`DynamicRealm <io_realm_DynamicRealm>` realm)
+     - :ref:`from <io_realm_rx_RxObservableFactory_from__DynamicRealm__>` (:ref:`DynamicRealm <io_realm_DynamicRealm>` realm)
+       
+       Creates a Flowable for a **DynamicRealm (?)**.
        
        
        
@@ -50,7 +41,9 @@ Method Summary
        
    
    * - public **<any> (?)**
-     - :ref:`from <io_realm_rx_RealmObservableFactory_from__Realm__RealmResults_E___>` <**E (?)** >(:ref:`Realm <io_realm_Realm>` realm, :ref:`io.realm.RealmResults\<E> <io_realm_RealmResults>` results)
+     - :ref:`from <io_realm_rx_RxObservableFactory_from__Realm__RealmResults_E___>` <**E (?)** >(**Realm** realm, **io.realm.RealmResults<E>** results)
+       
+       Creates a Flowable for a **RealmResults (?)**.
        
        
        
@@ -58,7 +51,9 @@ Method Summary
        
    
    * - public **<any> (?)**
-     - :ref:`changesetsFrom <io_realm_rx_RealmObservableFactory_changesetsFrom__Realm__RealmResults_E___>` <**E (?)** >(:ref:`Realm <io_realm_Realm>` realm, :ref:`io.realm.RealmResults\<E> <io_realm_RealmResults>` results)
+     - :ref:`changesetsFrom <io_realm_rx_RxObservableFactory_changesetsFrom__Realm__RealmResults_E___>` <**E (?)** >(**Realm** realm, **io.realm.RealmResults<E>** results)
+       
+       Creates an Observable for a **RealmResults (?)**.
        
        
        
@@ -66,7 +61,9 @@ Method Summary
        
    
    * - public **<any> (?)**
-     - :ref:`from <io_realm_rx_RealmObservableFactory_from__DynamicRealm__RealmResults_E___>` <**E (?)** >(:ref:`DynamicRealm <io_realm_DynamicRealm>` realm, :ref:`io.realm.RealmResults\<E> <io_realm_RealmResults>` results)
+     - :ref:`from <io_realm_rx_RxObservableFactory_from__DynamicRealm__RealmResults_E___>` <**E (?)** >(:ref:`DynamicRealm <io_realm_DynamicRealm>` realm, **io.realm.RealmResults<E>** results)
+       
+       Creates a Flowable for a **RealmResults (?)**.
        
        
        
@@ -74,7 +71,9 @@ Method Summary
        
    
    * - public **<any> (?)**
-     - :ref:`changesetsFrom <io_realm_rx_RealmObservableFactory_changesetsFrom__DynamicRealm__RealmResults_E___>` <**E (?)** >(:ref:`DynamicRealm <io_realm_DynamicRealm>` realm, :ref:`io.realm.RealmResults\<E> <io_realm_RealmResults>` results)
+     - :ref:`changesetsFrom <io_realm_rx_RxObservableFactory_changesetsFrom__DynamicRealm__RealmResults_E___>` <**E (?)** >(:ref:`DynamicRealm <io_realm_DynamicRealm>` realm, **io.realm.RealmResults<E>** results)
+       
+       Creates an Observable for a **RealmResults (?)**.
        
        
        
@@ -82,7 +81,9 @@ Method Summary
        
    
    * - public **<any> (?)**
-     - :ref:`from <io_realm_rx_RealmObservableFactory_from__Realm__RealmList_E___>` <**E (?)** >(:ref:`Realm <io_realm_Realm>` realm, :ref:`io.realm.RealmList\<E> <io_realm_RealmList>` list)
+     - :ref:`from <io_realm_rx_RxObservableFactory_from__Realm__RealmList_E___>` <**E (?)** >(**Realm** realm, **io.realm.RealmList<E>** list)
+       
+       Creates an Observable for a **RealmList (?)**.
        
        
        
@@ -90,7 +91,9 @@ Method Summary
        
    
    * - public **<any> (?)**
-     - :ref:`changesetsFrom <io_realm_rx_RealmObservableFactory_changesetsFrom__Realm__RealmList_E___>` <**E (?)** >(:ref:`Realm <io_realm_Realm>` realm, :ref:`io.realm.RealmList\<E> <io_realm_RealmList>` list)
+     - :ref:`changesetsFrom <io_realm_rx_RxObservableFactory_changesetsFrom__Realm__RealmList_E___>` <**E (?)** >(**Realm** realm, **io.realm.RealmList<E>** list)
+       
+       Creates an Observable for a **RealmList (?)**.
        
        
        
@@ -98,7 +101,9 @@ Method Summary
        
    
    * - public **<any> (?)**
-     - :ref:`from <io_realm_rx_RealmObservableFactory_from__DynamicRealm__RealmList_E___>` <**E (?)** >(:ref:`DynamicRealm <io_realm_DynamicRealm>` realm, :ref:`io.realm.RealmList\<E> <io_realm_RealmList>` list)
+     - :ref:`from <io_realm_rx_RxObservableFactory_from__DynamicRealm__RealmList_E___>` <**E (?)** >(:ref:`DynamicRealm <io_realm_DynamicRealm>` realm, **io.realm.RealmList<E>** list)
+       
+       Creates a Flowable for a **RealmList (?)**.
        
        
        
@@ -106,7 +111,9 @@ Method Summary
        
    
    * - public **<any> (?)**
-     - :ref:`changesetsFrom <io_realm_rx_RealmObservableFactory_changesetsFrom__DynamicRealm__RealmList_E___>` <**E (?)** >(:ref:`DynamicRealm <io_realm_DynamicRealm>` realm, :ref:`io.realm.RealmList\<E> <io_realm_RealmList>` list)
+     - :ref:`changesetsFrom <io_realm_rx_RxObservableFactory_changesetsFrom__DynamicRealm__RealmList_E___>` <**E (?)** >(:ref:`DynamicRealm <io_realm_DynamicRealm>` realm, **io.realm.RealmList<E>** list)
+       
+       Creates an Observable for a **RealmList (?)**.
        
        
        
@@ -114,7 +121,9 @@ Method Summary
        
    
    * - public **<any> (?)**
-     - :ref:`from <io_realm_rx_RealmObservableFactory_from__Realm__E__>` <**E (?)** >(:ref:`Realm <io_realm_Realm>` realm, **E (?)** object)
+     - :ref:`from <io_realm_rx_RxObservableFactory_from__Realm__E__>` <**E (?)** >(**Realm** realm, **E (?)** object)
+       
+       Creates a Flowable for a **RealmObject (?)**.
        
        
        
@@ -122,7 +131,9 @@ Method Summary
        
    
    * - public **<any> (?)**
-     - :ref:`changesetsFrom <io_realm_rx_RealmObservableFactory_changesetsFrom__Realm__E__>` <**E (?)** >(:ref:`Realm <io_realm_Realm>` realm, **E (?)** object)
+     - :ref:`changesetsFrom <io_realm_rx_RxObservableFactory_changesetsFrom__Realm__E__>` <**E (?)** >(**Realm** realm, **E (?)** object)
+       
+       Creates an Observable for a **RealmObject (?)**.
        
        
        
@@ -130,7 +141,9 @@ Method Summary
        
    
    * - public **<any> (?)**
-     - :ref:`from <io_realm_rx_RealmObservableFactory_from__DynamicRealm__DynamicRealmObject__>` (:ref:`DynamicRealm <io_realm_DynamicRealm>` realm, :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>` object)
+     - :ref:`from <io_realm_rx_RxObservableFactory_from__DynamicRealm__DynamicRealmObject__>` (:ref:`DynamicRealm <io_realm_DynamicRealm>` realm, **DynamicRealmObject** object)
+       
+       Creates a Flowable for a **DynamicRealmObject (?)**.
        
        
        
@@ -138,7 +151,9 @@ Method Summary
        
    
    * - public **<any> (?)**
-     - :ref:`changesetsFrom <io_realm_rx_RealmObservableFactory_changesetsFrom__DynamicRealm__DynamicRealmObject__>` (:ref:`DynamicRealm <io_realm_DynamicRealm>` realm, :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>` object)
+     - :ref:`changesetsFrom <io_realm_rx_RxObservableFactory_changesetsFrom__DynamicRealm__DynamicRealmObject__>` (:ref:`DynamicRealm <io_realm_DynamicRealm>` realm, **DynamicRealmObject** object)
+       
+       Creates an Observable for a **RealmObject (?)**.
        
        
        
@@ -146,7 +161,9 @@ Method Summary
        
    
    * - public **<any> (?)**
-     - :ref:`from <io_realm_rx_RealmObservableFactory_from__Realm__RealmQuery_E___>` <**E (?)** >(:ref:`Realm <io_realm_Realm>` realm, :ref:`io.realm.RealmQuery\<E> <io_realm_RealmQuery>` query)
+     - :ref:`from <io_realm_rx_RxObservableFactory_from__Realm__RealmQuery_E___>` <**E (?)** >(**Realm** realm, **io.realm.RealmQuery<E>** query)
+       
+       Creates a Single from a **RealmQuery (?)**.
        
        
        
@@ -154,23 +171,9 @@ Method Summary
        
    
    * - public **<any> (?)**
-     - :ref:`from <io_realm_rx_RealmObservableFactory_from__DynamicRealm__RealmQuery_E___>` <**E (?)** >(:ref:`DynamicRealm <io_realm_DynamicRealm>` realm, :ref:`io.realm.RealmQuery\<E> <io_realm_RealmQuery>` query)
+     - :ref:`from <io_realm_rx_RxObservableFactory_from__DynamicRealm__RealmQuery_E___>` <**E (?)** >(:ref:`DynamicRealm <io_realm_DynamicRealm>` realm, **io.realm.RealmQuery<E>** query)
        
-       
-       
-       
-       
-   
-   * - public **boolean (?)**
-     - :ref:`equals <io_realm_rx_RealmObservableFactory_equals__Object__>` (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ o)
-       
-       
-       
-       
-       
-   
-   * - public **int (?)**
-     - :ref:`hashCode <io_realm_rx_RealmObservableFactory_hashCode____>` ()
+       Creates a Single from a **RealmQuery (?)**.
        
        
        
@@ -181,148 +184,414 @@ Method Summary
 Method Detail
 =============
 
-.. _io_realm_rx_RealmObservableFactory_from__Realm__:
+.. _io_realm_rx_RxObservableFactory_from__Realm__:
 
 ``from``
 --------
 
-public **<any> (?)** from (:ref:`Realm <io_realm_Realm>` realm)
+public **<any> (?)** from (**Realm** realm)
+
+Creates a Flowable for a **Realm (?)**. It should emit the initial state of the Realm when subscribed to and on each subsequent update of the Realm.
+
+Realm flowables are hot as Realms are automatically kept up to date.
 
 
-.. _io_realm_rx_RealmObservableFactory_from__DynamicRealm__:
+Parameters
+~~~~~~~~~~
+
+- ``realm - ``**Realm (?)**to listen to changes for.
+   
+   
+   
+
+.. _io_realm_rx_RxObservableFactory_from__DynamicRealm__:
 
 ``from``
 --------
 
 public **<any> (?)** from (:ref:`DynamicRealm <io_realm_DynamicRealm>` realm)
 
+Creates a Flowable for a **DynamicRealm (?)**. It should emit the initial state of the Realm when subscribed to and on each subsequent update of the Realm.
 
-.. _io_realm_rx_RealmObservableFactory_from__Realm__RealmResults_E___:
+DynamicRealm observables are hot as DynamicRealms are automatically kept up to date.
+
+
+Parameters
+~~~~~~~~~~
+
+- ``realm - ``**DynamicRealm (?)**to listen to changes for.
+   
+   
+   
+
+.. _io_realm_rx_RxObservableFactory_from__Realm__RealmResults_E___:
 
 ``from``
 --------
 
-public **<any> (?)** from <**E (?)** >(:ref:`Realm <io_realm_Realm>` realm, :ref:`io.realm.RealmResults\<E> <io_realm_RealmResults>` results)
+public **<any> (?)** from <**E (?)** >(**Realm** realm, **io.realm.RealmResults<E>** results)
+
+Creates a Flowable for a **RealmResults (?)**. It should emit the initial RealmResult when subscribed to and on each subsequent update of the RealmResults.
+
+RealmResults observables are hot as RealmResults are automatically kept up to date.
 
 
-.. _io_realm_rx_RealmObservableFactory_changesetsFrom__Realm__RealmResults_E___:
+Type Parameters
+~~~~~~~~~~~~~~~
+
+- ``E - ``type of RealmObject
+   
+
+Parameters
+~~~~~~~~~~
+
+- ``results - ``**RealmResults (?)**to listen to changes for.
+   
+   
+   
+- ``realm - ``**Realm (?)**instance results are coming from.
+   
+   
+   
+
+.. _io_realm_rx_RxObservableFactory_changesetsFrom__Realm__RealmResults_E___:
 
 ``changesetsFrom``
 ------------------
 
-public **<any> (?)** changesetsFrom <**E (?)** >(:ref:`Realm <io_realm_Realm>` realm, :ref:`io.realm.RealmResults\<E> <io_realm_RealmResults>` results)
+public **<any> (?)** changesetsFrom <**E (?)** >(**Realm** realm, **io.realm.RealmResults<E>** results)
+
+Creates an Observable for a **RealmResults (?)**. It should emit the initial RealmResult when subscribed to and on each subsequent update of the RealmResults it should emit the RealmResults + the **OrderedCollectionChangeSet (?)**that describes the update.
+
+Changeset observables do not support backpressure as a changeset depends on the state of the previous changeset. Handling backpressure should therefor be left to users.
 
 
-.. _io_realm_rx_RealmObservableFactory_from__DynamicRealm__RealmResults_E___:
+Type Parameters
+~~~~~~~~~~~~~~~
+
+- ``E - ``type of RealmObject
+   
+
+Parameters
+~~~~~~~~~~
+
+- ``results - ``**RealmResults (?)**to listen to changes for.
+   
+   
+   
+- ``realm - ``**Realm (?)**instance results are coming from.
+   
+   
+   
+
+.. _io_realm_rx_RxObservableFactory_from__DynamicRealm__RealmResults_E___:
 
 ``from``
 --------
 
-public **<any> (?)** from <**E (?)** >(:ref:`DynamicRealm <io_realm_DynamicRealm>` realm, :ref:`io.realm.RealmResults\<E> <io_realm_RealmResults>` results)
+public **<any> (?)** from <**E (?)** >(:ref:`DynamicRealm <io_realm_DynamicRealm>` realm, **io.realm.RealmResults<E>** results)
+
+Creates a Flowable for a **RealmResults (?)**. It should emit the initial RealmResult when subscribed to and on each subsequent update of the RealmResults.
+
+Realm observables are hot as RealmResults are automatically kept up to date.
 
 
-.. _io_realm_rx_RealmObservableFactory_changesetsFrom__DynamicRealm__RealmResults_E___:
+Parameters
+~~~~~~~~~~
+
+- ``results - ``**RealmResults (?)**to listen to changes for.
+   
+   
+   
+- ``realm - ``**DynamicRealm (?)**instance results are coming from.
+   
+   
+   
+
+.. _io_realm_rx_RxObservableFactory_changesetsFrom__DynamicRealm__RealmResults_E___:
 
 ``changesetsFrom``
 ------------------
 
-public **<any> (?)** changesetsFrom <**E (?)** >(:ref:`DynamicRealm <io_realm_DynamicRealm>` realm, :ref:`io.realm.RealmResults\<E> <io_realm_RealmResults>` results)
+public **<any> (?)** changesetsFrom <**E (?)** >(:ref:`DynamicRealm <io_realm_DynamicRealm>` realm, **io.realm.RealmResults<E>** results)
+
+Creates an Observable for a **RealmResults (?)**. It should emit the initial RealmResult when subscribed to and on each subsequent update of the RealmResults it should emit the RealmResults + the **OrderedCollectionChangeSet (?)**that describes the update.
+
+Changeset observables do not support backpressure as a changeset depends on the state of the previous changeset. Handling backpressure should therefor be left to users.
 
 
-.. _io_realm_rx_RealmObservableFactory_from__Realm__RealmList_E___:
+Parameters
+~~~~~~~~~~
+
+- ``results - ``**RealmResults (?)**to listen to changes for.
+   
+   
+   
+- ``realm - ``**Realm (?)**instance results are coming from.
+   
+   
+   
+
+.. _io_realm_rx_RxObservableFactory_from__Realm__RealmList_E___:
 
 ``from``
 --------
 
-public **<any> (?)** from <**E (?)** >(:ref:`Realm <io_realm_Realm>` realm, :ref:`io.realm.RealmList\<E> <io_realm_RealmList>` list)
+public **<any> (?)** from <**E (?)** >(**Realm** realm, **io.realm.RealmList<E>** list)
+
+Creates an Observable for a **RealmList (?)**. It should emit the initial list when subscribed to and on each subsequent update of the RealmList.
+
+RealmList observables are hot as RealmLists are automatically kept up to date.
+
+Note: **io.realm.RealmChangeListener (?)**is currently not supported on RealmLists.
 
 
-.. _io_realm_rx_RealmObservableFactory_changesetsFrom__Realm__RealmList_E___:
+
+
+Type Parameters
+~~~~~~~~~~~~~~~
+
+- ``E - ``type of query target
+   
+
+Parameters
+~~~~~~~~~~
+
+- ``list - ``RealmObject to listen to changes for.
+   
+- ``realm - ``**Realm (?)**instance list is coming from.
+   
+   
+   
+
+.. _io_realm_rx_RxObservableFactory_changesetsFrom__Realm__RealmList_E___:
 
 ``changesetsFrom``
 ------------------
 
-public **<any> (?)** changesetsFrom <**E (?)** >(:ref:`Realm <io_realm_Realm>` realm, :ref:`io.realm.RealmList\<E> <io_realm_RealmList>` list)
+public **<any> (?)** changesetsFrom <**E (?)** >(**Realm** realm, **io.realm.RealmList<E>** list)
+
+Creates an Observable for a **RealmList (?)**. It should emit the initial RealmList when subscribed to and on each subsequent update of the RealmIst it should emit the RealmList + the **OrderedCollectionChangeSet (?)**that describes the update.
+
+Changeset observables do not support backpressure as a changeset depends on the state of the previous changeset. Handling backpressure should therefor be left to users.
 
 
-.. _io_realm_rx_RealmObservableFactory_from__DynamicRealm__RealmList_E___:
+Type Parameters
+~~~~~~~~~~~~~~~
+
+- ``E - ``type of RealmObject
+   
+
+Parameters
+~~~~~~~~~~
+
+- ``list - ``**RealmList (?)**to listen to changes for.
+   
+   
+   
+- ``realm - ``**Realm (?)**instance list is coming from.
+   
+   
+   
+
+.. _io_realm_rx_RxObservableFactory_from__DynamicRealm__RealmList_E___:
 
 ``from``
 --------
 
-public **<any> (?)** from <**E (?)** >(:ref:`DynamicRealm <io_realm_DynamicRealm>` realm, :ref:`io.realm.RealmList\<E> <io_realm_RealmList>` list)
+public **<any> (?)** from <**E (?)** >(:ref:`DynamicRealm <io_realm_DynamicRealm>` realm, **io.realm.RealmList<E>** list)
+
+Creates a Flowable for a **RealmList (?)**. It should emit the initial list when subscribed to and on each subsequent update of the RealmList.
+
+RealmList observables are hot as RealmLists are automatically kept up to date.
+
+Note: **io.realm.RealmChangeListener (?)**is currently not supported on RealmLists.
 
 
-.. _io_realm_rx_RealmObservableFactory_changesetsFrom__DynamicRealm__RealmList_E___:
+
+
+Parameters
+~~~~~~~~~~
+
+- ``list - ``RealmList to listen to changes for.
+   
+- ``realm - ``**DynamicRealm (?)**instance list is coming from.
+   
+   
+   
+
+.. _io_realm_rx_RxObservableFactory_changesetsFrom__DynamicRealm__RealmList_E___:
 
 ``changesetsFrom``
 ------------------
 
-public **<any> (?)** changesetsFrom <**E (?)** >(:ref:`DynamicRealm <io_realm_DynamicRealm>` realm, :ref:`io.realm.RealmList\<E> <io_realm_RealmList>` list)
+public **<any> (?)** changesetsFrom <**E (?)** >(:ref:`DynamicRealm <io_realm_DynamicRealm>` realm, **io.realm.RealmList<E>** list)
+
+Creates an Observable for a **RealmList (?)**. It should emit the initial RealmList when subscribed to and on each subsequent update of the RealmList it should emit the RealmList + the **OrderedCollectionChangeSet (?)**that describes the update.
+
+Changeset observables do not support backpressure as a changeset depends on the state of the previous changeset. Handling backpressure should therefor be left to users.
 
 
-.. _io_realm_rx_RealmObservableFactory_from__Realm__E__:
+Parameters
+~~~~~~~~~~
+
+- ``list - ``**RealmList (?)**to listen to changes for.
+   
+   
+   
+- ``realm - ``**Realm (?)**instance list is coming from.
+   
+   
+   
+
+.. _io_realm_rx_RxObservableFactory_from__Realm__E__:
 
 ``from``
 --------
 
-public **<any> (?)** from <**E (?)** >(:ref:`Realm <io_realm_Realm>` realm, **E (?)** object)
+public **<any> (?)** from <**E (?)** >(**Realm** realm, **E (?)** object)
+
+Creates a Flowable for a **RealmObject (?)**. It should emit the initial object when subscribed to and on each subsequent update of the object.
+
+RealmObject observables are hot as RealmObjects are automatically kept up to date.
 
 
-.. _io_realm_rx_RealmObservableFactory_changesetsFrom__Realm__E__:
+Type Parameters
+~~~~~~~~~~~~~~~
+
+- ``E - ``type of query target
+   
+
+Parameters
+~~~~~~~~~~
+
+- ``object - ``RealmObject to listen to changes for.
+   
+- ``realm - ``**Realm (?)**instance object is coming from.
+   
+   
+   
+
+.. _io_realm_rx_RxObservableFactory_changesetsFrom__Realm__E__:
 
 ``changesetsFrom``
 ------------------
 
-public **<any> (?)** changesetsFrom <**E (?)** >(:ref:`Realm <io_realm_Realm>` realm, **E (?)** object)
+public **<any> (?)** changesetsFrom <**E (?)** >(**Realm** realm, **E (?)** object)
+
+Creates an Observable for a **RealmObject (?)**. It should emit the initial object when subscribed to and on each subsequent update of the object it should emit the object + the **io.realm.ObjectChangeSet (?)**that describes the update.
+
+Changeset observables do not support backpressure as a changeset depends on the state of the previous changeset. Handling backpressure should therefore be left to the user.
 
 
-.. _io_realm_rx_RealmObservableFactory_from__DynamicRealm__DynamicRealmObject__:
+Type Parameters
+~~~~~~~~~~~~~~~
+
+- ``E - ``type of RealmObject
+   
+
+Parameters
+~~~~~~~~~~
+
+- ``object - ``RealmObject to listen to changes for.
+   
+- ``realm - ``**Realm (?)**instance object is coming from.
+   
+   
+   
+
+.. _io_realm_rx_RxObservableFactory_from__DynamicRealm__DynamicRealmObject__:
 
 ``from``
 --------
 
-public **<any> (?)** from (:ref:`DynamicRealm <io_realm_DynamicRealm>` realm, :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>` object)
+public **<any> (?)** from (:ref:`DynamicRealm <io_realm_DynamicRealm>` realm, **DynamicRealmObject** object)
+
+Creates a Flowable for a **DynamicRealmObject (?)**. It should emit the initial object when subscribed to and on each subsequent update of the object.
+
+DynamicRealmObject observables are hot as DynamicRealmObjects automatically are kept up to date.
 
 
-.. _io_realm_rx_RealmObservableFactory_changesetsFrom__DynamicRealm__DynamicRealmObject__:
+Parameters
+~~~~~~~~~~
+
+- ``object - ``DynamicRealmObject to listen to changes for.
+   
+- ``realm - ``**DynamicRealm (?)**instance object is coming from.
+   
+   
+   
+
+.. _io_realm_rx_RxObservableFactory_changesetsFrom__DynamicRealm__DynamicRealmObject__:
 
 ``changesetsFrom``
 ------------------
 
-public **<any> (?)** changesetsFrom (:ref:`DynamicRealm <io_realm_DynamicRealm>` realm, :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>` object)
+public **<any> (?)** changesetsFrom (:ref:`DynamicRealm <io_realm_DynamicRealm>` realm, **DynamicRealmObject** object)
+
+Creates an Observable for a **RealmObject (?)**. It should emit the initial object when subscribed to and on each subsequent update of the object it should emit the object + the **io.realm.ObjectChangeSet (?)**that describes the update.
+
+Changeset observables do not support backpressure as a changeset depends on the state of the previous changeset. Handling backpressure should therefore be left to the user.
 
 
-.. _io_realm_rx_RealmObservableFactory_from__Realm__RealmQuery_E___:
+Parameters
+~~~~~~~~~~
+
+- ``object - ``RealmObject to listen to changes for.
+   
+- ``realm - ``**Realm (?)**instance object is coming from.
+   
+   
+   
+
+.. _io_realm_rx_RxObservableFactory_from__Realm__RealmQuery_E___:
 
 ``from``
 --------
 
-public **<any> (?)** from <**E (?)** >(:ref:`Realm <io_realm_Realm>` realm, :ref:`io.realm.RealmQuery\<E> <io_realm_RealmQuery>` query)
+public **<any> (?)** from <**E (?)** >(**Realm** realm, **io.realm.RealmQuery<E>** query)
+
+Creates a Single from a **RealmQuery (?)**. It should emit the query and then complete.
+
+A RealmQuery observable is cold.
 
 
-.. _io_realm_rx_RealmObservableFactory_from__DynamicRealm__RealmQuery_E___:
+Type Parameters
+~~~~~~~~~~~~~~~
+
+- ``E - ``type of query target
+   
+
+Parameters
+~~~~~~~~~~
+
+- ``query - ``RealmQuery to emit.
+   
+- ``realm - ``**Realm (?)**instance query is coming from.
+   
+   
+   
+
+.. _io_realm_rx_RxObservableFactory_from__DynamicRealm__RealmQuery_E___:
 
 ``from``
 --------
 
-public **<any> (?)** from <**E (?)** >(:ref:`DynamicRealm <io_realm_DynamicRealm>` realm, :ref:`io.realm.RealmQuery\<E> <io_realm_RealmQuery>` query)
+public **<any> (?)** from <**E (?)** >(:ref:`DynamicRealm <io_realm_DynamicRealm>` realm, **io.realm.RealmQuery<E>** query)
+
+Creates a Single from a **RealmQuery (?)**. It should emit the query and then complete.
+
+A RealmQuery observable is cold.
 
 
-.. _io_realm_rx_RealmObservableFactory_equals__Object__:
+Parameters
+~~~~~~~~~~
 
-``equals``
-----------
-
-public **boolean (?)** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ o)
-
-
-.. _io_realm_rx_RealmObservableFactory_hashCode____:
-
-``hashCode``
-------------
-
-public **int (?)** hashCode ()
-
+- ``query - ``RealmObject to listen to changes for.
+   
+- ``realm - ``**DynamicRealm (?)**instance query is coming from.
+   
+   
+   
 
 
