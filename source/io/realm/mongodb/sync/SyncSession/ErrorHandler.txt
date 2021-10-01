@@ -1,0 +1,53 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+io.realm.mongodb.sync.SyncSession.ErrorHandler
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_mongodb_sync_SyncSession_ErrorHandler:
+
+Interface used to report any session errors.
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - public **void (?)**
+     - :ref:`onError <io_realm_mongodb_sync_SyncSession_ErrorHandler_onError__SyncSession__AppException__>` (:ref:`SyncSession <io_realm_mongodb_sync_SyncSession>` session, :ref:`AppException <io_realm_mongodb_AppException>` error)
+       
+       Callback for errors on a session object.
+       
+       
+       
+   
+   
+Method Detail
+=============
+
+.. _io_realm_mongodb_sync_SyncSession_ErrorHandler_onError__SyncSession__AppException__:
+
+``onError``
+-----------
+
+public **void (?)** onError (:ref:`SyncSession <io_realm_mongodb_sync_SyncSession>` session, :ref:`AppException <io_realm_mongodb_AppException>` error)
+
+Callback for errors on a session object. It is not allowed to throw an exception inside an error handler. If the operations in an error handler can throw, it is safer to catch any exception in the error handler. When an exception is thrown in the error handler, the occurrence will be logged and the exception will be ignored.
+Parameters
+~~~~~~~~~~
+
+- ``session - ``**SyncSession (?)**this error happened on.
+   
+   
+   
+- ``error - ``type of error.
+   
+
+

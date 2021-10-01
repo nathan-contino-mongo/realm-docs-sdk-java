@@ -1,0 +1,169 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+io.realm.mongodb.sync.Sync
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_mongodb_sync_Sync:
+
+*Superclass:*
+
+- `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
+
+A *sync* manager handling synchronization of local Realms with remote Realm Apps.The primary role of this is to access the **SyncSession (?)**for a synchronized Realm. After opening the synchronized Realm you can access the **SyncSession (?)**and perform synchronization related operations as shown below:
+
+
+
+
+
+.. code-block:: java
+
+        App app = new App("app-id");
+        User user = app.login(Credentials.anonymous());
+        SyncConfiguration syncConfiguration = new SyncConfiguration.Builder(user, "<partition value>")
+                 .build();
+        Realm instance = Realm.getInstance(syncConfiguration);
+        SyncSession session = app.getSync().getSession(syncConfiguration);
+   
+        instance.executeTransaction(realm -> {
+            realm.insert(...);
+        });
+        session.uploadAllLocalChanges();
+        instance.close();
+    
+
+
+Constructors
+============
+
+- ``io.realm.mongodb.sync.Sync(App, long)``
+
+Nested Class Summary
+====================
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Class and Description
+   
+   * - ``public static``
+     - ``io.realm.mongodb.sync.Sync.Debug``
+   
+   
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - public synchronized :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>`
+     - :ref:`getSession <io_realm_mongodb_sync_Sync_getSession__SyncConfiguration__>` (:ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>` syncConfiguration)
+       
+       Gets a cached **SyncSession (?)**for the given **SyncConfiguration (?)**or throw if no one exists yet.
+       
+       
+       
+       
+       
+   
+   * - public synchronized `Collection <https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html>`__
+     - :ref:`getAllSessions <io_realm_mongodb_sync_Sync_getAllSessions____>` ()
+       
+       Gets a collection of all the cached **SyncSession (?)**.
+       
+       
+       
+       
+       
+   
+   * - public synchronized :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>`
+     - :ref:`getOrCreateSession <io_realm_mongodb_sync_Sync_getOrCreateSession__SyncConfiguration__>` (:ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>` syncConfiguration)
+       
+       Gets any cached **SyncSession (?)**for the given **SyncConfiguration (?)**or create a new one if no one exists.
+       
+       
+       
+       
+       
+   
+   * - public **void (?)**
+     - :ref:`reconnect <io_realm_mongodb_sync_Sync_reconnect____>` ()
+       
+       Realm will automatically detect when a device gets connectivity after being offline and resume syncing.
+       
+       
+       
+   
+   
+Method Detail
+=============
+
+.. _io_realm_mongodb_sync_Sync_getSession__SyncConfiguration__:
+
+``getSession``
+--------------
+
+public synchronized :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>` getSession (:ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>` syncConfiguration)
+
+Gets a cached **SyncSession (?)**for the given **SyncConfiguration (?)**or throw if no one exists yet. A session should exist after you open a Realm with a **SyncConfiguration (?)**.
+
+
+Parameters
+~~~~~~~~~~
+
+- ``syncConfiguration - ``configuration object for the synchronized Realm.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_mongodb_sync_Sync_getAllSessions____:
+
+``getAllSessions``
+------------------
+
+public synchronized `Collection <https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html>`__ getAllSessions ()
+
+Gets a collection of all the cached **SyncSession (?)**.
+
+
+.. _io_realm_mongodb_sync_Sync_getOrCreateSession__SyncConfiguration__:
+
+``getOrCreateSession``
+----------------------
+
+public synchronized :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>` getOrCreateSession (:ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>` syncConfiguration)
+
+Gets any cached **SyncSession (?)**for the given **SyncConfiguration (?)**or create a new one if no one exists. Note: This is mainly for internal usage, consider using **#getSession(SyncConfiguration) (?)**instead.
+
+
+Parameters
+~~~~~~~~~~
+
+- ``syncConfiguration - ``configuration object for the synchronized Realm.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_mongodb_sync_Sync_reconnect____:
+
+``reconnect``
+-------------
+
+public **void (?)** reconnect ()
+
+Realm will automatically detect when a device gets connectivity after being offline and resume syncing.However, as some of these checks are performed using incremental backoff, this will in some cases not happen immediately.
+
+In those cases it can be beneficial to call this method manually, which will force all sessions to attempt to reconnect immediately and reset any timers they are using for incremental backoff.
+
+
+

@@ -1,0 +1,130 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+io.realm.RealmFieldType
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_RealmFieldType:
+
+*Superclass:*
+
+- `java.lang.Enum <https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html>`__
+
+List of the types used by Realm's underlying storage engine.Normally there is no reason to interact with the underlying Realm types as Realm will automatically convert between normal Java types and the Realm types. However it is possible to access these types through a **DynamicRealmObject (?)**.
+
+
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - public static :ref:`RealmFieldType <io_realm_RealmFieldType>`
+     - :ref:`values <io_realm_RealmFieldType_values____>` ()
+       
+       
+       
+       
+       
+   
+   * - public static :ref:`RealmFieldType <io_realm_RealmFieldType>`
+     - :ref:`valueOf <io_realm_RealmFieldType_valueOf__String__>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ name)
+       
+       
+       
+       
+       
+   
+   * - public **int (?)**
+     - :ref:`getNativeValue <io_realm_RealmFieldType_getNativeValue____>` ()
+       
+       Returns the native value representing this type.
+       
+       
+       
+   
+   * - public **boolean (?)**
+     - :ref:`isValid <io_realm_RealmFieldType_isValid__Object__>` (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ obj)
+       
+       Checks if the given Java object can be converted to the underlying Realm type.
+       
+       
+       
+   
+   * - public static :ref:`RealmFieldType <io_realm_RealmFieldType>`
+     - :ref:`fromNativeValue <io_realm_RealmFieldType_fromNativeValue__int__>` (**int (?)** value)
+       
+       Converts the underlying value used by the storage engine to the proper Realm type.
+       
+       
+       
+   
+   
+Method Detail
+=============
+
+.. _io_realm_RealmFieldType_values____:
+
+``values``
+----------
+
+public static :ref:`RealmFieldType <io_realm_RealmFieldType>` values ()
+
+
+.. _io_realm_RealmFieldType_valueOf__String__:
+
+``valueOf``
+-----------
+
+public static :ref:`RealmFieldType <io_realm_RealmFieldType>` valueOf (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ name)
+
+
+.. _io_realm_RealmFieldType_getNativeValue____:
+
+``getNativeValue``
+------------------
+
+public **int (?)** getNativeValue ()
+
+Returns the native value representing this type.
+.. _io_realm_RealmFieldType_isValid__Object__:
+
+``isValid``
+-----------
+
+public **boolean (?)** isValid (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ obj)
+
+Checks if the given Java object can be converted to the underlying Realm type.
+Parameters
+~~~~~~~~~~
+
+- ``obj - ``object to test compatibility on.
+   
+
+.. _io_realm_RealmFieldType_fromNativeValue__int__:
+
+``fromNativeValue``
+-------------------
+
+public static :ref:`RealmFieldType <io_realm_RealmFieldType>` fromNativeValue (**int (?)** value)
+
+Converts the underlying value used by the storage engine to the proper Realm type.
+Parameters
+~~~~~~~~~~
+
+- ``value - ``the value to convert
+   
+
+Throws
+~~~~~~
+
+
