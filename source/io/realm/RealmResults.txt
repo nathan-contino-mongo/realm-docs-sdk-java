@@ -1,0 +1,1013 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+io.realm.RealmResults<E>
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_RealmResults:
+
+*Superclass:*
+
+- **io.realm.OrderedRealmCollectionImpl (?)**
+
+This class holds all the matches of a **RealmQuery (?)**for a given Realm. The objects are not copied from the Realm to the RealmResults list, but are just referenced from the RealmResult instead. This saves memory and increases speed.
+
+RealmResults are live views, which means that if it is on an **Looper (?)**thread, it will automatically update its query results after a transaction has been committed. If on a non-looper thread, **Realm#refresh() (?)**must be called to update the results.
+
+
+
+Updates to RealmObjects from a RealmResults list must be done from within a transaction and the modified objects are persisted to the Realm file during the commit of the transaction.
+
+A RealmResults object cannot be passed between different threads.
+
+Notice that a RealmResults is never ``null``not even in the case where it contains no objects. You should always use the **RealmResults#size() (?)**method to check if a RealmResults is empty or not.
+
+
+
+If a RealmResults is built on RealmList through **RealmList#where() (?)**, it will become empty when the source RealmList gets deleted.
+
+
+
+**RealmResults (?)**can contain more elements than ``Integer.MAX_VALUE``. In that case, you can access only first ``Integer.MAX_VALUE``elements in it.
+
+
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - public :ref:`RealmQuery <io_realm_RealmQuery>`
+     - :ref:`where <io_realm_RealmResults_where____>` ()
+       
+       
+       
+       
+       
+       
+       
+   
+   * - public :ref:`RealmResults <io_realm_RealmResults>`
+     - :ref:`sort <io_realm_RealmResults_sort__String__Sort__String__Sort__>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName1, :ref:`Sort <io_realm_Sort>` sortOrder1, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName2, :ref:`Sort <io_realm_Sort>` sortOrder2)
+       
+       
+       
+       
+       
+       
+       
+   
+   * - public **boolean (?)**
+     - :ref:`isLoaded <io_realm_RealmResults_isLoaded____>` ()
+       
+       Returns ``false``if the results are not yet loaded, ``true``if they are loaded.
+       
+       
+       
+       
+       
+   
+   * - public **boolean (?)**
+     - :ref:`load <io_realm_RealmResults_load____>` ()
+       
+       Makes an asynchronous query blocking.
+       
+       
+       
+   
+   * - public **void (?)**
+     - :ref:`setValue <io_realm_RealmResults_setValue__String__Object__>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ value)
+       
+       Updates the field given by ``fieldName``in all objects inside the query result.
+       
+       
+       
+       
+       
+   
+   * - public **void (?)**
+     - :ref:`setNull <io_realm_RealmResults_setNull__String__>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName)
+       
+       Sets the value to ``null``for the given field in all of the objects in the collection.
+       
+       
+       
+       
+       
+   
+   * - public **void (?)**
+     - :ref:`setBoolean <io_realm_RealmResults_setBoolean__String__boolean__>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **boolean (?)** value)
+       
+       Sets the ``boolean``value of the given field in all of the objects in the collection.
+       
+       
+       
+       
+       
+   
+   * - public **void (?)**
+     - :ref:`setByte <io_realm_RealmResults_setByte__String__byte__>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **byte (?)** value)
+       
+       Sets the ``byte``value of the given field in all of the objects in the collection.
+       
+       
+       
+       
+       
+   
+   * - public **void (?)**
+     - :ref:`setShort <io_realm_RealmResults_setShort__String__short__>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **short (?)** value)
+       
+       Sets the ``short``value of the given field in all of the objects in the collection.
+       
+       
+       
+       
+       
+   
+   * - public **void (?)**
+     - :ref:`setInt <io_realm_RealmResults_setInt__String__int__>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **int (?)** value)
+       
+       Sets the ``int``value of the given field in all of the objects in the collection.
+       
+       
+       
+       
+       
+   
+   * - public **void (?)**
+     - :ref:`setLong <io_realm_RealmResults_setLong__String__long__>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **long (?)** value)
+       
+       Sets the ``long``value of the given field in all of the objects in the collection.
+       
+       
+       
+       
+       
+   
+   * - public **void (?)**
+     - :ref:`setFloat <io_realm_RealmResults_setFloat__String__float__>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **float (?)** value)
+       
+       Sets the ``float``value of the given field in all of the objects in the collection.
+       
+       
+       
+       
+       
+   
+   * - public **void (?)**
+     - :ref:`setDouble <io_realm_RealmResults_setDouble__String__double__>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **double (?)** value)
+       
+       Sets the ``double``value of the given field in all of the objects in the collection.
+       
+       
+       
+       
+       
+   
+   * - public **void (?)**
+     - :ref:`setString <io_realm_RealmResults_setString__String__String__>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ value)
+       
+       Sets the ``String``value of the given field in all of the objects in the collection.
+       
+       
+       
+       
+       
+   
+   * - public **void (?)**
+     - :ref:`setBlob <io_realm_RealmResults_setBlob__String__byte[]__>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **byte[] (?)** value)
+       
+       Sets the binary value of the given field in all of the objects in the collection.
+       
+       
+       
+   
+   * - public **void (?)**
+     - :ref:`setDate <io_realm_RealmResults_setDate__String__Date__>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__ value)
+       
+       Sets the ``Date``value of the given field in all of the objects in the collection.
+       
+       
+       
+       
+       
+   
+   * - public **void (?)**
+     - :ref:`setObject <io_realm_RealmResults_setObject__String__RealmModel__>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, :ref:`RealmModel <io_realm_RealmModel>` value)
+       
+       Sets a reference to another object on the given field in all of the objects in the collection.
+       
+       
+       
+   
+   * - public **void (?)**
+     - :ref:`setDecimal128 <io_realm_RealmResults_setDecimal128__String__Decimal128__>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **Decimal128 (?)** value)
+       
+       Sets the ``Decimal128``value of the given field in all of the objects in the collection.
+       
+       
+       
+       
+       
+   
+   * - public **void (?)**
+     - :ref:`setObjectId <io_realm_RealmResults_setObjectId__String__ObjectId__>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **ObjectId (?)** value)
+       
+       Sets the ``ObjectId``value of the given field in all of the objects in the collection.
+       
+       
+       
+       
+       
+   
+   * - public **void (?)**
+     - :ref:`setUUID <io_realm_RealmResults_setUUID__String__UUID__>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, `UUID <https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html>`__ value)
+       
+       Sets the ``UUID``value of the given field in all of the objects in the collection.
+       
+       
+       
+       
+       
+   
+   * - public **void (?)**
+     - :ref:`setList <io_realm_RealmResults_setList__String__RealmList_T___>` <**T (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, :ref:`io.realm.RealmList\<T> <io_realm_RealmList>` list)
+       
+       Replaces the RealmList at the given field on all objects in this collection.
+       
+       
+       
+   
+   * - public **boolean (?)**
+     - :ref:`isFrozen <io_realm_RealmResults_isFrozen____>` ()
+       
+       
+       
+       
+       
+       
+       
+   
+   * - public :ref:`RealmResults <io_realm_RealmResults>`
+     - :ref:`freeze <io_realm_RealmResults_freeze____>` ()
+       
+       
+       
+       
+       
+       
+       
+   
+   * - public **void (?)**
+     - :ref:`addChangeListener <io_realm_RealmResults_addChangeListener__RealmChangeListener_RealmResults_E____>` (:ref:`io.realm.RealmChangeListener\<io.realm.RealmResults\<E>> <io_realm_RealmChangeListener>` listener)
+       
+       Adds a change listener to this **RealmResults (?)**.
+       
+       
+       
+       
+       
+   
+   * - public **void (?)**
+     - :ref:`addChangeListener <io_realm_RealmResults_addChangeListener__OrderedRealmCollectionChangeListener_RealmResults_E____>` (:ref:`io.realm.OrderedRealmCollectionChangeListener\<io.realm.RealmResults\<E>> <io_realm_OrderedRealmCollectionChangeListener>` listener)
+       
+       Adds a change listener to this **RealmResults (?)**.
+       
+       
+       
+       
+       
+   
+   * - public **void (?)**
+     - :ref:`removeAllChangeListeners <io_realm_RealmResults_removeAllChangeListeners____>` ()
+       
+       Removes all user-defined change listeners.
+       
+       
+       
+   
+   * - public **void (?)**
+     - :ref:`removeChangeListener <io_realm_RealmResults_removeChangeListener__RealmChangeListener_RealmResults_E____>` (:ref:`io.realm.RealmChangeListener\<io.realm.RealmResults\<E>> <io_realm_RealmChangeListener>` listener)
+       
+       Removes the specified change listener.
+       
+       
+       
+   
+   * - public **void (?)**
+     - :ref:`removeChangeListener <io_realm_RealmResults_removeChangeListener__OrderedRealmCollectionChangeListener_RealmResults_E____>` (:ref:`io.realm.OrderedRealmCollectionChangeListener\<io.realm.RealmResults\<E>> <io_realm_OrderedRealmCollectionChangeListener>` listener)
+       
+       Removes the specified change listener.
+       
+       
+       
+   
+   * - public **<any> (?)**
+     - :ref:`asFlowable <io_realm_RealmResults_asFlowable____>` ()
+       
+       Returns an Rx Flowable that monitors changes to this RealmResults.
+       
+       
+       
+   
+   * - public **<any> (?)**
+     - :ref:`asChangesetObservable <io_realm_RealmResults_asChangesetObservable____>` ()
+       
+       Returns an Rx Observable that monitors changes to this RealmResults.
+       
+       
+       
+   
+   * - public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__
+     - :ref:`asJSON <io_realm_RealmResults_asJSON____>` ()
+       
+       Returns a JSON representation of the matches of a **RealmQuery (?)**.
+       
+       
+       
+       
+       
+   
+   
+Method Detail
+=============
+
+.. _io_realm_RealmResults_where____:
+
+``where``
+---------
+
+public :ref:`RealmQuery <io_realm_RealmQuery>` where ()
+
+
+
+
+.. _io_realm_RealmResults_sort__String__Sort__String__Sort__:
+
+``sort``
+--------
+
+public :ref:`RealmResults <io_realm_RealmResults>` sort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName1, :ref:`Sort <io_realm_Sort>` sortOrder1, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName2, :ref:`Sort <io_realm_Sort>` sortOrder2)
+
+
+
+
+.. _io_realm_RealmResults_isLoaded____:
+
+``isLoaded``
+------------
+
+public **boolean (?)** isLoaded ()
+
+Returns ``false``if the results are not yet loaded, ``true``if they are loaded.
+
+
+.. _io_realm_RealmResults_load____:
+
+``load``
+--------
+
+public **boolean (?)** load ()
+
+Makes an asynchronous query blocking. This will also trigger any registered **RealmChangeListener (?)**when the query completes.
+
+
+.. _io_realm_RealmResults_setValue__String__Object__:
+
+``setValue``
+------------
+
+public **void (?)** setValue (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ value)
+
+Updates the field given by ``fieldName``in all objects inside the query result.
+
+This method will automatically try to convert numbers and booleans that are given as ``String``to their appropriate type. For example ``"10"``will be converted to ``10``if the field type is :ref:`RealmFieldType#INTEGER <io_realm_RealmFieldType_INTEGER>`.
+
+
+
+Using the typed setters like **#setInt(String, int) (?)**will be faster than using this method.
+
+
+
+
+Parameters
+~~~~~~~~~~
+
+- ``fieldName - ``field to update
+   
+- ``value - ``value to update with.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_RealmResults_setNull__String__:
+
+``setNull``
+-----------
+
+public **void (?)** setNull (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName)
+
+Sets the value to ``null``for the given field in all of the objects in the collection.
+
+
+Parameters
+~~~~~~~~~~
+
+- ``fieldName - ``name of the field to update.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_RealmResults_setBoolean__String__boolean__:
+
+``setBoolean``
+--------------
+
+public **void (?)** setBoolean (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **boolean (?)** value)
+
+Sets the ``boolean``value of the given field in all of the objects in the collection.
+
+
+Parameters
+~~~~~~~~~~
+
+- ``fieldName - ``name of the field to update.
+   
+- ``value - ``new value for the field.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_RealmResults_setByte__String__byte__:
+
+``setByte``
+-----------
+
+public **void (?)** setByte (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **byte (?)** value)
+
+Sets the ``byte``value of the given field in all of the objects in the collection.
+
+
+Parameters
+~~~~~~~~~~
+
+- ``fieldName - ``name of the field to update.
+   
+- ``value - ``new value for the field.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_RealmResults_setShort__String__short__:
+
+``setShort``
+------------
+
+public **void (?)** setShort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **short (?)** value)
+
+Sets the ``short``value of the given field in all of the objects in the collection.
+
+
+Parameters
+~~~~~~~~~~
+
+- ``fieldName - ``name of the field to update.
+   
+- ``value - ``new value for the field.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_RealmResults_setInt__String__int__:
+
+``setInt``
+----------
+
+public **void (?)** setInt (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **int (?)** value)
+
+Sets the ``int``value of the given field in all of the objects in the collection.
+
+
+Parameters
+~~~~~~~~~~
+
+- ``fieldName - ``name of the field to update.
+   
+- ``value - ``new value for the field.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_RealmResults_setLong__String__long__:
+
+``setLong``
+-----------
+
+public **void (?)** setLong (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **long (?)** value)
+
+Sets the ``long``value of the given field in all of the objects in the collection.
+
+
+Parameters
+~~~~~~~~~~
+
+- ``fieldName - ``name of the field to update.
+   
+- ``value - ``new value for the field.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_RealmResults_setFloat__String__float__:
+
+``setFloat``
+------------
+
+public **void (?)** setFloat (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **float (?)** value)
+
+Sets the ``float``value of the given field in all of the objects in the collection.
+
+
+Parameters
+~~~~~~~~~~
+
+- ``fieldName - ``name of the field to update.
+   
+- ``value - ``new value for the field.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_RealmResults_setDouble__String__double__:
+
+``setDouble``
+-------------
+
+public **void (?)** setDouble (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **double (?)** value)
+
+Sets the ``double``value of the given field in all of the objects in the collection.
+
+
+Parameters
+~~~~~~~~~~
+
+- ``fieldName - ``name of the field to update.
+   
+- ``value - ``new value for the field.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_RealmResults_setString__String__String__:
+
+``setString``
+-------------
+
+public **void (?)** setString (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ value)
+
+Sets the ``String``value of the given field in all of the objects in the collection.
+
+
+Parameters
+~~~~~~~~~~
+
+- ``fieldName - ``name of the field to update.
+   
+- ``value - ``new value for the field.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_RealmResults_setBlob__String__byte[]__:
+
+``setBlob``
+-----------
+
+public **void (?)** setBlob (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **byte[] (?)** value)
+
+Sets the binary value of the given field in all of the objects in the collection.
+Parameters
+~~~~~~~~~~
+
+- ``fieldName - ``name of the field to update.
+   
+- ``value - ``new value for the field.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_RealmResults_setDate__String__Date__:
+
+``setDate``
+-----------
+
+public **void (?)** setDate (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__ value)
+
+Sets the ``Date``value of the given field in all of the objects in the collection.
+
+
+Parameters
+~~~~~~~~~~
+
+- ``fieldName - ``name of the field to update.
+   
+- ``value - ``new value for the field.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_RealmResults_setObject__String__RealmModel__:
+
+``setObject``
+-------------
+
+public **void (?)** setObject (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, :ref:`RealmModel <io_realm_RealmModel>` value)
+
+Sets a reference to another object on the given field in all of the objects in the collection.
+Parameters
+~~~~~~~~~~
+
+- ``fieldName - ``name of the field to update.
+   
+- ``value - ``new object referenced by this field.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_RealmResults_setDecimal128__String__Decimal128__:
+
+``setDecimal128``
+-----------------
+
+public **void (?)** setDecimal128 (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **Decimal128 (?)** value)
+
+Sets the ``Decimal128``value of the given field in all of the objects in the collection.
+
+
+Parameters
+~~~~~~~~~~
+
+- ``fieldName - ``name of the field to update.
+   
+- ``value - ``new value for the field.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_RealmResults_setObjectId__String__ObjectId__:
+
+``setObjectId``
+---------------
+
+public **void (?)** setObjectId (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **ObjectId (?)** value)
+
+Sets the ``ObjectId``value of the given field in all of the objects in the collection.
+
+
+Parameters
+~~~~~~~~~~
+
+- ``fieldName - ``name of the field to update.
+   
+- ``value - ``new value for the field.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_RealmResults_setUUID__String__UUID__:
+
+``setUUID``
+-----------
+
+public **void (?)** setUUID (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, `UUID <https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html>`__ value)
+
+Sets the ``UUID``value of the given field in all of the objects in the collection.
+
+
+Parameters
+~~~~~~~~~~
+
+- ``fieldName - ``name of the field to update.
+   
+- ``value - ``new value for the field.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_RealmResults_setList__String__RealmList_T___:
+
+``setList``
+-----------
+
+public **void (?)** setList <**T (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, :ref:`io.realm.RealmList\<T> <io_realm_RealmList>` list)
+
+Replaces the RealmList at the given field on all objects in this collection.
+Parameters
+~~~~~~~~~~
+
+- ``fieldName - ``name of the field to update.
+   
+- ``list - ``new value for the field.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_RealmResults_isFrozen____:
+
+``isFrozen``
+------------
+
+public **boolean (?)** isFrozen ()
+
+
+
+
+.. _io_realm_RealmResults_freeze____:
+
+``freeze``
+----------
+
+public :ref:`RealmResults <io_realm_RealmResults>` freeze ()
+
+
+
+
+.. _io_realm_RealmResults_addChangeListener__RealmChangeListener_RealmResults_E____:
+
+``addChangeListener``
+---------------------
+
+public **void (?)** addChangeListener (:ref:`io.realm.RealmChangeListener\<io.realm.RealmResults\<E>> <io_realm_RealmChangeListener>` listener)
+
+Adds a change listener to this **RealmResults (?)**.
+
+Registering a change listener will not prevent the underlying RealmResults from being garbage collected. If the RealmResults is garbage collected, the change listener will stop being triggered. To avoid this, keep a strong reference for as long as appropriate e.g. in a class variable.
+
+
+
+.. code-block:: java
+
+   
+    public class MyActivity extends Activity {
+   
+        private RealmResults<Person> results; // Strong reference to keep listeners alive
+   
+        \@Override
+        protected void onCreate(Bundle savedInstanceState) {
+          super.onCreate(savedInstanceState);
+          results = realm.where(Person.class).findAllAsync();
+          results.addChangeListener(new RealmChangeListener<RealmResults<Person>>() {
+              \@Override
+              public void onChange(RealmResults<Person> persons) {
+                  // React to change
+              }
+          });
+        }
+    }
+    
+
+
+
+
+Parameters
+~~~~~~~~~~
+
+- ``listener - ``the change listener to be notified.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_RealmResults_addChangeListener__OrderedRealmCollectionChangeListener_RealmResults_E____:
+
+``addChangeListener``
+---------------------
+
+public **void (?)** addChangeListener (:ref:`io.realm.OrderedRealmCollectionChangeListener\<io.realm.RealmResults\<E>> <io_realm_OrderedRealmCollectionChangeListener>` listener)
+
+Adds a change listener to this **RealmResults (?)**.
+
+Registering a change listener will not prevent the underlying RealmResults from being garbage collected. If the RealmResults is garbage collected, the change listener will stop being triggered. To avoid this, keep a strong reference for as long as appropriate e.g. in a class variable.
+
+
+
+.. code-block:: java
+
+   
+    public class MyActivity extends Activity {
+   
+        private RealmResults<Person> results; // Strong reference to keep listeners alive
+   
+        \@Override
+        protected void onCreate(Bundle savedInstanceState) {
+          super.onCreate(savedInstanceState);
+          results = realm.where(Person.class).findAllAsync();
+          results.addChangeListener(new OrderedRealmCollectionChangeListener<RealmResults<Person>>() {
+              \@Override
+              public void onChange(RealmResults<Person> persons, OrderedCollectionChangeSet changeSet) {
+                  // React to change
+              }
+          });
+        }
+    }
+    
+
+
+
+
+Parameters
+~~~~~~~~~~
+
+- ``listener - ``the change listener to be notified.
+   
+
+Throws
+~~~~~~
+
+.. _io_realm_RealmResults_removeAllChangeListeners____:
+
+``removeAllChangeListeners``
+----------------------------
+
+public **void (?)** removeAllChangeListeners ()
+
+Removes all user-defined change listeners.
+Throws
+~~~~~~
+
+See Also
+~~~~~~~~
+
+io.realm.RealmChangeListener.. _io_realm_RealmResults_removeChangeListener__RealmChangeListener_RealmResults_E____:
+
+``removeChangeListener``
+------------------------
+
+public **void (?)** removeChangeListener (:ref:`io.realm.RealmChangeListener\<io.realm.RealmResults\<E>> <io_realm_RealmChangeListener>` listener)
+
+Removes the specified change listener.
+Parameters
+~~~~~~~~~~
+
+- ``listener - ``the change listener to be removed.
+   
+
+Throws
+~~~~~~
+
+See Also
+~~~~~~~~
+
+io.realm.RealmChangeListener.. _io_realm_RealmResults_removeChangeListener__OrderedRealmCollectionChangeListener_RealmResults_E____:
+
+``removeChangeListener``
+------------------------
+
+public **void (?)** removeChangeListener (:ref:`io.realm.OrderedRealmCollectionChangeListener\<io.realm.RealmResults\<E>> <io_realm_OrderedRealmCollectionChangeListener>` listener)
+
+Removes the specified change listener.
+Parameters
+~~~~~~~~~~
+
+- ``listener - ``the change listener to be removed.
+   
+
+Throws
+~~~~~~
+
+See Also
+~~~~~~~~
+
+io.realm.RealmChangeListener.. _io_realm_RealmResults_asFlowable____:
+
+``asFlowable``
+--------------
+
+public **<any> (?)** asFlowable ()
+
+Returns an Rx Flowable that monitors changes to this RealmResults. It will emit the current RealmResults when subscribed to. RealmResults will continually be emitted as the RealmResults are updated - ``onComplete``will never be called.
+
+Items emitted from Realm Flowables are frozen (See **#freeze() (?)**. This means that they are immutable and can be read on any thread.
+
+
+
+Realm Flowables always emit items from the thread holding the live RealmResults. This means that if you need to do further processing, it is recommend to observe the values on a computation scheduler:
+
+
+
+.. code-block:: java
+
+   realm.where(Foo.class).findAllAsync().asFlowable()
+    .observeOn(Schedulers.computation())
+    .map(rxResults -> doExpensiveWork(rxResults))
+    .observeOn(AndroidSchedulers.mainThread())
+    .subscribe( ... );
+    
+
+
+
+
+
+If you would like the ``asFlowable()``to stop emitting items you can instruct RxJava to only emit only the first item by using the ``first()``operator:
+
+
+
+
+
+.. code-block:: java
+
+   
+    realm.where(Foo.class).findAllAsync().asFlowable()
+         .filter(results -> results.isLoaded())
+         .first()
+         .subscribe( ... ) // You only get the results once
+    
+
+
+
+
+Throws
+~~~~~~
+
+See Also
+~~~~~~~~
+
+<a href="https://realm.io/docs/java/latest/#rxjava">RxJava and Realm</a>.. _io_realm_RealmResults_asChangesetObservable____:
+
+``asChangesetObservable``
+-------------------------
+
+public **<any> (?)** asChangesetObservable ()
+
+Returns an Rx Observable that monitors changes to this RealmResults. It will emit the current RealmResults when subscribed. For each update to the RealmResult a pair consisting of the RealmResults and the **OrderedCollectionChangeSet (?)**will be sent. The changeset will be ``null``the first time an RealmResults is emitted.
+
+RealmResults will continually be emitted as the RealmResults are updated - ``onComplete``will never be called.
+
+
+
+Items emitted from Realm Observables are frozen (See **#freeze() (?)**. This means that they are immutable and can be read on any thread.
+
+
+
+Realm Observables always emit items from the thread holding the live Realm. This means that if you need to do further processing, it is recommend to observe the values on a computation scheduler:
+
+
+
+.. code-block:: java
+
+   realm.where(Foo.class).findAllAsync().asChangesetObservable()
+    .observeOn(Schedulers.computation())
+    .map((rxResults, changes) -> doExpensiveWork(rxResults, changes))
+    .observeOn(AndroidSchedulers.mainThread())
+    .subscribe( ... );
+    
+
+
+
+
+
+
+Throws
+~~~~~~
+
+See Also
+~~~~~~~~
+
+<a href="https://realm.io/docs/java/latest/#rxjava">RxJava and Realm</a>.. _io_realm_RealmResults_asJSON____:
+
+``asJSON``
+----------
+
+public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ asJSON ()
+
+Returns a JSON representation of the matches of a **RealmQuery (?)**. Cycles will be returned as row indices. This is a helper method used to inspect data, or for debugging purpose, this method could pull a large string which could cause an OutOfMemory error.
+
+
+

@@ -1,0 +1,108 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+io.realm.mongodb.mongo.iterable.MongoCursor<ResultT>
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_mongodb_mongo_iterable_MongoCursor:
+
+*Superclass:*
+
+- `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
+
+*Implemented interfaces:*
+
+- `java.util.Iterator <https://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html>`__
+- `java.io.Closeable <https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html>`__
+
+The Mongo Cursor class is fundamentally an `Iterator <https://docs.oracle.com/javase/7/docs/api/java/util/Iterator/.html>`__containing an additional ``tryNext()``method for convenience.
+
+An application should ensure that a cursor is closed in all circumstances, e.g. using a try-with-resources statement.
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - public **boolean (?)**
+     - :ref:`hasNext <io_realm_mongodb_mongo_iterable_MongoCursor_hasNext____>` ()
+       
+       
+       
+       
+       
+   
+   * - public **ResultT (?)**
+     - :ref:`next <io_realm_mongodb_mongo_iterable_MongoCursor_next____>` ()
+       
+       
+       
+       
+       
+   
+   * - public **ResultT (?)**
+     - :ref:`tryNext <io_realm_mongodb_mongo_iterable_MongoCursor_tryNext____>` ()
+       
+       A special ``next()``case that returns the next document if available or null.
+       
+       
+       
+       
+       
+   
+   * - public **void (?)**
+     - :ref:`close <io_realm_mongodb_mongo_iterable_MongoCursor_close____>` ()
+       
+       
+       
+       
+       
+   
+   
+Method Detail
+=============
+
+.. _io_realm_mongodb_mongo_iterable_MongoCursor_hasNext____:
+
+``hasNext``
+-----------
+
+public **boolean (?)** hasNext ()
+
+
+.. _io_realm_mongodb_mongo_iterable_MongoCursor_next____:
+
+``next``
+--------
+
+public **ResultT (?)** next ()
+
+
+.. _io_realm_mongodb_mongo_iterable_MongoCursor_tryNext____:
+
+``tryNext``
+-----------
+
+public **ResultT (?)** tryNext ()
+
+A special ``next()``case that returns the next document if available or null.
+
+
+.. _io_realm_mongodb_mongo_iterable_MongoCursor_close____:
+
+``close``
+---------
+
+public **void (?)** close ()
+
+
+
