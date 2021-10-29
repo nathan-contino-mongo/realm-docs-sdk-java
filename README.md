@@ -9,7 +9,7 @@ node path/to/yokedox/cli/build/main run \
   -o source \
   --debugGeneratorResultPath ./javadoc \
   --outputMdastJson=0 \
-  javadoc
+  javadoc -- -overview ./javadoc/overview.html
 ```
 
 - `node path/to/yokedox/cli/build/main run`: run the version of Yokedox you built locally.
@@ -17,5 +17,7 @@ node path/to/yokedox/cli/build/main run \
 - `-debugGeneratorResultPath ./javadoc`: consume the generator (javadoc) result from the `javadoc/` directory. This is provided so that you don't have to actually set up Javadoc or clone the realm-java repository to work with Yokedox.
 - `--outputMdastJson=0`: by default (for now), Yokedox outputs yokedast json files. You can use these to inspect the output and debug. However, they don't serve any purpose for snooty, so they should not be committed. Remove this line if you want to generate them for debugging purposes.
 - `javadoc`: tells Yokedox which generator to use - or in this case, tells Yokedox which generator was used to generate the result at `debugGeneratorResultPath`
+- `-- `: stop accepting Yokedox args and pass the subsequent arguments directly to javadoc.
+- `-overview ./javadoc/overview.html`: Javadoc option to specify the overview page, which gets added to the main index file.
 
 >Remember to rebuild Yokedox whenever you made a change to it.
