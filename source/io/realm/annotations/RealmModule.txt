@@ -1,0 +1,43 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+io.realm.annotations.RealmModule
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_annotations_RealmModule:
+
+*Implemented interfaces:*
+
+- `java.lang.annotation.Annotation <https://docs.oracle.com/javase/7/docs/api/java/lang/annotation/Annotation.html>`__
+
+By default a Realm can store all classes extending RealmObject in a project. However, if you want to restrict a Realm to only contain a subset of classes or want to share them between a library project and an app project, you must use a RealmModule.A RealmModule is a collection of classes extending RealmObject that can be combined with other RealmModules to create the schema for a Realm. This makes it easier to control versioning and migration of those Realms.
+
+A RealmModule can either be a library module or an app module. The distinction is made by setting ``library = true``. Setting ``library = true`` is normally only relevant for library authors. See below for further details.
+
+
+
+Currently, it is not possible to have multiple RealmModule declarations in a single file. If you have more than one RealmModule, you will have to use separate Java files for each module.
+
+RealmModules and libraries
+==========================
+
+Realms default behavior is to automatically create a RealmModule called ``DefaultRealmModule`` which contains all classes extending RealmObject in a project. This module is automatically known by Realm.
+
+This behavior is problematic when combining a library project and an app project that both uses Realm. This is because the ``DefaultRealmModule`` will be created for both the library project and the app project, which will cause the project to fail with duplicate class definition errors.
+
+
+
+Library authors are responsible for avoiding this conflict by using explicit modules where ``library = true`` is set. This disables the generation of the DefaultRealmModule for the library project and allows the library to be included in the app project that also uses Realm. This means that library projects that uses Realm internally are required to specify a specific module using ``RealmConfiguration.modules()``.
+
+
+
+App developers are not required to specify any modules, as they implicitly use the ``DefaultRealmModule``, but they now has the option of adding the library project classes to their schema using ``RealmConfiguration.addModule()``.
+
+
+
+
+
