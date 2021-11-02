@@ -29,8 +29,8 @@ Constructors
 
 
 
--  ``io.realm.mongodb.sync.SyncConfiguration.Builder(User, String)`` 
--  ``io.realm.mongodb.sync.SyncConfiguration.Builder(User, ObjectId)`` 
+- ``io.realm.mongodb.sync.SyncConfiguration.Builder(User, String)`` 
+- ``io.realm.mongodb.sync.SyncConfiguration.Builder(User, ObjectId)`` 
 
 
 
@@ -217,7 +217,7 @@ Method Summary
    * - public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`
      - :ref:`allowQueriesOnUiThread <io_realm_mongodb_sync_SyncConfiguration_Builder_allowQueriesOnUiThread_boolean_>` (**boolean** allowQueriesOnUiThread)
        
-       Sets whether or not  ``RealmQueries``  are allowed from the UI thread.
+       Sets whether or not ``RealmQueries``  are allowed from the UI thread.
        
        
        
@@ -242,7 +242,7 @@ Inherited Methods
 
 - Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__: 
    
-    ``getClass`` ,  ``hashCode`` ,  ``equals`` ,  ``clone`` ,  ``toString`` ,  ``notify`` ,  ``notifyAll`` ,  ``wait`` ,  ``wait`` ,  ``wait`` ,  ``finalize`` 
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
    
    
 
@@ -274,7 +274,7 @@ __________
 
 
 
--  ``key - `` the encryption key.
+- ``key - `` the encryption key.
    
 
 
@@ -301,12 +301,12 @@ Sets the schema version of the Realm.Synced Realms only support additive schema 
 
 
 
-- It will be lower if another client with a lesser  ``schemaVersion``  connected to the server for the first time after this schemaVersion was used.
+- It will be lower if another client with a lesser ``schemaVersion``  connected to the server for the first time after this schemaVersion was used.
    
    
    
    
-- It will be higher if another client with a higher  ``schemaVersion``  connected to the server after this Realm was created.
+- It will be higher if another client with a higher ``schemaVersion``  connected to the server after this Realm was created.
    
    
    
@@ -321,7 +321,7 @@ __________
 
 
 
--  ``schemaVersion - `` the schema version.
+- ``schemaVersion - `` the schema version.
    
 
 
@@ -348,7 +348,7 @@ A reference to the default Realm module containing all Realm classes in the proj
 
 
 
- ``builder.modules(Realm.getDefaultMode(), new MyLibraryModule()); `` 
+``builder.modules(Realm.getDefaultMode(), new MyLibraryModule()); `` 
 
 
 
@@ -360,9 +360,9 @@ __________
 
 
 
--  ``baseModule - `` the first Realm module (required).
+- ``baseModule - `` the first Realm module (required).
    
--  ``additionalModules - `` the additional Realm modules
+- ``additionalModules - `` the additional Realm modules
    
 
 
@@ -391,7 +391,7 @@ A reference to the default Realm module containing all Realm classes in the proj
 
 
 
- ``builder.modules(Realm.getDefaultMode(), new MyLibraryModule()); `` 
+``builder.modules(Realm.getDefaultMode(), new MyLibraryModule()); `` 
 
 
 
@@ -403,7 +403,7 @@ __________
 
 
 
--  ``modules - `` list of modules tthe first Realm module (required).
+- ``modules - `` list of modules tthe first Realm module (required).
    
 
 
@@ -454,7 +454,7 @@ __________
 
 
 
--  ``factory - `` factory to use.
+- ``factory - `` factory to use.
    
 
 
@@ -480,7 +480,7 @@ __________
 
 
 
--  ``factory - `` factory to use.
+- ``factory - `` factory to use.
    
 
 
@@ -506,7 +506,7 @@ __________
 
 
 
--  ``transaction - `` transaction to execute.
+- ``transaction - `` transaction to execute.
    
 
 
@@ -537,7 +537,7 @@ errorHandler
 public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>` errorHandler (:ref:`SyncSession.ErrorHandler <io_realm_mongodb_sync_SyncSession_ErrorHandler>` errorHandler)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Sets the error handler used by this configuration.Only errors not handled by the defined  ``SyncPolicy``  will be reported to this error handler.
+Sets the error handler used by this configuration.Only errors not handled by the defined ``SyncPolicy``  will be reported to this error handler.
 
 
 
@@ -549,7 +549,7 @@ __________
 
 
 
--  ``errorHandler - `` error handler used to report back errors when communicating with the Realm Object Server.
+- ``errorHandler - `` error handler used to report back errors when communicating with the Realm Object Server.
    
 
 
@@ -578,7 +578,7 @@ __________
 
 
 
--  ``handler - `` custom handler in case of a Client Reset.
+- ``handler - `` custom handler in case of a Client Reset.
    
 
 
@@ -626,11 +626,11 @@ __________
 
 
 
--  ``timeout - `` how long to wait for the download to complete before an :ref:`io.realm.exceptions.DownloadingRealmInterruptedException <io_realm_exceptions_DownloadingRealmInterruptedException>` is thrown.
+- ``timeout - `` how long to wait for the download to complete before an :ref:`io.realm.exceptions.DownloadingRealmInterruptedException <io_realm_exceptions_DownloadingRealmInterruptedException>` is thrown.
    
    
    
--  ``unit - `` the unit of time used to define the timeout.
+- ``unit - `` the unit of time used to define the timeout.
    
 
 
@@ -683,7 +683,7 @@ __________
 
 
 
--  ``compactOnLaunch - `` a callback called when opening a Realm for the first time during the life of a process to determine if it should be compacted before being returned to the user. It is passed the total file size (data + free space) and the bytes used by data in the file.
+- ``compactOnLaunch - `` a callback called when opening a Realm for the first time during the life of a process to determine if it should be compacted before being returned to the user. It is passed the total file size (data + free space) and the bytes used by data in the file.
    
 
 
@@ -707,7 +707,7 @@ __________
 
 
 
--  ``urlPrefix - `` The prefix to append to the sync connection url.
+- ``urlPrefix - `` The prefix to append to the sync connection url.
    
 
 
@@ -746,7 +746,7 @@ __________
 
 
 
--  ``number - `` the maximum number of active versions before an exception is thrown.
+- ``number - `` the maximum number of active versions before an exception is thrown.
    
 
 
@@ -771,7 +771,7 @@ public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_
 
 Sets whether or not calls to **Realm#executeTransaction (?)** are allowed from the UI thread.
 
-**WARNING: Realm does not allow synchronous transactions to be run on the main thread unless users explicitly opt in with this method.** We recommend diverting calls to  ``executeTransaction``  to non-UI threads or, alternatively, using **Realm#executeTransactionAsync (?)**.
+**WARNING: Realm does not allow synchronous transactions to be run on the main thread unless users explicitly opt in with this method.** We recommend diverting calls to ``executeTransaction``  to non-UI threads or, alternatively, using **Realm#executeTransactionAsync (?)**.
 
 
 
@@ -788,7 +788,7 @@ allowQueriesOnUiThread
 public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>` allowQueriesOnUiThread (**boolean** allowQueriesOnUiThread)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Sets whether or not  ``RealmQueries``  are allowed from the UI thread.
+Sets whether or not ``RealmQueries``  are allowed from the UI thread.
 
 By default Realm allows queries on the main thread. However, by doing so your application may experience a drop of frames or even ANRs. We recommend diverting queries to non-UI threads or, alternatively, using :ref:`RealmQuery#findAllAsync() <io_realm_RealmQuery_findAllAsync__>` or :ref:`RealmQuery#findFirstAsync() <io_realm_RealmQuery_findFirstAsync__>`.
 
