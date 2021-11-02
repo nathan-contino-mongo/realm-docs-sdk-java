@@ -5,6 +5,8 @@
    :depth: 2
    :class: singlecol
 
+
+
 io.realm.RealmObjectChangeListener<T extends io.realm.RealmModel>
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -23,6 +25,8 @@ Realm instances on a thread without an **android.os.Looper (?)** cannot register
 
 
 Listener cannot be registered inside a transaction.
+
+
 
 
 Method Summary
@@ -45,13 +49,19 @@ Method Summary
        
    
    
+
+
 Method Detail
 =============
+
+
 
 onChange
 --------
 
 .. _io_realm_RealmObjectChangeListener_onChange_T__ObjectChangeSet_:
+
+
 
 public **void** onChange (**T (?)** t, :ref:`ObjectChangeSet <io_realm_ObjectChangeSet>` changeSet)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -71,6 +81,8 @@ If a field points to another RealmObject this listener will only be triggered if
 If a field points to a RealmList, this listener will only be triggered if one or multiple objects are inserted, removed or moved within the List. Updating the objects in the RealmList will not trigger this listener.
 
 Changes to :ref:`LinkingObjects <io_realm_annotations_LinkingObjects>` annotated :ref:`RealmResults <io_realm_RealmResults>` fields will not be monitored, nor reported through this change listener.
+
+
 
 
 

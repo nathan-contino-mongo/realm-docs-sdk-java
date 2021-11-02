@@ -5,6 +5,8 @@
    :depth: 2
    :class: singlecol
 
+
+
 io.realm.mongodb.mongo.events.UpdateDescription
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -18,6 +20,8 @@ io.realm.mongodb.mongo.events.UpdateDescription
 
 
 Indicates which fields have been modified in a given update operation.
+
+
 Method Summary
 ==============
 
@@ -112,12 +116,14 @@ Method Summary
        
    
    
+
+
 Inherited Methods
 =================
 
 
 
-- Methods inherited from interface java.lang.Object
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__:
    
    - `getClass <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
    - `hashCode <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
@@ -135,13 +141,19 @@ Inherited Methods
    
 
 
+
+
 Method Detail
 =============
+
+
 
 getUpdatedFields
 ----------------
 
 .. _io_realm_mongodb_mongo_events_UpdateDescription_getUpdatedFields__:
+
+
 
 public **BsonDocument (?)** getUpdatedFields ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -149,10 +161,14 @@ public **BsonDocument (?)** getUpdatedFields ()
 Returns a **BsonDocument (?)** containing keys and values representing (respectively) the fields that have changed in the corresponding update and their new values.
 
 
+
+
 getRemovedFields
 ----------------
 
 .. _io_realm_mongodb_mongo_events_UpdateDescription_getRemovedFields__:
+
+
 
 public `Collection <https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html>`__ getRemovedFields ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -160,33 +176,47 @@ public `Collection <https://docs.oracle.com/javase/7/docs/api/java/util/Collecti
 Returns a `List <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__ containing the field names that have been removed in the corresponding update.
 
 
+
+
 toUpdateDocument
 ----------------
 
 .. _io_realm_mongodb_mongo_events_UpdateDescription_toUpdateDocument__:
 
+
+
 public **BsonDocument (?)** toUpdateDocument ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Convert this update description to an update document.
+
+
 toBsonDocument
 --------------
 
 .. _io_realm_mongodb_mongo_events_UpdateDescription_toBsonDocument__:
 
+
+
 public **BsonDocument (?)** toBsonDocument ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Converts this update description to its document representation as it would appear in a MongoDB Change Event.
+
+
 fromBsonDocument
 ----------------
 
 .. _io_realm_mongodb_mongo_events_UpdateDescription_fromBsonDocument_BsonDocument_:
 
+
+
 public static :ref:`UpdateDescription <io_realm_mongodb_mongo_events_UpdateDescription>` fromBsonDocument (**BsonDocument (?)** document)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Converts an update description BSON document from a MongoDB Change Event into an UpdateDescription object.
+
+
 Parameters
 __________
 
@@ -196,15 +226,21 @@ __________
    
 
 
+
+
 merge
 -----
 
 .. _io_realm_mongodb_mongo_events_UpdateDescription_merge_UpdateDescription_:
 
+
+
 public :ref:`UpdateDescription <io_realm_mongodb_mongo_events_UpdateDescription>` merge (:ref:`UpdateDescription <io_realm_mongodb_mongo_events_UpdateDescription>` otherDescription)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Unilaterally merge an update description into this update description.
+
+
 Parameters
 __________
 
@@ -214,15 +250,21 @@ __________
    
 
 
+
+
 diff
 ----
 
 .. _io_realm_mongodb_mongo_events_UpdateDescription_diff_BsonDocument__BsonDocument_:
 
+
+
 public static :ref:`UpdateDescription <io_realm_mongodb_mongo_events_UpdateDescription>` diff (**BsonDocument (?)** beforeDocument, **BsonDocument (?)** afterDocument)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Find the diff between two documents.NOTE: This does not do a full diff on [BsonArray]. If there is an inequality between the old and new array, the old array will simply be replaced by the new one.
+
+
 
 
 Parameters
@@ -236,28 +278,40 @@ __________
    
 
 
+
+
 isEmpty
 -------
 
 .. _io_realm_mongodb_mongo_events_UpdateDescription_isEmpty__:
 
+
+
 public **boolean** isEmpty ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Determines whether this update description is empty.
+
+
 equals
 ------
 
 .. _io_realm_mongodb_mongo_events_UpdateDescription_equals_Object_:
 
+
+
 public **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ obj)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
 
 
 hashCode
 --------
 
 .. _io_realm_mongodb_mongo_events_UpdateDescription_hashCode__:
+
+
 
 public **int** hashCode ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~

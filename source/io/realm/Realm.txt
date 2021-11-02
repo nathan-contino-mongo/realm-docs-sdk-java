@@ -5,6 +5,8 @@
    :depth: 2
    :class: singlecol
 
+
+
 io.realm.Realm
 ^^^^^^^^^^^^^^
 
@@ -76,6 +78,8 @@ A standard pattern for working with Realm in Android activities can be seen belo
 Realm supports String and byte fields containing up to 16 MB.
 
 
+
+
 Nested Class Summary
 ====================
 
@@ -92,6 +96,8 @@ Nested Class Summary
      - ``io.realm.Realm.Callback``
    
    
+
+
 Field Summary
 =============
 
@@ -116,6 +122,8 @@ Field Summary
        The required length for encryption keys used to encrypt Realm data.
    
    
+
+
 Method Summary
 ==============
 
@@ -618,12 +626,14 @@ Method Summary
        
    
    
+
+
 Inherited Methods
 =================
 
 
 
-- Methods inherited from interface io.realm.BaseRealm
+- Methods inherited from interface **io.realm.BaseRealm (?)**:
    
    - **setAutoRefresh (?)**
    - **isAutoRefresh (?)**
@@ -661,7 +671,7 @@ Inherited Methods
    
    
    
-- Methods inherited from interface java.lang.Object
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__:
    
    - `getClass <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
    - `hashCode <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
@@ -679,10 +689,14 @@ Inherited Methods
    
 
 
+
+
 Field Detail
 ============
 
 .. _io_realm_Realm_DEFAULT_REALM_NAME:
+
+
 
 ``DEFAULT_REALM_NAME``
 ----------------------
@@ -690,20 +704,30 @@ Field Detail
 
 .. _io_realm_Realm_ENCRYPTION_KEY_LENGTH:
 
+
+
 ``ENCRYPTION_KEY_LENGTH``
 -------------------------
 
 The required length for encryption keys used to encrypt Realm data.
+
+
 Method Detail
 =============
+
+
 
 asFlowable
 ----------
 
 .. _io_realm_Realm_asFlowable__:
 
+
+
 public **<any> (?)** asFlowable ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
 
 
 
@@ -713,8 +737,12 @@ isEmpty
 
 .. _io_realm_Realm_isEmpty__:
 
+
+
 public **boolean** isEmpty ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
 
 
 
@@ -723,6 +751,8 @@ getSchema
 ---------
 
 .. _io_realm_Realm_getSchema__:
+
+
 
 public :ref:`RealmSchema <io_realm_RealmSchema>` getSchema ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -734,10 +764,14 @@ The schema can only be modified using :ref:`DynamicRealm#getSchema() <io_realm_D
 
 
 
+
+
 init
 ----
 
 .. _io_realm_Realm_init_Context_:
+
+
 
 public static synchronized **void** init (**Context (?)** context)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -784,6 +818,8 @@ Remember to register it in the ``AndroidManifest.xml`` file:
  
 
 
+
+
 Parameters
 __________
 
@@ -793,8 +829,12 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 See Also
 ________
@@ -802,6 +842,8 @@ ________
 #getDefaultInstance()
 
 .. _io_realm_Realm_init_Context__String_:
+
+
 
 public static synchronized **void** init (**Context (?)** context, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ userAgent)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -848,6 +890,8 @@ Remember to register it in the ``AndroidManifest.xml`` file:
  
 
 
+
+
 Parameters
 __________
 
@@ -861,18 +905,26 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 See Also
 ________
 
 #getDefaultInstance()
 
+
+
 getDefaultInstance
 ------------------
 
 .. _io_realm_Realm_getDefaultInstance__:
+
+
 
 public static :ref:`Realm <io_realm_Realm>` getDefaultInstance ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -880,18 +932,26 @@ public static :ref:`Realm <io_realm_Realm>` getDefaultInstance ()
 Realm static constructor that returns the Realm instance defined by the :ref:`io.realm.RealmConfiguration <io_realm_RealmConfiguration>` set by :ref:`#setDefaultConfiguration(RealmConfiguration) <io_realm_Realm_setDefaultConfiguration_RealmConfiguration_>`
 
 
+
+
 Throws
 ______
+
+
 
 getInstance
 -----------
 
 .. _io_realm_Realm_getInstance_RealmConfiguration_:
 
+
+
 public static :ref:`Realm <io_realm_Realm>` getInstance (:ref:`RealmConfiguration <io_realm_RealmConfiguration>` configuration)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Realm static constructor that returns the Realm instance defined by provided :ref:`io.realm.RealmConfiguration <io_realm_RealmConfiguration>`
+
+
 
 
 Parameters
@@ -905,23 +965,33 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 See Also
 ________
 
 RealmConfiguration for details on how to configure a Realm.
 
+
+
 getInstanceAsync
 ----------------
 
 .. _io_realm_Realm_getInstanceAsync_RealmConfiguration__Realm_Callback_:
 
+
+
 public static :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` getInstanceAsync (:ref:`RealmConfiguration <io_realm_RealmConfiguration>` configuration, :ref:`Realm.Callback <io_realm_Realm_Callback>` callback)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The creation of the first Realm instance per :ref:`RealmConfiguration <io_realm_RealmConfiguration>` in a process can take some time as all initialization code need to run at that point (setting up the Realm, validating schemas and creating initial data). This method places the initialization work in a background thread and deliver the Realm instance to the caller thread asynchronously after the initialization is finished.
+
+
 
 
 Parameters
@@ -937,23 +1007,33 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 See Also
 ________
 
 Callback for more details.
 
+
+
 setDefaultConfiguration
 -----------------------
 
 .. _io_realm_Realm_setDefaultConfiguration_RealmConfiguration_:
 
+
+
 public static **void** setDefaultConfiguration (:ref:`RealmConfiguration <io_realm_RealmConfiguration>` configuration)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sets the :ref:`io.realm.RealmConfiguration <io_realm_RealmConfiguration>` used when calling :ref:`#getDefaultInstance() <io_realm_Realm_getDefaultInstance__>`.
+
+
 
 
 Parameters
@@ -967,18 +1047,26 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 See Also
 ________
 
 RealmConfiguration for details on how to configure a Realm.
 
+
+
 getDefaultConfiguration
 -----------------------
 
 .. _io_realm_Realm_getDefaultConfiguration__:
+
+
 
 public static :ref:`RealmConfiguration <io_realm_RealmConfiguration>` getDefaultConfiguration ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -986,10 +1074,14 @@ public static :ref:`RealmConfiguration <io_realm_RealmConfiguration>` getDefault
 Returns the default configuration for :ref:`#getDefaultInstance() <io_realm_Realm_getDefaultInstance__>`.
 
 
+
+
 removeDefaultConfiguration
 --------------------------
 
 .. _io_realm_Realm_removeDefaultConfiguration__:
+
+
 
 public static **void** removeDefaultConfiguration ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -997,10 +1089,14 @@ public static **void** removeDefaultConfiguration ()
 Removes the current default configuration (if any). Any further calls to :ref:`#getDefaultInstance() <io_realm_Realm_getDefaultInstance__>` will fail until a new default configuration has been set using :ref:`#setDefaultConfiguration(RealmConfiguration) <io_realm_Realm_setDefaultConfiguration_RealmConfiguration_>`.
 
 
+
+
 createAllFromJson
 -----------------
 
 .. _io_realm_Realm_createAllFromJson_Class_E___JSONArray_:
+
+
 
 public **void** createAllFromJson <**E (?)** >(`java.lang.Class\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__ clazz, **JSONArray (?)** json)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1010,6 +1106,8 @@ Creates a Realm object for each object in a JSON array. This must be done within
 
 
 This method currently does not support value list field.
+
+
 
 
 Parameters
@@ -1023,8 +1121,12 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 See Also
 ________
@@ -1037,12 +1139,16 @@ RealmMap
 
 .. _io_realm_Realm_createAllFromJson_Class_E___String_:
 
+
+
 public **void** createAllFromJson <**E (?)** >(`java.lang.Class\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__ clazz, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ json)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Creates a Realm object for each object in a JSON array. This must be done within a transaction. JSON properties with unknown properties will be ignored. If a :ref:`RealmObject <io_realm_RealmObject>` field is not present in the JSON object the :ref:`RealmObject <io_realm_RealmObject>` field will be set to the default value for that type.
 
 This method currently does not support value list field.
+
+
 
 
 Parameters
@@ -1056,8 +1162,12 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 See Also
 ________
@@ -1070,6 +1180,8 @@ RealmMap
 
 .. _io_realm_Realm_createAllFromJson_Class_E___InputStream_:
 
+
+
 public **void** createAllFromJson <**E (?)** >(`java.lang.Class\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__ clazz, `InputStream <https://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html>`__ inputStream)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1078,6 +1190,8 @@ Creates a Realm object for each object in a JSON array. This must be done within
 This API is only available in API level 11 or later.
 
 This method currently does not support value list field.
+
+
 
 
 Parameters
@@ -1091,8 +1205,12 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 See Also
 ________
@@ -1103,10 +1221,14 @@ RealmDictionary
 
 RealmMap
 
+
+
 createOrUpdateAllFromJson
 -------------------------
 
 .. _io_realm_Realm_createOrUpdateAllFromJson_Class_E___JSONArray_:
+
+
 
 public **void** createOrUpdateAllFromJson <**E (?)** >(`java.lang.Class\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__ clazz, **JSONArray (?)** json)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1114,6 +1236,8 @@ public **void** createOrUpdateAllFromJson <**E (?)** >(`java.lang.Class\<E> <htt
 Tries to update a list of existing objects identified by their primary key with new JSON data. If an existing object could not be found in the Realm, a new object will be created. This must happen within a transaction. If updating a :ref:`RealmObject <io_realm_RealmObject>` and a field is not found in the JSON object, that field will not be updated. If a new :ref:`RealmObject <io_realm_RealmObject>` is created and a field is not found in the JSON object, that field will be assigned the default value for the field type.
 
 This method currently does not support value list field.
+
+
 
 
 Parameters
@@ -1129,8 +1253,12 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 See Also
 ________
@@ -1145,12 +1273,16 @@ RealmMap
 
 .. _io_realm_Realm_createOrUpdateAllFromJson_Class_E___String_:
 
+
+
 public **void** createOrUpdateAllFromJson <**E (?)** >(`java.lang.Class\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__ clazz, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ json)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Tries to update a list of existing objects identified by their primary key with new JSON data. If an existing object could not be found in the Realm, a new object will be created. This must happen within a transaction. If updating a :ref:`RealmObject <io_realm_RealmObject>` and a field is not found in the JSON object, that field will not be updated. If a new :ref:`RealmObject <io_realm_RealmObject>` is created and a field is not found in the JSON object, that field will be assigned the default value for the field type.
 
 This method currently does not support value list field.
+
+
 
 
 Parameters
@@ -1166,8 +1298,12 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 See Also
 ________
@@ -1182,6 +1318,8 @@ RealmMap
 
 .. _io_realm_Realm_createOrUpdateAllFromJson_Class_E___InputStream_:
 
+
+
 public **void** createOrUpdateAllFromJson <**E (?)** >(`java.lang.Class\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__ clazz, `InputStream <https://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html>`__ in)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1190,6 +1328,8 @@ Tries to update a list of existing objects identified by their primary key with 
 This API is only available in API level 11 or later.
 
 This method currently does not support value list field.
+
+
 
 
 Parameters
@@ -1205,8 +1345,12 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 See Also
 ________
@@ -1219,10 +1363,14 @@ RealmDictionary
 
 RealmMap
 
+
+
 createObjectFromJson
 --------------------
 
 .. _io_realm_Realm_createObjectFromJson_Class_E___JSONObject_:
+
+
 
 public **E (?)** createObjectFromJson <**E (?)** >(`java.lang.Class\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__ clazz, **JSONObject (?)** json)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1230,6 +1378,8 @@ public **E (?)** createObjectFromJson <**E (?)** >(`java.lang.Class\<E> <https:/
 Creates a Realm object pre-filled with data from a JSON object. This must be done inside a transaction. JSON properties with unknown properties will be ignored. If a :ref:`RealmObject <io_realm_RealmObject>` field is not present in the JSON object the :ref:`RealmObject <io_realm_RealmObject>` field will be set to the default value for that type.
 
 This method currently does not support value list field.
+
+
 
 
 Parameters
@@ -1243,8 +1393,12 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 See Also
 ________
@@ -1259,12 +1413,16 @@ RealmMap
 
 .. _io_realm_Realm_createObjectFromJson_Class_E___String_:
 
+
+
 public **E (?)** createObjectFromJson <**E (?)** >(`java.lang.Class\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__ clazz, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ json)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Creates a Realm object pre-filled with data from a JSON object. This must be done inside a transaction. JSON properties with unknown properties will be ignored. If a :ref:`RealmObject <io_realm_RealmObject>` field is not present in the JSON object the :ref:`RealmObject <io_realm_RealmObject>` field will be set to the default value for that type.
 
 This method currently does not support value list field.
+
+
 
 
 Parameters
@@ -1278,8 +1436,12 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 See Also
 ________
@@ -1292,6 +1454,8 @@ RealmMap
 
 .. _io_realm_Realm_createObjectFromJson_Class_E___InputStream_:
 
+
+
 public **E (?)** createObjectFromJson <**E (?)** >(`java.lang.Class\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__ clazz, `InputStream <https://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html>`__ inputStream)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1300,6 +1464,8 @@ Creates a Realm object pre-filled with data from a JSON object. This must be don
 This API is only available in API level 11 or later.
 
 This method currently does not support value list field.
+
+
 
 
 Parameters
@@ -1313,8 +1479,12 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 See Also
 ________
@@ -1325,10 +1495,14 @@ RealmDictionary
 
 RealmMap
 
+
+
 createOrUpdateObjectFromJson
 ----------------------------
 
 .. _io_realm_Realm_createOrUpdateObjectFromJson_Class_E___JSONObject_:
+
+
 
 public **E (?)** createOrUpdateObjectFromJson <**E (?)** >(`java.lang.Class\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__ clazz, **JSONObject (?)** json)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1336,6 +1510,8 @@ public **E (?)** createOrUpdateObjectFromJson <**E (?)** >(`java.lang.Class\<E> 
 Tries to update an existing object defined by its primary key with new JSON data. If no existing object could be found a new object will be saved in the Realm. This must happen within a transaction. If updating a :ref:`RealmObject <io_realm_RealmObject>` and a field is not found in the JSON object, that field will not be updated. If a new :ref:`RealmObject <io_realm_RealmObject>` is created and a field is not found in the JSON object, that field will be assigned the default value for the field type.
 
 This method currently does not support value list field.
+
+
 
 
 Parameters
@@ -1353,8 +1529,12 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 See Also
 ________
@@ -1369,12 +1549,16 @@ RealmMap
 
 .. _io_realm_Realm_createOrUpdateObjectFromJson_Class_E___String_:
 
+
+
 public **E (?)** createOrUpdateObjectFromJson <**E (?)** >(`java.lang.Class\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__ clazz, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ json)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Tries to update an existing object defined by its primary key with new JSON data. If no existing object could be found a new object will be saved in the Realm. This must happen within a transaction. If updating a :ref:`RealmObject <io_realm_RealmObject>` and a field is not found in the JSON object, that field will not be updated. If a new :ref:`RealmObject <io_realm_RealmObject>` is created and a field is not found in the JSON object, that field will be assigned the default value for the field type.
 
 This method currently does not support value list field.
+
+
 
 
 Parameters
@@ -1390,8 +1574,12 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 See Also
 ________
@@ -1406,6 +1594,8 @@ RealmMap
 
 .. _io_realm_Realm_createOrUpdateObjectFromJson_Class_E___InputStream_:
 
+
+
 public **E (?)** createOrUpdateObjectFromJson <**E (?)** >(`java.lang.Class\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__ clazz, `InputStream <https://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html>`__ in)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1414,6 +1604,8 @@ Tries to update an existing object defined by its primary key with new JSON data
 This API is only available in API level 11 or later.
 
 This method currently does not support value list field.
+
+
 
 
 Parameters
@@ -1431,8 +1623,12 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 See Also
 ________
@@ -1445,15 +1641,21 @@ RealmDictionary
 
 RealmMap
 
+
+
 createObject
 ------------
 
 .. _io_realm_Realm_createObject_Class_E__:
 
+
+
 public **E (?)** createObject <**E (?)** >(`java.lang.Class\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__ clazz)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Instantiates and adds a new object to the Realm.This method is only available for model classes with no @PrimaryKey annotation. If you like to create an object that has a primary key, use **#createObject(Class, Object) (?)** or **#copyToRealm(RealmModel, ImportFlag...) (?)** instead.
+
+
 
 
 
@@ -1467,8 +1669,12 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 See Also
 ________
@@ -1477,10 +1683,14 @@ ________
 
 .. _io_realm_Realm_createObject_Class_E___Object_:
 
+
+
 public **E (?)** createObject <**E (?)** >(`java.lang.Class\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__ clazz, `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ primaryKeyValue)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Instantiates and adds a new object to the Realm with the primary key value already set.If the value violates the primary key constraint, no object will be added and a :ref:`RealmException <io_realm_exceptions_RealmException>` will be thrown. The default value for primary key provided by the model class will be ignored.
+
+
 
 
 
@@ -1496,18 +1706,26 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 createEmbeddedObject
 --------------------
 
 .. _io_realm_Realm_createEmbeddedObject_Class_E___RealmModel__String_:
 
+
+
 public **E (?)** createEmbeddedObject <**E (?)** >(`java.lang.Class\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__ clazz, :ref:`RealmModel <io_realm_RealmModel>` parentObject, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ parentProperty)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Instantiates and adds a new embedded object to the Realm.This method should only be used to create objects of types marked as embedded.
+
+
 
 
 Parameters
@@ -1525,23 +1743,33 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 See Also
 ________
 
 RealmClass#embedded()
 
+
+
 copyToRealm
 -----------
 
 .. _io_realm_Realm_copyToRealm_E__ImportFlag____:
 
+
+
 public **E (?)** copyToRealm <**E (?)** >(**E (?)** object, :ref:`io.realm.ImportFlag[] <io_realm_ImportFlag>` flags)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Copies a RealmObject to the Realm instance and returns the copy. Any further changes to the original RealmObject will not be reflected in the Realm copy. This is a deep copy, so all referenced objects will be copied. Objects already in this Realm will be ignored.Please note, copying an object will copy all field values. Any unset field in this and child objects will be set to their default value if not provided.
+
+
 
 
 Parameters
@@ -1557,15 +1785,21 @@ __________
    
 
 
+
+
 Throws
 ______
 
 .. _io_realm_Realm_copyToRealm_Iterable_E___ImportFlag____:
 
+
+
 public `List <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__ copyToRealm <**E (?)** >(`java.lang.Iterable\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Iterable.html>`__ objects, :ref:`io.realm.ImportFlag[] <io_realm_ImportFlag>` flags)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Copies a collection of RealmObjects to the Realm instance and returns their copy. Any further changes to the original RealmObjects will not be reflected in the Realm copies. This is a deep copy i.e., all referenced objects will be copied. Objects already in this Realm will be ignored.Please note, copying an object will copy all field values. Any unset field in the objects and child objects will be set to their default value if not provided.
+
+
 
 
 Parameters
@@ -1579,13 +1813,19 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 copyToRealmOrUpdate
 -------------------
 
 .. _io_realm_Realm_copyToRealmOrUpdate_E__ImportFlag____:
+
+
 
 public **E (?)** copyToRealmOrUpdate <**E (?)** >(**E (?)** object, :ref:`io.realm.ImportFlag[] <io_realm_ImportFlag>` flags)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1593,6 +1833,8 @@ public **E (?)** copyToRealmOrUpdate <**E (?)** >(**E (?)** object, :ref:`io.rea
 Updates an existing RealmObject that is identified by the same :ref:`io.realm.annotations.PrimaryKey <io_realm_annotations_PrimaryKey>` or creates a new copy if no existing object could be found. This is a deep copy or update i.e., all referenced objects will be either copied or updated.
 
 Please note, copying an object will copy all field values. Any unset field in the object and child objects will be set to their default value if not provided.
+
+
 
 
 Parameters
@@ -1608,8 +1850,12 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 See Also
 ________
@@ -1618,12 +1864,16 @@ ________
 
 .. _io_realm_Realm_copyToRealmOrUpdate_Iterable_E___ImportFlag____:
 
+
+
 public `List <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__ copyToRealmOrUpdate <**E (?)** >(`java.lang.Iterable\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Iterable.html>`__ objects, :ref:`io.realm.ImportFlag[] <io_realm_ImportFlag>` flags)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Updates a list of existing RealmObjects that is identified by their :ref:`io.realm.annotations.PrimaryKey <io_realm_annotations_PrimaryKey>` or creates a new copy if no existing object could be found. This is a deep copy or update i.e., all referenced objects will be either copied or updated.
 
 Please note, copying an object will copy all field values. Any unset field in the objects and child objects will be set to their default value if not provided.
+
+
 
 
 Parameters
@@ -1637,18 +1887,26 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 See Also
 ________
 
 #copyToRealm(Iterable, ImportFlag...)
 
+
+
 insert
 ------
 
 .. _io_realm_Realm_insert_Collection___extends_RealmModel__:
+
+
 
 public **void** insert (`java.util.Collection\<? extends io.realm.RealmModel> <https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html>`__ objects)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1677,6 +1935,8 @@ If you want the managed :ref:`RealmObject <io_realm_RealmObject>` returned, use 
 
 
 
+
+
 Parameters
 __________
 
@@ -1686,10 +1946,14 @@ __________
    
 
 
+
+
 Throws
 ______
 
 .. _io_realm_Realm_insert_RealmModel_:
+
+
 
 public **void** insert (:ref:`RealmModel <io_realm_RealmModel>` object)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1718,6 +1982,8 @@ If you want the managed :ref:`RealmObject <io_realm_RealmObject>` returned, use 
 
 
 
+
+
 Parameters
 __________
 
@@ -1727,13 +1993,19 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 insertOrUpdate
 --------------
 
 .. _io_realm_Realm_insertOrUpdate_Collection___extends_RealmModel__:
+
+
 
 public **void** insertOrUpdate (`java.util.Collection\<? extends io.realm.RealmModel> <https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html>`__ objects)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1762,6 +2034,8 @@ If you want the managed :ref:`RealmObject <io_realm_RealmObject>` returned, use 
 
 
 
+
+
 Parameters
 __________
 
@@ -1771,10 +2045,14 @@ __________
    
 
 
+
+
 Throws
 ______
 
 .. _io_realm_Realm_insertOrUpdate_RealmModel_:
+
+
 
 public **void** insertOrUpdate (:ref:`RealmModel <io_realm_RealmModel>` object)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1803,6 +2081,8 @@ If you want the managed :ref:`RealmObject <io_realm_RealmObject>` returned, use 
 
 
 
+
+
 Parameters
 __________
 
@@ -1812,13 +2092,19 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 copyFromRealm
 -------------
 
 .. _io_realm_Realm_copyFromRealm_Iterable_E__:
+
+
 
 public `List <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__ copyFromRealm <**E (?)** >(`java.lang.Iterable\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Iterable.html>`__ realmObjects)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1830,6 +2116,8 @@ Makes an unmanaged in-memory copy of already persisted RealmObjects. This is a d
 
 
 
+
+
 Type Parameters
 _______________
 
@@ -1837,6 +2125,8 @@ _______________
 
 - ``E - ``type of object.
    
+
+
 
 
 Parameters
@@ -1848,8 +2138,12 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 See Also
 ________
@@ -1857,6 +2151,8 @@ ________
 #copyToRealmOrUpdate(Iterable, ImportFlag...)
 
 .. _io_realm_Realm_copyFromRealm_Iterable_E___int_:
+
+
 
 public `List <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__ copyFromRealm <**E (?)** >(`java.lang.Iterable\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Iterable.html>`__ realmObjects, **int** maxDepth)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1868,6 +2164,8 @@ Makes an unmanaged in-memory copy of already persisted RealmObjects. This is a d
 
 
 
+
+
 Type Parameters
 _______________
 
@@ -1875,6 +2173,8 @@ _______________
 
 - ``E - ``type of object.
    
+
+
 
 
 Parameters
@@ -1890,8 +2190,12 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 See Also
 ________
@@ -1899,6 +2203,8 @@ ________
 #copyToRealmOrUpdate(Iterable, ImportFlag...)
 
 .. _io_realm_Realm_copyFromRealm_E_:
+
+
 
 public **E (?)** copyFromRealm <**E (?)** >(**E (?)** realmObject)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1912,6 +2218,8 @@ The copied object(s) are all detached from Realm and they will no longer be auto
 
 
 
+
+
 Type Parameters
 _______________
 
@@ -1919,6 +2227,8 @@ _______________
 
 - ``E - ``type of object.
    
+
+
 
 
 Parameters
@@ -1932,8 +2242,12 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 See Also
 ________
@@ -1941,6 +2255,8 @@ ________
 #copyToRealmOrUpdate(RealmModel, ImportFlag...)
 
 .. _io_realm_Realm_copyFromRealm_E__int_:
+
+
 
 public **E (?)** copyFromRealm <**E (?)** >(**E (?)** realmObject, **int** maxDepth)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1954,6 +2270,8 @@ The copied object(s) are all detached from Realm and they will no longer be auto
 
 
 
+
+
 Type Parameters
 _______________
 
@@ -1961,6 +2279,8 @@ _______________
 
 - ``E - ``type of object.
    
+
+
 
 
 Parameters
@@ -1978,23 +2298,33 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 See Also
 ________
 
 #copyToRealmOrUpdate(RealmModel, ImportFlag...)
 
+
+
 where
 -----
 
 .. _io_realm_Realm_where_Class_E__:
 
+
+
 public :ref:`RealmQuery <io_realm_RealmQuery>` where <**E (?)** >(`java.lang.Class\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__ clazz)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns a typed RealmQuery, which can be used to query for specific objects of this type
+
+
 Parameters
 __________
 
@@ -2004,15 +2334,21 @@ __________
    
 
 
+
+
 See Also
 ________
 
 io.realm.RealmQuery
 
+
+
 addChangeListener
 -----------------
 
 .. _io_realm_Realm_addChangeListener_RealmChangeListener_Realm__:
+
+
 
 public **void** addChangeListener (:ref:`io.realm.RealmChangeListener\<io.realm.Realm> <io_realm_RealmChangeListener>` listener)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -2020,6 +2356,8 @@ public **void** addChangeListener (:ref:`io.realm.RealmChangeListener\<io.realm.
 Adds a change listener to the Realm.The listeners will be executed when changes are committed by this or another thread.
 
 Realm instances are per thread singletons and cached, so listeners should be removed manually even if calling **#close() (?)**. Otherwise there is a risk of memory leaks.
+
+
 
 
 
@@ -2033,8 +2371,12 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 See Also
 ________
@@ -2045,15 +2387,21 @@ io.realm.RealmChangeListener
 
 #removeAllChangeListeners()
 
+
+
 removeChangeListener
 --------------------
 
 .. _io_realm_Realm_removeChangeListener_RealmChangeListener_Realm__:
 
+
+
 public **void** removeChangeListener (:ref:`io.realm.RealmChangeListener\<io.realm.Realm> <io_realm_RealmChangeListener>` listener)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Removes the specified change listener.
+
+
 Parameters
 __________
 
@@ -2063,35 +2411,51 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 See Also
 ________
 
 io.realm.RealmChangeListener
+
+
 
 removeAllChangeListeners
 ------------------------
 
 .. _io_realm_Realm_removeAllChangeListeners__:
 
+
+
 public **void** removeAllChangeListeners ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Removes all user-defined change listeners.
+
+
 Throws
 ______
+
+
 
 See Also
 ________
 
 io.realm.RealmChangeListener
 
+
+
 executeTransaction
 ------------------
 
 .. _io_realm_Realm_executeTransaction_Realm_Transaction_:
+
+
 
 public **void** executeTransaction (:ref:`Realm.Transaction <io_realm_Realm_Transaction>` transaction)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -2099,6 +2463,8 @@ public **void** executeTransaction (:ref:`Realm.Transaction <io_realm_Realm_Tran
 Executes a given transaction on the Realm. **#beginTransaction() (?)** and **#commitTransaction() (?)** will be called automatically. If any exception is thrown during the transaction **#cancelTransaction() (?)** will be called instead of **#commitTransaction() (?)**.
 
 Calling this method from the UI thread will throw a :ref:`RealmException <io_realm_exceptions_RealmException>`. Doing so may result in a drop of frames or even ANRs. We recommend calling this method from a non-UI thread or using **#executeTransactionAsync(Transaction) (?)** instead.
+
+
 
 
 
@@ -2114,13 +2480,19 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 executeTransactionAsync
 -----------------------
 
 .. _io_realm_Realm_executeTransactionAsync_Realm_Transaction_:
+
+
 
 public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` executeTransactionAsync (:ref:`Realm.Transaction <io_realm_Realm_Transaction>` transaction)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -2128,6 +2500,8 @@ public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` executeTransactionAsync (
 Similar to **#executeTransaction(Transaction) (?)** but runs asynchronously on a worker thread.
 
 
+
+
 Parameters
 __________
 
@@ -2137,6 +2511,8 @@ __________
    
    
    
+
+
 
 
 Throws
@@ -2144,10 +2520,14 @@ ______
 
 .. _io_realm_Realm_executeTransactionAsync_Realm_Transaction__Realm_Transaction_OnSuccess_:
 
+
+
 public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` executeTransactionAsync (:ref:`Realm.Transaction <io_realm_Realm_Transaction>` transaction, :ref:`Realm.Transaction.OnSuccess <io_realm_Realm_Transaction_OnSuccess>` onSuccess)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Similar to **#executeTransactionAsync(Transaction) (?)**, but also accepts an OnSuccess callback.
+
+
 
 
 Parameters
@@ -2161,6 +2541,8 @@ __________
    
 - ``onSuccess - ``callback invoked when the transaction succeeds.
    
+
+
 
 
 Throws
@@ -2168,10 +2550,14 @@ ______
 
 .. _io_realm_Realm_executeTransactionAsync_Realm_Transaction__Realm_Transaction_OnError_:
 
+
+
 public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` executeTransactionAsync (:ref:`Realm.Transaction <io_realm_Realm_Transaction>` transaction, :ref:`Realm.Transaction.OnError <io_realm_Realm_Transaction_OnError>` onError)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Similar to **#executeTransactionAsync(Transaction) (?)**, but also accepts an OnError callback.
+
+
 
 
 Parameters
@@ -2187,15 +2573,21 @@ __________
    
 
 
+
+
 Throws
 ______
 
 .. _io_realm_Realm_executeTransactionAsync_Realm_Transaction__Realm_Transaction_OnSuccess__Realm_Transaction_OnError_:
 
+
+
 public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` executeTransactionAsync (:ref:`Realm.Transaction <io_realm_Realm_Transaction>` transaction, :ref:`Realm.Transaction.OnSuccess <io_realm_Realm_Transaction_OnSuccess>` onSuccess, :ref:`Realm.Transaction.OnError <io_realm_Realm_Transaction_OnError>` onError)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Similar to **#executeTransactionAsync(Transaction) (?)**, but also accepts an OnSuccess and OnError callbacks.
+
+
 
 
 Parameters
@@ -2213,18 +2605,26 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 delete
 ------
 
 .. _io_realm_Realm_delete_Class___extends_RealmModel__:
 
+
+
 public **void** delete (`java.lang.Class\<? extends io.realm.RealmModel> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__ clazz)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Deletes all objects of the specified class from the Realm.
+
+
 Parameters
 __________
 
@@ -2234,18 +2634,26 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 migrateRealm
 ------------
 
 .. _io_realm_Realm_migrateRealm_RealmConfiguration_:
 
+
+
 public static **void** migrateRealm (:ref:`RealmConfiguration <io_realm_RealmConfiguration>` configuration)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Manually triggers the migration associated with a given RealmConfiguration. If Realm is already at the latest version, nothing will happen.
+
+
 Parameters
 __________
 
@@ -2257,15 +2665,21 @@ __________
    
 
 
+
+
 Throws
 ______
 
 .. _io_realm_Realm_migrateRealm_RealmConfiguration__RealmMigration_:
 
+
+
 public static **void** migrateRealm (:ref:`RealmConfiguration <io_realm_RealmConfiguration>` configuration, :ref:`RealmMigration <io_realm_RealmMigration>` migration)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Manually triggers a migration on a RealmMigration.
+
+
 Parameters
 __________
 
@@ -2281,13 +2695,19 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 deleteRealm
 -----------
 
 .. _io_realm_Realm_deleteRealm_RealmConfiguration_:
+
+
 
 public static **boolean** deleteRealm (:ref:`RealmConfiguration <io_realm_RealmConfiguration>` configuration)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -2297,6 +2717,8 @@ Deletes the Realm file along with the related temporary files specified by the g
 All Realm instances must be closed before calling this method.
 
 WARNING: For synchronized Realm, there is a chance that an internal Realm instance on the background thread is not closed even all the user controlled Realm instances are closed. This will result an ``IllegalStateException``. See issue https://github.com/realm/realm-java/issues/5416 .
+
+
 
 
 
@@ -2312,13 +2734,19 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 compactRealm
 ------------
 
 .. _io_realm_Realm_compactRealm_RealmConfiguration_:
+
+
 
 public static **boolean** compactRealm (:ref:`RealmConfiguration <io_realm_RealmConfiguration>` configuration)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -2329,6 +2757,8 @@ Compacts a Realm file. A Realm file usually contain free/unused space. This meth
 | The file system should have free space for at least a copy of the Realm file.
 | The Realm file is left untouched if any file operation fails.
 | 
+
+
 
 
 Parameters
@@ -2342,13 +2772,19 @@ __________
    
 
 
+
+
 freeze
 ------
 
 .. _io_realm_Realm_freeze__:
 
+
+
 public :ref:`Realm <io_realm_Realm>` freeze ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
 
 
 
@@ -2358,27 +2794,39 @@ getDefaultModule
 
 .. _io_realm_Realm_getDefaultModule__:
 
+
+
 public static `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ getDefaultModule ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the default Realm module. This module contains all Realm classes in the current project, but not those from library or project dependencies. Realm classes in these should be exposed using their own module.
+
+
 Throws
 ______
+
+
 
 See Also
 ________
 
 io.realm.RealmConfiguration.Builder#modules(Object, Object...)
 
+
+
 getGlobalInstanceCount
 ----------------------
 
 .. _io_realm_Realm_getGlobalInstanceCount_RealmConfiguration_:
 
+
+
 public static **int** getGlobalInstanceCount (:ref:`RealmConfiguration <io_realm_RealmConfiguration>` configuration)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the current number of open Realm instances across all threads in current process that are using this configuration. This includes both dynamic and normal Realms.
+
+
 Parameters
 __________
 
@@ -2388,6 +2836,8 @@ __________
    
    
    
+
+
 
 
 getLocalInstanceCount
@@ -2395,10 +2845,14 @@ getLocalInstanceCount
 
 .. _io_realm_Realm_getLocalInstanceCount_RealmConfiguration_:
 
+
+
 public static **int** getLocalInstanceCount (:ref:`RealmConfiguration <io_realm_RealmConfiguration>` configuration)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the current number of open Realm instances on the thread calling this method. This include both dynamic and normal Realms.
+
+
 Parameters
 __________
 
@@ -2410,10 +2864,14 @@ __________
    
 
 
+
+
 getApplicationContext
 ---------------------
 
 .. _io_realm_Realm_getApplicationContext__:
+
+
 
 public static **Context (?)** getApplicationContext ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

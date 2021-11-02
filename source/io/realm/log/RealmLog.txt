@@ -5,6 +5,8 @@
    :depth: 2
    :class: singlecol
 
+
+
 io.realm.log.RealmLog
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -20,12 +22,16 @@ io.realm.log.RealmLog
 Global logger used by all Realm components. Custom loggers can be added by registering classes implementing :ref:`RealmLogger <io_realm_log_RealmLogger>`.
 
 
+
+
 Constructors
 ============
 
 
 
 - ``io.realm.log.RealmLog()``
+
+
 
 
 Method Summary
@@ -270,12 +276,14 @@ Method Summary
        
    
    
+
+
 Inherited Methods
 =================
 
 
 
-- Methods inherited from interface java.lang.Object
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__:
    
    - `getClass <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
    - `hashCode <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
@@ -293,18 +301,26 @@ Inherited Methods
    
 
 
+
+
 Method Detail
 =============
+
+
 
 add
 ----
 
 .. _io_realm_log_RealmLog_add_RealmLogger_:
 
+
+
 public static **void** add (:ref:`RealmLogger <io_realm_log_RealmLogger>` logger)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Adds a logger implementation that will be notified on log events.
+
+
 Parameters
 __________
 
@@ -316,15 +332,21 @@ __________
    
 
 
+
+
 setLevel
 --------
 
 .. _io_realm_log_RealmLog_setLevel_int_:
 
+
+
 public static **void** setLevel (**int** level)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sets the current :ref:`LogLevel <io_realm_log_LogLevel>`. Setting this will affect all registered loggers.
+
+
 
 
 Parameters
@@ -338,10 +360,14 @@ __________
    
 
 
+
+
 getLevel
 --------
 
 .. _io_realm_log_RealmLog_getLevel__:
+
+
 
 public static **int** getLevel ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -349,19 +375,27 @@ public static **int** getLevel ()
 Get the current :ref:`LogLevel <io_realm_log_LogLevel>`.
 
 
+
+
 remove
 ------
 
 .. _io_realm_log_RealmLog_remove_RealmLogger_:
 
+
+
 public static **boolean** remove (:ref:`RealmLogger <io_realm_log_RealmLogger>` logger)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Removes the given logger if it is currently added.
+
+
 clear
 -----
 
 .. _io_realm_log_RealmLog_clear__:
+
+
 
 public static **void** clear ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -369,24 +403,34 @@ public static **void** clear ()
 Removes all loggers. The default native logger will be removed as well. Use :ref:`#registerDefaultLogger() <io_realm_log_RealmLog_registerDefaultLogger__>` to add it back.
 
 
+
+
 registerDefaultLogger
 ---------------------
 
 .. _io_realm_log_RealmLog_registerDefaultLogger__:
 
+
+
 public static **void** registerDefaultLogger ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Adds default native logger if it has been removed before. If the default logger has been registered already, it won't be added again. The default logger on Android will log to logcat.
+
+
 trace
 -----
 
 .. _io_realm_log_RealmLog_trace_Throwable_:
 
+
+
 public static **void** trace (`Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__ throwable)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Logs a :ref:`LogLevel#TRACE <io_realm_log_LogLevel_TRACE>` exception.
+
+
 
 
 Parameters
@@ -400,10 +444,14 @@ __________
 
 .. _io_realm_log_RealmLog_trace_String__Object____:
 
+
+
 public static **void** trace (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ message, `java.lang.Object[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ args)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Logs a :ref:`LogLevel#TRACE <io_realm_log_LogLevel_TRACE>` event.
+
+
 
 
 Parameters
@@ -421,10 +469,14 @@ __________
 
 .. _io_realm_log_RealmLog_trace_Throwable__String__Object____:
 
+
+
 public static **void** trace (`Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__ throwable, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ message, `java.lang.Object[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ args)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Logs a :ref:`LogLevel#TRACE <io_realm_log_LogLevel_TRACE>` event.
+
+
 
 
 Parameters
@@ -442,15 +494,21 @@ __________
    
 
 
+
+
 debug
 -----
 
 .. _io_realm_log_RealmLog_debug_Throwable_:
 
+
+
 public static **void** debug (`Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__ throwable)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Logs a :ref:`LogLevel#DEBUG <io_realm_log_LogLevel_DEBUG>` exception.
+
+
 
 
 Parameters
@@ -464,10 +522,14 @@ __________
 
 .. _io_realm_log_RealmLog_debug_String__Object____:
 
+
+
 public static **void** debug (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ message, `java.lang.Object[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ args)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Logs a :ref:`LogLevel#DEBUG <io_realm_log_LogLevel_DEBUG>` event.
+
+
 
 
 Parameters
@@ -485,10 +547,14 @@ __________
 
 .. _io_realm_log_RealmLog_debug_Throwable__String__Object____:
 
+
+
 public static **void** debug (`Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__ throwable, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ message, `java.lang.Object[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ args)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Logs a :ref:`LogLevel#DEBUG <io_realm_log_LogLevel_DEBUG>` event.
+
+
 
 
 Parameters
@@ -506,15 +572,21 @@ __________
    
 
 
+
+
 info
 ----
 
 .. _io_realm_log_RealmLog_info_Throwable_:
 
+
+
 public static **void** info (`Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__ throwable)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Logs an :ref:`LogLevel#INFO <io_realm_log_LogLevel_INFO>` exception.
+
+
 
 
 Parameters
@@ -528,10 +600,14 @@ __________
 
 .. _io_realm_log_RealmLog_info_String__Object____:
 
+
+
 public static **void** info (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ message, `java.lang.Object[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ args)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Logs an :ref:`LogLevel#INFO <io_realm_log_LogLevel_INFO>` event.
+
+
 
 
 Parameters
@@ -549,10 +625,14 @@ __________
 
 .. _io_realm_log_RealmLog_info_Throwable__String__Object____:
 
+
+
 public static **void** info (`Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__ throwable, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ message, `java.lang.Object[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ args)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Logs an :ref:`LogLevel#INFO <io_realm_log_LogLevel_INFO>` event.
+
+
 
 
 Parameters
@@ -570,15 +650,21 @@ __________
    
 
 
+
+
 warn
 ----
 
 .. _io_realm_log_RealmLog_warn_Throwable_:
 
+
+
 public static **void** warn (`Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__ throwable)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Logs a :ref:`LogLevel#WARN <io_realm_log_LogLevel_WARN>` exception.
+
+
 
 
 Parameters
@@ -592,10 +678,14 @@ __________
 
 .. _io_realm_log_RealmLog_warn_String__Object____:
 
+
+
 public static **void** warn (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ message, `java.lang.Object[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ args)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Logs a :ref:`LogLevel#WARN <io_realm_log_LogLevel_WARN>` event.
+
+
 
 
 Parameters
@@ -613,10 +703,14 @@ __________
 
 .. _io_realm_log_RealmLog_warn_Throwable__String__Object____:
 
+
+
 public static **void** warn (`Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__ throwable, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ message, `java.lang.Object[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ args)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Logs a :ref:`LogLevel#WARN <io_realm_log_LogLevel_WARN>` event.
+
+
 
 
 Parameters
@@ -634,15 +728,21 @@ __________
    
 
 
+
+
 error
 -----
 
 .. _io_realm_log_RealmLog_error_Throwable_:
 
+
+
 public static **void** error (`Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__ throwable)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Logs an :ref:`LogLevel#ERROR <io_realm_log_LogLevel_ERROR>` exception.
+
+
 
 
 Parameters
@@ -656,10 +756,14 @@ __________
 
 .. _io_realm_log_RealmLog_error_String__Object____:
 
+
+
 public static **void** error (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ message, `java.lang.Object[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ args)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Logs an :ref:`LogLevel#ERROR <io_realm_log_LogLevel_ERROR>` event.
+
+
 
 
 Parameters
@@ -677,10 +781,14 @@ __________
 
 .. _io_realm_log_RealmLog_error_Throwable__String__Object____:
 
+
+
 public static **void** error (`Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__ throwable, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ message, `java.lang.Object[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ args)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Logs an :ref:`LogLevel#ERROR <io_realm_log_LogLevel_ERROR>` event.
+
+
 
 
 Parameters
@@ -698,15 +806,21 @@ __________
    
 
 
+
+
 fatal
 -----
 
 .. _io_realm_log_RealmLog_fatal_Throwable_:
 
+
+
 public static **void** fatal (`Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__ throwable)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Logs a :ref:`LogLevel#FATAL <io_realm_log_LogLevel_FATAL>` exception.
+
+
 
 
 Parameters
@@ -720,10 +834,14 @@ __________
 
 .. _io_realm_log_RealmLog_fatal_String__Object____:
 
+
+
 public static **void** fatal (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ message, `java.lang.Object[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ args)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Logs an :ref:`LogLevel#FATAL <io_realm_log_LogLevel_FATAL>` event.
+
+
 
 
 Parameters
@@ -741,10 +859,14 @@ __________
 
 .. _io_realm_log_RealmLog_fatal_Throwable__String__Object____:
 
+
+
 public static **void** fatal (`Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__ throwable, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ message, `java.lang.Object[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ args)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Logs a :ref:`LogLevel#FATAL <io_realm_log_LogLevel_FATAL>` event.
+
+
 
 
 Parameters

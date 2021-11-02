@@ -5,6 +5,8 @@
    :depth: 2
    :class: singlecol
 
+
+
 io.realm.mongodb.App
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -127,6 +129,8 @@ And access collections from the remote Realm App as shown here:
     
 
 
+
+
 Constructors
 ============
 
@@ -134,6 +138,8 @@ Constructors
 
 - ``io.realm.mongodb.App(String)``
 - ``io.realm.mongodb.App(AppConfiguration)``
+
+
 
 
 Nested Class Summary
@@ -152,6 +158,8 @@ Nested Class Summary
      - ``io.realm.mongodb.App.Callback``
    
    
+
+
 Field Summary
 =============
 
@@ -172,6 +180,8 @@ Field Summary
         empty will result in undefined behaviour.
    
    
+
+
 Method Summary
 ==============
 
@@ -316,12 +326,14 @@ Method Summary
        
    
    
+
+
 Inherited Methods
 =================
 
 
 
-- Methods inherited from interface java.lang.Object
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__:
    
    - `getClass <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
    - `hashCode <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
@@ -339,10 +351,14 @@ Inherited Methods
    
 
 
+
+
 Field Detail
 ============
 
 .. _io_realm_mongodb_App_NETWORK_POOL_EXECUTOR:
+
+
 
 ``NETWORK_POOL_EXECUTOR``
 -------------------------
@@ -350,13 +366,19 @@ Field Detail
 Thread pool used when doing network requests against MongoDB Realm.This pool is only exposed for testing purposes and replacing it while the queue is not empty will result in undefined behaviour.
 
 
+
+
 Method Detail
 =============
+
+
 
 currentUser
 -----------
 
 .. _io_realm_mongodb_App_currentUser__:
+
+
 
 public :ref:`User <io_realm_mongodb_User>` currentUser ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -366,10 +388,14 @@ Returns the current user that is logged in and still valid.A user is invalidated
 If two or more users are logged in, it is the last valid user that is returned by this method.
 
 
+
+
 allUsers
 --------
 
 .. _io_realm_mongodb_App_allUsers__:
+
+
 
 public `Map <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__ allUsers ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -379,15 +405,21 @@ Returns all known users that are either :ref:`User.State#LOGGED_IN <io_realm_mon
 Only users that at some point logged into this device will be returned.
 
 
+
+
 switchUser
 ----------
 
 .. _io_realm_mongodb_App_switchUser_User_:
 
+
+
 public :ref:`User <io_realm_mongodb_User>` switchUser (:ref:`User <io_realm_mongodb_User>` user)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Switch current user.The current user is the user returned by :ref:`#currentUser() <io_realm_mongodb_App_currentUser__>`.
+
+
 
 
 
@@ -401,18 +433,26 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 removeUser
 ----------
 
 .. _io_realm_mongodb_App_removeUser_User_:
 
+
+
 public :ref:`User <io_realm_mongodb_User>` removeUser (:ref:`User <io_realm_mongodb_User>` user)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Removes a users credentials from this device. If the user was currently logged in, they will be logged out as part of the process. This is only a local change and does not affect the user state on the server.
+
+
 Parameters
 __________
 
@@ -422,13 +462,19 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 login
 -----
 
 .. _io_realm_mongodb_App_login_Credentials_:
+
+
 
 public :ref:`User <io_realm_mongodb_User>` login (:ref:`Credentials <io_realm_mongodb_Credentials>` credentials)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -444,6 +490,8 @@ It is also possible to switch between which user is considered the current user 
 
 
 
+
+
 Parameters
 __________
 
@@ -453,13 +501,19 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 loginAsync
 ----------
 
 .. _io_realm_mongodb_App_loginAsync_Credentials__App_Callback_User__:
+
+
 
 public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` loginAsync (:ref:`Credentials <io_realm_mongodb_Credentials>` credentials, :ref:`io.realm.mongodb.App.Callback\<io.realm.mongodb.User> <io_realm_mongodb_App_Callback>` callback)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -475,6 +529,8 @@ It is also possible to switch between which user is considered the current user 
 
 
 
+
+
 Parameters
 __________
 
@@ -486,13 +542,19 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 getEmailPassword
 ----------------
 
 .. _io_realm_mongodb_App_getEmailPassword__:
+
+
 
 public :ref:`EmailPasswordAuth <io_realm_mongodb_auth_EmailPasswordAuth>` getEmailPassword ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -500,15 +562,21 @@ public :ref:`EmailPasswordAuth <io_realm_mongodb_auth_EmailPasswordAuth>` getEma
 Returns a wrapper for interacting with functionality related to users either being created or logged in using the :ref:`Credentials.Provider#EMAIL_PASSWORD <io_realm_mongodb_Credentials_Provider_EMAIL_PASSWORD>` identity provider.
 
 
+
+
 addAuthenticationListener
 -------------------------
 
 .. _io_realm_mongodb_App_addAuthenticationListener_AuthenticationListener_:
 
+
+
 public **void** addAuthenticationListener (:ref:`AuthenticationListener <io_realm_mongodb_AuthenticationListener>` listener)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sets a global authentication listener that will be notified about User events like login and logout.Callbacks to authentication listeners will happen on the UI thread.
+
+
 
 
 Parameters
@@ -520,18 +588,26 @@ __________
    
 
 
+
+
 Throws
 ______
+
+
 
 removeAuthenticationListener
 ----------------------------
 
 .. _io_realm_mongodb_App_removeAuthenticationListener_AuthenticationListener_:
 
+
+
 public **void** removeAuthenticationListener (:ref:`AuthenticationListener <io_realm_mongodb_AuthenticationListener>` listener)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Removes the provided global authentication listener.
+
+
 Parameters
 __________
 
@@ -541,24 +617,34 @@ __________
    
 
 
+
+
 getSync
 -------
 
 .. _io_realm_mongodb_App_getSync__:
 
+
+
 public :ref:`Sync <io_realm_mongodb_sync_Sync>` getSync ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the *Sync* instance managing the ongoing *Realm Sync* sessions synchronizing data between the local and the remote *Realm App* associated with this app.
+
+
 getFunctions
 ------------
 
 .. _io_realm_mongodb_App_getFunctions_User_:
 
+
+
 public :ref:`Functions <io_realm_mongodb_functions_Functions>` getFunctions (:ref:`User <io_realm_mongodb_User>` user)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns a *Functions* manager for invoking the Realm App's Realm Functions.This will use the app's default codec registry to encode and decode arguments and results.
+
+
 
 
 See Also
@@ -570,28 +656,40 @@ AppConfiguration#getDefaultCodecRegistry()
 
 .. _io_realm_mongodb_App_getFunctions_User__CodecRegistry_:
 
+
+
 public :ref:`Functions <io_realm_mongodb_functions_Functions>` getFunctions (:ref:`User <io_realm_mongodb_User>` user, **CodecRegistry (?)** codecRegistry)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns a *Functions* manager for invoking the Realm App's Realm Functions with a custom codec registry for encoding and decoding arguments and results.
+
+
 See Also
 ________
 
 Functions
+
+
 
 getConfiguration
 ----------------
 
 .. _io_realm_mongodb_App_getConfiguration__:
 
+
+
 public :ref:`AppConfiguration <io_realm_mongodb_AppConfiguration>` getConfiguration ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the configuration object for this app.
+
+
 setNetworkTransport
 -------------------
 
 .. _io_realm_mongodb_App_setNetworkTransport_OsJavaNetworkTransport_:
+
+
 
 protected **void** setNetworkTransport (**OsJavaNetworkTransport (?)** transport)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -599,10 +697,14 @@ protected **void** setNetworkTransport (**OsJavaNetworkTransport (?)** transport
 Exposed for testing.Swap the currently configured network transport with the provided one. This should only be done if no network requests are currently running.
 
 
+
+
 equals
 ------
 
 .. _io_realm_mongodb_App_equals_Object_:
+
+
 
 public **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ o)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -610,10 +712,14 @@ public **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/ja
 Two Apps are considered equal and will share their underlying state if they both refer to the same :ref:`AppConfiguration#getAppId() <io_realm_mongodb_AppConfiguration_getAppId__>`.
 
 
+
+
 hashCode
 --------
 
 .. _io_realm_mongodb_App_hashCode__:
+
+
 
 public **int** hashCode ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~

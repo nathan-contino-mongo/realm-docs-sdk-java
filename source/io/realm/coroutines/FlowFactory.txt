@@ -5,6 +5,8 @@
    :depth: 2
    :class: singlecol
 
+
+
 io.realm.coroutines.FlowFactory
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -17,6 +19,8 @@ io.realm.coroutines.FlowFactory
 
 
 Factory interface for creating Kotlin **Flow (?)**s for Realm classes.
+
+
 
 
 Method Summary
@@ -169,18 +173,26 @@ Method Summary
        
    
    
+
+
 Method Detail
 =============
+
+
 
 from
 ----
 
 .. _io_realm_coroutines_FlowFactory_from_Realm_:
 
+
+
 public **<any> (?)** from (:ref:`Realm <io_realm_Realm>` realm)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Creates a **Flow (?)** for a :ref:`Realm <io_realm_Realm>`. It should emit the initial state of the Realm when subscribed to and on each subsequent update of the Realm.
+
+
 
 
 Parameters
@@ -196,10 +208,14 @@ __________
 
 .. _io_realm_coroutines_FlowFactory_from_DynamicRealm_:
 
+
+
 public **<any> (?)** from (:ref:`DynamicRealm <io_realm_DynamicRealm>` dynamicRealm)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Creates a **Flow (?)** for a :ref:`DynamicRealm <io_realm_DynamicRealm>`. It should emit the initial state of the Realm when subscribed to and on each subsequent update of the Realm.
+
+
 
 
 Parameters
@@ -215,10 +231,14 @@ __________
 
 .. _io_realm_coroutines_FlowFactory_from_Realm__RealmResults_T__:
 
+
+
 public **<any> (?)** from <**T (?)** >(:ref:`Realm <io_realm_Realm>` realm, :ref:`io.realm.RealmResults\<T> <io_realm_RealmResults>` results)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Creates a **Flow (?)** for a :ref:`RealmResults <io_realm_RealmResults>`. It should emit the initial RealmResult when subscribed to and on each subsequent update of the RealmResults.
+
+
 
 
 Type Parameters
@@ -228,6 +248,8 @@ _______________
 
 - ``T - ``type of RealmObject.
    
+
+
 
 
 Parameters
@@ -247,10 +269,14 @@ __________
 
 .. _io_realm_coroutines_FlowFactory_from_DynamicRealm__RealmResults_T__:
 
+
+
 public **<any> (?)** from <**T (?)** >(:ref:`DynamicRealm <io_realm_DynamicRealm>` dynamicRealm, :ref:`io.realm.RealmResults\<T> <io_realm_RealmResults>` results)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Creates a **Flow (?)** for a :ref:`RealmResults <io_realm_RealmResults>`. It should emit the initial RealmResult when subscribed to and on each subsequent update of the RealmResults.
+
+
 
 
 Type Parameters
@@ -260,6 +286,8 @@ _______________
 
 - ``T - ``type of RealmObject.
    
+
+
 
 
 Parameters
@@ -279,12 +307,16 @@ __________
 
 .. _io_realm_coroutines_FlowFactory_from_Realm__RealmList_T__:
 
+
+
 public **<any> (?)** from <**T (?)** >(:ref:`Realm <io_realm_Realm>` realm, :ref:`io.realm.RealmList\<T> <io_realm_RealmList>` realmList)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Creates a **Flow (?)** for a :ref:`RealmList <io_realm_RealmList>`. It should emit the initial RealmResult when subscribed to and on each subsequent update of the RealmList.
 
 Note: :ref:`io.realm.RealmChangeListener <io_realm_RealmChangeListener>` is currently not supported on RealmLists.
+
+
 
 
 
@@ -296,6 +328,8 @@ _______________
 
 - ``T - ``type of RealmObject
    
+
+
 
 
 Parameters
@@ -315,12 +349,16 @@ __________
 
 .. _io_realm_coroutines_FlowFactory_from_DynamicRealm__RealmList_T__:
 
+
+
 public **<any> (?)** from <**T (?)** >(:ref:`DynamicRealm <io_realm_DynamicRealm>` dynamicRealm, :ref:`io.realm.RealmList\<T> <io_realm_RealmList>` realmList)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Creates a **Flow (?)** for a :ref:`RealmList <io_realm_RealmList>`. It should emit the initial RealmResult when subscribed to and on each subsequent update of the RealmList.
 
 Note: :ref:`io.realm.RealmChangeListener <io_realm_RealmChangeListener>` is currently not supported on RealmLists.
+
+
 
 
 
@@ -332,6 +370,8 @@ _______________
 
 - ``T - ``type of RealmObject
    
+
+
 
 
 Parameters
@@ -351,10 +391,14 @@ __________
 
 .. _io_realm_coroutines_FlowFactory_from_Realm__T_:
 
+
+
 public **<any> (?)** from <**T (?)** >(:ref:`Realm <io_realm_Realm>` realm, **T (?)** realmObject)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Creates a **Flow (?)** for a :ref:`RealmObject <io_realm_RealmObject>`. It should emit the initial object when subscribed to and on each subsequent update of the object.
+
+
 
 
 Type Parameters
@@ -364,6 +408,8 @@ _______________
 
 - ``T - ``type of query target
    
+
+
 
 
 Parameters
@@ -383,10 +429,14 @@ __________
 
 .. _io_realm_coroutines_FlowFactory_from_DynamicRealm__DynamicRealmObject_:
 
+
+
 public **<any> (?)** from (:ref:`DynamicRealm <io_realm_DynamicRealm>` dynamicRealm, :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>` dynamicRealmObject)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Creates a **Flow (?)** for a :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>`. It should emit the initial object when subscribed to and on each subsequent update of the object.
+
+
 
 
 Parameters
@@ -404,10 +454,14 @@ __________
    
 
 
+
+
 changesetFrom
 -------------
 
 .. _io_realm_coroutines_FlowFactory_changesetFrom_Realm__RealmResults_T__:
+
+
 
 public **<any> (?)** changesetFrom <**T (?)** >(:ref:`Realm <io_realm_Realm>` realm, :ref:`io.realm.RealmResults\<T> <io_realm_RealmResults>` results)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -415,6 +469,8 @@ public **<any> (?)** changesetFrom <**T (?)** >(:ref:`Realm <io_realm_Realm>` re
 Creates a **Flow (?)** for a :ref:`RealmResults <io_realm_RealmResults>` instance. It should emit the initial results when subscribed to and on each subsequent update of the results it should emit the results plus the :ref:`io.realm.rx.CollectionChange <io_realm_rx_CollectionChange>` that describes the update.
 
 Changeset observables do not support backpressure as a changeset depends on the state of the previous changeset. Handling backpressure should therefore be left to the user.
+
+
 
 
 Parameters
@@ -434,12 +490,16 @@ __________
 
 .. _io_realm_coroutines_FlowFactory_changesetFrom_DynamicRealm__RealmResults_T__:
 
+
+
 public **<any> (?)** changesetFrom <**T (?)** >(:ref:`DynamicRealm <io_realm_DynamicRealm>` dynamicRealm, :ref:`io.realm.RealmResults\<T> <io_realm_RealmResults>` results)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Creates a **Flow (?)** for a :ref:`RealmResults <io_realm_RealmResults>` instance. It should emit the initial results when subscribed to and on each subsequent update of the results it should emit the results plus the :ref:`io.realm.rx.CollectionChange <io_realm_rx_CollectionChange>` that describes the update.
 
 Changeset observables do not support backpressure as a changeset depends on the state of the previous changeset. Handling backpressure should therefore be left to the user.
+
+
 
 
 Parameters
@@ -459,12 +519,16 @@ __________
 
 .. _io_realm_coroutines_FlowFactory_changesetFrom_Realm__RealmList_T__:
 
+
+
 public **<any> (?)** changesetFrom <**T (?)** >(:ref:`Realm <io_realm_Realm>` realm, :ref:`io.realm.RealmList\<T> <io_realm_RealmList>` list)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Creates a **Flow (?)** for a :ref:`RealmList <io_realm_RealmList>`. It should emit the initial list when subscribed to and on each subsequent update of the list it should emit the list plus the :ref:`io.realm.rx.CollectionChange <io_realm_rx_CollectionChange>` that describes the update.
 
 Changeset observables do not support backpressure as a changeset depends on the state of the previous changeset. Handling backpressure should therefore be left to the user.
+
+
 
 
 Parameters
@@ -484,12 +548,16 @@ __________
 
 .. _io_realm_coroutines_FlowFactory_changesetFrom_DynamicRealm__RealmList_T__:
 
+
+
 public **<any> (?)** changesetFrom <**T (?)** >(:ref:`DynamicRealm <io_realm_DynamicRealm>` dynamicRealm, :ref:`io.realm.RealmList\<T> <io_realm_RealmList>` list)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Creates a **Flow (?)** for a :ref:`RealmList <io_realm_RealmList>`. It should emit the initial list when subscribed to and on each subsequent update of the list it should emit the list plus the :ref:`io.realm.rx.CollectionChange <io_realm_rx_CollectionChange>` that describes the update.
 
 Changeset observables do not support backpressure as a changeset depends on the state of the previous changeset. Handling backpressure should therefore be left to the user.
+
+
 
 
 Parameters
@@ -509,12 +577,16 @@ __________
 
 .. _io_realm_coroutines_FlowFactory_changesetFrom_Realm__T_:
 
+
+
 public **<any> (?)** changesetFrom <**T (?)** >(:ref:`Realm <io_realm_Realm>` realm, **T (?)** realmObject)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Creates a **Flow (?)** for a :ref:`RealmObject <io_realm_RealmObject>`. It should emit the initial object when subscribed to and on each subsequent update of the object it should emit the object plus the :ref:`io.realm.ObjectChangeSet <io_realm_ObjectChangeSet>` that describes the update.
 
 Changeset observables do not support backpressure as a changeset depends on the state of the previous changeset. Handling backpressure should therefore be left to the user.
+
+
 
 
 Parameters
@@ -534,12 +606,16 @@ __________
 
 .. _io_realm_coroutines_FlowFactory_changesetFrom_DynamicRealm__DynamicRealmObject_:
 
+
+
 public **<any> (?)** changesetFrom (:ref:`DynamicRealm <io_realm_DynamicRealm>` dynamicRealm, :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>` dynamicRealmObject)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Creates a **Flow (?)** for a :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>`. It should emit the initial object when subscribed to and on each subsequent update of the object it should emit the object plus the :ref:`io.realm.ObjectChangeSet <io_realm_ObjectChangeSet>` that describes the update.
 
 Changeset observables do not support backpressure as a changeset depends on the state of the previous changeset. Handling backpressure should therefore be left to the user.
+
+
 
 
 Parameters

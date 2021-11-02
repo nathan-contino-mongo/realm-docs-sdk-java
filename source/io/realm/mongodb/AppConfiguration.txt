@@ -5,6 +5,8 @@
    :depth: 2
    :class: singlecol
 
+
+
 io.realm.mongodb.AppConfiguration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -26,6 +28,8 @@ Configuring a App is only required if the default settings are not enough. Other
 
 
 
+
+
 Nested Class Summary
 ====================
 
@@ -39,6 +43,8 @@ Nested Class Summary
      - ``io.realm.mongodb.AppConfiguration.Builder``
    
    
+
+
 Field Summary
 =============
 
@@ -94,6 +100,8 @@ Field Summary
         provider.
    
    
+
+
 Method Summary
 ==============
 
@@ -232,12 +240,14 @@ Method Summary
        
    
    
+
+
 Inherited Methods
 =================
 
 
 
-- Methods inherited from interface java.lang.Object
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__:
    
    - `getClass <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
    - `hashCode <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
@@ -255,10 +265,14 @@ Inherited Methods
    
 
 
+
+
 Field Detail
 ============
 
 .. _io_realm_mongodb_AppConfiguration_DEFAULT_BASE_URL:
+
+
 
 ``DEFAULT_BASE_URL``
 --------------------
@@ -266,17 +280,23 @@ Field Detail
 The default url for MongoDB Realm applications.
 .. _io_realm_mongodb_AppConfiguration_DEFAULT_REQUEST_TIMEOUT:
 
+
+
 ``DEFAULT_REQUEST_TIMEOUT``
 ---------------------------
 
 The default request timeout for network requests towards MongoDB Realm in seconds.
 .. _io_realm_mongodb_AppConfiguration_DEFAULT_AUTHORIZATION_HEADER_NAME:
 
+
+
 ``DEFAULT_AUTHORIZATION_HEADER_NAME``
 -------------------------------------
 
 The default header name used to carry authorization data when making network requests towards MongoDB Realm.
 .. _io_realm_mongodb_AppConfiguration_DEFAULT_BSON_CODEC_REGISTRY:
+
+
 
 ``DEFAULT_BSON_CODEC_REGISTRY``
 -------------------------------
@@ -285,6 +305,8 @@ Default BSON codec registry for encoding/decoding arguments and results to/from 
 
 
 .. _io_realm_mongodb_AppConfiguration_loginObfuscators:
+
+
 
 ``loginObfuscators``
 --------------------
@@ -296,85 +318,123 @@ Default obfuscators for login requests used in a MongoDB Realm app.This map is n
 This map's keys represent the different login identity providers which can be used to authenticate against an app and the values are the concrete obfuscators used for that provider.
 
 
+
+
 Method Detail
 =============
+
+
 
 getAppId
 --------
 
 .. _io_realm_mongodb_AppConfiguration_getAppId__:
 
+
+
 public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ getAppId ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the unique app id that identities the Realm application.
+
+
 getAppName
 ----------
 
 .. _io_realm_mongodb_AppConfiguration_getAppName__:
 
+
+
 public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ getAppName ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the name used to describe the Realm application. This is only used as debug information.
+
+
 getAppVersion
 -------------
 
 .. _io_realm_mongodb_AppConfiguration_getAppVersion__:
 
+
+
 public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ getAppVersion ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the version of this Realm application. This is only used as debug information.
+
+
 getBaseUrl
 ----------
 
 .. _io_realm_mongodb_AppConfiguration_getBaseUrl__:
 
+
+
 public `URL <https://docs.oracle.com/javase/7/docs/api/java/net/URL.html>`__ getBaseUrl ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the base url for this Realm application.
+
+
 getEncryptionKey
 ----------------
 
 .. _io_realm_mongodb_AppConfiguration_getEncryptionKey__:
 
+
+
 public **byte** getEncryptionKey ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the encryption key, if any, that is used to encrypt Realm users meta data on this device. If no key is returned, the data is not encrypted.
+
+
 getRequestTimeoutMs
 -------------------
 
 .. _io_realm_mongodb_AppConfiguration_getRequestTimeoutMs__:
 
+
+
 public **long** getRequestTimeoutMs ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the default timeout for network requests against the Realm application in milliseconds.
+
+
 getAuthorizationHeaderName
 --------------------------
 
 .. _io_realm_mongodb_AppConfiguration_getAuthorizationHeaderName__:
 
+
+
 public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ getAuthorizationHeaderName ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the name of the header used to carry authentication data when making network requests towards MongoDB Realm.
+
+
 getCustomRequestHeaders
 -----------------------
 
 .. _io_realm_mongodb_AppConfiguration_getCustomRequestHeaders__:
 
+
+
 public `Map <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__ getCustomRequestHeaders ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns any custom configured headers that will be sent alongside other headers when making network requests towards MongoDB Realm.
+
+
 getDefaultErrorHandler
 ----------------------
 
 .. _io_realm_mongodb_AppConfiguration_getDefaultErrorHandler__:
+
+
 
 public :ref:`SyncSession.ErrorHandler <io_realm_mongodb_sync_SyncSession_ErrorHandler>` getDefaultErrorHandler ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -382,10 +442,14 @@ public :ref:`SyncSession.ErrorHandler <io_realm_mongodb_sync_SyncSession_ErrorHa
 Returns the default error handler used by synced Realms if there are problems with their :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>`.
 
 
+
+
 getDefaultClientResetHandler
 ----------------------------
 
 .. _io_realm_mongodb_AppConfiguration_getDefaultClientResetHandler__:
+
+
 
 public :ref:`SyncSession.ClientResetHandler <io_realm_mongodb_sync_SyncSession_ClientResetHandler>` getDefaultClientResetHandler ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -393,24 +457,34 @@ public :ref:`SyncSession.ClientResetHandler <io_realm_mongodb_sync_SyncSession_C
 Returns the default Client Reset handler used by synced Realms if there are problems with their :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>`.
 
 
+
+
 getSyncRootDirectory
 --------------------
 
 .. _io_realm_mongodb_AppConfiguration_getSyncRootDirectory__:
 
+
+
 public `File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__ getSyncRootDirectory ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the root folder containing all files and Realms used when synchronizing data between the device and MongoDB Realm.
+
+
 getDefaultCodecRegistry
 -----------------------
 
 .. _io_realm_mongodb_AppConfiguration_getDefaultCodecRegistry__:
 
+
+
 public **CodecRegistry (?)** getDefaultCodecRegistry ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the default codec registry used to encode and decode BSON arguments and results when calling remote Realm :ref:`io.realm.mongodb.functions.Functions <io_realm_mongodb_functions_Functions>` and accessing a remote :ref:`io.realm.mongodb.mongo.MongoDatabase <io_realm_mongodb_mongo_MongoDatabase>`.
+
+
 
 
 See Also
@@ -420,10 +494,14 @@ ________
 
 Builder#getDefaultCodecRegistry()
 
+
+
 getHttpLogObfuscator
 --------------------
 
 .. _io_realm_mongodb_AppConfiguration_getHttpLogObfuscator__:
+
+
 
 public :ref:`HttpLogObfuscator <io_realm_mongodb_log_obfuscator_HttpLogObfuscator>` getHttpLogObfuscator ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -431,19 +509,27 @@ public :ref:`HttpLogObfuscator <io_realm_mongodb_log_obfuscator_HttpLogObfuscato
 Returns the :ref:`HttpLogObfuscator <io_realm_mongodb_log_obfuscator_HttpLogObfuscator>` used in the app, which keeps sensitive information in HTTP requests from being displayed in the logcat.
 
 
+
+
 equals
 ------
 
 .. _io_realm_mongodb_AppConfiguration_equals_Object_:
 
+
+
 public **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ o)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
 
 
 hashCode
 --------
 
 .. _io_realm_mongodb_AppConfiguration_hashCode__:
+
+
 
 public **int** hashCode ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -5,6 +5,8 @@
    :depth: 2
    :class: singlecol
 
+
+
 io.realm.mongodb.App.Result<T>
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -18,6 +20,8 @@ io.realm.mongodb.App.Result<T>
 
 
 Result class representing the result of an async request from this app towards MongoDB Realm.
+
+
 Method Summary
 ==============
 
@@ -92,12 +96,14 @@ Method Summary
        
    
    
+
+
 Inherited Methods
 =================
 
 
 
-- Methods inherited from interface java.lang.Object
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__:
    
    - `getClass <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
    - `hashCode <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
@@ -115,27 +121,39 @@ Inherited Methods
    
 
 
+
+
 Method Detail
 =============
+
+
 
 success
 -------
 
 .. _io_realm_mongodb_App_Result_success__:
 
+
+
 public static :ref:`App.Result <io_realm_mongodb_App_Result>` success <**T (?)** >()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Creates a successful request result with no return value.
+
+
 withResult
 ----------
 
 .. _io_realm_mongodb_App_Result_withResult_T_:
 
+
+
 public static :ref:`App.Result <io_realm_mongodb_App_Result>` withResult <**T (?)** >(**T (?)** result)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Creates a successful request result with a return value.
+
+
 Parameters
 __________
 
@@ -145,15 +163,21 @@ __________
    
 
 
+
+
 withError
 ---------
 
 .. _io_realm_mongodb_App_Result_withError_AppException_:
 
+
+
 public static :ref:`App.Result <io_realm_mongodb_App_Result>` withError <**T (?)** >(:ref:`AppException <io_realm_mongodb_AppException>` exception)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Creates a failed request result. The request failed for some reason, either because there was a network error or the Realm Object Server returned an error.
+
+
 Parameters
 __________
 
@@ -163,49 +187,71 @@ __________
    
 
 
+
+
 isSuccess
 ---------
 
 .. _io_realm_mongodb_App_Result_isSuccess__:
 
+
+
 public **boolean** isSuccess ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns whether or not request was successful
+
+
 get
 ----
 
 .. _io_realm_mongodb_App_Result_get__:
 
+
+
 public **T (?)** get ()
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the response in case the request was a success.
+
+
 getOrDefault
 ------------
 
 .. _io_realm_mongodb_App_Result_getOrDefault_T_:
 
+
+
 public **T (?)** getOrDefault (**T (?)** defaultValue)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the response if the request was a success. If it failed, the default value is returned instead.
+
+
 getOrThrow
 ----------
 
 .. _io_realm_mongodb_App_Result_getOrThrow__:
 
+
+
 public **T (?)** getOrThrow ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If the request was successful the response is returned, otherwise the provided error is thrown.
+
+
 Throws
 ______
+
+
 
 getError
 --------
 
 .. _io_realm_mongodb_App_Result_getError__:
+
+
 
 public :ref:`AppException <io_realm_mongodb_AppException>` getError ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
