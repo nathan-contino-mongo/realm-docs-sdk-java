@@ -6,17 +6,20 @@
    :class: singlecol
 
 io.realm.mongodb.sync.ProgressListener
+
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. _io_realm_mongodb_sync_ProgressListener:
 
 *Superclass:*
-| 
+
+
 
 
 
 Interface used when interested in updates on data either being uploaded to or downloaded from a Realm Object Server.
 Method Summary
+
 ==============
 
 .. list-table::
@@ -35,14 +38,17 @@ Method Summary
    
    
 Method Detail
+
 =============
 
 onChange
+
 --------
 
 .. _io_realm_mongodb_sync_ProgressListener_onChange_Progress_:
 
 public **void** onChange (:ref:`Progress <io_realm_mongodb_sync_Progress>` progress)
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This method will be called periodically from the underlying Object Server Client responsible for uploading and downloading changes from the remote Object Server.This callback will *not* happen on the UI thread, but on the worker thread controlling the Object Server Client. Use ``Activity.runOnUiThread(Runnable)`` or similar to update any UI elements.
@@ -77,10 +83,13 @@ This method will be called periodically from the underlying Object Server Client
 
 
 Parameters
+
 __________
+
 
 
 - ``progress - ``an immutable progress change event with information about current progress. This object is thread safe.
    
+
 
 

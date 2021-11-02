@@ -6,22 +6,26 @@
    :class: singlecol
 
 io.realm.mongodb.mongo.iterable.MongoCursor<ResultT>
+
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. _io_realm_mongodb_mongo_iterable_MongoCursor:
 
 *Superclass:*
-| 
+
 - `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
+
 
 
 
 *Implemented interfaces:*
 
 
+
 - `java.util.Iterator <https://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html>`__
 - `java.io.Closeable <https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html>`__
 - `java.lang.AutoCloseable <https://docs.oracle.com/javase/7/docs/api/java/lang/AutoCloseable.html>`__
+
 
 The Mongo Cursor class is fundamentally an `Iterator <https://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html>`__ containing an additional ``tryNext()`` method for convenience.
 
@@ -29,6 +33,7 @@ An application should ensure that a cursor is closed in all circumstances, e.g. 
 
 
 Method Summary
+
 ==============
 
 .. list-table::
@@ -73,10 +78,13 @@ Method Summary
    
    
 Inherited Methods
+
 =================
 
 
+
 - Methods inherited from interface java.lang.Object
+   
    - `getClass <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
    - `hashCode <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
    - `equals <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
@@ -90,45 +98,56 @@ Inherited Methods
    - `finalize <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
    
    
+   
+
 
 Method Detail
+
 =============
 
 hasNext
+
 -------
 
 .. _io_realm_mongodb_mongo_iterable_MongoCursor_hasNext__:
 
 public **boolean** hasNext ()
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 next
+
 ----
 
 .. _io_realm_mongodb_mongo_iterable_MongoCursor_next__:
 
 public **ResultT (?)** next ()
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 tryNext
+
 -------
 
 .. _io_realm_mongodb_mongo_iterable_MongoCursor_tryNext__:
 
 public **ResultT (?)** tryNext ()
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A special ``next()`` case that returns the next document if available or null.
 
 
 close
+
 -----
 
 .. _io_realm_mongodb_mongo_iterable_MongoCursor_close__:
 
 public **void** close ()
+
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 

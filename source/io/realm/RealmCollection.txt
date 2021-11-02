@@ -6,20 +6,24 @@
    :class: singlecol
 
 io.realm.RealmCollection<E>
+
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. _io_realm_RealmCollection:
 
 *Superclass:*
-| 
+
+
 
 
 
 *Implemented interfaces:*
 
 
+
 - `java.util.Collection <https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html>`__
 - `java.lang.Iterable <https://docs.oracle.com/javase/7/docs/api/java/lang/Iterable.html>`__
+
 
 ``RealmCollection`` is the root of the collection hierarchy that Realm supports. It defines operations on data collections and the behavior that they will have in all implementations of ``RealmCollection``s.
 
@@ -29,6 +33,7 @@ Realm collections are "live" views to the underlying data. This means that they 
 
 
 Method Summary
+
 ==============
 
 .. list-table::
@@ -149,191 +154,244 @@ Method Summary
    
    
 Inherited Methods
+
 =================
 
 Method Detail
+
 =============
 
 where
+
 -----
 
 .. _io_realm_RealmCollection_where__:
 
 public :ref:`RealmQuery <io_realm_RealmQuery>` where ()
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns a :ref:`RealmQuery <io_realm_RealmQuery>`, which can be used to query for specific objects from this collection.
 
 
 Throws
+
 ______
 
 See Also
+
 ________
 
 io.realm.RealmQuery
 
 min
+
 ----
 
 .. _io_realm_RealmCollection_min_String_:
 
 public `Number <https://docs.oracle.com/javase/7/docs/api/java/lang/Number.html>`__ min (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName)
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Finds the minimum value of a field.
 Parameters
+
 __________
+
 
 
 - ``fieldName - ``the field to look for a minimum on. Only number fields are supported.
    
 
+
 Throws
+
 ______
 
 max
+
 ----
 
 .. _io_realm_RealmCollection_max_String_:
 
 public `Number <https://docs.oracle.com/javase/7/docs/api/java/lang/Number.html>`__ max (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName)
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Finds the maximum value of a field.
 Parameters
+
 __________
+
 
 
 - ``fieldName - ``the field to look for a maximum on. Only number fields are supported.
    
 
+
 Throws
+
 ______
 
 sum
+
 ----
 
 .. _io_realm_RealmCollection_sum_String_:
 
 public `Number <https://docs.oracle.com/javase/7/docs/api/java/lang/Number.html>`__ sum (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName)
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Calculates the sum of a given field.
 Parameters
+
 __________
+
 
 
 - ``fieldName - ``the field to sum. Only number fields are supported.
    
 
+
 Throws
+
 ______
 
 average
+
 -------
 
 .. _io_realm_RealmCollection_average_String_:
 
 public **double** average (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName)
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the average of a given field.
 Parameters
+
 __________
+
 
 
 - ``fieldName - ``the field to calculate average on. Only number fields are supported.
    
 
+
 Throws
+
 ______
 
 maxDate
+
 -------
 
 .. _io_realm_RealmCollection_maxDate_String_:
 
 public `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__ maxDate (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName)
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Finds the maximum date.
 Parameters
+
 __________
+
 
 
 - ``fieldName - ``the field to look for the maximum date. If fieldName is not of Date type, an exception is thrown.
    
 
+
 Throws
+
 ______
 
 minDate
+
 -------
 
 .. _io_realm_RealmCollection_minDate_String_:
 
 public `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__ minDate (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName)
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Finds the minimum date.
 Parameters
+
 __________
+
 
 
 - ``fieldName - ``the field to look for the minimum date. If fieldName is not of Date type, an exception is thrown.
    
 
+
 Throws
+
 ______
 
 deleteAllFromRealm
+
 ------------------
 
 .. _io_realm_RealmCollection_deleteAllFromRealm__:
 
 public **boolean** deleteAllFromRealm ()
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This deletes all objects in the collection from the underlying Realm as well as from the collection.
 Throws
+
 ______
 
 isLoaded
+
 --------
 
 .. _io_realm_RealmCollection_isLoaded__:
 
 public **boolean** isLoaded ()
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Checks if a collection has finished loading its data yet.
 load
+
 ----
 
 .. _io_realm_RealmCollection_load__:
 
 public **boolean** load ()
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Blocks the collection until all data are available.
 isValid
+
 -------
 
 .. _io_realm_RealmCollection_isValid__:
 
 public **boolean** isValid ()
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Checks if the collection is still valid to use, i.e., the :ref:`io.realm.Realm <io_realm_Realm>` instance hasn't been closed. It will always return ``true`` for an unmanaged collection.
 
 
 isManaged
+
 ---------
 
 .. _io_realm_RealmCollection_isManaged__:
 
 public **boolean** isManaged ()
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Checks if the collection is managed by Realm. A managed collection is just a wrapper around the data in the underlying Realm file. On Looper threads, a managed collection will be live-updated so it always points to the latest data. Managed collections are thread confined so that they cannot be accessed from other threads than the one that created them.If this method returns ``false``, the collection is unmanaged. An unmanaged collection is just a normal java collection, so it will not be live updated.
@@ -342,24 +400,30 @@ Checks if the collection is managed by Realm. A managed collection is just a wra
 
 
 contains
+
 --------
 
 .. _io_realm_RealmCollection_contains_Object_:
 
 public **boolean** contains (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ object)
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Tests whether this ``Collection`` contains the specified object. Returns ``true`` if and only if at least one element ``elem`` in this ``Collection`` meets following requirement: ``(object==null ? elem==null : object.equals(elem))``.
 
 
 Parameters
+
 __________
+
 
 
 - ``object - ``the object to search for.
    
 
+
 Throws
+
 ______
 
 

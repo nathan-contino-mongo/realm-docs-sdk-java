@@ -6,19 +6,23 @@
    :class: singlecol
 
 io.realm.annotations.LinkingObjects
+
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. _io_realm_annotations_LinkingObjects:
 
 *Superclass:*
-| 
+
+
 
 
 
 *Implemented interfaces:*
 
 
+
 - `java.lang.annotation.Annotation <https://docs.oracle.com/javase/7/docs/api/java/lang/annotation/Annotation.html>`__
+
 
 Annotation for defining a reverse relationship from one class to another. This annotation can only be added to a field of the type ``RealmResults``.
 
@@ -50,6 +54,7 @@ Annotation for defining a reverse relationship from one class to another. This a
 In the above example \`Person\` is related to \`Dog\` through the field \`dog\`. This in turn means that an implicit reverse relationship exists between the class \`Dog\` and the class \`Person\`. This inverse relationship is made public and queryable by the \`RealmResults\` field annotated with \`@LinkingObject\`. This makes it possible to query properties of the dogs owner without having to manually maintain a "owner" field in the \`Dog\` class.Linking objects have the following properties:
 
 
+
 - The link is maintained by Realm and only works for managed objects.
    
    
@@ -72,7 +77,9 @@ In the above example \`Person\` is related to \`Dog\` through the field \`dog\`.
    
    
 
+
 In addition, they have the following restrictions:
+
 
 
 - @Ignore takes precedence. A @LinkingObjects annotation on @Ignore field will be ignored.
@@ -97,6 +104,7 @@ In addition, they have the following restrictions:
 - The annotated field must be of type \`RealmResults<T>\` where T is concrete class that extends \`RealmModel\`.
    
    
+
 
 Note that when the source of the reverse reference (\`dog\` in the case above) is a \`List\`, there is a reverse reference for each forward reference, even if both forward references are to the same object. If the \`Person\` class above were defined as: 
 
@@ -128,6 +136,7 @@ Querying inverse relationship is like querying any ``RealmResults``. This means 
 
 
 Inherited Methods
+
 =================
 
 

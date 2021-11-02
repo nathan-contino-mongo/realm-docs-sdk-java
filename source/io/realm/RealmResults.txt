@@ -6,16 +6,18 @@
    :class: singlecol
 
 io.realm.RealmResults<E>
+
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. _io_realm_RealmResults:
 
 *Superclass:*
-| 
+
 - **io.realm.OrderedRealmCollectionImpl (?)**
 - `java.util.AbstractList <https://docs.oracle.com/javase/7/docs/api/java/util/AbstractList.html>`__
 - `java.util.AbstractCollection <https://docs.oracle.com/javase/7/docs/api/java/util/AbstractCollection.html>`__
 - `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
+
 
 
 
@@ -43,6 +45,7 @@ If a RealmResults is built on RealmList through :ref:`RealmList#where() <io_real
 
 
 Method Summary
+
 ==============
 
 .. list-table::
@@ -345,10 +348,13 @@ Method Summary
    
    
 Inherited Methods
+
 =================
 
 
+
 - Methods inherited from interface io.realm.OrderedRealmCollectionImpl
+   
    - **isValid (?)**
    - **isManaged (?)**
    - **contains (?)**
@@ -390,7 +396,9 @@ Inherited Methods
    - **getCollectionOperator (?)**
    
    
+   
 - Methods inherited from interface java.util.AbstractList
+   
    - `add <https://docs.oracle.com/javase/7/docs/api/java/util/AbstractList.html>`__
    - `get <https://docs.oracle.com/javase/7/docs/api/java/util/AbstractList.html>`__
    - `set <https://docs.oracle.com/javase/7/docs/api/java/util/AbstractList.html>`__
@@ -409,7 +417,9 @@ Inherited Methods
    - `removeRange <https://docs.oracle.com/javase/7/docs/api/java/util/AbstractList.html>`__
    
    
+   
 - Methods inherited from interface java.util.AbstractCollection
+   
    - `iterator <https://docs.oracle.com/javase/7/docs/api/java/util/AbstractCollection.html>`__
    - `size <https://docs.oracle.com/javase/7/docs/api/java/util/AbstractCollection.html>`__
    - `isEmpty <https://docs.oracle.com/javase/7/docs/api/java/util/AbstractCollection.html>`__
@@ -426,7 +436,9 @@ Inherited Methods
    - `toString <https://docs.oracle.com/javase/7/docs/api/java/util/AbstractCollection.html>`__
    
    
+   
 - Methods inherited from interface java.lang.Object
+   
    - `getClass <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
    - `hashCode <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
    - `equals <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
@@ -440,60 +452,73 @@ Inherited Methods
    - `finalize <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
    
    
+   
+
 
 Method Detail
+
 =============
 
 where
+
 -----
 
 .. _io_realm_RealmResults_where__:
 
 public :ref:`RealmQuery <io_realm_RealmQuery>` where ()
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
 
 sort
+
 ----
 
 .. _io_realm_RealmResults_sort_String__Sort__String__Sort_:
 
 public :ref:`RealmResults <io_realm_RealmResults>` sort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName1, :ref:`Sort <io_realm_Sort>` sortOrder1, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName2, :ref:`Sort <io_realm_Sort>` sortOrder2)
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
 
 isLoaded
+
 --------
 
 .. _io_realm_RealmResults_isLoaded__:
 
 public **boolean** isLoaded ()
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns ``false`` if the results are not yet loaded, ``true`` if they are loaded.
 
 
 load
+
 ----
 
 .. _io_realm_RealmResults_load__:
 
 public **boolean** load ()
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Makes an asynchronous query blocking. This will also trigger any registered :ref:`RealmChangeListener <io_realm_RealmChangeListener>` when the query completes.
 
 
 setValue
+
 --------
 
 .. _io_realm_RealmResults_setValue_String__Object_:
 
 public **void** setValue (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ value)
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Updates the field given by ``fieldName`` in all objects inside the query result.
@@ -508,7 +533,9 @@ Using the typed setters like :ref:`#setInt(String, int) <io_realm_RealmResults_s
 
 
 Parameters
+
 __________
+
 
 
 - ``fieldName - ``field to update
@@ -516,43 +543,55 @@ __________
 - ``value - ``value to update with.
    
 
+
 Throws
+
 ______
 
 setNull
+
 -------
 
 .. _io_realm_RealmResults_setNull_String_:
 
 public **void** setNull (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName)
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sets the value to ``null`` for the given field in all of the objects in the collection.
 
 
 Parameters
+
 __________
+
 
 
 - ``fieldName - ``name of the field to update.
    
 
+
 Throws
+
 ______
 
 setBoolean
+
 ----------
 
 .. _io_realm_RealmResults_setBoolean_String__boolean_:
 
 public **void** setBoolean (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **boolean** value)
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sets the ``boolean`` value of the given field in all of the objects in the collection.
 
 
 Parameters
+
 __________
+
 
 
 - ``fieldName - ``name of the field to update.
@@ -560,22 +599,28 @@ __________
 - ``value - ``new value for the field.
    
 
+
 Throws
+
 ______
 
 setByte
+
 -------
 
 .. _io_realm_RealmResults_setByte_String__byte_:
 
 public **void** setByte (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **byte** value)
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sets the ``byte`` value of the given field in all of the objects in the collection.
 
 
 Parameters
+
 __________
+
 
 
 - ``fieldName - ``name of the field to update.
@@ -583,22 +628,28 @@ __________
 - ``value - ``new value for the field.
    
 
+
 Throws
+
 ______
 
 setShort
+
 --------
 
 .. _io_realm_RealmResults_setShort_String__short_:
 
 public **void** setShort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **short** value)
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sets the ``short`` value of the given field in all of the objects in the collection.
 
 
 Parameters
+
 __________
+
 
 
 - ``fieldName - ``name of the field to update.
@@ -606,22 +657,28 @@ __________
 - ``value - ``new value for the field.
    
 
+
 Throws
+
 ______
 
 setInt
+
 ------
 
 .. _io_realm_RealmResults_setInt_String__int_:
 
 public **void** setInt (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **int** value)
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sets the ``int`` value of the given field in all of the objects in the collection.
 
 
 Parameters
+
 __________
+
 
 
 - ``fieldName - ``name of the field to update.
@@ -629,22 +686,28 @@ __________
 - ``value - ``new value for the field.
    
 
+
 Throws
+
 ______
 
 setLong
+
 -------
 
 .. _io_realm_RealmResults_setLong_String__long_:
 
 public **void** setLong (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **long** value)
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sets the ``long`` value of the given field in all of the objects in the collection.
 
 
 Parameters
+
 __________
+
 
 
 - ``fieldName - ``name of the field to update.
@@ -652,22 +715,28 @@ __________
 - ``value - ``new value for the field.
    
 
+
 Throws
+
 ______
 
 setFloat
+
 --------
 
 .. _io_realm_RealmResults_setFloat_String__float_:
 
 public **void** setFloat (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **float** value)
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sets the ``float`` value of the given field in all of the objects in the collection.
 
 
 Parameters
+
 __________
+
 
 
 - ``fieldName - ``name of the field to update.
@@ -675,22 +744,28 @@ __________
 - ``value - ``new value for the field.
    
 
+
 Throws
+
 ______
 
 setDouble
+
 ---------
 
 .. _io_realm_RealmResults_setDouble_String__double_:
 
 public **void** setDouble (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **double** value)
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sets the ``double`` value of the given field in all of the objects in the collection.
 
 
 Parameters
+
 __________
+
 
 
 - ``fieldName - ``name of the field to update.
@@ -698,22 +773,28 @@ __________
 - ``value - ``new value for the field.
    
 
+
 Throws
+
 ______
 
 setString
+
 ---------
 
 .. _io_realm_RealmResults_setString_String__String_:
 
 public **void** setString (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ value)
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sets the ``String`` value of the given field in all of the objects in the collection.
 
 
 Parameters
+
 __________
+
 
 
 - ``fieldName - ``name of the field to update.
@@ -721,20 +802,26 @@ __________
 - ``value - ``new value for the field.
    
 
+
 Throws
+
 ______
 
 setBlob
+
 -------
 
 .. _io_realm_RealmResults_setBlob_String__byte[]_:
 
 public **void** setBlob (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **byte[]** value)
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sets the binary value of the given field in all of the objects in the collection.
 Parameters
+
 __________
+
 
 
 - ``fieldName - ``name of the field to update.
@@ -742,22 +829,28 @@ __________
 - ``value - ``new value for the field.
    
 
+
 Throws
+
 ______
 
 setDate
+
 -------
 
 .. _io_realm_RealmResults_setDate_String__Date_:
 
 public **void** setDate (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__ value)
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sets the ``Date`` value of the given field in all of the objects in the collection.
 
 
 Parameters
+
 __________
+
 
 
 - ``fieldName - ``name of the field to update.
@@ -765,20 +858,26 @@ __________
 - ``value - ``new value for the field.
    
 
+
 Throws
+
 ______
 
 setObject
+
 ---------
 
 .. _io_realm_RealmResults_setObject_String__RealmModel_:
 
 public **void** setObject (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, :ref:`RealmModel <io_realm_RealmModel>` value)
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sets a reference to another object on the given field in all of the objects in the collection.
 Parameters
+
 __________
+
 
 
 - ``fieldName - ``name of the field to update.
@@ -786,22 +885,28 @@ __________
 - ``value - ``new object referenced by this field.
    
 
+
 Throws
+
 ______
 
 setDecimal128
+
 -------------
 
 .. _io_realm_RealmResults_setDecimal128_String__Decimal128_:
 
 public **void** setDecimal128 (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **Decimal128 (?)** value)
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sets the ``Decimal128`` value of the given field in all of the objects in the collection.
 
 
 Parameters
+
 __________
+
 
 
 - ``fieldName - ``name of the field to update.
@@ -809,22 +914,28 @@ __________
 - ``value - ``new value for the field.
    
 
+
 Throws
+
 ______
 
 setObjectId
+
 -----------
 
 .. _io_realm_RealmResults_setObjectId_String__ObjectId_:
 
 public **void** setObjectId (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **ObjectId (?)** value)
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sets the ``ObjectId`` value of the given field in all of the objects in the collection.
 
 
 Parameters
+
 __________
+
 
 
 - ``fieldName - ``name of the field to update.
@@ -832,22 +943,28 @@ __________
 - ``value - ``new value for the field.
    
 
+
 Throws
+
 ______
 
 setUUID
+
 -------
 
 .. _io_realm_RealmResults_setUUID_String__UUID_:
 
 public **void** setUUID (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, `UUID <https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html>`__ value)
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sets the ``UUID`` value of the given field in all of the objects in the collection.
 
 
 Parameters
+
 __________
+
 
 
 - ``fieldName - ``name of the field to update.
@@ -855,20 +972,26 @@ __________
 - ``value - ``new value for the field.
    
 
+
 Throws
+
 ______
 
 setList
+
 -------
 
 .. _io_realm_RealmResults_setList_String__RealmList_T__:
 
 public **void** setList <**T (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, :ref:`io.realm.RealmList\<T> <io_realm_RealmList>` list)
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Replaces the RealmList at the given field on all objects in this collection.
 Parameters
+
 __________
+
 
 
 - ``fieldName - ``name of the field to update.
@@ -876,37 +999,45 @@ __________
 - ``list - ``new value for the field.
    
 
+
 Throws
+
 ______
 
 isFrozen
+
 --------
 
 .. _io_realm_RealmResults_isFrozen__:
 
 public **boolean** isFrozen ()
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
 
 freeze
+
 ------
 
 .. _io_realm_RealmResults_freeze__:
 
 public :ref:`RealmResults <io_realm_RealmResults>` freeze ()
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
 
 addChangeListener
+
 -----------------
 
 .. _io_realm_RealmResults_addChangeListener_RealmChangeListener_RealmResults_E___:
 
 public **void** addChangeListener (:ref:`io.realm.RealmChangeListener\<io.realm.RealmResults\<E>> <io_realm_RealmChangeListener>` listener)
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Adds a change listener to this :ref:`RealmResults <io_realm_RealmResults>`.
@@ -941,18 +1072,23 @@ Registering a change listener will not prevent the underlying RealmResults from 
 
 
 Parameters
+
 __________
+
 
 
 - ``listener - ``the change listener to be notified.
    
 
+
 Throws
+
 ______
 
 .. _io_realm_RealmResults_addChangeListener_OrderedRealmCollectionChangeListener_RealmResults_E___:
 
 public **void** addChangeListener (:ref:`io.realm.OrderedRealmCollectionChangeListener\<io.realm.RealmResults\<E>> <io_realm_OrderedRealmCollectionChangeListener>` listener)
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Adds a change listener to this :ref:`RealmResults <io_realm_RealmResults>`.
@@ -987,52 +1123,67 @@ Registering a change listener will not prevent the underlying RealmResults from 
 
 
 Parameters
+
 __________
+
 
 
 - ``listener - ``the change listener to be notified.
    
 
+
 Throws
+
 ______
 
 removeAllChangeListeners
+
 ------------------------
 
 .. _io_realm_RealmResults_removeAllChangeListeners__:
 
 public **void** removeAllChangeListeners ()
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Removes all user-defined change listeners.
 Throws
+
 ______
 
 See Also
+
 ________
 
 io.realm.RealmChangeListener
 
 removeChangeListener
+
 --------------------
 
 .. _io_realm_RealmResults_removeChangeListener_RealmChangeListener_RealmResults_E___:
 
 public **void** removeChangeListener (:ref:`io.realm.RealmChangeListener\<io.realm.RealmResults\<E>> <io_realm_RealmChangeListener>` listener)
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Removes the specified change listener.
 Parameters
+
 __________
+
 
 
 - ``listener - ``the change listener to be removed.
    
 
+
 Throws
+
 ______
 
 See Also
+
 ________
 
 io.realm.RealmChangeListener
@@ -1040,30 +1191,38 @@ io.realm.RealmChangeListener
 .. _io_realm_RealmResults_removeChangeListener_OrderedRealmCollectionChangeListener_RealmResults_E___:
 
 public **void** removeChangeListener (:ref:`io.realm.OrderedRealmCollectionChangeListener\<io.realm.RealmResults\<E>> <io_realm_OrderedRealmCollectionChangeListener>` listener)
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Removes the specified change listener.
 Parameters
+
 __________
+
 
 
 - ``listener - ``the change listener to be removed.
    
 
+
 Throws
+
 ______
 
 See Also
+
 ________
 
 io.realm.RealmChangeListener
 
 asFlowable
+
 ----------
 
 .. _io_realm_RealmResults_asFlowable__:
 
 public **<any> (?)** asFlowable ()
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns an Rx Flowable that monitors changes to this RealmResults. It will emit the current RealmResults when subscribed to. RealmResults will continually be emitted as the RealmResults are updated - ``onComplete`` will never be called.
@@ -1109,19 +1268,23 @@ If you would like the ``asFlowable()`` to stop emitting items you can instruct R
 
 
 Throws
+
 ______
 
 See Also
+
 ________
 
 <a href="https://realm.io/docs/java/latest/#rxjava">RxJava and Realm</a>
 
 asChangesetObservable
+
 ---------------------
 
 .. _io_realm_RealmResults_asChangesetObservable__:
 
 public **<any> (?)** asChangesetObservable ()
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns an Rx Observable that monitors changes to this RealmResults. It will emit the current RealmResults when subscribed. For each update to the RealmResult a pair consisting of the RealmResults and the :ref:`OrderedCollectionChangeSet <io_realm_OrderedCollectionChangeSet>` will be sent. The changeset will be ``null`` the first time an RealmResults is emitted.
@@ -1153,19 +1316,23 @@ Realm Observables always emit items from the thread holding the live Realm. This
 
 
 Throws
+
 ______
 
 See Also
+
 ________
 
 <a href="https://realm.io/docs/java/latest/#rxjava">RxJava and Realm</a>
 
 asJSON
+
 ------
 
 .. _io_realm_RealmResults_asJSON__:
 
 public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ asJSON ()
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns a JSON representation of the matches of a :ref:`RealmQuery <io_realm_RealmQuery>`. Cycles will be returned as row indices. This is a helper method used to inspect data, or for debugging purpose, this method could pull a large string which could cause an OutOfMemory error.

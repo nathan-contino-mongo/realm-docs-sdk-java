@@ -6,19 +6,23 @@
    :class: singlecol
 
 io.realm.annotations.RealmModule
+
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. _io_realm_annotations_RealmModule:
 
 *Superclass:*
-| 
+
+
 
 
 
 *Implemented interfaces:*
 
 
+
 - `java.lang.annotation.Annotation <https://docs.oracle.com/javase/7/docs/api/java/lang/annotation/Annotation.html>`__
+
 
 By default a Realm can store all classes extending RealmObject in a project. However, if you want to restrict a Realm to only contain a subset of classes or want to share them between a library project and an app project, you must use a RealmModule.A RealmModule is a collection of classes extending RealmObject that can be combined with other RealmModules to create the schema for a Realm. This makes it easier to control versioning and migration of those Realms.
 
@@ -29,6 +33,7 @@ A RealmModule can either be a library module or an app module. The distinction i
 Currently, it is not possible to have multiple RealmModule declarations in a single file. If you have more than one RealmModule, you will have to use separate Java files for each module.
 
 RealmModules and libraries
+
 ==========================
 
 Realms default behavior is to automatically create a RealmModule called ``DefaultRealmModule`` which contains all classes extending RealmObject in a project. This module is automatically known by Realm.
@@ -47,6 +52,7 @@ App developers are not required to specify any modules, as they implicitly use t
 
 
 Inherited Methods
+
 =================
 
 

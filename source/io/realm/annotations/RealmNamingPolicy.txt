@@ -6,18 +6,21 @@
    :class: singlecol
 
 io.realm.annotations.RealmNamingPolicy
+
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. _io_realm_annotations_RealmNamingPolicy:
 
 *Superclass:*
-| 
+
 - `java.lang.Enum <https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html>`__
 - `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
 
 
 
+
 This enum defines the possible ways class and field names can be mapped from what is used in Java to the name used internally in the Realm file.Examples where this is useful:
+
 
 
 - To support two model classes with the same simple name but in different packages.
@@ -33,7 +36,9 @@ This enum defines the possible ways class and field names can be mapped from wha
    
    
 
+
 Depending on where the policy is applied, it will have slightly different semantics:
+
 - If applied to **RealmModule#classNamingPolicy (?)** all classes part of that module will be affected. If a class is part of multiple modules, the same naming policy must be applied to both modules, otherwise an error will be thrown.
    
    
@@ -49,6 +54,7 @@ Depending on where the policy is applied, it will have slightly different semant
    
    
    
+
 
 An example of this:
 
@@ -69,6 +75,7 @@ An example of this:
 Choosing an internal name that differs from the name used in the Java model classes has the following implications:
 
 
+
 - Queries on ``DynamicRealm`` must use the internal name. Queries on normal ``Realm`` instances must continue to use the name as it is defined in the Java class.
    
    
@@ -81,7 +88,9 @@ Choosing an internal name that differs from the name used in the Java model clas
    
    
 
+
 When automatically converting Java variable names, each variable name is normalized by splitting it into a list of words that are then joined using the rules of the target format. The following heuristics are used for determining what constitutes a "word".
+
 
 
 1. Anytime a ``_`` or ``$`` is encountered. Examples are "_FirstName", "_First_Name" and "$First$Name" which all becomes "First" and "Name".
@@ -105,6 +114,7 @@ When automatically converting Java variable names, each variable name is normali
 #. Hungarian notation, i.e. variable names starting with lowercase "m" followed by uppercase letter is stripped and not considered part of any word. Example is "mFirstName" and "mFIRSTName" which becomes "First" and "Name.
    
    
+
 
 Note that changing the internal name does *NOT* affect importing data from JSON. The JSON data must still follow the names as defined in the Realm Java class.
 
@@ -131,6 +141,7 @@ Using Moshi, it would look something like this:
 
 
 Enum Constant Summary
+
 =====================
 
 .. list-table::
@@ -173,6 +184,7 @@ Enum Constant Summary
    
    
 Method Summary
+
 ==============
 
 .. list-table::
@@ -199,10 +211,13 @@ Method Summary
    
    
 Inherited Methods
+
 =================
 
 
+
 - Methods inherited from interface java.lang.Enum
+   
    - `name <https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html>`__
    - `ordinal <https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html>`__
    - `toString <https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html>`__
@@ -215,7 +230,9 @@ Inherited Methods
    - `finalize <https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html>`__
    
    
+   
 - Methods inherited from interface java.lang.Object
+   
    - `getClass <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
    - `hashCode <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
    - `equals <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
@@ -229,13 +246,17 @@ Inherited Methods
    - `finalize <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
    
    
+   
+
 
 Enum Constant Detail
+
 ====================
 
 .. _io_realm_annotations_RealmNamingPolicy_NO_POLICY:
 
 ``NO_POLICY``
+
 -------------
 
 public static final :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>`
@@ -252,6 +273,7 @@ No policy is applied. This policy will not override any policy set on a parent e
 .. _io_realm_annotations_RealmNamingPolicy_IDENTITY:
 
 ``IDENTITY``
+
 ------------
 
 public static final :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>`
@@ -261,6 +283,7 @@ The name in the Java model class is used as is internally.
 .. _io_realm_annotations_RealmNamingPolicy_CAMEL_CASE:
 
 ``CAMEL_CASE``
+
 --------------
 
 public static final :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>`
@@ -276,6 +299,7 @@ The name in the Java model class is converted to camelCase, i.e. all words are j
 .. _io_realm_annotations_RealmNamingPolicy_PASCAL_CASE:
 
 ``PASCAL_CASE``
+
 ---------------
 
 public static final :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>`
@@ -290,6 +314,7 @@ The name in the Java model class is converted to PascalCase, i.e. all words are 
 .. _io_realm_annotations_RealmNamingPolicy_LOWER_CASE_WITH_UNDERSCORES:
 
 ``LOWER_CASE_WITH_UNDERSCORES``
+
 -------------------------------
 
 public static final :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>`
@@ -301,23 +326,28 @@ The name in the Java model class is converted lowercase with each word separated
  "first_name".
 
 Method Detail
+
 =============
 
 values
+
 ------
 
 .. _io_realm_annotations_RealmNamingPolicy_values__:
 
 public static :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` values ()
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 valueOf
+
 -------
 
 .. _io_realm_annotations_RealmNamingPolicy_valueOf_String_:
 
 public static :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` valueOf (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ name)
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
