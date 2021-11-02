@@ -31,7 +31,7 @@ A :ref:`io.realm.Realm <io_realm_Realm>` is unordered, which means that there is
 
 A RealmQuery cannot be passed between different threads.
 
-Results are obtained quickly most of the times. However, launching heavy queries from the UI thread may result in a drop of frames or even ANRs. If you want to prevent these behaviors, you can instantiate a Realm using a :ref:`RealmConfiguration <io_realm_RealmConfiguration>` that explicitly sets :ref:`RealmConfiguration.Builder#allowQueriesOnUiThread(boolean) <io_realm_RealmConfiguration_Builder_allowQueriesOnUiThread_boolean_>` to ``false``. This way queries will be forced to be launched from a non-UI thread. Alternatively, you can also use :ref:`#findAllAsync() <io_realm_RealmQuery_findAllAsync__>` or :ref:`#findFirstAsync() <io_realm_RealmQuery_findFirstAsync__>`.
+Results are obtained quickly most of the times. However, launching heavy queries from the UI thread may result in a drop of frames or even ANRs. If you want to prevent these behaviors, you can instantiate a Realm using a :ref:`RealmConfiguration <io_realm_RealmConfiguration>` that explicitly sets :ref:`RealmConfiguration.Builder#allowQueriesOnUiThread(boolean) <io_realm_RealmConfiguration_Builder_allowQueriesOnUiThread_boolean_>` to  ``false`` . This way queries will be forced to be launched from a non-UI thread. Alternatively, you can also use :ref:`#findAllAsync() <io_realm_RealmQuery_findAllAsync__>` or :ref:`#findFirstAsync() <io_realm_RealmQuery_findFirstAsync__>`.
 
 
 
@@ -60,7 +60,7 @@ Method Summary
    * - public :ref:`RealmQuery <io_realm_RealmQuery>`
      - :ref:`isNull <io_realm_RealmQuery_isNull_String_>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName)
        
-       Tests if a field is ``null``.
+       Tests if a field is  ``null`` .
        
        
        
@@ -70,7 +70,7 @@ Method Summary
    * - public :ref:`RealmQuery <io_realm_RealmQuery>`
      - :ref:`isNotNull <io_realm_RealmQuery_isNotNull_String_>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName)
        
-       Tests if a field is not ``null``.
+       Tests if a field is not  ``null`` .
        
        
        
@@ -704,7 +704,7 @@ Method Summary
    * - public :ref:`RealmQuery <io_realm_RealmQuery>`
      - :ref:`endGroup <io_realm_RealmQuery_endGroup__>` ()
        
-       End grouping of conditions ("right parenthesis") which was opened by a call to ``beginGroup()``.
+       End grouping of conditions ("right parenthesis") which was opened by a call to  ``beginGroup()`` .
        
        
        
@@ -1105,7 +1105,7 @@ Inherited Methods
 
 - Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__: 
    
-   ``getClass``, ``hashCode``, ``equals``, ``clone``, ``toString``, ``notify``, ``notifyAll``, ``wait``, ``wait``, ``wait``, ``finalize``
+    ``getClass`` ,  ``hashCode`` ,  ``equals`` ,  ``clone`` ,  ``toString`` ,  ``notify`` ,  ``notifyAll`` ,  ``wait`` ,  ``wait`` ,  ``wait`` ,  ``finalize`` 
    
    
 
@@ -1142,9 +1142,9 @@ isNull
 public :ref:`RealmQuery <io_realm_RealmQuery>` isNull (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Tests if a field is ``null``. Only works for nullable fields.
+Tests if a field is  ``null`` . Only works for nullable fields.
 
-For link queries, if any part of the link path is ``null`` the whole path is considered to be ``null`` e.g., ``isNull("linkField.stringField")`` will be considered to be ``null`` if either ``linkField`` or ``linkField.stringField`` is ``null``.
+For link queries, if any part of the link path is  ``null``  the whole path is considered to be  ``null``  e.g.,  ``isNull("linkField.stringField")``  will be considered to be  ``null``  if either  ``linkField``  or  ``linkField.stringField``  is  ``null`` .
 
 
 
@@ -1156,7 +1156,7 @@ __________
 
 
 
-- ``fieldName - ``the field name.
+-  ``fieldName - `` the field name.
    
 
 
@@ -1184,7 +1184,7 @@ isNotNull
 public :ref:`RealmQuery <io_realm_RealmQuery>` isNotNull (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Tests if a field is not ``null``. Only works for nullable fields.
+Tests if a field is not  ``null`` . Only works for nullable fields.
 
 
 
@@ -1194,7 +1194,7 @@ __________
 
 
 
-- ``fieldName - ``the field name.
+-  ``fieldName - `` the field name.
    
 
 
@@ -1230,9 +1230,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -1256,11 +1256,11 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
-- ``casing - ``how to handle casing. Setting this to :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
+-  ``casing - `` how to handle casing. Setting this to :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
    
    
    
@@ -1286,11 +1286,11 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
-- ``casing - ``how to handle casing. Setting this to :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
+-  ``casing - `` how to handle casing. Setting this to :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
    
    
    
@@ -1316,9 +1316,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -1342,9 +1342,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -1368,9 +1368,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -1399,9 +1399,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``values - ``array of values to compare with. If ``null`` or the empty array is provided the query will never match any results.
+-  ``values - `` array of values to compare with. If  ``null``  or the empty array is provided the query will never match any results.
    
    
    
@@ -1427,13 +1427,13 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``values - ``array of values to compare with. If ``null`` or the empty array is provided the query will never match any results.
+-  ``values - `` array of values to compare with. If  ``null``  or the empty array is provided the query will never match any results.
    
    
    
-- ``casing - ``how casing is handled. :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` works only for the Latin-1 characters.
+-  ``casing - `` how casing is handled. :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` works only for the Latin-1 characters.
    
    
    
@@ -1459,9 +1459,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``values - ``array of values to compare with. If ``null`` or the empty array is provided the query will never match any results.
+-  ``values - `` array of values to compare with. If  ``null``  or the empty array is provided the query will never match any results.
    
    
    
@@ -1487,9 +1487,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``values - ``array of values to compare with. If ``null`` or the empty array is provided the query will never match any results.
+-  ``values - `` array of values to compare with. If  ``null``  or the empty array is provided the query will never match any results.
    
    
    
@@ -1515,9 +1515,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``values - ``array of values to compare with. If ``null`` or the empty array is provided the query will never match any results.
+-  ``values - `` array of values to compare with. If  ``null``  or the empty array is provided the query will never match any results.
    
    
    
@@ -1543,9 +1543,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``values - ``array of values to compare with. If ``null`` or the empty array is provided the query will never match any results.
+-  ``values - `` array of values to compare with. If  ``null``  or the empty array is provided the query will never match any results.
    
    
    
@@ -1571,9 +1571,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``values - ``array of values to compare with. If ``null`` or the empty array is provided the query will never match any results.
+-  ``values - `` array of values to compare with. If  ``null``  or the empty array is provided the query will never match any results.
    
    
    
@@ -1599,9 +1599,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``values - ``array of values to compare with. If ``null`` or the empty array is provided the query will never match any results.
+-  ``values - `` array of values to compare with. If  ``null``  or the empty array is provided the query will never match any results.
    
    
    
@@ -1627,9 +1627,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``values - ``array of values to compare with. If ``null`` or the empty array is provided the query will never match any results.
+-  ``values - `` array of values to compare with. If  ``null``  or the empty array is provided the query will never match any results.
    
    
    
@@ -1655,9 +1655,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``values - ``array of values to compare with. If ``null`` or the empty array is provided the query will never match any results.
+-  ``values - `` array of values to compare with. If  ``null``  or the empty array is provided the query will never match any results.
    
    
    
@@ -1683,9 +1683,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``values - ``array of values to compare with. If ``null`` or the empty array is provided the query will never match any results.
+-  ``values - `` array of values to compare with. If  ``null``  or the empty array is provided the query will never match any results.
    
    
    
@@ -1716,9 +1716,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -1742,11 +1742,11 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
-- ``casing - ``how casing is handled. :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` works only for the Latin-1 characters.
+-  ``casing - `` how casing is handled. :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` works only for the Latin-1 characters.
    
    
    
@@ -1772,11 +1772,11 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
-- ``casing - ``how casing is handled. :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` works only for the Latin-1 characters.
+-  ``casing - `` how casing is handled. :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` works only for the Latin-1 characters.
    
    
    
@@ -1802,9 +1802,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -1828,9 +1828,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -1854,9 +1854,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -1885,9 +1885,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -1911,9 +1911,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -1937,9 +1937,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -1963,9 +1963,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -1989,9 +1989,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -2015,9 +2015,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -2041,9 +2041,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -2067,9 +2067,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -2098,9 +2098,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -2124,9 +2124,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -2150,9 +2150,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -2176,9 +2176,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -2202,9 +2202,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -2228,9 +2228,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -2254,9 +2254,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -2280,9 +2280,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -2311,9 +2311,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -2337,9 +2337,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -2363,9 +2363,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -2389,9 +2389,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -2415,9 +2415,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -2446,9 +2446,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -2472,9 +2472,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -2498,9 +2498,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -2524,9 +2524,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -2550,9 +2550,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to compare with.
+-  ``value - `` the value to compare with.
    
 
 
@@ -2581,11 +2581,11 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``from - ``lowest value (inclusive).
+-  ``from - `` lowest value (inclusive).
    
-- ``to - ``highest value (inclusive).
+-  ``to - `` highest value (inclusive).
    
 
 
@@ -2609,11 +2609,11 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``from - ``lowest value (inclusive).
+-  ``from - `` lowest value (inclusive).
    
-- ``to - ``highest value (inclusive).
+-  ``to - `` highest value (inclusive).
    
 
 
@@ -2637,11 +2637,11 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``from - ``lowest value (inclusive).
+-  ``from - `` lowest value (inclusive).
    
-- ``to - ``highest value (inclusive).
+-  ``to - `` highest value (inclusive).
    
 
 
@@ -2665,11 +2665,11 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``from - ``lowest value (inclusive).
+-  ``from - `` lowest value (inclusive).
    
-- ``to - ``highest value (inclusive).
+-  ``to - `` highest value (inclusive).
    
 
 
@@ -2693,11 +2693,11 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``from - ``lowest value (inclusive).
+-  ``from - `` lowest value (inclusive).
    
-- ``to - ``highest value (inclusive).
+-  ``to - `` highest value (inclusive).
    
 
 
@@ -2721,11 +2721,11 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``from - ``lowest value (inclusive).
+-  ``from - `` lowest value (inclusive).
    
-- ``to - ``highest value (inclusive).
+-  ``to - `` highest value (inclusive).
    
 
 
@@ -2749,11 +2749,11 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``from - ``lowest value (inclusive).
+-  ``from - `` lowest value (inclusive).
    
-- ``to - ``highest value (inclusive).
+-  ``to - `` highest value (inclusive).
    
 
 
@@ -2782,9 +2782,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the substring.
+-  ``value - `` the substring.
    
 
 
@@ -2808,9 +2808,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the substring.
+-  ``value - `` the substring.
    
 
 
@@ -2834,11 +2834,11 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the substring.
+-  ``value - `` the substring.
    
-- ``casing - ``how to handle casing. Setting this to :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
+-  ``casing - `` how to handle casing. Setting this to :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
    
    
    
@@ -2864,11 +2864,11 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the substring.
+-  ``value - `` the substring.
    
-- ``casing - ``how to handle casing. Setting this to :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
+-  ``casing - `` how to handle casing. Setting this to :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
    
    
    
@@ -2899,9 +2899,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the string.
+-  ``value - `` the string.
    
 
 
@@ -2925,9 +2925,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the string.
+-  ``value - `` the string.
    
 
 
@@ -2951,11 +2951,11 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the substring.
+-  ``value - `` the substring.
    
-- ``casing - ``how to handle casing. Setting this to :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
+-  ``casing - `` how to handle casing. Setting this to :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
    
    
    
@@ -2981,11 +2981,11 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the substring.
+-  ``value - `` the substring.
    
-- ``casing - ``how to handle casing. Setting this to :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
+-  ``casing - `` how to handle casing. Setting this to :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
    
    
    
@@ -3016,9 +3016,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the string.
+-  ``value - `` the string.
    
 
 
@@ -3042,9 +3042,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the string.
+-  ``value - `` the string.
    
 
 
@@ -3068,11 +3068,11 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the substring.
+-  ``value - `` the substring.
    
-- ``casing - ``how to handle casing. Setting this to :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
+-  ``casing - `` how to handle casing. Setting this to :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
    
    
    
@@ -3098,11 +3098,11 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the substring.
+-  ``value - `` the substring.
    
-- ``casing - ``how to handle casing. Setting this to :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
+-  ``casing - `` how to handle casing. Setting this to :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
    
    
    
@@ -3143,9 +3143,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the wildcard string.
+-  ``value - `` the wildcard string.
    
 
 
@@ -3179,9 +3179,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the wildcard string.
+-  ``value - `` the wildcard string.
    
 
 
@@ -3215,11 +3215,11 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the wildcard string.
+-  ``value - `` the wildcard string.
    
-- ``casing - ``how to handle casing. Setting this to :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
+-  ``casing - `` how to handle casing. Setting this to :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
    
    
    
@@ -3255,11 +3255,11 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the wildcard string.
+-  ``value - `` the wildcard string.
    
-- ``casing - ``how to handle casing. Setting this to :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
+-  ``casing - `` how to handle casing. Setting this to :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
    
    
    
@@ -3282,7 +3282,7 @@ beginGroup
 public :ref:`RealmQuery <io_realm_RealmQuery>` beginGroup ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Begin grouping of conditions ("left parenthesis"). A group must be closed with a call to ``endGroup()``.
+Begin grouping of conditions ("left parenthesis"). A group must be closed with a call to  ``endGroup()`` .
 
 
 
@@ -3304,7 +3304,7 @@ endGroup
 public :ref:`RealmQuery <io_realm_RealmQuery>` endGroup ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-End grouping of conditions ("right parenthesis") which was opened by a call to ``beginGroup()``.
+End grouping of conditions ("right parenthesis") which was opened by a call to  ``beginGroup()`` .
 
 
 
@@ -3373,7 +3373,7 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
 
 
@@ -3402,7 +3402,7 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
 
 
@@ -3431,9 +3431,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``key - ``the key to search for.
+-  ``key - `` the key to search for.
    
 
 
@@ -3462,9 +3462,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to search for.
+-  ``value - `` the value to search for.
    
 
 
@@ -3488,9 +3488,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to search for.
+-  ``value - `` the value to search for.
    
 
 
@@ -3514,9 +3514,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to search for.
+-  ``value - `` the value to search for.
    
 
 
@@ -3540,9 +3540,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to search for
+-  ``value - `` the value to search for
    
 
 
@@ -3566,9 +3566,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to search for.
+-  ``value - `` the value to search for.
    
 
 
@@ -3592,9 +3592,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to search for.
+-  ``value - `` the value to search for.
    
 
 
@@ -3618,9 +3618,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to search for.
+-  ``value - `` the value to search for.
    
 
 
@@ -3644,9 +3644,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to search for.
+-  ``value - `` the value to search for.
    
 
 
@@ -3670,9 +3670,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to search for.
+-  ``value - `` the value to search for.
    
 
 
@@ -3696,9 +3696,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to search for.
+-  ``value - `` the value to search for.
    
 
 
@@ -3722,9 +3722,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to search for.
+-  ``value - `` the value to search for.
    
 
 
@@ -3748,9 +3748,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to search for.
+-  ``value - `` the value to search for.
    
 
 
@@ -3774,9 +3774,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``value - ``the value to search for.
+-  ``value - `` the value to search for.
    
 
 
@@ -3805,9 +3805,9 @@ __________
 
 
 
-- ``fieldName - ``the field to compare.
+-  ``fieldName - `` the field to compare.
    
-- ``entry - ``the entry to search for.
+-  ``entry - `` the entry to search for.
    
 
 
@@ -3836,7 +3836,7 @@ __________
 
 
 
-- ``fieldName - ``the field to sum. Only number and RealmAny fields are supported.
+-  ``fieldName - `` the field to sum. Only number and RealmAny fields are supported.
    
 
 
@@ -3865,7 +3865,7 @@ __________
 
 
 
-- ``fieldName - ``the field to calculate average on. Only number fields are supported.
+-  ``fieldName - `` the field to calculate average on. Only number fields are supported.
    
 
 
@@ -3894,7 +3894,7 @@ __________
 
 
 
-- ``fieldName - ``the field to calculate average on. Only Decimal128 fields is supported. For other number types consider using :ref:`#average(String) <io_realm_RealmQuery_average_String_>`.
+-  ``fieldName - `` the field to calculate average on. Only Decimal128 fields is supported. For other number types consider using :ref:`#average(String) <io_realm_RealmQuery_average_String_>`.
    
    
    
@@ -3925,7 +3925,7 @@ __________
 
 
 
-- ``fieldName - ``the field to calculate average on. Only RealmAny fields are supported. For other types consider using :ref:`#average(String) <io_realm_RealmQuery_average_String_>`.
+-  ``fieldName - `` the field to calculate average on. Only RealmAny fields are supported. For other types consider using :ref:`#average(String) <io_realm_RealmQuery_average_String_>`.
    
    
    
@@ -3956,7 +3956,7 @@ __________
 
 
 
-- ``fieldName - ``the field to look for a minimum on. Only number fields are supported.
+-  ``fieldName - `` the field to look for a minimum on. Only number fields are supported.
    
 
 
@@ -3985,7 +3985,7 @@ __________
 
 
 
-- ``fieldName - ``the field name
+-  ``fieldName - `` the field name
    
 
 
@@ -4016,7 +4016,7 @@ __________
 
 
 
-- ``fieldName - ``the field containing a RealmAny value.
+-  ``fieldName - `` the field containing a RealmAny value.
    
 
 
@@ -4045,7 +4045,7 @@ __________
 
 
 
-- ``fieldName - ``the field to look for a maximum on. Only number fields are supported.
+-  ``fieldName - `` the field to look for a maximum on. Only number fields are supported.
    
 
 
@@ -4074,7 +4074,7 @@ __________
 
 
 
-- ``fieldName - ``the field name.
+-  ``fieldName - `` the field name.
    
 
 
@@ -4105,7 +4105,7 @@ __________
 
 
 
-- ``fieldName - ``the field containing a RealmAny value.
+-  ``fieldName - `` the field containing a RealmAny value.
    
 
 
@@ -4144,7 +4144,7 @@ findAll
 public :ref:`RealmResults <io_realm_RealmResults>` findAll ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Finds all objects that fulfill the query conditions.Launching heavy queries from the UI thread may result in a drop of frames or even ANRs. **We do not recommend doing so and therefore it is not allowed by default.** If you want to prevent these behaviors you can obtain a Realm using a :ref:`RealmConfiguration <io_realm_RealmConfiguration>` that explicitly sets :ref:`RealmConfiguration.Builder#allowQueriesOnUiThread(boolean) <io_realm_RealmConfiguration_Builder_allowQueriesOnUiThread_boolean_>` to ``false``. This way you will be forced to launch your queries from a non-UI thread, otherwise calls to this method will throw a :ref:`RealmException <io_realm_exceptions_RealmException>`. Alternatively, you can use :ref:`#findAllAsync() <io_realm_RealmQuery_findAllAsync__>`.
+Finds all objects that fulfill the query conditions.Launching heavy queries from the UI thread may result in a drop of frames or even ANRs. **We do not recommend doing so and therefore it is not allowed by default.** If you want to prevent these behaviors you can obtain a Realm using a :ref:`RealmConfiguration <io_realm_RealmConfiguration>` that explicitly sets :ref:`RealmConfiguration.Builder#allowQueriesOnUiThread(boolean) <io_realm_RealmConfiguration_Builder_allowQueriesOnUiThread_boolean_>` to  ``false`` . This way you will be forced to launch your queries from a non-UI thread, otherwise calls to this method will throw a :ref:`RealmException <io_realm_exceptions_RealmException>`. Alternatively, you can use :ref:`#findAllAsync() <io_realm_RealmQuery_findAllAsync__>`.
 
 
 
@@ -4203,7 +4203,7 @@ __________
 
 
 
-- ``fieldName - ``the field name to sort by.
+-  ``fieldName - `` the field name to sort by.
    
 
 
@@ -4229,9 +4229,9 @@ __________
 
 
 
-- ``fieldName - ``the field name to sort by.
+-  ``fieldName - `` the field name to sort by.
    
-- ``sortOrder - ``how to sort the results.
+-  ``sortOrder - `` how to sort the results.
    
 
 
@@ -4247,7 +4247,7 @@ ______
 public :ref:`RealmQuery <io_realm_RealmQuery>` sort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName1, :ref:`Sort <io_realm_Sort>` sortOrder1, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName2, :ref:`Sort <io_realm_Sort>` sortOrder2)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Sorts the query result by the specific field names in the provided orders. ``fieldName2`` is only used in case of equal values in ``fieldName1``.
+Sorts the query result by the specific field names in the provided orders.  ``fieldName2``  is only used in case of equal values in  ``fieldName1`` .
 
 Sorting is currently limited to character sets in 'Latin Basic', 'Latin Supplement', 'Latin Extended A', 'Latin Extended B' (UTF-8 range 0-591). For other character sets, sorting will have no effect.
 
@@ -4259,13 +4259,13 @@ __________
 
 
 
-- ``fieldName1 - ``first field name
+-  ``fieldName1 - `` first field name
    
-- ``sortOrder1 - ``sort order for first field
+-  ``sortOrder1 - `` sort order for first field
    
-- ``fieldName2 - ``second field name
+-  ``fieldName2 - `` second field name
    
-- ``sortOrder2 - ``sort order for second field
+-  ``sortOrder2 - `` sort order for second field
    
 
 
@@ -4291,9 +4291,9 @@ __________
 
 
 
-- ``fieldNames - ``an array of field names to sort by.
+-  ``fieldNames - `` an array of field names to sort by.
    
-- ``sortOrders - ``how to sort the field names.
+-  ``sortOrders - `` how to sort the field names.
    
 
 
@@ -4322,9 +4322,9 @@ __________
 
 
 
-- ``firstFieldName - ``first field name to use when finding distinct objects.
+-  ``firstFieldName - `` first field name to use when finding distinct objects.
    
-- ``remainingFieldNames - ``remaining field names when determining all unique combinations of field values.
+-  ``remainingFieldNames - `` remaining field names when determining all unique combinations of field values.
    
 
 
@@ -4357,7 +4357,7 @@ __________
 
 
 
-- ``limit - ``a limit that is ``≥ 1``.
+-  ``limit - `` a limit that is  ``≥ 1`` .
    
    
    
@@ -4454,9 +4454,9 @@ __________
 
 
 
-- ``predicate - ``a Realm Query Language predicate.
+-  ``predicate - `` a Realm Query Language predicate.
    
-- ``arguments - ``Realm values for the predicate.
+-  ``arguments - `` Realm values for the predicate.
    
 
 
@@ -4527,7 +4527,7 @@ findFirst
 public **E (?)** findFirst ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Finds the first object that fulfills the query conditions.Launching heavy queries from the UI thread may result in a drop of frames or even ANRs. **We do not recommend doing so, but it is allowed by default.** If you want to prevent these behaviors you can obtain a Realm using a :ref:`RealmConfiguration <io_realm_RealmConfiguration>` that explicitly sets :ref:`RealmConfiguration.Builder#allowQueriesOnUiThread(boolean) <io_realm_RealmConfiguration_Builder_allowQueriesOnUiThread_boolean_>` to ``false``. This way you will be forced to launch your queries from a non-UI thread, otherwise calls to this method will throw a :ref:`RealmException <io_realm_exceptions_RealmException>`. Alternatively, you can use :ref:`#findFirstAsync() <io_realm_RealmQuery_findFirstAsync__>`.
+Finds the first object that fulfills the query conditions.Launching heavy queries from the UI thread may result in a drop of frames or even ANRs. **We do not recommend doing so, but it is allowed by default.** If you want to prevent these behaviors you can obtain a Realm using a :ref:`RealmConfiguration <io_realm_RealmConfiguration>` that explicitly sets :ref:`RealmConfiguration.Builder#allowQueriesOnUiThread(boolean) <io_realm_RealmConfiguration_Builder_allowQueriesOnUiThread_boolean_>` to  ``false`` . This way you will be forced to launch your queries from a non-UI thread, otherwise calls to this method will throw a :ref:`RealmException <io_realm_exceptions_RealmException>`. Alternatively, you can use :ref:`#findFirstAsync() <io_realm_RealmQuery_findFirstAsync__>`.
 
 
 

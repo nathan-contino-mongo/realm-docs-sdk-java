@@ -29,7 +29,7 @@ Constructors
 
 
 
-- ``io.realm.RealmConfiguration.Builder()``
+-  ``io.realm.RealmConfiguration.Builder()`` 
 
 
 
@@ -231,7 +231,7 @@ Inherited Methods
 
 - Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__: 
    
-   ``getClass``, ``hashCode``, ``equals``, ``clone``, ``toString``, ``notify``, ``notifyAll``, ``wait``, ``wait``, ``wait``, ``finalize``
+    ``getClass`` ,  ``hashCode`` ,  ``equals`` ,  ``clone`` ,  ``toString`` ,  ``notify`` ,  ``notifyAll`` ,  ``wait`` ,  ``wait`` ,  ``wait`` ,  ``finalize`` 
    
    
 
@@ -266,7 +266,7 @@ directory
 public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` directory (`File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__ directory)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Specifies the directory where the Realm file will be saved. The default value is ``context.getFilesDir()``. If the directory does not exist, it will be created.
+Specifies the directory where the Realm file will be saved. The default value is  ``context.getFilesDir()`` . If the directory does not exist, it will be created.
 
 
 
@@ -276,7 +276,7 @@ __________
 
 
 
-- ``directory - ``the directory to save the Realm file in. Directory must be writable.
+-  ``directory - `` the directory to save the Realm file in. Directory must be writable.
    
 
 
@@ -398,7 +398,7 @@ A reference to the default Realm module containing all Realm classes in the proj
 
 
 
-``builder.modules(Realm.getDefaultMode(), new MyLibraryModule()); ``
+ ``builder.modules(Realm.getDefaultMode(), new MyLibraryModule()); `` 
 
 
 
@@ -410,9 +410,9 @@ __________
 
 
 
-- ``baseModule - ``the first Realm module (required).
+-  ``baseModule - `` the first Realm module (required).
    
-- ``additionalModules - ``the additional Realm modules
+-  ``additionalModules - `` the additional Realm modules
    
 
 
@@ -463,7 +463,7 @@ __________
 
 
 
-- ``factory - ``factory to use.
+-  ``factory - `` factory to use.
    
 
 
@@ -489,7 +489,7 @@ __________
 
 
 
-- ``factory - ``factory to use.
+-  ``factory - `` factory to use.
    
 
 
@@ -515,7 +515,7 @@ __________
 
 
 
-- ``transaction - ``transaction to execute.
+-  ``transaction - `` transaction to execute.
    
 
 
@@ -547,7 +547,7 @@ __________
 
 
 
-- ``assetFile - ``path to the asset database file.
+-  ``assetFile - `` path to the asset database file.
    
 
 
@@ -605,7 +605,7 @@ __________
 
 
 
-- ``compactOnLaunch - ``a callback called when opening a Realm for the first time during the life of a process to determine if it should be compacted before being returned to the user. It is passed the total file size (data + free space) and the bytes used by data in the file.
+-  ``compactOnLaunch - `` a callback called when opening a Realm for the first time during the life of a process to determine if it should be compacted before being returned to the user. It is passed the total file size (data + free space) and the bytes used by data in the file.
    
 
 
@@ -635,7 +635,7 @@ __________
 
 
 
-- ``number - ``the maximum number of active versions before an exception is thrown.
+-  ``number - `` the maximum number of active versions before an exception is thrown.
    
 
 
@@ -660,7 +660,7 @@ public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` a
 
 Sets whether or not calls to **Realm#executeTransaction (?)** are allowed from the UI thread.
 
-**WARNING: Realm does not allow synchronous transactions to be run on the main thread unless users explicitly opt in with this method.** We recommend diverting calls to ``executeTransaction`` to non-UI threads or, alternatively, using **Realm#executeTransactionAsync (?)**.
+**WARNING: Realm does not allow synchronous transactions to be run on the main thread unless users explicitly opt in with this method.** We recommend diverting calls to  ``executeTransaction``  to non-UI threads or, alternatively, using **Realm#executeTransactionAsync (?)**.
 
 
 

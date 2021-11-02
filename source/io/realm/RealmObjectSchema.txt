@@ -37,8 +37,8 @@ Nested Class Summary
    * - Modifier and Type
      - Class and Description
    
-   * - ``public static interface``
-     - ``io.realm.RealmObjectSchema.Function``
+   * -  ``public static interface`` 
+     -  ``io.realm.RealmObjectSchema.Function`` 
    
    
 
@@ -213,7 +213,7 @@ Method Summary
    * - public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`
      - :ref:`setRequired <io_realm_RealmObjectSchema_setRequired_String__boolean_>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **boolean** required)
        
-       Sets a field to be required i.e., it is not allowed to hold ``null`` values.
+       Sets a field to be required i.e., it is not allowed to hold  ``null``  values.
        
        
        
@@ -223,7 +223,7 @@ Method Summary
    * - public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`
      - :ref:`setNullable <io_realm_RealmObjectSchema_setNullable_String__boolean_>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **boolean** nullable)
        
-       Sets a field to be nullable i.e., it should be able to hold ``null`` values.
+       Sets a field to be nullable i.e., it should be able to hold  ``null``  values.
        
        
        
@@ -233,7 +233,7 @@ Method Summary
    * - public **boolean**
      - :ref:`isRequired <io_realm_RealmObjectSchema_isRequired_String_>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName)
        
-       Checks if a given field is required i.e., it is not allowed to contain ``null`` values.
+       Checks if a given field is required i.e., it is not allowed to contain  ``null``  values.
        
        
        
@@ -243,7 +243,7 @@ Method Summary
    * - public **boolean**
      - :ref:`isNullable <io_realm_RealmObjectSchema_isNullable_String_>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName)
        
-       Checks if a given field is nullable i.e., it is allowed to contain ``null`` values.
+       Checks if a given field is nullable i.e., it is allowed to contain  ``null``  values.
        
        
        
@@ -301,7 +301,7 @@ Method Summary
    * - public **boolean**
      - :ref:`isEmbedded <io_realm_RealmObjectSchema_isEmbedded__>` ()
        
-       Returns ``true`` if objects of this type are considered "embedded".
+       Returns  ``true``  if objects of this type are considered "embedded".
        
        
        
@@ -326,7 +326,7 @@ Inherited Methods
 
 - Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__: 
    
-   ``getClass``, ``hashCode``, ``equals``, ``clone``, ``toString``, ``notify``, ``notifyAll``, ``wait``, ``wait``, ``wait``, ``finalize``
+    ``getClass`` ,  ``hashCode`` ,  ``equals`` ,  ``clone`` ,  ``toString`` ,  ``notify`` ,  ``notifyAll`` ,  ``wait`` ,  ``wait`` ,  ``wait`` ,  ``finalize`` 
    
    
 
@@ -388,7 +388,7 @@ __________
 
 
 
-- ``className - ``the new name for this class.
+-  ``className - `` the new name for this class.
    
 
 
@@ -416,7 +416,7 @@ addField
 public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` addField (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, `java.lang.Class\<?> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__ fieldType, :ref:`io.realm.FieldAttribute[] <io_realm_FieldAttribute>` attributes)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Adds a new simple field to the RealmObject class. The type must be one supported by Realm. See :ref:`RealmObject <io_realm_RealmObject>` for the list of supported types. If the field should allow ``null`` values use the boxed type instead e.g., ``Integer.class`` instead of ``int.class``.
+Adds a new simple field to the RealmObject class. The type must be one supported by Realm. See :ref:`RealmObject <io_realm_RealmObject>` for the list of supported types. If the field should allow  ``null``  values use the boxed type instead e.g.,  ``Integer.class``  instead of  ``int.class`` .
 
 To add fields that reference other RealmObjects or RealmLists use :ref:`#addRealmObjectField(String, RealmObjectSchema) <io_realm_RealmObjectSchema_addRealmObjectField_String__RealmObjectSchema_>` or :ref:`#addRealmListField(String, RealmObjectSchema) <io_realm_RealmObjectSchema_addRealmListField_String__RealmObjectSchema_>` instead.
 
@@ -430,13 +430,13 @@ __________
 
 
 
-- ``fieldName - ``name of the field to add.
+-  ``fieldName - `` name of the field to add.
    
-- ``fieldType - ``type of field to add. See :ref:`RealmObject <io_realm_RealmObject>` for the full list.
+-  ``fieldType - `` type of field to add. See :ref:`RealmObject <io_realm_RealmObject>` for the full list.
    
    
    
-- ``attributes - ``set of attributes for this field.
+-  ``attributes - `` set of attributes for this field.
    
 
 
@@ -467,9 +467,9 @@ __________
 
 
 
-- ``fieldName - ``name of the field to add.
+-  ``fieldName - `` name of the field to add.
    
-- ``objectSchema - ``schema for the Realm type being referenced.
+-  ``objectSchema - `` schema for the Realm type being referenced.
    
 
 
@@ -504,9 +504,9 @@ __________
 
 
 
-- ``fieldName - ``name of the field to add.
+-  ``fieldName - `` name of the field to add.
    
-- ``objectSchema - ``schema for the Realm type being referenced.
+-  ``objectSchema - `` schema for the Realm type being referenced.
    
 
 
@@ -524,7 +524,7 @@ public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` addRealmLi
 
 Adds a new field that references a :ref:`RealmList <io_realm_RealmList>` with primitive values. See :ref:`RealmObject <io_realm_RealmObject>` for the list of supported types.
 
-Nullability of elements are defined by using the correct class e.g., ``Integer.class`` instead of ``int.class``. Alternatively :ref:`#setRequired(String, boolean) <io_realm_RealmObjectSchema_setRequired_String__boolean_>` can be used.
+Nullability of elements are defined by using the correct class e.g.,  ``Integer.class``  instead of  ``int.class`` . Alternatively :ref:`#setRequired(String, boolean) <io_realm_RealmObjectSchema_setRequired_String__boolean_>` can be used.
 
 
 
@@ -554,9 +554,9 @@ __________
 
 
 
-- ``fieldName - ``name of the field to add.
+-  ``fieldName - `` name of the field to add.
    
-- ``primitiveType - ``simple type of elements in the array.
+-  ``primitiveType - `` simple type of elements in the array.
    
 
 
@@ -591,9 +591,9 @@ __________
 
 
 
-- ``fieldName - ``name of the field to add.
+-  ``fieldName - `` name of the field to add.
    
-- ``objectSchema - ``schema for the Realm type being referenced.
+-  ``objectSchema - `` schema for the Realm type being referenced.
    
 
 
@@ -611,7 +611,7 @@ public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` addRealmDi
 
 Adds a new field that references a **RealmDictionary (?)** with primitive values. See :ref:`RealmObject <io_realm_RealmObject>` for the list of supported types.
 
-Nullability of elements are defined by using the correct class e.g., ``Integer.class`` instead of ``int.class``. Alternatively :ref:`#setRequired(String, boolean) <io_realm_RealmObjectSchema_setRequired_String__boolean_>` can be used.
+Nullability of elements are defined by using the correct class e.g.,  ``Integer.class``  instead of  ``int.class`` . Alternatively :ref:`#setRequired(String, boolean) <io_realm_RealmObjectSchema_setRequired_String__boolean_>` can be used.
 
 
 
@@ -641,9 +641,9 @@ __________
 
 
 
-- ``fieldName - ``name of the field to add.
+-  ``fieldName - `` name of the field to add.
    
-- ``primitiveType - ``simple type of elements in the array.
+-  ``primitiveType - `` simple type of elements in the array.
    
 
 
@@ -678,9 +678,9 @@ __________
 
 
 
-- ``fieldName - ``name of the field to add.
+-  ``fieldName - `` name of the field to add.
    
-- ``objectSchema - ``schema for the Realm type being referenced.
+-  ``objectSchema - `` schema for the Realm type being referenced.
    
 
 
@@ -698,7 +698,7 @@ public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` addRealmSe
 
 Adds a new field that references a **RealmSet (?)** with primitive values. See :ref:`RealmObject <io_realm_RealmObject>` for the list of supported types.
 
-Nullability of elements are defined by using the correct class e.g., ``Integer.class`` instead of ``int.class``. Alternatively :ref:`#setRequired(String, boolean) <io_realm_RealmObjectSchema_setRequired_String__boolean_>` can be used.
+Nullability of elements are defined by using the correct class e.g.,  ``Integer.class``  instead of  ``int.class`` . Alternatively :ref:`#setRequired(String, boolean) <io_realm_RealmObjectSchema_setRequired_String__boolean_>` can be used.
 
 
 
@@ -728,9 +728,9 @@ __________
 
 
 
-- ``fieldName - ``name of the field to add.
+-  ``fieldName - `` name of the field to add.
    
-- ``primitiveType - ``simple type of elements in the array.
+-  ``primitiveType - `` simple type of elements in the array.
    
 
 
@@ -759,7 +759,7 @@ __________
 
 
 
-- ``fieldName - ``field name to remove.
+-  ``fieldName - `` field name to remove.
    
 
 
@@ -788,9 +788,9 @@ __________
 
 
 
-- ``currentFieldName - ``field name to rename.
+-  ``currentFieldName - `` field name to rename.
    
-- ``newFieldName - ``the new field name.
+-  ``newFieldName - `` the new field name.
    
 
 
@@ -819,7 +819,7 @@ __________
 
 
 
-- ``fieldName - ``field name to test.
+-  ``fieldName - `` field name to test.
    
 
 
@@ -845,7 +845,7 @@ __________
 
 
 
-- ``fieldName - ``field to add index to.
+-  ``fieldName - `` field to add index to.
    
 
 
@@ -874,7 +874,7 @@ __________
 
 
 
-- ``fieldName - ``existing field name to check.
+-  ``fieldName - `` existing field name to check.
    
 
 
@@ -902,7 +902,7 @@ removeIndex
 public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` removeIndex (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Removes an index from a given field. This is the same as removing the ``@Index`` annotation on the field.
+Removes an index from a given field. This is the same as removing the  ``@Index``  annotation on the field.
 
 
 
@@ -912,7 +912,7 @@ __________
 
 
 
-- ``fieldName - ``field to remove index from.
+-  ``fieldName - `` field to remove index from.
    
 
 
@@ -943,7 +943,7 @@ __________
 
 
 
-- ``fieldName - ``field to set as primary key.
+-  ``fieldName - `` field to set as primary key.
    
 
 
@@ -984,7 +984,7 @@ setRequired
 public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` setRequired (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **boolean** required)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Sets a field to be required i.e., it is not allowed to hold ``null`` values. This is equivalent to switching between boxed types and their primitive variant e.g., ``Integer`` to ``int``.
+Sets a field to be required i.e., it is not allowed to hold  ``null``  values. This is equivalent to switching between boxed types and their primitive variant e.g.,  ``Integer``  to  ``int`` .
 
 If the type of designated field is a list of values (not :ref:`RealmObject <io_realm_RealmObject>`s , specified nullability only affects its elements, not the field itself. Value list itself is always non-nullable.
 
@@ -998,9 +998,9 @@ __________
 
 
 
-- ``fieldName - ``name of field in the class.
+-  ``fieldName - `` name of field in the class.
    
-- ``required - ````true`` if field should be required, ``false`` otherwise.
+-  ``required - ``  ``true``  if field should be required,  ``false``  otherwise.
    
    
    
@@ -1030,7 +1030,7 @@ setNullable
 public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` setNullable (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, **boolean** nullable)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Sets a field to be nullable i.e., it should be able to hold ``null`` values. This is equivalent to switching between primitive types and their boxed variant e.g., ``int`` to ``Integer``.
+Sets a field to be nullable i.e., it should be able to hold  ``null``  values. This is equivalent to switching between primitive types and their boxed variant e.g.,  ``int``  to  ``Integer`` .
 
 If the type of designated field is a list of values (not :ref:`RealmObject <io_realm_RealmObject>`s , specified nullability only affects its elements, not the field itself. Value list itself is always non-nullable.
 
@@ -1044,9 +1044,9 @@ __________
 
 
 
-- ``fieldName - ``name of field in the class.
+-  ``fieldName - `` name of field in the class.
    
-- ``nullable - ````true`` if field should be nullable, ``false`` otherwise.
+-  ``nullable - ``  ``true``  if field should be nullable,  ``false``  otherwise.
    
    
    
@@ -1069,7 +1069,7 @@ isRequired
 public **boolean** isRequired (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Checks if a given field is required i.e., it is not allowed to contain ``null`` values.
+Checks if a given field is required i.e., it is not allowed to contain  ``null``  values.
 
 
 
@@ -1079,7 +1079,7 @@ __________
 
 
 
-- ``fieldName - ``field to check.
+-  ``fieldName - `` field to check.
    
 
 
@@ -1107,7 +1107,7 @@ isNullable
 public **boolean** isNullable (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Checks if a given field is nullable i.e., it is allowed to contain ``null`` values.
+Checks if a given field is nullable i.e., it is allowed to contain  ``null``  values.
 
 
 
@@ -1117,7 +1117,7 @@ __________
 
 
 
-- ``fieldName - ``field to check.
+-  ``fieldName - `` field to check.
    
 
 
@@ -1153,7 +1153,7 @@ __________
 
 
 
-- ``fieldName - ``field to check.
+-  ``fieldName - `` field to check.
    
 
 
@@ -1244,7 +1244,7 @@ __________
 
 
 
-- ``function - ``transformation function.
+-  ``function - `` transformation function.
    
 
 
@@ -1273,7 +1273,7 @@ __________
 
 
 
-- ``fieldName - ``name of the target field.
+-  ``fieldName - `` name of the target field.
    
 
 
@@ -1289,7 +1289,7 @@ isEmbedded
 public **boolean** isEmbedded ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Returns ``true`` if objects of this type are considered "embedded". See **RealmClass#embedded() (?)** for further details.
+Returns  ``true``  if objects of this type are considered "embedded". See **RealmClass#embedded() (?)** for further details.
 
 
 
