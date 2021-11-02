@@ -6,7 +6,6 @@
    :class: singlecol
 
 io.realm.RealmList<E>
-
 ^^^^^^^^^^^^^^^^^^^^^
 
 .. _io_realm_RealmList:
@@ -49,7 +48,6 @@ Unmanaged RealmLists can be created by the user and can contain both managed and
 
 
 Constructors
-
 ============
 
 
@@ -59,7 +57,6 @@ Constructors
 
 
 Field Summary
-
 =============
 
 .. list-table::
@@ -93,7 +90,6 @@ Field Summary
    
    
 Method Summary
-
 ==============
 
 .. list-table::
@@ -566,7 +562,6 @@ Method Summary
    
    
 Inherited Methods
-
 =================
 
 
@@ -630,27 +625,23 @@ Inherited Methods
 
 
 Field Detail
-
 ============
 
 .. _io_realm_RealmList_clazz:
 
 ``clazz``
-
 ---------
 
 
 .. _io_realm_RealmList_className:
 
 ``className``
-
 -------------
 
 
 .. _io_realm_RealmList_baseRealm:
 
 ``baseRealm``
-
 -------------
 
 The **BaseRealm (?)** instance in which this list resides.
@@ -659,69 +650,58 @@ Warning: This field is only exposed for internal usage, and should not be used.
 
 
 Method Detail
-
 =============
 
 isValid
-
 -------
 
 .. _io_realm_RealmList_isValid__:
 
 public **boolean** isValid ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
 
 freeze
-
 ------
 
 .. _io_realm_RealmList_freeze__:
 
 public :ref:`RealmList <io_realm_RealmList>` freeze ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
 
 isFrozen
-
 --------
 
 .. _io_realm_RealmList_isFrozen__:
 
 public **boolean** isFrozen ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
 
 isManaged
-
 ---------
 
 .. _io_realm_RealmList_isManaged__:
 
 public **boolean** isManaged ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
 
 add
-
 ----
 
 .. _io_realm_RealmList_add_int__E_:
 
 public **void** add (**int** location, **E (?)** element)
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Inserts the specified object into this List at the specified location. The object is inserted before any previous element at the specified location. If the location is equal to the size of this List, the object is added at the end.
@@ -740,7 +720,6 @@ Inserts the specified object into this List at the specified location. The objec
 
 
 Parameters
-
 __________
 
 
@@ -752,13 +731,11 @@ __________
 
 
 Throws
-
 ______
 
 .. _io_realm_RealmList_add_E_:
 
 public **boolean** add (**E (?)** object)
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Adds the specified object at the end of this List.
@@ -777,7 +754,6 @@ Adds the specified object at the end of this List.
 
 
 Parameters
-
 __________
 
 
@@ -787,17 +763,14 @@ __________
 
 
 Throws
-
 ______
 
 set
-
 ----
 
 .. _io_realm_RealmList_set_int__E_:
 
 public **E (?)** set (**int** location, **E (?)** object)
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Replaces the element at the specified location in this list with the specified object.
@@ -816,7 +789,6 @@ Replaces the element at the specified location in this list with the specified o
 
 
 Parameters
-
 __________
 
 
@@ -828,24 +800,20 @@ __________
 
 
 Throws
-
 ______
 
 move
-
 ----
 
 .. _io_realm_RealmList_move_int__int_:
 
 public **void** move (**int** oldPos, **int** newPos)
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Moves an object from one position to another, while maintaining a fixed sized list. RealmObjects will be shifted so no ``null`` values are introduced.
 
 
 Parameters
-
 __________
 
 
@@ -857,26 +825,21 @@ __________
 
 
 Throws
-
 ______
 
 clear
-
 -----
 
 .. _io_realm_RealmList_clear__:
 
 public **void** clear ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Removes all elements from this list, leaving it empty. This method doesn't remove the objects from the Realm.
 Throws
-
 ______
 
 See Also
-
 ________
 
 List#isEmpty
@@ -886,18 +849,15 @@ List#size
 #deleteAllFromRealm()
 
 remove
-
 ------
 
 .. _io_realm_RealmList_remove_int_:
 
 public **E (?)** remove (**int** location)
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Removes the object at the specified location from this list.
 Parameters
-
 __________
 
 
@@ -907,20 +867,17 @@ __________
 
 
 Throws
-
 ______
 
 .. _io_realm_RealmList_remove_Object_:
 
 public **boolean** remove (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ object)
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Removes one instance of the specified object from this ``Collection`` if one is contained. This implementation iterates over this ``Collection`` and tests each element ``e`` returned by the iterator, whether ``e`` is equal to the given object. If ``object != null`` then this test is performed using ``object.equals(e)``, otherwise using ``object == null``. If an element equal to the given object is found, then the ``remove`` method is called on the iterator and ``true`` is returned, ``false`` otherwise. If the iterator does not support removing elements, an ``UnsupportedOperationException`` is thrown.
 
 
 Parameters
-
 __________
 
 
@@ -930,17 +887,14 @@ __________
 
 
 Throws
-
 ______
 
 removeAll
-
 ---------
 
 .. _io_realm_RealmList_removeAll_Collection____:
 
 public **boolean** removeAll (`java.util.Collection\<?> <https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html>`__ collection)
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Removes all occurrences in this ``Collection`` of each object in the specified ``Collection``. After this method returns none of the elements in the passed ``Collection`` can be found in this ``Collection`` anymore.
@@ -951,7 +905,6 @@ This implementation iterates over the ``Collection`` and tests each element ``e`
 
 
 Parameters
-
 __________
 
 
@@ -961,48 +914,40 @@ __________
 
 
 Throws
-
 ______
 
 deleteFirstFromRealm
-
 --------------------
 
 .. _io_realm_RealmList_deleteFirstFromRealm__:
 
 public **boolean** deleteFirstFromRealm ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
 
 deleteLastFromRealm
-
 -------------------
 
 .. _io_realm_RealmList_deleteLastFromRealm__:
 
 public **boolean** deleteLastFromRealm ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
 
 get
-
 ----
 
 .. _io_realm_RealmList_get_int_:
 
 public **E (?)** get (**int** location)
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the element at the specified location in this list.
 Parameters
-
 __________
 
 
@@ -1012,17 +957,14 @@ __________
 
 
 Throws
-
 ______
 
 first
-
 -----
 
 .. _io_realm_RealmList_first__:
 
 public **E (?)** first ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -1031,20 +973,17 @@ public **E (?)** first ()
 .. _io_realm_RealmList_first_E_:
 
 public **E (?)** first (**E (?)** defaultValue)
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
 
 last
-
 ----
 
 .. _io_realm_RealmList_last__:
 
 public **E (?)** last ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -1053,20 +992,17 @@ public **E (?)** last ()
 .. _io_realm_RealmList_last_E_:
 
 public **E (?)** last (**E (?)** defaultValue)
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
 
 sort
-
 ----
 
 .. _io_realm_RealmList_sort_String_:
 
 public :ref:`RealmResults <io_realm_RealmResults>` sort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName)
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -1075,7 +1011,6 @@ public :ref:`RealmResults <io_realm_RealmResults>` sort (`String <https://docs.o
 .. _io_realm_RealmList_sort_String__Sort_:
 
 public :ref:`RealmResults <io_realm_RealmResults>` sort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName, :ref:`Sort <io_realm_Sort>` sortOrder)
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -1084,7 +1019,6 @@ public :ref:`RealmResults <io_realm_RealmResults>` sort (`String <https://docs.o
 .. _io_realm_RealmList_sort_String__Sort__String__Sort_:
 
 public :ref:`RealmResults <io_realm_RealmResults>` sort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName1, :ref:`Sort <io_realm_Sort>` sortOrder1, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName2, :ref:`Sort <io_realm_Sort>` sortOrder2)
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -1093,188 +1027,158 @@ public :ref:`RealmResults <io_realm_RealmResults>` sort (`String <https://docs.o
 .. _io_realm_RealmList_sort_String[]__Sort[]_:
 
 public :ref:`RealmResults <io_realm_RealmResults>` sort (`java.lang.String[] <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldNames, :ref:`io.realm.Sort[] <io_realm_Sort>` sortOrders)
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
 
 deleteFromRealm
-
 ---------------
 
 .. _io_realm_RealmList_deleteFromRealm_int_:
 
 public **void** deleteFromRealm (**int** location)
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
 
 size
-
 ----
 
 .. _io_realm_RealmList_size__:
 
 public **int** size ()
-
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the number of elements in this ``List``.
 
 
 Throws
-
 ______
 
 where
-
 -----
 
 .. _io_realm_RealmList_where__:
 
 public :ref:`RealmQuery <io_realm_RealmQuery>` where ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns a RealmQuery, which can be used to query for specific objects of this class.
 Throws
-
 ______
 
 See Also
-
 ________
 
 io.realm.RealmQuery
 
 min
-
 ----
 
 .. _io_realm_RealmList_min_String_:
 
 public `Number <https://docs.oracle.com/javase/7/docs/api/java/lang/Number.html>`__ min (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName)
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
 
 max
-
 ----
 
 .. _io_realm_RealmList_max_String_:
 
 public `Number <https://docs.oracle.com/javase/7/docs/api/java/lang/Number.html>`__ max (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName)
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
 
 sum
-
 ----
 
 .. _io_realm_RealmList_sum_String_:
 
 public `Number <https://docs.oracle.com/javase/7/docs/api/java/lang/Number.html>`__ sum (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName)
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
 
 average
-
 -------
 
 .. _io_realm_RealmList_average_String_:
 
 public **double** average (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName)
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
 
 maxDate
-
 -------
 
 .. _io_realm_RealmList_maxDate_String_:
 
 public `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__ maxDate (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName)
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
 
 minDate
-
 -------
 
 .. _io_realm_RealmList_minDate_String_:
 
 public `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__ minDate (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ fieldName)
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
 
 deleteAllFromRealm
-
 ------------------
 
 .. _io_realm_RealmList_deleteAllFromRealm__:
 
 public **boolean** deleteAllFromRealm ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
 
 isLoaded
-
 --------
 
 .. _io_realm_RealmList_isLoaded__:
 
 public **boolean** isLoaded ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
 
 load
-
 ----
 
 .. _io_realm_RealmList_load__:
 
 public **boolean** load ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
 
 contains
-
 --------
 
 .. _io_realm_RealmList_contains_Object_:
 
 public **boolean** contains (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ object)
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns ``true`` if the list contains the specified element when attached to a Realm. This method will query the native Realm underlying storage engine to quickly find the specified element.
@@ -1285,7 +1189,6 @@ If the list is not attached to a Realm, the default `List#contains(Object) <http
 
 
 Parameters
-
 __________
 
 
@@ -1295,26 +1198,22 @@ __________
 
 
 iterator
-
 --------
 
 .. _io_realm_RealmList_iterator__:
 
 public `Iterator <https://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html>`__ iterator ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
 
 listIterator
-
 ------------
 
 .. _io_realm_RealmList_listIterator__:
 
 public `ListIterator <https://docs.oracle.com/javase/7/docs/api/java/util/ListIterator.html>`__ listIterator ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -1323,33 +1222,28 @@ public `ListIterator <https://docs.oracle.com/javase/7/docs/api/java/util/ListIt
 .. _io_realm_RealmList_listIterator_int_:
 
 public `ListIterator <https://docs.oracle.com/javase/7/docs/api/java/util/ListIterator.html>`__ listIterator (**int** location)
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
 
 createSnapshot
-
 --------------
 
 .. _io_realm_RealmList_createSnapshot__:
 
 public :ref:`OrderedRealmCollectionSnapshot <io_realm_OrderedRealmCollectionSnapshot>` createSnapshot ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
 
 getRealm
-
 --------
 
 .. _io_realm_RealmList_getRealm__:
 
 public :ref:`Realm <io_realm_Realm>` getRealm ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the :ref:`Realm <io_realm_Realm>` instance to which this collection belongs.
@@ -1360,28 +1254,23 @@ Calling **Realm#close() (?)** on the returned instance is discouraged as it is t
 
 
 Throws
-
 ______
 
 toString
-
 --------
 
 .. _io_realm_RealmList_toString__:
 
 public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ toString ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 asFlowable
-
 ----------
 
 .. _io_realm_RealmList_asFlowable__:
 
 public **<any> (?)** asFlowable ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns an Rx Flowable that monitors changes to this RealmList. It will emit the current RealmList when subscribed to. RealmList will continually be emitted as the RealmList is updated - ``onComplete`` will never be called.
@@ -1426,23 +1315,19 @@ If you would like the ``asFlowable()`` to stop emitting items you can instruct R
 
 
 Throws
-
 ______
 
 See Also
-
 ________
 
 <a href="https://realm.io/docs/java/latest/#rxjava">RxJava and Realm</a>
 
 asChangesetObservable
-
 ---------------------
 
 .. _io_realm_RealmList_asChangesetObservable__:
 
 public **<any> (?)** asChangesetObservable ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns an Rx Observable that monitors changes to this RealmList. It will emit the current RealmList when subscribed. For each update to the RealmList a pair consisting of the RealmList and the :ref:`OrderedCollectionChangeSet <io_realm_OrderedCollectionChangeSet>` will be sent. The changeset will be ``null`` the first time an RealmList is emitted.
@@ -1474,23 +1359,19 @@ Realm Observables always emit items from the thread holding the live Realm. This
 
 
 Throws
-
 ______
 
 See Also
-
 ________
 
 <a href="https://realm.io/docs/java/latest/#rxjava">RxJava and Realm</a>
 
 addChangeListener
-
 -----------------
 
 .. _io_realm_RealmList_addChangeListener_OrderedRealmCollectionChangeListener_RealmList_E___:
 
 public **void** addChangeListener (:ref:`io.realm.OrderedRealmCollectionChangeListener\<io.realm.RealmList\<E>> <io_realm_OrderedRealmCollectionChangeListener>` listener)
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Adds a change listener to this :ref:`RealmList <io_realm_RealmList>`.
@@ -1525,7 +1406,6 @@ Registering a change listener will not prevent the underlying RealmList from bei
 
 
 Parameters
-
 __________
 
 
@@ -1535,13 +1415,11 @@ __________
 
 
 Throws
-
 ______
 
 .. _io_realm_RealmList_addChangeListener_RealmChangeListener_RealmList_E___:
 
 public **void** addChangeListener (:ref:`io.realm.RealmChangeListener\<io.realm.RealmList\<E>> <io_realm_RealmChangeListener>` listener)
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Adds a change listener to this :ref:`RealmList <io_realm_RealmList>`.
@@ -1576,7 +1454,6 @@ Registering a change listener will not prevent the underlying RealmList from bei
 
 
 Parameters
-
 __________
 
 
@@ -1586,22 +1463,18 @@ __________
 
 
 Throws
-
 ______
 
 removeChangeListener
-
 --------------------
 
 .. _io_realm_RealmList_removeChangeListener_OrderedRealmCollectionChangeListener_RealmList_E___:
 
 public **void** removeChangeListener (:ref:`io.realm.OrderedRealmCollectionChangeListener\<io.realm.RealmList\<E>> <io_realm_OrderedRealmCollectionChangeListener>` listener)
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Removes the specified change listener.
 Parameters
-
 __________
 
 
@@ -1611,11 +1484,9 @@ __________
 
 
 Throws
-
 ______
 
 See Also
-
 ________
 
 io.realm.RealmChangeListener
@@ -1623,12 +1494,10 @@ io.realm.RealmChangeListener
 .. _io_realm_RealmList_removeChangeListener_RealmChangeListener_RealmList_E___:
 
 public **void** removeChangeListener (:ref:`io.realm.RealmChangeListener\<io.realm.RealmList\<E>> <io_realm_RealmChangeListener>` listener)
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Removes the specified change listener.
 Parameters
-
 __________
 
 
@@ -1638,32 +1507,26 @@ __________
 
 
 Throws
-
 ______
 
 See Also
-
 ________
 
 io.realm.RealmChangeListener
 
 removeAllChangeListeners
-
 ------------------------
 
 .. _io_realm_RealmList_removeAllChangeListeners__:
 
 public **void** removeAllChangeListeners ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Removes all user-defined change listeners.
 Throws
-
 ______
 
 See Also
-
 ________
 
 io.realm.RealmChangeListener

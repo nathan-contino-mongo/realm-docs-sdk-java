@@ -6,7 +6,6 @@
    :class: singlecol
 
 io.realm.mongodb.sync.ClientResetRequiredError
-
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. _io_realm_mongodb_sync_ClientResetRequiredError:
@@ -24,7 +23,6 @@ io.realm.mongodb.sync.ClientResetRequiredError
 
 Class encapsulating information needed for handling a Client Reset event.
 Method Summary
-
 ==============
 
 .. list-table::
@@ -67,7 +65,6 @@ Method Summary
    
    
 Inherited Methods
-
 =================
 
 
@@ -131,17 +128,14 @@ Inherited Methods
 
 
 Method Detail
-
 =============
 
 executeClientReset
-
 ------------------
 
 .. _io_realm_mongodb_sync_ClientResetRequiredError_executeClientReset__:
 
 public **void** executeClientReset ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Calling this method will execute the Client Reset manually instead of waiting until next app restart. This will only be possible if all instances of that Realm have been closed, otherwise a `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__ will be thrown.
@@ -152,41 +146,34 @@ After this method returns, the backup file can be found in the location returned
 
 
 Throws
-
 ______
 
 getBackupFile
-
 -------------
 
 .. _io_realm_mongodb_sync_ClientResetRequiredError_getBackupFile__:
 
 public `File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__ getBackupFile ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the location of the backed up Realm file. The file will not be present until the Client Reset has been fully executed.
 getBackupRealmConfiguration
-
 ---------------------------
 
 .. _io_realm_mongodb_sync_ClientResetRequiredError_getBackupRealmConfiguration__:
 
 public :ref:`RealmConfiguration <io_realm_RealmConfiguration>` getBackupRealmConfiguration ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The configuration that can be used to open the backup Realm offline. This configuration can only be used in combination with a :ref:`DynamicRealm <io_realm_DynamicRealm>`.
 
 
 getOriginalFile
-
 ---------------
 
 .. _io_realm_mongodb_sync_ClientResetRequiredError_getOriginalFile__:
 
 public `File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__ getOriginalFile ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the location of the original Realm file. After the Client Reset has completed, the file at this location will be deleted.

@@ -6,7 +6,6 @@
    :class: singlecol
 
 io.realm.mongodb.mongo.MongoNamespace
-
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. _io_realm_mongodb_mongo_MongoNamespace:
@@ -20,7 +19,6 @@ io.realm.mongodb.mongo.MongoNamespace
 
 A MongoDB namespace, which includes a database name and collection name.
 Constructors
-
 ============
 
 
@@ -30,7 +28,6 @@ Constructors
 
 
 Field Summary
-
 =============
 
 .. list-table::
@@ -48,7 +45,6 @@ Field Summary
    
    
 Method Summary
-
 ==============
 
 .. list-table::
@@ -125,7 +121,6 @@ Method Summary
    
    
 Inherited Methods
-
 =================
 
 
@@ -149,35 +144,29 @@ Inherited Methods
 
 
 Field Detail
-
 ============
 
 .. _io_realm_mongodb_mongo_MongoNamespace_COMMAND_COLLECTION_NAME:
 
 ``COMMAND_COLLECTION_NAME``
-
 ---------------------------
 
 
 Method Detail
-
 =============
 
 checkDatabaseNameValidity
-
 -------------------------
 
 .. _io_realm_mongodb_mongo_MongoNamespace_checkDatabaseNameValidity_String_:
 
 public static **void** checkDatabaseNameValidity (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ databaseName)
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Check the validity of the given database name. A valid database name is non-null, non-empty, and does not contain any of the following characters: ``'\0', '/', '\\', ' ', '"', '.'``. The server may impose additional restrictions on database names.
 
 
 Parameters
-
 __________
 
 
@@ -187,22 +176,18 @@ __________
 
 
 Throws
-
 ______
 
 checkCollectionNameValidity
-
 ---------------------------
 
 .. _io_realm_mongodb_mongo_MongoNamespace_checkCollectionNameValidity_String_:
 
 public static **void** checkCollectionNameValidity (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ collectionName)
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Check the validity of the given collection name. A valid collection name is non-null and non-empty. The server may impose additional restrictions on collection names.
 Parameters
-
 __________
 
 
@@ -212,74 +197,61 @@ __________
 
 
 Throws
-
 ______
 
 getDatabaseName
-
 ---------------
 
 .. _io_realm_mongodb_mongo_MongoNamespace_getDatabaseName__:
 
 public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ getDatabaseName ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Gets the database name.
 getCollectionName
-
 -----------------
 
 .. _io_realm_mongodb_mongo_MongoNamespace_getCollectionName__:
 
 public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ getCollectionName ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Gets the collection name.
 getFullName
-
 -----------
 
 .. _io_realm_mongodb_mongo_MongoNamespace_getFullName__:
 
 public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ getFullName ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Gets the full name, which is the database name and the collection name, separated by a period.
 equals
-
 ------
 
 .. _io_realm_mongodb_mongo_MongoNamespace_equals_Object_:
 
 public **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ o)
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 toString
-
 --------
 
 .. _io_realm_mongodb_mongo_MongoNamespace_toString__:
 
 public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ toString ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the standard MongoDB representation of a namespace, which is ``<database>.<collection>``.
 
 
 hashCode
-
 --------
 
 .. _io_realm_mongodb_mongo_MongoNamespace_hashCode__:
 
 public **int** hashCode ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 

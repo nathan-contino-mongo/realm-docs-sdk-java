@@ -6,7 +6,6 @@
    :class: singlecol
 
 io.realm.mongodb.sync.SyncSession.ClientResetHandler
-
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. _io_realm_mongodb_sync_SyncSession_ClientResetHandler:
@@ -43,7 +42,6 @@ The client reset process can be initiated in one of two ways:
 
 **WARNING:** Any writes to the Realm file between this callback and Client Reset has been executed, will not be synchronized to MongoDB Realm. Those changes will only be present in the backed up file. It is therefore recommended to close all open Realm instances as soon as possible.
 Method Summary
-
 ==============
 
 .. list-table::
@@ -62,22 +60,18 @@ Method Summary
    
    
 Method Detail
-
 =============
 
 onClientReset
-
 -------------
 
 .. _io_realm_mongodb_sync_SyncSession_ClientResetHandler_onClientReset_SyncSession__ClientResetRequiredError_:
 
 public **void** onClientReset (:ref:`SyncSession <io_realm_mongodb_sync_SyncSession>` session, :ref:`ClientResetRequiredError <io_realm_mongodb_sync_ClientResetRequiredError>` error)
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Callback that indicates a Client Reset has happened. This should be handled as quickly as possible as any further changes to the Realm will not be synchronized with the server and must be moved manually from the backup Realm to the new one.
 Parameters
-
 __________
 
 

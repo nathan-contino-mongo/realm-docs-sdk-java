@@ -6,7 +6,6 @@
    :class: singlecol
 
 io.realm.mongodb.AppException
-
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. _io_realm_mongodb_AppException:
@@ -25,7 +24,6 @@ This class is a wrapper for all errors happening when communicating with a Mongo
 
 
 Constructors
-
 ============
 
 
@@ -39,7 +37,6 @@ Constructors
 
 
 Method Summary
-
 ==============
 
 .. list-table::
@@ -110,7 +107,6 @@ Method Summary
    
    
 Inherited Methods
-
 =================
 
 
@@ -162,17 +158,14 @@ Inherited Methods
 
 
 Method Detail
-
 =============
 
 getErrorCode
-
 ------------
 
 .. _io_realm_mongodb_AppException_getErrorCode__:
 
 public :ref:`ErrorCode <io_realm_mongodb_ErrorCode>` getErrorCode ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the :ref:`ErrorCode <io_realm_mongodb_ErrorCode>` identifying the type of error.
@@ -183,78 +176,65 @@ If :ref:`ErrorCode#UNKNOWN <io_realm_mongodb_ErrorCode_UNKNOWN>` is returned, it
 
 
 See Also
-
 ________
 
 ErrorCode
 
 getErrorType
-
 ------------
 
 .. _io_realm_mongodb_AppException_getErrorType__:
 
 public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ getErrorType ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns a string describing the type of error it is.
 getErrorIntValue
-
 ----------------
 
 .. _io_realm_mongodb_AppException_getErrorIntValue__:
 
 public **int** getErrorIntValue ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns an integer representing this specific type of error. This value is only unique within the value provided by :ref:`#getErrorType() <io_realm_mongodb_AppException_getErrorType__>`.
 
 
 getErrorMessage
-
 ---------------
 
 .. _io_realm_mongodb_AppException_getErrorMessage__:
 
 public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ getErrorMessage ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns a more detailed error message about the cause of this error.
 getException
-
 ------------
 
 .. _io_realm_mongodb_AppException_getException__:
 
 public `Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__ getException ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the underlying exception causing this error, if any.
 getCategory
-
 -----------
 
 .. _io_realm_mongodb_AppException_getCategory__:
 
 public :ref:`ErrorCode.Category <io_realm_mongodb_ErrorCode_Category>` getCategory ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the :ref:`ErrorCode.Category <io_realm_mongodb_ErrorCode_Category>` category for this error. Errors that are :ref:`ErrorCode.Category#RECOVERABLE <io_realm_mongodb_ErrorCode_Category_RECOVERABLE>` mean that it is still possible for a given :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>` to resume synchronization. :ref:`ErrorCode.Category#FATAL <io_realm_mongodb_ErrorCode_Category_FATAL>` errors means that session has stopped and cannot be recovered.
 
 
 toString
-
 --------
 
 .. _io_realm_mongodb_AppException_toString__:
 
 public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ toString ()
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
