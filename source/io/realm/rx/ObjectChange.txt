@@ -1,0 +1,174 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+io.realm.rx.ObjectChange<E extends io.realm.RealmModel>
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_rx_ObjectChange:
+
+*Superclass:*
+- `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
+
+
+
+Container wrapping the result of a :ref:`io.realm.RealmObjectChangeListener <io_realm_RealmObjectChangeListener>` being triggered.
+
+This is used by :ref:`RealmObject#asChangesetObservable() <io_realm_RealmObject_asChangesetObservable__>` and **RealmObject#asChangesetObservable(RealmModel) (?)** as RxJava is only capable of emitting one item, not multiple.
+
+
+
+
+Constructors
+============
+
+
+- ``io.realm.rx.ObjectChange(E, ObjectChangeSet)``
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - public **E (?)**
+     - :ref:`getObject <io_realm_rx_ObjectChange_getObject__>` ()
+       
+       
+       
+       
+       
+   
+   * - public :ref:`ObjectChangeSet <io_realm_ObjectChangeSet>`
+     - :ref:`getChangeset <io_realm_rx_ObjectChange_getChangeset__>` ()
+       
+       Returns the changeset describing the update.
+       
+       
+       
+   
+   * - public **boolean**
+     - :ref:`equals <io_realm_rx_ObjectChange_equals_Object_>` (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ o)
+       
+       
+       
+       
+       
+   
+   * - public **int**
+     - :ref:`hashCode <io_realm_rx_ObjectChange_hashCode__>` ()
+       
+       
+       
+       
+       
+   
+   * - public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__
+     - :ref:`toString <io_realm_rx_ObjectChange_toString__>` ()
+       
+       
+       
+       
+       
+   
+   
+Inherited Methods
+=================
+
+Methods Inherited from Superclasses
+-----------------------------------
+
+java.lang.Object
+~~~~~~~~~~~~~~~~
+
+
+- **getClass (?)**
+- **hashCode (?)**
+- **equals (?)**
+- **clone (?)**
+- **toString (?)**
+- **notify (?)**
+- **notifyAll (?)**
+- **wait (?)**
+- **wait (?)**
+- **wait (?)**
+- **finalize (?)**
+
+
+Method Detail
+=============
+
+getObject
+---------
+
+.. _io_realm_rx_ObjectChange_getObject__:
+
+public **E (?)** getObject ()
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+getChangeset
+------------
+
+.. _io_realm_rx_ObjectChange_getChangeset__:
+
+public :ref:`ObjectChangeSet <io_realm_ObjectChangeSet>` getChangeset ()
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Returns the changeset describing the update.This will be ``null`` the first time the stream emits the object as well as when a asynchronous query is loaded for the first time.
+
+
+
+ 
+
+.. code-block:: java
+
+   
+    // Example
+    realm.where(Person.class).findFirstAsync().asChangesetObservable()
+      .subscribe(new Consumer<ObjectChange>() {
+       \@Override
+        public void accept(ObjectChange item) throws Exception {
+          item.getChangeset(); // Will return null the first two times
+      }
+    });
+    
+
+
+ 
+
+
+equals
+------
+
+.. _io_realm_rx_ObjectChange_equals_Object_:
+
+public **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ o)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+hashCode
+--------
+
+.. _io_realm_rx_ObjectChange_hashCode__:
+
+public **int** hashCode ()
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+toString
+--------
+
+.. _io_realm_rx_ObjectChange_toString__:
+
+public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ toString ()
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+

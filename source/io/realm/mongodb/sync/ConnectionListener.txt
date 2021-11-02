@@ -1,0 +1,66 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+io.realm.mongodb.sync.ConnectionListener
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_mongodb_sync_ConnectionListener:
+
+*Superclass:*
+
+
+
+Interface used when reporting changes that happened to the connection used by the session.Multiple sessions might re-use the same connection. In that case, any connection change will be reported to all sessions.
+
+If a disconnect happened due to an error, that error will be reported to the sessions :ref:`SyncSession.ErrorHandler <io_realm_mongodb_sync_SyncSession_ErrorHandler>`.
+
+
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - public **void**
+     - :ref:`onChange <io_realm_mongodb_sync_ConnectionListener_onChange_ConnectionState__ConnectionState_>` (:ref:`ConnectionState <io_realm_mongodb_sync_ConnectionState>` oldState, :ref:`ConnectionState <io_realm_mongodb_sync_ConnectionState>` newState)
+       
+       A change in the connection to the server was detected.
+       
+       
+       
+   
+   
+Inherited Methods
+=================
+
+Method Detail
+=============
+
+onChange
+--------
+
+.. _io_realm_mongodb_sync_ConnectionListener_onChange_ConnectionState__ConnectionState_:
+
+public **void** onChange (:ref:`ConnectionState <io_realm_mongodb_sync_ConnectionState>` oldState, :ref:`ConnectionState <io_realm_mongodb_sync_ConnectionState>` newState)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A change in the connection to the server was detected.
+Parameters
+__________
+
+
+- ``oldState - ``the state the connection transitioned from.
+   
+- ``newState - ``the state the connection transitioned to.
+   
+
+

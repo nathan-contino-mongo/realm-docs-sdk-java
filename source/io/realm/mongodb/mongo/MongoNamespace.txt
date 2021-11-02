@@ -1,0 +1,250 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+io.realm.mongodb.mongo.MongoNamespace
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_mongodb_mongo_MongoNamespace:
+
+*Superclass:*
+- `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
+
+
+
+A MongoDB namespace, which includes a database name and collection name.
+Constructors
+============
+
+
+- ``io.realm.mongodb.mongo.MongoNamespace(String)``
+- ``io.realm.mongodb.mongo.MongoNamespace(String, String)``
+
+Field Summary
+=============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Field and Description
+   
+   * - ``public static finaljava.lang.String``
+       
+       
+     - ``COMMAND_COLLECTION_NAME``
+       
+       
+   
+   
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - public static **void**
+     - :ref:`checkDatabaseNameValidity <io_realm_mongodb_mongo_MongoNamespace_checkDatabaseNameValidity_String_>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ databaseName)
+       
+       Check the validity of the given database name.
+       
+       
+       
+   
+   * - public static **void**
+     - :ref:`checkCollectionNameValidity <io_realm_mongodb_mongo_MongoNamespace_checkCollectionNameValidity_String_>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ collectionName)
+       
+       Check the validity of the given collection name.
+       
+       
+       
+   
+   * - public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__
+     - :ref:`getDatabaseName <io_realm_mongodb_mongo_MongoNamespace_getDatabaseName__>` ()
+       
+       Gets the database name.
+       
+       
+       
+   
+   * - public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__
+     - :ref:`getCollectionName <io_realm_mongodb_mongo_MongoNamespace_getCollectionName__>` ()
+       
+       Gets the collection name.
+       
+       
+       
+   
+   * - public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__
+     - :ref:`getFullName <io_realm_mongodb_mongo_MongoNamespace_getFullName__>` ()
+       
+       Gets the full name, which is the database name and the collection name, separated by a period.
+       
+       
+       
+   
+   * - public **boolean**
+     - :ref:`equals <io_realm_mongodb_mongo_MongoNamespace_equals_Object_>` (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ o)
+       
+       
+       
+       
+       
+   
+   * - public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__
+     - :ref:`toString <io_realm_mongodb_mongo_MongoNamespace_toString__>` ()
+       
+       Returns the standard MongoDB representation of a namespace, which is ``<database>.<collection>``.
+       
+       
+       
+       
+       
+   
+   * - public **int**
+     - :ref:`hashCode <io_realm_mongodb_mongo_MongoNamespace_hashCode__>` ()
+       
+       
+       
+       
+       
+   
+   
+Inherited Methods
+=================
+
+Methods Inherited from Superclasses
+-----------------------------------
+
+java.lang.Object
+~~~~~~~~~~~~~~~~
+
+
+- **getClass (?)**
+- **hashCode (?)**
+- **equals (?)**
+- **clone (?)**
+- **toString (?)**
+- **notify (?)**
+- **notifyAll (?)**
+- **wait (?)**
+- **wait (?)**
+- **wait (?)**
+- **finalize (?)**
+
+
+Field Detail
+============
+
+.. _io_realm_mongodb_mongo_MongoNamespace_COMMAND_COLLECTION_NAME:
+
+``COMMAND_COLLECTION_NAME``
+---------------------------
+
+
+Method Detail
+=============
+
+checkDatabaseNameValidity
+-------------------------
+
+.. _io_realm_mongodb_mongo_MongoNamespace_checkDatabaseNameValidity_String_:
+
+public static **void** checkDatabaseNameValidity (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ databaseName)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Check the validity of the given database name. A valid database name is non-null, non-empty, and does not contain any of the following characters: ``'\0', '/', '\\', ' ', '"', '.'``. The server may impose additional restrictions on database names.
+
+
+Parameters
+__________
+
+
+- ``databaseName - ``the database name
+   
+
+Throws
+______
+
+checkCollectionNameValidity
+---------------------------
+
+.. _io_realm_mongodb_mongo_MongoNamespace_checkCollectionNameValidity_String_:
+
+public static **void** checkCollectionNameValidity (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ collectionName)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Check the validity of the given collection name. A valid collection name is non-null and non-empty. The server may impose additional restrictions on collection names.
+Parameters
+__________
+
+
+- ``collectionName - ``the collection name
+   
+
+Throws
+______
+
+getDatabaseName
+---------------
+
+.. _io_realm_mongodb_mongo_MongoNamespace_getDatabaseName__:
+
+public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ getDatabaseName ()
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Gets the database name.
+getCollectionName
+-----------------
+
+.. _io_realm_mongodb_mongo_MongoNamespace_getCollectionName__:
+
+public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ getCollectionName ()
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Gets the collection name.
+getFullName
+-----------
+
+.. _io_realm_mongodb_mongo_MongoNamespace_getFullName__:
+
+public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ getFullName ()
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Gets the full name, which is the database name and the collection name, separated by a period.
+equals
+------
+
+.. _io_realm_mongodb_mongo_MongoNamespace_equals_Object_:
+
+public **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ o)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+toString
+--------
+
+.. _io_realm_mongodb_mongo_MongoNamespace_toString__:
+
+public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ toString ()
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Returns the standard MongoDB representation of a namespace, which is ``<database>.<collection>``.
+
+
+hashCode
+--------
+
+.. _io_realm_mongodb_mongo_MongoNamespace_hashCode__:
+
+public **int** hashCode ()
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
