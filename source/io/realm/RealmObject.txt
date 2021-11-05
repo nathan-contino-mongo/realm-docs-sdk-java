@@ -426,7 +426,7 @@ ______
 .. seealso::
 
    
-   - :ref:`#isValid() <io_realm_RealmObject_isValid__>`
+   - :ref:`isValid() <io_realm_RealmObject_isValid__>`
       
       
       
@@ -452,7 +452,7 @@ ______
 .. seealso::
 
    
-   - :ref:`#isValid() <io_realm_RealmObject_isValid__>`
+   - :ref:`isValid() <io_realm_RealmObject_isValid__>`
       
       
       
@@ -495,7 +495,9 @@ Note that this can be used to check the validity of certain conditions such as b
 .. seealso::
 
    
-   - [object Object]
+   - **<a href="https://github.com/realm/realm-java/tree/master/examples/rxJavaExample">Examples using Realm with RxJava</a> (?)**
+      
+      
       
    
    
@@ -538,7 +540,7 @@ Returns whether or not this RealmObject is frozen.
 .. seealso::
 
    
-   - :ref:`#freeze() <io_realm_RealmObject_freeze__>`
+   - :ref:`freeze() <io_realm_RealmObject_freeze__>`
       
       
       
@@ -557,7 +559,7 @@ Returns whether or not this RealmObject is frozen.
 .. seealso::
 
    
-   - :ref:`#freeze() <io_realm_RealmObject_freeze__>`
+   - :ref:`freeze() <io_realm_RealmObject_freeze__>`
       
       
       
@@ -585,7 +587,7 @@ Frozen objects can be queried as normal, but trying to mutate it in any way or a
 
 
 
-Note: Keeping a large number of frozen objects with different versions alive can have a negative impact on the filesize of the Realm. In order to avoid such a situation it is possible to set :ref:`RealmConfiguration.Builder#maxNumberOfActiveVersions(long) <io_realm_RealmConfiguration_Builder_maxNumberOfActiveVersions_long_>`.
+Note: Keeping a large number of frozen objects with different versions alive can have a negative impact on the filesize of the Realm. In order to avoid such a situation it is possible to set :ref:`RealmConfiguration.Builder.maxNumberOfActiveVersions(long) <io_realm_RealmConfiguration_Builder_maxNumberOfActiveVersions_long_>`.
 
 
 
@@ -610,7 +612,7 @@ Frozen objects can be queried as normal, but trying to mutate it in any way or a
 
 
 
-Note: Keeping a large number of frozen objects with different versions alive can have a negative impact on the filesize of the Realm. In order to avoid such a situation it is possible to set :ref:`RealmConfiguration.Builder#maxNumberOfActiveVersions(long) <io_realm_RealmConfiguration_Builder_maxNumberOfActiveVersions_long_>`.
+Note: Keeping a large number of frozen objects with different versions alive can have a negative impact on the filesize of the Realm. In order to avoid such a situation it is possible to set :ref:`RealmConfiguration.Builder.maxNumberOfActiveVersions(long) <io_realm_RealmConfiguration_Builder_maxNumberOfActiveVersions_long_>`.
 
 
 
@@ -632,7 +634,7 @@ isLoaded
 public final **boolean** isLoaded ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Checks if the query used to find this RealmObject has completed.Async methods like :ref:`RealmQuery#findFirstAsync() <io_realm_RealmQuery_findFirstAsync__>` return an :ref:`RealmObject <io_realm_RealmObject>` that represents the future result of the :ref:`RealmQuery <io_realm_RealmQuery>`. It can be considered similar to a `java.util.concurrent.Future <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Future.html>`__  in this regard.
+Checks if the query used to find this RealmObject has completed.Async methods like :ref:`RealmQuery.findFirstAsync() <io_realm_RealmQuery_findFirstAsync__>` return an :ref:`RealmObject <io_realm_RealmObject>` that represents the future result of the :ref:`RealmQuery <io_realm_RealmQuery>`. It can be considered similar to a `java.util.concurrent.Future <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Future.html>`__  in this regard.
 
 
 
@@ -640,7 +642,7 @@ Once ``isLoaded()``  returns ``true`` , the object represents the query result e
 
 
 
-"Null" objects represents ``null`` . An exception is throw if any accessor is called, so it is important to also check :ref:`#isValid() <io_realm_RealmObject_isValid__>` before calling any methods. A common pattern is:
+"Null" objects represents ``null`` . An exception is throw if any accessor is called, so it is important to also check :ref:`isValid() <io_realm_RealmObject_isValid__>` before calling any methods. A common pattern is:
 
 
 
@@ -673,7 +675,7 @@ Synchronous RealmObjects are by definition blocking hence this method will alway
 .. seealso::
 
    
-   - :ref:`#isValid() <io_realm_RealmObject_isValid__>`
+   - :ref:`isValid() <io_realm_RealmObject_isValid__>`
       
       
       
@@ -688,7 +690,7 @@ Synchronous RealmObjects are by definition blocking hence this method will alway
 public static **boolean** isLoaded <**E (?)** >(**E (?)** object)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Checks if the query used to find this RealmObject has completed.Async methods like :ref:`RealmQuery#findFirstAsync() <io_realm_RealmQuery_findFirstAsync__>` return an :ref:`RealmObject <io_realm_RealmObject>` that represents the future result of the :ref:`RealmQuery <io_realm_RealmQuery>`. It can be considered similar to a `java.util.concurrent.Future <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Future.html>`__  in this regard.
+Checks if the query used to find this RealmObject has completed.Async methods like :ref:`RealmQuery.findFirstAsync() <io_realm_RealmQuery_findFirstAsync__>` return an :ref:`RealmObject <io_realm_RealmObject>` that represents the future result of the :ref:`RealmQuery <io_realm_RealmQuery>`. It can be considered similar to a `java.util.concurrent.Future <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Future.html>`__  in this regard.
 
 
 
@@ -696,7 +698,7 @@ Once ``isLoaded()``  returns ``true`` , the object represents the query result e
 
 
 
-"Null" objects represents ``null`` . An exception is throw if any accessor is called, so it is important to also check :ref:`#isValid() <io_realm_RealmObject_isValid__>` before calling any methods. A common pattern is:
+"Null" objects represents ``null`` . An exception is throw if any accessor is called, so it is important to also check :ref:`isValid() <io_realm_RealmObject_isValid__>` before calling any methods. A common pattern is:
 
 
 
@@ -1262,7 +1264,7 @@ When chaining a RealmObject flowable use ``obj.<MyRealmObjectClass>asFlowable()`
 
 
 
-Items emitted from Realm Flowables are frozen (See :ref:`#freeze() <io_realm_RealmObject_freeze__>`. This means that they are immutable and can be read on any thread.
+Items emitted from Realm Flowables are frozen (See :ref:`freeze() <io_realm_RealmObject_freeze__>`. This means that they are immutable and can be read on any thread.
 
 
 
@@ -1321,7 +1323,9 @@ ______
 .. seealso::
 
    
-   - [object Object]
+   - **<a href="https://realm.io/docs/java/latest/#rxjava">RxJava and Realm</a> (?)**
+      
+      
       
    
    
@@ -1340,7 +1344,7 @@ When chaining a RealmObject observable use ``obj.<MyRealmObjectClass>asFlowable(
 
 
 
-Items emitted from Realm Flowables are frozen (See :ref:`#freeze() <io_realm_RealmObject_freeze__>`. This means that they are immutable and can be read on any thread.
+Items emitted from Realm Flowables are frozen (See :ref:`freeze() <io_realm_RealmObject_freeze__>`. This means that they are immutable and can be read on any thread.
 
 
 
@@ -1399,7 +1403,9 @@ ______
 .. seealso::
 
    
-   - [object Object]
+   - **<a href="https://realm.io/docs/java/latest/#rxjava">RxJava and Realm</a> (?)**
+      
+      
       
    
    
@@ -1423,7 +1429,7 @@ The RealmObject will continually be emitted as it is updated - ``onComplete``  w
 
 
 
-Items emitted from Realm Observables are frozen (See :ref:`#freeze() <io_realm_RealmObject_freeze__>`. This means that they are immutable and can be read on any thread.
+Items emitted from Realm Observables are frozen (See :ref:`freeze() <io_realm_RealmObject_freeze__>`. This means that they are immutable and can be read on any thread.
 
 
 
@@ -1453,7 +1459,9 @@ ______
 .. seealso::
 
    
-   - [object Object]
+   - **<a href="https://realm.io/docs/java/latest/#rxjava">RxJava and Realm</a> (?)**
+      
+      
       
    
    
@@ -1472,7 +1480,7 @@ The RealmObject will continually be emitted as it is updated - ``onComplete``  w
 
 
 
-Items emitted from Realm Observables are frozen (See :ref:`#freeze() <io_realm_RealmObject_freeze__>`. This means that they are immutable and can be read on any thread.
+Items emitted from Realm Observables are frozen (See :ref:`freeze() <io_realm_RealmObject_freeze__>`. This means that they are immutable and can be read on any thread.
 
 
 
@@ -1513,7 +1521,9 @@ ______
 .. seealso::
 
    
-   - [object Object]
+   - **<a href="https://realm.io/docs/java/latest/#rxjava">RxJava and Realm</a> (?)**
+      
+      
       
    
    

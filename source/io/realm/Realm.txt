@@ -33,7 +33,7 @@ It is important to remember to call the **#close() (?)** method when done with a
 
 
 
-Realm instances cannot be used across different threads. This means that you have to open an instance on each thread you want to use Realm. Realm instances are cached automatically per thread using reference counting, so as long as the reference count doesn't reach zero, calling :ref:`#getInstance(RealmConfiguration) <io_realm_Realm_getInstance_RealmConfiguration_>` will just return the cached Realm and should be considered a lightweight operation.
+Realm instances cannot be used across different threads. This means that you have to open an instance on each thread you want to use Realm. Realm instances are cached automatically per thread using reference counting, so as long as the reference count doesn't reach zero, calling :ref:`getInstance(RealmConfiguration) <io_realm_Realm_getInstance_RealmConfiguration_>` will just return the cached Realm and should be considered a lightweight operation.
 
 
 
@@ -86,9 +86,13 @@ Realm supports String and byte fields containing up to 16 MB.
 .. seealso::
 
    
-   - [object Object]
+   - **<a href="http://en.wikipedia.org/wiki/ACID">ACID</a> (?)**
       
-   - [object Object]
+      
+      
+   - **<a href="https://github.com/realm/realm-java/tree/master/examples">Examples using Realm</a> (?)**
+      
+      
       
    
    
@@ -196,7 +200,7 @@ Method Summary
    * - public static :ref:`Realm <io_realm_Realm>`
      - :ref:`getDefaultInstance <io_realm_Realm_getDefaultInstance__>` ()
        
-       Realm static constructor that returns the Realm instance defined by the :ref:`io.realm.RealmConfiguration <io_realm_RealmConfiguration>` set by :ref:`#setDefaultConfiguration(RealmConfiguration) <io_realm_Realm_setDefaultConfiguration_RealmConfiguration_>`
+       Realm static constructor that returns the Realm instance defined by the :ref:`io.realm.RealmConfiguration <io_realm_RealmConfiguration>` set by :ref:`setDefaultConfiguration(RealmConfiguration) <io_realm_Realm_setDefaultConfiguration_RealmConfiguration_>`
        
        
        
@@ -226,7 +230,7 @@ Method Summary
    * - public static **void**
      - :ref:`setDefaultConfiguration <io_realm_Realm_setDefaultConfiguration_RealmConfiguration_>` (:ref:`RealmConfiguration <io_realm_RealmConfiguration>` configuration)
        
-       Sets the :ref:`io.realm.RealmConfiguration <io_realm_RealmConfiguration>` used when calling :ref:`#getDefaultInstance() <io_realm_Realm_getDefaultInstance__>`.
+       Sets the :ref:`io.realm.RealmConfiguration <io_realm_RealmConfiguration>` used when calling :ref:`getDefaultInstance() <io_realm_Realm_getDefaultInstance__>`.
        
        
        
@@ -236,7 +240,7 @@ Method Summary
    * - public static :ref:`RealmConfiguration <io_realm_RealmConfiguration>`
      - :ref:`getDefaultConfiguration <io_realm_Realm_getDefaultConfiguration__>` ()
        
-       Returns the default configuration for :ref:`#getDefaultInstance() <io_realm_Realm_getDefaultInstance__>`.
+       Returns the default configuration for :ref:`getDefaultInstance() <io_realm_Realm_getDefaultInstance__>`.
        
        
        
@@ -634,7 +638,7 @@ Method Summary
    * - public static **Context (?)**
      - :ref:`getApplicationContext <io_realm_Realm_getApplicationContext__>` ()
        
-       Get the application context used when initializing Realm with :ref:`Realm#init(Context) <io_realm_Realm_init_Context_>` or :ref:`Realm#init(Context, String) <io_realm_Realm_init_Context__String_>`.
+       Get the application context used when initializing Realm with :ref:`Realm.init(Context) <io_realm_Realm_init_Context_>` or :ref:`Realm.init(Context, String) <io_realm_Realm_init_Context__String_>`.
        
        
        
@@ -731,7 +735,7 @@ public :ref:`RealmSchema <io_realm_RealmSchema>` getSchema ()
 
 Returns the schema for this Realm. The schema is immutable. Any attempt to modify it will result in an `UnsupportedOperationException <https://docs.oracle.com/javase/7/docs/api/java/lang/UnsupportedOperationException.html>`__ .
 
-The schema can only be modified using :ref:`DynamicRealm#getSchema() <io_realm_DynamicRealm_getSchema__>` or through an migration.
+The schema can only be modified using :ref:`DynamicRealm.getSchema() <io_realm_DynamicRealm_getSchema__>` or through an migration.
 
 
 
@@ -809,7 +813,7 @@ ______
 .. seealso::
 
    
-   - :ref:`#getDefaultInstance() <io_realm_Realm_getDefaultInstance__>`
+   - :ref:`getDefaultInstance() <io_realm_Realm_getDefaultInstance__>`
       
       
       
@@ -889,7 +893,7 @@ ______
 .. seealso::
 
    
-   - :ref:`#getDefaultInstance() <io_realm_Realm_getDefaultInstance__>`
+   - :ref:`getDefaultInstance() <io_realm_Realm_getDefaultInstance__>`
       
       
       
@@ -909,7 +913,7 @@ getDefaultInstance
 public static :ref:`Realm <io_realm_Realm>` getDefaultInstance ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Realm static constructor that returns the Realm instance defined by the :ref:`io.realm.RealmConfiguration <io_realm_RealmConfiguration>` set by :ref:`#setDefaultConfiguration(RealmConfiguration) <io_realm_Realm_setDefaultConfiguration_RealmConfiguration_>`
+Realm static constructor that returns the Realm instance defined by the :ref:`io.realm.RealmConfiguration <io_realm_RealmConfiguration>` set by :ref:`setDefaultConfiguration(RealmConfiguration) <io_realm_Realm_setDefaultConfiguration_RealmConfiguration_>`
 
 
 
@@ -1019,7 +1023,7 @@ setDefaultConfiguration
 public static **void** setDefaultConfiguration (:ref:`RealmConfiguration <io_realm_RealmConfiguration>` configuration)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Sets the :ref:`io.realm.RealmConfiguration <io_realm_RealmConfiguration>` used when calling :ref:`#getDefaultInstance() <io_realm_Realm_getDefaultInstance__>`.
+Sets the :ref:`io.realm.RealmConfiguration <io_realm_RealmConfiguration>` used when calling :ref:`getDefaultInstance() <io_realm_Realm_getDefaultInstance__>`.
 
 
 
@@ -1063,7 +1067,7 @@ getDefaultConfiguration
 public static :ref:`RealmConfiguration <io_realm_RealmConfiguration>` getDefaultConfiguration ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Returns the default configuration for :ref:`#getDefaultInstance() <io_realm_Realm_getDefaultInstance__>`.
+Returns the default configuration for :ref:`getDefaultInstance() <io_realm_Realm_getDefaultInstance__>`.
 
 
 
@@ -1078,7 +1082,7 @@ removeDefaultConfiguration
 public static **void** removeDefaultConfiguration ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Removes the current default configuration (if any). Any further calls to :ref:`#getDefaultInstance() <io_realm_Realm_getDefaultInstance__>` will fail until a new default configuration has been set using :ref:`#setDefaultConfiguration(RealmConfiguration) <io_realm_Realm_setDefaultConfiguration_RealmConfiguration_>`.
+Removes the current default configuration (if any). Any further calls to :ref:`getDefaultInstance() <io_realm_Realm_getDefaultInstance__>` will fail until a new default configuration has been set using :ref:`setDefaultConfiguration(RealmConfiguration) <io_realm_Realm_setDefaultConfiguration_RealmConfiguration_>`.
 
 
 
@@ -2525,7 +2529,7 @@ ______
       
       
       
-   - :ref:`#removeAllChangeListeners() <io_realm_Realm_removeAllChangeListeners__>`
+   - :ref:`removeAllChangeListeners() <io_realm_Realm_removeAllChangeListeners__>`
       
       
       
@@ -2962,7 +2966,7 @@ ______
 .. seealso::
 
    
-   - :ref:`io.realm.RealmConfiguration.Builder#modules(Object, Object...) <io_realm_RealmConfiguration_Builder_modules_Object__Object____>`
+   - :ref:`io.realm.RealmConfiguration.Builder.modules(Object, Object...) <io_realm_RealmConfiguration_Builder_modules_Object__Object____>`
       
       
       
@@ -3034,7 +3038,7 @@ getApplicationContext
 public static **Context (?)** getApplicationContext ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Get the application context used when initializing Realm with :ref:`Realm#init(Context) <io_realm_Realm_init_Context_>` or :ref:`Realm#init(Context, String) <io_realm_Realm_init_Context__String_>`.
+Get the application context used when initializing Realm with :ref:`Realm.init(Context) <io_realm_Realm_init_Context_>` or :ref:`Realm.init(Context, String) <io_realm_Realm_init_Context__String_>`.
 
 
 

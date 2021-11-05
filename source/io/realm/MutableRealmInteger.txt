@@ -75,7 +75,7 @@ A ``MutableRealmInteger``  is a mutable, `Long <https://docs.oracle.com/javase/7
         .counter.increment(1);
     
 
-Note that the :ref:`#set(Long) <io_realm_MutableRealmInteger_set_Long_>` operator must be used with extreme care. It will quash the effects of any prior calls to :ref:`#increment(long) <io_realm_MutableRealmInteger_increment_long_>` or :ref:`#decrement(long) <io_realm_MutableRealmInteger_decrement_long_>`. Although the value of a ``MutableRealmInteger``  will always converge across devices, the specific value on which it converges will depend on the actual order in which operations took place. Mixing :ref:`#set(Long) <io_realm_MutableRealmInteger_set_Long_>` with :ref:`#increment(long) <io_realm_MutableRealmInteger_increment_long_>` and :ref:`#decrement(long) <io_realm_MutableRealmInteger_decrement_long_>` is, therefore, not advised, unless fuzzy counting is acceptable.
+Note that the :ref:`set(Long) <io_realm_MutableRealmInteger_set_Long_>` operator must be used with extreme care. It will quash the effects of any prior calls to :ref:`increment(long) <io_realm_MutableRealmInteger_increment_long_>` or :ref:`decrement(long) <io_realm_MutableRealmInteger_decrement_long_>`. Although the value of a ``MutableRealmInteger``  will always converge across devices, the specific value on which it converges will depend on the actual order in which operations took place. Mixing :ref:`set(Long) <io_realm_MutableRealmInteger_set_Long_>` with :ref:`increment(long) <io_realm_MutableRealmInteger_increment_long_>` and :ref:`decrement(long) <io_realm_MutableRealmInteger_decrement_long_>` is, therefore, not advised, unless fuzzy counting is acceptable.
 
 ``MutableRealmInteger`` s may not be primary keys. Their implementations are not thread safe. Like all managed Realm objects, managed ``MutableRealmInteger`` s may not be moved across threads. Unmanaged ``MutableRealmInteger`` s may be moved across threads but require safe publication.
 
@@ -340,7 +340,7 @@ __________
 
 
 
-- ``value``: initial value: parsed by `Long#parseLong <https://docs.oracle.com/javase/7/docs/api/java/lang/Long/parseLong.html>`__ .
+- ``value``: initial value: parsed by `Long.parseLong <https://docs.oracle.com/javase/7/docs/api/java/lang/Long/parseLong.html>`__ .
    
    
    

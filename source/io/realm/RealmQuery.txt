@@ -24,17 +24,17 @@ io.realm
 
 
 
-A RealmQuery encapsulates a query on a :ref:`io.realm.Realm <io_realm_Realm>` or a :ref:`io.realm.RealmResults <io_realm_RealmResults>` using the Builder pattern. The query is executed using either :ref:`#findAll() <io_realm_RealmQuery_findAll__>` or :ref:`#findFirst() <io_realm_RealmQuery_findFirst__>`.
+A RealmQuery encapsulates a query on a :ref:`io.realm.Realm <io_realm_Realm>` or a :ref:`io.realm.RealmResults <io_realm_RealmResults>` using the Builder pattern. The query is executed using either :ref:`findAll() <io_realm_RealmQuery_findAll__>` or :ref:`findFirst() <io_realm_RealmQuery_findFirst__>`.
 
 The input to many of the query functions take a field name as String. Note that this is not type safe. If a RealmObject class is refactored care has to be taken to not break any queries.
 
-A :ref:`io.realm.Realm <io_realm_Realm>` is unordered, which means that there is no guarantee that querying a Realm will return the objects in the order they where inserted. Use :ref:`#sort(String) <io_realm_RealmQuery_sort_String_>` (String)} and similar methods if a specific order is required.
+A :ref:`io.realm.Realm <io_realm_Realm>` is unordered, which means that there is no guarantee that querying a Realm will return the objects in the order they where inserted. Use :ref:`sort(String) <io_realm_RealmQuery_sort_String_>` (String)} and similar methods if a specific order is required.
 
 
 
 A RealmQuery cannot be passed between different threads.
 
-Results are obtained quickly most of the times. However, launching heavy queries from the UI thread may result in a drop of frames or even ANRs. If you want to prevent these behaviors, you can instantiate a Realm using a :ref:`RealmConfiguration <io_realm_RealmConfiguration>` that explicitly sets :ref:`RealmConfiguration.Builder#allowQueriesOnUiThread(boolean) <io_realm_RealmConfiguration_Builder_allowQueriesOnUiThread_boolean_>` to ``false`` . This way queries will be forced to be launched from a non-UI thread. Alternatively, you can also use :ref:`#findAllAsync() <io_realm_RealmQuery_findAllAsync__>` or :ref:`#findFirstAsync() <io_realm_RealmQuery_findFirstAsync__>`.
+Results are obtained quickly most of the times. However, launching heavy queries from the UI thread may result in a drop of frames or even ANRs. If you want to prevent these behaviors, you can instantiate a Realm using a :ref:`RealmConfiguration <io_realm_RealmConfiguration>` that explicitly sets :ref:`RealmConfiguration.Builder.allowQueriesOnUiThread(boolean) <io_realm_RealmConfiguration_Builder_allowQueriesOnUiThread_boolean_>` to ``false`` . This way queries will be forced to be launched from a non-UI thread. Alternatively, you can also use :ref:`findAllAsync() <io_realm_RealmQuery_findAllAsync__>` or :ref:`findFirstAsync() <io_realm_RealmQuery_findFirstAsync__>`.
 
 
 
@@ -42,13 +42,15 @@ Results are obtained quickly most of the times. However, launching heavy queries
 .. seealso::
 
    
-   - [object Object]
+   - **<a href="http://en.wikipedia.org/wiki/Builder_pattern">Builder pattern</a> (?)**
+      
+      
       
    - **Realm#where(Class) (?)**
       
       
       
-   - :ref:`RealmResults#where() <io_realm_RealmResults_where__>`
+   - :ref:`RealmResults.where() <io_realm_RealmResults_where__>`
       
       
       
@@ -1108,7 +1110,7 @@ Method Summary
    * - public **E (?)**
      - :ref:`findFirstAsync <io_realm_RealmQuery_findFirstAsync__>` ()
        
-       Similar to :ref:`#findFirst() <io_realm_RealmQuery_findFirst__>` but runs asynchronously on a worker thread.
+       Similar to :ref:`findFirst() <io_realm_RealmQuery_findFirst__>` but runs asynchronously on a worker thread.
        
        
        
@@ -1288,7 +1290,7 @@ __________
    
 - ``value``: the value to compare with.
    
-- ``casing``: how to handle casing. Setting this to :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
+- ``casing``: how to handle casing. Setting this to :ref:`Case.INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
    
    
    
@@ -1318,7 +1320,7 @@ __________
    
 - ``value``: the value to compare with.
    
-- ``casing``: how to handle casing. Setting this to :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
+- ``casing``: how to handle casing. Setting this to :ref:`Case.INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
    
    
    
@@ -1461,7 +1463,7 @@ __________
    
    
    
-- ``casing``: how casing is handled. :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` works only for the Latin-1 characters.
+- ``casing``: how casing is handled. :ref:`Case.INSENSITIVE <io_realm_Case_INSENSITIVE>` works only for the Latin-1 characters.
    
    
    
@@ -1774,7 +1776,7 @@ __________
    
 - ``value``: the value to compare with.
    
-- ``casing``: how casing is handled. :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` works only for the Latin-1 characters.
+- ``casing``: how casing is handled. :ref:`Case.INSENSITIVE <io_realm_Case_INSENSITIVE>` works only for the Latin-1 characters.
    
    
    
@@ -1804,7 +1806,7 @@ __________
    
 - ``value``: the value to compare with.
    
-- ``casing``: how casing is handled. :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` works only for the Latin-1 characters.
+- ``casing``: how casing is handled. :ref:`Case.INSENSITIVE <io_realm_Case_INSENSITIVE>` works only for the Latin-1 characters.
    
    
    
@@ -2866,7 +2868,7 @@ __________
    
 - ``value``: the substring.
    
-- ``casing``: how to handle casing. Setting this to :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
+- ``casing``: how to handle casing. Setting this to :ref:`Case.INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
    
    
    
@@ -2896,7 +2898,7 @@ __________
    
 - ``value``: the substring.
    
-- ``casing``: how to handle casing. Setting this to :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
+- ``casing``: how to handle casing. Setting this to :ref:`Case.INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
    
    
    
@@ -2983,7 +2985,7 @@ __________
    
 - ``value``: the substring.
    
-- ``casing``: how to handle casing. Setting this to :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
+- ``casing``: how to handle casing. Setting this to :ref:`Case.INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
    
    
    
@@ -3013,7 +3015,7 @@ __________
    
 - ``value``: the substring.
    
-- ``casing``: how to handle casing. Setting this to :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
+- ``casing``: how to handle casing. Setting this to :ref:`Case.INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
    
    
    
@@ -3100,7 +3102,7 @@ __________
    
 - ``value``: the substring.
    
-- ``casing``: how to handle casing. Setting this to :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
+- ``casing``: how to handle casing. Setting this to :ref:`Case.INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
    
    
    
@@ -3130,7 +3132,7 @@ __________
    
 - ``value``: the substring.
    
-- ``casing``: how to handle casing. Setting this to :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
+- ``casing``: how to handle casing. Setting this to :ref:`Case.INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
    
    
    
@@ -3247,7 +3249,7 @@ __________
    
 - ``value``: the wildcard string.
    
-- ``casing``: how to handle casing. Setting this to :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
+- ``casing``: how to handle casing. Setting this to :ref:`Case.INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
    
    
    
@@ -3287,7 +3289,7 @@ __________
    
 - ``value``: the wildcard string.
    
-- ``casing``: how to handle casing. Setting this to :ref:`Case#INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
+- ``casing``: how to handle casing. Setting this to :ref:`Case.INSENSITIVE <io_realm_Case_INSENSITIVE>` only works for Latin-1 characters.
    
    
    
@@ -3316,7 +3318,7 @@ Begin grouping of conditions ("left parenthesis"). A group must be closed with a
 .. seealso::
 
    
-   - :ref:`#endGroup() <io_realm_RealmQuery_endGroup__>`
+   - :ref:`endGroup() <io_realm_RealmQuery_endGroup__>`
       
       
       
@@ -3342,7 +3344,7 @@ End grouping of conditions ("right parenthesis") which was opened by a call to `
 .. seealso::
 
    
-   - :ref:`#beginGroup() <io_realm_RealmQuery_beginGroup__>`
+   - :ref:`beginGroup() <io_realm_RealmQuery_beginGroup__>`
       
       
       
@@ -3930,7 +3932,7 @@ __________
 
 
 
-- ``fieldName``: the field to calculate average on. Only Decimal128 fields is supported. For other number types consider using :ref:`#average(String) <io_realm_RealmQuery_average_String_>`.
+- ``fieldName``: the field to calculate average on. Only Decimal128 fields is supported. For other number types consider using :ref:`average(String) <io_realm_RealmQuery_average_String_>`.
    
    
    
@@ -3961,7 +3963,7 @@ __________
 
 
 
-- ``fieldName``: the field to calculate average on. Only RealmAny fields are supported. For other types consider using :ref:`#average(String) <io_realm_RealmQuery_average_String_>`.
+- ``fieldName``: the field to calculate average on. Only RealmAny fields are supported. For other types consider using :ref:`average(String) <io_realm_RealmQuery_average_String_>`.
    
    
    
@@ -4180,7 +4182,7 @@ findAll
 public :ref:`RealmResults <io_realm_RealmResults>` findAll ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Finds all objects that fulfill the query conditions.Launching heavy queries from the UI thread may result in a drop of frames or even ANRs. **We do not recommend doing so and therefore it is not allowed by default.** If you want to prevent these behaviors you can obtain a Realm using a :ref:`RealmConfiguration <io_realm_RealmConfiguration>` that explicitly sets :ref:`RealmConfiguration.Builder#allowQueriesOnUiThread(boolean) <io_realm_RealmConfiguration_Builder_allowQueriesOnUiThread_boolean_>` to ``false`` . This way you will be forced to launch your queries from a non-UI thread, otherwise calls to this method will throw a :ref:`RealmException <io_realm_exceptions_RealmException>`. Alternatively, you can use :ref:`#findAllAsync() <io_realm_RealmQuery_findAllAsync__>`.
+Finds all objects that fulfill the query conditions.Launching heavy queries from the UI thread may result in a drop of frames or even ANRs. **We do not recommend doing so and therefore it is not allowed by default.** If you want to prevent these behaviors you can obtain a Realm using a :ref:`RealmConfiguration <io_realm_RealmConfiguration>` that explicitly sets :ref:`RealmConfiguration.Builder.allowQueriesOnUiThread(boolean) <io_realm_RealmConfiguration_Builder_allowQueriesOnUiThread_boolean_>` to ``false`` . This way you will be forced to launch your queries from a non-UI thread, otherwise calls to this method will throw a :ref:`RealmException <io_realm_exceptions_RealmException>`. Alternatively, you can use :ref:`findAllAsync() <io_realm_RealmQuery_findAllAsync__>`.
 
 
 
@@ -4389,7 +4391,7 @@ limit
 public :ref:`RealmQuery <io_realm_RealmQuery>` limit (**long** limit)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Limits the number of objects returned in case the query matched more objects.Note that when using this method in combination with :ref:`#sort(String) <io_realm_RealmQuery_sort_String_>` and :ref:`#distinct(String, String...) <io_realm_RealmQuery_distinct_String__String____>` they will be executed in the order they where added which can affect the end result.
+Limits the number of objects returned in case the query matched more objects.Note that when using this method in combination with :ref:`sort(String) <io_realm_RealmQuery_sort_String_>` and :ref:`distinct(String, String...) <io_realm_RealmQuery_distinct_String__String____>` they will be executed in the order they where added which can affect the end result.
 
 
 
@@ -4571,7 +4573,7 @@ findFirst
 public **E (?)** findFirst ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Finds the first object that fulfills the query conditions.Launching heavy queries from the UI thread may result in a drop of frames or even ANRs. **We do not recommend doing so, but it is allowed by default.** If you want to prevent these behaviors you can obtain a Realm using a :ref:`RealmConfiguration <io_realm_RealmConfiguration>` that explicitly sets :ref:`RealmConfiguration.Builder#allowQueriesOnUiThread(boolean) <io_realm_RealmConfiguration_Builder_allowQueriesOnUiThread_boolean_>` to ``false`` . This way you will be forced to launch your queries from a non-UI thread, otherwise calls to this method will throw a :ref:`RealmException <io_realm_exceptions_RealmException>`. Alternatively, you can use :ref:`#findFirstAsync() <io_realm_RealmQuery_findFirstAsync__>`.
+Finds the first object that fulfills the query conditions.Launching heavy queries from the UI thread may result in a drop of frames or even ANRs. **We do not recommend doing so, but it is allowed by default.** If you want to prevent these behaviors you can obtain a Realm using a :ref:`RealmConfiguration <io_realm_RealmConfiguration>` that explicitly sets :ref:`RealmConfiguration.Builder.allowQueriesOnUiThread(boolean) <io_realm_RealmConfiguration_Builder_allowQueriesOnUiThread_boolean_>` to ``false`` . This way you will be forced to launch your queries from a non-UI thread, otherwise calls to this method will throw a :ref:`RealmException <io_realm_exceptions_RealmException>`. Alternatively, you can use :ref:`findFirstAsync() <io_realm_RealmQuery_findFirstAsync__>`.
 
 
 
@@ -4604,7 +4606,7 @@ findFirstAsync
 public **E (?)** findFirstAsync ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Similar to :ref:`#findFirst() <io_realm_RealmQuery_findFirst__>` but runs asynchronously on a worker thread. An listener should be registered to the returned :ref:`RealmObject <io_realm_RealmObject>` to get the notification when query completes. The registered listener will also be triggered if there are changes made to the queried :ref:`RealmObject <io_realm_RealmObject>`. If the :ref:`RealmObject <io_realm_RealmObject>` is deleted, the listener will be called one last time and then stop. The query will not be re-run.
+Similar to :ref:`findFirst() <io_realm_RealmQuery_findFirst__>` but runs asynchronously on a worker thread. An listener should be registered to the returned :ref:`RealmObject <io_realm_RealmObject>` to get the notification when query completes. The registered listener will also be triggered if there are changes made to the queried :ref:`RealmObject <io_realm_RealmObject>`. If the :ref:`RealmObject <io_realm_RealmObject>` is deleted, the listener will be called one last time and then stop. The query will not be re-run.
 
 
 

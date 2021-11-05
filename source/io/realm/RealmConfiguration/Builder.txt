@@ -323,7 +323,7 @@ Sets the schema version of the Realm. This must be equal to or higher than the s
 .. seealso::
 
    
-   - :ref:`#migration(RealmMigration) <io_realm_RealmConfiguration_Builder_migration_RealmMigration_>`
+   - :ref:`migration(RealmMigration) <io_realm_RealmConfiguration_Builder_migration_RealmMigration_>`
       
       
       
@@ -360,7 +360,7 @@ public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` d
 
 Setting this will change the behavior of how migration exceptions are handled. Instead of throwing a :ref:`io.realm.exceptions.RealmMigrationNeededException <io_realm_exceptions_RealmMigrationNeededException>` the on-disc Realm will be cleared and recreated with the new Realm schema.
 
-This cannot be configured to have an asset file at the same time by calling :ref:`#assetFile(String) <io_realm_RealmConfiguration_Builder_assetFile_String_>` as the provided asset file will be deleted in migrations.
+This cannot be configured to have an asset file at the same time by calling :ref:`assetFile(String) <io_realm_RealmConfiguration_Builder_assetFile_String_>` as the provided asset file will be deleted in migrations.
 
 
 
@@ -401,7 +401,7 @@ public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` m
 
 Replaces the existing module(s) with one or more :ref:`RealmModule <io_realm_annotations_RealmModule>`s. Using this method will replace the current schema for this Realm with the schema defined by the provided modules.
 
-A reference to the default Realm module containing all Realm classes in the project (but not dependencies), can be found using :ref:`Realm#getDefaultModule() <io_realm_Realm_getDefaultModule__>`. Combining the schema from the app project and a library dependency is thus done using the following code:
+A reference to the default Realm module containing all Realm classes in the project (but not dependencies), can be found using :ref:`Realm.getDefaultModule() <io_realm_Realm_getDefaultModule__>`. Combining the schema from the app project and a library dependency is thus done using the following code:
 
 
 
@@ -431,7 +431,7 @@ ______
 .. seealso::
 
    
-   - :ref:`Realm#getDefaultModule() <io_realm_Realm_getDefaultModule__>`
+   - :ref:`Realm.getDefaultModule() <io_realm_Realm_getDefaultModule__>`
       
       
       
@@ -516,7 +516,7 @@ initialData
 public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` initialData (:ref:`Realm.Transaction <io_realm_Realm_Transaction>` transaction)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Sets the initial data in :ref:`io.realm.Realm <io_realm_Realm>`. This transaction will be executed only for the first time when database file is created or while migrating the data when :ref:`Builder#deleteRealmIfMigrationNeeded() <io_realm_RealmConfiguration_Builder_deleteRealmIfMigrationNeeded__>` is set.
+Sets the initial data in :ref:`io.realm.Realm <io_realm_Realm>`. This transaction will be executed only for the first time when database file is created or while migrating the data when :ref:`Builder.deleteRealmIfMigrationNeeded() <io_realm_RealmConfiguration_Builder_deleteRealmIfMigrationNeeded__>` is set.
 
 
 
@@ -544,7 +544,7 @@ public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` a
 
 Copies the Realm file from the given asset file path.When opening the Realm for the first time, instead of creating an empty file, the Realm file will be copied from the provided asset file and used instead.
 
-This cannot be combined with :ref:`#deleteRealmIfMigrationNeeded() <io_realm_RealmConfiguration_Builder_deleteRealmIfMigrationNeeded__>` as doing so would just result in the copied file being deleted.
+This cannot be combined with :ref:`deleteRealmIfMigrationNeeded() <io_realm_RealmConfiguration_Builder_deleteRealmIfMigrationNeeded__>` as doing so would just result in the copied file being deleted.
 
 
 
@@ -581,7 +581,7 @@ public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` r
 
 Setting this will cause the Realm to become read only and all write transactions made against this Realm will fail with an `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__ .
 
-This in particular mean that :ref:`#initialData(Realm.Transaction) <io_realm_RealmConfiguration_Builder_initialData_Realm_Transaction_>` will not work in combination with a read only Realm and setting this will result in a `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  being thrown.
+This in particular mean that :ref:`initialData(Realm.Transaction) <io_realm_RealmConfiguration_Builder_initialData_Realm_Transaction_>` will not work in combination with a read only Realm and setting this will result in a `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  being thrown.
 
 
 
@@ -653,7 +653,9 @@ __________
 .. seealso::
 
    
-   - [object Object]
+   - **<a href="https://realm.io/docs/java/latest/#faq-large-realm-file-size">FAQ</a> (?)**
+      
+      
       
    
    
@@ -692,7 +694,7 @@ public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` a
 
 Sets whether or not a :ref:`RealmQuery <io_realm_RealmQuery>` can be launched from the UI thread.
 
-By default Realm allows queries on the main thread. However, by doing so your application may experience a drop of frames or even ANRs. We recommend diverting queries to non-UI threads or, alternatively, using :ref:`RealmQuery#findAllAsync() <io_realm_RealmQuery_findAllAsync__>` or :ref:`RealmQuery#findFirstAsync() <io_realm_RealmQuery_findFirstAsync__>`.
+By default Realm allows queries on the main thread. However, by doing so your application may experience a drop of frames or even ANRs. We recommend diverting queries to non-UI threads or, alternatively, using :ref:`RealmQuery.findAllAsync() <io_realm_RealmQuery_findAllAsync__>` or :ref:`RealmQuery.findFirstAsync() <io_realm_RealmQuery_findFirstAsync__>`.
 
 
 

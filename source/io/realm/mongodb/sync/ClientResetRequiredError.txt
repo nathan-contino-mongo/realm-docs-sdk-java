@@ -32,7 +32,7 @@ Class encapsulating information needed for handling a Client Reset event.
 .. seealso::
 
    
-   - :ref:`SyncSession.ErrorHandler#onError(SyncSession, AppException) for more information
+   - :ref:`SyncSession.ErrorHandler.onError(SyncSession, AppException) for more information
        about when and why Client Reset occurs and how to deal with it. <io_realm_mongodb_sync_SyncSession_ErrorHandler_onError_SyncSession__AppException_>`
       
       
@@ -138,7 +138,7 @@ public **void** executeClientReset ()
 
 Calling this method will execute the Client Reset manually instead of waiting until next app restart. This will only be possible if all instances of that Realm have been closed, otherwise a `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  will be thrown.
 
-After this method returns, the backup file can be found in the location returned by :ref:`#getBackupFile() <io_realm_mongodb_sync_ClientResetRequiredError_getBackupFile__>`. The file at :ref:`#getOriginalFile() <io_realm_mongodb_sync_ClientResetRequiredError_getOriginalFile__>` have been deleted, but will be recreated from scratch next time a Realm instance is opened.
+After this method returns, the backup file can be found in the location returned by :ref:`getBackupFile() <io_realm_mongodb_sync_ClientResetRequiredError_getBackupFile__>`. The file at :ref:`getOriginalFile() <io_realm_mongodb_sync_ClientResetRequiredError_getOriginalFile__>` have been deleted, but will be recreated from scratch next time a Realm instance is opened.
 
 
 

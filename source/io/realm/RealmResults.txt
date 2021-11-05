@@ -41,7 +41,7 @@ Notice that a RealmResults is never ``null``  not even in the case where it cont
 
 
 
-If a RealmResults is built on RealmList through :ref:`RealmList#where() <io_realm_RealmList_where__>`, it will become empty when the source RealmList gets deleted.
+If a RealmResults is built on RealmList through :ref:`RealmList.where() <io_realm_RealmList_where__>`, it will become empty when the source RealmList gets deleted.
 
 
 
@@ -53,11 +53,11 @@ If a RealmResults is built on RealmList through :ref:`RealmList#where() <io_real
 .. seealso::
 
    
-   - :ref:`RealmQuery#findAll() <io_realm_RealmQuery_findAll__>`
+   - :ref:`RealmQuery.findAll() <io_realm_RealmQuery_findAll__>`
       
       
       
-   - :ref:`Realm#executeTransaction(Realm.Transaction) <io_realm_Realm_executeTransaction_Realm_Transaction_>`
+   - :ref:`Realm.executeTransaction(Realm.Transaction) <io_realm_Realm_executeTransaction_Realm_Transaction_>`
       
       
       
@@ -477,11 +477,11 @@ public **void** setValue (`String <https://docs.oracle.com/javase/7/docs/api/jav
 
 Updates the field given by ``fieldName``  in all objects inside the query result.
 
-This method will automatically try to convert numbers and booleans that are given as ``String``  to their appropriate type. For example ``"10"``  will be converted to ``10``  if the field type is :ref:`RealmFieldType#INTEGER <io_realm_RealmFieldType_INTEGER>`.
+This method will automatically try to convert numbers and booleans that are given as ``String``  to their appropriate type. For example ``"10"``  will be converted to ``10``  if the field type is :ref:`RealmFieldType.INTEGER <io_realm_RealmFieldType_INTEGER>`.
 
 
 
-Using the typed setters like :ref:`#setInt(String, int) <io_realm_RealmResults_setInt_String__int_>` will be faster than using this method.
+Using the typed setters like :ref:`setInt(String, int) <io_realm_RealmResults_setInt_String__int_>` will be faster than using this method.
 
 
 
@@ -1285,7 +1285,7 @@ public **<any> (?)** asFlowable ()
 
 Returns an Rx Flowable that monitors changes to this RealmResults. It will emit the current RealmResults when subscribed to. RealmResults will continually be emitted as the RealmResults are updated - ``onComplete``  will never be called.
 
-Items emitted from Realm Flowables are frozen (See :ref:`#freeze() <io_realm_RealmResults_freeze__>`. This means that they are immutable and can be read on any thread.
+Items emitted from Realm Flowables are frozen (See :ref:`freeze() <io_realm_RealmResults_freeze__>`. This means that they are immutable and can be read on any thread.
 
 
 
@@ -1333,7 +1333,9 @@ ______
 .. seealso::
 
    
-   - [object Object]
+   - **<a href="https://realm.io/docs/java/latest/#rxjava">RxJava and Realm</a> (?)**
+      
+      
       
    
    
@@ -1357,7 +1359,7 @@ RealmResults will continually be emitted as the RealmResults are updated - ``onC
 
 
 
-Items emitted from Realm Observables are frozen (See :ref:`#freeze() <io_realm_RealmResults_freeze__>`. This means that they are immutable and can be read on any thread.
+Items emitted from Realm Observables are frozen (See :ref:`freeze() <io_realm_RealmResults_freeze__>`. This means that they are immutable and can be read on any thread.
 
 
 
@@ -1387,7 +1389,9 @@ ______
 .. seealso::
 
    
-   - [object Object]
+   - **<a href="https://realm.io/docs/java/latest/#rxjava">RxJava and Realm</a> (?)**
+      
+      
       
    
    

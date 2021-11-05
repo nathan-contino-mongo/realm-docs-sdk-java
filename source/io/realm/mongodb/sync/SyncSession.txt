@@ -32,11 +32,11 @@ A session is controlled by Realm, but can provide additional information in case
 
 
 
-When creating a session, Realm will establish a connection to the server. This connection is controlled by Realm and might be shared between multiple sessions. It is possible to get insight into the connection using :ref:`#addConnectionChangeListener(ConnectionListener) <io_realm_mongodb_sync_SyncSession_addConnectionChangeListener_ConnectionListener_>` and :ref:`#isConnected() <io_realm_mongodb_sync_SyncSession_isConnected__>`.
+When creating a session, Realm will establish a connection to the server. This connection is controlled by Realm and might be shared between multiple sessions. It is possible to get insight into the connection using :ref:`addConnectionChangeListener(ConnectionListener) <io_realm_mongodb_sync_SyncSession_addConnectionChangeListener_ConnectionListener_>` and :ref:`isConnected() <io_realm_mongodb_sync_SyncSession_isConnected__>`.
 
 
 
-The session itself has a different lifecycle than the underlying connection. The state of the session can be found using :ref:`#getState() <io_realm_mongodb_sync_SyncSession_getState__>`.
+The session itself has a different lifecycle than the underlying connection. The state of the session can be found using :ref:`getState() <io_realm_mongodb_sync_SyncSession_getState__>`.
 
 
 
@@ -606,13 +606,13 @@ start
 public synchronized **void** start ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Attempts to start the session and enable synchronization with the Realm Object Server.This happens automatically when opening the Realm instance, so doing it manually should only be needed if the session was stopped using :ref:`#stop() <io_realm_mongodb_sync_SyncSession_stop__>`.
+Attempts to start the session and enable synchronization with the Realm Object Server.This happens automatically when opening the Realm instance, so doing it manually should only be needed if the session was stopped using :ref:`stop() <io_realm_mongodb_sync_SyncSession_stop__>`.
 
 
 
 If the session was already started, calling this method will do nothing.
 
-A session is considered started if :ref:`#getState() <io_realm_mongodb_sync_SyncSession_getState__>` returns :ref:`State#ACTIVE <io_realm_mongodb_sync_SyncSession_State_ACTIVE>`. If the session is :ref:`State#DYING <io_realm_mongodb_sync_SyncSession_State_DYING>`, the session will be moved back to :ref:`State#ACTIVE <io_realm_mongodb_sync_SyncSession_State_ACTIVE>`.
+A session is considered started if :ref:`getState() <io_realm_mongodb_sync_SyncSession_getState__>` returns :ref:`State.ACTIVE <io_realm_mongodb_sync_SyncSession_State_ACTIVE>`. If the session is :ref:`State.DYING <io_realm_mongodb_sync_SyncSession_State_DYING>`, the session will be moved back to :ref:`State.ACTIVE <io_realm_mongodb_sync_SyncSession_State_ACTIVE>`.
 
 
 
@@ -620,11 +620,11 @@ A session is considered started if :ref:`#getState() <io_realm_mongodb_sync_Sync
 .. seealso::
 
    
-   - :ref:`#getState() <io_realm_mongodb_sync_SyncSession_getState__>`
+   - :ref:`getState() <io_realm_mongodb_sync_SyncSession_getState__>`
       
       
       
-   - :ref:`#stop() <io_realm_mongodb_sync_SyncSession_stop__>`
+   - :ref:`stop() <io_realm_mongodb_sync_SyncSession_stop__>`
       
       
       
@@ -644,7 +644,7 @@ stop
 public synchronized **void** stop ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Stops any synchronization with the Realm Object Server until the Realm is re-opened again after fully closing it.Synchronization can be re-enabled by calling :ref:`#start() <io_realm_mongodb_sync_SyncSession_start__>` again.
+Stops any synchronization with the Realm Object Server until the Realm is re-opened again after fully closing it.Synchronization can be re-enabled by calling :ref:`start() <io_realm_mongodb_sync_SyncSession_start__>` again.
 
 
 

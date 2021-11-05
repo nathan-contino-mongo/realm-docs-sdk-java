@@ -24,11 +24,11 @@ io.realm
 
 
 
-A RealmConfiguration is used to setup a specific Realm instance.Instances of a RealmConfiguration can only created by using the :ref:`io.realm.RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` and calling its :ref:`io.realm.RealmConfiguration.Builder#build() <io_realm_RealmConfiguration_Builder_build__>` method.
+A RealmConfiguration is used to setup a specific Realm instance.Instances of a RealmConfiguration can only created by using the :ref:`io.realm.RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` and calling its :ref:`io.realm.RealmConfiguration.Builder.build() <io_realm_RealmConfiguration_Builder_build__>` method.
 
 
 
-A commonly used RealmConfiguration can easily be accessed by first saving it as :ref:`Realm#setDefaultConfiguration(RealmConfiguration) <io_realm_Realm_setDefaultConfiguration_RealmConfiguration_>` and then using :ref:`io.realm.Realm#getDefaultInstance() <io_realm_Realm_getDefaultInstance__>`.
+A commonly used RealmConfiguration can easily be accessed by first saving it as :ref:`Realm.setDefaultConfiguration(RealmConfiguration) <io_realm_Realm_setDefaultConfiguration_RealmConfiguration_>` and then using :ref:`io.realm.Realm.getDefaultInstance() <io_realm_Realm_getDefaultInstance__>`.
 
 
 
@@ -619,7 +619,9 @@ public **boolean** isRecoveryConfiguration ()
 .. seealso::
 
    
-   - [object Object]
+   - **<a href="https://realm.io/docs/java/latest/api/io/realm/ClientResetRequiredError.html">ClientResetRequiredError</a> (?)**
+      
+      
       
    
    
@@ -652,7 +654,7 @@ public **boolean** isAllowWritesOnUiThread ()
 
 Returns whether calls to **Realm#executeTransaction (?)** can be done on the UI thread.
 
-**Note: Realm does not allow blocking transactions to be run on the main thread unless users explicitly opt in with :ref:`Builder#allowWritesOnUiThread(boolean) <io_realm_RealmConfiguration_Builder_allowWritesOnUiThread_boolean_>` or its Realm Sync builder counterpart.
+**Note: Realm does not allow blocking transactions to be run on the main thread unless users explicitly opt in with :ref:`Builder.allowWritesOnUiThread(boolean) <io_realm_RealmConfiguration_Builder_allowWritesOnUiThread_boolean_>` or its Realm Sync builder counterpart.
 
 **
 
@@ -671,7 +673,7 @@ public **boolean** isAllowQueriesOnUiThread ()
 
 Returns whether a :ref:`RealmQuery <io_realm_RealmQuery>` is allowed to be launched from the UI thread.
 
-By default Realm allows queries on the main thread. To disallow this users have to explicitly opt in with :ref:`Builder#allowQueriesOnUiThread(boolean) <io_realm_RealmConfiguration_Builder_allowQueriesOnUiThread_boolean_>` or its Realm Sync builder counterpart.
+By default Realm allows queries on the main thread. To disallow this users have to explicitly opt in with :ref:`Builder.allowQueriesOnUiThread(boolean) <io_realm_RealmConfiguration_Builder_allowQueriesOnUiThread_boolean_>` or its Realm Sync builder counterpart.
 
 
 

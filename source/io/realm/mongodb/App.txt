@@ -149,11 +149,11 @@ And access collections from the remote Realm App as shown here:
       
       
       
-   - :ref:`User#getFunctions() <io_realm_mongodb_User_getFunctions__>`
+   - :ref:`User.getFunctions() <io_realm_mongodb_User_getFunctions__>`
       
       
       
-   - :ref:`User#getMongoClient(String) <io_realm_mongodb_User_getMongoClient_String_>`
+   - :ref:`User.getMongoClient(String) <io_realm_mongodb_User_getMongoClient_String_>`
       
       
       
@@ -234,7 +234,7 @@ Method Summary
    * - public `Map <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__ 
      - :ref:`allUsers <io_realm_mongodb_App_allUsers__>` ()
        
-       Returns all known users that are either :ref:`User.State#LOGGED_IN <io_realm_mongodb_User_State_LOGGED_IN>` or :ref:`User.State#LOGGED_OUT <io_realm_mongodb_User_State_LOGGED_OUT>`.
+       Returns all known users that are either :ref:`User.State.LOGGED_IN <io_realm_mongodb_User_State_LOGGED_IN>` or :ref:`User.State.LOGGED_OUT <io_realm_mongodb_User_State_LOGGED_OUT>`.
        
        
        
@@ -276,7 +276,7 @@ Method Summary
    * - public :ref:`EmailPasswordAuth <io_realm_mongodb_auth_EmailPasswordAuth>`
      - :ref:`getEmailPassword <io_realm_mongodb_App_getEmailPassword__>` ()
        
-       Returns a wrapper for interacting with functionality related to users either being created or logged in using the :ref:`Credentials.Provider#EMAIL_PASSWORD <io_realm_mongodb_Credentials_Provider_EMAIL_PASSWORD>` identity provider.
+       Returns a wrapper for interacting with functionality related to users either being created or logged in using the :ref:`Credentials.Provider.EMAIL_PASSWORD <io_realm_mongodb_Credentials_Provider_EMAIL_PASSWORD>` identity provider.
        
        
        
@@ -342,7 +342,7 @@ Method Summary
    * - public **boolean**
      - :ref:`equals <io_realm_mongodb_App_equals_Object_>` (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
        
-       Two Apps are considered equal and will share their underlying state if they both refer to the same :ref:`AppConfiguration#getAppId() <io_realm_mongodb_AppConfiguration_getAppId__>`.
+       Two Apps are considered equal and will share their underlying state if they both refer to the same :ref:`AppConfiguration.getAppId() <io_realm_mongodb_AppConfiguration_getAppId__>`.
        
        
        
@@ -421,7 +421,7 @@ allUsers
 public `Map <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  allUsers ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Returns all known users that are either :ref:`User.State#LOGGED_IN <io_realm_mongodb_User_State_LOGGED_IN>` or :ref:`User.State#LOGGED_OUT <io_realm_mongodb_User_State_LOGGED_OUT>`.
+Returns all known users that are either :ref:`User.State.LOGGED_IN <io_realm_mongodb_User_State_LOGGED_IN>` or :ref:`User.State.LOGGED_OUT <io_realm_mongodb_User_State_LOGGED_OUT>`.
 
 Only users that at some point logged into this device will be returned.
 
@@ -438,7 +438,7 @@ switchUser
 public :ref:`User <io_realm_mongodb_User>` switchUser (:ref:`User <io_realm_mongodb_User>` user)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Switch current user.The current user is the user returned by :ref:`#currentUser() <io_realm_mongodb_App_currentUser__>`.
+Switch current user.The current user is the user returned by :ref:`currentUser() <io_realm_mongodb_App_currentUser__>`.
 
 
 
@@ -502,11 +502,11 @@ public :ref:`User <io_realm_mongodb_User>` login (:ref:`Credentials <io_realm_mo
 
 Logs in as a user with the given credentials associated with an authentication provider.The user who logs in becomes the current user. Other App functionality acts on behalf of the current user.
 
-If there was already a current user, that user is still logged in and can be found in the list returned by :ref:`#allUsers() <io_realm_mongodb_App_allUsers__>`.
+If there was already a current user, that user is still logged in and can be found in the list returned by :ref:`allUsers() <io_realm_mongodb_App_allUsers__>`.
 
 
 
-It is also possible to switch between which user is considered the current user by using :ref:`#switchUser(User) <io_realm_mongodb_App_switchUser_User_>`.
+It is also possible to switch between which user is considered the current user by using :ref:`switchUser(User) <io_realm_mongodb_App_switchUser_User_>`.
 
 
 
@@ -541,11 +541,11 @@ public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` loginAsync (:ref:`Credent
 
 Logs in as a user with the given credentials associated with an authentication provider.The user who logs in becomes the current user. Other App functionality acts on behalf of the current user.
 
-If there was already a current user, that user is still logged in and can be found in the list returned by :ref:`#allUsers() <io_realm_mongodb_App_allUsers__>`.
+If there was already a current user, that user is still logged in and can be found in the list returned by :ref:`allUsers() <io_realm_mongodb_App_allUsers__>`.
 
 
 
-It is also possible to switch between which user is considered the current user by using :ref:`#switchUser(User) <io_realm_mongodb_App_switchUser_User_>`.
+It is also possible to switch between which user is considered the current user by using :ref:`switchUser(User) <io_realm_mongodb_App_switchUser_User_>`.
 
 
 
@@ -580,7 +580,7 @@ getEmailPassword
 public :ref:`EmailPasswordAuth <io_realm_mongodb_auth_EmailPasswordAuth>` getEmailPassword ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Returns a wrapper for interacting with functionality related to users either being created or logged in using the :ref:`Credentials.Provider#EMAIL_PASSWORD <io_realm_mongodb_Credentials_Provider_EMAIL_PASSWORD>` identity provider.
+Returns a wrapper for interacting with functionality related to users either being created or logged in using the :ref:`Credentials.Provider.EMAIL_PASSWORD <io_realm_mongodb_Credentials_Provider_EMAIL_PASSWORD>` identity provider.
 
 
 
@@ -673,7 +673,7 @@ Returns a *Functions* manager for invoking the Realm App's Realm Functions.This 
       
       
       
-   - :ref:`AppConfiguration#getDefaultCodecRegistry() <io_realm_mongodb_AppConfiguration_getDefaultCodecRegistry__>`
+   - :ref:`AppConfiguration.getDefaultCodecRegistry() <io_realm_mongodb_AppConfiguration_getDefaultCodecRegistry__>`
       
       
       
@@ -740,7 +740,7 @@ equals
 public **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Two Apps are considered equal and will share their underlying state if they both refer to the same :ref:`AppConfiguration#getAppId() <io_realm_mongodb_AppConfiguration_getAppId__>`.
+Two Apps are considered equal and will share their underlying state if they both refer to the same :ref:`AppConfiguration.getAppId() <io_realm_mongodb_AppConfiguration_getAppId__>`.
 
 
 
