@@ -19,7 +19,7 @@ io.realm
 
 
 
-- `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
+- `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
 
 
 
@@ -28,10 +28,10 @@ io.realm
 
 
 
-- `java.lang.Comparable <https://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.html>`__
+- `java.lang.Comparable <https://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.html>`__ 
 
 
-A ``MutableRealmInteger``  is a mutable, `Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__-like numeric quantity. It behaves almost exactly as a reference to a `Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__. More specifically:
+A ``MutableRealmInteger``  is a mutable, `Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__ -like numeric quantity. It behaves almost exactly as a reference to a `Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__ . More specifically:
 
 
 
@@ -40,17 +40,17 @@ A ``MutableRealmInteger``  is a mutable, `Long <https://docs.oracle.com/javase/7
    
    
    
-- The **#equals (?)** operator compares the contained `Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__ values. ``null`` -valued ``MutableRealmInteger``  are ``.equals`` 
+- The **#equals (?)** operator compares the contained `Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__  values. ``null`` -valued ``MutableRealmInteger``  are ``.equals`` 
    
    
    
    
-- The **#compareTo (?)** operator compares the contained `Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__ values. It considers ``null``  < any non-``null``  value.
+- The **#compareTo (?)** operator compares the contained `Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__  values. It considers ``null``  < any non-``null``  value.
    
    
    
    
-- The **#increment (?)** and **#decrement (?)** operators throw `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__ when applied to a ``null`` -valued ``MutableRealmInteger`` .
+- The **#increment (?)** and **#decrement (?)** operators throw `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  when applied to a ``null`` -valued ``MutableRealmInteger`` .
    
    
    
@@ -59,7 +59,7 @@ A ``MutableRealmInteger``  is a mutable, `Long <https://docs.oracle.com/javase/7
 
 ``MutableRealmInteger`` s are most interesting as members of a managed :ref:`RealmModel <io_realm_RealmModel>` object. When managed, the **#increment (?)** and **#decrement (?)** operators implement a 
 
-`conflict free replicated data type <https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type>`__: Simultaneous increments and decrements from multiple distributed clients will be aggregated correctly. For instance, if the value of ``counter``  field for the object representing user "Fred" is currently 0, then the following code, executed on two different devices, simultaneously, even if connected by only a slow, unreliable network, will 
+`conflict free replicated data type <https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type>`__ : Simultaneous increments and decrements from multiple distributed clients will be aggregated correctly. For instance, if the value of ``counter``  field for the object representing user "Fred" is currently 0, then the following code, executed on two different devices, simultaneously, even if connected by only a slow, unreliable network, will 
 
 **always** cause the value of ``counter``  to converge, eventually on the value 2.
 
@@ -129,7 +129,7 @@ Method Summary
      - Method and Description
    
    * - public static :ref:`MutableRealmInteger <io_realm_MutableRealmInteger>`
-     - :ref:`valueOf <io_realm_MutableRealmInteger_valueOf_Long_>` (`Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__ value)
+     - :ref:`valueOf <io_realm_MutableRealmInteger_valueOf_Long_>` (`Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__  value)
        
        Creates a new, unmanaged ``MutableRealmInteger``  with the specified initial value.
        
@@ -159,7 +159,7 @@ Method Summary
        
    
    * - public static :ref:`MutableRealmInteger <io_realm_MutableRealmInteger>`
-     - :ref:`valueOf <io_realm_MutableRealmInteger_valueOf_String_>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ value)
+     - :ref:`valueOf <io_realm_MutableRealmInteger_valueOf_String_>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
        
        Creates a new, unmanaged ``MutableRealmInteger``  with the specified initial value.
        
@@ -168,7 +168,7 @@ Method Summary
        
        
    
-   * - public abstract `Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__
+   * - public abstract `Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__ 
      - :ref:`get <io_realm_MutableRealmInteger_get__>` ()
        
        Gets the ``MutableRealmInteger``  value.
@@ -179,7 +179,7 @@ Method Summary
        
    
    * - public abstract **void**
-     - :ref:`set <io_realm_MutableRealmInteger_set_Long_>` (`Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__ newValue)
+     - :ref:`set <io_realm_MutableRealmInteger_set_Long_>` (`Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__  newValue)
        
        Sets the ``MutableRealmInteger``  value.
        
@@ -247,7 +247,7 @@ Method Summary
        
    
    * - public final **boolean**
-     - :ref:`equals <io_realm_MutableRealmInteger_equals_Object_>` (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ o)
+     - :ref:`equals <io_realm_MutableRealmInteger_equals_Object_>` (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
        
        Two ``MutableRealmInteger`` s are ``.equals``  if and only if their ``longValues``  are equal.
        
@@ -264,7 +264,7 @@ Inherited Methods
 
 
 
-- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__: 
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
    
    ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
    
@@ -285,8 +285,8 @@ valueOf
 
 
 
-public static :ref:`MutableRealmInteger <io_realm_MutableRealmInteger>` valueOf (`Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__ value)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+public static :ref:`MutableRealmInteger <io_realm_MutableRealmInteger>` valueOf (`Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__  value)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Creates a new, unmanaged ``MutableRealmInteger``  with the specified initial value.
 
@@ -327,8 +327,8 @@ __________
 
 
 
-public static :ref:`MutableRealmInteger <io_realm_MutableRealmInteger>` valueOf (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ value)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+public static :ref:`MutableRealmInteger <io_realm_MutableRealmInteger>` valueOf (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Creates a new, unmanaged ``MutableRealmInteger``  with the specified initial value.
 
@@ -340,7 +340,7 @@ __________
 
 
 
-- ``value``: initial value: parsed by `Long#parseLong <https://docs.oracle.com/javase/7/docs/api/java/lang/Long/parseLong.html>`__.
+- ``value``: initial value: parsed by `Long#parseLong <https://docs.oracle.com/javase/7/docs/api/java/lang/Long/parseLong.html>`__ .
    
    
    
@@ -370,8 +370,8 @@ get
 
 
 
-public abstract `Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__ get ()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+public abstract `Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__  get ()
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Gets the ``MutableRealmInteger``  value. The value may be null.
 
@@ -385,8 +385,8 @@ set
 
 
 
-public abstract **void** set (`Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__ newValue)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+public abstract **void** set (`Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__  newValue)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sets the ``MutableRealmInteger``  value. Calling ``set``  forcibly sets the ``MutableRealmInteger``  to the provided value. Doing this obliterates the effects of any calls to **#increment (?)** and **#decrement (?)** perceived before the call to ``set`` .
 
@@ -542,8 +542,8 @@ equals
 
 
 
-public final **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ o)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+public final **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Two ``MutableRealmInteger`` s are ``.equals``  if and only if their ``longValues``  are equal.
 

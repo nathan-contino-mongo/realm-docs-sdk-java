@@ -20,10 +20,10 @@ io.realm.mongodb.sync
 
 
 - :ref:`io.realm.mongodb.AppException <io_realm_mongodb_AppException>`
-- `java.lang.RuntimeException <https://docs.oracle.com/javase/7/docs/api/java/lang/RuntimeException.html>`__
-- `java.lang.Exception <https://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html>`__
-- `java.lang.Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__
-- `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__
+- `java.lang.RuntimeException <https://docs.oracle.com/javase/7/docs/api/java/lang/RuntimeException.html>`__ 
+- `java.lang.Exception <https://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html>`__ 
+- `java.lang.Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__ 
+- `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
 
 
 
@@ -60,7 +60,7 @@ Method Summary
        
        
    
-   * - public `File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__
+   * - public `File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__ 
      - :ref:`getBackupFile <io_realm_mongodb_sync_ClientResetRequiredError_getBackupFile__>` ()
        
        Returns the location of the backed up Realm file.
@@ -76,7 +76,7 @@ Method Summary
        
        
    
-   * - public `File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__
+   * - public `File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__ 
      - :ref:`getOriginalFile <io_realm_mongodb_sync_ClientResetRequiredError_getOriginalFile__>` ()
        
        Returns the location of the original Realm file.
@@ -97,22 +97,22 @@ Inherited Methods
    ``getErrorCode`` , ``getErrorType`` , ``getErrorIntValue`` , ``getErrorMessage`` , ``getException`` , ``getCategory`` , ``toString`` 
    
    
-- Methods inherited from interface `java.lang.RuntimeException <https://docs.oracle.com/javase/7/docs/api/java/lang/RuntimeException.html>`__: 
+- Methods inherited from interface `java.lang.RuntimeException <https://docs.oracle.com/javase/7/docs/api/java/lang/RuntimeException.html>`__ : 
    
    
    
    
-- Methods inherited from interface `java.lang.Exception <https://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html>`__: 
+- Methods inherited from interface `java.lang.Exception <https://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html>`__ : 
    
    
    
    
-- Methods inherited from interface `java.lang.Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__: 
+- Methods inherited from interface `java.lang.Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__ : 
    
    ``getMessage`` , ``getLocalizedMessage`` , ``getCause`` , ``initCause`` , ``toString`` , ``printStackTrace`` , ``printStackTrace`` , ``printStackTrace`` , ``fillInStackTrace`` , ``getStackTrace`` , ``setStackTrace`` , ``addSuppressed`` , ``getSuppressed`` 
    
    
-- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__: 
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
    
    ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
    
@@ -136,7 +136,7 @@ executeClientReset
 public **void** executeClientReset ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Calling this method will execute the Client Reset manually instead of waiting until next app restart. This will only be possible if all instances of that Realm have been closed, otherwise a `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__ will be thrown.
+Calling this method will execute the Client Reset manually instead of waiting until next app restart. This will only be possible if all instances of that Realm have been closed, otherwise a `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  will be thrown.
 
 After this method returns, the backup file can be found in the location returned by :ref:`#getBackupFile() <io_realm_mongodb_sync_ClientResetRequiredError_getBackupFile__>`. The file at :ref:`#getOriginalFile() <io_realm_mongodb_sync_ClientResetRequiredError_getOriginalFile__>` have been deleted, but will be recreated from scratch next time a Realm instance is opened.
 
@@ -157,8 +157,8 @@ getBackupFile
 
 
 
-public `File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__ getBackupFile ()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+public `File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  getBackupFile ()
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the location of the backed up Realm file. The file will not be present until the Client Reset has been fully executed.
 
@@ -185,8 +185,8 @@ getOriginalFile
 
 
 
-public `File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__ getOriginalFile ()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+public `File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  getOriginalFile ()
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the location of the original Realm file. After the Client Reset has completed, the file at this location will be deleted.
 
