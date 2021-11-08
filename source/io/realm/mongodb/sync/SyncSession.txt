@@ -260,6 +260,22 @@ public :ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>` getCon
 Returns the :ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>` that is responsible for controlling the session.
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getUser
@@ -275,6 +291,22 @@ public :ref:`User <io_realm_mongodb_User>` getUser ()
 Returns the :ref:`User <io_realm_mongodb_User>` defined by the :ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>` that is used to connect to MongoDB Realm.
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getServerUrl
@@ -289,6 +321,22 @@ public `URI <https://docs.oracle.com/javase/7/docs/api/java/net/URI.html>`__  ge
 
 Returns the `URI <https://docs.oracle.com/javase/7/docs/api/java/net/URI.html>`__  describing the remote Realm which this session connects to and synchronizes changes with.
 
+
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -307,7 +355,36 @@ Get the current session's state, as defined in :ref:`SyncSession.State <io_realm
 Note that the state may change after this method returns.
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - :ref:`SyncSession.State <io_realm_mongodb_sync_SyncSession_State>`
+         
+         
+         
+      
+      
+      
+   
+   
+
 .. seealso::
+
 
    
    - :ref:`SyncSession.State <io_realm_mongodb_sync_SyncSession_State>`
@@ -333,7 +410,36 @@ public :ref:`ConnectionState <io_realm_mongodb_sync_ConnectionState>` getConnect
 Get the current state of the connection used by the session as defined in :ref:`ConnectionState <io_realm_mongodb_sync_ConnectionState>`.
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - :ref:`ConnectionState <io_realm_mongodb_sync_ConnectionState>`
+         
+         
+         
+      
+      
+      
+   
+   
+
 .. seealso::
+
 
    
    - :ref:`ConnectionState <io_realm_mongodb_sync_ConnectionState>`
@@ -359,6 +465,22 @@ public **boolean** isConnected ()
 Checks if the session is connected to the server and can synchronize data. This is a best guess effort. To conserve battery the underlying implementation uses heartbeats to detect if the connection is still available. So if no data is actively being synced and some time has elapsed since the last heartbeat, the connection could have been dropped but this method will still return ``true`` .
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 addDownloadProgressListener
@@ -376,24 +498,31 @@ Adds a progress listener tracking changes that need to be downloaded from the Re
 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``mode`` - type of mode used. See :ref:`ProgressMode <io_realm_mongodb_sync_ProgressMode>` for more information.
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``mode`` - type of mode used. See :ref:`ProgressMode <io_realm_mongodb_sync_ProgressMode>` for more information.
+      
+      
+      
+      
+      
+   - ``listener`` - the listener to register.
+      
+      
+      
    
    
-- ``listener`` - the listener to register.
+   **Returns**
    
-   
-   
-
+   **Throws**
 
 
 
@@ -412,24 +541,31 @@ Adds a progress listener tracking changes that need to be uploaded from the devi
 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``mode`` - type of mode used. See :ref:`ProgressMode <io_realm_mongodb_sync_ProgressMode>` for more information.
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``mode`` - type of mode used. See :ref:`ProgressMode <io_realm_mongodb_sync_ProgressMode>` for more information.
+      
+      
+      
+      
+      
+   - ``listener`` - the listener to register.
+      
+      
+      
    
    
-- ``listener`` - the listener to register.
+   **Returns**
    
-   
-   
-
+   **Throws**
 
 
 
@@ -444,18 +580,25 @@ public synchronized **void** removeProgressListener (:ref:`ProgressListener <io_
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Removes a progress listener. If the listener wasn't registered, this method will do nothing.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``listener`` - listener to remove.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``listener`` - listener to remove.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -472,18 +615,37 @@ public synchronized **void** addConnectionChangeListener (:ref:`ConnectionListen
 Adds a listener tracking changes to the connection backing this session. See :ref:`ConnectionState <io_realm_mongodb_sync_ConnectionState>` for further details.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``listener`` - the listener to register.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``listener`` - the listener to register.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - :ref:`ConnectionState <io_realm_mongodb_sync_ConnectionState>`
+         
+         
+         
+      
+      
+      
+   
+   
 
 
 
@@ -491,6 +653,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - :ref:`ConnectionState <io_realm_mongodb_sync_ConnectionState>`
@@ -516,18 +679,25 @@ public synchronized **void** removeConnectionChangeListener (:ref:`ConnectionLis
 Removes a previously registered :ref:`ConnectionListener <io_realm_mongodb_sync_ConnectionListener>`.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``listener`` - listener to remove
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``listener`` - listener to remove
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -551,6 +721,22 @@ Calling this method will block until all known remote changes have been download
 This method cannot be called before the session has been started.
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 Throws
@@ -565,6 +751,22 @@ public **boolean** downloadAllServerChanges (**long** timeout, `TimeUnit <https:
 
 Calling this method will block until all known remote changes have been downloaded and applied to the Realm or the specified timeout is hit. This will involve network access, so calling this method should only be done from a non-UI thread.This method cannot be called before the Realm has been opened.
 
+
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -588,6 +790,22 @@ Calling this method will block until all known local changes have been uploaded 
 This method cannot be called before the Realm has been opened.
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 Throws
@@ -602,6 +820,22 @@ public **boolean** uploadAllLocalChanges (**long** timeout, `TimeUnit <https://d
 
 Calling this method will block until all known local changes have been uploaded to the server or the specified timeout is hit. This will involve network access, so calling this method should only be done from a non-UI thread.This method cannot be called before the Realm has been opened.
 
+
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -631,7 +865,40 @@ A session is considered started if :ref:`getState() <io_realm_mongodb_sync_SyncS
 
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - :ref:`getState() <io_realm_mongodb_sync_SyncSession_getState__>`
+         
+         
+         
+      - :ref:`stop() <io_realm_mongodb_sync_SyncSession_stop__>`
+         
+         
+         
+      
+      
+      
+   
+   
+
 .. seealso::
+
 
    
    - :ref:`getState() <io_realm_mongodb_sync_SyncSession_getState__>`
@@ -664,5 +931,21 @@ Stops any synchronization with the Realm Object Server until the Realm is re-ope
 
 If the session is already stopped, calling this method will do nothing.
 
+
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
 
 

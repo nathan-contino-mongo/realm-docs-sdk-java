@@ -330,6 +330,22 @@ public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the unique app id that identities the Realm application.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getAppName
@@ -343,6 +359,22 @@ public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the name used to describe the Realm application. This is only used as debug information.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getAppVersion
@@ -356,6 +388,22 @@ public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the version of this Realm application. This is only used as debug information.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getBaseUrl
@@ -369,6 +417,22 @@ public `URL <https://docs.oracle.com/javase/7/docs/api/java/net/URL.html>`__  ge
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the base url for this Realm application.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getEncryptionKey
@@ -382,6 +446,22 @@ public **byte** getEncryptionKey ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the encryption key, if any, that is used to encrypt Realm users meta data on this device. If no key is returned, the data is not encrypted.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getRequestTimeoutMs
@@ -395,6 +475,22 @@ public **long** getRequestTimeoutMs ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the default timeout for network requests against the Realm application in milliseconds.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getAuthorizationHeaderName
@@ -408,6 +504,22 @@ public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the name of the header used to carry authentication data when making network requests towards MongoDB Realm.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getCustomRequestHeaders
@@ -421,6 +533,22 @@ public `Map <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  g
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns any custom configured headers that will be sent alongside other headers when making network requests towards MongoDB Realm.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getDefaultErrorHandler
@@ -435,6 +563,22 @@ public :ref:`SyncSession.ErrorHandler <io_realm_mongodb_sync_SyncSession_ErrorHa
 
 Returns the default error handler used by synced Realms if there are problems with their :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>`.
 
+
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -451,6 +595,22 @@ public :ref:`SyncSession.ClientResetHandler <io_realm_mongodb_sync_SyncSession_C
 Returns the default Client Reset handler used by synced Realms if there are problems with their :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>`.
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getSyncRootDirectory
@@ -464,6 +624,22 @@ public `File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  g
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the root folder containing all files and Realms used when synchronizing data between the device and MongoDB Realm.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getDefaultCodecRegistry
@@ -479,7 +655,40 @@ public **CodecRegistry (?)** getDefaultCodecRegistry ()
 Returns the default codec registry used to encode and decode BSON arguments and results when calling remote Realm :ref:`io.realm.mongodb.functions.Functions <io_realm_mongodb_functions_Functions>` and accessing a remote :ref:`io.realm.mongodb.mongo.MongoDatabase <io_realm_mongodb_mongo_MongoDatabase>`.
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - :ref:`DEFAULT_BSON_CODEC_REGISTRY <io_realm_mongodb_AppConfiguration_DEFAULT_BSON_CODEC_REGISTRY>`
+         
+         
+         
+      - **Builder#getDefaultCodecRegistry() (?)**
+         
+         
+         
+      
+      
+      
+   
+   
+
 .. seealso::
+
 
    
    - :ref:`DEFAULT_BSON_CODEC_REGISTRY <io_realm_mongodb_AppConfiguration_DEFAULT_BSON_CODEC_REGISTRY>`
@@ -509,6 +718,22 @@ public :ref:`HttpLogObfuscator <io_realm_mongodb_log_obfuscator_HttpLogObfuscato
 Returns the :ref:`HttpLogObfuscator <io_realm_mongodb_log_obfuscator_HttpLogObfuscator>` used in the app, which keeps sensitive information in HTTP requests from being displayed in the logcat.
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 equals
@@ -522,6 +747,22 @@ public **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/ja
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 hashCode
@@ -534,5 +775,21 @@ hashCode
 public **int** hashCode ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
 
 

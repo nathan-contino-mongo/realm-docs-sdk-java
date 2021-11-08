@@ -33,6 +33,7 @@ A *user* holds the user's meta data and tokens for accessing Realm App functiona
 
 .. seealso::
 
+
    
    - :ref:`App.login(Credentials) <io_realm_mongodb_App_login_Credentials_>`
       
@@ -321,6 +322,22 @@ public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the server id of the user.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getProfile
@@ -334,6 +351,22 @@ public :ref:`UserProfile <io_realm_mongodb_UserProfile>` getProfile ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the profile for this user.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getIdentities
@@ -347,7 +380,36 @@ public `List <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__ 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns a new list of the user's identities.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - :ref:`UserIdentity <io_realm_mongodb_UserIdentity>`
+         
+         
+         
+      
+      
+      
+   
+   
+
 .. seealso::
+
 
    
    - :ref:`UserIdentity <io_realm_mongodb_UserIdentity>`
@@ -371,6 +433,22 @@ public :ref:`Credentials.Provider <io_realm_mongodb_Credentials_Provider>` getPr
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the provider type used to log the user
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getAccessToken
@@ -384,6 +462,22 @@ public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the current access token for the user.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getRefreshToken
@@ -397,6 +491,22 @@ public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the current refresh token for the user.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getDeviceId
@@ -410,6 +520,22 @@ public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns a unique identifier for the device the user logged in to.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getApp
@@ -425,6 +551,22 @@ public :ref:`App <io_realm_mongodb_App>` getApp ()
 Returns the :ref:`App <io_realm_mongodb_App>` this user is associated with.
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getState
@@ -439,6 +581,22 @@ public :ref:`User.State <io_realm_mongodb_User_State>` getState ()
 
 Returns the :ref:`State <io_realm_mongodb_User_State>` the user is in.
 
+
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -457,6 +615,22 @@ Return the custom user data associated with the user in the Realm App.The data i
 
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 refreshCustomData
@@ -470,6 +644,22 @@ public **Document (?)** refreshCustomData ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Re-fetch custom user data from the Realm App.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 Throws
@@ -487,18 +677,25 @@ Re-fetch custom user data from the Realm App asynchronously.This is the asynchro
 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``callback`` - The callback that will receive the result or any errors from the request.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``callback`` - The callback that will receive the result or any errors from the request.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -518,6 +715,22 @@ public **boolean** isLoggedIn ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns true if the user is currently logged in. Returns whether or not this user is still logged into the MongoDB Realm App.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 linkCredentials
@@ -549,18 +762,25 @@ Links the current user with a new user identity represented by the given credent
 Note: It is not possible to link two existing users of MongoDB Realm. The provided credentials must not have been used by another user.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``credentials`` - the credentials to link with the current user.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``credentials`` - the credentials to link with the current user.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -598,22 +818,29 @@ Links the current user with a new user identity represented by the given credent
 Note: It is not possible to link two existing users of MongoDB Realm. The provided credentials must not have been used by another user.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``credentials`` - the credentials to link with the current user.
+   
+   **Type Parameters**
    
    
    
-- ``callback`` - callback when user identities has been linked or it failed. The callback will always happen on the same thread as this method is called on.
+   **Parameters**
+   
+   - ``credentials`` - the credentials to link with the current user.
+      
+      
+      
+   - ``callback`` - callback when user identities has been linked or it failed. The callback will always happen on the same thread as this method is called on.
+      
+      
+      
    
    
+   **Returns**
    
-
+   **Throws**
 
 
 
@@ -633,6 +860,22 @@ public :ref:`User <io_realm_mongodb_User>` remove ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Calling this will remove the user and any Realms the user has from the device. No data is removed from the server. If the user is logged in when calling this method, the user is logged out before any data is deleted.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 Throws
@@ -651,18 +894,25 @@ public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` removeAsync (:ref:`io.rea
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Calling this will asynchronously remove the user and any Realms the user has from the device. No data is removed from the server. If the user is logged in when calling this method, the user is logged out before any data is deleted.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``callback`` - callback when removing the user has completed or failed. The callback will always happen on the same thread as this method is called on.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``callback`` - callback when removing the user has completed or failed. The callback will always happen on the same thread as this method is called on.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -696,6 +946,22 @@ All other users will be marked as :ref:`User.State.LOGGED_OUT <io_realm_mongodb_
 
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 Throws
@@ -728,18 +994,25 @@ All other users will be marked as :ref:`User.State.LOGGED_OUT <io_realm_mongodb_
 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``callback`` - callback when logging out has completed or failed. The callback will always happen on the same thread as this method is called on.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``callback`` - callback when logging out has completed or failed. The callback will always happen on the same thread as this method is called on.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -759,6 +1032,22 @@ public synchronized :ref:`ApiKeyAuth <io_realm_mongodb_auth_ApiKeyAuth>` getApiK
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns a wrapper for managing API keys controlled by the current user.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 Throws
@@ -779,7 +1068,36 @@ public synchronized :ref:`Functions <io_realm_mongodb_functions_Functions>` getF
 Returns a *functions* manager for invoking MongoDB Realm Functions.This will use the associated app's default codec registry to encode and decode arguments and results.
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - :ref:`Functions <io_realm_mongodb_functions_Functions>`
+         
+         
+         
+      
+      
+      
+   
+   
+
 .. seealso::
+
 
    
    - :ref:`Functions <io_realm_mongodb_functions_Functions>`
@@ -798,20 +1116,40 @@ public :ref:`Functions <io_realm_mongodb_functions_Functions>` getFunctions (**C
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns a *functions* manager for invoking Realm Functions with custom codec registry for encoding and decoding arguments and results.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``codecRegistry`` - The codec registry to use for encoding and decoding arguments and results towards the remote Realm App.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``codecRegistry`` - The codec registry to use for encoding and decoding arguments and results towards the remote Realm App.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - :ref:`Functions <io_realm_mongodb_functions_Functions>`
+         
+         
+         
+      
+      
+      
+   
+   
 
 .. seealso::
+
 
    
    - :ref:`Functions <io_realm_mongodb_functions_Functions>`
@@ -837,18 +1175,25 @@ public synchronized :ref:`Push <io_realm_mongodb_push_Push>` getPush (`String <h
 Returns the :ref:`Push <io_realm_mongodb_push_Push>` instance for managing push notification registrations.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``serviceName`` - the service name used to connect to the server.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``serviceName`` - the service name used to connect to the server.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -865,18 +1210,25 @@ public synchronized :ref:`MongoClient <io_realm_mongodb_mongo_MongoClient>` getM
 Returns a :ref:`MongoClient <io_realm_mongodb_mongo_MongoClient>` instance for accessing documents in the database.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``serviceName`` - the service name used to connect to the server.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``serviceName`` - the service name used to connect to the server.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -891,6 +1243,22 @@ public **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/ja
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Two Users are considered equal if they have the same user identity and are associated with the same app.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 hashCode
@@ -903,5 +1271,21 @@ hashCode
 public **int** hashCode ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
 
 

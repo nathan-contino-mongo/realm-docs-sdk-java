@@ -33,6 +33,7 @@ Before any access is possible, there must be an active, logged-in user.
 
 .. seealso::
 
+
    
    - :ref:`MongoDatabase <io_realm_mongodb_mongo_MongoDatabase>`
       
@@ -534,6 +535,22 @@ public :ref:`MongoNamespace <io_realm_mongodb_mongo_MongoNamespace>` getNamespac
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Gets the namespace of this collection, i.e. the database and collection names together.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getName
@@ -547,6 +564,22 @@ public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Gets the name of this collection
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getDocumentClass
@@ -564,6 +597,22 @@ Gets the class of documents stored in this collection.If you used the simple :re
 
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getCodecRegistry
@@ -577,6 +626,22 @@ public **CodecRegistry (?)** getCodecRegistry ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Gets the codec registry for the MongoCollection.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 withDocumentClass
@@ -590,31 +655,29 @@ public :ref:`MongoCollection <io_realm_mongodb_mongo_MongoCollection>` withDocum
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Creates a new MongoCollection instance with a different default class to cast any documents returned from the database into.
+.. example::
 
 
-Type Parameters
-_______________
-
-
-
-- ``NewDocumentT`` - The type that the new collection will encode documents from and decode documents to.
+   
+   **Type Parameters**
+   
+   - ``NewDocumentT`` - The type that the new collection will encode documents from and decode documents to.
+      
+      
+      
    
    
+   **Parameters**
    
-
-
-
-
-Parameters
-__________
-
-
-
-- ``clazz`` - the default class to which any documents returned from the database will be cast.
+   - ``clazz`` - the default class to which any documents returned from the database will be cast.
+      
+      
+      
    
    
+   **Returns**
    
-
+   **Throws**
 
 
 
@@ -629,20 +692,27 @@ public :ref:`MongoCollection <io_realm_mongodb_mongo_MongoCollection>` withCodec
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Creates a new MongoCollection instance with a different codec registry.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``codecRegistry`` - the new **CodecRegistry (?)** for the collection.
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``codecRegistry`` - the new **CodecRegistry (?)** for the collection.
+      
+      
+      
+      
+      
    
    
-
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -657,6 +727,22 @@ public :ref:`RealmResultTask <io_realm_mongodb_RealmResultTask>` count ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Counts the number of documents in the collection.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 .. _io_realm_mongodb_mongo_MongoCollection_count_Bson_:
 
 
@@ -665,18 +751,25 @@ public :ref:`RealmResultTask <io_realm_mongodb_RealmResultTask>` count (**Bson (
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Counts the number of documents in the collection according to the given options.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``filter`` - the query filter
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``filter`` - the query filter
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 .. _io_realm_mongodb_mongo_MongoCollection_count_Bson__CountOptions_:
 
@@ -686,22 +779,29 @@ public :ref:`RealmResultTask <io_realm_mongodb_RealmResultTask>` count (**Bson (
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Counts the number of documents in the collection according to the given options.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``filter`` - the query filter
+   
+   **Type Parameters**
    
    
    
-- ``options`` - the options describing the count
+   **Parameters**
+   
+   - ``filter`` - the query filter
+      
+      
+      
+   - ``options`` - the options describing the count
+      
+      
+      
    
    
+   **Returns**
    
-
+   **Throws**
 
 
 
@@ -716,6 +816,22 @@ public :ref:`RealmResultTask <io_realm_mongodb_RealmResultTask>` findOne ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Finds a document in the collection.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 .. _io_realm_mongodb_mongo_MongoCollection_findOne_Class_ResultT__:
 
 
@@ -724,31 +840,29 @@ public :ref:`RealmResultTask <io_realm_mongodb_RealmResultTask>` findOne <**Resu
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Finds a document in the collection.
+.. example::
 
 
-Type Parameters
-_______________
-
-
-
-- ``ResultT`` - the target document type
+   
+   **Type Parameters**
+   
+   - ``ResultT`` - the target document type
+      
+      
+      
    
    
+   **Parameters**
    
-
-
-
-
-Parameters
-__________
-
-
-
-- ``resultClass`` - the class to decode each document into
+   - ``resultClass`` - the class to decode each document into
+      
+      
+      
    
    
+   **Returns**
    
-
+   **Throws**
 
 .. _io_realm_mongodb_mongo_MongoCollection_findOne_Bson_:
 
@@ -758,18 +872,25 @@ public :ref:`RealmResultTask <io_realm_mongodb_RealmResultTask>` findOne (**Bson
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Finds a document in the collection.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``filter`` - the query filter
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``filter`` - the query filter
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 .. _io_realm_mongodb_mongo_MongoCollection_findOne_Bson__Class_ResultT__:
 
@@ -779,35 +900,33 @@ public :ref:`RealmResultTask <io_realm_mongodb_RealmResultTask>` findOne <**Resu
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Finds a document in the collection.
+.. example::
 
 
-Type Parameters
-_______________
-
-
-
-- ``ResultT`` - the target document type of the iterable.
+   
+   **Type Parameters**
+   
+   - ``ResultT`` - the target document type of the iterable.
+      
+      
+      
    
    
+   **Parameters**
    
-
-
-
-
-Parameters
-__________
-
-
-
-- ``filter`` - the query filter
-   
+   - ``filter`` - the query filter
+      
+      
+      
+   - ``resultClass`` - the class to decode each document into
+      
+      
+      
    
    
-- ``resultClass`` - the class to decode each document into
+   **Returns**
    
-   
-   
-
+   **Throws**
 
 .. _io_realm_mongodb_mongo_MongoCollection_findOne_Bson__FindOptions_:
 
@@ -817,24 +936,31 @@ public :ref:`RealmResultTask <io_realm_mongodb_RealmResultTask>` findOne (**Bson
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Finds a document in the collection.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``filter`` - the query filter
+   
+   **Type Parameters**
    
    
    
-- ``options`` - a :ref:`FindOptions <io_realm_mongodb_mongo_options_FindOptions>` struct
+   **Parameters**
+   
+   - ``filter`` - the query filter
+      
+      
+      
+   - ``options`` - a :ref:`FindOptions <io_realm_mongodb_mongo_options_FindOptions>` struct
+      
+      
+      
+      
+      
    
    
+   **Returns**
    
-   
-   
-
+   **Throws**
 
 .. _io_realm_mongodb_mongo_MongoCollection_findOne_Bson__FindOptions__Class_ResultT__:
 
@@ -844,41 +970,39 @@ public :ref:`RealmResultTask <io_realm_mongodb_RealmResultTask>` findOne <**Resu
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Finds a document in the collection.
+.. example::
 
 
-Type Parameters
-_______________
-
-
-
-- ``ResultT`` - the target document type of the iterable.
+   
+   **Type Parameters**
+   
+   - ``ResultT`` - the target document type of the iterable.
+      
+      
+      
    
    
+   **Parameters**
    
-
-
-
-
-Parameters
-__________
-
-
-
-- ``filter`` - the query filter
-   
-   
-   
-- ``options`` - a :ref:`FindOptions <io_realm_mongodb_mongo_options_FindOptions>` struct
-   
-   
-   
+   - ``filter`` - the query filter
+      
+      
+      
+   - ``options`` - a :ref:`FindOptions <io_realm_mongodb_mongo_options_FindOptions>` struct
+      
+      
+      
+      
+      
+   - ``resultClass`` - the class to decode each document into
+      
+      
+      
    
    
-- ``resultClass`` - the class to decode each document into
+   **Returns**
    
-   
-   
-
+   **Throws**
 
 
 
@@ -897,6 +1021,22 @@ Finds all documents in the collection.All documents will be delivered in the for
 
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 .. _io_realm_mongodb_mongo_MongoCollection_find_FindOptions_:
 
 
@@ -911,20 +1051,27 @@ All documents will be delivered in the form of a :ref:`FindIterable <io_realm_mo
 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``options`` - a :ref:`FindOptions <io_realm_mongodb_mongo_options_FindOptions>` struct for building the query
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``options`` - a :ref:`FindOptions <io_realm_mongodb_mongo_options_FindOptions>` struct for building the query
+      
+      
+      
+      
+      
    
    
-
+   **Returns**
+   
+   **Throws**
 
 .. _io_realm_mongodb_mongo_MongoCollection_find_Class_ResultT__:
 
@@ -938,31 +1085,29 @@ Finds all documents in the collection specifying an output class.All documents w
 
 
 
+.. example::
 
 
-Type Parameters
-_______________
-
-
-
-- ``ResultT`` - the target document type of the iterable.
+   
+   **Type Parameters**
+   
+   - ``ResultT`` - the target document type of the iterable.
+      
+      
+      
    
    
+   **Parameters**
    
-
-
-
-
-Parameters
-__________
-
-
-
-- ``resultClass`` - the class to decode each document into
+   - ``resultClass`` - the class to decode each document into
+      
+      
+      
    
    
+   **Returns**
    
-
+   **Throws**
 
 .. _io_realm_mongodb_mongo_MongoCollection_find_Class_ResultT___FindOptions_:
 
@@ -978,37 +1123,35 @@ All documents will be delivered in the form of a :ref:`FindIterable <io_realm_mo
 
 
 
+.. example::
 
 
-Type Parameters
-_______________
-
-
-
-- ``ResultT`` - the target document type of the iterable.
+   
+   **Type Parameters**
+   
+   - ``ResultT`` - the target document type of the iterable.
+      
+      
+      
    
    
+   **Parameters**
    
-
-
-
-
-Parameters
-__________
-
-
-
-- ``resultClass`` - the class to decode each document into
-   
-   
-   
-- ``options`` - a :ref:`FindOptions <io_realm_mongodb_mongo_options_FindOptions>` struct for building the query
+   - ``resultClass`` - the class to decode each document into
+      
+      
+      
+   - ``options`` - a :ref:`FindOptions <io_realm_mongodb_mongo_options_FindOptions>` struct for building the query
+      
+      
+      
+      
+      
    
    
+   **Returns**
    
-   
-   
-
+   **Throws**
 
 .. _io_realm_mongodb_mongo_MongoCollection_find_Bson_:
 
@@ -1022,18 +1165,25 @@ Finds all documents in the collection that match the given filter.All documents 
 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``filter`` - the query filter
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``filter`` - the query filter
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 .. _io_realm_mongodb_mongo_MongoCollection_find_Bson__FindOptions_:
 
@@ -1049,24 +1199,31 @@ All documents will be delivered in the form of a :ref:`FindIterable <io_realm_mo
 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``filter`` - the query filter
+   
+   **Type Parameters**
    
    
    
-- ``options`` - a :ref:`FindOptions <io_realm_mongodb_mongo_options_FindOptions>` struct
+   **Parameters**
+   
+   - ``filter`` - the query filter
+      
+      
+      
+   - ``options`` - a :ref:`FindOptions <io_realm_mongodb_mongo_options_FindOptions>` struct
+      
+      
+      
+      
+      
    
    
+   **Returns**
    
-   
-   
-
+   **Throws**
 
 .. _io_realm_mongodb_mongo_MongoCollection_find_Bson__Class_ResultT__:
 
@@ -1080,35 +1237,33 @@ Finds all documents in the collection that match the given filter specifying an 
 
 
 
+.. example::
 
 
-Type Parameters
-_______________
-
-
-
-- ``ResultT`` - the target document type of the iterable.
+   
+   **Type Parameters**
+   
+   - ``ResultT`` - the target document type of the iterable.
+      
+      
+      
    
    
+   **Parameters**
    
-
-
-
-
-Parameters
-__________
-
-
-
-- ``filter`` - the query filter
-   
+   - ``filter`` - the query filter
+      
+      
+      
+   - ``resultClass`` - the class to decode each document into
+      
+      
+      
    
    
-- ``resultClass`` - the class to decode each document into
+   **Returns**
    
-   
-   
-
+   **Throws**
 
 .. _io_realm_mongodb_mongo_MongoCollection_find_Bson__Class_ResultT___FindOptions_:
 
@@ -1124,41 +1279,39 @@ All documents will be delivered in the form of a :ref:`FindIterable <io_realm_mo
 
 
 
+.. example::
 
 
-Type Parameters
-_______________
-
-
-
-- ``ResultT`` - the target document type of the iterable.
+   
+   **Type Parameters**
+   
+   - ``ResultT`` - the target document type of the iterable.
+      
+      
+      
    
    
+   **Parameters**
    
-
-
-
-
-Parameters
-__________
-
-
-
-- ``filter`` - the query filter
-   
-   
-   
-- ``resultClass`` - the class to decode each document into
-   
-   
-   
-- ``options`` - a :ref:`FindOptions <io_realm_mongodb_mongo_options_FindOptions>` struct
+   - ``filter`` - the query filter
+      
+      
+      
+   - ``resultClass`` - the class to decode each document into
+      
+      
+      
+   - ``options`` - a :ref:`FindOptions <io_realm_mongodb_mongo_options_FindOptions>` struct
+      
+      
+      
+      
+      
    
    
+   **Returns**
    
-   
-   
-
+   **Throws**
 
 
 
@@ -1177,18 +1330,25 @@ Aggregates documents according to the specified aggregation pipeline.All documen
 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``pipeline`` - the aggregation pipeline
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``pipeline`` - the aggregation pipeline
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 .. _io_realm_mongodb_mongo_MongoCollection_aggregate_List___extends_Bson___Class_ResultT__:
 
@@ -1202,35 +1362,33 @@ Aggregates documents according to the specified aggregation pipeline specifying 
 
 
 
+.. example::
 
 
-Type Parameters
-_______________
-
-
-
-- ``ResultT`` - the target document type of the iterable.
+   
+   **Type Parameters**
+   
+   - ``ResultT`` - the target document type of the iterable.
+      
+      
+      
    
    
+   **Parameters**
    
-
-
-
-
-Parameters
-__________
-
-
-
-- ``pipeline`` - the aggregation pipeline
-   
+   - ``pipeline`` - the aggregation pipeline
+      
+      
+      
+   - ``resultClass`` - the class to decode each document into
+      
+      
+      
    
    
-- ``resultClass`` - the class to decode each document into
+   **Returns**
    
-   
-   
-
+   **Throws**
 
 
 
@@ -1245,18 +1403,25 @@ public :ref:`RealmResultTask <io_realm_mongodb_RealmResultTask>` insertOne (**Do
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Inserts the provided document. If the document is missing an identifier, the client should generate one.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``document`` - the document to insert
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``document`` - the document to insert
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -1271,18 +1436,25 @@ public :ref:`RealmResultTask <io_realm_mongodb_RealmResultTask>` insertMany (`ja
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Inserts one or more documents.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``documents`` - the documents to insert
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``documents`` - the documents to insert
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -1297,18 +1469,25 @@ public :ref:`RealmResultTask <io_realm_mongodb_RealmResultTask>` deleteOne (**Bs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Removes at most one document from the collection that matches the given filter. If no documents match, the collection is not modified.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``filter`` - the query filter to apply the the delete operation
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``filter`` - the query filter to apply the the delete operation
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -1323,18 +1502,25 @@ public :ref:`RealmResultTask <io_realm_mongodb_RealmResultTask>` deleteMany (**B
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Removes all documents from the collection that match the given query filter. If no documents match, the collection is not modified.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``filter`` - the query filter to apply the the delete operation
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``filter`` - the query filter to apply the the delete operation
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -1349,22 +1535,29 @@ public :ref:`RealmResultTask <io_realm_mongodb_RealmResultTask>` updateOne (**Bs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Update a single document in the collection according to the specified arguments.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``filter`` - a document describing the query filter, which may not be null.
+   
+   **Type Parameters**
    
    
    
-- ``update`` - a document describing the update, which may not be null. The update to apply must include only update operators.
+   **Parameters**
+   
+   - ``filter`` - a document describing the query filter, which may not be null.
+      
+      
+      
+   - ``update`` - a document describing the update, which may not be null. The update to apply must include only update operators.
+      
+      
+      
    
    
+   **Returns**
    
-
+   **Throws**
 
 .. _io_realm_mongodb_mongo_MongoCollection_updateOne_Bson__Bson__UpdateOptions_:
 
@@ -1374,26 +1567,33 @@ public :ref:`RealmResultTask <io_realm_mongodb_RealmResultTask>` updateOne (**Bs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Update a single document in the collection according to the specified arguments.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``filter`` - a document describing the query filter, which may not be null.
+   
+   **Type Parameters**
    
    
    
-- ``update`` - a document describing the update, which may not be null. The update to apply must include only update operators.
+   **Parameters**
+   
+   - ``filter`` - a document describing the query filter, which may not be null.
+      
+      
+      
+   - ``update`` - a document describing the update, which may not be null. The update to apply must include only update operators.
+      
+      
+      
+   - ``updateOptions`` - the options to apply to the update operation
+      
+      
+      
    
    
+   **Returns**
    
-- ``updateOptions`` - the options to apply to the update operation
-   
-   
-   
-
+   **Throws**
 
 
 
@@ -1408,22 +1608,29 @@ public :ref:`RealmResultTask <io_realm_mongodb_RealmResultTask>` updateMany (**B
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Update all documents in the collection according to the specified arguments.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``filter`` - a document describing the query filter, which may not be null.
+   
+   **Type Parameters**
    
    
    
-- ``update`` - a document describing the update, which may not be null. The update to apply must include only update operators.
+   **Parameters**
+   
+   - ``filter`` - a document describing the query filter, which may not be null.
+      
+      
+      
+   - ``update`` - a document describing the update, which may not be null. The update to apply must include only update operators.
+      
+      
+      
    
    
+   **Returns**
    
-
+   **Throws**
 
 .. _io_realm_mongodb_mongo_MongoCollection_updateMany_Bson__Bson__UpdateOptions_:
 
@@ -1433,26 +1640,33 @@ public :ref:`RealmResultTask <io_realm_mongodb_RealmResultTask>` updateMany (**B
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Update all documents in the collection according to the specified arguments.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``filter`` - a document describing the query filter, which may not be null.
+   
+   **Type Parameters**
    
    
    
-- ``update`` - a document describing the update, which may not be null. The update to apply must include only update operators.
+   **Parameters**
+   
+   - ``filter`` - a document describing the query filter, which may not be null.
+      
+      
+      
+   - ``update`` - a document describing the update, which may not be null. The update to apply must include only update operators.
+      
+      
+      
+   - ``updateOptions`` - the options to apply to the update operation
+      
+      
+      
    
    
+   **Returns**
    
-- ``updateOptions`` - the options to apply to the update operation
-   
-   
-   
-
+   **Throws**
 
 
 
@@ -1467,22 +1681,29 @@ public :ref:`RealmResultTask <io_realm_mongodb_RealmResultTask>` findOneAndUpdat
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Finds a document in the collection and performs the given update.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``filter`` - the query filter
+   
+   **Type Parameters**
    
    
    
-- ``update`` - the update document
+   **Parameters**
+   
+   - ``filter`` - the query filter
+      
+      
+      
+   - ``update`` - the update document
+      
+      
+      
    
    
+   **Returns**
    
-
+   **Throws**
 
 .. _io_realm_mongodb_mongo_MongoCollection_findOneAndUpdate_Bson__Bson__Class_ResultT__:
 
@@ -1492,39 +1713,37 @@ public :ref:`RealmResultTask <io_realm_mongodb_RealmResultTask>` findOneAndUpdat
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Finds a document in the collection and performs the given update.
+.. example::
 
 
-Type Parameters
-_______________
-
-
-
-- ``ResultT`` - the target document type of the iterable.
+   
+   **Type Parameters**
+   
+   - ``ResultT`` - the target document type of the iterable.
+      
+      
+      
    
    
+   **Parameters**
    
-
-
-
-
-Parameters
-__________
-
-
-
-- ``filter`` - the query filter
-   
-   
-   
-- ``update`` - the update document
-   
+   - ``filter`` - the query filter
+      
+      
+      
+   - ``update`` - the update document
+      
+      
+      
+   - ``resultClass`` - the class to decode each document into
+      
+      
+      
    
    
-- ``resultClass`` - the class to decode each document into
+   **Returns**
    
-   
-   
-
+   **Throws**
 
 .. _io_realm_mongodb_mongo_MongoCollection_findOneAndUpdate_Bson__Bson__FindOneAndModifyOptions_:
 
@@ -1534,28 +1753,35 @@ public :ref:`RealmResultTask <io_realm_mongodb_RealmResultTask>` findOneAndUpdat
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Finds a document in the collection and performs the given update.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``filter`` - the query filter
+   
+   **Type Parameters**
    
    
    
-- ``update`` - the update document
+   **Parameters**
+   
+   - ``filter`` - the query filter
+      
+      
+      
+   - ``update`` - the update document
+      
+      
+      
+   - ``options`` - a :ref:`FindOneAndModifyOptions <io_realm_mongodb_mongo_options_FindOneAndModifyOptions>` struct
+      
+      
+      
+      
+      
    
    
+   **Returns**
    
-- ``options`` - a :ref:`FindOneAndModifyOptions <io_realm_mongodb_mongo_options_FindOneAndModifyOptions>` struct
-   
-   
-   
-   
-   
-
+   **Throws**
 
 .. _io_realm_mongodb_mongo_MongoCollection_findOneAndUpdate_Bson__Bson__FindOneAndModifyOptions__Class_ResultT__:
 
@@ -1565,45 +1791,43 @@ public :ref:`RealmResultTask <io_realm_mongodb_RealmResultTask>` findOneAndUpdat
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Finds a document in the collection and performs the given update.
+.. example::
 
 
-Type Parameters
-_______________
-
-
-
-- ``ResultT`` - the target document type of the iterable.
+   
+   **Type Parameters**
+   
+   - ``ResultT`` - the target document type of the iterable.
+      
+      
+      
    
    
+   **Parameters**
    
-
-
-
-
-Parameters
-__________
-
-
-
-- ``filter`` - the query filter
-   
-   
-   
-- ``update`` - the update document
-   
-   
-   
-- ``options`` - a :ref:`FindOneAndModifyOptions <io_realm_mongodb_mongo_options_FindOneAndModifyOptions>` struct
-   
-   
-   
+   - ``filter`` - the query filter
+      
+      
+      
+   - ``update`` - the update document
+      
+      
+      
+   - ``options`` - a :ref:`FindOneAndModifyOptions <io_realm_mongodb_mongo_options_FindOneAndModifyOptions>` struct
+      
+      
+      
+      
+      
+   - ``resultClass`` - the class to decode each document into
+      
+      
+      
    
    
-- ``resultClass`` - the class to decode each document into
+   **Returns**
    
-   
-   
-
+   **Throws**
 
 
 
@@ -1618,22 +1842,29 @@ public :ref:`RealmResultTask <io_realm_mongodb_RealmResultTask>` findOneAndRepla
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Finds a document in the collection and replaces it with the given document.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``filter`` - the query filter
+   
+   **Type Parameters**
    
    
    
-- ``replacement`` - the document to replace the matched document with
+   **Parameters**
+   
+   - ``filter`` - the query filter
+      
+      
+      
+   - ``replacement`` - the document to replace the matched document with
+      
+      
+      
    
    
+   **Returns**
    
-
+   **Throws**
 
 .. _io_realm_mongodb_mongo_MongoCollection_findOneAndReplace_Bson__Bson__Class_ResultT__:
 
@@ -1643,39 +1874,37 @@ public :ref:`RealmResultTask <io_realm_mongodb_RealmResultTask>` findOneAndRepla
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Finds a document in the collection and replaces it with the given document.
+.. example::
 
 
-Type Parameters
-_______________
-
-
-
-- ``ResultT`` - the target document type of the iterable.
+   
+   **Type Parameters**
+   
+   - ``ResultT`` - the target document type of the iterable.
+      
+      
+      
    
    
+   **Parameters**
    
-
-
-
-
-Parameters
-__________
-
-
-
-- ``filter`` - the query filter
-   
-   
-   
-- ``replacement`` - the document to replace the matched document with
-   
+   - ``filter`` - the query filter
+      
+      
+      
+   - ``replacement`` - the document to replace the matched document with
+      
+      
+      
+   - ``resultClass`` - the class to decode each document into
+      
+      
+      
    
    
-- ``resultClass`` - the class to decode each document into
+   **Returns**
    
-   
-   
-
+   **Throws**
 
 .. _io_realm_mongodb_mongo_MongoCollection_findOneAndReplace_Bson__Bson__FindOneAndModifyOptions_:
 
@@ -1685,28 +1914,35 @@ public :ref:`RealmResultTask <io_realm_mongodb_RealmResultTask>` findOneAndRepla
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Finds a document in the collection and replaces it with the given document.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``filter`` - the query filter
+   
+   **Type Parameters**
    
    
    
-- ``replacement`` - the document to replace the matched document with
+   **Parameters**
+   
+   - ``filter`` - the query filter
+      
+      
+      
+   - ``replacement`` - the document to replace the matched document with
+      
+      
+      
+   - ``options`` - a :ref:`FindOneAndModifyOptions <io_realm_mongodb_mongo_options_FindOneAndModifyOptions>` struct
+      
+      
+      
+      
+      
    
    
+   **Returns**
    
-- ``options`` - a :ref:`FindOneAndModifyOptions <io_realm_mongodb_mongo_options_FindOneAndModifyOptions>` struct
-   
-   
-   
-   
-   
-
+   **Throws**
 
 .. _io_realm_mongodb_mongo_MongoCollection_findOneAndReplace_Bson__Bson__FindOneAndModifyOptions__Class_ResultT__:
 
@@ -1716,45 +1952,43 @@ public :ref:`RealmResultTask <io_realm_mongodb_RealmResultTask>` findOneAndRepla
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Finds a document in the collection and replaces it with the given document.
+.. example::
 
 
-Type Parameters
-_______________
-
-
-
-- ``ResultT`` - the target document type of the iterable.
+   
+   **Type Parameters**
+   
+   - ``ResultT`` - the target document type of the iterable.
+      
+      
+      
    
    
+   **Parameters**
    
-
-
-
-
-Parameters
-__________
-
-
-
-- ``filter`` - the query filter
-   
-   
-   
-- ``replacement`` - the document to replace the matched document with
-   
-   
-   
-- ``options`` - a :ref:`FindOneAndModifyOptions <io_realm_mongodb_mongo_options_FindOneAndModifyOptions>` struct
-   
-   
-   
+   - ``filter`` - the query filter
+      
+      
+      
+   - ``replacement`` - the document to replace the matched document with
+      
+      
+      
+   - ``options`` - a :ref:`FindOneAndModifyOptions <io_realm_mongodb_mongo_options_FindOneAndModifyOptions>` struct
+      
+      
+      
+      
+      
+   - ``resultClass`` - the class to decode each document into
+      
+      
+      
    
    
-- ``resultClass`` - the class to decode each document into
+   **Returns**
    
-   
-   
-
+   **Throws**
 
 
 
@@ -1769,18 +2003,25 @@ public :ref:`RealmResultTask <io_realm_mongodb_RealmResultTask>` findOneAndDelet
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Finds a document in the collection and delete it.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``filter`` - the query filter
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``filter`` - the query filter
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 .. _io_realm_mongodb_mongo_MongoCollection_findOneAndDelete_Bson__Class_ResultT__:
 
@@ -1790,35 +2031,33 @@ public :ref:`RealmResultTask <io_realm_mongodb_RealmResultTask>` findOneAndDelet
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Finds a document in the collection and delete it.
+.. example::
 
 
-Type Parameters
-_______________
-
-
-
-- ``ResultT`` - the target document type of the iterable.
+   
+   **Type Parameters**
+   
+   - ``ResultT`` - the target document type of the iterable.
+      
+      
+      
    
    
+   **Parameters**
    
-
-
-
-
-Parameters
-__________
-
-
-
-- ``filter`` - the query filter
-   
+   - ``filter`` - the query filter
+      
+      
+      
+   - ``resultClass`` - the class to decode each document into
+      
+      
+      
    
    
-- ``resultClass`` - the class to decode each document into
+   **Returns**
    
-   
-   
-
+   **Throws**
 
 .. _io_realm_mongodb_mongo_MongoCollection_findOneAndDelete_Bson__FindOneAndModifyOptions_:
 
@@ -1828,24 +2067,31 @@ public :ref:`RealmResultTask <io_realm_mongodb_RealmResultTask>` findOneAndDelet
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Finds a document in the collection and delete it.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``filter`` - the query filter
+   
+   **Type Parameters**
    
    
    
-- ``options`` - a :ref:`FindOneAndModifyOptions <io_realm_mongodb_mongo_options_FindOneAndModifyOptions>` struct
+   **Parameters**
+   
+   - ``filter`` - the query filter
+      
+      
+      
+   - ``options`` - a :ref:`FindOneAndModifyOptions <io_realm_mongodb_mongo_options_FindOneAndModifyOptions>` struct
+      
+      
+      
+      
+      
    
    
+   **Returns**
    
-   
-   
-
+   **Throws**
 
 .. _io_realm_mongodb_mongo_MongoCollection_findOneAndDelete_Bson__FindOneAndModifyOptions__Class_ResultT__:
 
@@ -1855,41 +2101,39 @@ public :ref:`RealmResultTask <io_realm_mongodb_RealmResultTask>` findOneAndDelet
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Finds a document in the collection and delete it.
+.. example::
 
 
-Type Parameters
-_______________
-
-
-
-- ``ResultT`` - the target document type of the iterable.
+   
+   **Type Parameters**
+   
+   - ``ResultT`` - the target document type of the iterable.
+      
+      
+      
    
    
+   **Parameters**
    
-
-
-
-
-Parameters
-__________
-
-
-
-- ``filter`` - the query filter
-   
-   
-   
-- ``options`` - a :ref:`FindOneAndModifyOptions <io_realm_mongodb_mongo_options_FindOneAndModifyOptions>` struct
-   
-   
-   
+   - ``filter`` - the query filter
+      
+      
+      
+   - ``options`` - a :ref:`FindOneAndModifyOptions <io_realm_mongodb_mongo_options_FindOneAndModifyOptions>` struct
+      
+      
+      
+      
+      
+   - ``resultClass`` - the class to decode each document into
+      
+      
+      
    
    
-- ``resultClass`` - the class to decode each document into
+   **Returns**
    
-   
-   
-
+   **Throws**
 
 
 
@@ -1904,6 +2148,22 @@ public :ref:`RealmEventStreamTask <io_realm_mongodb_RealmEventStreamTask>` watch
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Watches a collection. The resulting stream will be notified of all events on this collection that the active user is authorized to see based on the configured MongoDB Realm rules.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 .. _io_realm_mongodb_mongo_MongoCollection_watch_BsonValue____:
 
 
@@ -1912,18 +2172,25 @@ public :ref:`RealmEventStreamTask <io_realm_mongodb_RealmEventStreamTask>` watch
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Watches specified IDs in a collection.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``ids`` - the ids to watch.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``ids`` - the ids to watch.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 .. _io_realm_mongodb_mongo_MongoCollection_watch_ObjectId____:
 
@@ -1935,18 +2202,25 @@ public :ref:`RealmEventStreamTask <io_realm_mongodb_RealmEventStreamTask>` watch
 Watches specified IDs in a collection. This convenience overload supports the use case of non-**BsonValue (?)** instances of **ObjectId (?)** by wrapping them in **BsonObjectId (?)** instances for the user.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``ids`` - unique object identifiers of the IDs to watch.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``ids`` - unique object identifiers of the IDs to watch.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -1967,18 +2241,25 @@ See `how to define a match filter <https://docs.mongodb.com/manual/reference/ope
 Defining the match expression to filter ChangeEvents is similar to `how to define the match expression for triggers <https://docs.mongodb.com/realm/triggers/database-triggers/>`__ 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``matchFilter`` - the $match filter to apply to incoming change events
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``matchFilter`` - the $match filter to apply to incoming change events
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 .. _io_realm_mongodb_mongo_MongoCollection_watchWithFilter_BsonDocument_:
 
@@ -1992,18 +2273,25 @@ Watches a collection. The provided BSON document will be used as a match express
 Defining the match expression to filter ChangeEvents is similar to `how to define the match expression for triggers <https://docs.mongodb.com/realm/triggers/database-triggers/>`__ 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``matchFilter`` - the $match filter to apply to incoming change events
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``matchFilter`` - the $match filter to apply to incoming change events
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -2018,6 +2306,22 @@ public :ref:`RealmEventStreamAsyncTask <io_realm_mongodb_RealmEventStreamAsyncTa
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Watches a collection asynchronously. The resulting stream will be notified of all events on this collection that the active user is authorized to see based on the configured MongoDB Realm rules.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 .. _io_realm_mongodb_mongo_MongoCollection_watchAsync_BsonValue____:
 
 
@@ -2026,18 +2330,25 @@ public :ref:`RealmEventStreamAsyncTask <io_realm_mongodb_RealmEventStreamAsyncTa
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Watches specified IDs in a collection asynchronously.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``ids`` - the ids to watch.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``ids`` - the ids to watch.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 .. _io_realm_mongodb_mongo_MongoCollection_watchAsync_ObjectId____:
 
@@ -2049,18 +2360,25 @@ public :ref:`RealmEventStreamAsyncTask <io_realm_mongodb_RealmEventStreamAsyncTa
 Watches specified IDs in a collection asynchronously. This convenience overload supports the use case of non-**BsonValue (?)** instances of **ObjectId (?)** by wrapping them in **BsonObjectId (?)** instances for the user.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``ids`` - unique object identifiers of the IDs to watch.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``ids`` - unique object identifiers of the IDs to watch.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -2081,18 +2399,25 @@ See `how to define a match filter <https://docs.mongodb.com/manual/reference/ope
 Defining the match expression to filter ChangeEvents is similar to `how to define the match expression for triggers <https://docs.mongodb.com/realm/triggers/database-triggers/>`__ 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``matchFilter`` - the $match filter to apply to incoming change events
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``matchFilter`` - the $match filter to apply to incoming change events
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 .. _io_realm_mongodb_mongo_MongoCollection_watchWithFilterAsync_BsonDocument_:
 
@@ -2106,17 +2431,24 @@ Watches a collection asynchronously. The provided BSON document will be used as 
 Defining the match expression to filter ChangeEvents is similar to `how to define the match expression for triggers <https://docs.mongodb.com/realm/triggers/database-triggers/>`__ 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``matchFilter`` - the $match filter to apply to incoming change events
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``matchFilter`` - the $match filter to apply to incoming change events
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 

@@ -42,6 +42,7 @@ This means that the schema is not created or validated until a Realm has been op
 
 .. seealso::
 
+
    
    - :ref:`Realm <io_realm_Realm>`
       
@@ -294,12 +295,41 @@ public static :ref:`DynamicRealm <io_realm_DynamicRealm>` getInstance (:ref:`Rea
 Realm static constructor that returns a dynamic variant of the Realm instance defined by provided :ref:`io.realm.RealmConfiguration <io_realm_RealmConfiguration>`. Dynamic Realms do not care about schemaVersion and schemas, so opening a DynamicRealm will never trigger a migration.
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - :ref:`RealmConfiguration for details on how to configure a Realm. <io_realm_RealmConfiguration>`
+         
+         
+         
+      
+      
+      
+   
+   
+
 
 
 Throws
 ______
 
 .. seealso::
+
 
    
    - :ref:`RealmConfiguration for details on how to configure a Realm. <io_realm_RealmConfiguration>`
@@ -325,24 +355,43 @@ public static :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` getInstanceAsync (
 The creation of the first Realm instance per :ref:`RealmConfiguration <io_realm_RealmConfiguration>` in a process can take some time as all initialization code need to run at that point (Setting up the Realm, validating schemas and creating initial data). This method places the initialization work in a background thread and deliver the Realm instance to the caller thread asynchronously after the initialization is finished.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``configuration`` - :ref:`RealmConfiguration <io_realm_RealmConfiguration>` used to open the Realm.
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``configuration`` - :ref:`RealmConfiguration <io_realm_RealmConfiguration>` used to open the Realm.
+      
+      
+      
+      
+      
+   - ``callback`` - invoked to return the results.
+      
+      
+      
    
    
-- ``callback`` - invoked to return the results.
+   **Returns**
+   
+   **Throws**.. seealso::
    
    
+      
+      - :ref:`Callback for more details. <io_realm_DynamicRealm_Transaction_Callback>`
+         
+         
+         
+      
+      
+      
    
-
+   
 
 
 
@@ -350,6 +399,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - :ref:`Callback for more details. <io_realm_DynamicRealm_Transaction_Callback>`
@@ -373,18 +423,25 @@ public :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>` createObject (`St
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Instantiates and adds a new object to the Realm.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``className`` - the class name of the object to create.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``className`` - the class name of the object to create.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -400,6 +457,22 @@ public :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>` createObject (`St
 
 Creates an object with a given primary key. Classes without a primary key defined must use :ref:`createObject(String) <io_realm_DynamicRealm_createObject_String_>`} instead.
 
+
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -421,26 +494,45 @@ public :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>` createEmbeddedObj
 Instantiates and adds a new embedded object to the Realm.This method should only be used to create objects of types marked as embedded.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``className`` - the class name of the object to create.
+   
+   **Type Parameters**
    
    
    
-- ``parentObject`` - The parent object which should hold a reference to the embedded object. If the parent property is a list the embedded object will be added to the end of that list.
+   **Parameters**
+   
+   - ``className`` - the class name of the object to create.
+      
+      
+      
+   - ``parentObject`` - The parent object which should hold a reference to the embedded object. If the parent property is a list the embedded object will be added to the end of that list.
+      
+      
+      
+   - ``parentProperty`` - the property in the parent class which holds the reference.
+      
+      
+      
    
    
+   **Returns**
    
-- ``parentProperty`` - the property in the parent class which holds the reference.
+   **Throws**.. seealso::
    
    
+      
+      - **RealmClass#embedded() (?)**
+         
+         
+         
+      
+      
+      
    
-
+   
 
 
 
@@ -448,6 +540,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - **RealmClass#embedded() (?)**
@@ -471,18 +564,37 @@ public :ref:`RealmQuery <io_realm_RealmQuery>` where (`String <https://docs.orac
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns a RealmQuery, which can be used to query the provided class.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``className`` - the class of the object which is to be queried.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``className`` - the class of the object which is to be queried.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - :ref:`io.realm.RealmQuery <io_realm_RealmQuery>`
+         
+         
+         
+      
+      
+      
+   
+   
 
 
 
@@ -490,6 +602,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - :ref:`io.realm.RealmQuery <io_realm_RealmQuery>`
@@ -519,18 +632,49 @@ Realm instances are cached per thread. For that reason it is important to rememb
 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``listener`` - the change listener.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``listener`` - the change listener.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - :ref:`io.realm.RealmChangeListener <io_realm_RealmChangeListener>`
+         
+         
+         
+      - **#removeChangeListener(RealmChangeListener) (?)**
+         
+         
+         
+      - :ref:`removeAllChangeListeners() <io_realm_DynamicRealm_removeAllChangeListeners__>`
+         
+         
+         
+      - **#refresh() (?)**
+         
+         
+         
+      
+      
+      
+   
+   
 
 
 
@@ -538,6 +682,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - :ref:`io.realm.RealmChangeListener <io_realm_RealmChangeListener>`
@@ -573,18 +718,37 @@ public **void** removeChangeListener (:ref:`io.realm.RealmChangeListener\<io.rea
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Removes the specified change listener.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``listener`` - the change listener to be removed.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``listener`` - the change listener to be removed.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - :ref:`io.realm.RealmChangeListener <io_realm_RealmChangeListener>`
+         
+         
+         
+      
+      
+      
+   
+   
 
 
 
@@ -592,6 +756,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - :ref:`io.realm.RealmChangeListener <io_realm_RealmChangeListener>`
@@ -615,12 +780,41 @@ public **void** removeAllChangeListeners ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Removes all user-defined change listeners.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - :ref:`io.realm.RealmChangeListener <io_realm_RealmChangeListener>`
+         
+         
+         
+      
+      
+      
+   
+   
+
 
 
 Throws
 ______
 
 .. seealso::
+
 
    
    - :ref:`io.realm.RealmChangeListener <io_realm_RealmChangeListener>`
@@ -644,18 +838,25 @@ public **void** delete (`String <https://docs.oracle.com/javase/7/docs/api/java/
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Deletes all objects of the specified class from the Realm.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``className`` - the class for which all objects should be removed.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``className`` - the class for which all objects should be removed.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -681,20 +882,27 @@ Calling this method from the UI thread will throw a :ref:`RealmException <io_rea
 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``transaction`` - :ref:`Transaction <io_realm_DynamicRealm_Transaction>` to execute.
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``transaction`` - :ref:`Transaction <io_realm_DynamicRealm_Transaction>` to execute.
+      
+      
+      
+      
+      
    
    
-
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -716,20 +924,27 @@ public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` executeTransactionAsync (
 Similar to **#executeTransaction(Transaction) (?)** but runs asynchronously on a worker thread.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``transaction`` - :ref:`Transaction <io_realm_DynamicRealm_Transaction>` to execute.
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``transaction`` - :ref:`Transaction <io_realm_DynamicRealm_Transaction>` to execute.
+      
+      
+      
+      
+      
    
    
-
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -746,24 +961,31 @@ public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` executeTransactionAsync (
 Similar to **#executeTransactionAsync(Transaction) (?)**, but also accepts an OnSuccess callback.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``transaction`` - :ref:`Transaction <io_realm_DynamicRealm_Transaction>` to execute.
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``transaction`` - :ref:`Transaction <io_realm_DynamicRealm_Transaction>` to execute.
+      
+      
+      
+      
+      
+   - ``onSuccess`` - callback invoked when the transaction succeeds.
+      
+      
+      
    
    
-- ``onSuccess`` - callback invoked when the transaction succeeds.
+   **Returns**
    
-   
-   
-
+   **Throws**
 
 
 
@@ -780,24 +1002,31 @@ public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` executeTransactionAsync (
 Similar to **#executeTransactionAsync(Transaction) (?)**, but also accepts an OnError callback.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``transaction`` - :ref:`Transaction <io_realm_DynamicRealm_Transaction>` to execute.
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``transaction`` - :ref:`Transaction <io_realm_DynamicRealm_Transaction>` to execute.
+      
+      
+      
+      
+      
+   - ``onError`` - callback invoked when the transaction fails.
+      
+      
+      
    
    
-- ``onError`` - callback invoked when the transaction fails.
+   **Returns**
    
-   
-   
-
+   **Throws**
 
 
 
@@ -814,28 +1043,35 @@ public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` executeTransactionAsync (
 Similar to **#executeTransactionAsync(Transaction) (?)**, but also accepts an OnSuccess and OnError callbacks.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``transaction`` - :ref:`Transaction <io_realm_DynamicRealm_Transaction>` to execute.
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``transaction`` - :ref:`Transaction <io_realm_DynamicRealm_Transaction>` to execute.
+      
+      
+      
+      
+      
+   - ``onSuccess`` - callback invoked when the transaction succeeds.
+      
+      
+      
+   - ``onError`` - callback invoked when the transaction fails.
+      
+      
+      
    
    
-- ``onSuccess`` - callback invoked when the transaction succeeds.
+   **Returns**
    
-   
-   
-- ``onError`` - callback invoked when the transaction fails.
-   
-   
-   
-
+   **Throws**
 
 
 
@@ -857,6 +1093,22 @@ public **<any> (?)** asFlowable ()
 
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 isEmpty
@@ -872,6 +1124,22 @@ public **boolean** isEmpty ()
 
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getSchema
@@ -885,6 +1153,22 @@ public :ref:`RealmSchema <io_realm_RealmSchema>` getSchema ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the mutable schema for this Realm.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 freeze
@@ -899,5 +1183,21 @@ public :ref:`DynamicRealm <io_realm_DynamicRealm>` freeze ()
 
 
 
+
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
 
 

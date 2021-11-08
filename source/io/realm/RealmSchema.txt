@@ -33,6 +33,7 @@ All changes must happen inside a write transaction for the particular Realm.
 
 .. seealso::
 
+
    
    - :ref:`RealmMigration <io_realm_RealmMigration>`
       
@@ -164,18 +165,25 @@ public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` get (`Stri
 Returns the :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` for a given class. If this :ref:`RealmSchema <io_realm_RealmSchema>` is immutable, an immutable :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` will be returned. Otherwise, it returns an mutable :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``className`` - name of the class
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``className`` - name of the class
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -192,6 +200,22 @@ public abstract `Set <https://docs.oracle.com/javase/7/docs/api/java/util/Set.ht
 Returns the :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`s for all RealmObject classes that can be saved in this Realm. If this :ref:`RealmSchema <io_realm_RealmSchema>` is immutable, an immutable :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` set will be returned. Otherwise, it returns an mutable :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` set.
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 create
@@ -205,18 +229,25 @@ public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` create (`S
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Adds a new class to the Realm.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``className`` - name of the class.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``className`` - name of the class.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -236,34 +267,41 @@ public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` createWith
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Adds a new class to the Realm with a primary key field defined.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``className`` - name of the class.
+   
+   **Type Parameters**
    
    
    
-- ``primaryKeyFieldName`` - name of the primary key field.
+   **Parameters**
+   
+   - ``className`` - name of the class.
+      
+      
+      
+   - ``primaryKeyFieldName`` - name of the primary key field.
+      
+      
+      
+   - ``fieldType`` - type of field to add. Only ``byte`` , ``short`` , ``int`` , ``long``  and their boxed types or the ``String``  is supported.
+      
+      
+      
+      
+      
+   - ``attributes`` - set of attributes for this field. This method implicitly adds :ref:`FieldAttribute.PRIMARY_KEY <io_realm_FieldAttribute_PRIMARY_KEY>` and :ref:`FieldAttribute.INDEXED <io_realm_FieldAttribute_INDEXED>` attributes to the field.
+      
+      
+      
+      
+      
    
    
+   **Returns**
    
-- ``fieldType`` - type of field to add. Only ``byte`` , ``short`` , ``int`` , ``long``  and their boxed types or the ``String``  is supported.
-   
-   
-   
-   
-   
-- ``attributes`` - set of attributes for this field. This method implicitly adds :ref:`FieldAttribute.PRIMARY_KEY <io_realm_FieldAttribute_PRIMARY_KEY>` and :ref:`FieldAttribute.INDEXED <io_realm_FieldAttribute_INDEXED>` attributes to the field.
-   
-   
-   
-   
-   
-
+   **Throws**
 
 
 
@@ -285,18 +323,25 @@ public abstract **void** remove (`String <https://docs.oracle.com/javase/7/docs/
 Removes a class from the Realm. All data will be removed. Removing a class while other classes point to it will throw an `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__ . Removes those classes or fields first.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``className`` - name of the class to remove.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``className`` - name of the class to remove.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -316,22 +361,29 @@ public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` rename (`S
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Renames a class already in the Realm.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``oldClassName`` - old class name.
+   
+   **Type Parameters**
    
    
    
-- ``newClassName`` - new class name.
+   **Parameters**
+   
+   - ``oldClassName`` - old class name.
+      
+      
+      
+   - ``newClassName`` - new class name.
+      
+      
+      
    
    
+   **Returns**
    
-
+   **Throws**
 
 
 
@@ -351,18 +403,25 @@ public **boolean** contains (`String <https://docs.oracle.com/javase/7/docs/api/
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Checks if a given class already exists in the schema.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``className`` - class name to check.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``className`` - class name to check.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -377,6 +436,22 @@ protected final **ColumnInfo (?)** getColumnInfo (`String <https://docs.oracle.c
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 createKeyPathMapping
@@ -390,4 +465,20 @@ public **void** createKeyPathMapping ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Create the underlying keypath mapping. Should only be called by typed Realms.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 

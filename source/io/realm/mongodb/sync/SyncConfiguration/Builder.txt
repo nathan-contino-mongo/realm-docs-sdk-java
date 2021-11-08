@@ -270,18 +270,25 @@ public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_
 Sets the io.realm.Realm#ENCRYPTION_KEY_LENGTH bytes key used to encrypt and decrypt the Realm file.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``key`` - the encryption key.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``key`` - the encryption key.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -319,18 +326,25 @@ Sets the schema version of the Realm.Synced Realms only support additive schema 
 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``schemaVersion`` - the schema version.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``schemaVersion`` - the schema version.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -360,22 +374,41 @@ A reference to the default Realm module containing all Realm classes in the proj
 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``baseModule`` - the first Realm module (required).
+   
+   **Type Parameters**
    
    
    
-- ``additionalModules`` - the additional Realm modules
+   **Parameters**
+   
+   - ``baseModule`` - the first Realm module (required).
+      
+      
+      
+   - ``additionalModules`` - the additional Realm modules
+      
+      
+      
    
    
+   **Returns**
    
-
+   **Throws**.. seealso::
+   
+   
+      
+      - :ref:`Realm.getDefaultModule() <io_realm_Realm_getDefaultModule__>`
+         
+         
+         
+      
+      
+      
+   
+   
 
 
 
@@ -383,6 +416,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - :ref:`Realm.getDefaultModule() <io_realm_Realm_getDefaultModule__>`
@@ -411,18 +445,37 @@ A reference to the default Realm module containing all Realm classes in the proj
 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``modules`` - list of modules tthe first Realm module (required).
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``modules`` - list of modules tthe first Realm module (required).
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - :ref:`Realm.getDefaultModule() <io_realm_Realm_getDefaultModule__>`
+         
+         
+         
+      
+      
+      
+   
+   
 
 
 
@@ -430,6 +483,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - :ref:`Realm.getDefaultModule() <io_realm_Realm_getDefaultModule__>`
@@ -453,6 +507,22 @@ public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Adds a module to the already defined modules.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 rxFactory
@@ -468,18 +538,25 @@ public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_
 Sets the :ref:`RxObservableFactory <io_realm_rx_RxObservableFactory>` used to create Rx Observables from Realm objects. The default factory is :ref:`RealmObservableFactory <io_realm_rx_RealmObservableFactory>`.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``factory`` - factory to use.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``factory`` - factory to use.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -496,18 +573,25 @@ public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_
 Sets the :ref:`FlowFactory <io_realm_coroutines_FlowFactory>` used to create coroutines Flows from Realm objects. The default factory is :ref:`RealmFlowFactory <io_realm_coroutines_RealmFlowFactory>`.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``factory`` - factory to use.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``factory`` - factory to use.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -524,18 +608,25 @@ public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_
 Sets the initial data in :ref:`io.realm.Realm <io_realm_Realm>`. This transaction will be executed only the first time the Realm file is opened (created) or while migrating the data if **RealmConfiguration.Builder#deleteRealmIfMigrationNeeded() (?)** is set.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``transaction`` - transaction to execute.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``transaction`` - transaction to execute.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -551,6 +642,22 @@ public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_
 
 Setting this will create an in-memory Realm instead of saving it to disk. In-memory Realms might still use disk space if memory is running low, but all files created by an in-memory Realm will be deleted when the Realm is closed.Note that because in-memory Realms are not persisted, you must be sure to hold on to at least one non-closed reference to the in-memory Realm object with the specific name as long as you want the data to last.
 
+
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -569,18 +676,25 @@ Sets the error handler used by this configuration.Only errors not handled by the
 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``errorHandler`` - error handler used to report back errors when communicating with the Realm Object Server.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``errorHandler`` - error handler used to report back errors when communicating with the Realm Object Server.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -600,18 +714,25 @@ public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sets the handler for when a Client Reset occurs. If no handler is set, and error is logged when a Client Reset occurs.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``handler`` - custom handler in case of a Client Reset.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``handler`` - custom handler in case of a Client Reset.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -634,6 +755,22 @@ This check is only enforced the first time a Realm is created. If you otherwise 
 
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 .. _io_realm_mongodb_sync_SyncConfiguration_Builder_waitForInitialRemoteData_long__TimeUnit_:
 
 
@@ -650,24 +787,31 @@ This check is only enforced the first time a Realm is created. If you otherwise 
 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``timeout`` - how long to wait for the download to complete before an :ref:`io.realm.exceptions.DownloadingRealmInterruptedException <io_realm_exceptions_DownloadingRealmInterruptedException>` is thrown.
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``timeout`` - how long to wait for the download to complete before an :ref:`io.realm.exceptions.DownloadingRealmInterruptedException <io_realm_exceptions_DownloadingRealmInterruptedException>` is thrown.
+      
+      
+      
+      
+      
+   - ``unit`` - the unit of time used to define the timeout.
+      
+      
+      
    
    
-- ``unit`` - the unit of time used to define the timeout.
+   **Returns**
    
-   
-   
-
+   **Throws**
 
 
 
@@ -688,6 +832,22 @@ This in particular mean that :ref:`initialData(Realm.Transaction) <io_realm_mong
 
 
 Marking a Realm as read only only applies to the Realm in this process. Other processes and devices can still write to the Realm.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 compactOnLaunch
@@ -703,6 +863,22 @@ public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_
 Setting this will cause Realm to compact the Realm file if the Realm file has grown too large and a significant amount of space can be recovered. See :ref:`DefaultCompactOnLaunchCallback <io_realm_DefaultCompactOnLaunchCallback>` for details.
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 .. _io_realm_mongodb_sync_SyncConfiguration_Builder_compactOnLaunch_CompactOnLaunchCallback_:
 
 
@@ -711,18 +887,25 @@ public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sets this to determine if the Realm file should be compacted before returned to the user. It is passed the total file size (data + free space) and the bytes used by data in the file.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``compactOnLaunch`` - a callback called when opening a Realm for the first time during the life of a process to determine if it should be compacted before being returned to the user. It is passed the total file size (data + free space) and the bytes used by data in the file.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``compactOnLaunch`` - a callback called when opening a Realm for the first time during the life of a process to determine if it should be compacted before being returned to the user. It is passed the total file size (data + free space) and the bytes used by data in the file.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -737,20 +920,40 @@ public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The prefix that is prepended to the path in the WebSocket request that initiates a sync connection to MongoDB Realm. The value specified must match the server’s configuration otherwise the device will not be able to create a connection. This value is optional and should only be set if a specific firewall rule requires it.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``urlPrefix`` - The prefix to append to the sync connection url.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``urlPrefix`` - The prefix to append to the sync connection url.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - **<a href="https://docs.realm.io/platform/guides/learn-realm-sync-and-integrate-with-a-proxy#adding-a-custom-proxy">Adding a custom proxy</a> (?)**
+         
+         
+         
+      
+      
+      
+   
+   
 
 .. seealso::
+
 
    
    - **<a href="https://docs.realm.io/platform/guides/learn-realm-sync-and-integrate-with-a-proxy#adding-a-custom-proxy">Adding a custom proxy</a> (?)**
@@ -782,20 +985,40 @@ Under normal circumstances this is not a problem, but if the number of active ve
 Note, the version number will also increase when changes from other devices are integrated on this device, so the number of active versions will also depend on what other devices writing to the same Realm are doing.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``number`` - the maximum number of active versions before an exception is thrown.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``number`` - the maximum number of active versions before an exception is thrown.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - **<a href="https://realm.io/docs/java/latest/#faq-large-realm-file-size">FAQ</a> (?)**
+         
+         
+         
+      
+      
+      
+   
+   
 
 .. seealso::
+
 
    
    - **<a href="https://realm.io/docs/java/latest/#faq-large-realm-file-size">FAQ</a> (?)**
@@ -825,6 +1048,22 @@ Sets whether or not calls to **Realm#executeTransaction (?)** are allowed from t
 
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 allowQueriesOnUiThread
@@ -844,6 +1083,22 @@ By default Realm allows queries on the main thread. However, by doing so your ap
 
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 build
@@ -857,6 +1112,22 @@ public :ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>` build 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Creates the RealmConfiguration based on the builder parameters.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 Throws

@@ -136,6 +136,7 @@ And access collections from the remote Realm App as shown here:
 
 .. seealso::
 
+
    
    - :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>`
       
@@ -409,6 +410,22 @@ Returns the current user that is logged in and still valid.A user is invalidated
 If two or more users are logged in, it is the last valid user that is returned by this method.
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 allUsers
@@ -425,6 +442,22 @@ Returns all known users that are either :ref:`User.State.LOGGED_IN <io_realm_mon
 
 Only users that at some point logged into this device will be returned.
 
+
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -443,18 +476,25 @@ Switch current user.The current user is the user returned by :ref:`currentUser()
 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``user`` - the new current user.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``user`` - the new current user.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -474,18 +514,25 @@ public :ref:`User <io_realm_mongodb_User>` removeUser (:ref:`User <io_realm_mong
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Removes a users credentials from this device. If the user was currently logged in, they will be logged out as part of the process. This is only a local change and does not affect the user state on the server.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``user`` - to remove
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``user`` - to remove
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -515,18 +562,25 @@ It is also possible to switch between which user is considered the current user 
 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``credentials`` - the credentials representing the type of login.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``credentials`` - the credentials representing the type of login.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -556,22 +610,29 @@ It is also possible to switch between which user is considered the current user 
 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``credentials`` - the credentials representing the type of login.
+   
+   **Type Parameters**
    
    
    
-- ``callback`` - callback when logging in has completed or failed. The callback will always happen on the same thread as this method is called on.
+   **Parameters**
+   
+   - ``credentials`` - the credentials representing the type of login.
+      
+      
+      
+   - ``callback`` - callback when logging in has completed or failed. The callback will always happen on the same thread as this method is called on.
+      
+      
+      
    
    
+   **Returns**
    
-
+   **Throws**
 
 
 
@@ -593,6 +654,22 @@ public :ref:`EmailPasswordAuth <io_realm_mongodb_auth_EmailPasswordAuth>` getEma
 Returns a wrapper for interacting with functionality related to users either being created or logged in using the :ref:`Credentials.Provider.EMAIL_PASSWORD <io_realm_mongodb_Credentials_Provider_EMAIL_PASSWORD>` identity provider.
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 addAuthenticationListener
@@ -608,18 +685,25 @@ public **void** addAuthenticationListener (:ref:`AuthenticationListener <io_real
 Sets a global authentication listener that will be notified about User events like login and logout.Callbacks to authentication listeners will happen on the UI thread.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``listener`` - listener to register.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``listener`` - listener to register.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -639,18 +723,25 @@ public **void** removeAuthenticationListener (:ref:`AuthenticationListener <io_r
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Removes the provided global authentication listener.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``listener`` - listener to remove.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``listener`` - listener to remove.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -665,6 +756,22 @@ public :ref:`Sync <io_realm_mongodb_sync_Sync>` getSync ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the *Sync* instance managing the ongoing *Realm Sync* sessions synchronizing data between the local and the remote *Realm App* associated with this app.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getFunctions
@@ -680,7 +787,40 @@ public :ref:`Functions <io_realm_mongodb_functions_Functions>` getFunctions (:re
 Returns a *Functions* manager for invoking the Realm App's Realm Functions.This will use the app's default codec registry to encode and decode arguments and results.
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - :ref:`Functions <io_realm_mongodb_functions_Functions>`
+         
+         
+         
+      - :ref:`AppConfiguration.getDefaultCodecRegistry() <io_realm_mongodb_AppConfiguration_getDefaultCodecRegistry__>`
+         
+         
+         
+      
+      
+      
+   
+   
+
 .. seealso::
+
 
    
    - :ref:`Functions <io_realm_mongodb_functions_Functions>`
@@ -703,7 +843,36 @@ public :ref:`Functions <io_realm_mongodb_functions_Functions>` getFunctions (:re
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns a *Functions* manager for invoking the Realm App's Realm Functions with a custom codec registry for encoding and decoding arguments and results.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - :ref:`Functions <io_realm_mongodb_functions_Functions>`
+         
+         
+         
+      
+      
+      
+   
+   
+
 .. seealso::
+
 
    
    - :ref:`Functions <io_realm_mongodb_functions_Functions>`
@@ -727,6 +896,22 @@ public :ref:`AppConfiguration <io_realm_mongodb_AppConfiguration>` getConfigurat
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the configuration object for this app.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 setNetworkTransport
@@ -741,6 +926,22 @@ protected **void** setNetworkTransport (**OsJavaNetworkTransport (?)** transport
 
 Exposed for testing.Swap the currently configured network transport with the provided one. This should only be done if no network requests are currently running.
 
+
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -757,6 +958,22 @@ public **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/ja
 Two Apps are considered equal and will share their underlying state if they both refer to the same :ref:`AppConfiguration.getAppId() <io_realm_mongodb_AppConfiguration_getAppId__>`.
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 hashCode
@@ -769,5 +986,21 @@ hashCode
 public **int** hashCode ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
 
 

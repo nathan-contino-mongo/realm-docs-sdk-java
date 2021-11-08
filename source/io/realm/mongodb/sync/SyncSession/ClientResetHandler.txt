@@ -80,25 +80,32 @@ public **void** onClientReset (:ref:`SyncSession <io_realm_mongodb_sync_SyncSess
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Callback that indicates a Client Reset has happened. This should be handled as quickly as possible as any further changes to the Realm will not be synchronized with the server and must be moved manually from the backup Realm to the new one.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``session`` - :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>` this error happened on.
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``session`` - :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>` this error happened on.
+      
+      
+      
+      
+      
+   - ``error`` - :ref:`ClientResetRequiredError <io_realm_mongodb_sync_ClientResetRequiredError>` the specific Client Reset error.
+      
+      
+      
+      
+      
    
    
-- ``error`` - :ref:`ClientResetRequiredError <io_realm_mongodb_sync_ClientResetRequiredError>` the specific Client Reset error.
+   **Returns**
    
-   
-   
-   
-   
-
+   **Throws**
 
 

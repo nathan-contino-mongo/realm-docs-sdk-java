@@ -101,6 +101,7 @@ A RealmObject cannot be passed between different threads.
 
 .. seealso::
 
+
    
    - **Realm#createObject(Class) (?)**
       
@@ -418,12 +419,41 @@ public final **void** deleteFromRealm ()
 Deletes the object from the Realm it is currently associated to.After this method is called the object will be invalid and any operation (read or write) performed on it will fail with an IllegalStateException.
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - :ref:`isValid() <io_realm_RealmObject_isValid__>`
+         
+         
+         
+      
+      
+      
+   
+   
+
 
 
 Throws
 ______
 
 .. seealso::
+
 
    
    - :ref:`isValid() <io_realm_RealmObject_isValid__>`
@@ -444,12 +474,41 @@ public static **void** deleteFromRealm <**E (?)** >(**E (?)** object)
 Deletes the object from the Realm it is currently associated with.After this method is called the object will be invalid and any operation (read or write) performed on it will fail with an IllegalStateException.
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - :ref:`isValid() <io_realm_RealmObject_isValid__>`
+         
+         
+         
+      
+      
+      
+   
+   
+
 
 
 Throws
 ______
 
 .. seealso::
+
 
    
    - :ref:`isValid() <io_realm_RealmObject_isValid__>`
@@ -492,7 +551,36 @@ Note that this can be used to check the validity of certain conditions such as b
  
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - **<a href="https://github.com/realm/realm-java/tree/master/examples/rxJavaExample">Examples using Realm with RxJava</a> (?)**
+         
+         
+         
+      
+      
+      
+   
+   
+
 .. seealso::
+
 
    
    - **<a href="https://github.com/realm/realm-java/tree/master/examples/rxJavaExample">Examples using Realm with RxJava</a> (?)**
@@ -513,18 +601,25 @@ public static **boolean** isValid <**E (?)** >(**E (?)** object)
 Checks if the RealmObject is still valid to use i.e., the RealmObject hasn't been deleted nor has the :ref:`io.realm.Realm <io_realm_Realm>` been closed. It will always return ``true``  for unmanaged objects.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``object`` - RealmObject to check validity for.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``object`` - RealmObject to check validity for.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -539,7 +634,36 @@ public final **boolean** isFrozen ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns whether or not this RealmObject is frozen.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - :ref:`freeze() <io_realm_RealmObject_freeze__>`
+         
+         
+         
+      
+      
+      
+   
+   
+
 .. seealso::
+
 
    
    - :ref:`freeze() <io_realm_RealmObject_freeze__>`
@@ -558,7 +682,36 @@ public static **boolean** isFrozen <**E (?)** >(**E (?)** object)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns whether or not this RealmObject is frozen.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - :ref:`freeze() <io_realm_RealmObject_freeze__>`
+         
+         
+         
+      
+      
+      
+   
+   
+
 .. seealso::
+
 
    
    - :ref:`freeze() <io_realm_RealmObject_freeze__>`
@@ -594,6 +747,22 @@ Note: Keeping a large number of frozen objects with different versions alive can
 
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 Throws
@@ -618,6 +787,22 @@ Note: Keeping a large number of frozen objects with different versions alive can
 
 
 
+
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -674,7 +859,36 @@ Synchronous RealmObjects are by definition blocking hence this method will alway
 
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - :ref:`isValid() <io_realm_RealmObject_isValid__>`
+         
+         
+         
+      
+      
+      
+   
+   
+
 .. seealso::
+
 
    
    - :ref:`isValid() <io_realm_RealmObject_isValid__>`
@@ -730,20 +944,40 @@ Synchronous RealmObjects are by definition blocking hence this method will alway
 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``object`` - RealmObject to check.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``object`` - RealmObject to check.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - **#isValid(RealmModel) (?)**
+         
+         
+         
+      
+      
+      
+   
+   
 
 .. seealso::
+
 
    
    - **#isValid(RealmModel) (?)**
@@ -777,6 +1011,22 @@ It is possible to create a managed object from an unmanaged object by using **Re
 
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 .. _io_realm_RealmObject_isManaged_E_:
 
 
@@ -794,6 +1044,22 @@ It is possible to create a managed object from an unmanaged object by using **Re
 
 
 
+
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -814,6 +1080,22 @@ You **must not** call **Realm#close() (?)** against returned instance.
 
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 Throws
@@ -833,20 +1115,27 @@ You **must not** call **Realm#close() (?)** against returned instance.
 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``model`` - an :ref:`RealmModel <io_realm_RealmModel>` instance other than :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>`.
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``model`` - an :ref:`RealmModel <io_realm_RealmModel>` instance other than :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>`.
+      
+      
+      
+      
+      
    
    
-
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -870,6 +1159,22 @@ Makes an asynchronous query blocking. This will also trigger any registered list
 
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 .. _io_realm_RealmObject_load_E_:
 
 
@@ -882,18 +1187,25 @@ Makes an asynchronous query blocking. This will also trigger any registered list
 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``object`` - RealmObject to force load.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``object`` - RealmObject to force load.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -936,18 +1248,25 @@ Adds a change listener to this RealmObject to get detailed information about cha
  
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``listener`` - the change listener to be notified.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``listener`` - the change listener to be notified.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -990,18 +1309,25 @@ Adds a change listener to this RealmObject that will be triggered if any value f
  
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``listener`` - the change listener to be notified.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``listener`` - the change listener to be notified.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -1044,22 +1370,29 @@ Adds a change listener to a RealmObject to get detailed information about the ch
  
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``object`` - RealmObject to add listener to.
+   
+   **Type Parameters**
    
    
    
-- ``listener`` - the change listener to be notified.
+   **Parameters**
+   
+   - ``object`` - RealmObject to add listener to.
+      
+      
+      
+   - ``listener`` - the change listener to be notified.
+      
+      
+      
    
    
+   **Returns**
    
-
+   **Throws**
 
 
 
@@ -1102,22 +1435,29 @@ Adds a change listener to a RealmObject that will be triggered if any value fiel
  
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``object`` - RealmObject to add listener to.
+   
+   **Type Parameters**
    
    
    
-- ``listener`` - the change listener to be notified.
+   **Parameters**
+   
+   - ``object`` - RealmObject to add listener to.
+      
+      
+      
+   - ``listener`` - the change listener to be notified.
+      
+      
+      
    
    
+   **Returns**
    
-
+   **Throws**
 
 
 
@@ -1137,18 +1477,25 @@ public final **void** removeChangeListener (:ref:`io.realm.RealmObjectChangeList
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Removes a previously registered listener.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``listener`` - the instance to be removed.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``listener`` - the instance to be removed.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -1163,18 +1510,25 @@ public final **void** removeChangeListener (:ref:`io.realm.RealmChangeListener <
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Removes a previously registered listener.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``listener`` - the instance to be removed.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``listener`` - the instance to be removed.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -1189,22 +1543,29 @@ public static **void** removeChangeListener <**E (?)** >(**E (?)** object, :ref:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Removes a previously registered listener on the given RealmObject.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``object`` - RealmObject to remove listener from.
+   
+   **Type Parameters**
    
    
    
-- ``listener`` - the instance to be removed.
+   **Parameters**
+   
+   - ``object`` - RealmObject to remove listener from.
+      
+      
+      
+   - ``listener`` - the instance to be removed.
+      
+      
+      
    
    
+   **Returns**
    
-
+   **Throws**
 
 
 
@@ -1219,22 +1580,29 @@ public static **void** removeChangeListener <**E (?)** >(**E (?)** object, :ref:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Removes a previously registered listener on the given RealmObject.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``object`` - RealmObject to remove listener from.
+   
+   **Type Parameters**
    
    
    
-- ``listener`` - the instance to be removed.
+   **Parameters**
+   
+   - ``object`` - RealmObject to remove listener from.
+      
+      
+      
+   - ``listener`` - the instance to be removed.
+      
+      
+      
    
    
+   **Returns**
    
-
+   **Throws**
 
 
 
@@ -1254,6 +1622,22 @@ public final **void** removeAllChangeListeners ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Removes all registered listeners.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 .. _io_realm_RealmObject_removeAllChangeListeners_E_:
 
 
@@ -1262,18 +1646,25 @@ public static **void** removeAllChangeListeners <**E (?)** >(**E (?)** object)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Removes all registered listeners from the given RealmObject.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``object`` - RealmObject to remove all listeners from.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``object`` - RealmObject to remove all listeners from.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -1338,18 +1729,37 @@ If you would like the ``asFlowable()``  to stop emitting items you can instruct 
  
 
 
+.. example::
 
 
-Type Parameters
-_______________
-
-
-
-- ``E`` - RealmObject class that is being observed. Must be this class or its super types.
+   
+   **Type Parameters**
+   
+   - ``E`` - RealmObject class that is being observed. Must be this class or its super types.
+      
+      
+      
+   
+   
+   **Parameters**
    
    
    
-
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - **<a href="https://realm.io/docs/java/latest/#rxjava">RxJava and Realm</a> (?)**
+         
+         
+         
+      
+      
+      
+   
+   
 
 
 
@@ -1357,6 +1767,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - **<a href="https://realm.io/docs/java/latest/#rxjava">RxJava and Realm</a> (?)**
@@ -1420,18 +1831,37 @@ If you would like the ``asFlowable()``  to stop emitting items you can instruct 
  
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``object`` - RealmObject class that is being observed. Must be this class or its super types.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``object`` - RealmObject class that is being observed. Must be this class or its super types.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - **<a href="https://realm.io/docs/java/latest/#rxjava">RxJava and Realm</a> (?)**
+         
+         
+         
+      
+      
+      
+   
+   
 
 
 
@@ -1439,6 +1869,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - **<a href="https://realm.io/docs/java/latest/#rxjava">RxJava and Realm</a> (?)**
@@ -1489,12 +1920,41 @@ Realm Observables always emit items from the thread holding the live Realm. This
 
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - **<a href="https://realm.io/docs/java/latest/#rxjava">RxJava and Realm</a> (?)**
+         
+         
+         
+      
+      
+      
+   
+   
+
 
 
 Throws
 ______
 
 .. seealso::
+
 
    
    - **<a href="https://realm.io/docs/java/latest/#rxjava">RxJava and Realm</a> (?)**
@@ -1540,18 +2000,37 @@ Realm Observables always emit items from the thread holding the live Realm. This
 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``object`` - RealmObject class that is being observed. Must be this class or its super types.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``object`` - RealmObject class that is being observed. Must be this class or its super types.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - **<a href="https://realm.io/docs/java/latest/#rxjava">RxJava and Realm</a> (?)**
+         
+         
+         
+      
+      
+      
+   
+   
 
 
 
@@ -1559,6 +2038,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - **<a href="https://realm.io/docs/java/latest/#rxjava">RxJava and Realm</a> (?)**

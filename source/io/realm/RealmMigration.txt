@@ -58,6 +58,7 @@ During development when RealmObject classes can change frequently, it is possibl
 
 .. seealso::
 
+
    
    - :ref:`io.realm.RealmConfiguration.Builder.schemaVersion(long) <io_realm_RealmConfiguration_Builder_schemaVersion_long_>`
       
@@ -113,25 +114,32 @@ public **void** migrate (:ref:`DynamicRealm <io_realm_DynamicRealm>` realm, **lo
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This method will be called if a migration is needed. The entire method is wrapped in a write transaction so it is possible to create, update or delete any existing objects without wrapping it in your own transaction.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``realm`` - the Realm schema on which to perform the migration.
+   
+   **Type Parameters**
    
    
    
-- ``oldVersion`` - the schema version of the Realm at the start of the migration.
+   **Parameters**
+   
+   - ``realm`` - the Realm schema on which to perform the migration.
+      
+      
+      
+   - ``oldVersion`` - the schema version of the Realm at the start of the migration.
+      
+      
+      
+   - ``newVersion`` - the schema version of the Realm after executing the migration.
+      
+      
+      
    
    
+   **Returns**
    
-- ``newVersion`` - the schema version of the Realm after executing the migration.
-   
-   
-   
-
+   **Throws**
 
 

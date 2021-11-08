@@ -142,6 +142,22 @@ public :ref:`BaseChangeEvent.OperationType <io_realm_mongodb_mongo_events_BaseCh
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the operation type of the change that triggered the change event.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getFullDocument
@@ -155,6 +171,22 @@ public **DocumentT (?)** getFullDocument ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The full document at some point after the change has been applied.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getDocumentKey
@@ -168,6 +200,22 @@ public **BsonDocument (?)** getDocumentKey ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The unique identifier for the document that was actually changed.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getUpdateDescription
@@ -181,6 +229,22 @@ public :ref:`UpdateDescription <io_realm_mongodb_mongo_events_UpdateDescription>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In the case of an update, the description of which fields have been added, removed or updated.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 hasUncommittedWrites
@@ -194,6 +258,22 @@ public **boolean** hasUncommittedWrites ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Indicates a local change event that has not yet been synchronized with a remote data store. Used only for the sync use case.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 toBsonDocument
@@ -207,4 +287,20 @@ public abstract **BsonDocument (?)** toBsonDocument ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Converts the change event to a BSON representation, as it would look on a MongoDB realm change stream, or a Realm compact watch stream.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 

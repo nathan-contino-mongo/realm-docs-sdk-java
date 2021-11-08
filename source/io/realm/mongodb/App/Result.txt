@@ -27,6 +27,7 @@ io.realm.mongodb
 Result class representing the result of an async request from this app towards MongoDB Realm.
 .. seealso::
 
+
    
    - :ref:`Callback <io_realm_mongodb_App_Callback>`
       
@@ -144,6 +145,22 @@ public static :ref:`App.Result <io_realm_mongodb_App_Result>` success <**T (?)**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Creates a successful request result with no return value.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 withResult
@@ -157,18 +174,25 @@ public static :ref:`App.Result <io_realm_mongodb_App_Result>` withResult <**T (?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Creates a successful request result with a return value.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``result`` - the result value.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``result`` - the result value.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -183,18 +207,25 @@ public static :ref:`App.Result <io_realm_mongodb_App_Result>` withError <**T (?)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Creates a failed request result. The request failed for some reason, either because there was a network error or the Realm Object Server returned an error.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``exception`` - error that occurred.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``exception`` - error that occurred.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -209,6 +240,22 @@ public **boolean** isSuccess ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns whether or not request was successful
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 get
@@ -222,6 +269,22 @@ public **T (?)** get ()
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the response in case the request was a success.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getOrDefault
@@ -235,6 +298,22 @@ public **T (?)** getOrDefault (**T (?)** defaultValue)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the response if the request was a success. If it failed, the default value is returned instead.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getOrThrow
@@ -248,6 +327,22 @@ public **T (?)** getOrThrow ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If the request was successful the response is returned, otherwise the provided error is thrown.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 Throws
@@ -266,4 +361,20 @@ public :ref:`AppException <io_realm_mongodb_AppException>` getError ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the error in case of a failed request.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 

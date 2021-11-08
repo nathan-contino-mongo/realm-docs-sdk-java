@@ -49,6 +49,7 @@ A *sync* manager handling synchronization of local Realms with remote Realm Apps
 
 .. seealso::
 
+
    
    - :ref:`App.getSync() <io_realm_mongodb_App_getSync__>`
       
@@ -171,18 +172,25 @@ public synchronized :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>` getSe
 Gets a cached :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>` for the given :ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>` or throw if no one exists yet. A session should exist after you open a Realm with a :ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>`.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``syncConfiguration`` - configuration object for the synchronized Realm.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``syncConfiguration`` - configuration object for the synchronized Realm.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -204,6 +212,22 @@ public synchronized `Collection <https://docs.oracle.com/javase/7/docs/api/java/
 Gets a collection of all the cached :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>`.
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getOrCreateSession
@@ -219,18 +243,25 @@ public synchronized :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>` getOr
 Gets any cached :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>` for the given :ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>` or create a new one if no one exists. Note: This is mainly for internal usage, consider using :ref:`getSession(SyncConfiguration) <io_realm_mongodb_sync_Sync_getSession_SyncConfiguration_>` instead.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``syncConfiguration`` - configuration object for the synchronized Realm.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``syncConfiguration`` - configuration object for the synchronized Realm.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -253,5 +284,21 @@ Realm will automatically detect when a device gets connectivity after being offl
 
 In those cases it can be beneficial to call this method manually, which will force all sessions to attempt to reconnect immediately and reset any timers they are using for incremental backoff.
 
+
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
 
 

@@ -70,6 +70,7 @@ Synchronized Realms are created by using :ref:`Realm.getInstance(RealmConfigurat
 
 .. seealso::
 
+
    
    - **<a href="https://docs.realm.io/platform/using-synced-realms/syncing-data">The docs</a> for
        more information about the two types of synchronization. (?)**
@@ -330,26 +331,33 @@ public static :ref:`RealmConfiguration <io_realm_RealmConfiguration>` forRecover
 Returns a :ref:`RealmConfiguration <io_realm_RealmConfiguration>` appropriate to open a read-only, non-synced Realm to recover any pending changes. This is useful when trying to open a backup/recovery Realm (after a client reset).
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``canonicalPath`` - the absolute path to the Realm file defined by this configuration.
+   
+   **Type Parameters**
    
    
    
-- ``encryptionKey`` - the key used to encrypt/decrypt the Realm file.
+   **Parameters**
+   
+   - ``canonicalPath`` - the absolute path to the Realm file defined by this configuration.
+      
+      
+      
+   - ``encryptionKey`` - the key used to encrypt/decrypt the Realm file.
+      
+      
+      
+   - ``modules`` - if specified it will restricts Realm schema to the provided module.
+      
+      
+      
    
    
+   **Returns**
    
-- ``modules`` - if specified it will restricts Realm schema to the provided module.
-   
-   
-   
-
+   **Throws**
 
 .. _io_realm_mongodb_sync_SyncConfiguration_forRecovery_String_:
 
@@ -361,18 +369,25 @@ public static :ref:`RealmConfiguration <io_realm_RealmConfiguration>` forRecover
 Returns a :ref:`RealmConfiguration <io_realm_RealmConfiguration>` appropriate to open a read-only, non-synced Realm to recover any pending changes. This is useful when trying to open a backup/recovery Realm (after a client reset). Note: This will use the default Realm module (composed of all :ref:`RealmModel <io_realm_RealmModel>`), and assume no encryption should be used as well.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``canonicalPath`` - the absolute path to the Realm file defined by this configuration.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``canonicalPath`` - the absolute path to the Realm file defined by this configuration.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -387,22 +402,29 @@ public static :ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns a default configuration for the given user and partition value.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``user`` - The user that will be used for accessing the Realm App.
+   
+   **Type Parameters**
    
    
    
-- ``partitionValue`` - The partition value identifying the remote Realm that will be synchronized.
+   **Parameters**
+   
+   - ``user`` - The user that will be used for accessing the Realm App.
+      
+      
+      
+   - ``partitionValue`` - The partition value identifying the remote Realm that will be synchronized.
+      
+      
+      
    
    
+   **Returns**
    
-
+   **Throws**
 
 .. _io_realm_mongodb_sync_SyncConfiguration_defaultConfig_User__Long_:
 
@@ -412,22 +434,29 @@ public static :ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns a default configuration for the given user and partition value.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``user`` - The user that will be used for accessing the Realm App.
+   
+   **Type Parameters**
    
    
    
-- ``partitionValue`` - The partition value identifying the remote Realm that will be synchronized.
+   **Parameters**
+   
+   - ``user`` - The user that will be used for accessing the Realm App.
+      
+      
+      
+   - ``partitionValue`` - The partition value identifying the remote Realm that will be synchronized.
+      
+      
+      
    
    
+   **Returns**
    
-
+   **Throws**
 
 .. _io_realm_mongodb_sync_SyncConfiguration_defaultConfig_User__Integer_:
 
@@ -437,22 +466,29 @@ public static :ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns a default configuration for the given user and partition value.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``user`` - The user that will be used for accessing the Realm App.
+   
+   **Type Parameters**
    
    
    
-- ``partitionValue`` - The partition value identifying the remote Realm that will be synchronized.
+   **Parameters**
+   
+   - ``user`` - The user that will be used for accessing the Realm App.
+      
+      
+      
+   - ``partitionValue`` - The partition value identifying the remote Realm that will be synchronized.
+      
+      
+      
    
    
+   **Returns**
    
-
+   **Throws**
 
 .. _io_realm_mongodb_sync_SyncConfiguration_defaultConfig_User__ObjectId_:
 
@@ -462,22 +498,29 @@ public static :ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns a default configuration for the given user and partition value.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``user`` - The user that will be used for accessing the Realm App.
+   
+   **Type Parameters**
    
    
    
-- ``partitionValue`` - The partition value identifying the remote Realm that will be synchronized.
+   **Parameters**
+   
+   - ``user`` - The user that will be used for accessing the Realm App.
+      
+      
+      
+   - ``partitionValue`` - The partition value identifying the remote Realm that will be synchronized.
+      
+      
+      
    
    
+   **Returns**
    
-
+   **Throws**
 
 
 
@@ -492,6 +535,22 @@ protected :ref:`Realm.Transaction <io_realm_Realm_Transaction>` getInitialDataTr
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 equals
@@ -504,6 +563,22 @@ equals
 public **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -518,6 +593,22 @@ public **int** hashCode ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 toString
@@ -530,6 +621,22 @@ toString
 public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  toString ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -544,6 +651,22 @@ public :ref:`User <io_realm_mongodb_User>` getUser ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the user.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getServerUrl
@@ -557,6 +680,22 @@ public `URI <https://docs.oracle.com/javase/7/docs/api/java/net/URI.html>`__  ge
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the server URI for the remote MongoDB Realm the local Realm is synchronizing with.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getErrorHandler
@@ -570,6 +709,22 @@ public :ref:`SyncSession.ErrorHandler <io_realm_mongodb_sync_SyncSession_ErrorHa
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the error handler for this *SyncConfiguration*.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getClientResetHandler
@@ -583,6 +738,22 @@ public :ref:`SyncSession.ClientResetHandler <io_realm_mongodb_sync_SyncSession_C
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the Client Reset handler for this *SyncConfiguration*.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 shouldDeleteRealmOnLogout
@@ -598,6 +769,22 @@ public **boolean** shouldDeleteRealmOnLogout ()
 Returns ``true``  if the Realm file must be deleted once the :ref:`User <io_realm_mongodb_User>` owning it logs out.
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 shouldWaitForInitialRemoteData
@@ -612,6 +799,22 @@ public **boolean** shouldWaitForInitialRemoteData ()
 
 Returns ``true``  if the Realm will download all known changes from the remote server before being opened the first time.
 
+
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -630,7 +833,36 @@ Returns the timeout defined when downloading any initial data the first time the
 
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - :ref:`SyncConfiguration.Builder.waitForInitialRemoteData(long, TimeUnit) <io_realm_mongodb_sync_SyncConfiguration_Builder_waitForInitialRemoteData_long__TimeUnit_>`
+         
+         
+         
+      
+      
+      
+   
+   
+
 .. seealso::
+
 
    
    - :ref:`SyncConfiguration.Builder.waitForInitialRemoteData(long, TimeUnit) <io_realm_mongodb_sync_SyncConfiguration_Builder_waitForInitialRemoteData_long__TimeUnit_>`
@@ -654,6 +886,22 @@ protected **boolean** isSyncConfiguration ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getSessionStopPolicy
@@ -667,6 +915,22 @@ public **OsRealmConfig.SyncSessionStopPolicy (?)** getSessionStopPolicy ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 NOTE: Only for internal usage. May change without warning. Returns the stop policy for the session for this Realm once the Realm has been closed.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getUrlPrefix
@@ -680,6 +944,22 @@ public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the url prefix used when establishing a sync connection to the Realm Object Server.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getPartitionValue
@@ -693,6 +973,22 @@ public **BsonValue (?)** getPartitionValue ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the value this Realm is partitioned on. The partition key is a property defined in MongoDB Realm. All classes with a property with this value will be synchronized to the Realm.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 realmExists
@@ -705,5 +1001,21 @@ realmExists
 protected **boolean** realmExists ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
 
 

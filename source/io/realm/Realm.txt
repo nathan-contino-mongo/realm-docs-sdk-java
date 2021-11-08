@@ -85,6 +85,7 @@ Realm supports String and byte fields containing up to 16 MB.
 
 .. seealso::
 
+
    
    - **<a href="http://en.wikipedia.org/wiki/ACID">ACID</a> (?)**
       
@@ -706,6 +707,22 @@ public **<any> (?)** asFlowable ()
 
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 isEmpty
@@ -720,6 +737,22 @@ public **boolean** isEmpty ()
 
 
 
+
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -739,6 +772,22 @@ The schema can only be modified using :ref:`DynamicRealm.getSchema() <io_realm_D
 
 
 
+
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -794,18 +843,37 @@ Remember to register it in the ``AndroidManifest.xml``  file:
  
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``context`` - the Application Context.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``context`` - the Application Context.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - :ref:`getDefaultInstance() <io_realm_Realm_getDefaultInstance__>`
+         
+         
+         
+      
+      
+      
+   
+   
 
 
 
@@ -813,6 +881,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - :ref:`getDefaultInstance() <io_realm_Realm_getDefaultInstance__>`
@@ -872,24 +941,43 @@ Remember to register it in the ``AndroidManifest.xml``  file:
  
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``context`` - the Application Context.
+   
+   **Type Parameters**
    
    
    
-- ``userAgent`` - optional user defined string that will be sent to the Realm Object Server as part of a ``User-Agent``  header when a session is established. This setting will not be used by non-synchronized Realms.
+   **Parameters**
+   
+   - ``context`` - the Application Context.
+      
+      
+      
+   - ``userAgent`` - optional user defined string that will be sent to the Realm Object Server as part of a ``User-Agent``  header when a session is established. This setting will not be used by non-synchronized Realms.
+      
+      
+      
+      
+      
    
    
+   **Returns**
+   
+   **Throws**.. seealso::
    
    
+      
+      - :ref:`getDefaultInstance() <io_realm_Realm_getDefaultInstance__>`
+         
+         
+         
+      
+      
+      
    
-
+   
 
 
 
@@ -897,6 +985,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - :ref:`getDefaultInstance() <io_realm_Realm_getDefaultInstance__>`
@@ -922,6 +1011,22 @@ public static :ref:`Realm <io_realm_Realm>` getDefaultInstance ()
 Realm static constructor that returns the Realm instance defined by the :ref:`io.realm.RealmConfiguration <io_realm_RealmConfiguration>` set by :ref:`setDefaultConfiguration(RealmConfiguration) <io_realm_Realm_setDefaultConfiguration_RealmConfiguration_>`
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 Throws
@@ -942,20 +1047,39 @@ public static :ref:`Realm <io_realm_Realm>` getInstance (:ref:`RealmConfiguratio
 Realm static constructor that returns the Realm instance defined by provided :ref:`io.realm.RealmConfiguration <io_realm_RealmConfiguration>`
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``configuration`` - :ref:`RealmConfiguration <io_realm_RealmConfiguration>` used to open the Realm
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``configuration`` - :ref:`RealmConfiguration <io_realm_RealmConfiguration>` used to open the Realm
+      
+      
+      
+      
+      
    
    
-
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - :ref:`RealmConfiguration for details on how to configure a Realm. <io_realm_RealmConfiguration>`
+         
+         
+         
+      
+      
+      
+   
+   
 
 
 
@@ -963,6 +1087,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - :ref:`RealmConfiguration for details on how to configure a Realm. <io_realm_RealmConfiguration>`
@@ -988,24 +1113,43 @@ public static :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` getInstanceAsync (
 The creation of the first Realm instance per :ref:`RealmConfiguration <io_realm_RealmConfiguration>` in a process can take some time as all initialization code need to run at that point (setting up the Realm, validating schemas and creating initial data). This method places the initialization work in a background thread and deliver the Realm instance to the caller thread asynchronously after the initialization is finished.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``configuration`` - :ref:`RealmConfiguration <io_realm_RealmConfiguration>` used to open the Realm.
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``configuration`` - :ref:`RealmConfiguration <io_realm_RealmConfiguration>` used to open the Realm.
+      
+      
+      
+      
+      
+   - ``callback`` - invoked to return the results.
+      
+      
+      
    
    
-- ``callback`` - invoked to return the results.
+   **Returns**
+   
+   **Throws**.. seealso::
    
    
+      
+      - :ref:`Callback for more details. <io_realm_Realm_Transaction_Callback>`
+         
+         
+         
+      
+      
+      
    
-
+   
 
 
 
@@ -1013,6 +1157,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - :ref:`Callback for more details. <io_realm_Realm_Transaction_Callback>`
@@ -1038,20 +1183,39 @@ public static **void** setDefaultConfiguration (:ref:`RealmConfiguration <io_rea
 Sets the :ref:`io.realm.RealmConfiguration <io_realm_RealmConfiguration>` used when calling :ref:`getDefaultInstance() <io_realm_Realm_getDefaultInstance__>`.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``configuration`` - the :ref:`io.realm.RealmConfiguration <io_realm_RealmConfiguration>` to use as the default configuration.
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``configuration`` - the :ref:`io.realm.RealmConfiguration <io_realm_RealmConfiguration>` to use as the default configuration.
+      
+      
+      
+      
+      
    
    
-
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - :ref:`RealmConfiguration for details on how to configure a Realm. <io_realm_RealmConfiguration>`
+         
+         
+         
+      
+      
+      
+   
+   
 
 
 
@@ -1059,6 +1223,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - :ref:`RealmConfiguration for details on how to configure a Realm. <io_realm_RealmConfiguration>`
@@ -1084,6 +1249,22 @@ public static :ref:`RealmConfiguration <io_realm_RealmConfiguration>` getDefault
 Returns the default configuration for :ref:`getDefaultInstance() <io_realm_Realm_getDefaultInstance__>`.
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 removeDefaultConfiguration
@@ -1098,6 +1279,22 @@ public static **void** removeDefaultConfiguration ()
 
 Removes the current default configuration (if any). Any further calls to :ref:`getDefaultInstance() <io_realm_Realm_getDefaultInstance__>` will fail until a new default configuration has been set using :ref:`setDefaultConfiguration(RealmConfiguration) <io_realm_Realm_setDefaultConfiguration_RealmConfiguration_>`.
 
+
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -1118,22 +1315,49 @@ Creates a Realm object for each object in a JSON array. This must be done within
 This method currently does not support value list field.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``clazz`` - type of Realm objects to create.
+   
+   **Type Parameters**
    
    
    
-- ``json`` - an array where each JSONObject must map to the specified class.
+   **Parameters**
+   
+   - ``clazz`` - type of Realm objects to create.
+      
+      
+      
+   - ``json`` - an array where each JSONObject must map to the specified class.
+      
+      
+      
    
    
+   **Returns**
    
-
+   **Throws**.. seealso::
+   
+   
+      
+      - **RealmSet (?)**
+         
+         
+         
+      - **RealmDictionary (?)**
+         
+         
+         
+      - **RealmMap (?)**
+         
+         
+         
+      
+      
+      
+   
+   
 
 
 
@@ -1141,6 +1365,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - **RealmSet (?)**
@@ -1171,22 +1396,49 @@ Creates a Realm object for each object in a JSON array. This must be done within
 This method currently does not support value list field.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``clazz`` - type of Realm objects to create.
+   
+   **Type Parameters**
    
    
    
-- ``json`` - the JSON array as a String where each object can map to the specified class.
+   **Parameters**
+   
+   - ``clazz`` - type of Realm objects to create.
+      
+      
+      
+   - ``json`` - the JSON array as a String where each object can map to the specified class.
+      
+      
+      
    
    
+   **Returns**
    
-
+   **Throws**.. seealso::
+   
+   
+      
+      - **RealmSet (?)**
+         
+         
+         
+      - **RealmDictionary (?)**
+         
+         
+         
+      - **RealmMap (?)**
+         
+         
+         
+      
+      
+      
+   
+   
 
 
 
@@ -1194,6 +1446,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - **RealmSet (?)**
@@ -1226,22 +1479,49 @@ This API is only available in API level 11 or later.
 This method currently does not support value list field.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``clazz`` - type of Realm objects created.
+   
+   **Type Parameters**
    
    
    
-- ``inputStream`` - the JSON array as a InputStream. All objects in the array must be of the specified class.
+   **Parameters**
+   
+   - ``clazz`` - type of Realm objects created.
+      
+      
+      
+   - ``inputStream`` - the JSON array as a InputStream. All objects in the array must be of the specified class.
+      
+      
+      
    
    
+   **Returns**
    
-
+   **Throws**.. seealso::
+   
+   
+      
+      - **RealmSet (?)**
+         
+         
+         
+      - **RealmDictionary (?)**
+         
+         
+         
+      - **RealmMap (?)**
+         
+         
+         
+      
+      
+      
+   
+   
 
 
 
@@ -1249,6 +1529,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - **RealmSet (?)**
@@ -1284,24 +1565,55 @@ Tries to update a list of existing objects identified by their primary key with 
 This method currently does not support value list field.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``clazz`` - type of :ref:`io.realm.RealmObject <io_realm_RealmObject>` to create or update. It must have a primary key defined.
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``clazz`` - type of :ref:`io.realm.RealmObject <io_realm_RealmObject>` to create or update. It must have a primary key defined.
+      
+      
+      
+      
+      
+   - ``json`` - array with object data.
+      
+      
+      
    
    
-- ``json`` - array with object data.
+   **Returns**
+   
+   **Throws**.. seealso::
    
    
+      
+      - **#createAllFromJson(Class, org.json.JSONArray) (?)**
+         
+         
+         
+      - **RealmSet (?)**
+         
+         
+         
+      - **RealmDictionary (?)**
+         
+         
+         
+      - **RealmMap (?)**
+         
+         
+         
+      
+      
+      
    
-
+   
 
 
 
@@ -1309,6 +1621,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - **#createAllFromJson(Class, org.json.JSONArray) (?)**
@@ -1343,24 +1656,55 @@ Tries to update a list of existing objects identified by their primary key with 
 This method currently does not support value list field.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``clazz`` - type of :ref:`io.realm.RealmObject <io_realm_RealmObject>` to create or update. It must have a primary key defined.
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``clazz`` - type of :ref:`io.realm.RealmObject <io_realm_RealmObject>` to create or update. It must have a primary key defined.
+      
+      
+      
+      
+      
+   - ``json`` - string with an array of JSON objects.
+      
+      
+      
    
    
-- ``json`` - string with an array of JSON objects.
+   **Returns**
+   
+   **Throws**.. seealso::
    
    
+      
+      - **#createAllFromJson(Class, String) (?)**
+         
+         
+         
+      - **RealmSet (?)**
+         
+         
+         
+      - **RealmDictionary (?)**
+         
+         
+         
+      - **RealmMap (?)**
+         
+         
+         
+      
+      
+      
    
-
+   
 
 
 
@@ -1368,6 +1712,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - **#createAllFromJson(Class, String) (?)**
@@ -1404,24 +1749,55 @@ This API is only available in API level 11 or later.
 This method currently does not support value list field.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``clazz`` - type of :ref:`io.realm.RealmObject <io_realm_RealmObject>` to create or update. It must have a primary key defined.
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``clazz`` - type of :ref:`io.realm.RealmObject <io_realm_RealmObject>` to create or update. It must have a primary key defined.
+      
+      
+      
+      
+      
+   - ``in`` - the InputStream with a list of object data in JSON format.
+      
+      
+      
    
    
-- ``in`` - the InputStream with a list of object data in JSON format.
+   **Returns**
+   
+   **Throws**.. seealso::
    
    
+      
+      - **#createOrUpdateAllFromJson(Class, java.io.InputStream) (?)**
+         
+         
+         
+      - **RealmSet (?)**
+         
+         
+         
+      - **RealmDictionary (?)**
+         
+         
+         
+      - **RealmMap (?)**
+         
+         
+         
+      
+      
+      
    
-
+   
 
 
 
@@ -1429,6 +1805,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - **#createOrUpdateAllFromJson(Class, java.io.InputStream) (?)**
@@ -1468,22 +1845,53 @@ Creates a Realm object pre-filled with data from a JSON object. This must be don
 This method currently does not support value list field.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``clazz`` - type of Realm object to create.
+   
+   **Type Parameters**
    
    
    
-- ``json`` - the JSONObject with object data.
+   **Parameters**
+   
+   - ``clazz`` - type of Realm object to create.
+      
+      
+      
+   - ``json`` - the JSONObject with object data.
+      
+      
+      
    
    
+   **Returns**
    
-
+   **Throws**.. seealso::
+   
+   
+      
+      - **#createOrUpdateObjectFromJson(Class, org.json.JSONObject) (?)**
+         
+         
+         
+      - **RealmSet (?)**
+         
+         
+         
+      - **RealmDictionary (?)**
+         
+         
+         
+      - **RealmMap (?)**
+         
+         
+         
+      
+      
+      
+   
+   
 
 
 
@@ -1491,6 +1899,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - **#createOrUpdateObjectFromJson(Class, org.json.JSONObject) (?)**
@@ -1525,22 +1934,49 @@ Creates a Realm object pre-filled with data from a JSON object. This must be don
 This method currently does not support value list field.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``clazz`` - type of Realm object to create.
+   
+   **Type Parameters**
    
    
    
-- ``json`` - the JSON string with object data.
+   **Parameters**
+   
+   - ``clazz`` - type of Realm object to create.
+      
+      
+      
+   - ``json`` - the JSON string with object data.
+      
+      
+      
    
    
+   **Returns**
    
-
+   **Throws**.. seealso::
+   
+   
+      
+      - **RealmSet (?)**
+         
+         
+         
+      - **RealmDictionary (?)**
+         
+         
+         
+      - **RealmMap (?)**
+         
+         
+         
+      
+      
+      
+   
+   
 
 
 
@@ -1548,6 +1984,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - **RealmSet (?)**
@@ -1580,22 +2017,49 @@ This API is only available in API level 11 or later.
 This method currently does not support value list field.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``clazz`` - type of Realm object to create.
+   
+   **Type Parameters**
    
    
    
-- ``inputStream`` - the JSON object data as a InputStream.
+   **Parameters**
+   
+   - ``clazz`` - type of Realm object to create.
+      
+      
+      
+   - ``inputStream`` - the JSON object data as a InputStream.
+      
+      
+      
    
    
+   **Returns**
    
-
+   **Throws**.. seealso::
+   
+   
+      
+      - **RealmSet (?)**
+         
+         
+         
+      - **RealmDictionary (?)**
+         
+         
+         
+      - **RealmMap (?)**
+         
+         
+         
+      
+      
+      
+   
+   
 
 
 
@@ -1603,6 +2067,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - **RealmSet (?)**
@@ -1638,26 +2103,57 @@ Tries to update an existing object defined by its primary key with new JSON data
 This method currently does not support value list field.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``clazz`` - Type of :ref:`io.realm.RealmObject <io_realm_RealmObject>` to create or update. It must have a primary key defined.
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``clazz`` - Type of :ref:`io.realm.RealmObject <io_realm_RealmObject>` to create or update. It must have a primary key defined.
+      
+      
+      
+      
+      
+   - ``json`` - **org.json.JSONObject (?)** with object data.
+      
+      
+      
+      
+      
    
    
-- ``json`` - **org.json.JSONObject (?)** with object data.
+   **Returns**
+   
+   **Throws**.. seealso::
    
    
+      
+      - **#createObjectFromJson(Class, org.json.JSONObject) (?)**
+         
+         
+         
+      - **RealmSet (?)**
+         
+         
+         
+      - **RealmDictionary (?)**
+         
+         
+         
+      - **RealmMap (?)**
+         
+         
+         
+      
+      
+      
    
    
-   
-
 
 
 
@@ -1665,6 +2161,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - **#createObjectFromJson(Class, org.json.JSONObject) (?)**
@@ -1699,24 +2196,55 @@ Tries to update an existing object defined by its primary key with new JSON data
 This method currently does not support value list field.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``clazz`` - type of :ref:`io.realm.RealmObject <io_realm_RealmObject>` to create or update. It must have a primary key defined.
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``clazz`` - type of :ref:`io.realm.RealmObject <io_realm_RealmObject>` to create or update. It must have a primary key defined.
+      
+      
+      
+      
+      
+   - ``json`` - string with object data in JSON format.
+      
+      
+      
    
    
-- ``json`` - string with object data in JSON format.
+   **Returns**
+   
+   **Throws**.. seealso::
    
    
+      
+      - **#createObjectFromJson(Class, String) (?)**
+         
+         
+         
+      - **RealmSet (?)**
+         
+         
+         
+      - **RealmDictionary (?)**
+         
+         
+         
+      - **RealmMap (?)**
+         
+         
+         
+      
+      
+      
    
-
+   
 
 
 
@@ -1724,6 +2252,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - **#createObjectFromJson(Class, String) (?)**
@@ -1760,26 +2289,57 @@ This API is only available in API level 11 or later.
 This method currently does not support value list field.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``clazz`` - type of :ref:`io.realm.RealmObject <io_realm_RealmObject>` to create or update. It must have a primary key defined.
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``clazz`` - type of :ref:`io.realm.RealmObject <io_realm_RealmObject>` to create or update. It must have a primary key defined.
+      
+      
+      
+      
+      
+   - ``in`` - the `InputStream <https://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html>`__  with object data in JSON format.
+      
+      
+      
+      
+      
    
    
-- ``in`` - the `InputStream <https://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html>`__  with object data in JSON format.
+   **Returns**
+   
+   **Throws**.. seealso::
    
    
+      
+      - **#createObjectFromJson(Class, java.io.InputStream) (?)**
+         
+         
+         
+      - **RealmSet (?)**
+         
+         
+         
+      - **RealmDictionary (?)**
+         
+         
+         
+      - **RealmMap (?)**
+         
+         
+         
+      
+      
+      
    
    
-   
-
 
 
 
@@ -1787,6 +2347,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - **#createObjectFromJson(Class, java.io.InputStream) (?)**
@@ -1826,18 +2387,37 @@ Instantiates and adds a new object to the Realm.This method is only available fo
 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``clazz`` - the Class of the object to create.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``clazz`` - the Class of the object to create.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - **#createObject(Class, Object) (?)**
+         
+         
+         
+      
+      
+      
+   
+   
 
 
 
@@ -1845,6 +2425,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - **#createObject(Class, Object) (?)**
@@ -1867,22 +2448,29 @@ Instantiates and adds a new object to the Realm with the primary key value alrea
 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``clazz`` - the Class of the object to create.
+   
+   **Type Parameters**
    
    
    
-- ``primaryKeyValue`` - value for the primary key field.
+   **Parameters**
+   
+   - ``clazz`` - the Class of the object to create.
+      
+      
+      
+   - ``primaryKeyValue`` - value for the primary key field.
+      
+      
+      
    
    
+   **Returns**
    
-
+   **Throws**
 
 
 
@@ -1904,28 +2492,47 @@ public **E (?)** createEmbeddedObject <**E (?)** >(`java.lang.Class\<E> <https:/
 Instantiates and adds a new embedded object to the Realm.This method should only be used to create objects of types marked as embedded.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``clazz`` - the Class of the object to create. It must be marked with ``\@RealmClass(embedded = true)`` .
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``clazz`` - the Class of the object to create. It must be marked with ``\@RealmClass(embedded = true)`` .
+      
+      
+      
+      
+      
+   - ``parentObject`` - The parent object which should hold a reference to the embedded object.
+      
+      
+      
+   - ``parentProperty`` - the property in the parent class which holds the reference. If the parent property is a list the embedded object will be added to the end of that list.
+      
+      
+      
    
    
-- ``parentObject`` - The parent object which should hold a reference to the embedded object.
+   **Returns**
+   
+   **Throws**.. seealso::
    
    
+      
+      - **RealmClass#embedded() (?)**
+         
+         
+         
+      
+      
+      
    
-- ``parentProperty`` - the property in the parent class which holds the reference. If the parent property is a list the embedded object will be added to the end of that list.
    
-   
-   
-
 
 
 
@@ -1933,6 +2540,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - **RealmClass#embedded() (?)**
@@ -1958,24 +2566,31 @@ public **E (?)** copyToRealm <**E (?)** >(**E (?)** object, :ref:`io.realm.Impor
 Copies a RealmObject to the Realm instance and returns the copy. Any further changes to the original RealmObject will not be reflected in the Realm copy. This is a deep copy, so all referenced objects will be copied. Objects already in this Realm will be ignored.Please note, copying an object will copy all field values. Any unset field in this and child objects will be set to their default value if not provided.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``object`` - the :ref:`io.realm.RealmObject <io_realm_RealmObject>` to copy to the Realm.
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``object`` - the :ref:`io.realm.RealmObject <io_realm_RealmObject>` to copy to the Realm.
+      
+      
+      
+      
+      
+   - ``flags`` - any flag that modifies the behaviour of inserting the data into the Realm.
+      
+      
+      
    
    
-- ``flags`` - any flag that modifies the behaviour of inserting the data into the Realm.
+   **Returns**
    
-   
-   
-
+   **Throws**
 
 
 
@@ -1992,22 +2607,29 @@ public `List <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__ 
 Copies a collection of RealmObjects to the Realm instance and returns their copy. Any further changes to the original RealmObjects will not be reflected in the Realm copies. This is a deep copy i.e., all referenced objects will be copied. Objects already in this Realm will be ignored.Please note, copying an object will copy all field values. Any unset field in the objects and child objects will be set to their default value if not provided.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``objects`` - the RealmObjects to copy to the Realm.
+   
+   **Type Parameters**
    
    
    
-- ``flags`` - any flag that modifies the behaviour of inserting the data into the Realm.
+   **Parameters**
+   
+   - ``objects`` - the RealmObjects to copy to the Realm.
+      
+      
+      
+   - ``flags`` - any flag that modifies the behaviour of inserting the data into the Realm.
+      
+      
+      
    
    
+   **Returns**
    
-
+   **Throws**
 
 
 
@@ -2031,24 +2653,43 @@ Updates an existing RealmObject that is identified by the same :ref:`io.realm.an
 Please note, copying an object will copy all field values. Any unset field in the object and child objects will be set to their default value if not provided.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``object`` - :ref:`io.realm.RealmObject <io_realm_RealmObject>` to copy or update.
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``object`` - :ref:`io.realm.RealmObject <io_realm_RealmObject>` to copy or update.
+      
+      
+      
+      
+      
+   - ``flags`` - any flag that modifies the behaviour of inserting the data into the Realm.
+      
+      
+      
    
    
-- ``flags`` - any flag that modifies the behaviour of inserting the data into the Realm.
+   **Returns**
+   
+   **Throws**.. seealso::
    
    
+      
+      - **#copyToRealm(RealmModel, ImportFlag...) (?)**
+         
+         
+         
+      
+      
+      
    
-
+   
 
 
 
@@ -2056,6 +2697,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - **#copyToRealm(RealmModel, ImportFlag...) (?)**
@@ -2078,22 +2720,41 @@ Updates a list of existing RealmObjects that is identified by their :ref:`io.rea
 Please note, copying an object will copy all field values. Any unset field in the objects and child objects will be set to their default value if not provided.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``objects`` - a list of objects to update or copy into Realm.
+   
+   **Type Parameters**
    
    
    
-- ``flags`` - any flag that modifies the behaviour of inserting the data into the Realm.
+   **Parameters**
+   
+   - ``objects`` - a list of objects to update or copy into Realm.
+      
+      
+      
+   - ``flags`` - any flag that modifies the behaviour of inserting the data into the Realm.
+      
+      
+      
    
    
+   **Returns**
    
-
+   **Throws**.. seealso::
+   
+   
+      
+      - **#copyToRealm(Iterable, ImportFlag...) (?)**
+         
+         
+         
+      
+      
+      
+   
+   
 
 
 
@@ -2101,6 +2762,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - **#copyToRealm(Iterable, ImportFlag...) (?)**
@@ -2147,18 +2809,25 @@ If you want the managed :ref:`RealmObject <io_realm_RealmObject>` returned, use 
 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``objects`` - RealmObjects to insert.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``objects`` - RealmObjects to insert.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -2196,18 +2865,25 @@ If you want the managed :ref:`RealmObject <io_realm_RealmObject>` returned, use 
 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``object`` - RealmObjects to insert.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``object`` - RealmObjects to insert.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -2250,18 +2926,25 @@ If you want the managed :ref:`RealmObject <io_realm_RealmObject>` returned, use 
 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``objects`` - RealmObjects to insert.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``objects`` - RealmObjects to insert.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -2299,18 +2982,25 @@ If you want the managed :ref:`RealmObject <io_realm_RealmObject>` returned, use 
 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``object`` - RealmObjects to insert.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``object`` - RealmObjects to insert.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -2336,31 +3026,41 @@ Makes an unmanaged in-memory copy of already persisted RealmObjects. This is a d
 
 
 
+.. example::
 
 
-Type Parameters
-_______________
-
-
-
-- ``E`` - type of object.
+   
+   **Type Parameters**
+   
+   - ``E`` - type of object.
+      
+      
+      
    
    
+   **Parameters**
    
-
-
-
-
-Parameters
-__________
-
-
-
-- ``realmObjects`` - RealmObjects to copy.
+   - ``realmObjects`` - RealmObjects to copy.
+      
+      
+      
    
    
+   **Returns**
    
-
+   **Throws**.. seealso::
+   
+   
+      
+      - **#copyToRealmOrUpdate(Iterable, ImportFlag...) (?)**
+         
+         
+         
+      
+      
+      
+   
+   
 
 
 
@@ -2368,6 +3068,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - **#copyToRealmOrUpdate(Iterable, ImportFlag...) (?)**
@@ -2392,37 +3093,47 @@ Makes an unmanaged in-memory copy of already persisted RealmObjects. This is a d
 
 
 
+.. example::
 
 
-Type Parameters
-_______________
-
-
-
-- ``E`` - type of object.
+   
+   **Type Parameters**
+   
+   - ``E`` - type of object.
+      
+      
+      
    
    
+   **Parameters**
    
-
-
-
-
-Parameters
-__________
-
-
-
-- ``realmObjects`` - RealmObjects to copy.
-   
-   
-   
-- ``maxDepth`` - limit of the deep copy. All references after this depth will be ``null`` . Starting depth is ``0`` .
+   - ``realmObjects`` - RealmObjects to copy.
+      
+      
+      
+   - ``maxDepth`` - limit of the deep copy. All references after this depth will be ``null`` . Starting depth is ``0`` .
+      
+      
+      
+      
+      
    
    
+   **Returns**
+   
+   **Throws**.. seealso::
    
    
+      
+      - **#copyToRealmOrUpdate(Iterable, ImportFlag...) (?)**
+         
+         
+         
+      
+      
+      
    
-
+   
 
 
 
@@ -2430,6 +3141,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - **#copyToRealmOrUpdate(Iterable, ImportFlag...) (?)**
@@ -2456,33 +3168,43 @@ The copied object(s) are all detached from Realm and they will no longer be auto
 
 
 
+.. example::
 
 
-Type Parameters
-_______________
-
-
-
-- ``E`` - type of object.
+   
+   **Type Parameters**
+   
+   - ``E`` - type of object.
+      
+      
+      
    
    
+   **Parameters**
    
-
-
-
-
-Parameters
-__________
-
-
-
-- ``realmObject`` - :ref:`RealmObject <io_realm_RealmObject>` to copy.
+   - ``realmObject`` - :ref:`RealmObject <io_realm_RealmObject>` to copy.
+      
+      
+      
+      
+      
    
    
+   **Returns**
+   
+   **Throws**.. seealso::
    
    
+      
+      - **#copyToRealmOrUpdate(RealmModel, ImportFlag...) (?)**
+         
+         
+         
+      
+      
+      
    
-
+   
 
 
 
@@ -2490,6 +3212,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - **#copyToRealmOrUpdate(RealmModel, ImportFlag...) (?)**
@@ -2516,39 +3239,49 @@ The copied object(s) are all detached from Realm and they will no longer be auto
 
 
 
+.. example::
 
 
-Type Parameters
-_______________
-
-
-
-- ``E`` - type of object.
+   
+   **Type Parameters**
+   
+   - ``E`` - type of object.
+      
+      
+      
    
    
+   **Parameters**
    
-
-
-
-
-Parameters
-__________
-
-
-
-- ``realmObject`` - :ref:`RealmObject <io_realm_RealmObject>` to copy.
-   
-   
-   
-   
-   
-- ``maxDepth`` - limit of the deep copy. All references after this depth will be ``null`` . Starting depth is ``0`` .
+   - ``realmObject`` - :ref:`RealmObject <io_realm_RealmObject>` to copy.
+      
+      
+      
+      
+      
+   - ``maxDepth`` - limit of the deep copy. All references after this depth will be ``null`` . Starting depth is ``0`` .
+      
+      
+      
+      
+      
    
    
+   **Returns**
+   
+   **Throws**.. seealso::
    
    
+      
+      - **#copyToRealmOrUpdate(RealmModel, ImportFlag...) (?)**
+         
+         
+         
+      
+      
+      
    
-
+   
 
 
 
@@ -2556,6 +3289,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - **#copyToRealmOrUpdate(RealmModel, ImportFlag...) (?)**
@@ -2579,20 +3313,40 @@ public :ref:`RealmQuery <io_realm_RealmQuery>` where <**E (?)** >(`java.lang.Cla
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns a typed RealmQuery, which can be used to query for specific objects of this type
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``clazz`` - the class of the object which is to be queried for.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``clazz`` - the class of the object which is to be queried for.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - :ref:`io.realm.RealmQuery <io_realm_RealmQuery>`
+         
+         
+         
+      
+      
+      
+   
+   
 
 .. seealso::
+
 
    
    - :ref:`io.realm.RealmQuery <io_realm_RealmQuery>`
@@ -2622,18 +3376,45 @@ Realm instances are per thread singletons and cached, so listeners should be rem
 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``listener`` - the change listener.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``listener`` - the change listener.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - :ref:`io.realm.RealmChangeListener <io_realm_RealmChangeListener>`
+         
+         
+         
+      - **#removeChangeListener(RealmChangeListener) (?)**
+         
+         
+         
+      - :ref:`removeAllChangeListeners() <io_realm_Realm_removeAllChangeListeners__>`
+         
+         
+         
+      
+      
+      
+   
+   
 
 
 
@@ -2641,6 +3422,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - :ref:`io.realm.RealmChangeListener <io_realm_RealmChangeListener>`
@@ -2672,18 +3454,37 @@ public **void** removeChangeListener (:ref:`io.realm.RealmChangeListener\<io.rea
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Removes the specified change listener.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``listener`` - the change listener to be removed.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``listener`` - the change listener to be removed.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - :ref:`io.realm.RealmChangeListener <io_realm_RealmChangeListener>`
+         
+         
+         
+      
+      
+      
+   
+   
 
 
 
@@ -2691,6 +3492,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - :ref:`io.realm.RealmChangeListener <io_realm_RealmChangeListener>`
@@ -2714,12 +3516,41 @@ public **void** removeAllChangeListeners ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Removes all user-defined change listeners.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - :ref:`io.realm.RealmChangeListener <io_realm_RealmChangeListener>`
+         
+         
+         
+      
+      
+      
+   
+   
+
 
 
 Throws
 ______
 
 .. seealso::
+
 
    
    - :ref:`io.realm.RealmChangeListener <io_realm_RealmChangeListener>`
@@ -2749,20 +3580,27 @@ Calling this method from the UI thread will throw a :ref:`RealmException <io_rea
 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``transaction`` - the :ref:`io.realm.Realm.Transaction <io_realm_Realm_Transaction>` to execute.
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``transaction`` - the :ref:`io.realm.Realm.Transaction <io_realm_Realm_Transaction>` to execute.
+      
+      
+      
+      
+      
    
    
-
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -2784,20 +3622,27 @@ public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` executeTransactionAsync (
 Similar to **#executeTransaction(Transaction) (?)** but runs asynchronously on a worker thread.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``transaction`` - :ref:`io.realm.Realm.Transaction <io_realm_Realm_Transaction>` to execute.
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``transaction`` - :ref:`io.realm.Realm.Transaction <io_realm_Realm_Transaction>` to execute.
+      
+      
+      
+      
+      
    
    
-
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -2814,24 +3659,31 @@ public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` executeTransactionAsync (
 Similar to **#executeTransactionAsync(Transaction) (?)**, but also accepts an OnSuccess callback.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``transaction`` - :ref:`io.realm.Realm.Transaction <io_realm_Realm_Transaction>` to execute.
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``transaction`` - :ref:`io.realm.Realm.Transaction <io_realm_Realm_Transaction>` to execute.
+      
+      
+      
+      
+      
+   - ``onSuccess`` - callback invoked when the transaction succeeds.
+      
+      
+      
    
    
-- ``onSuccess`` - callback invoked when the transaction succeeds.
+   **Returns**
    
-   
-   
-
+   **Throws**
 
 
 
@@ -2848,24 +3700,31 @@ public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` executeTransactionAsync (
 Similar to **#executeTransactionAsync(Transaction) (?)**, but also accepts an OnError callback.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``transaction`` - :ref:`io.realm.Realm.Transaction <io_realm_Realm_Transaction>` to execute.
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``transaction`` - :ref:`io.realm.Realm.Transaction <io_realm_Realm_Transaction>` to execute.
+      
+      
+      
+      
+      
+   - ``onError`` - callback invoked when the transaction fails.
+      
+      
+      
    
    
-- ``onError`` - callback invoked when the transaction fails.
+   **Returns**
    
-   
-   
-
+   **Throws**
 
 
 
@@ -2882,28 +3741,35 @@ public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` executeTransactionAsync (
 Similar to **#executeTransactionAsync(Transaction) (?)**, but also accepts an OnSuccess and OnError callbacks.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``transaction`` - :ref:`io.realm.Realm.Transaction <io_realm_Realm_Transaction>` to execute.
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``transaction`` - :ref:`io.realm.Realm.Transaction <io_realm_Realm_Transaction>` to execute.
+      
+      
+      
+      
+      
+   - ``onSuccess`` - callback invoked when the transaction succeeds.
+      
+      
+      
+   - ``onError`` - callback invoked when the transaction fails.
+      
+      
+      
    
    
-- ``onSuccess`` - callback invoked when the transaction succeeds.
+   **Returns**
    
-   
-   
-- ``onError`` - callback invoked when the transaction fails.
-   
-   
-   
-
+   **Throws**
 
 
 
@@ -2923,18 +3789,25 @@ public **void** delete (`java.lang.Class\<? extends io.realm.RealmModel> <https:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Deletes all objects of the specified class from the Realm.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``clazz`` - the class which objects should be removed.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``clazz`` - the class which objects should be removed.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -2954,20 +3827,27 @@ public static **void** migrateRealm (:ref:`RealmConfiguration <io_realm_RealmCon
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Manually triggers the migration associated with a given RealmConfiguration. If Realm is already at the latest version, nothing will happen.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``configuration`` - :ref:`RealmConfiguration <io_realm_RealmConfiguration>`
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``configuration`` - :ref:`RealmConfiguration <io_realm_RealmConfiguration>`
+      
+      
+      
+      
+      
    
    
-
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -2982,26 +3862,33 @@ public static **void** migrateRealm (:ref:`RealmConfiguration <io_realm_RealmCon
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Manually triggers a migration on a RealmMigration.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``configuration`` - the:ref:`RealmConfiguration <io_realm_RealmConfiguration>`.
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``configuration`` - the:ref:`RealmConfiguration <io_realm_RealmConfiguration>`.
+      
+      
+      
+      
+      
+   - ``migration`` - the :ref:`RealmMigration <io_realm_RealmMigration>` to run on the Realm. This will override any migration set on the configuration.
+      
+      
+      
+      
+      
    
    
-- ``migration`` - the :ref:`RealmMigration <io_realm_RealmMigration>` to run on the Realm. This will override any migration set on the configuration.
+   **Returns**
    
-   
-   
-   
-   
-
+   **Throws**
 
 
 
@@ -3029,20 +3916,27 @@ WARNING: For synchronized Realm, there is a chance that an internal Realm instan
 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``configuration`` - a :ref:`RealmConfiguration <io_realm_RealmConfiguration>`.
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``configuration`` - a :ref:`RealmConfiguration <io_realm_RealmConfiguration>`.
+      
+      
+      
+      
+      
    
    
-
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -3069,20 +3963,27 @@ Compacts a Realm file. A Realm file usually contain free/unused space. This meth
 | 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``configuration`` - a :ref:`RealmConfiguration <io_realm_RealmConfiguration>` pointing to a Realm file.
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``configuration`` - a :ref:`RealmConfiguration <io_realm_RealmConfiguration>` pointing to a Realm file.
+      
+      
+      
+      
+      
    
    
-
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -3099,6 +4000,22 @@ public :ref:`Realm <io_realm_Realm>` freeze ()
 
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getDefaultModule
@@ -3112,12 +4029,41 @@ public static `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Objec
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the default Realm module. This module contains all Realm classes in the current project, but not those from library or project dependencies. Realm classes in these should be exposed using their own module.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - :ref:`io.realm.RealmConfiguration.Builder.modules(Object, Object...) <io_realm_RealmConfiguration_Builder_modules_Object__Object____>`
+         
+         
+         
+      
+      
+      
+   
+   
+
 
 
 Throws
 ______
 
 .. seealso::
+
 
    
    - :ref:`io.realm.RealmConfiguration.Builder.modules(Object, Object...) <io_realm_RealmConfiguration_Builder_modules_Object__Object____>`
@@ -3141,20 +4087,27 @@ public static **int** getGlobalInstanceCount (:ref:`RealmConfiguration <io_realm
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the current number of open Realm instances across all threads in current process that are using this configuration. This includes both dynamic and normal Realms.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``configuration`` - the :ref:`io.realm.RealmConfiguration <io_realm_RealmConfiguration>` for the Realm.
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``configuration`` - the :ref:`io.realm.RealmConfiguration <io_realm_RealmConfiguration>` for the Realm.
+      
+      
+      
+      
+      
    
    
-
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -3169,20 +4122,27 @@ public static **int** getLocalInstanceCount (:ref:`RealmConfiguration <io_realm_
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Returns the current number of open Realm instances on the thread calling this method. This include both dynamic and normal Realms.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``configuration`` - the :ref:`io.realm.RealmConfiguration <io_realm_RealmConfiguration>` for the Realm.
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``configuration`` - the :ref:`io.realm.RealmConfiguration <io_realm_RealmConfiguration>` for the Realm.
+      
+      
+      
+      
+      
    
    
-
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -3198,5 +4158,21 @@ public static **Context (?)** getApplicationContext ()
 
 Get the application context used when initializing Realm with :ref:`Realm.init(Context) <io_realm_Realm_init_Context_>` or :ref:`Realm.init(Context, String) <io_realm_Realm_init_Context__String_>`.
 
+
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
 
 

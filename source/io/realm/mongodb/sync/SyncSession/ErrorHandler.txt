@@ -20,6 +20,7 @@ io.realm.mongodb.sync
 Interface used to report any session errors.
 .. seealso::
 
+
    
    - **SyncConfiguration.Builder#errorHandler(ErrorHandler) (?)**
       
@@ -67,23 +68,30 @@ public **void** onError (:ref:`SyncSession <io_realm_mongodb_sync_SyncSession>` 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Callback for errors on a session object. It is not allowed to throw an exception inside an error handler. If the operations in an error handler can throw, it is safer to catch any exception in the error handler. When an exception is thrown in the error handler, the occurrence will be logged and the exception will be ignored.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``session`` - :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>` this error happened on.
+   
+   **Type Parameters**
    
    
    
+   **Parameters**
+   
+   - ``session`` - :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>` this error happened on.
+      
+      
+      
+      
+      
+   - ``error`` - type of error.
+      
+      
+      
    
    
-- ``error`` - type of error.
+   **Returns**
    
-   
-   
-
+   **Throws**
 
 

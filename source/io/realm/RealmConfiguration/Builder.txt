@@ -257,6 +257,22 @@ public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` n
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sets the filename for the Realm file.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 directory
@@ -272,18 +288,25 @@ public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` d
 Specifies the directory where the Realm file will be saved. The default value is ``context.getFilesDir()`` . If the directory does not exist, it will be created.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``directory`` - the directory to save the Realm file in. Directory must be writable.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``directory`` - the directory to save the Realm file in. Directory must be writable.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -305,6 +328,22 @@ public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` e
 Sets the 64 byte key used to encrypt and decrypt the Realm file. Sets the io.realm.Realm#ENCRYPTION_KEY_LENGTH bytes key used to encrypt and decrypt the Realm file.
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 schemaVersion
@@ -322,7 +361,36 @@ Sets the schema version of the Realm. This must be equal to or higher than the s
 
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - :ref:`migration(RealmMigration) <io_realm_RealmConfiguration_Builder_migration_RealmMigration_>`
+         
+         
+         
+      
+      
+      
+   
+   
+
 .. seealso::
+
 
    
    - :ref:`migration(RealmMigration) <io_realm_RealmConfiguration_Builder_migration_RealmMigration_>`
@@ -348,6 +416,22 @@ public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` m
 Sets the :ref:`io.realm.RealmMigration <io_realm_RealmMigration>` to be run if a migration is needed. If this migration fails to upgrade the on-disc schema to the runtime schema, a :ref:`io.realm.exceptions.RealmMigrationNeededException <io_realm_exceptions_RealmMigrationNeededException>` will be thrown.
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 deleteRealmIfMigrationNeeded
@@ -369,6 +453,22 @@ This cannot be configured to have an asset file at the same time by calling :ref
 **WARNING!** This will result in loss of data.
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 Throws
@@ -388,6 +488,22 @@ public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` i
 
 Setting this will create an in-memory Realm instead of saving it to disk. In-memory Realms might still use disk space if memory is running low, but all files created by an in-memory Realm will be deleted when the Realm is closed.Note that because in-memory Realms are not persisted, you must be sure to hold on to at least one non-closed reference to the in-memory Realm object with the specific name as long as you want the data to last.
 
+
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -412,22 +528,41 @@ A reference to the default Realm module containing all Realm classes in the proj
 
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``baseModule`` - the first Realm module (required).
+   
+   **Type Parameters**
    
    
    
-- ``additionalModules`` - the additional Realm modules
+   **Parameters**
+   
+   - ``baseModule`` - the first Realm module (required).
+      
+      
+      
+   - ``additionalModules`` - the additional Realm modules
+      
+      
+      
    
    
+   **Returns**
    
-
+   **Throws**.. seealso::
+   
+   
+      
+      - :ref:`Realm.getDefaultModule() <io_realm_Realm_getDefaultModule__>`
+         
+         
+         
+      
+      
+      
+   
+   
 
 
 
@@ -435,6 +570,7 @@ Throws
 ______
 
 .. seealso::
+
 
    
    - :ref:`Realm.getDefaultModule() <io_realm_Realm_getDefaultModule__>`
@@ -458,6 +594,22 @@ public final :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Build
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 FIXME: Temporary visible DEBUG method. Will add a module unconditionally. Adds a module to already defined modules.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 rxFactory
@@ -473,18 +625,25 @@ public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` r
 Sets the :ref:`RxObservableFactory <io_realm_rx_RxObservableFactory>` used to create Rx Observables from Realm objects. The default factory is :ref:`RealmObservableFactory <io_realm_rx_RealmObservableFactory>`.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``factory`` - factory to use.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``factory`` - factory to use.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -501,18 +660,25 @@ public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` f
 Sets the :ref:`FlowFactory <io_realm_coroutines_FlowFactory>` used to create coroutines Flows from Realm objects. The default factory is :ref:`RealmFlowFactory <io_realm_coroutines_RealmFlowFactory>`.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``factory`` - factory to use.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``factory`` - factory to use.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -529,18 +695,25 @@ public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` i
 Sets the initial data in :ref:`io.realm.Realm <io_realm_Realm>`. This transaction will be executed only for the first time when database file is created or while migrating the data when :ref:`Builder.deleteRealmIfMigrationNeeded() <io_realm_RealmConfiguration_Builder_deleteRealmIfMigrationNeeded__>` is set.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``transaction`` - transaction to execute.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``transaction`` - transaction to execute.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -563,18 +736,25 @@ This cannot be combined with :ref:`deleteRealmIfMigrationNeeded() <io_realm_Real
 WARNING: This could potentially be a lengthy operation and should ideally be done on a background thread.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``assetFile`` - path to the asset database file.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``assetFile`` - path to the asset database file.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -600,6 +780,22 @@ This in particular mean that :ref:`initialData(Realm.Transaction) <io_realm_Real
 
 
 Marking a Realm as read only only applies to the Realm in this process. Other processes can still write to the Realm.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 compactOnLaunch
@@ -615,6 +811,22 @@ public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` c
 Setting this will cause Realm to compact the Realm file if the Realm file has grown too large and a significant amount of space can be recovered. See :ref:`DefaultCompactOnLaunchCallback <io_realm_DefaultCompactOnLaunchCallback>` for details.
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 .. _io_realm_RealmConfiguration_Builder_compactOnLaunch_CompactOnLaunchCallback_:
 
 
@@ -623,18 +835,25 @@ public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` c
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sets this to determine if the Realm file should be compacted before returned to the user. It is passed the total file size (data + free space) and the bytes used by data in the file.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``compactOnLaunch`` - a callback called when opening a Realm for the first time during the life of a process to determine if it should be compacted before being returned to the user. It is passed the total file size (data + free space) and the bytes used by data in the file.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``compactOnLaunch`` - a callback called when opening a Realm for the first time during the life of a process to determine if it should be compacted before being returned to the user. It is passed the total file size (data + free space) and the bytes used by data in the file.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -655,20 +874,40 @@ Realm is capable of concurrently handling many different versions of Realm objec
 Under normal circumstances this is not a problem, but if the number of active versions grow too large, it will have a negative effect on the filesize on disk. Setting this parameters can therefore be used to prevent uses of Realm that can result in very large Realms.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``number`` - the maximum number of active versions before an exception is thrown.
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``number`` - the maximum number of active versions before an exception is thrown.
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**.. seealso::
+   
+   
+      
+      - **<a href="https://realm.io/docs/java/latest/#faq-large-realm-file-size">FAQ</a> (?)**
+         
+         
+         
+      
+      
+      
+   
+   
 
 .. seealso::
+
 
    
    - **<a href="https://realm.io/docs/java/latest/#faq-large-realm-file-size">FAQ</a> (?)**
@@ -698,6 +937,22 @@ Sets whether or not calls to **Realm#executeTransaction (?)** are allowed from t
 
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 allowQueriesOnUiThread
@@ -717,6 +972,22 @@ By default Realm allows queries on the main thread. However, by doing so your ap
 
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 build
@@ -730,4 +1001,20 @@ public :ref:`RealmConfiguration <io_realm_RealmConfiguration>` build ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Creates the RealmConfiguration based on the builder parameters.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 

@@ -155,6 +155,22 @@ public **BsonDocument (?)** getUpdatedFields ()
 Returns a **BsonDocument (?)** containing keys and values representing (respectively) the fields that have changed in the corresponding update and their new values.
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 getRemovedFields
@@ -170,6 +186,22 @@ public `Collection <https://docs.oracle.com/javase/7/docs/api/java/util/Collecti
 Returns a `List <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  containing the field names that have been removed in the corresponding update.
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 toUpdateDocument
@@ -183,6 +215,22 @@ public **BsonDocument (?)** toUpdateDocument ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Convert this update description to an update document.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 toBsonDocument
@@ -196,6 +244,22 @@ public **BsonDocument (?)** toBsonDocument ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Converts this update description to its document representation as it would appear in a MongoDB Change Event.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 fromBsonDocument
@@ -209,18 +273,25 @@ public static :ref:`UpdateDescription <io_realm_mongodb_mongo_events_UpdateDescr
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Converts an update description BSON document from a MongoDB Change Event into an UpdateDescription object.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``document`` - the
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``document`` - the
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -235,18 +306,25 @@ public :ref:`UpdateDescription <io_realm_mongodb_mongo_events_UpdateDescription>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Unilaterally merge an update description into this update description.
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``otherDescription`` - the update description to merge into this
+   
+   **Type Parameters**
    
    
    
-
+   **Parameters**
+   
+   - ``otherDescription`` - the update description to merge into this
+      
+      
+      
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
 
@@ -263,22 +341,29 @@ public static :ref:`UpdateDescription <io_realm_mongodb_mongo_events_UpdateDescr
 Find the diff between two documents.NOTE: This does not do a full diff on [BsonArray]. If there is an inequality between the old and new array, the old array will simply be replaced by the new one.
 
 
+.. example::
 
 
-Parameters
-__________
-
-
-
-- ``beforeDocument`` - original document
+   
+   **Type Parameters**
    
    
    
-- ``afterDocument`` - document to diff on
+   **Parameters**
+   
+   - ``beforeDocument`` - original document
+      
+      
+      
+   - ``afterDocument`` - document to diff on
+      
+      
+      
    
    
+   **Returns**
    
-
+   **Throws**
 
 
 
@@ -293,6 +378,22 @@ public **boolean** isEmpty ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Determines whether this update description is empty.
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 equals
@@ -306,6 +407,22 @@ public **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/ja
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
+
 
 
 hashCode
@@ -318,5 +435,21 @@ hashCode
 public **int** hashCode ()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
+.. example::
+
+
+   
+   **Type Parameters**
+   
+   
+   
+   **Parameters**
+   
+   
+   
+   **Returns**
+   
+   **Throws**
 
 
