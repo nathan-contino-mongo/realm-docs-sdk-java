@@ -157,19 +157,14 @@ get
 
 .. _io_realm_RealmSchema_get_String_:
 
+.. admonition:: public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` get (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
 
 
-public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` get (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Returns the :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` for a given class. If this :ref:`RealmSchema <io_realm_RealmSchema>` is immutable, an immutable :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` will be returned. Otherwise, it returns an mutable :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`.
-
-
-.. example::
 
 
    
-   **Type Parameters**
+   Returns the :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` for a given class. If this :ref:`RealmSchema <io_realm_RealmSchema>` is immutable, an immutable :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` will be returned. Otherwise, it returns an mutable :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`.
+   
    
    
    
@@ -181,9 +176,13 @@ Returns the :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` for a given cl
       
    
    
-   **Returns**
    
-   **Throws**
+   
+   
+   
+   
+   
+   
 
 
 
@@ -192,29 +191,24 @@ getAll
 
 .. _io_realm_RealmSchema_getAll__:
 
+.. admonition:: public abstract `Set <https://docs.oracle.com/javase/7/docs/api/java/util/Set.html>`__  getAll ()
 
 
-public abstract `Set <https://docs.oracle.com/javase/7/docs/api/java/util/Set.html>`__  getAll ()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Returns the :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`s for all RealmObject classes that can be saved in this Realm. If this :ref:`RealmSchema <io_realm_RealmSchema>` is immutable, an immutable :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` set will be returned. Otherwise, it returns an mutable :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` set.
-
-
-.. example::
 
 
    
-   **Type Parameters**
+   Returns the :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`s for all RealmObject classes that can be saved in this Realm. If this :ref:`RealmSchema <io_realm_RealmSchema>` is immutable, an immutable :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` set will be returned. Otherwise, it returns an mutable :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` set.
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**
+   
+   
+   
+   
 
 
 
@@ -223,18 +217,13 @@ create
 
 .. _io_realm_RealmSchema_create_String_:
 
+.. admonition:: public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` create (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
 
 
-public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` create (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Adds a new class to the Realm.
-.. example::
 
 
    
-   **Type Parameters**
-   
+   Adds a new class to the Realm.
    
    
    **Parameters**
@@ -245,14 +234,16 @@ Adds a new class to the Realm.
       
    
    
-   **Returns**
+   
+   
+   
    
    **Throws**
-
-
-
-Throws
-______
+   
+   
+   
+   
+   
 
 
 
@@ -261,18 +252,13 @@ createWithPrimaryKeyField
 
 .. _io_realm_RealmSchema_createWithPrimaryKeyField_String__String__Class_____FieldAttribute____:
 
+.. admonition:: public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` createWithPrimaryKeyField (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  primaryKeyFieldName, `java.lang.Class\<?> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  fieldType, :ref:`io.realm.FieldAttribute[] <io_realm_FieldAttribute>` attributes)
 
 
-public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` createWithPrimaryKeyField (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  primaryKeyFieldName, `java.lang.Class\<?> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  fieldType, :ref:`io.realm.FieldAttribute[] <io_realm_FieldAttribute>` attributes)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Adds a new class to the Realm with a primary key field defined.
-.. example::
 
 
    
-   **Type Parameters**
-   
+   Adds a new class to the Realm with a primary key field defined.
    
    
    **Parameters**
@@ -299,14 +285,16 @@ Adds a new class to the Realm with a primary key field defined.
       
    
    
-   **Returns**
+   
+   
+   
    
    **Throws**
-
-
-
-Throws
-______
+   
+   
+   
+   
+   
 
 
 
@@ -315,19 +303,14 @@ remove
 
 .. _io_realm_RealmSchema_remove_String_:
 
+.. admonition:: public abstract **void** remove (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
 
 
-public abstract **void** remove (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Removes a class from the Realm. All data will be removed. Removing a class while other classes point to it will throw an `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__ . Removes those classes or fields first.
-
-
-.. example::
 
 
    
-   **Type Parameters**
+   Removes a class from the Realm. All data will be removed. Removing a class while other classes point to it will throw an `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__ . Removes those classes or fields first.
+   
    
    
    
@@ -339,14 +322,16 @@ Removes a class from the Realm. All data will be removed. Removing a class while
       
    
    
-   **Returns**
+   
+   
+   
    
    **Throws**
-
-
-
-Throws
-______
+   
+   
+   
+   
+   
 
 
 
@@ -355,18 +340,13 @@ rename
 
 .. _io_realm_RealmSchema_rename_String__String_:
 
+.. admonition:: public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` rename (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  oldClassName, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  newClassName)
 
 
-public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` rename (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  oldClassName, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  newClassName)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Renames a class already in the Realm.
-.. example::
 
 
    
-   **Type Parameters**
-   
+   Renames a class already in the Realm.
    
    
    **Parameters**
@@ -381,14 +361,16 @@ Renames a class already in the Realm.
       
    
    
-   **Returns**
+   
+   
+   
    
    **Throws**
-
-
-
-Throws
-______
+   
+   
+   
+   
+   
 
 
 
@@ -397,18 +379,13 @@ contains
 
 .. _io_realm_RealmSchema_contains_String_:
 
+.. admonition:: public **boolean** contains (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
 
 
-public **boolean** contains (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Checks if a given class already exists in the schema.
-.. example::
 
 
    
-   **Type Parameters**
-   
+   Checks if a given class already exists in the schema.
    
    
    **Parameters**
@@ -419,9 +396,13 @@ Checks if a given class already exists in the schema.
       
    
    
-   **Returns**
    
-   **Throws**
+   
+   
+   
+   
+   
+   
 
 
 
@@ -430,27 +411,22 @@ getColumnInfo
 
 .. _io_realm_RealmSchema_getColumnInfo_String_:
 
+.. admonition:: protected final **ColumnInfo (?)** getColumnInfo (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
 
 
-protected final **ColumnInfo (?)** getColumnInfo (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-.. example::
 
 
    
-   **Type Parameters**
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**
+   
+   
+   
 
 
 
@@ -459,26 +435,21 @@ createKeyPathMapping
 
 .. _io_realm_RealmSchema_createKeyPathMapping__:
 
+.. admonition:: public **void** createKeyPathMapping ()
 
 
-public **void** createKeyPathMapping ()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Create the underlying keypath mapping. Should only be called by typed Realms.
-.. example::
 
 
    
-   **Type Parameters**
+   Create the underlying keypath mapping. Should only be called by typed Realms.
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**
+   
+   
 
 

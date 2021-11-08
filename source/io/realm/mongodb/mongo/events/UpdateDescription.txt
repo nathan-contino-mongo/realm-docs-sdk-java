@@ -147,29 +147,24 @@ getUpdatedFields
 
 .. _io_realm_mongodb_mongo_events_UpdateDescription_getUpdatedFields__:
 
+.. admonition:: public **BsonDocument (?)** getUpdatedFields ()
 
 
-public **BsonDocument (?)** getUpdatedFields ()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Returns a **BsonDocument (?)** containing keys and values representing (respectively) the fields that have changed in the corresponding update and their new values.
-
-
-.. example::
 
 
    
-   **Type Parameters**
+   Returns a **BsonDocument (?)** containing keys and values representing (respectively) the fields that have changed in the corresponding update and their new values.
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**
+   
+   
+   
+   
 
 
 
@@ -178,29 +173,24 @@ getRemovedFields
 
 .. _io_realm_mongodb_mongo_events_UpdateDescription_getRemovedFields__:
 
+.. admonition:: public `Collection <https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html>`__  getRemovedFields ()
 
 
-public `Collection <https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html>`__  getRemovedFields ()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Returns a `List <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  containing the field names that have been removed in the corresponding update.
-
-
-.. example::
 
 
    
-   **Type Parameters**
+   Returns a `List <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  containing the field names that have been removed in the corresponding update.
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**
+   
+   
+   
+   
 
 
 
@@ -209,27 +199,22 @@ toUpdateDocument
 
 .. _io_realm_mongodb_mongo_events_UpdateDescription_toUpdateDocument__:
 
+.. admonition:: public **BsonDocument (?)** toUpdateDocument ()
 
 
-public **BsonDocument (?)** toUpdateDocument ()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Convert this update description to an update document.
-.. example::
 
 
    
-   **Type Parameters**
+   Convert this update description to an update document.
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**
+   
+   
 
 
 
@@ -238,27 +223,22 @@ toBsonDocument
 
 .. _io_realm_mongodb_mongo_events_UpdateDescription_toBsonDocument__:
 
+.. admonition:: public **BsonDocument (?)** toBsonDocument ()
 
 
-public **BsonDocument (?)** toBsonDocument ()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Converts this update description to its document representation as it would appear in a MongoDB Change Event.
-.. example::
 
 
    
-   **Type Parameters**
+   Converts this update description to its document representation as it would appear in a MongoDB Change Event.
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**
+   
+   
 
 
 
@@ -267,18 +247,13 @@ fromBsonDocument
 
 .. _io_realm_mongodb_mongo_events_UpdateDescription_fromBsonDocument_BsonDocument_:
 
+.. admonition:: public static :ref:`UpdateDescription <io_realm_mongodb_mongo_events_UpdateDescription>` fromBsonDocument (**BsonDocument (?)** document)
 
 
-public static :ref:`UpdateDescription <io_realm_mongodb_mongo_events_UpdateDescription>` fromBsonDocument (**BsonDocument (?)** document)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Converts an update description BSON document from a MongoDB Change Event into an UpdateDescription object.
-.. example::
 
 
    
-   **Type Parameters**
-   
+   Converts an update description BSON document from a MongoDB Change Event into an UpdateDescription object.
    
    
    **Parameters**
@@ -289,9 +264,13 @@ Converts an update description BSON document from a MongoDB Change Event into an
       
    
    
-   **Returns**
    
-   **Throws**
+   
+   
+   
+   
+   
+   
 
 
 
@@ -300,18 +279,13 @@ merge
 
 .. _io_realm_mongodb_mongo_events_UpdateDescription_merge_UpdateDescription_:
 
+.. admonition:: public :ref:`UpdateDescription <io_realm_mongodb_mongo_events_UpdateDescription>` merge (:ref:`UpdateDescription <io_realm_mongodb_mongo_events_UpdateDescription>` otherDescription)
 
 
-public :ref:`UpdateDescription <io_realm_mongodb_mongo_events_UpdateDescription>` merge (:ref:`UpdateDescription <io_realm_mongodb_mongo_events_UpdateDescription>` otherDescription)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Unilaterally merge an update description into this update description.
-.. example::
 
 
    
-   **Type Parameters**
-   
+   Unilaterally merge an update description into this update description.
    
    
    **Parameters**
@@ -322,9 +296,13 @@ Unilaterally merge an update description into this update description.
       
    
    
-   **Returns**
    
-   **Throws**
+   
+   
+   
+   
+   
+   
 
 
 
@@ -333,19 +311,14 @@ diff
 
 .. _io_realm_mongodb_mongo_events_UpdateDescription_diff_BsonDocument__BsonDocument_:
 
+.. admonition:: public static :ref:`UpdateDescription <io_realm_mongodb_mongo_events_UpdateDescription>` diff (**BsonDocument (?)** beforeDocument, **BsonDocument (?)** afterDocument)
 
 
-public static :ref:`UpdateDescription <io_realm_mongodb_mongo_events_UpdateDescription>` diff (**BsonDocument (?)** beforeDocument, **BsonDocument (?)** afterDocument)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Find the diff between two documents.NOTE: This does not do a full diff on [BsonArray]. If there is an inequality between the old and new array, the old array will simply be replaced by the new one.
-
-
-.. example::
 
 
    
-   **Type Parameters**
+   Find the diff between two documents.NOTE: This does not do a full diff on [BsonArray]. If there is an inequality between the old and new array, the old array will simply be replaced by the new one.
+   
    
    
    
@@ -361,9 +334,13 @@ Find the diff between two documents.NOTE: This does not do a full diff on [BsonA
       
    
    
-   **Returns**
    
-   **Throws**
+   
+   
+   
+   
+   
+   
 
 
 
@@ -372,27 +349,22 @@ isEmpty
 
 .. _io_realm_mongodb_mongo_events_UpdateDescription_isEmpty__:
 
+.. admonition:: public **boolean** isEmpty ()
 
 
-public **boolean** isEmpty ()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Determines whether this update description is empty.
-.. example::
 
 
    
-   **Type Parameters**
+   Determines whether this update description is empty.
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**
+   
+   
 
 
 
@@ -401,27 +373,22 @@ equals
 
 .. _io_realm_mongodb_mongo_events_UpdateDescription_equals_Object_:
 
+.. admonition:: public **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  obj)
 
 
-public **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  obj)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-.. example::
 
 
    
-   **Type Parameters**
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**
+   
+   
+   
 
 
 
@@ -430,26 +397,21 @@ hashCode
 
 .. _io_realm_mongodb_mongo_events_UpdateDescription_hashCode__:
 
+.. admonition:: public **int** hashCode ()
 
 
-public **int** hashCode ()
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-.. example::
 
 
    
-   **Type Parameters**
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**
+   
+   
+   
 
 

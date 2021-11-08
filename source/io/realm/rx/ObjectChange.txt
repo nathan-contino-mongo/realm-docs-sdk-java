@@ -119,27 +119,22 @@ getObject
 
 .. _io_realm_rx_ObjectChange_getObject__:
 
+.. admonition:: public **E (?)** getObject ()
 
 
-public **E (?)** getObject ()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-.. example::
 
 
    
-   **Type Parameters**
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**
+   
+   
+   
 
 
 
@@ -148,49 +143,44 @@ getChangeset
 
 .. _io_realm_rx_ObjectChange_getChangeset__:
 
-
-
-public :ref:`ObjectChangeSet <io_realm_ObjectChangeSet>` getChangeset ()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Returns the changeset describing the update.This will be ``null``  the first time the stream emits the object as well as when a asynchronous query is loaded for the first time.
+.. admonition:: public :ref:`ObjectChangeSet <io_realm_ObjectChangeSet>` getChangeset ()
 
 
 
- 
-
-.. code-block:: java
 
    
-    // Example
-    realm.where(Person.class).findFirstAsync().asChangesetObservable()
-      .subscribe(new Consumer<ObjectChange>() {
-       \@Override
-        public void accept(ObjectChange item) throws Exception {
-          item.getChangeset(); // Will return null the first two times
-      }
-    });
+   Returns the changeset describing the update.This will be ``null``  the first time the stream emits the object as well as when a asynchronous query is loaded for the first time.
+   
+   
+   
     
-
-
- 
-
-
-.. example::
-
-
    
-   **Type Parameters**
+   .. code-block:: java
    
-   
-   
-   **Parameters**
-   
+      
+       // Example
+       realm.where(Person.class).findFirstAsync().asChangesetObservable()
+         .subscribe(new Consumer<ObjectChange>() {
+          \@Override
+           public void accept(ObjectChange item) throws Exception {
+             item.getChangeset(); // Will return null the first two times
+         }
+       });
+       
    
    
-   **Returns**
+    
    
-   **Throws**
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
 
 
 
@@ -199,27 +189,22 @@ equals
 
 .. _io_realm_rx_ObjectChange_equals_Object_:
 
+.. admonition:: public **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
 
 
-public **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-.. example::
 
 
    
-   **Type Parameters**
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**
+   
+   
+   
 
 
 
@@ -228,27 +213,22 @@ hashCode
 
 .. _io_realm_rx_ObjectChange_hashCode__:
 
+.. admonition:: public **int** hashCode ()
 
 
-public **int** hashCode ()
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-.. example::
 
 
    
-   **Type Parameters**
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**
+   
+   
+   
 
 
 
@@ -257,26 +237,21 @@ toString
 
 .. _io_realm_rx_ObjectChange_toString__:
 
+.. admonition:: public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  toString ()
 
 
-public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  toString ()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-.. example::
 
 
    
-   **Type Parameters**
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**
+   
+   
+   
 
 

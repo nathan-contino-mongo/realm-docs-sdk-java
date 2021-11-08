@@ -400,31 +400,26 @@ currentUser
 
 .. _io_realm_mongodb_App_currentUser__:
 
+.. admonition:: public :ref:`User <io_realm_mongodb_User>` currentUser ()
 
 
-public :ref:`User <io_realm_mongodb_User>` currentUser ()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Returns the current user that is logged in and still valid.A user is invalidated when he/she logs out or the user's refresh token expires or is revoked.
-
-If two or more users are logged in, it is the last valid user that is returned by this method.
-
-
-.. example::
 
 
    
-   **Type Parameters**
+   Returns the current user that is logged in and still valid.A user is invalidated when he/she logs out or the user's refresh token expires or is revoked.
+   
+   If two or more users are logged in, it is the last valid user that is returned by this method.
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**
+   
+   
+   
+   
 
 
 
@@ -433,31 +428,26 @@ allUsers
 
 .. _io_realm_mongodb_App_allUsers__:
 
+.. admonition:: public `Map <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  allUsers ()
 
 
-public `Map <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  allUsers ()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Returns all known users that are either :ref:`User.State.LOGGED_IN <io_realm_mongodb_User_State_LOGGED_IN>` or :ref:`User.State.LOGGED_OUT <io_realm_mongodb_User_State_LOGGED_OUT>`.
-
-Only users that at some point logged into this device will be returned.
-
-
-.. example::
 
 
    
-   **Type Parameters**
+   Returns all known users that are either :ref:`User.State.LOGGED_IN <io_realm_mongodb_User_State_LOGGED_IN>` or :ref:`User.State.LOGGED_OUT <io_realm_mongodb_User_State_LOGGED_OUT>`.
+   
+   Only users that at some point logged into this device will be returned.
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**
+   
+   
+   
+   
 
 
 
@@ -466,21 +456,16 @@ switchUser
 
 .. _io_realm_mongodb_App_switchUser_User_:
 
+.. admonition:: public :ref:`User <io_realm_mongodb_User>` switchUser (:ref:`User <io_realm_mongodb_User>` user)
 
 
-public :ref:`User <io_realm_mongodb_User>` switchUser (:ref:`User <io_realm_mongodb_User>` user)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Switch current user.The current user is the user returned by :ref:`currentUser() <io_realm_mongodb_App_currentUser__>`.
-
-
-
-
-.. example::
 
 
    
-   **Type Parameters**
+   Switch current user.The current user is the user returned by :ref:`currentUser() <io_realm_mongodb_App_currentUser__>`.
+   
+   
+   
    
    
    
@@ -492,14 +477,16 @@ Switch current user.The current user is the user returned by :ref:`currentUser()
       
    
    
-   **Returns**
+   
+   
+   
    
    **Throws**
-
-
-
-Throws
-______
+   
+   
+   
+   
+   
 
 
 
@@ -508,18 +495,13 @@ removeUser
 
 .. _io_realm_mongodb_App_removeUser_User_:
 
+.. admonition:: public :ref:`User <io_realm_mongodb_User>` removeUser (:ref:`User <io_realm_mongodb_User>` user)
 
 
-public :ref:`User <io_realm_mongodb_User>` removeUser (:ref:`User <io_realm_mongodb_User>` user)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Removes a users credentials from this device. If the user was currently logged in, they will be logged out as part of the process. This is only a local change and does not affect the user state on the server.
-.. example::
 
 
    
-   **Type Parameters**
-   
+   Removes a users credentials from this device. If the user was currently logged in, they will be logged out as part of the process. This is only a local change and does not affect the user state on the server.
    
    
    **Parameters**
@@ -530,14 +512,16 @@ Removes a users credentials from this device. If the user was currently logged i
       
    
    
-   **Returns**
+   
+   
+   
    
    **Throws**
-
-
-
-Throws
-______
+   
+   
+   
+   
+   
 
 
 
@@ -546,27 +530,22 @@ login
 
 .. _io_realm_mongodb_App_login_Credentials_:
 
+.. admonition:: public :ref:`User <io_realm_mongodb_User>` login (:ref:`Credentials <io_realm_mongodb_Credentials>` credentials)
 
 
-public :ref:`User <io_realm_mongodb_User>` login (:ref:`Credentials <io_realm_mongodb_Credentials>` credentials)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Logs in as a user with the given credentials associated with an authentication provider.The user who logs in becomes the current user. Other App functionality acts on behalf of the current user.
-
-If there was already a current user, that user is still logged in and can be found in the list returned by :ref:`allUsers() <io_realm_mongodb_App_allUsers__>`.
-
-
-
-It is also possible to switch between which user is considered the current user by using :ref:`switchUser(User) <io_realm_mongodb_App_switchUser_User_>`.
-
-
-
-
-.. example::
 
 
    
-   **Type Parameters**
+   Logs in as a user with the given credentials associated with an authentication provider.The user who logs in becomes the current user. Other App functionality acts on behalf of the current user.
+   
+   If there was already a current user, that user is still logged in and can be found in the list returned by :ref:`allUsers() <io_realm_mongodb_App_allUsers__>`.
+   
+   
+   
+   It is also possible to switch between which user is considered the current user by using :ref:`switchUser(User) <io_realm_mongodb_App_switchUser_User_>`.
+   
+   
+   
    
    
    
@@ -578,14 +557,16 @@ It is also possible to switch between which user is considered the current user 
       
    
    
-   **Returns**
+   
+   
+   
    
    **Throws**
-
-
-
-Throws
-______
+   
+   
+   
+   
+   
 
 
 
@@ -594,27 +575,22 @@ loginAsync
 
 .. _io_realm_mongodb_App_loginAsync_Credentials__App_Callback_User__:
 
+.. admonition:: public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` loginAsync (:ref:`Credentials <io_realm_mongodb_Credentials>` credentials, :ref:`io.realm.mongodb.App.Callback\<io.realm.mongodb.User> <io_realm_mongodb_App_Callback>` callback)
 
 
-public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` loginAsync (:ref:`Credentials <io_realm_mongodb_Credentials>` credentials, :ref:`io.realm.mongodb.App.Callback\<io.realm.mongodb.User> <io_realm_mongodb_App_Callback>` callback)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Logs in as a user with the given credentials associated with an authentication provider.The user who logs in becomes the current user. Other App functionality acts on behalf of the current user.
-
-If there was already a current user, that user is still logged in and can be found in the list returned by :ref:`allUsers() <io_realm_mongodb_App_allUsers__>`.
-
-
-
-It is also possible to switch between which user is considered the current user by using :ref:`switchUser(User) <io_realm_mongodb_App_switchUser_User_>`.
-
-
-
-
-.. example::
 
 
    
-   **Type Parameters**
+   Logs in as a user with the given credentials associated with an authentication provider.The user who logs in becomes the current user. Other App functionality acts on behalf of the current user.
+   
+   If there was already a current user, that user is still logged in and can be found in the list returned by :ref:`allUsers() <io_realm_mongodb_App_allUsers__>`.
+   
+   
+   
+   It is also possible to switch between which user is considered the current user by using :ref:`switchUser(User) <io_realm_mongodb_App_switchUser_User_>`.
+   
+   
+   
    
    
    
@@ -630,14 +606,16 @@ It is also possible to switch between which user is considered the current user 
       
    
    
-   **Returns**
+   
+   
+   
    
    **Throws**
-
-
-
-Throws
-______
+   
+   
+   
+   
+   
 
 
 
@@ -646,29 +624,24 @@ getEmailPassword
 
 .. _io_realm_mongodb_App_getEmailPassword__:
 
+.. admonition:: public :ref:`EmailPasswordAuth <io_realm_mongodb_auth_EmailPasswordAuth>` getEmailPassword ()
 
 
-public :ref:`EmailPasswordAuth <io_realm_mongodb_auth_EmailPasswordAuth>` getEmailPassword ()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Returns a wrapper for interacting with functionality related to users either being created or logged in using the :ref:`Credentials.Provider.EMAIL_PASSWORD <io_realm_mongodb_Credentials_Provider_EMAIL_PASSWORD>` identity provider.
-
-
-.. example::
 
 
    
-   **Type Parameters**
+   Returns a wrapper for interacting with functionality related to users either being created or logged in using the :ref:`Credentials.Provider.EMAIL_PASSWORD <io_realm_mongodb_Credentials_Provider_EMAIL_PASSWORD>` identity provider.
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**
+   
+   
+   
+   
 
 
 
@@ -677,19 +650,14 @@ addAuthenticationListener
 
 .. _io_realm_mongodb_App_addAuthenticationListener_AuthenticationListener_:
 
+.. admonition:: public **void** addAuthenticationListener (:ref:`AuthenticationListener <io_realm_mongodb_AuthenticationListener>` listener)
 
 
-public **void** addAuthenticationListener (:ref:`AuthenticationListener <io_realm_mongodb_AuthenticationListener>` listener)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Sets a global authentication listener that will be notified about User events like login and logout.Callbacks to authentication listeners will happen on the UI thread.
-
-
-.. example::
 
 
    
-   **Type Parameters**
+   Sets a global authentication listener that will be notified about User events like login and logout.Callbacks to authentication listeners will happen on the UI thread.
+   
    
    
    
@@ -701,14 +669,16 @@ Sets a global authentication listener that will be notified about User events li
       
    
    
-   **Returns**
+   
+   
+   
    
    **Throws**
-
-
-
-Throws
-______
+   
+   
+   
+   
+   
 
 
 
@@ -717,18 +687,13 @@ removeAuthenticationListener
 
 .. _io_realm_mongodb_App_removeAuthenticationListener_AuthenticationListener_:
 
+.. admonition:: public **void** removeAuthenticationListener (:ref:`AuthenticationListener <io_realm_mongodb_AuthenticationListener>` listener)
 
 
-public **void** removeAuthenticationListener (:ref:`AuthenticationListener <io_realm_mongodb_AuthenticationListener>` listener)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Removes the provided global authentication listener.
-.. example::
 
 
    
-   **Type Parameters**
-   
+   Removes the provided global authentication listener.
    
    
    **Parameters**
@@ -739,9 +704,13 @@ Removes the provided global authentication listener.
       
    
    
-   **Returns**
    
-   **Throws**
+   
+   
+   
+   
+   
+   
 
 
 
@@ -750,27 +719,22 @@ getSync
 
 .. _io_realm_mongodb_App_getSync__:
 
+.. admonition:: public :ref:`Sync <io_realm_mongodb_sync_Sync>` getSync ()
 
 
-public :ref:`Sync <io_realm_mongodb_sync_Sync>` getSync ()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Returns the *Sync* instance managing the ongoing *Realm Sync* sessions synchronizing data between the local and the remote *Realm App* associated with this app.
-.. example::
 
 
    
-   **Type Parameters**
+   Returns the *Sync* instance managing the ongoing *Realm Sync* sessions synchronizing data between the local and the remote *Realm App* associated with this app.
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**
+   
+   
 
 
 
@@ -779,29 +743,24 @@ getFunctions
 
 .. _io_realm_mongodb_App_getFunctions_User_:
 
+.. admonition:: public :ref:`Functions <io_realm_mongodb_functions_Functions>` getFunctions (:ref:`User <io_realm_mongodb_User>` user)
 
 
-public :ref:`Functions <io_realm_mongodb_functions_Functions>` getFunctions (:ref:`User <io_realm_mongodb_User>` user)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Returns a *Functions* manager for invoking the Realm App's Realm Functions.This will use the app's default codec registry to encode and decode arguments and results.
-
-
-.. example::
 
 
    
-   **Type Parameters**
+   Returns a *Functions* manager for invoking the Realm App's Realm Functions.This will use the app's default codec registry to encode and decode arguments and results.
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**.. seealso::
+   
+   
+   
+   .. seealso::
    
    
       
@@ -837,27 +796,22 @@ Returns a *Functions* manager for invoking the Realm App's Realm Functions.This 
 
 .. _io_realm_mongodb_App_getFunctions_User__CodecRegistry_:
 
+.. admonition:: public :ref:`Functions <io_realm_mongodb_functions_Functions>` getFunctions (:ref:`User <io_realm_mongodb_User>` user, **CodecRegistry (?)** codecRegistry)
 
 
-public :ref:`Functions <io_realm_mongodb_functions_Functions>` getFunctions (:ref:`User <io_realm_mongodb_User>` user, **CodecRegistry (?)** codecRegistry)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Returns a *Functions* manager for invoking the Realm App's Realm Functions with a custom codec registry for encoding and decoding arguments and results.
-.. example::
 
 
    
-   **Type Parameters**
+   Returns a *Functions* manager for invoking the Realm App's Realm Functions with a custom codec registry for encoding and decoding arguments and results.
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**.. seealso::
+   
+   .. seealso::
    
    
       
@@ -890,27 +844,22 @@ getConfiguration
 
 .. _io_realm_mongodb_App_getConfiguration__:
 
+.. admonition:: public :ref:`AppConfiguration <io_realm_mongodb_AppConfiguration>` getConfiguration ()
 
 
-public :ref:`AppConfiguration <io_realm_mongodb_AppConfiguration>` getConfiguration ()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Returns the configuration object for this app.
-.. example::
 
 
    
-   **Type Parameters**
+   Returns the configuration object for this app.
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**
+   
+   
 
 
 
@@ -919,29 +868,24 @@ setNetworkTransport
 
 .. _io_realm_mongodb_App_setNetworkTransport_OsJavaNetworkTransport_:
 
+.. admonition:: protected **void** setNetworkTransport (**OsJavaNetworkTransport (?)** transport)
 
 
-protected **void** setNetworkTransport (**OsJavaNetworkTransport (?)** transport)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Exposed for testing.Swap the currently configured network transport with the provided one. This should only be done if no network requests are currently running.
-
-
-.. example::
 
 
    
-   **Type Parameters**
+   Exposed for testing.Swap the currently configured network transport with the provided one. This should only be done if no network requests are currently running.
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**
+   
+   
+   
+   
 
 
 
@@ -950,29 +894,24 @@ equals
 
 .. _io_realm_mongodb_App_equals_Object_:
 
+.. admonition:: public **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
 
 
-public **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Two Apps are considered equal and will share their underlying state if they both refer to the same :ref:`AppConfiguration.getAppId() <io_realm_mongodb_AppConfiguration_getAppId__>`.
-
-
-.. example::
 
 
    
-   **Type Parameters**
+   Two Apps are considered equal and will share their underlying state if they both refer to the same :ref:`AppConfiguration.getAppId() <io_realm_mongodb_AppConfiguration_getAppId__>`.
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**
+   
+   
+   
+   
 
 
 
@@ -981,26 +920,21 @@ hashCode
 
 .. _io_realm_mongodb_App_hashCode__:
 
+.. admonition:: public **int** hashCode ()
 
 
-public **int** hashCode ()
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-.. example::
 
 
    
-   **Type Parameters**
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**
+   
+   
+   
 
 

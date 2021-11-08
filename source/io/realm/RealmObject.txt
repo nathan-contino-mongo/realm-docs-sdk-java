@@ -411,29 +411,27 @@ deleteFromRealm
 
 .. _io_realm_RealmObject_deleteFromRealm__:
 
+.. admonition:: public final **void** deleteFromRealm ()
 
 
-public final **void** deleteFromRealm ()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Deletes the object from the Realm it is currently associated to.After this method is called the object will be invalid and any operation (read or write) performed on it will fail with an IllegalStateException.
-
-
-.. example::
 
 
    
-   **Type Parameters**
+   Deletes the object from the Realm it is currently associated to.After this method is called the object will be invalid and any operation (read or write) performed on it will fail with an IllegalStateException.
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**.. seealso::
+   
+   **Throws**
+   
+   
+   
+   
+   .. seealso::
    
    
       
@@ -446,11 +444,6 @@ Deletes the object from the Realm it is currently associated to.After this metho
       
    
    
-
-
-
-Throws
-______
 
 .. seealso::
 
@@ -466,29 +459,27 @@ ______
 
 .. _io_realm_RealmObject_deleteFromRealm_E_:
 
+.. admonition:: public static **void** deleteFromRealm <**E (?)** >(**E (?)** object)
 
 
-public static **void** deleteFromRealm <**E (?)** >(**E (?)** object)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Deletes the object from the Realm it is currently associated with.After this method is called the object will be invalid and any operation (read or write) performed on it will fail with an IllegalStateException.
-
-
-.. example::
 
 
    
-   **Type Parameters**
+   Deletes the object from the Realm it is currently associated with.After this method is called the object will be invalid and any operation (read or write) performed on it will fail with an IllegalStateException.
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**.. seealso::
+   
+   **Throws**
+   
+   
+   
+   
+   .. seealso::
    
    
       
@@ -501,11 +492,6 @@ Deletes the object from the Realm it is currently associated with.After this met
       
    
    
-
-
-
-Throws
-______
 
 .. seealso::
 
@@ -526,46 +512,41 @@ isValid
 
 .. _io_realm_RealmObject_isValid__:
 
-
-
-public final **boolean** isValid ()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Checks if the RealmObject is still valid to use i.e., the RealmObject hasn't been deleted nor has the :ref:`io.realm.Realm <io_realm_Realm>` been closed. It will always return ``true``  for unmanaged objects.
-
-Note that this can be used to check the validity of certain conditions such as being ``null``  when observed.
+.. admonition:: public final **boolean** isValid ()
 
 
 
- 
-
-.. code-block:: java
 
    
-    realm.where(BannerRealm.class).equalTo("type", type).findFirstAsync().asFlowable()
-         .filter(result.isLoaded() && result.isValid())
-         .first()
+   Checks if the RealmObject is still valid to use i.e., the RealmObject hasn't been deleted nor has the :ref:`io.realm.Realm <io_realm_Realm>` been closed. It will always return ``true``  for unmanaged objects.
+   
+   Note that this can be used to check the validity of certain conditions such as being ``null``  when observed.
+   
+   
+   
     
-
-
- 
-
-
-.. example::
-
-
    
-   **Type Parameters**
+   .. code-block:: java
+   
+      
+       realm.where(BannerRealm.class).equalTo("type", type).findFirstAsync().asFlowable()
+            .filter(result.isLoaded() && result.isValid())
+            .first()
+       
    
    
-   
-   **Parameters**
+    
    
    
    
-   **Returns**
    
-   **Throws**.. seealso::
+   
+   
+   
+   
+   
+   
+   .. seealso::
    
    
       
@@ -593,19 +574,14 @@ Note that this can be used to check the validity of certain conditions such as b
 
 .. _io_realm_RealmObject_isValid_E_:
 
+.. admonition:: public static **boolean** isValid <**E (?)** >(**E (?)** object)
 
 
-public static **boolean** isValid <**E (?)** >(**E (?)** object)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Checks if the RealmObject is still valid to use i.e., the RealmObject hasn't been deleted nor has the :ref:`io.realm.Realm <io_realm_Realm>` been closed. It will always return ``true``  for unmanaged objects.
-
-
-.. example::
 
 
    
-   **Type Parameters**
+   Checks if the RealmObject is still valid to use i.e., the RealmObject hasn't been deleted nor has the :ref:`io.realm.Realm <io_realm_Realm>` been closed. It will always return ``true``  for unmanaged objects.
+   
    
    
    
@@ -617,9 +593,13 @@ Checks if the RealmObject is still valid to use i.e., the RealmObject hasn't bee
       
    
    
-   **Returns**
    
-   **Throws**
+   
+   
+   
+   
+   
+   
 
 
 
@@ -628,27 +608,22 @@ isFrozen
 
 .. _io_realm_RealmObject_isFrozen__:
 
+.. admonition:: public final **boolean** isFrozen ()
 
 
-public final **boolean** isFrozen ()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Returns whether or not this RealmObject is frozen.
-.. example::
 
 
    
-   **Type Parameters**
+   Returns whether or not this RealmObject is frozen.
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**.. seealso::
+   
+   .. seealso::
    
    
       
@@ -676,27 +651,22 @@ Returns whether or not this RealmObject is frozen.
 
 .. _io_realm_RealmObject_isFrozen_E_:
 
+.. admonition:: public static **boolean** isFrozen <**E (?)** >(**E (?)** object)
 
 
-public static **boolean** isFrozen <**E (?)** >(**E (?)** object)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Returns whether or not this RealmObject is frozen.
-.. example::
 
 
    
-   **Type Parameters**
+   Returns whether or not this RealmObject is frozen.
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**.. seealso::
+   
+   .. seealso::
    
    
       
@@ -729,85 +699,71 @@ freeze
 
 .. _io_realm_RealmObject_freeze__:
 
+.. admonition:: public final **E (?)** freeze <**E (?)** >()
 
 
-public final **E (?)** freeze <**E (?)** >()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Returns a frozen snapshot of this object. The frozen copy can be read and queried from any thread without throwing an `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__ .
-
-Freezing a RealmObject also creates a frozen Realm which has its own lifecycle, but if the live Realm that spawned the original collection is fully closed (i.e. all instances across all threads are closed), the frozen Realm and object will be closed as well.
-
-Frozen objects can be queried as normal, but trying to mutate it in any way or attempting to register a listener will throw an `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__ .
-
-
-
-Note: Keeping a large number of frozen objects with different versions alive can have a negative impact on the filesize of the Realm. In order to avoid such a situation it is possible to set :ref:`RealmConfiguration.Builder.maxNumberOfActiveVersions(long) <io_realm_RealmConfiguration_Builder_maxNumberOfActiveVersions_long_>`.
-
-
-
-
-.. example::
 
 
    
-   **Type Parameters**
+   Returns a frozen snapshot of this object. The frozen copy can be read and queried from any thread without throwing an `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__ .
+   
+   Freezing a RealmObject also creates a frozen Realm which has its own lifecycle, but if the live Realm that spawned the original collection is fully closed (i.e. all instances across all threads are closed), the frozen Realm and object will be closed as well.
+   
+   Frozen objects can be queried as normal, but trying to mutate it in any way or attempting to register a listener will throw an `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__ .
    
    
    
-   **Parameters**
+   Note: Keeping a large number of frozen objects with different versions alive can have a negative impact on the filesize of the Realm. In order to avoid such a situation it is possible to set :ref:`RealmConfiguration.Builder.maxNumberOfActiveVersions(long) <io_realm_RealmConfiguration_Builder_maxNumberOfActiveVersions_long_>`.
    
    
    
-   **Returns**
+   
+   
+   
+   
+   
+   
    
    **Throws**
-
-
-
-Throws
-______
+   
+   
+   
+   
+   
 
 .. _io_realm_RealmObject_freeze_E_:
 
+.. admonition:: public static **E (?)** freeze <**E (?)** >(**E (?)** object)
 
 
-public static **E (?)** freeze <**E (?)** >(**E (?)** object)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Returns a frozen snapshot of this object. The frozen copy can be read and queried from any thread without throwing an `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__ .
-
-Freezing a RealmObject also creates a frozen Realm which has its own lifecycle, but if the live Realm that spawned the original collection is fully closed (i.e. all instances across all threads are closed), the frozen Realm and object will be closed as well.
-
-Frozen objects can be queried as normal, but trying to mutate it in any way or attempting to register a listener will throw an `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__ .
-
-
-
-Note: Keeping a large number of frozen objects with different versions alive can have a negative impact on the filesize of the Realm. In order to avoid such a situation it is possible to set :ref:`RealmConfiguration.Builder.maxNumberOfActiveVersions(long) <io_realm_RealmConfiguration_Builder_maxNumberOfActiveVersions_long_>`.
-
-
-
-
-.. example::
 
 
    
-   **Type Parameters**
+   Returns a frozen snapshot of this object. The frozen copy can be read and queried from any thread without throwing an `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__ .
+   
+   Freezing a RealmObject also creates a frozen Realm which has its own lifecycle, but if the live Realm that spawned the original collection is fully closed (i.e. all instances across all threads are closed), the frozen Realm and object will be closed as well.
+   
+   Frozen objects can be queried as normal, but trying to mutate it in any way or attempting to register a listener will throw an `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__ .
    
    
    
-   **Parameters**
+   Note: Keeping a large number of frozen objects with different versions alive can have a negative impact on the filesize of the Realm. In order to avoid such a situation it is possible to set :ref:`RealmConfiguration.Builder.maxNumberOfActiveVersions(long) <io_realm_RealmConfiguration_Builder_maxNumberOfActiveVersions_long_>`.
    
    
    
-   **Returns**
+   
+   
+   
+   
+   
+   
    
    **Throws**
-
-
-
-Throws
-______
+   
+   
+   
+   
+   
 
 
 
@@ -816,64 +772,59 @@ isLoaded
 
 .. _io_realm_RealmObject_isLoaded__:
 
-
-
-public final **boolean** isLoaded ()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Checks if the query used to find this RealmObject has completed.Async methods like :ref:`RealmQuery.findFirstAsync() <io_realm_RealmQuery_findFirstAsync__>` return an :ref:`RealmObject <io_realm_RealmObject>` that represents the future result of the :ref:`RealmQuery <io_realm_RealmQuery>`. It can be considered similar to a `java.util.concurrent.Future <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Future.html>`__  in this regard.
+.. admonition:: public final **boolean** isLoaded ()
 
 
 
-Once ``isLoaded()``  returns ``true`` , the object represents the query result even if the query didn't find any object matching the query parameters. In this case the :ref:`RealmObject <io_realm_RealmObject>` will become a "null" object.
-
-
-
-"Null" objects represents ``null`` . An exception is throw if any accessor is called, so it is important to also check :ref:`isValid() <io_realm_RealmObject_isValid__>` before calling any methods. A common pattern is:
-
-
-
- 
-
-.. code-block:: java
 
    
-    Person person = realm.where(Person.class).findFirstAsync();
-    person.isLoaded(); // == false
-    person.addChangeListener(new RealmChangeListener() {
-         \@Override
-         public void onChange(Person person) {
-             person.isLoaded(); // Always true here
-             if (person.isValid()) {
-                 // It is safe to access the person.
-             }
-         }
-    });
+   Checks if the query used to find this RealmObject has completed.Async methods like :ref:`RealmQuery.findFirstAsync() <io_realm_RealmQuery_findFirstAsync__>` return an :ref:`RealmObject <io_realm_RealmObject>` that represents the future result of the :ref:`RealmQuery <io_realm_RealmQuery>`. It can be considered similar to a `java.util.concurrent.Future <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Future.html>`__  in this regard.
+   
+   
+   
+   Once ``isLoaded()``  returns ``true`` , the object represents the query result even if the query didn't find any object matching the query parameters. In this case the :ref:`RealmObject <io_realm_RealmObject>` will become a "null" object.
+   
+   
+   
+   "Null" objects represents ``null`` . An exception is throw if any accessor is called, so it is important to also check :ref:`isValid() <io_realm_RealmObject_isValid__>` before calling any methods. A common pattern is:
+   
+   
+   
     
-
-
- 
-
-Synchronous RealmObjects are by definition blocking hence this method will always return ``true``  for them. This method will return ``true``  if called on an unmanaged object (created outside of Realm).
-
-
-
-
-.. example::
-
-
    
-   **Type Parameters**
+   .. code-block:: java
    
-   
-   
-   **Parameters**
+      
+       Person person = realm.where(Person.class).findFirstAsync();
+       person.isLoaded(); // == false
+       person.addChangeListener(new RealmChangeListener() {
+            \@Override
+            public void onChange(Person person) {
+                person.isLoaded(); // Always true here
+                if (person.isValid()) {
+                    // It is safe to access the person.
+                }
+            }
+       });
+       
    
    
+    
    
-   **Returns**
+   Synchronous RealmObjects are by definition blocking hence this method will always return ``true``  for them. This method will return ``true``  if called on an unmanaged object (created outside of Realm).
    
-   **Throws**.. seealso::
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   .. seealso::
    
    
       
@@ -901,54 +852,49 @@ Synchronous RealmObjects are by definition blocking hence this method will alway
 
 .. _io_realm_RealmObject_isLoaded_E_:
 
-
-
-public static **boolean** isLoaded <**E (?)** >(**E (?)** object)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Checks if the query used to find this RealmObject has completed.Async methods like :ref:`RealmQuery.findFirstAsync() <io_realm_RealmQuery_findFirstAsync__>` return an :ref:`RealmObject <io_realm_RealmObject>` that represents the future result of the :ref:`RealmQuery <io_realm_RealmQuery>`. It can be considered similar to a `java.util.concurrent.Future <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Future.html>`__  in this regard.
+.. admonition:: public static **boolean** isLoaded <**E (?)** >(**E (?)** object)
 
 
 
-Once ``isLoaded()``  returns ``true`` , the object represents the query result even if the query didn't find any object matching the query parameters. In this case the :ref:`RealmObject <io_realm_RealmObject>` will become a "null" object.
-
-
-
-"Null" objects represents ``null`` . An exception is throw if any accessor is called, so it is important to also check :ref:`isValid() <io_realm_RealmObject_isValid__>` before calling any methods. A common pattern is:
-
-
-
- 
-
-.. code-block:: java
 
    
-    Person person = realm.where(Person.class).findFirstAsync();
-    RealmObject.isLoaded(person); // == false
-    RealmObject.addChangeListener(person, new RealmChangeListener() {
-         \@Override
-         public void onChange(Person person) {
-             RealmObject.isLoaded(person); // always true here
-             if (RealmObject.isValid(person)) {
-                 // It is safe to access the person.
-             }
-         }
-    });
+   Checks if the query used to find this RealmObject has completed.Async methods like :ref:`RealmQuery.findFirstAsync() <io_realm_RealmQuery_findFirstAsync__>` return an :ref:`RealmObject <io_realm_RealmObject>` that represents the future result of the :ref:`RealmQuery <io_realm_RealmQuery>`. It can be considered similar to a `java.util.concurrent.Future <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Future.html>`__  in this regard.
+   
+   
+   
+   Once ``isLoaded()``  returns ``true`` , the object represents the query result even if the query didn't find any object matching the query parameters. In this case the :ref:`RealmObject <io_realm_RealmObject>` will become a "null" object.
+   
+   
+   
+   "Null" objects represents ``null`` . An exception is throw if any accessor is called, so it is important to also check :ref:`isValid() <io_realm_RealmObject_isValid__>` before calling any methods. A common pattern is:
+   
+   
+   
     
-
-
- 
-
-Synchronous RealmObjects are by definition blocking hence this method will always return ``true``  for them. This method will return ``true``  if called on an unmanaged object (created outside of Realm).
-
-
-
-
-.. example::
-
-
    
-   **Type Parameters**
+   .. code-block:: java
+   
+      
+       Person person = realm.where(Person.class).findFirstAsync();
+       RealmObject.isLoaded(person); // == false
+       RealmObject.addChangeListener(person, new RealmChangeListener() {
+            \@Override
+            public void onChange(Person person) {
+                RealmObject.isLoaded(person); // always true here
+                if (RealmObject.isValid(person)) {
+                    // It is safe to access the person.
+                }
+            }
+       });
+       
+   
+   
+    
+   
+   Synchronous RealmObjects are by definition blocking hence this method will always return ``true``  for them. This method will return ``true``  if called on an unmanaged object (created outside of Realm).
+   
+   
+   
    
    
    
@@ -960,9 +906,13 @@ Synchronous RealmObjects are by definition blocking hence this method will alway
       
    
    
-   **Returns**
    
-   **Throws**.. seealso::
+   
+   
+   
+   
+   
+   .. seealso::
    
    
       
@@ -995,71 +945,61 @@ isManaged
 
 .. _io_realm_RealmObject_isManaged__:
 
+.. admonition:: public **boolean** isManaged ()
 
 
-public **boolean** isManaged ()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Checks if this object is managed by Realm. A managed object is just a wrapper around the data in the underlying Realm file. On Looper threads, a managed object will be live-updated so it always points to the latest data. It is possible to register a change listener using **#addChangeListener(RealmChangeListener) (?)** to be notified when changes happen. Managed objects are thread confined so that they cannot be accessed from other threads than the one that created them.
-
-If this method returns ``false`` , the object is unmanaged. An unmanaged object is just a normal Java object, so it can be parsed freely across threads, but the data in the object is not connected to the underlying Realm, so it will not be live updated.
-
-
-
-It is possible to create a managed object from an unmanaged object by using **Realm#copyToRealm(RealmModel, ImportFlag...) (?)**. An unmanaged object can be created from a managed object by using **Realm#copyFromRealm(RealmModel) (?)**.
-
-
-
-
-.. example::
 
 
    
-   **Type Parameters**
+   Checks if this object is managed by Realm. A managed object is just a wrapper around the data in the underlying Realm file. On Looper threads, a managed object will be live-updated so it always points to the latest data. It is possible to register a change listener using **#addChangeListener(RealmChangeListener) (?)** to be notified when changes happen. Managed objects are thread confined so that they cannot be accessed from other threads than the one that created them.
+   
+   If this method returns ``false`` , the object is unmanaged. An unmanaged object is just a normal Java object, so it can be parsed freely across threads, but the data in the object is not connected to the underlying Realm, so it will not be live updated.
    
    
    
-   **Parameters**
+   It is possible to create a managed object from an unmanaged object by using **Realm#copyToRealm(RealmModel, ImportFlag...) (?)**. An unmanaged object can be created from a managed object by using **Realm#copyFromRealm(RealmModel) (?)**.
    
    
    
-   **Returns**
    
-   **Throws**
+   
+   
+   
+   
+   
+   
+   
+   
+   
 
 .. _io_realm_RealmObject_isManaged_E_:
 
+.. admonition:: public static **boolean** isManaged <**E (?)** >(**E (?)** object)
 
 
-public static **boolean** isManaged <**E (?)** >(**E (?)** object)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Checks if this object is managed by Realm. A managed object is just a wrapper around the data in the underlying Realm file. On Looper threads, a managed object will be live-updated so it always points to the latest data. It is possible to register a change listener using **#addChangeListener(RealmModel, RealmChangeListener) (?)** to be notified when changes happen. Managed objects are thread confined so that they cannot be accessed from other threads than the one that created them.
-
-If this method returns ``false`` , the object is unmanaged. An unmanaged object is just a normal Java object, so it can be parsed freely across threads, but the data in the object is not connected to the underlying Realm, so it will not be live updated.
-
-
-
-It is possible to create a managed object from an unmanaged object by using **Realm#copyToRealm(RealmModel, ImportFlag...) (?)**. An unmanaged object can be created from a managed object by using **Realm#copyFromRealm(RealmModel) (?)**.
-
-
-
-
-.. example::
 
 
    
-   **Type Parameters**
+   Checks if this object is managed by Realm. A managed object is just a wrapper around the data in the underlying Realm file. On Looper threads, a managed object will be live-updated so it always points to the latest data. It is possible to register a change listener using **#addChangeListener(RealmModel, RealmChangeListener) (?)** to be notified when changes happen. Managed objects are thread confined so that they cannot be accessed from other threads than the one that created them.
+   
+   If this method returns ``false`` , the object is unmanaged. An unmanaged object is just a normal Java object, so it can be parsed freely across threads, but the data in the object is not connected to the underlying Realm, so it will not be live updated.
    
    
    
-   **Parameters**
+   It is possible to create a managed object from an unmanaged object by using **Realm#copyToRealm(RealmModel, ImportFlag...) (?)**. An unmanaged object can be created from a managed object by using **Realm#copyFromRealm(RealmModel) (?)**.
    
    
    
-   **Returns**
    
-   **Throws**
+   
+   
+   
+   
+   
+   
+   
+   
+   
 
 
 
@@ -1068,58 +1008,46 @@ getRealm
 
 .. _io_realm_RealmObject_getRealm__:
 
+.. admonition:: public :ref:`Realm <io_realm_Realm>` getRealm ()
 
 
-public :ref:`Realm <io_realm_Realm>` getRealm ()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Returns :ref:`Realm <io_realm_Realm>` instance where this :ref:`RealmObject <io_realm_RealmObject>` belongs.
-
-You **must not** call **Realm#close() (?)** against returned instance.
-
-
-
-
-.. example::
 
 
    
-   **Type Parameters**
+   Returns :ref:`Realm <io_realm_Realm>` instance where this :ref:`RealmObject <io_realm_RealmObject>` belongs.
+   
+   You **must not** call **Realm#close() (?)** against returned instance.
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
+   
+   
+   
    
    **Throws**
-
-
-
-Throws
-______
+   
+   
+   
+   
+   
 
 .. _io_realm_RealmObject_getRealm_RealmModel_:
 
+.. admonition:: public static :ref:`Realm <io_realm_Realm>` getRealm (:ref:`RealmModel <io_realm_RealmModel>` model)
 
 
-public static :ref:`Realm <io_realm_Realm>` getRealm (:ref:`RealmModel <io_realm_RealmModel>` model)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-returns :ref:`Realm <io_realm_Realm>` instance where the ``model``  belongs.
-
-You **must not** call **Realm#close() (?)** against returned instance.
-
-
-
-
-.. example::
 
 
    
-   **Type Parameters**
+   returns :ref:`Realm <io_realm_Realm>` instance where the ``model``  belongs.
+   
+   You **must not** call **Realm#close() (?)** against returned instance.
+   
+   
+   
    
    
    
@@ -1133,14 +1061,16 @@ You **must not** call **Realm#close() (?)** against returned instance.
       
    
    
-   **Returns**
+   
+   
+   
    
    **Throws**
-
-
-
-Throws
-______
+   
+   
+   
+   
+   
 
 
 
@@ -1149,49 +1079,39 @@ load
 
 .. _io_realm_RealmObject_load__:
 
+.. admonition:: public final **boolean** load ()
 
 
-public final **boolean** load ()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Makes an asynchronous query blocking. This will also trigger any registered listeners.Note: This will return ``true``  if called for an unmanaged object (created outside of Realm).
-
-
-
-
-.. example::
 
 
    
-   **Type Parameters**
+   Makes an asynchronous query blocking. This will also trigger any registered listeners.Note: This will return ``true``  if called for an unmanaged object (created outside of Realm).
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**
+   
+   
+   
+   
+   
+   
 
 .. _io_realm_RealmObject_load_E_:
 
+.. admonition:: public static **boolean** load <**E (?)** >(**E (?)** object)
 
 
-public static **boolean** load <**E (?)** >(**E (?)** object)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Makes an asynchronous query blocking. This will also trigger any registered listeners.Note: This will return ``true``  if called for an unmanaged object (created outside of Realm).
-
-
-
-
-.. example::
 
 
    
-   **Type Parameters**
+   Makes an asynchronous query blocking. This will also trigger any registered listeners.Note: This will return ``true``  if called for an unmanaged object (created outside of Realm).
+   
+   
+   
    
    
    
@@ -1203,9 +1123,13 @@ Makes an asynchronous query blocking. This will also trigger any registered list
       
    
    
-   **Returns**
    
-   **Throws**
+   
+   
+   
+   
+   
+   
 
 
 
@@ -1214,45 +1138,40 @@ addChangeListener
 
 .. _io_realm_RealmObject_addChangeListener_RealmObjectChangeListener_E__:
 
+.. admonition:: public final **void** addChangeListener <**E (?)** >(:ref:`io.realm.RealmObjectChangeListener\<E> <io_realm_RealmObjectChangeListener>` listener)
 
 
-public final **void** addChangeListener <**E (?)** >(:ref:`io.realm.RealmObjectChangeListener\<E> <io_realm_RealmObjectChangeListener>` listener)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Adds a change listener to this RealmObject to get detailed information about changes. The listener will be triggered if any value field or referenced RealmObject field is changed, or the RealmList field itself is changed.Registering a change listener will not prevent the underlying RealmObject from being garbage collected. If the RealmObject is garbage collected, the change listener will stop being triggered. To avoid this, keep a strong reference for as long as appropriate e.g. in a class variable.
-
- 
-
-.. code-block:: java
 
    
-    public class MyActivity extends Activity {
+   Adds a change listener to this RealmObject to get detailed information about changes. The listener will be triggered if any value field or referenced RealmObject field is changed, or the RealmList field itself is changed.Registering a change listener will not prevent the underlying RealmObject from being garbage collected. If the RealmObject is garbage collected, the change listener will stop being triggered. To avoid this, keep a strong reference for as long as appropriate e.g. in a class variable.
    
-        private Person person; // Strong reference to keep listeners alive
-   
-        \@Override
-        protected void onCreate(Bundle savedInstanceState) {
-          super.onCreate(savedInstanceState);
-          person = realm.where(Person.class).findFirst();
-          person.addChangeListener(new RealmObjectChangeListener<Person>() {
-              \@Override
-              public void onChange(Person person, ObjectChangeSet changeSet) {
-                  // React to change
-              }
-          });
-        }
-    }
     
-
-
- 
-
-
-.. example::
-
-
    
-   **Type Parameters**
+   .. code-block:: java
+   
+      
+       public class MyActivity extends Activity {
+      
+           private Person person; // Strong reference to keep listeners alive
+      
+           \@Override
+           protected void onCreate(Bundle savedInstanceState) {
+             super.onCreate(savedInstanceState);
+             person = realm.where(Person.class).findFirst();
+             person.addChangeListener(new RealmObjectChangeListener<Person>() {
+                 \@Override
+                 public void onChange(Person person, ObjectChangeSet changeSet) {
+                     // React to change
+                 }
+             });
+           }
+       }
+       
+   
+   
+    
+   
    
    
    
@@ -1264,56 +1183,53 @@ Adds a change listener to this RealmObject to get detailed information about cha
       
    
    
-   **Returns**
+   
+   
+   
    
    **Throws**
-
-
-
-Throws
-______
+   
+   
+   
+   
+   
 
 .. _io_realm_RealmObject_addChangeListener_RealmChangeListener_E__:
 
+.. admonition:: public final **void** addChangeListener <**E (?)** >(:ref:`io.realm.RealmChangeListener\<E> <io_realm_RealmChangeListener>` listener)
 
 
-public final **void** addChangeListener <**E (?)** >(:ref:`io.realm.RealmChangeListener\<E> <io_realm_RealmChangeListener>` listener)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Adds a change listener to this RealmObject that will be triggered if any value field or referenced RealmObject field is changed, or the RealmList field itself is changed.Registering a change listener will not prevent the underlying RealmObject from being garbage collected. If the RealmObject is garbage collected, the change listener will stop being triggered. To avoid this, keep a strong reference for as long as appropriate e.g. in a class variable.
-
- 
-
-.. code-block:: java
 
    
-    public class MyActivity extends Activity {
+   Adds a change listener to this RealmObject that will be triggered if any value field or referenced RealmObject field is changed, or the RealmList field itself is changed.Registering a change listener will not prevent the underlying RealmObject from being garbage collected. If the RealmObject is garbage collected, the change listener will stop being triggered. To avoid this, keep a strong reference for as long as appropriate e.g. in a class variable.
    
-        private Person person; // Strong reference to keep listeners alive
-   
-        \@Override
-        protected void onCreate(Bundle savedInstanceState) {
-          super.onCreate(savedInstanceState);
-          person = realm.where(Person.class).findFirst();
-          person.addChangeListener(new RealmChangeListener<Person>() {
-              \@Override
-              public void onChange(Person person) {
-                  // React to change
-              }
-          });
-        }
-    }
     
-
-
- 
-
-
-.. example::
-
-
    
-   **Type Parameters**
+   .. code-block:: java
+   
+      
+       public class MyActivity extends Activity {
+      
+           private Person person; // Strong reference to keep listeners alive
+      
+           \@Override
+           protected void onCreate(Bundle savedInstanceState) {
+             super.onCreate(savedInstanceState);
+             person = realm.where(Person.class).findFirst();
+             person.addChangeListener(new RealmChangeListener<Person>() {
+                 \@Override
+                 public void onChange(Person person) {
+                     // React to change
+                 }
+             });
+           }
+       }
+       
+   
+   
+    
+   
    
    
    
@@ -1325,56 +1241,53 @@ Adds a change listener to this RealmObject that will be triggered if any value f
       
    
    
-   **Returns**
+   
+   
+   
    
    **Throws**
-
-
-
-Throws
-______
+   
+   
+   
+   
+   
 
 .. _io_realm_RealmObject_addChangeListener_E__RealmObjectChangeListener_E__:
 
+.. admonition:: public static **void** addChangeListener <**E (?)** >(**E (?)** object, :ref:`io.realm.RealmObjectChangeListener\<E> <io_realm_RealmObjectChangeListener>` listener)
 
 
-public static **void** addChangeListener <**E (?)** >(**E (?)** object, :ref:`io.realm.RealmObjectChangeListener\<E> <io_realm_RealmObjectChangeListener>` listener)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Adds a change listener to a RealmObject to get detailed information about the changes. The listener will be triggered if any value field or referenced RealmObject field is changed, or the RealmList field itself is changed.Registering a change listener will not prevent the underlying RealmObject from being garbage collected. If the RealmObject is garbage collected, the change listener will stop being triggered. To avoid this, keep a strong reference for as long as appropriate e.g. in a class variable.
-
- 
-
-.. code-block:: java
 
    
-    public class MyActivity extends Activity {
+   Adds a change listener to a RealmObject to get detailed information about the changes. The listener will be triggered if any value field or referenced RealmObject field is changed, or the RealmList field itself is changed.Registering a change listener will not prevent the underlying RealmObject from being garbage collected. If the RealmObject is garbage collected, the change listener will stop being triggered. To avoid this, keep a strong reference for as long as appropriate e.g. in a class variable.
    
-        private Person person; // Strong reference to keep listeners alive
-   
-        \@Override
-        protected void onCreate(Bundle savedInstanceState) {
-          super.onCreate(savedInstanceState);
-          person = realm.where(Person.class).findFirst();
-          person.addChangeListener(new RealmObjectChangeListener<Person>() {
-              \@Override
-              public void onChange(Person person, ObjectChangeSet changeSet) {
-                  // React to change
-              }
-          });
-        }
-    }
     
-
-
- 
-
-
-.. example::
-
-
    
-   **Type Parameters**
+   .. code-block:: java
+   
+      
+       public class MyActivity extends Activity {
+      
+           private Person person; // Strong reference to keep listeners alive
+      
+           \@Override
+           protected void onCreate(Bundle savedInstanceState) {
+             super.onCreate(savedInstanceState);
+             person = realm.where(Person.class).findFirst();
+             person.addChangeListener(new RealmObjectChangeListener<Person>() {
+                 \@Override
+                 public void onChange(Person person, ObjectChangeSet changeSet) {
+                     // React to change
+                 }
+             });
+           }
+       }
+       
+   
+   
+    
+   
    
    
    
@@ -1390,56 +1303,53 @@ Adds a change listener to a RealmObject to get detailed information about the ch
       
    
    
-   **Returns**
+   
+   
+   
    
    **Throws**
-
-
-
-Throws
-______
+   
+   
+   
+   
+   
 
 .. _io_realm_RealmObject_addChangeListener_E__RealmChangeListener_E__:
 
+.. admonition:: public static **void** addChangeListener <**E (?)** >(**E (?)** object, :ref:`io.realm.RealmChangeListener\<E> <io_realm_RealmChangeListener>` listener)
 
 
-public static **void** addChangeListener <**E (?)** >(**E (?)** object, :ref:`io.realm.RealmChangeListener\<E> <io_realm_RealmChangeListener>` listener)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Adds a change listener to a RealmObject that will be triggered if any value field or referenced RealmObject field is changed, or the RealmList field itself is changed.Registering a change listener will not prevent the underlying RealmObject from being garbage collected. If the RealmObject is garbage collected, the change listener will stop being triggered. To avoid this, keep a strong reference for as long as appropriate e.g. in a class variable.
-
- 
-
-.. code-block:: java
 
    
-    public class MyActivity extends Activity {
+   Adds a change listener to a RealmObject that will be triggered if any value field or referenced RealmObject field is changed, or the RealmList field itself is changed.Registering a change listener will not prevent the underlying RealmObject from being garbage collected. If the RealmObject is garbage collected, the change listener will stop being triggered. To avoid this, keep a strong reference for as long as appropriate e.g. in a class variable.
    
-        private Person person; // Strong reference to keep listeners alive
-   
-        \@Override
-        protected void onCreate(Bundle savedInstanceState) {
-          super.onCreate(savedInstanceState);
-          person = realm.where(Person.class).findFirst();
-          person.addChangeListener(new RealmChangeListener<Person>() {
-              \@Override
-              public void onChange(Person person) {
-                  // React to change
-              }
-          });
-        }
-    }
     
-
-
- 
-
-
-.. example::
-
-
    
-   **Type Parameters**
+   .. code-block:: java
+   
+      
+       public class MyActivity extends Activity {
+      
+           private Person person; // Strong reference to keep listeners alive
+      
+           \@Override
+           protected void onCreate(Bundle savedInstanceState) {
+             super.onCreate(savedInstanceState);
+             person = realm.where(Person.class).findFirst();
+             person.addChangeListener(new RealmChangeListener<Person>() {
+                 \@Override
+                 public void onChange(Person person) {
+                     // React to change
+                 }
+             });
+           }
+       }
+       
+   
+   
+    
+   
    
    
    
@@ -1455,14 +1365,16 @@ Adds a change listener to a RealmObject that will be triggered if any value fiel
       
    
    
-   **Returns**
+   
+   
+   
    
    **Throws**
-
-
-
-Throws
-______
+   
+   
+   
+   
+   
 
 
 
@@ -1471,18 +1383,13 @@ removeChangeListener
 
 .. _io_realm_RealmObject_removeChangeListener_RealmObjectChangeListener_:
 
+.. admonition:: public final **void** removeChangeListener (:ref:`io.realm.RealmObjectChangeListener <io_realm_RealmObjectChangeListener>` listener)
 
 
-public final **void** removeChangeListener (:ref:`io.realm.RealmObjectChangeListener <io_realm_RealmObjectChangeListener>` listener)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Removes a previously registered listener.
-.. example::
 
 
    
-   **Type Parameters**
-   
+   Removes a previously registered listener.
    
    
    **Parameters**
@@ -1493,29 +1400,26 @@ Removes a previously registered listener.
       
    
    
-   **Returns**
+   
+   
+   
    
    **Throws**
-
-
-
-Throws
-______
+   
+   
+   
+   
+   
 
 .. _io_realm_RealmObject_removeChangeListener_RealmChangeListener_:
 
+.. admonition:: public final **void** removeChangeListener (:ref:`io.realm.RealmChangeListener <io_realm_RealmChangeListener>` listener)
 
 
-public final **void** removeChangeListener (:ref:`io.realm.RealmChangeListener <io_realm_RealmChangeListener>` listener)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Removes a previously registered listener.
-.. example::
 
 
    
-   **Type Parameters**
-   
+   Removes a previously registered listener.
    
    
    **Parameters**
@@ -1526,29 +1430,26 @@ Removes a previously registered listener.
       
    
    
-   **Returns**
+   
+   
+   
    
    **Throws**
-
-
-
-Throws
-______
+   
+   
+   
+   
+   
 
 .. _io_realm_RealmObject_removeChangeListener_E__RealmObjectChangeListener_:
 
+.. admonition:: public static **void** removeChangeListener <**E (?)** >(**E (?)** object, :ref:`io.realm.RealmObjectChangeListener <io_realm_RealmObjectChangeListener>` listener)
 
 
-public static **void** removeChangeListener <**E (?)** >(**E (?)** object, :ref:`io.realm.RealmObjectChangeListener <io_realm_RealmObjectChangeListener>` listener)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Removes a previously registered listener on the given RealmObject.
-.. example::
 
 
    
-   **Type Parameters**
-   
+   Removes a previously registered listener on the given RealmObject.
    
    
    **Parameters**
@@ -1563,29 +1464,26 @@ Removes a previously registered listener on the given RealmObject.
       
    
    
-   **Returns**
+   
+   
+   
    
    **Throws**
-
-
-
-Throws
-______
+   
+   
+   
+   
+   
 
 .. _io_realm_RealmObject_removeChangeListener_E__RealmChangeListener_E__:
 
+.. admonition:: public static **void** removeChangeListener <**E (?)** >(**E (?)** object, :ref:`io.realm.RealmChangeListener\<E> <io_realm_RealmChangeListener>` listener)
 
 
-public static **void** removeChangeListener <**E (?)** >(**E (?)** object, :ref:`io.realm.RealmChangeListener\<E> <io_realm_RealmChangeListener>` listener)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Removes a previously registered listener on the given RealmObject.
-.. example::
 
 
    
-   **Type Parameters**
-   
+   Removes a previously registered listener on the given RealmObject.
    
    
    **Parameters**
@@ -1600,14 +1498,16 @@ Removes a previously registered listener on the given RealmObject.
       
    
    
-   **Returns**
+   
+   
+   
    
    **Throws**
-
-
-
-Throws
-______
+   
+   
+   
+   
+   
 
 
 
@@ -1616,42 +1516,32 @@ removeAllChangeListeners
 
 .. _io_realm_RealmObject_removeAllChangeListeners__:
 
+.. admonition:: public final **void** removeAllChangeListeners ()
 
 
-public final **void** removeAllChangeListeners ()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Removes all registered listeners.
-.. example::
 
 
    
-   **Type Parameters**
+   Removes all registered listeners.
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**
+   
+   
 
 .. _io_realm_RealmObject_removeAllChangeListeners_E_:
 
+.. admonition:: public static **void** removeAllChangeListeners <**E (?)** >(**E (?)** object)
 
 
-public static **void** removeAllChangeListeners <**E (?)** >(**E (?)** object)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Removes all registered listeners from the given RealmObject.
-.. example::
 
 
    
-   **Type Parameters**
-   
+   Removes all registered listeners from the given RealmObject.
    
    
    **Parameters**
@@ -1662,14 +1552,16 @@ Removes all registered listeners from the given RealmObject.
       
    
    
-   **Returns**
+   
+   
+   
    
    **Throws**
-
-
-
-Throws
-______
+   
+   
+   
+   
+   
 
 
 
@@ -1678,60 +1570,57 @@ asFlowable
 
 .. _io_realm_RealmObject_asFlowable__:
 
-
-
-public final **<any> (?)** asFlowable <**E (?)** >()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Returns an RxJava Flowable that monitors changes to this RealmObject. It will emit the current object when subscribed to. Object updates will continually be emitted as the RealmObject is updated - ``onComplete``  will never be called.
-
-When chaining a RealmObject flowable use ``obj.<MyRealmObjectClass>asFlowable()``  to pass on type information, otherwise the type of the following observables will be ``RealmObject`` .
+.. admonition:: public final **<any> (?)** asFlowable <**E (?)** >()
 
 
 
-Items emitted from Realm Flowables are frozen (See :ref:`freeze() <io_realm_RealmObject_freeze__>`. This means that they are immutable and can be read on any thread.
-
-
-
-Realm Flowables always emit items from the thread holding the live Realm. This means that if you need to do further processing, it is recommend to observe the values on a computation scheduler:
-
-
-
-.. code-block:: java
-
-   obj.asFlowable()
-    .observeOn(Schedulers.computation())
-    .map((rxObj) -> doExpensiveWork(rxObj))
-    .observeOn(AndroidSchedulers.mainThread())
-    .subscribe( ... );
-    
-
-
-
-
-
-If you would like the ``asFlowable()``  to stop emitting items you can instruct RxJava to only emit only the first item by using the ``first()``  operator:
-
-
-
- 
-
-.. code-block:: java
 
    
-    obj.asFlowable()
-         .filter(obj -> obj.isLoaded())
-         .first()
-         .subscribe( ... ) // You only get the object once
+   Returns an RxJava Flowable that monitors changes to this RealmObject. It will emit the current object when subscribed to. Object updates will continually be emitted as the RealmObject is updated - ``onComplete``  will never be called.
+   
+   When chaining a RealmObject flowable use ``obj.<MyRealmObjectClass>asFlowable()``  to pass on type information, otherwise the type of the following observables will be ``RealmObject`` .
+   
+   
+   
+   Items emitted from Realm Flowables are frozen (See :ref:`freeze() <io_realm_RealmObject_freeze__>`. This means that they are immutable and can be read on any thread.
+   
+   
+   
+   Realm Flowables always emit items from the thread holding the live Realm. This means that if you need to do further processing, it is recommend to observe the values on a computation scheduler:
+   
+   
+   
+   .. code-block:: java
+   
+      obj.asFlowable()
+       .observeOn(Schedulers.computation())
+       .map((rxObj) -> doExpensiveWork(rxObj))
+       .observeOn(AndroidSchedulers.mainThread())
+       .subscribe( ... );
+       
+   
+   
+   
+   
+   
+   If you would like the ``asFlowable()``  to stop emitting items you can instruct RxJava to only emit only the first item by using the ``first()``  operator:
+   
+   
+   
     
-
-
- 
-
-
-.. example::
-
-
+   
+   .. code-block:: java
+   
+      
+       obj.asFlowable()
+            .filter(obj -> obj.isLoaded())
+            .first()
+            .subscribe( ... ) // You only get the object once
+       
+   
+   
+    
+   
    
    **Type Parameters**
    
@@ -1741,13 +1630,18 @@ If you would like the ``asFlowable()``  to stop emitting items you can instruct 
       
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**.. seealso::
+   
+   
+   **Throws**
+   
+   
+   
+   
+   .. seealso::
    
    
       
@@ -1760,11 +1654,6 @@ If you would like the ``asFlowable()``  to stop emitting items you can instruct 
       
    
    
-
-
-
-Throws
-______
 
 .. seealso::
 
@@ -1780,62 +1669,57 @@ ______
 
 .. _io_realm_RealmObject_asFlowable_E_:
 
+.. admonition:: public static **<any> (?)** asFlowable <**E (?)** >(**E (?)** object)
 
 
-public static **<any> (?)** asFlowable <**E (?)** >(**E (?)** object)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Returns an RxJava Flowable that monitors changes to this RealmObject. It will emit the current object when subscribed to. Object updates will continuously be emitted as the RealmObject is updated - ``onComplete``  will never be called.
-
-When chaining a RealmObject observable use ``obj.<MyRealmObjectClass>asFlowable()``  to pass on type information, otherwise the type of the following observables will be ``RealmObject`` .
-
-
-
-Items emitted from Realm Flowables are frozen (See :ref:`freeze() <io_realm_RealmObject_freeze__>`. This means that they are immutable and can be read on any thread.
-
-
-
-Realm Flowables always emit items from the thread holding the live Realm. This means that if you need to do further processing, it is recommend to observe the values on a computation scheduler:
-
-
-
-.. code-block:: java
-
-   obj.asFlowable()
-    .observeOn(Schedulers.computation())
-    .map((rxObj) -> doExpensiveWork(rxObj))
-    .observeOn(AndroidSchedulers.mainThread())
-    .subscribe( ... );
-    
-
-
-
-
-
-If you would like the ``asFlowable()``  to stop emitting items you can instruct RxJava to emit only the first item by using the ``first()``  operator:
-
-
-
- 
-
-.. code-block:: java
-
-   
-    obj.asFlowable()
-         .filter(obj -> obj.isLoaded())
-         .first()
-         .subscribe( ... ) // You only get the object once
-    
-
-
- 
-
-
-.. example::
 
 
    
-   **Type Parameters**
+   Returns an RxJava Flowable that monitors changes to this RealmObject. It will emit the current object when subscribed to. Object updates will continuously be emitted as the RealmObject is updated - ``onComplete``  will never be called.
+   
+   When chaining a RealmObject observable use ``obj.<MyRealmObjectClass>asFlowable()``  to pass on type information, otherwise the type of the following observables will be ``RealmObject`` .
+   
+   
+   
+   Items emitted from Realm Flowables are frozen (See :ref:`freeze() <io_realm_RealmObject_freeze__>`. This means that they are immutable and can be read on any thread.
+   
+   
+   
+   Realm Flowables always emit items from the thread holding the live Realm. This means that if you need to do further processing, it is recommend to observe the values on a computation scheduler:
+   
+   
+   
+   .. code-block:: java
+   
+      obj.asFlowable()
+       .observeOn(Schedulers.computation())
+       .map((rxObj) -> doExpensiveWork(rxObj))
+       .observeOn(AndroidSchedulers.mainThread())
+       .subscribe( ... );
+       
+   
+   
+   
+   
+   
+   If you would like the ``asFlowable()``  to stop emitting items you can instruct RxJava to emit only the first item by using the ``first()``  operator:
+   
+   
+   
+    
+   
+   .. code-block:: java
+   
+      
+       obj.asFlowable()
+            .filter(obj -> obj.isLoaded())
+            .first()
+            .subscribe( ... ) // You only get the object once
+       
+   
+   
+    
+   
    
    
    
@@ -1847,9 +1731,16 @@ If you would like the ``asFlowable()``  to stop emitting items you can instruct 
       
    
    
-   **Returns**
    
-   **Throws**.. seealso::
+   
+   
+   
+   **Throws**
+   
+   
+   
+   
+   .. seealso::
    
    
       
@@ -1862,11 +1753,6 @@ If you would like the ``asFlowable()``  to stop emitting items you can instruct 
       
    
    
-
-
-
-Throws
-______
 
 .. seealso::
 
@@ -1887,54 +1773,52 @@ asChangesetObservable
 
 .. _io_realm_RealmObject_asChangesetObservable__:
 
+.. admonition:: public final **<any> (?)** asChangesetObservable <**E (?)** >()
 
 
-public final **<any> (?)** asChangesetObservable <**E (?)** >()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Returns an Rx Observable that monitors changes to this RealmObject. It will emit the current RealmObject when subscribed to. For each update to the RealmObject a pair consisting of the RealmObject and the :ref:`ObjectChangeSet <io_realm_ObjectChangeSet>` will be sent. The changeset will be ``null``  the first time the RealmObject is emitted.
-
-The RealmObject will continually be emitted as it is updated - ``onComplete``  will never be called.
-
-
-
-Items emitted from Realm Observables are frozen (See :ref:`freeze() <io_realm_RealmObject_freeze__>`. This means that they are immutable and can be read on any thread.
-
-
-
-Realm Observables always emit items from the thread holding the live Realm. This means that if you need to do further processing, it is recommend to observe the values on a computation scheduler:
-
-
-
-.. code-block:: java
-
-   obj.asChangesetObservable()
-    .observeOn(Schedulers.computation())
-    .map((rxObj, changes) -> doExpensiveWork(rxObj, changeså))
-    .observeOn(AndroidSchedulers.mainThread())
-    .subscribe( ... );
-    
-
-
-
-
-
-
-.. example::
 
 
    
-   **Type Parameters**
+   Returns an Rx Observable that monitors changes to this RealmObject. It will emit the current RealmObject when subscribed to. For each update to the RealmObject a pair consisting of the RealmObject and the :ref:`ObjectChangeSet <io_realm_ObjectChangeSet>` will be sent. The changeset will be ``null``  the first time the RealmObject is emitted.
+   
+   The RealmObject will continually be emitted as it is updated - ``onComplete``  will never be called.
    
    
    
-   **Parameters**
+   Items emitted from Realm Observables are frozen (See :ref:`freeze() <io_realm_RealmObject_freeze__>`. This means that they are immutable and can be read on any thread.
    
    
    
-   **Returns**
+   Realm Observables always emit items from the thread holding the live Realm. This means that if you need to do further processing, it is recommend to observe the values on a computation scheduler:
    
-   **Throws**.. seealso::
+   
+   
+   .. code-block:: java
+   
+      obj.asChangesetObservable()
+       .observeOn(Schedulers.computation())
+       .map((rxObj, changes) -> doExpensiveWork(rxObj, changeså))
+       .observeOn(AndroidSchedulers.mainThread())
+       .subscribe( ... );
+       
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   **Throws**
+   
+   
+   
+   
+   .. seealso::
    
    
       
@@ -1947,11 +1831,6 @@ Realm Observables always emit items from the thread holding the live Realm. This
       
    
    
-
-
-
-Throws
-______
 
 .. seealso::
 
@@ -1967,44 +1846,39 @@ ______
 
 .. _io_realm_RealmObject_asChangesetObservable_E_:
 
+.. admonition:: public static **<any> (?)** asChangesetObservable <**E (?)** >(**E (?)** object)
 
 
-public static **<any> (?)** asChangesetObservable <**E (?)** >(**E (?)** object)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Returns an Rx Observable that monitors changes to this RealmObject. It will emit the current RealmObject when subscribed to. For each update to the RealmObject a pair consisting of the RealmObject and the :ref:`ObjectChangeSet <io_realm_ObjectChangeSet>` will be sent. The changeset will be ``null``  the first time the RealmObject is emitted.
-
-The RealmObject will continually be emitted as it is updated - ``onComplete``  will never be called.
-
-
-
-Items emitted from Realm Observables are frozen (See :ref:`freeze() <io_realm_RealmObject_freeze__>`. This means that they are immutable and can be read on any thread.
-
-
-
-Realm Observables always emit items from the thread holding the live Realm. This means that if you need to do further processing, it is recommend to observe the values on a computation scheduler:
-
-
-
-.. code-block:: java
-
-   obj.asChangesetObservable()
-    .observeOn(Schedulers.computation())
-    .map((rxObj, changes) -> doExpensiveWork(rxObj, changeså))
-    .observeOn(AndroidSchedulers.mainThread())
-    .subscribe( ... );
-    
-
-
-
-
-
-
-.. example::
 
 
    
-   **Type Parameters**
+   Returns an Rx Observable that monitors changes to this RealmObject. It will emit the current RealmObject when subscribed to. For each update to the RealmObject a pair consisting of the RealmObject and the :ref:`ObjectChangeSet <io_realm_ObjectChangeSet>` will be sent. The changeset will be ``null``  the first time the RealmObject is emitted.
+   
+   The RealmObject will continually be emitted as it is updated - ``onComplete``  will never be called.
+   
+   
+   
+   Items emitted from Realm Observables are frozen (See :ref:`freeze() <io_realm_RealmObject_freeze__>`. This means that they are immutable and can be read on any thread.
+   
+   
+   
+   Realm Observables always emit items from the thread holding the live Realm. This means that if you need to do further processing, it is recommend to observe the values on a computation scheduler:
+   
+   
+   
+   .. code-block:: java
+   
+      obj.asChangesetObservable()
+       .observeOn(Schedulers.computation())
+       .map((rxObj, changes) -> doExpensiveWork(rxObj, changeså))
+       .observeOn(AndroidSchedulers.mainThread())
+       .subscribe( ... );
+       
+   
+   
+   
+   
+   
    
    
    
@@ -2016,9 +1890,16 @@ Realm Observables always emit items from the thread holding the live Realm. This
       
    
    
-   **Returns**
    
-   **Throws**.. seealso::
+   
+   
+   
+   **Throws**
+   
+   
+   
+   
+   .. seealso::
    
    
       
@@ -2031,11 +1912,6 @@ Realm Observables always emit items from the thread holding the live Realm. This
       
    
    
-
-
-
-Throws
-______
 
 .. seealso::
 

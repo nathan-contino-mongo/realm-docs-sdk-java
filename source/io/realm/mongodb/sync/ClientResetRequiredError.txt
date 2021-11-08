@@ -132,38 +132,31 @@ executeClientReset
 
 .. _io_realm_mongodb_sync_ClientResetRequiredError_executeClientReset__:
 
+.. admonition:: public **void** executeClientReset ()
 
 
-public **void** executeClientReset ()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Calling this method will execute the Client Reset manually instead of waiting until next app restart. This will only be possible if all instances of that Realm have been closed, otherwise a `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  will be thrown.
-
-After this method returns, the backup file can be found in the location returned by :ref:`getBackupFile() <io_realm_mongodb_sync_ClientResetRequiredError_getBackupFile__>`. The file at :ref:`getOriginalFile() <io_realm_mongodb_sync_ClientResetRequiredError_getOriginalFile__>` have been deleted, but will be recreated from scratch next time a Realm instance is opened.
-
-
-
-
-.. example::
 
 
    
-   **Type Parameters**
+   Calling this method will execute the Client Reset manually instead of waiting until next app restart. This will only be possible if all instances of that Realm have been closed, otherwise a `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  will be thrown.
+   
+   After this method returns, the backup file can be found in the location returned by :ref:`getBackupFile() <io_realm_mongodb_sync_ClientResetRequiredError_getBackupFile__>`. The file at :ref:`getOriginalFile() <io_realm_mongodb_sync_ClientResetRequiredError_getOriginalFile__>` have been deleted, but will be recreated from scratch next time a Realm instance is opened.
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
+   
+   
+   
    
    **Throws**
-
-
-
-Throws
-______
+   
+   
+   
+   
+   
 
 
 
@@ -172,27 +165,22 @@ getBackupFile
 
 .. _io_realm_mongodb_sync_ClientResetRequiredError_getBackupFile__:
 
+.. admonition:: public `File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  getBackupFile ()
 
 
-public `File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  getBackupFile ()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Returns the location of the backed up Realm file. The file will not be present until the Client Reset has been fully executed.
-.. example::
 
 
    
-   **Type Parameters**
+   Returns the location of the backed up Realm file. The file will not be present until the Client Reset has been fully executed.
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**
+   
+   
 
 
 
@@ -201,29 +189,24 @@ getBackupRealmConfiguration
 
 .. _io_realm_mongodb_sync_ClientResetRequiredError_getBackupRealmConfiguration__:
 
+.. admonition:: public :ref:`RealmConfiguration <io_realm_RealmConfiguration>` getBackupRealmConfiguration ()
 
 
-public :ref:`RealmConfiguration <io_realm_RealmConfiguration>` getBackupRealmConfiguration ()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The configuration that can be used to open the backup Realm offline. This configuration can only be used in combination with a :ref:`DynamicRealm <io_realm_DynamicRealm>`.
-
-
-.. example::
 
 
    
-   **Type Parameters**
+   The configuration that can be used to open the backup Realm offline. This configuration can only be used in combination with a :ref:`DynamicRealm <io_realm_DynamicRealm>`.
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**
+   
+   
+   
+   
 
 
 
@@ -232,26 +215,21 @@ getOriginalFile
 
 .. _io_realm_mongodb_sync_ClientResetRequiredError_getOriginalFile__:
 
+.. admonition:: public `File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  getOriginalFile ()
 
 
-public `File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  getOriginalFile ()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Returns the location of the original Realm file. After the Client Reset has completed, the file at this location will be deleted.
-.. example::
 
 
    
-   **Type Parameters**
+   Returns the location of the original Realm file. After the Client Reset has completed, the file at this location will be deleted.
    
    
    
-   **Parameters**
    
    
    
-   **Returns**
    
-   **Throws**
+   
+   
 
 
