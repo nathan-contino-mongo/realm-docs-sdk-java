@@ -132,40 +132,39 @@ executeClientReset
 
 .. _io_realm_mongodb_sync_ClientResetRequiredError_executeClientReset__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **void** executeClientReset ()
-   _____________________________________
+   * - public **void** executeClientReset ()
+       
+       
+   
+   * - Calling this method will execute the Client Reset manually instead of waiting until next app restart. This will only be possible if all instances of that Realm have been closed, otherwise a `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  will be thrown.
+       
+       After this method returns, the backup file can be found in the location returned by :ref:`getBackupFile() <io_realm_mongodb_sync_ClientResetRequiredError_getBackupFile__>`. The file at :ref:`getOriginalFile() <io_realm_mongodb_sync_ClientResetRequiredError_getOriginalFile__>` have been deleted, but will be recreated from scratch next time a Realm instance is opened.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalStateException (?)** - if not all instances have been closed.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Calling this method will execute the Client Reset manually instead of waiting until next app restart. This will only be possible if all instances of that Realm have been closed, otherwise a `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  will be thrown.
-   
-   After this method returns, the backup file can be found in the location returned by :ref:`getBackupFile() <io_realm_mongodb_sync_ClientResetRequiredError_getBackupFile__>`. The file at :ref:`getOriginalFile() <io_realm_mongodb_sync_ClientResetRequiredError_getOriginalFile__>` have been deleted, but will be recreated from scratch next time a Realm instance is opened.
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalStateException (?)**- if not all instances have been closed.
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 getBackupFile
@@ -173,26 +172,25 @@ getBackupFile
 
 .. _io_realm_mongodb_sync_ClientResetRequiredError_getBackupFile__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public `File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  getBackupFile ()
-   _______________________________________________________________________________________________
+   * - public `File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  getBackupFile ()
+       
+       
+   
+   * - Returns the location of the backed up Realm file. The file will not be present until the Client Reset has been fully executed.
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   Returns the location of the backed up Realm file. The file will not be present until the Client Reset has been fully executed.
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 
 
 getBackupRealmConfiguration
@@ -200,28 +198,27 @@ getBackupRealmConfiguration
 
 .. _io_realm_mongodb_sync_ClientResetRequiredError_getBackupRealmConfiguration__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public :ref:`RealmConfiguration <io_realm_RealmConfiguration>` getBackupRealmConfiguration ()
-   _____________________________________________________________________________________________
+   * - public :ref:`RealmConfiguration <io_realm_RealmConfiguration>` getBackupRealmConfiguration ()
+       
+       
+   
+   * - The configuration that can be used to open the backup Realm offline. This configuration can only be used in combination with a :ref:`DynamicRealm <io_realm_DynamicRealm>`.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   The configuration that can be used to open the backup Realm offline. This configuration can only be used in combination with a :ref:`DynamicRealm <io_realm_DynamicRealm>`.
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 
 
 getOriginalFile
@@ -229,24 +226,23 @@ getOriginalFile
 
 .. _io_realm_mongodb_sync_ClientResetRequiredError_getOriginalFile__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public `File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  getOriginalFile ()
-   _________________________________________________________________________________________________
+   * - public `File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  getOriginalFile ()
+       
+       
+   
+   * - Returns the location of the original Realm file. After the Client Reset has completed, the file at this location will be deleted.
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   Returns the location of the original Realm file. After the Client Reset has completed, the file at this location will be deleted.
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 

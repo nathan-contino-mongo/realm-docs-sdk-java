@@ -358,48 +358,47 @@ getClassName
 
 .. _io_realm_RealmObjectSchema_getClassName__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getClassName ()
-   ____________________________________________________________________________________________________
+   * - public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getClassName ()
+       
+       
+   
+   * - Returns the name of the RealmObject class being represented by this schema.
+       
+       - When using a normal :ref:`Realm <io_realm_Realm>` this name is the same as the :ref:`RealmObject <io_realm_RealmObject>` class.
+          
+          
+          
+          
+       - When using a :ref:`DynamicRealm <io_realm_DynamicRealm>` this is the name used in all API methods requiring a class name.
+          
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalStateException (?)** - if this schema defintion is no longer part of the Realm.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Returns the name of the RealmObject class being represented by this schema.
-   
-   - When using a normal :ref:`Realm <io_realm_Realm>` this name is the same as the :ref:`RealmObject <io_realm_RealmObject>` class.
-      
-      
-      
-      
-   - When using a :ref:`DynamicRealm <io_realm_DynamicRealm>` this is the name used in all API methods requiring a class name.
-      
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalStateException (?)**- if this schema defintion is no longer part of the Realm.
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 setClassName
@@ -407,62 +406,49 @@ setClassName
 
 .. _io_realm_RealmObjectSchema_setClassName_String_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` setClassName (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
-   ____________________________________________________________________________________________________________________________________________________________________________
+   * - public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` setClassName (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
+       
+       
    
-   
-   
-   Sets a new name for this RealmObject class. This is equivalent to renaming it.
-   
-   
-   **Parameters**
-   
-   - ``className`` - the new name for this class.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if className is ``null``  or an empty string, or its length exceeds 56 characters.
-      
-      
-      
-      
-      
-   - **UnsupportedOperationException (?)**- if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable or from a synced Realm.
-      
-      
-      
-      
-      
-   
-   
-   
-   
-   .. seealso::
+   * - Sets a new name for this RealmObject class. This is equivalent to renaming it.
+       
+       
+       **Parameters**
+       
+       - ``className`` - the new name for this class.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if className is ``null``  or an empty string, or its length exceeds 56 characters.
+          
+          
+          
+          
+          
+       - **UnsupportedOperationException (?)** - if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable or from a synced Realm.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-      
-      - :ref:`RealmSchema.rename(String, String) <io_realm_RealmSchema_rename_String__String_>`
-         
-         
-         
-      
-      
-      
-   
-   
-
 .. seealso::
 
 
@@ -482,64 +468,63 @@ addField
 
 .. _io_realm_RealmObjectSchema_addField_String__Class_____FieldAttribute____:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` addField (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, `java.lang.Class\<?> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  fieldType, :ref:`io.realm.FieldAttribute[] <io_realm_FieldAttribute>` attributes)
-   ____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+   * - public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` addField (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, `java.lang.Class\<?> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  fieldType, :ref:`io.realm.FieldAttribute[] <io_realm_FieldAttribute>` attributes)
+       
+       
+   
+   * - Adds a new simple field to the RealmObject class. The type must be one supported by Realm. See :ref:`RealmObject <io_realm_RealmObject>` for the list of supported types. If the field should allow ``null``  values use the boxed type instead e.g., ``Integer.class``  instead of ``int.class`` .
+       
+       To add fields that reference other RealmObjects or RealmLists use :ref:`addRealmObjectField(String, RealmObjectSchema) <io_realm_RealmObjectSchema_addRealmObjectField_String__RealmObjectSchema_>` or :ref:`addRealmListField(String, RealmObjectSchema) <io_realm_RealmObjectSchema_addRealmListField_String__RealmObjectSchema_>` instead.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - name of the field to add.
+          
+          
+          
+       - ``fieldType`` - type of field to add. See :ref:`RealmObject <io_realm_RealmObject>` for the full list.
+          
+          
+          
+          
+          
+       - ``attributes`` - set of attributes for this field.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if the type isn't supported, field name is illegal or a field with that name already exists.
+          
+          
+          
+       - **UnsupportedOperationException (?)** - if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable or if adding a a field with :ref:`FieldAttribute.PRIMARY_KEY <io_realm_FieldAttribute_PRIMARY_KEY>` attribute to a schema of a synced Realm.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Adds a new simple field to the RealmObject class. The type must be one supported by Realm. See :ref:`RealmObject <io_realm_RealmObject>` for the list of supported types. If the field should allow ``null``  values use the boxed type instead e.g., ``Integer.class``  instead of ``int.class`` .
-   
-   To add fields that reference other RealmObjects or RealmLists use :ref:`addRealmObjectField(String, RealmObjectSchema) <io_realm_RealmObjectSchema_addRealmObjectField_String__RealmObjectSchema_>` or :ref:`addRealmListField(String, RealmObjectSchema) <io_realm_RealmObjectSchema_addRealmListField_String__RealmObjectSchema_>` instead.
-   
-   
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - name of the field to add.
-      
-      
-      
-   - ``fieldType`` - type of field to add. See :ref:`RealmObject <io_realm_RealmObject>` for the full list.
-      
-      
-      
-      
-      
-   - ``attributes`` - set of attributes for this field.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if the type isn't supported, field name is illegal or a field with that name already exists.
-      
-      
-      
-   - **UnsupportedOperationException (?)**- if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable or if adding a a field with :ref:`FieldAttribute.PRIMARY_KEY <io_realm_FieldAttribute_PRIMARY_KEY>` attribute to a schema of a synced Realm.
-      
-      
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 addRealmObjectField
@@ -547,54 +532,53 @@ addRealmObjectField
 
 .. _io_realm_RealmObjectSchema_addRealmObjectField_String__RealmObjectSchema_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` addRealmObjectField (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` objectSchema)
-   _______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+   * - public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` addRealmObjectField (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` objectSchema)
+       
+       
+   
+   * - Adds a new field that references another :ref:`RealmObject <io_realm_RealmObject>`.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - name of the field to add.
+          
+          
+          
+       - ``objectSchema`` - schema for the Realm type being referenced.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if field name is illegal or a field with that name already exists.
+          
+          
+          
+       - **UnsupportedOperationException (?)** - if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Adds a new field that references another :ref:`RealmObject <io_realm_RealmObject>`.
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - name of the field to add.
-      
-      
-      
-   - ``objectSchema`` - schema for the Realm type being referenced.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if field name is illegal or a field with that name already exists.
-      
-      
-      
-   - **UnsupportedOperationException (?)**- if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable.
-      
-      
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 addRealmListField
@@ -602,130 +586,128 @@ addRealmListField
 
 .. _io_realm_RealmObjectSchema_addRealmListField_String__RealmObjectSchema_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` addRealmListField (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` objectSchema)
-   _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+   * - public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` addRealmListField (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` objectSchema)
+       
+       
    
-   
-   
-   Adds a new field that contains a :ref:`RealmList <io_realm_RealmList>` with references to other Realm model classes.
-   
-   If the list contains primitive types, use **#addRealmListField(String, Class) (?)** instead.
-   
-   
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - name of the field to add.
-      
-      
-      
-   - ``objectSchema`` - schema for the Realm type being referenced.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if the field name is illegal or a field with that name already exists.
-      
-      
-      
-   - **UnsupportedOperationException (?)**- if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable.
-      
-      
-      
-      
-      
-   
-   
-   
-   
-   
-
-.. _io_realm_RealmObjectSchema_addRealmListField_String__Class____:
-
-.. example:: 
-
-
-   
-   public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` addRealmListField (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, `java.lang.Class\<?> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  primitiveType)
-   __________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-   
-   
-   
-   Adds a new field that references a :ref:`RealmList <io_realm_RealmList>` with primitive values. See :ref:`RealmObject <io_realm_RealmObject>` for the list of supported types.
-   
-   Nullability of elements are defined by using the correct class e.g., ``Integer.class``  instead of ``int.class`` . Alternatively :ref:`setRequired(String, boolean) <io_realm_RealmObjectSchema_setRequired_String__boolean_>` can be used.
-   
-   
-   
-   Example:
-   
-    
-   
-   .. code-block:: java
-   
-      
-       // Defines the list of Strings as being non null.
-       RealmObjectSchema schema = schema.create("Person")
-           .addRealmListField("children", String.class)
-           .setRequired("children", true)
+   * - Adds a new field that contains a :ref:`RealmList <io_realm_RealmList>` with references to other Realm model classes.
+       
+       If the list contains primitive types, use **#addRealmListField(String, Class) (?)** instead.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - name of the field to add.
+          
+          
+          
+       - ``objectSchema`` - schema for the Realm type being referenced.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if the field name is illegal or a field with that name already exists.
+          
+          
+          
+       - **UnsupportedOperationException (?)** - if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable.
+          
+          
+          
+          
+          
+       
+       
+       
+       
        
    
    
-    
-   
-   If the list contains references to other Realm classes, use :ref:`addRealmListField(String, RealmObjectSchema) <io_realm_RealmObjectSchema_addRealmListField_String__RealmObjectSchema_>` instead.
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - name of the field to add.
-      
-      
-      
-   - ``primitiveType`` - simple type of elements in the array.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if the field name is illegal, a field with that name already exists or the element type isn't supported.
-      
-      
-      
-   - **UnsupportedOperationException (?)**- if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable.
-      
-      
-      
-      
-      
-   
-   
-   
-   
-   
+.. _io_realm_RealmObjectSchema_addRealmListField_String__Class____:
 
+.. list-table::
+   :header-rows: 1
+   
+   * - public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` addRealmListField (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, `java.lang.Class\<?> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  primitiveType)
+       
+       
+   
+   * - Adds a new field that references a :ref:`RealmList <io_realm_RealmList>` with primitive values. See :ref:`RealmObject <io_realm_RealmObject>` for the list of supported types.
+       
+       Nullability of elements are defined by using the correct class e.g., ``Integer.class``  instead of ``int.class`` . Alternatively :ref:`setRequired(String, boolean) <io_realm_RealmObjectSchema_setRequired_String__boolean_>` can be used.
+       
+       
+       
+       Example:
+       
+        
+       
+       .. code-block:: java
+       
+          
+           // Defines the list of Strings as being non null.
+           RealmObjectSchema schema = schema.create("Person")
+               .addRealmListField("children", String.class)
+               .setRequired("children", true)
+           
+       
+       
+        
+       
+       If the list contains references to other Realm classes, use :ref:`addRealmListField(String, RealmObjectSchema) <io_realm_RealmObjectSchema_addRealmListField_String__RealmObjectSchema_>` instead.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - name of the field to add.
+          
+          
+          
+       - ``primitiveType`` - simple type of elements in the array.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if the field name is illegal, a field with that name already exists or the element type isn't supported.
+          
+          
+          
+       - **UnsupportedOperationException (?)** - if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
 
 
 addRealmDictionaryField
@@ -733,130 +715,128 @@ addRealmDictionaryField
 
 .. _io_realm_RealmObjectSchema_addRealmDictionaryField_String__RealmObjectSchema_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` addRealmDictionaryField (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` objectSchema)
-   ___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+   * - public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` addRealmDictionaryField (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` objectSchema)
+       
+       
    
-   
-   
-   Adds a new field that contains a **RealmDictionary (?)** with references to other Realm model classes.
-   
-   If the dictionary contains primitive types, use **#addRealmDictionaryField(String, Class) (?)** instead.
-   
-   
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - name of the field to add.
-      
-      
-      
-   - ``objectSchema`` - schema for the Realm type being referenced.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if the field name is illegal or a field with that name already exists.
-      
-      
-      
-   - **UnsupportedOperationException (?)**- if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable.
-      
-      
-      
-      
-      
-   
-   
-   
-   
-   
-
-.. _io_realm_RealmObjectSchema_addRealmDictionaryField_String__Class____:
-
-.. example:: 
-
-
-   
-   public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` addRealmDictionaryField (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, `java.lang.Class\<?> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  primitiveType)
-   ________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-   
-   
-   
-   Adds a new field that references a **RealmDictionary (?)** with primitive values. See :ref:`RealmObject <io_realm_RealmObject>` for the list of supported types.
-   
-   Nullability of elements are defined by using the correct class e.g., ``Integer.class``  instead of ``int.class`` . Alternatively :ref:`setRequired(String, boolean) <io_realm_RealmObjectSchema_setRequired_String__boolean_>` can be used.
-   
-   
-   
-   Example:
-   
-    
-   
-   .. code-block:: java
-   
-      
-       // Defines the dictionary of Strings as being non null.
-       RealmObjectSchema schema = schema.create("Person")
-           .addRealmDictionaryField("parentAndChild", String.class)
-           .setRequired("parentAndChild", true)
+   * - Adds a new field that contains a **RealmDictionary (?)** with references to other Realm model classes.
+       
+       If the dictionary contains primitive types, use **#addRealmDictionaryField(String, Class) (?)** instead.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - name of the field to add.
+          
+          
+          
+       - ``objectSchema`` - schema for the Realm type being referenced.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if the field name is illegal or a field with that name already exists.
+          
+          
+          
+       - **UnsupportedOperationException (?)** - if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable.
+          
+          
+          
+          
+          
+       
+       
+       
+       
        
    
    
-    
-   
-   If the list contains references to other Realm classes, use :ref:`addRealmDictionaryField(String, RealmObjectSchema) <io_realm_RealmObjectSchema_addRealmDictionaryField_String__RealmObjectSchema_>` instead.
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - name of the field to add.
-      
-      
-      
-   - ``primitiveType`` - simple type of elements in the array.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if the field name is illegal, a field with that name already exists or the element type isn't supported.
-      
-      
-      
-   - **UnsupportedOperationException (?)**- if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable.
-      
-      
-      
-      
-      
-   
-   
-   
-   
-   
+.. _io_realm_RealmObjectSchema_addRealmDictionaryField_String__Class____:
 
+.. list-table::
+   :header-rows: 1
+   
+   * - public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` addRealmDictionaryField (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, `java.lang.Class\<?> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  primitiveType)
+       
+       
+   
+   * - Adds a new field that references a **RealmDictionary (?)** with primitive values. See :ref:`RealmObject <io_realm_RealmObject>` for the list of supported types.
+       
+       Nullability of elements are defined by using the correct class e.g., ``Integer.class``  instead of ``int.class`` . Alternatively :ref:`setRequired(String, boolean) <io_realm_RealmObjectSchema_setRequired_String__boolean_>` can be used.
+       
+       
+       
+       Example:
+       
+        
+       
+       .. code-block:: java
+       
+          
+           // Defines the dictionary of Strings as being non null.
+           RealmObjectSchema schema = schema.create("Person")
+               .addRealmDictionaryField("parentAndChild", String.class)
+               .setRequired("parentAndChild", true)
+           
+       
+       
+        
+       
+       If the list contains references to other Realm classes, use :ref:`addRealmDictionaryField(String, RealmObjectSchema) <io_realm_RealmObjectSchema_addRealmDictionaryField_String__RealmObjectSchema_>` instead.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - name of the field to add.
+          
+          
+          
+       - ``primitiveType`` - simple type of elements in the array.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if the field name is illegal, a field with that name already exists or the element type isn't supported.
+          
+          
+          
+       - **UnsupportedOperationException (?)** - if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
 
 
 addRealmSetField
@@ -864,130 +844,128 @@ addRealmSetField
 
 .. _io_realm_RealmObjectSchema_addRealmSetField_String__RealmObjectSchema_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` addRealmSetField (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` objectSchema)
-   ____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+   * - public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` addRealmSetField (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` objectSchema)
+       
+       
    
-   
-   
-   Adds a new field that contains a **RealmSet (?)** with references to other Realm model classes.
-   
-   If the set contains primitive types, use **#addRealmSetField(String, Class) (?)** instead.
-   
-   
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - name of the field to add.
-      
-      
-      
-   - ``objectSchema`` - schema for the Realm type being referenced.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if the field name is illegal or a field with that name already exists.
-      
-      
-      
-   - **UnsupportedOperationException (?)**- if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable.
-      
-      
-      
-      
-      
-   
-   
-   
-   
-   
-
-.. _io_realm_RealmObjectSchema_addRealmSetField_String__Class____:
-
-.. example:: 
-
-
-   
-   public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` addRealmSetField (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, `java.lang.Class\<?> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  primitiveType)
-   _________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-   
-   
-   
-   Adds a new field that references a **RealmSet (?)** with primitive values. See :ref:`RealmObject <io_realm_RealmObject>` for the list of supported types.
-   
-   Nullability of elements are defined by using the correct class e.g., ``Integer.class``  instead of ``int.class`` . Alternatively :ref:`setRequired(String, boolean) <io_realm_RealmObjectSchema_setRequired_String__boolean_>` can be used.
-   
-   
-   
-   Example:
-   
-    
-   
-   .. code-block:: java
-   
-      
-       // Defines the set of Strings as being non null.
-       RealmObjectSchema schema = schema.create("Person")
-           .addRealmSetField("children", String.class)
-           .setRequired("children", true)
+   * - Adds a new field that contains a **RealmSet (?)** with references to other Realm model classes.
+       
+       If the set contains primitive types, use **#addRealmSetField(String, Class) (?)** instead.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - name of the field to add.
+          
+          
+          
+       - ``objectSchema`` - schema for the Realm type being referenced.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if the field name is illegal or a field with that name already exists.
+          
+          
+          
+       - **UnsupportedOperationException (?)** - if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable.
+          
+          
+          
+          
+          
+       
+       
+       
+       
        
    
    
-    
-   
-   If the list contains references to other Realm classes, use :ref:`addRealmSetField(String, RealmObjectSchema) <io_realm_RealmObjectSchema_addRealmSetField_String__RealmObjectSchema_>` instead.
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - name of the field to add.
-      
-      
-      
-   - ``primitiveType`` - simple type of elements in the array.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if the field name is illegal, a field with that name already exists or the element type isn't supported.
-      
-      
-      
-   - **UnsupportedOperationException (?)**- if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable.
-      
-      
-      
-      
-      
-   
-   
-   
-   
-   
+.. _io_realm_RealmObjectSchema_addRealmSetField_String__Class____:
 
+.. list-table::
+   :header-rows: 1
+   
+   * - public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` addRealmSetField (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, `java.lang.Class\<?> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  primitiveType)
+       
+       
+   
+   * - Adds a new field that references a **RealmSet (?)** with primitive values. See :ref:`RealmObject <io_realm_RealmObject>` for the list of supported types.
+       
+       Nullability of elements are defined by using the correct class e.g., ``Integer.class``  instead of ``int.class`` . Alternatively :ref:`setRequired(String, boolean) <io_realm_RealmObjectSchema_setRequired_String__boolean_>` can be used.
+       
+       
+       
+       Example:
+       
+        
+       
+       .. code-block:: java
+       
+          
+           // Defines the set of Strings as being non null.
+           RealmObjectSchema schema = schema.create("Person")
+               .addRealmSetField("children", String.class)
+               .setRequired("children", true)
+           
+       
+       
+        
+       
+       If the list contains references to other Realm classes, use :ref:`addRealmSetField(String, RealmObjectSchema) <io_realm_RealmObjectSchema_addRealmSetField_String__RealmObjectSchema_>` instead.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - name of the field to add.
+          
+          
+          
+       - ``primitiveType`` - simple type of elements in the array.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if the field name is illegal, a field with that name already exists or the element type isn't supported.
+          
+          
+          
+       - **UnsupportedOperationException (?)** - if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
 
 
 removeField
@@ -995,48 +973,47 @@ removeField
 
 .. _io_realm_RealmObjectSchema_removeField_String_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` removeField (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-   ___________________________________________________________________________________________________________________________________________________________________________
+   * - public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` removeField (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       
+       
+   
+   * - Removes a field from the class.
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - field name to remove.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if field name doesn't exist.
+          
+          
+          
+       - **UnsupportedOperationException (?)** - if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable or for a synced Realm.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Removes a field from the class.
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - field name to remove.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if field name doesn't exist.
-      
-      
-      
-   - **UnsupportedOperationException (?)**- if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable or for a synced Realm.
-      
-      
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 renameField
@@ -1044,52 +1021,51 @@ renameField
 
 .. _io_realm_RealmObjectSchema_renameField_String__String_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` renameField (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  currentFieldName, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  newFieldName)
-   ______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+   * - public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` renameField (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  currentFieldName, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  newFieldName)
+       
+       
+   
+   * - Renames a field from one name to another.
+       
+       
+       **Parameters**
+       
+       - ``currentFieldName`` - field name to rename.
+          
+          
+          
+       - ``newFieldName`` - the new field name.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if field name doesn't exist or if the new field name already exists.
+          
+          
+          
+       - **UnsupportedOperationException (?)** - if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable or for a synced Realm.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Renames a field from one name to another.
-   
-   
-   **Parameters**
-   
-   - ``currentFieldName`` - field name to rename.
-      
-      
-      
-   - ``newFieldName`` - the new field name.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if field name doesn't exist or if the new field name already exists.
-      
-      
-      
-   - **UnsupportedOperationException (?)**- if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable or for a synced Realm.
-      
-      
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 hasField
@@ -1097,34 +1073,33 @@ hasField
 
 .. _io_realm_RealmObjectSchema_hasField_String_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **boolean** hasField (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-   _____________________________________________________________________________________________________________________
+   * - public **boolean** hasField (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       
+       
+   
+   * - Tests if the class has field defined with the given name.
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - field name to test.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   Tests if the class has field defined with the given name.
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - field name to test.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 
 
 addIndex
@@ -1132,50 +1107,49 @@ addIndex
 
 .. _io_realm_RealmObjectSchema_addIndex_String_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` addIndex (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-   ________________________________________________________________________________________________________________________________________________________________________
+   * - public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` addIndex (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       
+       
+   
+   * - Adds an index to a given field. This is the equivalent of adding the :ref:`io.realm.annotations.Index <io_realm_annotations_Index>` annotation on the field.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - field to add index to.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if field name doesn't exist, the field cannot be indexed or it already has a index defined.
+          
+          
+          
+       - **UnsupportedOperationException (?)** - if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Adds an index to a given field. This is the equivalent of adding the :ref:`io.realm.annotations.Index <io_realm_annotations_Index>` annotation on the field.
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - field to add index to.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if field name doesn't exist, the field cannot be indexed or it already has a index defined.
-      
-      
-      
-   - **UnsupportedOperationException (?)**- if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable.
-      
-      
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 hasIndex
@@ -1183,54 +1157,41 @@ hasIndex
 
 .. _io_realm_RealmObjectSchema_hasIndex_String_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **boolean** hasIndex (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-   _____________________________________________________________________________________________________________________
+   * - public **boolean** hasIndex (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       
+       
    
-   
-   
-   Checks if a given field has an index defined.
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - existing field name to check.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if field name doesn't exist.
-      
-      
-      
-   
-   
-   
-   
-   .. seealso::
+   * - Checks if a given field has an index defined.
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - existing field name to check.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if field name doesn't exist.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-      
-      - :ref:`io.realm.annotations.Index <io_realm_annotations_Index>`
-         
-         
-         
-      
-      
-      
-   
-   
-
 .. seealso::
 
 
@@ -1250,50 +1211,49 @@ removeIndex
 
 .. _io_realm_RealmObjectSchema_removeIndex_String_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` removeIndex (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-   ___________________________________________________________________________________________________________________________________________________________________________
+   * - public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` removeIndex (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       
+       
+   
+   * - Removes an index from a given field. This is the same as removing the ``@Index``  annotation on the field.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - field to remove index from.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if field name doesn't exist or the field doesn't have an index.
+          
+          
+          
+       - **UnsupportedOperationException (?)** - if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable or of a synced Realm.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Removes an index from a given field. This is the same as removing the ``@Index``  annotation on the field.
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - field to remove index from.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if field name doesn't exist or the field doesn't have an index.
-      
-      
-      
-   - **UnsupportedOperationException (?)**- if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable or of a synced Realm.
-      
-      
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 addPrimaryKey
@@ -1301,50 +1261,49 @@ addPrimaryKey
 
 .. _io_realm_RealmObjectSchema_addPrimaryKey_String_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` addPrimaryKey (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-   _____________________________________________________________________________________________________________________________________________________________________________
+   * - public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` addPrimaryKey (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       
+       
+   
+   * - Adds a primary key to a given field. This is the same as adding the :ref:`io.realm.annotations.PrimaryKey <io_realm_annotations_PrimaryKey>` annotation on the field. Further, this implicitly adds :ref:`io.realm.annotations.Index <io_realm_annotations_Index>` annotation to the field as well.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - field to set as primary key.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if field name doesn't exist, the field cannot be a primary key or it already has a primary key defined.
+          
+          
+          
+       - **UnsupportedOperationException (?)** - if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable or of a synced Realm.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Adds a primary key to a given field. This is the same as adding the :ref:`io.realm.annotations.PrimaryKey <io_realm_annotations_PrimaryKey>` annotation on the field. Further, this implicitly adds :ref:`io.realm.annotations.Index <io_realm_annotations_Index>` annotation to the field as well.
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - field to set as primary key.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if field name doesn't exist, the field cannot be a primary key or it already has a primary key defined.
-      
-      
-      
-   - **UnsupportedOperationException (?)**- if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable or of a synced Realm.
-      
-      
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 removePrimaryKey
@@ -1352,42 +1311,41 @@ removePrimaryKey
 
 .. _io_realm_RealmObjectSchema_removePrimaryKey__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` removePrimaryKey ()
-   _________________________________________________________________________________________
+   * - public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` removePrimaryKey ()
+       
+       
+   
+   * - Removes the primary key from this class. This is the same as removing the :ref:`io.realm.annotations.PrimaryKey <io_realm_annotations_PrimaryKey>` annotation from the class. Further, this implicitly removes :ref:`io.realm.annotations.Index <io_realm_annotations_Index>` annotation from the field as well.
+       
+       
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if the class doesn't have a primary key defined.
+          
+          
+          
+       - **UnsupportedOperationException (?)** - if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable or of a synced Realm.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Removes the primary key from this class. This is the same as removing the :ref:`io.realm.annotations.PrimaryKey <io_realm_annotations_PrimaryKey>` annotation from the class. Further, this implicitly removes :ref:`io.realm.annotations.Index <io_realm_annotations_Index>` annotation from the field as well.
-   
-   
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if the class doesn't have a primary key defined.
-      
-      
-      
-   - **UnsupportedOperationException (?)**- if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable or of a synced Realm.
-      
-      
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 setRequired
@@ -1395,74 +1353,61 @@ setRequired
 
 .. _io_realm_RealmObjectSchema_setRequired_String__boolean_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` setRequired (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **boolean** required)
-   _________________________________________________________________________________________________________________________________________________________________________________________________
+   * - public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` setRequired (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **boolean** required)
+       
+       
    
-   
-   
-   Sets a field to be required i.e., it is not allowed to hold ``null``  values. This is equivalent to switching between boxed types and their primitive variant e.g., ``Integer``  to ``int`` .
-   
-   If the type of designated field is a list of values (not :ref:`RealmObject <io_realm_RealmObject>`s , specified nullability only affects its elements, not the field itself. Value list itself is always non-nullable.
-   
-   
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - name of field in the class.
-      
-      
-      
-   - ``required`` - ``true``  if field should be required, ``false``  otherwise.
-      
-      
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if the field name doesn't exist, cannot have the :ref:`Required <io_realm_annotations_Required>` annotation or the field already have been set as required.
-      
-      
-      
-      
-      
-   - **UnsupportedOperationException (?)**- if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable.
-      
-      
-      
-      
-      
-   
-   
-   
-   
-   .. seealso::
+   * - Sets a field to be required i.e., it is not allowed to hold ``null``  values. This is equivalent to switching between boxed types and their primitive variant e.g., ``Integer``  to ``int`` .
+       
+       If the type of designated field is a list of values (not :ref:`RealmObject <io_realm_RealmObject>`s , specified nullability only affects its elements, not the field itself. Value list itself is always non-nullable.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - name of field in the class.
+          
+          
+          
+       - ``required`` - ``true``  if field should be required, ``false``  otherwise.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if the field name doesn't exist, cannot have the :ref:`Required <io_realm_annotations_Required>` annotation or the field already have been set as required.
+          
+          
+          
+          
+          
+       - **UnsupportedOperationException (?)** - if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-      
-      - :ref:`Required <io_realm_annotations_Required>`
-         
-         
-         
-      
-      
-      
-   
-   
-
 .. seealso::
 
 
@@ -1482,60 +1427,59 @@ setNullable
 
 .. _io_realm_RealmObjectSchema_setNullable_String__boolean_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` setNullable (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **boolean** nullable)
-   _________________________________________________________________________________________________________________________________________________________________________________________________
+   * - public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` setNullable (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **boolean** nullable)
+       
+       
+   
+   * - Sets a field to be nullable i.e., it should be able to hold ``null``  values. This is equivalent to switching between primitive types and their boxed variant e.g., ``int``  to ``Integer`` .
+       
+       If the type of designated field is a list of values (not :ref:`RealmObject <io_realm_RealmObject>`s , specified nullability only affects its elements, not the field itself. Value list itself is always non-nullable.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - name of field in the class.
+          
+          
+          
+       - ``nullable`` - ``true``  if field should be nullable, ``false``  otherwise.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if the field name doesn't exist, or cannot be set as nullable.
+          
+          
+          
+       - **UnsupportedOperationException (?)** - if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Sets a field to be nullable i.e., it should be able to hold ``null``  values. This is equivalent to switching between primitive types and their boxed variant e.g., ``int``  to ``Integer`` .
-   
-   If the type of designated field is a list of values (not :ref:`RealmObject <io_realm_RealmObject>`s , specified nullability only affects its elements, not the field itself. Value list itself is always non-nullable.
-   
-   
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - name of field in the class.
-      
-      
-      
-   - ``nullable`` - ``true``  if field should be nullable, ``false``  otherwise.
-      
-      
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if the field name doesn't exist, or cannot be set as nullable.
-      
-      
-      
-   - **UnsupportedOperationException (?)**- if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable.
-      
-      
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 isRequired
@@ -1543,56 +1487,43 @@ isRequired
 
 .. _io_realm_RealmObjectSchema_isRequired_String_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **boolean** isRequired (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-   _______________________________________________________________________________________________________________________
+   * - public **boolean** isRequired (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       
+       
    
-   
-   
-   Checks if a given field is required i.e., it is not allowed to contain ``null``  values.
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - field to check.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if field name doesn't exist.
-      
-      
-      
-   
-   
-   
-   
-   .. seealso::
+   * - Checks if a given field is required i.e., it is not allowed to contain ``null``  values.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - field to check.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if field name doesn't exist.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-      
-      - :ref:`setRequired(String, boolean) <io_realm_RealmObjectSchema_setRequired_String__boolean_>`
-         
-         
-         
-      
-      
-      
-   
-   
-
 .. seealso::
 
 
@@ -1612,56 +1543,43 @@ isNullable
 
 .. _io_realm_RealmObjectSchema_isNullable_String_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **boolean** isNullable (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-   _______________________________________________________________________________________________________________________
+   * - public **boolean** isNullable (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       
+       
    
-   
-   
-   Checks if a given field is nullable i.e., it is allowed to contain ``null``  values.
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - field to check.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if field name doesn't exist.
-      
-      
-      
-   
-   
-   
-   
-   .. seealso::
+   * - Checks if a given field is nullable i.e., it is allowed to contain ``null``  values.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - field to check.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if field name doesn't exist.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-      
-      - :ref:`setNullable(String, boolean) <io_realm_RealmObjectSchema_setNullable_String__boolean_>`
-         
-         
-         
-      
-      
-      
-   
-   
-
 .. seealso::
 
 
@@ -1681,54 +1599,41 @@ isPrimaryKey
 
 .. _io_realm_RealmObjectSchema_isPrimaryKey_String_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **boolean** isPrimaryKey (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-   _________________________________________________________________________________________________________________________
+   * - public **boolean** isPrimaryKey (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       
+       
    
-   
-   
-   Checks if a given field is the primary key field.
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - field to check.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if field name doesn't exist.
-      
-      
-      
-   
-   
-   
-   
-   .. seealso::
+   * - Checks if a given field is the primary key field.
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - field to check.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if field name doesn't exist.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-      
-      - :ref:`addPrimaryKey(String) <io_realm_RealmObjectSchema_addPrimaryKey_String_>`
-         
-         
-         
-      
-      
-      
-   
-   
-
 .. seealso::
 
 
@@ -1748,38 +1653,25 @@ hasPrimaryKey
 
 .. _io_realm_RealmObjectSchema_hasPrimaryKey__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **boolean** hasPrimaryKey ()
-   ___________________________________
+   * - public **boolean** hasPrimaryKey ()
+       
+       
    
-   
-   
-   Checks if the class has a primary key defined.
-   
-   
-   
-   
-   
-   
-   
-   
-   .. seealso::
+   * - Checks if the class has a primary key defined.
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-      
-      - :ref:`io.realm.annotations.PrimaryKey <io_realm_annotations_PrimaryKey>`
-         
-         
-         
-      
-      
-      
-   
-   
-
 .. seealso::
 
 
@@ -1799,34 +1691,33 @@ getPrimaryKey
 
 .. _io_realm_RealmObjectSchema_getPrimaryKey__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getPrimaryKey ()
-   _____________________________________________________________________________________________________
+   * - public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getPrimaryKey ()
+       
+       
+   
+   * - Returns the name of the primary key field.
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalStateException (?)** - if the class doesn't have a primary key defined.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Returns the name of the primary key field.
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalStateException (?)**- if the class doesn't have a primary key defined.
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 getFieldNames
@@ -1834,26 +1725,25 @@ getFieldNames
 
 .. _io_realm_RealmObjectSchema_getFieldNames__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public `Set <https://docs.oracle.com/javase/7/docs/api/java/util/Set.html>`__  getFieldNames ()
-   _______________________________________________________________________________________________
+   * - public `Set <https://docs.oracle.com/javase/7/docs/api/java/util/Set.html>`__  getFieldNames ()
+       
+       
+   
+   * - Returns all fields in this class.
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   Returns all fields in this class.
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 
 
 transform
@@ -1861,48 +1751,47 @@ transform
 
 .. _io_realm_RealmObjectSchema_transform_RealmObjectSchema_Function_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` transform (:ref:`RealmObjectSchema.Function <io_realm_RealmObjectSchema_Function>` function)
-   __________________________________________________________________________________________________________________________________________________________________
+   * - public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` transform (:ref:`RealmObjectSchema.Function <io_realm_RealmObjectSchema_Function>` function)
+       
+       
+   
+   * - Runs a transformation function on each RealmObject instance of the current class. The object will be represented as a :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>`.
+       
+       There is no guarantees in which order the objects are returned.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``function`` - transformation function.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **UnsupportedOperationException (?)** - if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Runs a transformation function on each RealmObject instance of the current class. The object will be represented as a :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>`.
-   
-   There is no guarantees in which order the objects are returned.
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``function`` - transformation function.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **UnsupportedOperationException (?)**- if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` is immutable.
-      
-      
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 getFieldType
@@ -1910,34 +1799,33 @@ getFieldType
 
 .. _io_realm_RealmObjectSchema_getFieldType_String_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public :ref:`RealmFieldType <io_realm_RealmFieldType>` getFieldType (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-   _____________________________________________________________________________________________________________________________________________________________
+   * - public :ref:`RealmFieldType <io_realm_RealmFieldType>` getFieldType (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       
+       
+   
+   * - Returns the type used by the underlying storage engine to represent this field.
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - name of the target field.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   Returns the type used by the underlying storage engine to represent this field.
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - name of the target field.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 
 
 isEmbedded
@@ -1945,28 +1833,27 @@ isEmbedded
 
 .. _io_realm_RealmObjectSchema_isEmbedded__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **boolean** isEmbedded ()
-   ________________________________
+   * - public **boolean** isEmbedded ()
+       
+       
+   
+   * - Returns ``true``  if objects of this type are considered "embedded". See **RealmClass#embedded() (?)** for further details.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   Returns ``true``  if objects of this type are considered "embedded". See **RealmClass#embedded() (?)** for further details.
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 
 
 setEmbedded
@@ -1974,60 +1861,47 @@ setEmbedded
 
 .. _io_realm_RealmObjectSchema_setEmbedded_boolean_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **void** setEmbedded (**boolean** embedded)
-   __________________________________________________
+   * - public **void** setEmbedded (**boolean** embedded)
+       
+       
    
-   
-   
-   Converts the class to be embedded or not.A class can only be marked as embedded if the following invariants are satisfied:
-   
-   
-   
-   - The class is not allowed to have a primary key defined.
-      
-      
-   - All existing objects of this type, must have one and exactly one parent object already pointing to it. If 0 or more than 1 object has a reference to an object about to be marked embedded an `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  will be thrown.
-      
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalStateException (?)**- if the class could not be converted because it broke some of the Embedded Objects invariants.
-      
-      
-      
-   
-   
-   
-   
-   .. seealso::
+   * - Converts the class to be embedded or not.A class can only be marked as embedded if the following invariants are satisfied:
+       
+       
+       
+       - The class is not allowed to have a primary key defined.
+          
+          
+       - All existing objects of this type, must have one and exactly one parent object already pointing to it. If 0 or more than 1 object has a reference to an object about to be marked embedded an `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  will be thrown.
+          
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalStateException (?)** - if the class could not be converted because it broke some of the Embedded Objects invariants.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-      
-      - **RealmClass#embedded() (?)**
-         
-         
-         
-      
-      
-      
-   
-   
-
 .. seealso::
 
 

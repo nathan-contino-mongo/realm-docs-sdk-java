@@ -411,28 +411,27 @@ where
 
 .. _io_realm_RealmResults_where__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public :ref:`RealmQuery <io_realm_RealmQuery>` where ()
-   _______________________________________________________
+   * - public :ref:`RealmQuery <io_realm_RealmQuery>` where ()
+       
+       
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 
 
 sort
@@ -440,28 +439,27 @@ sort
 
 .. _io_realm_RealmResults_sort_String__Sort__String__Sort_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public :ref:`RealmResults <io_realm_RealmResults>` sort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName1, :ref:`Sort <io_realm_Sort>` sortOrder1, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName2, :ref:`Sort <io_realm_Sort>` sortOrder2)
-   ____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+   * - public :ref:`RealmResults <io_realm_RealmResults>` sort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName1, :ref:`Sort <io_realm_Sort>` sortOrder1, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName2, :ref:`Sort <io_realm_Sort>` sortOrder2)
+       
+       
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 
 
 isLoaded
@@ -469,28 +467,27 @@ isLoaded
 
 .. _io_realm_RealmResults_isLoaded__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **boolean** isLoaded ()
-   ______________________________
+   * - public **boolean** isLoaded ()
+       
+       
+   
+   * - Returns ``false``  if the results are not yet loaded, ``true``  if they are loaded.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   Returns ``false``  if the results are not yet loaded, ``true``  if they are loaded.
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 
 
 load
@@ -498,28 +495,27 @@ load
 
 .. _io_realm_RealmResults_load__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **boolean** load ()
-   __________________________
+   * - public **boolean** load ()
+       
+       
+   
+   * - Makes an asynchronous query blocking. This will also trigger any registered :ref:`RealmChangeListener <io_realm_RealmChangeListener>` when the query completes.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   Makes an asynchronous query blocking. This will also trigger any registered :ref:`RealmChangeListener <io_realm_RealmChangeListener>` when the query completes.
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 
 
 setValue
@@ -527,56 +523,55 @@ setValue
 
 .. _io_realm_RealmResults_setValue_String__Object_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **void** setValue (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  value)
-   _______________________________________________________________________________________________________________________________________________________________________________________________________
+   * - public **void** setValue (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  value)
+       
+       
+   
+   * - Updates the field given by ``fieldName``  in all objects inside the query result.
+       
+       This method will automatically try to convert numbers and booleans that are given as ``String``  to their appropriate type. For example ``"10"``  will be converted to ``10``  if the field type is :ref:`RealmFieldType.INTEGER <io_realm_RealmFieldType_INTEGER>`.
+       
+       
+       
+       Using the typed setters like :ref:`setInt(String, int) <io_realm_RealmResults_setInt_String__int_>` will be faster than using this method.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - field to update
+          
+          
+          
+       - ``value`` - value to update with.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if the field could not be found, could not be updated or the argument didn't match the field type or could not be converted to match the underlying field type.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Updates the field given by ``fieldName``  in all objects inside the query result.
-   
-   This method will automatically try to convert numbers and booleans that are given as ``String``  to their appropriate type. For example ``"10"``  will be converted to ``10``  if the field type is :ref:`RealmFieldType.INTEGER <io_realm_RealmFieldType_INTEGER>`.
-   
-   
-   
-   Using the typed setters like :ref:`setInt(String, int) <io_realm_RealmResults_setInt_String__int_>` will be faster than using this method.
-   
-   
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - field to update
-      
-      
-      
-   - ``value`` - value to update with.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if the field could not be found, could not be updated or the argument didn't match the field type or could not be converted to match the underlying field type.
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 setNull
@@ -584,50 +579,49 @@ setNull
 
 .. _io_realm_RealmResults_setNull_String_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **void** setNull (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-   _________________________________________________________________________________________________________________
+   * - public **void** setNull (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       
+       
+   
+   * - Sets the value to ``null``  for the given field in all of the objects in the collection.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - name of the field to update.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if field name doesn't exist or is a primary key property.
+          
+          
+          
+       - **IllegalStateException (?)** - if the field cannot hold ``null``  values.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Sets the value to ``null``  for the given field in all of the objects in the collection.
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - name of the field to update.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if field name doesn't exist or is a primary key property.
-      
-      
-      
-   - **IllegalStateException (?)**- if the field cannot hold ``null``  values.
-      
-      
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 setBoolean
@@ -635,48 +629,47 @@ setBoolean
 
 .. _io_realm_RealmResults_setBoolean_String__boolean_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **void** setBoolean (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **boolean** value)
-   _______________________________________________________________________________________________________________________________________
+   * - public **void** setBoolean (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **boolean** value)
+       
+       
+   
+   * - Sets the ``boolean``  value of the given field in all of the objects in the collection.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - name of the field to update.
+          
+          
+          
+       - ``value`` - new value for the field.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if field name doesn't exist, is a primary key property or isn't a boolean field.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Sets the ``boolean``  value of the given field in all of the objects in the collection.
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - name of the field to update.
-      
-      
-      
-   - ``value`` - new value for the field.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if field name doesn't exist, is a primary key property or isn't a boolean field.
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 setByte
@@ -684,48 +677,47 @@ setByte
 
 .. _io_realm_RealmResults_setByte_String__byte_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **void** setByte (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **byte** value)
-   _________________________________________________________________________________________________________________________________
+   * - public **void** setByte (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **byte** value)
+       
+       
+   
+   * - Sets the ``byte``  value of the given field in all of the objects in the collection.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - name of the field to update.
+          
+          
+          
+       - ``value`` - new value for the field.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if field name doesn't exist, is a primary key property or isn't a byte field.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Sets the ``byte``  value of the given field in all of the objects in the collection.
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - name of the field to update.
-      
-      
-      
-   - ``value`` - new value for the field.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if field name doesn't exist, is a primary key property or isn't a byte field.
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 setShort
@@ -733,48 +725,47 @@ setShort
 
 .. _io_realm_RealmResults_setShort_String__short_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **void** setShort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **short** value)
-   ___________________________________________________________________________________________________________________________________
+   * - public **void** setShort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **short** value)
+       
+       
+   
+   * - Sets the ``short``  value of the given field in all of the objects in the collection.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - name of the field to update.
+          
+          
+          
+       - ``value`` - new value for the field.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if field name doesn't exist, is a primary key property or isn't a short field.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Sets the ``short``  value of the given field in all of the objects in the collection.
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - name of the field to update.
-      
-      
-      
-   - ``value`` - new value for the field.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if field name doesn't exist, is a primary key property or isn't a short field.
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 setInt
@@ -782,48 +773,47 @@ setInt
 
 .. _io_realm_RealmResults_setInt_String__int_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **void** setInt (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **int** value)
-   _______________________________________________________________________________________________________________________________
+   * - public **void** setInt (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **int** value)
+       
+       
+   
+   * - Sets the ``int``  value of the given field in all of the objects in the collection.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - name of the field to update.
+          
+          
+          
+       - ``value`` - new value for the field.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if field name doesn't exist, is a primary key property or isn't an integer field.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Sets the ``int``  value of the given field in all of the objects in the collection.
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - name of the field to update.
-      
-      
-      
-   - ``value`` - new value for the field.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if field name doesn't exist, is a primary key property or isn't an integer field.
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 setLong
@@ -831,48 +821,47 @@ setLong
 
 .. _io_realm_RealmResults_setLong_String__long_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **void** setLong (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **long** value)
-   _________________________________________________________________________________________________________________________________
+   * - public **void** setLong (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **long** value)
+       
+       
+   
+   * - Sets the ``long``  value of the given field in all of the objects in the collection.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - name of the field to update.
+          
+          
+          
+       - ``value`` - new value for the field.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if field name doesn't exist, is a primary key property or isn't a long field.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Sets the ``long``  value of the given field in all of the objects in the collection.
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - name of the field to update.
-      
-      
-      
-   - ``value`` - new value for the field.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if field name doesn't exist, is a primary key property or isn't a long field.
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 setFloat
@@ -880,48 +869,47 @@ setFloat
 
 .. _io_realm_RealmResults_setFloat_String__float_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **void** setFloat (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **float** value)
-   ___________________________________________________________________________________________________________________________________
+   * - public **void** setFloat (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **float** value)
+       
+       
+   
+   * - Sets the ``float``  value of the given field in all of the objects in the collection.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - name of the field to update.
+          
+          
+          
+       - ``value`` - new value for the field.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if field name doesn't exist, is a primary key property or isn't a float field.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Sets the ``float``  value of the given field in all of the objects in the collection.
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - name of the field to update.
-      
-      
-      
-   - ``value`` - new value for the field.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if field name doesn't exist, is a primary key property or isn't a float field.
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 setDouble
@@ -929,48 +917,47 @@ setDouble
 
 .. _io_realm_RealmResults_setDouble_String__double_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **void** setDouble (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **double** value)
-   _____________________________________________________________________________________________________________________________________
+   * - public **void** setDouble (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **double** value)
+       
+       
+   
+   * - Sets the ``double``  value of the given field in all of the objects in the collection.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - name of the field to update.
+          
+          
+          
+       - ``value`` - new value for the field.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if field name doesn't exist, is a primary key property or isn't a double field.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Sets the ``double``  value of the given field in all of the objects in the collection.
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - name of the field to update.
-      
-      
-      
-   - ``value`` - new value for the field.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if field name doesn't exist, is a primary key property or isn't a double field.
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 setString
@@ -978,48 +965,47 @@ setString
 
 .. _io_realm_RealmResults_setString_String__String_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **void** setString (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
-   ________________________________________________________________________________________________________________________________________________________________________________________________________
+   * - public **void** setString (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
+       
+       
+   
+   * - Sets the ``String``  value of the given field in all of the objects in the collection.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - name of the field to update.
+          
+          
+          
+       - ``value`` - new value for the field.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if field name doesn't exist, is a primary key property or isn't a String field.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Sets the ``String``  value of the given field in all of the objects in the collection.
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - name of the field to update.
-      
-      
-      
-   - ``value`` - new value for the field.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if field name doesn't exist, is a primary key property or isn't a String field.
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 setBlob
@@ -1027,46 +1013,45 @@ setBlob
 
 .. _io_realm_RealmResults_setBlob_String__byte[]_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **void** setBlob (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **byte[]** value)
-   ___________________________________________________________________________________________________________________________________
+   * - public **void** setBlob (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **byte[]** value)
+       
+       
+   
+   * - Sets the binary value of the given field in all of the objects in the collection.
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - name of the field to update.
+          
+          
+          
+       - ``value`` - new value for the field.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if field name doesn't exist, is a primary key property or isn't a binary field.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Sets the binary value of the given field in all of the objects in the collection.
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - name of the field to update.
-      
-      
-      
-   - ``value`` - new value for the field.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if field name doesn't exist, is a primary key property or isn't a binary field.
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 setDate
@@ -1074,50 +1059,49 @@ setDate
 
 .. _io_realm_RealmResults_setDate_String__Date_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **void** setDate (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  value)
-   __________________________________________________________________________________________________________________________________________________________________________________________________
+   * - public **void** setDate (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  value)
+       
+       
+   
+   * - Sets the ``Date``  value of the given field in all of the objects in the collection.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - name of the field to update.
+          
+          
+          
+       - ``value`` - new value for the field.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if field name doesn't exist, is a primary key property or isn't a ``Date``  field.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Sets the ``Date``  value of the given field in all of the objects in the collection.
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - name of the field to update.
-      
-      
-      
-   - ``value`` - new value for the field.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if field name doesn't exist, is a primary key property or isn't a ``Date``  field.
-      
-      
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 setObject
@@ -1125,46 +1109,45 @@ setObject
 
 .. _io_realm_RealmResults_setObject_String__RealmModel_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **void** setObject (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, :ref:`RealmModel <io_realm_RealmModel>` value)
-   __________________________________________________________________________________________________________________________________________________________________
+   * - public **void** setObject (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, :ref:`RealmModel <io_realm_RealmModel>` value)
+       
+       
+   
+   * - Sets a reference to another object on the given field in all of the objects in the collection.
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - name of the field to update.
+          
+          
+          
+       - ``value`` - new object referenced by this field.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if field name doesn't exist, is a primary key property or isn't an Object reference field.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Sets a reference to another object on the given field in all of the objects in the collection.
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - name of the field to update.
-      
-      
-      
-   - ``value`` - new object referenced by this field.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if field name doesn't exist, is a primary key property or isn't an Object reference field.
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 setDecimal128
@@ -1172,50 +1155,49 @@ setDecimal128
 
 .. _io_realm_RealmResults_setDecimal128_String__Decimal128_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **void** setDecimal128 (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **Decimal128 (?)** value)
-   _________________________________________________________________________________________________________________________________________________
+   * - public **void** setDecimal128 (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **Decimal128 (?)** value)
+       
+       
+   
+   * - Sets the ``Decimal128``  value of the given field in all of the objects in the collection.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - name of the field to update.
+          
+          
+          
+       - ``value`` - new value for the field.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if field name doesn't exist, is a primary key property or isn't a ``Decimal128``  field.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Sets the ``Decimal128``  value of the given field in all of the objects in the collection.
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - name of the field to update.
-      
-      
-      
-   - ``value`` - new value for the field.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if field name doesn't exist, is a primary key property or isn't a ``Decimal128``  field.
-      
-      
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 setObjectId
@@ -1223,50 +1205,49 @@ setObjectId
 
 .. _io_realm_RealmResults_setObjectId_String__ObjectId_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **void** setObjectId (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **ObjectId (?)** value)
-   _____________________________________________________________________________________________________________________________________________
+   * - public **void** setObjectId (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **ObjectId (?)** value)
+       
+       
+   
+   * - Sets the ``ObjectId``  value of the given field in all of the objects in the collection.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - name of the field to update.
+          
+          
+          
+       - ``value`` - new value for the field.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if field name doesn't exist, is a primary key property or isn't a ``ObjectId``  field.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Sets the ``ObjectId``  value of the given field in all of the objects in the collection.
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - name of the field to update.
-      
-      
-      
-   - ``value`` - new value for the field.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if field name doesn't exist, is a primary key property or isn't a ``ObjectId``  field.
-      
-      
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 setUUID
@@ -1274,50 +1255,49 @@ setUUID
 
 .. _io_realm_RealmResults_setUUID_String__UUID_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **void** setUUID (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, `UUID <https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html>`__  value)
-   __________________________________________________________________________________________________________________________________________________________________________________________________
+   * - public **void** setUUID (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, `UUID <https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html>`__  value)
+       
+       
+   
+   * - Sets the ``UUID``  value of the given field in all of the objects in the collection.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - name of the field to update.
+          
+          
+          
+       - ``value`` - new value for the field.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if field name doesn't exist, is a primary key property or isn't a ``UUID``  field.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Sets the ``UUID``  value of the given field in all of the objects in the collection.
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - name of the field to update.
-      
-      
-      
-   - ``value`` - new value for the field.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if field name doesn't exist, is a primary key property or isn't a ``UUID``  field.
-      
-      
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 setList
@@ -1325,46 +1305,45 @@ setList
 
 .. _io_realm_RealmResults_setList_String__RealmList_T__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **void** setList <**T (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, :ref:`io.realm.RealmList\<T> <io_realm_RealmList>` list)
-   ______________________________________________________________________________________________________________________________________________________________________________________
+   * - public **void** setList <**T (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, :ref:`io.realm.RealmList\<T> <io_realm_RealmList>` list)
+       
+       
+   
+   * - Replaces the RealmList at the given field on all objects in this collection.
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - name of the field to update.
+          
+          
+          
+       - ``list`` - new value for the field.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if field name doesn't exist, isn't a RealmList field , if the objects in the list are not managed or the type of the objects in the list are wrong.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Replaces the RealmList at the given field on all objects in this collection.
-   
-   
-   **Parameters**
-   
-   - ``fieldName`` - name of the field to update.
-      
-      
-      
-   - ``list`` - new value for the field.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if field name doesn't exist, isn't a RealmList field , if the objects in the list are not managed or the type of the objects in the list are wrong.
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 isFrozen
@@ -1372,28 +1351,27 @@ isFrozen
 
 .. _io_realm_RealmResults_isFrozen__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **boolean** isFrozen ()
-   ______________________________
+   * - public **boolean** isFrozen ()
+       
+       
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 
 
 freeze
@@ -1401,28 +1379,27 @@ freeze
 
 .. _io_realm_RealmResults_freeze__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public :ref:`RealmResults <io_realm_RealmResults>` freeze ()
-   ____________________________________________________________
+   * - public :ref:`RealmResults <io_realm_RealmResults>` freeze ()
+       
+       
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 
 
 addChangeListener
@@ -1430,156 +1407,154 @@ addChangeListener
 
 .. _io_realm_RealmResults_addChangeListener_RealmChangeListener_RealmResults_E___:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **void** addChangeListener (:ref:`io.realm.RealmChangeListener\<io.realm.RealmResults\<E>> <io_realm_RealmChangeListener>` listener)
-   ___________________________________________________________________________________________________________________________________________
+   * - public **void** addChangeListener (:ref:`io.realm.RealmChangeListener\<io.realm.RealmResults\<E>> <io_realm_RealmChangeListener>` listener)
+       
+       
    
-   
-   
-   Adds a change listener to this :ref:`RealmResults <io_realm_RealmResults>`.
-   
-   Registering a change listener will not prevent the underlying RealmResults from being garbage collected. If the RealmResults is garbage collected, the change listener will stop being triggered. To avoid this, keep a strong reference for as long as appropriate e.g. in a class variable.
-   
-    
-   
-   .. code-block:: java
-   
-      
-       public class MyActivity extends Activity {
-      
-           private RealmResults<Person> results; // Strong reference to keep listeners alive
-      
-           \@Override
-           protected void onCreate(Bundle savedInstanceState) {
-             super.onCreate(savedInstanceState);
-             results = realm.where(Person.class).findAllAsync();
-             results.addChangeListener(new RealmChangeListener<RealmResults<Person>>() {
-                 \@Override
-                 public void onChange(RealmResults<Person> persons) {
-                     // React to change
-                 }
-             });
+   * - Adds a change listener to this :ref:`RealmResults <io_realm_RealmResults>`.
+       
+       Registering a change listener will not prevent the underlying RealmResults from being garbage collected. If the RealmResults is garbage collected, the change listener will stop being triggered. To avoid this, keep a strong reference for as long as appropriate e.g. in a class variable.
+       
+        
+       
+       .. code-block:: java
+       
+          
+           public class MyActivity extends Activity {
+          
+               private RealmResults<Person> results; // Strong reference to keep listeners alive
+          
+               \@Override
+               protected void onCreate(Bundle savedInstanceState) {
+                 super.onCreate(savedInstanceState);
+                 results = realm.where(Person.class).findAllAsync();
+                 results.addChangeListener(new RealmChangeListener<RealmResults<Person>>() {
+                     \@Override
+                     public void onChange(RealmResults<Person> persons) {
+                         // React to change
+                     }
+                 });
+               }
            }
-       }
+           
+       
+       
+        
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``listener`` - the change listener to be notified.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if the change listener is ``null`` .
+          
+          
+          
+          
+          
+       - **IllegalStateException (?)** - if you try to add a listener from a non-Looper or **android.app.IntentService (?)** thread.
+          
+          
+          
+          
+          
+       
+       
+       
+       
        
    
    
-    
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``listener`` - the change listener to be notified.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if the change listener is ``null`` .
-      
-      
-      
-      
-      
-   - **IllegalStateException (?)**- if you try to add a listener from a non-Looper or **android.app.IntentService (?)** thread.
-      
-      
-      
-      
-      
-   
-   
-   
-   
-   
-
 .. _io_realm_RealmResults_addChangeListener_OrderedRealmCollectionChangeListener_RealmResults_E___:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **void** addChangeListener (:ref:`io.realm.OrderedRealmCollectionChangeListener\<io.realm.RealmResults\<E>> <io_realm_OrderedRealmCollectionChangeListener>` listener)
-   _____________________________________________________________________________________________________________________________________________________________________________
+   * - public **void** addChangeListener (:ref:`io.realm.OrderedRealmCollectionChangeListener\<io.realm.RealmResults\<E>> <io_realm_OrderedRealmCollectionChangeListener>` listener)
+       
+       
    
-   
-   
-   Adds a change listener to this :ref:`RealmResults <io_realm_RealmResults>`.
-   
-   Registering a change listener will not prevent the underlying RealmResults from being garbage collected. If the RealmResults is garbage collected, the change listener will stop being triggered. To avoid this, keep a strong reference for as long as appropriate e.g. in a class variable.
-   
-    
-   
-   .. code-block:: java
-   
-      
-       public class MyActivity extends Activity {
-      
-           private RealmResults<Person> results; // Strong reference to keep listeners alive
-      
-           \@Override
-           protected void onCreate(Bundle savedInstanceState) {
-             super.onCreate(savedInstanceState);
-             results = realm.where(Person.class).findAllAsync();
-             results.addChangeListener(new OrderedRealmCollectionChangeListener<RealmResults<Person>>() {
-                 \@Override
-                 public void onChange(RealmResults<Person> persons, OrderedCollectionChangeSet changeSet) {
-                     // React to change
-                 }
-             });
+   * - Adds a change listener to this :ref:`RealmResults <io_realm_RealmResults>`.
+       
+       Registering a change listener will not prevent the underlying RealmResults from being garbage collected. If the RealmResults is garbage collected, the change listener will stop being triggered. To avoid this, keep a strong reference for as long as appropriate e.g. in a class variable.
+       
+        
+       
+       .. code-block:: java
+       
+          
+           public class MyActivity extends Activity {
+          
+               private RealmResults<Person> results; // Strong reference to keep listeners alive
+          
+               \@Override
+               protected void onCreate(Bundle savedInstanceState) {
+                 super.onCreate(savedInstanceState);
+                 results = realm.where(Person.class).findAllAsync();
+                 results.addChangeListener(new OrderedRealmCollectionChangeListener<RealmResults<Person>>() {
+                     \@Override
+                     public void onChange(RealmResults<Person> persons, OrderedCollectionChangeSet changeSet) {
+                         // React to change
+                     }
+                 });
+               }
            }
-       }
+           
+       
+       
+        
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``listener`` - the change listener to be notified.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if the change listener is ``null`` .
+          
+          
+          
+          
+          
+       - **IllegalStateException (?)** - if you try to add a listener from a non-Looper or **android.app.IntentService (?)** thread.
+          
+          
+          
+          
+          
+       
+       
+       
+       
        
    
    
-    
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``listener`` - the change listener to be notified.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if the change listener is ``null`` .
-      
-      
-      
-      
-      
-   - **IllegalStateException (?)**- if you try to add a listener from a non-Looper or **android.app.IntentService (?)** thread.
-      
-      
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 removeAllChangeListeners
@@ -1587,46 +1562,33 @@ removeAllChangeListeners
 
 .. _io_realm_RealmResults_removeAllChangeListeners__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **void** removeAllChangeListeners ()
-   ___________________________________________
+   * - public **void** removeAllChangeListeners ()
+       
+       
    
-   
-   
-   Removes all user-defined change listeners.
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalStateException (?)**- if you try to remove listeners from a non-Looper Thread.
-      
-      
-      
-   
-   
-   
-   
-   .. seealso::
+   * - Removes all user-defined change listeners.
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalStateException (?)** - if you try to remove listeners from a non-Looper Thread.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-      
-      - :ref:`io.realm.RealmChangeListener <io_realm_RealmChangeListener>`
-         
-         
-         
-      
-      
-      
-   
-   
-
 .. seealso::
 
 
@@ -1646,60 +1608,47 @@ removeChangeListener
 
 .. _io_realm_RealmResults_removeChangeListener_RealmChangeListener_RealmResults_E___:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **void** removeChangeListener (:ref:`io.realm.RealmChangeListener\<io.realm.RealmResults\<E>> <io_realm_RealmChangeListener>` listener)
-   ______________________________________________________________________________________________________________________________________________
+   * - public **void** removeChangeListener (:ref:`io.realm.RealmChangeListener\<io.realm.RealmResults\<E>> <io_realm_RealmChangeListener>` listener)
+       
+       
    
-   
-   
-   Removes the specified change listener.
-   
-   
-   **Parameters**
-   
-   - ``listener`` - the change listener to be removed.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if the change listener is ``null`` .
-      
-      
-      
-      
-      
-   - **IllegalStateException (?)**- if you try to remove a listener from a non-Looper Thread.
-      
-      
-      
-   
-   
-   
-   
-   .. seealso::
+   * - Removes the specified change listener.
+       
+       
+       **Parameters**
+       
+       - ``listener`` - the change listener to be removed.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if the change listener is ``null`` .
+          
+          
+          
+          
+          
+       - **IllegalStateException (?)** - if you try to remove a listener from a non-Looper Thread.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-      
-      - :ref:`io.realm.RealmChangeListener <io_realm_RealmChangeListener>`
-         
-         
-         
-      
-      
-      
-   
-   
-
 .. seealso::
 
 
@@ -1714,60 +1663,47 @@ removeChangeListener
 
 .. _io_realm_RealmResults_removeChangeListener_OrderedRealmCollectionChangeListener_RealmResults_E___:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **void** removeChangeListener (:ref:`io.realm.OrderedRealmCollectionChangeListener\<io.realm.RealmResults\<E>> <io_realm_OrderedRealmCollectionChangeListener>` listener)
-   ________________________________________________________________________________________________________________________________________________________________________________
+   * - public **void** removeChangeListener (:ref:`io.realm.OrderedRealmCollectionChangeListener\<io.realm.RealmResults\<E>> <io_realm_OrderedRealmCollectionChangeListener>` listener)
+       
+       
    
-   
-   
-   Removes the specified change listener.
-   
-   
-   **Parameters**
-   
-   - ``listener`` - the change listener to be removed.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalArgumentException (?)**- if the change listener is ``null`` .
-      
-      
-      
-      
-      
-   - **IllegalStateException (?)**- if you try to remove a listener from a non-Looper Thread.
-      
-      
-      
-   
-   
-   
-   
-   .. seealso::
+   * - Removes the specified change listener.
+       
+       
+       **Parameters**
+       
+       - ``listener`` - the change listener to be removed.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalArgumentException (?)** - if the change listener is ``null`` .
+          
+          
+          
+          
+          
+       - **IllegalStateException (?)** - if you try to remove a listener from a non-Looper Thread.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-      
-      - :ref:`io.realm.RealmChangeListener <io_realm_RealmChangeListener>`
-         
-         
-         
-      
-      
-      
-   
-   
-
 .. seealso::
 
 
@@ -1787,91 +1723,78 @@ asFlowable
 
 .. _io_realm_RealmResults_asFlowable__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **<any> (?)** asFlowable ()
-   __________________________________
+   * - public **<any> (?)** asFlowable ()
+       
+       
    
-   
-   
-   Returns an Rx Flowable that monitors changes to this RealmResults. It will emit the current RealmResults when subscribed to. RealmResults will continually be emitted as the RealmResults are updated - ``onComplete``  will never be called.
-   
-   Items emitted from Realm Flowables are frozen (See :ref:`freeze() <io_realm_RealmResults_freeze__>`. This means that they are immutable and can be read on any thread.
-   
-   
-   
-   Realm Flowables always emit items from the thread holding the live RealmResults. This means that if you need to do further processing, it is recommend to observe the values on a computation scheduler:
-   
-   
-   
-   .. code-block:: java
-   
-      realm.where(Foo.class).findAllAsync().asFlowable()
-       .observeOn(Schedulers.computation())
-       .map(rxResults -> doExpensiveWork(rxResults))
-       .observeOn(AndroidSchedulers.mainThread())
-       .subscribe( ... );
+   * - Returns an Rx Flowable that monitors changes to this RealmResults. It will emit the current RealmResults when subscribed to. RealmResults will continually be emitted as the RealmResults are updated - ``onComplete``  will never be called.
+       
+       Items emitted from Realm Flowables are frozen (See :ref:`freeze() <io_realm_RealmResults_freeze__>`. This means that they are immutable and can be read on any thread.
+       
+       
+       
+       Realm Flowables always emit items from the thread holding the live RealmResults. This means that if you need to do further processing, it is recommend to observe the values on a computation scheduler:
+       
+       
+       
+       .. code-block:: java
+       
+          realm.where(Foo.class).findAllAsync().asFlowable()
+           .observeOn(Schedulers.computation())
+           .map(rxResults -> doExpensiveWork(rxResults))
+           .observeOn(AndroidSchedulers.mainThread())
+           .subscribe( ... );
+           
+       
+       
+       
+       
+       
+       If you would like the ``asFlowable()``  to stop emitting items you can instruct RxJava to only emit only the first item by using the ``first()``  operator:
+       
+       
+       
+        
+       
+       .. code-block:: java
+       
+          
+           realm.where(Foo.class).findAllAsync().asFlowable()
+                .filter(results -> results.isLoaded())
+                .first()
+                .subscribe( ... ) // You only get the results once
+           
+       
+       
+        
+       
+       
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **UnsupportedOperationException (?)** - if the required RxJava framework is not on the classpath or the corresponding Realm instance doesn't support RxJava.
+          
+          
+          
+       - **IllegalStateException (?)** - if the Realm wasn't opened on a Looper thread.
+          
+          
+          
+       
+       
+       
+       
        
    
    
-   
-   
-   
-   If you would like the ``asFlowable()``  to stop emitting items you can instruct RxJava to only emit only the first item by using the ``first()``  operator:
-   
-   
-   
-    
-   
-   .. code-block:: java
-   
-      
-       realm.where(Foo.class).findAllAsync().asFlowable()
-            .filter(results -> results.isLoaded())
-            .first()
-            .subscribe( ... ) // You only get the results once
-       
-   
-   
-    
-   
-   
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **UnsupportedOperationException (?)**- if the required RxJava framework is not on the classpath or the corresponding Realm instance doesn't support RxJava.
-      
-      
-      
-   - **IllegalStateException (?)**- if the Realm wasn't opened on a Looper thread.
-      
-      
-      
-   
-   
-   
-   
-   .. seealso::
-   
-   
-      
-      - **<a href="https://realm.io/docs/java/latest/#rxjava">RxJava and Realm</a> (?)**
-         
-         
-         
-      
-      
-      
-   
-   
-
 .. seealso::
 
 
@@ -1891,77 +1814,64 @@ asChangesetObservable
 
 .. _io_realm_RealmResults_asChangesetObservable__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **<any> (?)** asChangesetObservable ()
-   _____________________________________________
+   * - public **<any> (?)** asChangesetObservable ()
+       
+       
    
-   
-   
-   Returns an Rx Observable that monitors changes to this RealmResults. It will emit the current RealmResults when subscribed. For each update to the RealmResult a pair consisting of the RealmResults and the :ref:`OrderedCollectionChangeSet <io_realm_OrderedCollectionChangeSet>` will be sent. The changeset will be ``null``  the first time an RealmResults is emitted.
-   
-   RealmResults will continually be emitted as the RealmResults are updated - ``onComplete``  will never be called.
-   
-   
-   
-   Items emitted from Realm Observables are frozen (See :ref:`freeze() <io_realm_RealmResults_freeze__>`. This means that they are immutable and can be read on any thread.
-   
-   
-   
-   Realm Observables always emit items from the thread holding the live Realm. This means that if you need to do further processing, it is recommend to observe the values on a computation scheduler:
-   
-   
-   
-   .. code-block:: java
-   
-      realm.where(Foo.class).findAllAsync().asChangesetObservable()
-       .observeOn(Schedulers.computation())
-       .map((rxResults, changes) -> doExpensiveWork(rxResults, changes))
-       .observeOn(AndroidSchedulers.mainThread())
-       .subscribe( ... );
+   * - Returns an Rx Observable that monitors changes to this RealmResults. It will emit the current RealmResults when subscribed. For each update to the RealmResult a pair consisting of the RealmResults and the :ref:`OrderedCollectionChangeSet <io_realm_OrderedCollectionChangeSet>` will be sent. The changeset will be ``null``  the first time an RealmResults is emitted.
+       
+       RealmResults will continually be emitted as the RealmResults are updated - ``onComplete``  will never be called.
+       
+       
+       
+       Items emitted from Realm Observables are frozen (See :ref:`freeze() <io_realm_RealmResults_freeze__>`. This means that they are immutable and can be read on any thread.
+       
+       
+       
+       Realm Observables always emit items from the thread holding the live Realm. This means that if you need to do further processing, it is recommend to observe the values on a computation scheduler:
+       
+       
+       
+       .. code-block:: java
+       
+          realm.where(Foo.class).findAllAsync().asChangesetObservable()
+           .observeOn(Schedulers.computation())
+           .map((rxResults, changes) -> doExpensiveWork(rxResults, changes))
+           .observeOn(AndroidSchedulers.mainThread())
+           .subscribe( ... );
+           
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **UnsupportedOperationException (?)** - if the required RxJava framework is not on the classpath or the corresponding Realm instance doesn't support RxJava.
+          
+          
+          
+       - **IllegalStateException (?)** - if the Realm wasn't opened on a Looper thread.
+          
+          
+          
+       
+       
+       
+       
        
    
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **UnsupportedOperationException (?)**- if the required RxJava framework is not on the classpath or the corresponding Realm instance doesn't support RxJava.
-      
-      
-      
-   - **IllegalStateException (?)**- if the Realm wasn't opened on a Looper thread.
-      
-      
-      
-   
-   
-   
-   
-   .. seealso::
-   
-   
-      
-      - **<a href="https://realm.io/docs/java/latest/#rxjava">RxJava and Realm</a> (?)**
-         
-         
-         
-      
-      
-      
-   
-   
-
 .. seealso::
 
 
@@ -1981,26 +1891,25 @@ asJSON
 
 .. _io_realm_RealmResults_asJSON__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  asJSON ()
-   ______________________________________________________________________________________________
+   * - public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  asJSON ()
+       
+       
+   
+   * - Returns a JSON representation of the matches of a :ref:`RealmQuery <io_realm_RealmQuery>`. Cycles will be returned as row indices. This is a helper method used to inspect data, or for debugging purpose, this method could pull a large string which could cause an OutOfMemory error.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   Returns a JSON representation of the matches of a :ref:`RealmQuery <io_realm_RealmQuery>`. Cycles will be returned as row indices. This is a helper method used to inspect data, or for debugging purpose, this method could pull a large string which could cause an OutOfMemory error.
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 

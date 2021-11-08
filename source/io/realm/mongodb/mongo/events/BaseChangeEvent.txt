@@ -136,26 +136,25 @@ getOperationType
 
 .. _io_realm_mongodb_mongo_events_BaseChangeEvent_getOperationType__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public :ref:`BaseChangeEvent.OperationType <io_realm_mongodb_mongo_events_BaseChangeEvent_OperationType>` getOperationType ()
-   _____________________________________________________________________________________________________________________________
+   * - public :ref:`BaseChangeEvent.OperationType <io_realm_mongodb_mongo_events_BaseChangeEvent_OperationType>` getOperationType ()
+       
+       
+   
+   * - Returns the operation type of the change that triggered the change event.
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   Returns the operation type of the change that triggered the change event.
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 
 
 getFullDocument
@@ -163,26 +162,25 @@ getFullDocument
 
 .. _io_realm_mongodb_mongo_events_BaseChangeEvent_getFullDocument__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **DocumentT (?)** getFullDocument ()
-   ___________________________________________
+   * - public **DocumentT (?)** getFullDocument ()
+       
+       
+   
+   * - The full document at some point after the change has been applied.
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   The full document at some point after the change has been applied.
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 
 
 getDocumentKey
@@ -190,26 +188,25 @@ getDocumentKey
 
 .. _io_realm_mongodb_mongo_events_BaseChangeEvent_getDocumentKey__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **BsonDocument (?)** getDocumentKey ()
-   _____________________________________________
+   * - public **BsonDocument (?)** getDocumentKey ()
+       
+       
+   
+   * - The unique identifier for the document that was actually changed.
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   The unique identifier for the document that was actually changed.
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 
 
 getUpdateDescription
@@ -217,26 +214,25 @@ getUpdateDescription
 
 .. _io_realm_mongodb_mongo_events_BaseChangeEvent_getUpdateDescription__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public :ref:`UpdateDescription <io_realm_mongodb_mongo_events_UpdateDescription>` getUpdateDescription ()
-   _________________________________________________________________________________________________________
+   * - public :ref:`UpdateDescription <io_realm_mongodb_mongo_events_UpdateDescription>` getUpdateDescription ()
+       
+       
+   
+   * - In the case of an update, the description of which fields have been added, removed or updated.
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   In the case of an update, the description of which fields have been added, removed or updated.
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 
 
 hasUncommittedWrites
@@ -244,26 +240,25 @@ hasUncommittedWrites
 
 .. _io_realm_mongodb_mongo_events_BaseChangeEvent_hasUncommittedWrites__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **boolean** hasUncommittedWrites ()
-   __________________________________________
+   * - public **boolean** hasUncommittedWrites ()
+       
+       
+   
+   * - Indicates a local change event that has not yet been synchronized with a remote data store. Used only for the sync use case.
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   Indicates a local change event that has not yet been synchronized with a remote data store. Used only for the sync use case.
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 
 
 toBsonDocument
@@ -271,24 +266,23 @@ toBsonDocument
 
 .. _io_realm_mongodb_mongo_events_BaseChangeEvent_toBsonDocument__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public abstract **BsonDocument (?)** toBsonDocument ()
-   ______________________________________________________
+   * - public abstract **BsonDocument (?)** toBsonDocument ()
+       
+       
+   
+   * - Converts the change event to a BSON representation, as it would look on a MongoDB realm change stream, or a Realm compact watch stream.
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   Converts the change event to a BSON representation, as it would look on a MongoDB realm change stream, or a Realm compact watch stream.
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 

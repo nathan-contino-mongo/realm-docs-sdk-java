@@ -157,36 +157,35 @@ get
 
 .. _io_realm_RealmSchema_get_String_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` get (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
-   ___________________________________________________________________________________________________________________________________________________________________
+   * - public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` get (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
+       
+       
+   
+   * - Returns the :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` for a given class. If this :ref:`RealmSchema <io_realm_RealmSchema>` is immutable, an immutable :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` will be returned. Otherwise, it returns an mutable :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``className`` - name of the class
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   Returns the :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` for a given class. If this :ref:`RealmSchema <io_realm_RealmSchema>` is immutable, an immutable :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` will be returned. Otherwise, it returns an mutable :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`.
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``className`` - name of the class
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 
 
 getAll
@@ -194,28 +193,27 @@ getAll
 
 .. _io_realm_RealmSchema_getAll__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public abstract `Set <https://docs.oracle.com/javase/7/docs/api/java/util/Set.html>`__  getAll ()
-   _________________________________________________________________________________________________
+   * - public abstract `Set <https://docs.oracle.com/javase/7/docs/api/java/util/Set.html>`__  getAll ()
+       
+       
+   
+   * - Returns the :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`s for all RealmObject classes that can be saved in this Realm. If this :ref:`RealmSchema <io_realm_RealmSchema>` is immutable, an immutable :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` set will be returned. Otherwise, it returns an mutable :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` set.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   Returns the :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`s for all RealmObject classes that can be saved in this Realm. If this :ref:`RealmSchema <io_realm_RealmSchema>` is immutable, an immutable :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` set will be returned. Otherwise, it returns an mutable :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` set.
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 
 
 create
@@ -223,44 +221,43 @@ create
 
 .. _io_realm_RealmSchema_create_String_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` create (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
-   ______________________________________________________________________________________________________________________________________________________________________
+   * - public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` create (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
+       
+       
+   
+   * - Adds a new class to the Realm.
+       
+       
+       **Parameters**
+       
+       - ``className`` - name of the class.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **UnsupportedOperationException (?)** - if this :ref:`RealmSchema <io_realm_RealmSchema>` is immutable.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Adds a new class to the Realm.
-   
-   
-   **Parameters**
-   
-   - ``className`` - name of the class.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **UnsupportedOperationException (?)**- if this :ref:`RealmSchema <io_realm_RealmSchema>` is immutable.
-      
-      
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 createWithPrimaryKeyField
@@ -268,60 +265,59 @@ createWithPrimaryKeyField
 
 .. _io_realm_RealmSchema_createWithPrimaryKeyField_String__String__Class_____FieldAttribute____:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` createWithPrimaryKeyField (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  primaryKeyFieldName, `java.lang.Class\<?> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  fieldType, :ref:`io.realm.FieldAttribute[] <io_realm_FieldAttribute>` attributes)
-   ________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+   * - public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` createWithPrimaryKeyField (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  primaryKeyFieldName, `java.lang.Class\<?> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  fieldType, :ref:`io.realm.FieldAttribute[] <io_realm_FieldAttribute>` attributes)
+       
+       
+   
+   * - Adds a new class to the Realm with a primary key field defined.
+       
+       
+       **Parameters**
+       
+       - ``className`` - name of the class.
+          
+          
+          
+       - ``primaryKeyFieldName`` - name of the primary key field.
+          
+          
+          
+       - ``fieldType`` - type of field to add. Only ``byte`` , ``short`` , ``int`` , ``long``  and their boxed types or the ``String``  is supported.
+          
+          
+          
+          
+          
+       - ``attributes`` - set of attributes for this field. This method implicitly adds :ref:`FieldAttribute.PRIMARY_KEY <io_realm_FieldAttribute_PRIMARY_KEY>` and :ref:`FieldAttribute.INDEXED <io_realm_FieldAttribute_INDEXED>` attributes to the field.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **UnsupportedOperationException (?)** - if this :ref:`RealmSchema <io_realm_RealmSchema>` is immutable.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Adds a new class to the Realm with a primary key field defined.
-   
-   
-   **Parameters**
-   
-   - ``className`` - name of the class.
-      
-      
-      
-   - ``primaryKeyFieldName`` - name of the primary key field.
-      
-      
-      
-   - ``fieldType`` - type of field to add. Only ``byte`` , ``short`` , ``int`` , ``long``  and their boxed types or the ``String``  is supported.
-      
-      
-      
-      
-      
-   - ``attributes`` - set of attributes for this field. This method implicitly adds :ref:`FieldAttribute.PRIMARY_KEY <io_realm_FieldAttribute_PRIMARY_KEY>` and :ref:`FieldAttribute.INDEXED <io_realm_FieldAttribute_INDEXED>` attributes to the field.
-      
-      
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **UnsupportedOperationException (?)**- if this :ref:`RealmSchema <io_realm_RealmSchema>` is immutable.
-      
-      
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 remove
@@ -329,46 +325,45 @@ remove
 
 .. _io_realm_RealmSchema_remove_String_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public abstract **void** remove (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
-   _________________________________________________________________________________________________________________________
+   * - public abstract **void** remove (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
+       
+       
+   
+   * - Removes a class from the Realm. All data will be removed. Removing a class while other classes point to it will throw an `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__ . Removes those classes or fields first.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``className`` - name of the class to remove.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **UnsupportedOperationException (?)** - if this :ref:`RealmSchema <io_realm_RealmSchema>` is immutable or of a synced Realm.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Removes a class from the Realm. All data will be removed. Removing a class while other classes point to it will throw an `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__ . Removes those classes or fields first.
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``className`` - name of the class to remove.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **UnsupportedOperationException (?)**- if this :ref:`RealmSchema <io_realm_RealmSchema>` is immutable or of a synced Realm.
-      
-      
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 rename
@@ -376,48 +371,47 @@ rename
 
 .. _io_realm_RealmSchema_rename_String__String_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` rename (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  oldClassName, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  newClassName)
-   _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+   * - public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` rename (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  oldClassName, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  newClassName)
+       
+       
+   
+   * - Renames a class already in the Realm.
+       
+       
+       **Parameters**
+       
+       - ``oldClassName`` - old class name.
+          
+          
+          
+       - ``newClassName`` - new class name.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **UnsupportedOperationException (?)** - if this :ref:`RealmSchema <io_realm_RealmSchema>` is immutable or of a synced Realm.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Renames a class already in the Realm.
-   
-   
-   **Parameters**
-   
-   - ``oldClassName`` - old class name.
-      
-      
-      
-   - ``newClassName`` - new class name.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **UnsupportedOperationException (?)**- if this :ref:`RealmSchema <io_realm_RealmSchema>` is immutable or of a synced Realm.
-      
-      
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 contains
@@ -425,34 +419,33 @@ contains
 
 .. _io_realm_RealmSchema_contains_String_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **boolean** contains (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
-   _____________________________________________________________________________________________________________________
+   * - public **boolean** contains (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
+       
+       
+   
+   * - Checks if a given class already exists in the schema.
+       
+       
+       **Parameters**
+       
+       - ``className`` - class name to check.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   Checks if a given class already exists in the schema.
-   
-   
-   **Parameters**
-   
-   - ``className`` - class name to check.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 
 
 getColumnInfo
@@ -460,26 +453,25 @@ getColumnInfo
 
 .. _io_realm_RealmSchema_getColumnInfo_String_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   protected final **ColumnInfo (?)** getColumnInfo (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
-   __________________________________________________________________________________________________________________________________________
+   * - protected final **ColumnInfo (?)** getColumnInfo (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
+       
+       
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 
 
 createKeyPathMapping
@@ -487,24 +479,23 @@ createKeyPathMapping
 
 .. _io_realm_RealmSchema_createKeyPathMapping__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **void** createKeyPathMapping ()
-   _______________________________________
+   * - public **void** createKeyPathMapping ()
+       
+       
+   
+   * - Create the underlying keypath mapping. Should only be called by typed Realms.
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   Create the underlying keypath mapping. Should only be called by typed Realms.
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 

@@ -111,26 +111,25 @@ getCollection
 
 .. _io_realm_rx_CollectionChange_getCollection__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **E (?)** getCollection ()
-   _________________________________
+   * - public **E (?)** getCollection ()
+       
+       
+   
+   * - Returns the collection that was updated.
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   Returns the collection that was updated.
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 
 
 getChangeset
@@ -138,48 +137,47 @@ getChangeset
 
 .. _io_realm_rx_CollectionChange_getChangeset__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public :ref:`OrderedCollectionChangeSet <io_realm_OrderedCollectionChangeSet>` getChangeset ()
-   ______________________________________________________________________________________________
+   * - public :ref:`OrderedCollectionChangeSet <io_realm_OrderedCollectionChangeSet>` getChangeset ()
+       
+       
    
-   
-   
-   Returns the changeset describing the update.This will be ``null``  the first time the stream emits the collection as well as when a asynchronous query is loaded for the first time.
-   
-   
-   
-    
-   
-   .. code-block:: java
-   
-      
-       // Example
-       realm.where(Person.class).findAllAsync().asChangesetObservable()
-         .subscribe(new Consumer<CollectionChange>() {
-          \@Override
-           public void accept(CollectionChange item) throws Exception {
-             item.getChangeset(); // Will return null the first two times
-         }
-       });
+   * - Returns the changeset describing the update.This will be ``null``  the first time the stream emits the collection as well as when a asynchronous query is loaded for the first time.
+       
+       
+       
+        
+       
+       .. code-block:: java
+       
+          
+           // Example
+           realm.where(Person.class).findAllAsync().asChangesetObservable()
+             .subscribe(new Consumer<CollectionChange>() {
+              \@Override
+               public void accept(CollectionChange item) throws Exception {
+                 item.getChangeset(); // Will return null the first two times
+             }
+           });
+           
+       
+       
+        
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
        
    
    
-    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 
 
 equals
@@ -187,26 +185,25 @@ equals
 
 .. _io_realm_rx_CollectionChange_equals_Object_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
-   ___________________________________________________________________________________________________________
+   * - public **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
+       
+       
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 
 
 hashCode
@@ -214,24 +211,23 @@ hashCode
 
 .. _io_realm_rx_CollectionChange_hashCode__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **int** hashCode ()
-   __________________________
+   * - public **int** hashCode ()
+       
+       
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 

@@ -221,28 +221,27 @@ getUser
 
 .. _io_realm_mongodb_auth_ApiKeyAuth_getUser__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public :ref:`User <io_realm_mongodb_User>` getUser ()
-   _____________________________________________________
+   * - public :ref:`User <io_realm_mongodb_User>` getUser ()
+       
+       
+   
+   * - Returns the :ref:`User <io_realm_mongodb_User>` that this instance in associated with.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   Returns the :ref:`User <io_realm_mongodb_User>` that this instance in associated with.
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 
 
 getApp
@@ -250,28 +249,27 @@ getApp
 
 .. _io_realm_mongodb_auth_ApiKeyAuth_getApp__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public :ref:`App <io_realm_mongodb_App>` getApp ()
-   __________________________________________________
+   * - public :ref:`App <io_realm_mongodb_App>` getApp ()
+       
+       
+   
+   * - Returns the :ref:`App <io_realm_mongodb_App>` that this instance in associated with.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   Returns the :ref:`App <io_realm_mongodb_App>` that this instance in associated with.
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 
 
 create
@@ -279,48 +277,47 @@ create
 
 .. _io_realm_mongodb_auth_ApiKeyAuth_create_String_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public :ref:`ApiKey <io_realm_mongodb_auth_ApiKey>` create (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
-   _______________________________________________________________________________________________________________________________________________
+   * - public :ref:`ApiKey <io_realm_mongodb_auth_ApiKey>` create (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+       
+       
+   
+   * - Creates a user API key that can be used to authenticate as the user.The value of the key must be persisted at this time as this is the only time it is visible.
+       
+       The key is enabled when created. It can be disabled by calling :ref:`disable(ObjectId) <io_realm_mongodb_auth_ApiKeyAuth_disable_ObjectId_>`.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``name`` - the name of the key
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **AppException (?)** - if the server failed to create the API key.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Creates a user API key that can be used to authenticate as the user.The value of the key must be persisted at this time as this is the only time it is visible.
-   
-   The key is enabled when created. It can be disabled by calling :ref:`disable(ObjectId) <io_realm_mongodb_auth_ApiKeyAuth_disable_ObjectId_>`.
-   
-   
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``name`` - the name of the key
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **AppException (?)**- if the server failed to create the API key.
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 createAsync
@@ -328,52 +325,51 @@ createAsync
 
 .. _io_realm_mongodb_auth_ApiKeyAuth_createAsync_String__App_Callback_ApiKey__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` createAsync (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name, :ref:`io.realm.mongodb.App.Callback\<io.realm.mongodb.auth.ApiKey> <io_realm_mongodb_App_Callback>` callback)
-   _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+   * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` createAsync (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name, :ref:`io.realm.mongodb.App.Callback\<io.realm.mongodb.auth.ApiKey> <io_realm_mongodb_App_Callback>` callback)
+       
+       
+   
+   * - Asynchronously creates a user API key that can be used to authenticate as the user.The value of the key must be persisted at this time as this is the only time it is visible.
+       
+       The key is enabled when created. It can be disabled by calling :ref:`disable(ObjectId) <io_realm_mongodb_auth_ApiKeyAuth_disable_ObjectId_>`.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``name`` - the name of the key
+          
+          
+          
+       - ``callback`` - callback when key creation has completed or failed. The callback will always happen on the same thread as this method is called on.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalStateException (?)** - if called from a non-looper thread.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Asynchronously creates a user API key that can be used to authenticate as the user.The value of the key must be persisted at this time as this is the only time it is visible.
-   
-   The key is enabled when created. It can be disabled by calling :ref:`disable(ObjectId) <io_realm_mongodb_auth_ApiKeyAuth_disable_ObjectId_>`.
-   
-   
-   
-   
-   
-   
-   **Parameters**
-   
-   - ``name`` - the name of the key
-      
-      
-      
-   - ``callback`` - callback when key creation has completed or failed. The callback will always happen on the same thread as this method is called on.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalStateException (?)**- if called from a non-looper thread.
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 fetch
@@ -381,42 +377,41 @@ fetch
 
 .. _io_realm_mongodb_auth_ApiKeyAuth_fetch_ObjectId_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public :ref:`ApiKey <io_realm_mongodb_auth_ApiKey>` fetch (**ObjectId (?)** id)
-   _______________________________________________________________________________
+   * - public :ref:`ApiKey <io_realm_mongodb_auth_ApiKey>` fetch (**ObjectId (?)** id)
+       
+       
+   
+   * - Fetches a specific user API key associated with the user.
+       
+       
+       **Parameters**
+       
+       - ``id`` - the id of the key to fetch.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **AppException (?)** - if the server failed to fetch the API key.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Fetches a specific user API key associated with the user.
-   
-   
-   **Parameters**
-   
-   - ``id`` - the id of the key to fetch.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **AppException (?)**- if the server failed to fetch the API key.
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 fetchAsync
@@ -424,46 +419,45 @@ fetchAsync
 
 .. _io_realm_mongodb_auth_ApiKeyAuth_fetchAsync_ObjectId__App_Callback_ApiKey__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` fetchAsync (**ObjectId (?)** id, :ref:`io.realm.mongodb.App.Callback\<io.realm.mongodb.auth.ApiKey> <io_realm_mongodb_App_Callback>` callback)
-   _____________________________________________________________________________________________________________________________________________________________________________________________________
+   * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` fetchAsync (**ObjectId (?)** id, :ref:`io.realm.mongodb.App.Callback\<io.realm.mongodb.auth.ApiKey> <io_realm_mongodb_App_Callback>` callback)
+       
+       
+   
+   * - Fetches a specific user API key associated with the user.
+       
+       
+       **Parameters**
+       
+       - ``id`` - the id of the key to fetch.
+          
+          
+          
+       - ``callback`` - callback used when the key was fetched or the call failed. The callback will always happen on the same thread as this method was called on.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalStateException (?)** - if called from a non-looper thread.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Fetches a specific user API key associated with the user.
-   
-   
-   **Parameters**
-   
-   - ``id`` - the id of the key to fetch.
-      
-      
-      
-   - ``callback`` - callback used when the key was fetched or the call failed. The callback will always happen on the same thread as this method was called on.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalStateException (?)**- if called from a non-looper thread.
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 fetchAll
@@ -471,72 +465,70 @@ fetchAll
 
 .. _io_realm_mongodb_auth_ApiKeyAuth_fetchAll__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public `List <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  fetchAll ()
-   ____________________________________________________________________________________________
+   * - public `List <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  fetchAll ()
+       
+       
+   
+   * - Fetches all API keys associated with the user.
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **AppException (?)** - if the server failed to fetch the API keys.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Fetches all API keys associated with the user.
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **AppException (?)**- if the server failed to fetch the API keys.
-      
-      
-      
-   
-   
-   
-   
-   
-
 .. _io_realm_mongodb_auth_ApiKeyAuth_fetchAll_App_Callback_List_ApiKey___:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` fetchAll (:ref:`io.realm.mongodb.App.Callback\<java.util.List\<io.realm.mongodb.auth.ApiKey>> <io_realm_mongodb_App_Callback>` callback)
-   _______________________________________________________________________________________________________________________________________________________________________________________________
+   * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` fetchAll (:ref:`io.realm.mongodb.App.Callback\<java.util.List\<io.realm.mongodb.auth.ApiKey>> <io_realm_mongodb_App_Callback>` callback)
+       
+       
+   
+   * - Fetches all API keys associated with the user.
+       
+       
+       **Parameters**
+       
+       - ``callback`` - callback used when the keys were fetched or the call failed. The callback will always happen on the same thread as this method was called on.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalStateException (?)** - if called from a non-looper thread.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Fetches all API keys associated with the user.
-   
-   
-   **Parameters**
-   
-   - ``callback`` - callback used when the keys were fetched or the call failed. The callback will always happen on the same thread as this method was called on.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalStateException (?)**- if called from a non-looper thread.
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 delete
@@ -544,42 +536,41 @@ delete
 
 .. _io_realm_mongodb_auth_ApiKeyAuth_delete_ObjectId_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **void** delete (**ObjectId (?)** id)
-   ____________________________________________
+   * - public **void** delete (**ObjectId (?)** id)
+       
+       
+   
+   * - Deletes a specific API key created by the user.
+       
+       
+       **Parameters**
+       
+       - ``id`` - the id of the key to delete.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **AppException (?)** - if the server failed to delete the API key.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Deletes a specific API key created by the user.
-   
-   
-   **Parameters**
-   
-   - ``id`` - the id of the key to delete.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **AppException (?)**- if the server failed to delete the API key.
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 deleteAsync
@@ -587,46 +578,45 @@ deleteAsync
 
 .. _io_realm_mongodb_auth_ApiKeyAuth_deleteAsync_ObjectId__App_Callback_Void__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` deleteAsync (**ObjectId (?)** id, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
-   ________________________________________________________________________________________________________________________________________________________________________________________
+   * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` deleteAsync (**ObjectId (?)** id, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
+       
+       
+   
+   * - Deletes a specific API key created by the user.
+       
+       
+       **Parameters**
+       
+       - ``id`` - the id of the key to delete.
+          
+          
+          
+       - ``callback`` - callback used when the was deleted or the call failed. The callback will always happen on the same thread as this method was called on.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalStateException (?)** - if called from a non-looper thread.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Deletes a specific API key created by the user.
-   
-   
-   **Parameters**
-   
-   - ``id`` - the id of the key to delete.
-      
-      
-      
-   - ``callback`` - callback used when the was deleted or the call failed. The callback will always happen on the same thread as this method was called on.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalStateException (?)**- if called from a non-looper thread.
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 disable
@@ -634,42 +624,41 @@ disable
 
 .. _io_realm_mongodb_auth_ApiKeyAuth_disable_ObjectId_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **void** disable (**ObjectId (?)** id)
-   _____________________________________________
+   * - public **void** disable (**ObjectId (?)** id)
+       
+       
+   
+   * - Disables a specific API key created by the user.
+       
+       
+       **Parameters**
+       
+       - ``id`` - the id of the key to disable.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **AppException (?)** - if the server failed to disable the API key.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Disables a specific API key created by the user.
-   
-   
-   **Parameters**
-   
-   - ``id`` - the id of the key to disable.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **AppException (?)**- if the server failed to disable the API key.
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 disableAsync
@@ -677,46 +666,45 @@ disableAsync
 
 .. _io_realm_mongodb_auth_ApiKeyAuth_disableAsync_ObjectId__App_Callback_Void__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` disableAsync (**ObjectId (?)** id, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
-   _________________________________________________________________________________________________________________________________________________________________________________________
+   * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` disableAsync (**ObjectId (?)** id, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
+       
+       
+   
+   * - Disables a specific API key created by the user.
+       
+       
+       **Parameters**
+       
+       - ``id`` - the id of the key to disable.
+          
+          
+          
+       - ``callback`` - callback used when the key was disabled or the call failed. The callback will always happen on the same thread as this method was called on.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalStateException (?)** - if called from a non-looper thread.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Disables a specific API key created by the user.
-   
-   
-   **Parameters**
-   
-   - ``id`` - the id of the key to disable.
-      
-      
-      
-   - ``callback`` - callback used when the key was disabled or the call failed. The callback will always happen on the same thread as this method was called on.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalStateException (?)**- if called from a non-looper thread.
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 enable
@@ -724,42 +712,41 @@ enable
 
 .. _io_realm_mongodb_auth_ApiKeyAuth_enable_ObjectId_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **void** enable (**ObjectId (?)** id)
-   ____________________________________________
+   * - public **void** enable (**ObjectId (?)** id)
+       
+       
+   
+   * - Enables a specific API key created by the user.
+       
+       
+       **Parameters**
+       
+       - ``id`` - the id of the key to enable.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **AppException (?)** - if the server failed to enable the API key.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Enables a specific API key created by the user.
-   
-   
-   **Parameters**
-   
-   - ``id`` - the id of the key to enable.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **AppException (?)**- if the server failed to enable the API key.
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 enableAsync
@@ -767,46 +754,45 @@ enableAsync
 
 .. _io_realm_mongodb_auth_ApiKeyAuth_enableAsync_ObjectId__App_Callback_Void__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` enableAsync (**ObjectId (?)** id, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
-   ________________________________________________________________________________________________________________________________________________________________________________________
+   * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` enableAsync (**ObjectId (?)** id, :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>` callback)
+       
+       
+   
+   * - Enables a specific API key created by the user.
+       
+       
+       **Parameters**
+       
+       - ``id`` - the id of the key to enable.
+          
+          
+          
+       - ``callback`` - callback used when the key was enabled or the call failed. The callback will always happen on the same thread as this method was called on.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - **IllegalStateException (?)** - if called from a non-looper thread.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
-   
-   Enables a specific API key created by the user.
-   
-   
-   **Parameters**
-   
-   - ``id`` - the id of the key to enable.
-      
-      
-      
-   - ``callback`` - callback used when the key was enabled or the call failed. The callback will always happen on the same thread as this method was called on.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   **Throws**
-   
-   - **IllegalStateException (?)**- if called from a non-looper thread.
-      
-      
-      
-   
-   
-   
-   
-   
-
 
 
 equals
@@ -814,26 +800,25 @@ equals
 
 .. _io_realm_mongodb_auth_ApiKeyAuth_equals_Object_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
-   ___________________________________________________________________________________________________________
+   * - public **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
+       
+       
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 
 
 hashCode
@@ -841,26 +826,25 @@ hashCode
 
 .. _io_realm_mongodb_auth_ApiKeyAuth_hashCode__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **int** hashCode ()
-   __________________________
+   * - public **int** hashCode ()
+       
+       
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 
 
 toString
@@ -868,26 +852,25 @@ toString
 
 .. _io_realm_mongodb_auth_ApiKeyAuth_toString__:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  toString ()
-   ________________________________________________________________________________________________
+   * - public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  toString ()
+       
+       
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 
 
 call
@@ -895,24 +878,23 @@ call
 
 .. _io_realm_mongodb_auth_ApiKeyAuth_call_int__String__OsJavaNetworkTransport_NetworkTransportJNIResultCallback_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   protected abstract **void** call (**int** functionType, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  arg, **OsJavaNetworkTransport.NetworkTransportJNIResultCallback (?)** callback)
-   _____________________________________________________________________________________________________________________________________________________________________________________________________________________
+   * - protected abstract **void** call (**int** functionType, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  arg, **OsJavaNetworkTransport.NetworkTransportJNIResultCallback (?)** callback)
+       
+       
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 

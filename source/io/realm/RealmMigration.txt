@@ -108,40 +108,39 @@ migrate
 
 .. _io_realm_RealmMigration_migrate_DynamicRealm__long__long_:
 
-.. example:: 
-
-
+.. list-table::
+   :header-rows: 1
    
-   public **void** migrate (:ref:`DynamicRealm <io_realm_DynamicRealm>` realm, **long** oldVersion, **long** newVersion)
-   _____________________________________________________________________________________________________________________
+   * - public **void** migrate (:ref:`DynamicRealm <io_realm_DynamicRealm>` realm, **long** oldVersion, **long** newVersion)
+       
+       
+   
+   * - This method will be called if a migration is needed. The entire method is wrapped in a write transaction so it is possible to create, update or delete any existing objects without wrapping it in your own transaction.
+       
+       
+       **Parameters**
+       
+       - ``realm`` - the Realm schema on which to perform the migration.
+          
+          
+          
+       - ``oldVersion`` - the schema version of the Realm at the start of the migration.
+          
+          
+          
+       - ``newVersion`` - the schema version of the Realm after executing the migration.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
    
    
-   
-   This method will be called if a migration is needed. The entire method is wrapped in a write transaction so it is possible to create, update or delete any existing objects without wrapping it in your own transaction.
-   
-   
-   **Parameters**
-   
-   - ``realm`` - the Realm schema on which to perform the migration.
-      
-      
-      
-   - ``oldVersion`` - the schema version of the Realm at the start of the migration.
-      
-      
-      
-   - ``newVersion`` - the schema version of the Realm after executing the migration.
-      
-      
-      
-   
-   
-   
-   
-   
-   
-   
-   
-   
-
 
