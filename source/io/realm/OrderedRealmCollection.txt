@@ -233,11 +233,14 @@ first
 
 .. _io_realm_OrderedRealmCollection_first__:
 
-.. admonition:: public **E (?)** first ()
+.. example:: 
 
 
-
-
+   
+   public **E (?)** first ()
+   _________________________
+   
+   
    
    Gets the first object from the collection.
    
@@ -248,6 +251,11 @@ first
    
    **Throws**
    
+   - **IndexOutOfBoundsException (?)**- if the collection is empty.
+      
+      
+      
+   
    
    
    
@@ -255,11 +263,14 @@ first
 
 .. _io_realm_OrderedRealmCollection_first_E_:
 
-.. admonition:: public **E (?)** first (**E (?)** defaultValue)
+.. example:: 
 
 
-
-
+   
+   public **E (?)** first (**E (?)** defaultValue)
+   _______________________________________________
+   
+   
    
    Gets the first object from the collection. If the collection is empty, the provided default will be used instead.
    
@@ -279,11 +290,14 @@ last
 
 .. _io_realm_OrderedRealmCollection_last__:
 
-.. admonition:: public **E (?)** last ()
+.. example:: 
 
 
-
-
+   
+   public **E (?)** last ()
+   ________________________
+   
+   
    
    Gets the last object from the collection.
    
@@ -294,6 +308,11 @@ last
    
    **Throws**
    
+   - **IndexOutOfBoundsException (?)**- if the collection is empty.
+      
+      
+      
+   
    
    
    
@@ -301,11 +320,14 @@ last
 
 .. _io_realm_OrderedRealmCollection_last_E_:
 
-.. admonition:: public **E (?)** last (**E (?)** defaultValue)
+.. example:: 
 
 
-
-
+   
+   public **E (?)** last (**E (?)** defaultValue)
+   ______________________________________________
+   
+   
    
    Gets the last object from the collection. If the collection is empty, the provided default will be used instead.
    
@@ -325,11 +347,14 @@ sort
 
 .. _io_realm_OrderedRealmCollection_sort_String_:
 
-.. admonition:: public :ref:`RealmResults <io_realm_RealmResults>` sort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmResults <io_realm_RealmResults>` sort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   _________________________________________________________________________________________________________________________________________________
+   
+   
    
    Sorts a collection based on the provided field in ascending order.
    
@@ -348,6 +373,15 @@ sort
    
    **Throws**
    
+   - `java.lang.IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__ - if field name does not exist or it has an invalid type.
+      
+      
+      
+   - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__ - if the Realm is closed, called on the wrong thread or the collection is an unmanaged collection.
+      
+      
+      
+   
    
    
    
@@ -355,11 +389,14 @@ sort
 
 .. _io_realm_OrderedRealmCollection_sort_String__Sort_:
 
-.. admonition:: public :ref:`RealmResults <io_realm_RealmResults>` sort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, :ref:`Sort <io_realm_Sort>` sortOrder)
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmResults <io_realm_RealmResults>` sort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, :ref:`Sort <io_realm_Sort>` sortOrder)
+   ________________________________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    Sorts a collection based on the provided field and sort order.
    
@@ -382,6 +419,15 @@ sort
    
    **Throws**
    
+   - `java.lang.IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__ - if field name does not exist or has an invalid type.
+      
+      
+      
+   - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__ - if the Realm is closed, called on the wrong thread or the collection is an unmanaged collection.
+      
+      
+      
+   
    
    
    
@@ -389,11 +435,14 @@ sort
 
 .. _io_realm_OrderedRealmCollection_sort_String__Sort__String__Sort_:
 
-.. admonition:: public :ref:`RealmResults <io_realm_RealmResults>` sort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName1, :ref:`Sort <io_realm_Sort>` sortOrder1, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName2, :ref:`Sort <io_realm_Sort>` sortOrder2)
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmResults <io_realm_RealmResults>` sort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName1, :ref:`Sort <io_realm_Sort>` sortOrder1, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName2, :ref:`Sort <io_realm_Sort>` sortOrder2)
+   ____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    Sorts a collection based on the provided fields and sort orders.
    
@@ -424,6 +473,15 @@ sort
    
    **Throws**
    
+   - `java.lang.IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__ - if a field name does not exist or has an invalid type.
+      
+      
+      
+   - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__ - if the Realm is closed, called on the wrong thread or the collection is an unmanaged collection.
+      
+      
+      
+   
    
    
    
@@ -431,11 +489,14 @@ sort
 
 .. _io_realm_OrderedRealmCollection_sort_String[]__Sort[]_:
 
-.. admonition:: public :ref:`RealmResults <io_realm_RealmResults>` sort (`java.lang.String[] <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldNames, :ref:`io.realm.Sort[] <io_realm_Sort>` sortOrders)
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmResults <io_realm_RealmResults>` sort (`java.lang.String[] <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldNames, :ref:`io.realm.Sort[] <io_realm_Sort>` sortOrders)
+   _________________________________________________________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    Sorts a collection based on the provided fields and sort orders.
    
@@ -458,6 +519,15 @@ sort
    
    **Throws**
    
+   - `java.lang.IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__ - if a field name does not exist or has an invalid type.
+      
+      
+      
+   - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__ - if the Realm is closed, called on the wrong thread or the collection is an unmanaged collection.
+      
+      
+      
+   
    
    
    
@@ -470,11 +540,14 @@ deleteFromRealm
 
 .. _io_realm_OrderedRealmCollection_deleteFromRealm_int_:
 
-.. admonition:: public **void** deleteFromRealm (**int** location)
+.. example:: 
 
 
-
-
+   
+   public **void** deleteFromRealm (**int** location)
+   __________________________________________________
+   
+   
    
    Deletes the object at the given index from the Realm. This also removes it from the collection.
    
@@ -493,6 +566,21 @@ deleteFromRealm
    
    **Throws**
    
+   - **IndexOutOfBoundsException (?)**- if ``location < 0 || location >= size()`` .
+      
+      
+      
+      
+      
+   - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__ - if the Realm is closed or the method is called from the wrong thread.
+      
+      
+      
+   - **UnsupportedOperationException (?)**- if the collection is unmanaged.
+      
+      
+      
+   
    
    
    
@@ -505,11 +593,14 @@ deleteFirstFromRealm
 
 .. _io_realm_OrderedRealmCollection_deleteFirstFromRealm__:
 
-.. admonition:: public **boolean** deleteFirstFromRealm ()
+.. example:: 
 
 
-
-
+   
+   public **boolean** deleteFirstFromRealm ()
+   __________________________________________
+   
+   
    
    Deletes the first object from the Realm. This also removes it from this collection.
    
@@ -519,6 +610,15 @@ deleteFirstFromRealm
    
    
    **Throws**
+   
+   - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__ - if the Realm is closed or the method is called on the wrong thread.
+      
+      
+      
+   - **UnsupportedOperationException (?)**- if the collection is unmanaged.
+      
+      
+      
    
    
    
@@ -532,11 +632,14 @@ deleteLastFromRealm
 
 .. _io_realm_OrderedRealmCollection_deleteLastFromRealm__:
 
-.. admonition:: public **boolean** deleteLastFromRealm ()
+.. example:: 
 
 
-
-
+   
+   public **boolean** deleteLastFromRealm ()
+   _________________________________________
+   
+   
    
    Deletes the last object from the Realm. This also removes it from this collection.
    
@@ -546,6 +649,15 @@ deleteLastFromRealm
    
    
    **Throws**
+   
+   - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__ - if the Realm is closed or the method is called from the wrong thread.
+      
+      
+      
+   - **UnsupportedOperationException (?)**- if the collection is unmanaged.
+      
+      
+      
    
    
    
@@ -559,11 +671,14 @@ createSnapshot
 
 .. _io_realm_OrderedRealmCollection_createSnapshot__:
 
-.. admonition:: public :ref:`OrderedRealmCollectionSnapshot <io_realm_OrderedRealmCollectionSnapshot>` createSnapshot ()
+.. example:: 
 
 
-
-
+   
+   public :ref:`OrderedRealmCollectionSnapshot <io_realm_OrderedRealmCollectionSnapshot>` createSnapshot ()
+   ________________________________________________________________________________________________________
+   
+   
    
    Creates a snapshot from this :ref:`OrderedRealmCollection <io_realm_OrderedRealmCollection>`.
    
@@ -575,6 +690,15 @@ createSnapshot
    
    
    **Throws**
+   
+   - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__ - if the Realm is closed or the method is called from the wrong thread.
+      
+      
+      
+   - **UnsupportedOperationException (?)**- if the collection is unmanaged.
+      
+      
+      
    
    
    

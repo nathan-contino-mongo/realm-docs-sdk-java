@@ -251,11 +251,14 @@ name
 
 .. _io_realm_RealmConfiguration_Builder_name_String_:
 
-.. admonition:: public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` name (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  filename)
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` name (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  filename)
+   ____________________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    Sets the filename for the Realm file.
    
@@ -275,11 +278,14 @@ directory
 
 .. _io_realm_RealmConfiguration_Builder_directory_File_:
 
-.. admonition:: public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` directory (`File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  directory)
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` directory (`File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  directory)
+   ____________________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    Specifies the directory where the Realm file will be saved. The default value is ``context.getFilesDir()`` . If the directory does not exist, it will be created.
    
@@ -300,6 +306,13 @@ directory
    
    **Throws**
    
+   - **IllegalArgumentException (?)**- if ``directory``  is null, not writable or a file.
+      
+      
+      
+      
+      
+   
    
    
    
@@ -312,11 +325,14 @@ encryptionKey
 
 .. _io_realm_RealmConfiguration_Builder_encryptionKey_byte[]_:
 
-.. admonition:: public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` encryptionKey (**byte[]** key)
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` encryptionKey (**byte[]** key)
+   _____________________________________________________________________________________________________________
+   
+   
    
    Sets the 64 byte key used to encrypt and decrypt the Realm file. Sets the io.realm.Realm#ENCRYPTION_KEY_LENGTH bytes key used to encrypt and decrypt the Realm file.
    
@@ -338,11 +354,14 @@ schemaVersion
 
 .. _io_realm_RealmConfiguration_Builder_schemaVersion_long_:
 
-.. admonition:: public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` schemaVersion (**long** schemaVersion)
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` schemaVersion (**long** schemaVersion)
+   _____________________________________________________________________________________________________________________
+   
+   
    
    Sets the schema version of the Realm. This must be equal to or higher than the schema version of the existing Realm file, if any. If the schema version is higher than the already existing Realm, a migration is needed.If no migration code is provided, Realm will throw a :ref:`io.realm.exceptions.RealmMigrationNeededException <io_realm_exceptions_RealmMigrationNeededException>`.
    
@@ -390,11 +409,14 @@ migration
 
 .. _io_realm_RealmConfiguration_Builder_migration_RealmMigration_:
 
-.. admonition:: public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` migration (:ref:`RealmMigration <io_realm_RealmMigration>` migration)
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` migration (:ref:`RealmMigration <io_realm_RealmMigration>` migration)
+   ____________________________________________________________________________________________________________________________________________________
+   
+   
    
    Sets the :ref:`io.realm.RealmMigration <io_realm_RealmMigration>` to be run if a migration is needed. If this migration fails to upgrade the on-disc schema to the runtime schema, a :ref:`io.realm.exceptions.RealmMigrationNeededException <io_realm_exceptions_RealmMigrationNeededException>` will be thrown.
    
@@ -416,11 +438,14 @@ deleteRealmIfMigrationNeeded
 
 .. _io_realm_RealmConfiguration_Builder_deleteRealmIfMigrationNeeded__:
 
-.. admonition:: public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` deleteRealmIfMigrationNeeded ()
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` deleteRealmIfMigrationNeeded ()
+   ______________________________________________________________________________________________________________
+   
+   
    
    Setting this will change the behavior of how migration exceptions are handled. Instead of throwing a :ref:`io.realm.exceptions.RealmMigrationNeededException <io_realm_exceptions_RealmMigrationNeededException>` the on-disc Realm will be cleared and recreated with the new Realm schema.
    
@@ -439,6 +464,13 @@ deleteRealmIfMigrationNeeded
    
    **Throws**
    
+   - **IllegalStateException (?)**- if configured to use an asset file by calling :ref:`assetFile(String) <io_realm_RealmConfiguration_Builder_assetFile_String_>` previously.
+      
+      
+      
+      
+      
+   
    
    
    
@@ -451,11 +483,14 @@ inMemory
 
 .. _io_realm_RealmConfiguration_Builder_inMemory__:
 
-.. admonition:: public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` inMemory ()
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` inMemory ()
+   __________________________________________________________________________________________
+   
+   
    
    Setting this will create an in-memory Realm instead of saving it to disk. In-memory Realms might still use disk space if memory is running low, but all files created by an in-memory Realm will be deleted when the Realm is closed.Note that because in-memory Realms are not persisted, you must be sure to hold on to at least one non-closed reference to the in-memory Realm object with the specific name as long as you want the data to last.
    
@@ -477,11 +512,14 @@ modules
 
 .. _io_realm_RealmConfiguration_Builder_modules_Object__Object____:
 
-.. admonition:: public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` modules (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  baseModule, `java.lang.Object[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  additionalModules)
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` modules (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  baseModule, `java.lang.Object[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  additionalModules)
+   ______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    Replaces the existing module(s) with one or more :ref:`RealmModule <io_realm_annotations_RealmModule>`s. Using this method will replace the current schema for this Realm with the schema defined by the provided modules.
    
@@ -513,6 +551,13 @@ modules
    
    
    **Throws**
+   
+   - **IllegalArgumentException (?)**- if any of the modules doesn't have the :ref:`RealmModule <io_realm_annotations_RealmModule>` annotation.
+      
+      
+      
+      
+      
    
    
    
@@ -550,11 +595,14 @@ addModule
 
 .. _io_realm_RealmConfiguration_Builder_addModule_Object_:
 
-.. admonition:: public final :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` addModule (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  module)
+.. example:: 
 
 
-
-
+   
+   public final :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` addModule (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  module)
+   _____________________________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    FIXME: Temporary visible DEBUG method. Will add a module unconditionally. Adds a module to already defined modules.
    
@@ -574,11 +622,14 @@ rxFactory
 
 .. _io_realm_RealmConfiguration_Builder_rxFactory_RxObservableFactory_:
 
-.. admonition:: public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` rxFactory (:ref:`RxObservableFactory <io_realm_rx_RxObservableFactory>` factory)
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` rxFactory (:ref:`RxObservableFactory <io_realm_rx_RxObservableFactory>` factory)
+   _______________________________________________________________________________________________________________________________________________________________
+   
+   
    
    Sets the :ref:`RxObservableFactory <io_realm_rx_RxObservableFactory>` used to create Rx Observables from Realm objects. The default factory is :ref:`RealmObservableFactory <io_realm_rx_RealmObservableFactory>`.
    
@@ -608,11 +659,14 @@ flowFactory
 
 .. _io_realm_RealmConfiguration_Builder_flowFactory_FlowFactory_:
 
-.. admonition:: public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` flowFactory (:ref:`FlowFactory <io_realm_coroutines_FlowFactory>` factory)
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` flowFactory (:ref:`FlowFactory <io_realm_coroutines_FlowFactory>` factory)
+   _________________________________________________________________________________________________________________________________________________________
+   
+   
    
    Sets the :ref:`FlowFactory <io_realm_coroutines_FlowFactory>` used to create coroutines Flows from Realm objects. The default factory is :ref:`RealmFlowFactory <io_realm_coroutines_RealmFlowFactory>`.
    
@@ -642,11 +696,14 @@ initialData
 
 .. _io_realm_RealmConfiguration_Builder_initialData_Realm_Transaction_:
 
-.. admonition:: public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` initialData (:ref:`Realm.Transaction <io_realm_Realm_Transaction>` transaction)
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` initialData (:ref:`Realm.Transaction <io_realm_Realm_Transaction>` transaction)
+   ______________________________________________________________________________________________________________________________________________________________
+   
+   
    
    Sets the initial data in :ref:`io.realm.Realm <io_realm_Realm>`. This transaction will be executed only for the first time when database file is created or while migrating the data when :ref:`Builder.deleteRealmIfMigrationNeeded() <io_realm_RealmConfiguration_Builder_deleteRealmIfMigrationNeeded__>` is set.
    
@@ -676,11 +733,14 @@ assetFile
 
 .. _io_realm_RealmConfiguration_Builder_assetFile_String_:
 
-.. admonition:: public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` assetFile (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  assetFile)
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` assetFile (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  assetFile)
+   __________________________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    Copies the Realm file from the given asset file path.When opening the Realm for the first time, instead of creating an empty file, the Realm file will be copied from the provided asset file and used instead.
    
@@ -707,6 +767,13 @@ assetFile
    
    **Throws**
    
+   - **IllegalStateException (?)**- if this is configured to clear its schema by calling :ref:`deleteRealmIfMigrationNeeded() <io_realm_RealmConfiguration_Builder_deleteRealmIfMigrationNeeded__>`.
+      
+      
+      
+      
+      
+   
    
    
    
@@ -719,11 +786,14 @@ readOnly
 
 .. _io_realm_RealmConfiguration_Builder_readOnly__:
 
-.. admonition:: public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` readOnly ()
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` readOnly ()
+   __________________________________________________________________________________________
+   
+   
    
    Setting this will cause the Realm to become read only and all write transactions made against this Realm will fail with an `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__ .
    
@@ -749,11 +819,14 @@ compactOnLaunch
 
 .. _io_realm_RealmConfiguration_Builder_compactOnLaunch__:
 
-.. admonition:: public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` compactOnLaunch ()
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` compactOnLaunch ()
+   _________________________________________________________________________________________________
+   
+   
    
    Setting this will cause Realm to compact the Realm file if the Realm file has grown too large and a significant amount of space can be recovered. See :ref:`DefaultCompactOnLaunchCallback <io_realm_DefaultCompactOnLaunchCallback>` for details.
    
@@ -770,11 +843,14 @@ compactOnLaunch
 
 .. _io_realm_RealmConfiguration_Builder_compactOnLaunch_CompactOnLaunchCallback_:
 
-.. admonition:: public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` compactOnLaunch (:ref:`CompactOnLaunchCallback <io_realm_CompactOnLaunchCallback>` compactOnLaunch)
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` compactOnLaunch (:ref:`CompactOnLaunchCallback <io_realm_CompactOnLaunchCallback>` compactOnLaunch)
+   __________________________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    Sets this to determine if the Realm file should be compacted before returned to the user. It is passed the total file size (data + free space) and the bytes used by data in the file.
    
@@ -802,11 +878,14 @@ maxNumberOfActiveVersions
 
 .. _io_realm_RealmConfiguration_Builder_maxNumberOfActiveVersions_long_:
 
-.. admonition:: public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` maxNumberOfActiveVersions (**long** number)
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` maxNumberOfActiveVersions (**long** number)
+   __________________________________________________________________________________________________________________________
+   
+   
    
    Sets the maximum number of live versions in the Realm file before an `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  is thrown when attempting to write more data.
    
@@ -864,11 +943,14 @@ allowWritesOnUiThread
 
 .. _io_realm_RealmConfiguration_Builder_allowWritesOnUiThread_boolean_:
 
-.. admonition:: public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` allowWritesOnUiThread (**boolean** allowWritesOnUiThread)
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` allowWritesOnUiThread (**boolean** allowWritesOnUiThread)
+   ________________________________________________________________________________________________________________________________________
+   
+   
    
    Sets whether or not calls to **Realm#executeTransaction (?)** are allowed from the UI thread.
    
@@ -894,11 +976,14 @@ allowQueriesOnUiThread
 
 .. _io_realm_RealmConfiguration_Builder_allowQueriesOnUiThread_boolean_:
 
-.. admonition:: public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` allowQueriesOnUiThread (**boolean** allowQueriesOnUiThread)
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` allowQueriesOnUiThread (**boolean** allowQueriesOnUiThread)
+   __________________________________________________________________________________________________________________________________________
+   
+   
    
    Sets whether or not a :ref:`RealmQuery <io_realm_RealmQuery>` can be launched from the UI thread.
    
@@ -924,11 +1009,14 @@ build
 
 .. _io_realm_RealmConfiguration_Builder_build__:
 
-.. admonition:: public :ref:`RealmConfiguration <io_realm_RealmConfiguration>` build ()
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmConfiguration <io_realm_RealmConfiguration>` build ()
+   _______________________________________________________________________
+   
+   
    
    Creates the RealmConfiguration based on the builder parameters.
    

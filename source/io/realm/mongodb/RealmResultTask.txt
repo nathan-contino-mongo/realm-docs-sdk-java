@@ -76,11 +76,14 @@ get
 
 .. _io_realm_mongodb_RealmResultTask_get__:
 
-.. admonition:: public **T (?)** get ()
+.. example:: 
 
 
-
-
+   
+   public **T (?)** get ()
+   _______________________
+   
+   
    
    Blocks the thread on which the call is made until the result of the operation arrives.
    
@@ -100,11 +103,14 @@ getAsync
 
 .. _io_realm_mongodb_RealmResultTask_getAsync_App_Callback_T__:
 
-.. admonition:: public **void** getAsync (:ref:`io.realm.mongodb.App.Callback\<T> <io_realm_mongodb_App_Callback>` callback)
+.. example:: 
 
 
-
-
+   
+   public **void** getAsync (:ref:`io.realm.mongodb.App.Callback\<T> <io_realm_mongodb_App_Callback>` callback)
+   ____________________________________________________________________________________________________________
+   
+   
    
    Provides a way to subscribe to asynchronous operations via a callback, which handles both results and errors.
    
@@ -124,6 +130,13 @@ getAsync
    
    
    **Throws**
+   
+   - **IllegalStateException (?)**- if called from a thread without a **android.os.Looper (?)** or from an **android.app.IntentService (?)** thread.
+      
+      
+      
+      
+      
    
    
    

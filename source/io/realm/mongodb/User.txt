@@ -316,11 +316,14 @@ getId
 
 .. _io_realm_mongodb_User_getId__:
 
-.. admonition:: public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getId ()
+.. example:: 
 
 
-
-
+   
+   public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getId ()
+   _____________________________________________________________________________________________
+   
+   
    
    Returns the server id of the user.
    
@@ -340,11 +343,14 @@ getProfile
 
 .. _io_realm_mongodb_User_getProfile__:
 
-.. admonition:: public :ref:`UserProfile <io_realm_mongodb_UserProfile>` getProfile ()
+.. example:: 
 
 
-
-
+   
+   public :ref:`UserProfile <io_realm_mongodb_UserProfile>` getProfile ()
+   ______________________________________________________________________
+   
+   
    
    Returns the profile for this user.
    
@@ -364,11 +370,14 @@ getIdentities
 
 .. _io_realm_mongodb_User_getIdentities__:
 
-.. admonition:: public `List <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  getIdentities ()
+.. example:: 
 
 
-
-
+   
+   public `List <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  getIdentities ()
+   _________________________________________________________________________________________________
+   
+   
    
    Returns a new list of the user's identities.
    
@@ -412,11 +421,14 @@ getProviderType
 
 .. _io_realm_mongodb_User_getProviderType__:
 
-.. admonition:: public :ref:`Credentials.Provider <io_realm_mongodb_Credentials_Provider>` getProviderType ()
+.. example:: 
 
 
-
-
+   
+   public :ref:`Credentials.Provider <io_realm_mongodb_Credentials_Provider>` getProviderType ()
+   _____________________________________________________________________________________________
+   
+   
    
    Returns the provider type used to log the user
    
@@ -436,11 +448,14 @@ getAccessToken
 
 .. _io_realm_mongodb_User_getAccessToken__:
 
-.. admonition:: public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getAccessToken ()
+.. example:: 
 
 
-
-
+   
+   public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getAccessToken ()
+   ______________________________________________________________________________________________________
+   
+   
    
    Returns the current access token for the user.
    
@@ -460,11 +475,14 @@ getRefreshToken
 
 .. _io_realm_mongodb_User_getRefreshToken__:
 
-.. admonition:: public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getRefreshToken ()
+.. example:: 
 
 
-
-
+   
+   public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getRefreshToken ()
+   _______________________________________________________________________________________________________
+   
+   
    
    Returns the current refresh token for the user.
    
@@ -484,11 +502,14 @@ getDeviceId
 
 .. _io_realm_mongodb_User_getDeviceId__:
 
-.. admonition:: public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getDeviceId ()
+.. example:: 
 
 
-
-
+   
+   public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getDeviceId ()
+   ___________________________________________________________________________________________________
+   
+   
    
    Returns a unique identifier for the device the user logged in to.
    
@@ -508,11 +529,14 @@ getApp
 
 .. _io_realm_mongodb_User_getApp__:
 
-.. admonition:: public :ref:`App <io_realm_mongodb_App>` getApp ()
+.. example:: 
 
 
-
-
+   
+   public :ref:`App <io_realm_mongodb_App>` getApp ()
+   __________________________________________________
+   
+   
    
    Returns the :ref:`App <io_realm_mongodb_App>` this user is associated with.
    
@@ -534,11 +558,14 @@ getState
 
 .. _io_realm_mongodb_User_getState__:
 
-.. admonition:: public :ref:`User.State <io_realm_mongodb_User_State>` getState ()
+.. example:: 
 
 
-
-
+   
+   public :ref:`User.State <io_realm_mongodb_User_State>` getState ()
+   __________________________________________________________________
+   
+   
    
    Returns the :ref:`State <io_realm_mongodb_User_State>` the user is in.
    
@@ -560,11 +587,14 @@ getCustomData
 
 .. _io_realm_mongodb_User_getCustomData__:
 
-.. admonition:: public **Document (?)** getCustomData ()
+.. example:: 
 
 
-
-
+   
+   public **Document (?)** getCustomData ()
+   ________________________________________
+   
+   
    
    Return the custom user data associated with the user in the Realm App.The data is only refreshed when the user's access token is refreshed or when explicitly calling :ref:`refreshCustomData() <io_realm_mongodb_User_refreshCustomData__>`.
    
@@ -588,11 +618,14 @@ refreshCustomData
 
 .. _io_realm_mongodb_User_refreshCustomData__:
 
-.. admonition:: public **Document (?)** refreshCustomData ()
+.. example:: 
 
 
-
-
+   
+   public **Document (?)** refreshCustomData ()
+   ____________________________________________
+   
+   
    
    Re-fetch custom user data from the Realm App.
    
@@ -603,6 +636,11 @@ refreshCustomData
    
    **Throws**
    
+   - **AppException (?)**- if the request failed in some way.
+      
+      
+      
+   
    
    
    
@@ -610,11 +648,14 @@ refreshCustomData
 
 .. _io_realm_mongodb_User_refreshCustomData_App_Callback_Document__:
 
-.. admonition:: public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` refreshCustomData (:ref:`io.realm.mongodb.App.Callback\<Document> <io_realm_mongodb_App_Callback>` callback)
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` refreshCustomData (:ref:`io.realm.mongodb.App.Callback\<Document> <io_realm_mongodb_App_Callback>` callback)
+   ___________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    Re-fetch custom user data from the Realm App asynchronously.This is the asynchronous variant of :ref:`refreshCustomData() <io_realm_mongodb_User_refreshCustomData__>`.
    
@@ -637,6 +678,11 @@ refreshCustomData
    
    **Throws**
    
+   - **IllegalStateException (?)**- if not called on a looper thread.
+      
+      
+      
+   
    
    
    
@@ -649,11 +695,14 @@ isLoggedIn
 
 .. _io_realm_mongodb_User_isLoggedIn__:
 
-.. admonition:: public **boolean** isLoggedIn ()
+.. example:: 
 
 
-
-
+   
+   public **boolean** isLoggedIn ()
+   ________________________________
+   
+   
    
    Returns true if the user is currently logged in. Returns whether or not this user is still logged into the MongoDB Realm App.
    
@@ -673,11 +722,14 @@ linkCredentials
 
 .. _io_realm_mongodb_User_linkCredentials_Credentials_:
 
-.. admonition:: public :ref:`User <io_realm_mongodb_User>` linkCredentials (:ref:`Credentials <io_realm_mongodb_Credentials>` credentials)
+.. example:: 
 
 
-
-
+   
+   public :ref:`User <io_realm_mongodb_User>` linkCredentials (:ref:`Credentials <io_realm_mongodb_Credentials>` credentials)
+   __________________________________________________________________________________________________________________________
+   
+   
    
    Links the current user with a new user identity represented by the given credentials.Linking a user with more credentials, mean the user can login either of these credentials. It also makes it possible to "upgrade" an anonymous user by linking it with e.g. Email/Password credentials.
    
@@ -714,6 +766,11 @@ linkCredentials
    
    **Throws**
    
+   - **IllegalStateException (?)**- if no user is currently logged in.
+      
+      
+      
+   
    
    
    
@@ -726,11 +783,14 @@ linkCredentialsAsync
 
 .. _io_realm_mongodb_User_linkCredentialsAsync_Credentials__App_Callback_User__:
 
-.. admonition:: public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` linkCredentialsAsync (:ref:`Credentials <io_realm_mongodb_Credentials>` credentials, :ref:`io.realm.mongodb.App.Callback\<io.realm.mongodb.User> <io_realm_mongodb_App_Callback>` callback)
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` linkCredentialsAsync (:ref:`Credentials <io_realm_mongodb_Credentials>` credentials, :ref:`io.realm.mongodb.App.Callback\<io.realm.mongodb.User> <io_realm_mongodb_App_Callback>` callback)
+   __________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    Links the current user with a new user identity represented by the given credentials.Linking a user with more credentials, mean the user can login either of these credentials. It also makes it possible to "upgrade" an anonymous user by linking it with e.g. Email/Password credentials.
    
@@ -771,6 +831,11 @@ linkCredentialsAsync
    
    **Throws**
    
+   - **IllegalStateException (?)**- if called from a non-looper thread.
+      
+      
+      
+   
    
    
    
@@ -783,11 +848,14 @@ remove
 
 .. _io_realm_mongodb_User_remove__:
 
-.. admonition:: public :ref:`User <io_realm_mongodb_User>` remove ()
+.. example:: 
 
 
-
-
+   
+   public :ref:`User <io_realm_mongodb_User>` remove ()
+   ____________________________________________________
+   
+   
    
    Calling this will remove the user and any Realms the user has from the device. No data is removed from the server. If the user is logged in when calling this method, the user is logged out before any data is deleted.
    
@@ -797,6 +865,11 @@ remove
    
    
    **Throws**
+   
+   - **AppException (?)**- if an error occurred while trying to remove the user.
+      
+      
+      
    
    
    
@@ -810,11 +883,14 @@ removeAsync
 
 .. _io_realm_mongodb_User_removeAsync_App_Callback_User__:
 
-.. admonition:: public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` removeAsync (:ref:`io.realm.mongodb.App.Callback\<io.realm.mongodb.User> <io_realm_mongodb_App_Callback>` callback)
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` removeAsync (:ref:`io.realm.mongodb.App.Callback\<io.realm.mongodb.User> <io_realm_mongodb_App_Callback>` callback)
+   __________________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    Calling this will asynchronously remove the user and any Realms the user has from the device. No data is removed from the server. If the user is logged in when calling this method, the user is logged out before any data is deleted.
    
@@ -833,6 +909,11 @@ removeAsync
    
    **Throws**
    
+   - **IllegalStateException (?)**- if called from a non-looper thread.
+      
+      
+      
+   
    
    
    
@@ -845,11 +926,14 @@ logOut
 
 .. _io_realm_mongodb_User_logOut__:
 
-.. admonition:: public **void** logOut ()
+.. example:: 
 
 
-
-
+   
+   public **void** logOut ()
+   _________________________
+   
+   
    
    Log the user out of the Realm App. This will unregister them on the device and stop any synchronization to and from the users' Realms. Any Realms owned by the user will not be deleted from the device before :ref:`User.remove() <io_realm_mongodb_User_remove__>` is called.
    
@@ -874,6 +958,11 @@ logOut
    
    **Throws**
    
+   - **AppException (?)**- if an error occurred while trying to log the user out of the Realm App.
+      
+      
+      
+   
    
    
    
@@ -886,11 +975,14 @@ logOutAsync
 
 .. _io_realm_mongodb_User_logOutAsync_App_Callback_User__:
 
-.. admonition:: public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` logOutAsync (:ref:`io.realm.mongodb.App.Callback\<io.realm.mongodb.User> <io_realm_mongodb_App_Callback>` callback)
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` logOutAsync (:ref:`io.realm.mongodb.App.Callback\<io.realm.mongodb.User> <io_realm_mongodb_App_Callback>` callback)
+   __________________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    Log the user out of the Realm App asynchronously. This will unregister them on the device and stop any synchronization to and from the users' Realms. Any Realms owned by the user will not be deleted from the device before :ref:`User.remove() <io_realm_mongodb_User_remove__>` is called.
    
@@ -923,6 +1015,11 @@ logOutAsync
    
    **Throws**
    
+   - **IllegalStateException (?)**- if called from a non-looper thread.
+      
+      
+      
+   
    
    
    
@@ -935,11 +1032,14 @@ getApiKeys
 
 .. _io_realm_mongodb_User_getApiKeys__:
 
-.. admonition:: public synchronized :ref:`ApiKeyAuth <io_realm_mongodb_auth_ApiKeyAuth>` getApiKeys ()
+.. example:: 
 
 
-
-
+   
+   public synchronized :ref:`ApiKeyAuth <io_realm_mongodb_auth_ApiKeyAuth>` getApiKeys ()
+   ______________________________________________________________________________________
+   
+   
    
    Returns a wrapper for managing API keys controlled by the current user.
    
@@ -949,6 +1049,11 @@ getApiKeys
    
    
    **Throws**
+   
+   - **IllegalStateException (?)**- if no user is currently logged in.
+      
+      
+      
    
    
    
@@ -962,11 +1067,14 @@ getFunctions
 
 .. _io_realm_mongodb_User_getFunctions__:
 
-.. admonition:: public synchronized :ref:`Functions <io_realm_mongodb_functions_Functions>` getFunctions ()
+.. example:: 
 
 
-
-
+   
+   public synchronized :ref:`Functions <io_realm_mongodb_functions_Functions>` getFunctions ()
+   ___________________________________________________________________________________________
+   
+   
    
    Returns a *functions* manager for invoking MongoDB Realm Functions.This will use the associated app's default codec registry to encode and decode arguments and results.
    
@@ -1007,11 +1115,14 @@ getFunctions
 
 .. _io_realm_mongodb_User_getFunctions_CodecRegistry_:
 
-.. admonition:: public :ref:`Functions <io_realm_mongodb_functions_Functions>` getFunctions (**CodecRegistry (?)** codecRegistry)
+.. example:: 
 
 
-
-
+   
+   public :ref:`Functions <io_realm_mongodb_functions_Functions>` getFunctions (**CodecRegistry (?)** codecRegistry)
+   _________________________________________________________________________________________________________________
+   
+   
    
    Returns a *functions* manager for invoking Realm Functions with custom codec registry for encoding and decoding arguments and results.
    
@@ -1063,11 +1174,14 @@ getPush
 
 .. _io_realm_mongodb_User_getPush_String_:
 
-.. admonition:: public synchronized :ref:`Push <io_realm_mongodb_push_Push>` getPush (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  serviceName)
+.. example:: 
 
 
-
-
+   
+   public synchronized :ref:`Push <io_realm_mongodb_push_Push>` getPush (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  serviceName)
+   ________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    Returns the :ref:`Push <io_realm_mongodb_push_Push>` instance for managing push notification registrations.
    
@@ -1097,11 +1211,14 @@ getMongoClient
 
 .. _io_realm_mongodb_User_getMongoClient_String_:
 
-.. admonition:: public synchronized :ref:`MongoClient <io_realm_mongodb_mongo_MongoClient>` getMongoClient (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  serviceName)
+.. example:: 
 
 
-
-
+   
+   public synchronized :ref:`MongoClient <io_realm_mongodb_mongo_MongoClient>` getMongoClient (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  serviceName)
+   ______________________________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    Returns a :ref:`MongoClient <io_realm_mongodb_mongo_MongoClient>` instance for accessing documents in the database.
    
@@ -1131,11 +1248,14 @@ equals
 
 .. _io_realm_mongodb_User_equals_Object_:
 
-.. admonition:: public **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
+.. example:: 
 
 
-
-
+   
+   public **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
+   ___________________________________________________________________________________________________________
+   
+   
    
    Two Users are considered equal if they have the same user identity and are associated with the same app.
    
@@ -1155,11 +1275,14 @@ hashCode
 
 .. _io_realm_mongodb_User_hashCode__:
 
-.. admonition:: public **int** hashCode ()
+.. example:: 
 
 
-
-
+   
+   public **int** hashCode ()
+   __________________________
+   
+   
    
    
    

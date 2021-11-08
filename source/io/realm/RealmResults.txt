@@ -411,11 +411,14 @@ where
 
 .. _io_realm_RealmResults_where__:
 
-.. admonition:: public :ref:`RealmQuery <io_realm_RealmQuery>` where ()
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmQuery <io_realm_RealmQuery>` where ()
+   _______________________________________________________
+   
+   
    
    
    
@@ -437,11 +440,14 @@ sort
 
 .. _io_realm_RealmResults_sort_String__Sort__String__Sort_:
 
-.. admonition:: public :ref:`RealmResults <io_realm_RealmResults>` sort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName1, :ref:`Sort <io_realm_Sort>` sortOrder1, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName2, :ref:`Sort <io_realm_Sort>` sortOrder2)
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmResults <io_realm_RealmResults>` sort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName1, :ref:`Sort <io_realm_Sort>` sortOrder1, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName2, :ref:`Sort <io_realm_Sort>` sortOrder2)
+   ____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    
    
@@ -463,11 +469,14 @@ isLoaded
 
 .. _io_realm_RealmResults_isLoaded__:
 
-.. admonition:: public **boolean** isLoaded ()
+.. example:: 
 
 
-
-
+   
+   public **boolean** isLoaded ()
+   ______________________________
+   
+   
    
    Returns ``false``  if the results are not yet loaded, ``true``  if they are loaded.
    
@@ -489,11 +498,14 @@ load
 
 .. _io_realm_RealmResults_load__:
 
-.. admonition:: public **boolean** load ()
+.. example:: 
 
 
-
-
+   
+   public **boolean** load ()
+   __________________________
+   
+   
    
    Makes an asynchronous query blocking. This will also trigger any registered :ref:`RealmChangeListener <io_realm_RealmChangeListener>` when the query completes.
    
@@ -515,11 +527,14 @@ setValue
 
 .. _io_realm_RealmResults_setValue_String__Object_:
 
-.. admonition:: public **void** setValue (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  value)
+.. example:: 
 
 
-
-
+   
+   public **void** setValue (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  value)
+   _______________________________________________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    Updates the field given by ``fieldName``  in all objects inside the query result.
    
@@ -552,6 +567,11 @@ setValue
    
    **Throws**
    
+   - **IllegalArgumentException (?)**- if the field could not be found, could not be updated or the argument didn't match the field type or could not be converted to match the underlying field type.
+      
+      
+      
+   
    
    
    
@@ -564,11 +584,14 @@ setNull
 
 .. _io_realm_RealmResults_setNull_String_:
 
-.. admonition:: public **void** setNull (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+.. example:: 
 
 
-
-
+   
+   public **void** setNull (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   _________________________________________________________________________________________________________________
+   
+   
    
    Sets the value to ``null``  for the given field in all of the objects in the collection.
    
@@ -589,6 +612,17 @@ setNull
    
    **Throws**
    
+   - **IllegalArgumentException (?)**- if field name doesn't exist or is a primary key property.
+      
+      
+      
+   - **IllegalStateException (?)**- if the field cannot hold ``null``  values.
+      
+      
+      
+      
+      
+   
    
    
    
@@ -601,11 +635,14 @@ setBoolean
 
 .. _io_realm_RealmResults_setBoolean_String__boolean_:
 
-.. admonition:: public **void** setBoolean (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **boolean** value)
+.. example:: 
 
 
-
-
+   
+   public **void** setBoolean (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **boolean** value)
+   _______________________________________________________________________________________________________________________________________
+   
+   
    
    Sets the ``boolean``  value of the given field in all of the objects in the collection.
    
@@ -630,6 +667,11 @@ setBoolean
    
    **Throws**
    
+   - **IllegalArgumentException (?)**- if field name doesn't exist, is a primary key property or isn't a boolean field.
+      
+      
+      
+   
    
    
    
@@ -642,11 +684,14 @@ setByte
 
 .. _io_realm_RealmResults_setByte_String__byte_:
 
-.. admonition:: public **void** setByte (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **byte** value)
+.. example:: 
 
 
-
-
+   
+   public **void** setByte (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **byte** value)
+   _________________________________________________________________________________________________________________________________
+   
+   
    
    Sets the ``byte``  value of the given field in all of the objects in the collection.
    
@@ -671,6 +716,11 @@ setByte
    
    **Throws**
    
+   - **IllegalArgumentException (?)**- if field name doesn't exist, is a primary key property or isn't a byte field.
+      
+      
+      
+   
    
    
    
@@ -683,11 +733,14 @@ setShort
 
 .. _io_realm_RealmResults_setShort_String__short_:
 
-.. admonition:: public **void** setShort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **short** value)
+.. example:: 
 
 
-
-
+   
+   public **void** setShort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **short** value)
+   ___________________________________________________________________________________________________________________________________
+   
+   
    
    Sets the ``short``  value of the given field in all of the objects in the collection.
    
@@ -712,6 +765,11 @@ setShort
    
    **Throws**
    
+   - **IllegalArgumentException (?)**- if field name doesn't exist, is a primary key property or isn't a short field.
+      
+      
+      
+   
    
    
    
@@ -724,11 +782,14 @@ setInt
 
 .. _io_realm_RealmResults_setInt_String__int_:
 
-.. admonition:: public **void** setInt (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **int** value)
+.. example:: 
 
 
-
-
+   
+   public **void** setInt (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **int** value)
+   _______________________________________________________________________________________________________________________________
+   
+   
    
    Sets the ``int``  value of the given field in all of the objects in the collection.
    
@@ -753,6 +814,11 @@ setInt
    
    **Throws**
    
+   - **IllegalArgumentException (?)**- if field name doesn't exist, is a primary key property or isn't an integer field.
+      
+      
+      
+   
    
    
    
@@ -765,11 +831,14 @@ setLong
 
 .. _io_realm_RealmResults_setLong_String__long_:
 
-.. admonition:: public **void** setLong (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **long** value)
+.. example:: 
 
 
-
-
+   
+   public **void** setLong (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **long** value)
+   _________________________________________________________________________________________________________________________________
+   
+   
    
    Sets the ``long``  value of the given field in all of the objects in the collection.
    
@@ -794,6 +863,11 @@ setLong
    
    **Throws**
    
+   - **IllegalArgumentException (?)**- if field name doesn't exist, is a primary key property or isn't a long field.
+      
+      
+      
+   
    
    
    
@@ -806,11 +880,14 @@ setFloat
 
 .. _io_realm_RealmResults_setFloat_String__float_:
 
-.. admonition:: public **void** setFloat (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **float** value)
+.. example:: 
 
 
-
-
+   
+   public **void** setFloat (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **float** value)
+   ___________________________________________________________________________________________________________________________________
+   
+   
    
    Sets the ``float``  value of the given field in all of the objects in the collection.
    
@@ -835,6 +912,11 @@ setFloat
    
    **Throws**
    
+   - **IllegalArgumentException (?)**- if field name doesn't exist, is a primary key property or isn't a float field.
+      
+      
+      
+   
    
    
    
@@ -847,11 +929,14 @@ setDouble
 
 .. _io_realm_RealmResults_setDouble_String__double_:
 
-.. admonition:: public **void** setDouble (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **double** value)
+.. example:: 
 
 
-
-
+   
+   public **void** setDouble (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **double** value)
+   _____________________________________________________________________________________________________________________________________
+   
+   
    
    Sets the ``double``  value of the given field in all of the objects in the collection.
    
@@ -876,6 +961,11 @@ setDouble
    
    **Throws**
    
+   - **IllegalArgumentException (?)**- if field name doesn't exist, is a primary key property or isn't a double field.
+      
+      
+      
+   
    
    
    
@@ -888,11 +978,14 @@ setString
 
 .. _io_realm_RealmResults_setString_String__String_:
 
-.. admonition:: public **void** setString (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
+.. example:: 
 
 
-
-
+   
+   public **void** setString (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
+   ________________________________________________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    Sets the ``String``  value of the given field in all of the objects in the collection.
    
@@ -917,6 +1010,11 @@ setString
    
    **Throws**
    
+   - **IllegalArgumentException (?)**- if field name doesn't exist, is a primary key property or isn't a String field.
+      
+      
+      
+   
    
    
    
@@ -929,11 +1027,14 @@ setBlob
 
 .. _io_realm_RealmResults_setBlob_String__byte[]_:
 
-.. admonition:: public **void** setBlob (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **byte[]** value)
+.. example:: 
 
 
-
-
+   
+   public **void** setBlob (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **byte[]** value)
+   ___________________________________________________________________________________________________________________________________
+   
+   
    
    Sets the binary value of the given field in all of the objects in the collection.
    
@@ -956,6 +1057,11 @@ setBlob
    
    **Throws**
    
+   - **IllegalArgumentException (?)**- if field name doesn't exist, is a primary key property or isn't a binary field.
+      
+      
+      
+   
    
    
    
@@ -968,11 +1074,14 @@ setDate
 
 .. _io_realm_RealmResults_setDate_String__Date_:
 
-.. admonition:: public **void** setDate (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  value)
+.. example:: 
 
 
-
-
+   
+   public **void** setDate (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  value)
+   __________________________________________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    Sets the ``Date``  value of the given field in all of the objects in the collection.
    
@@ -997,6 +1106,13 @@ setDate
    
    **Throws**
    
+   - **IllegalArgumentException (?)**- if field name doesn't exist, is a primary key property or isn't a ``Date``  field.
+      
+      
+      
+      
+      
+   
    
    
    
@@ -1009,11 +1125,14 @@ setObject
 
 .. _io_realm_RealmResults_setObject_String__RealmModel_:
 
-.. admonition:: public **void** setObject (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, :ref:`RealmModel <io_realm_RealmModel>` value)
+.. example:: 
 
 
-
-
+   
+   public **void** setObject (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, :ref:`RealmModel <io_realm_RealmModel>` value)
+   __________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    Sets a reference to another object on the given field in all of the objects in the collection.
    
@@ -1036,6 +1155,11 @@ setObject
    
    **Throws**
    
+   - **IllegalArgumentException (?)**- if field name doesn't exist, is a primary key property or isn't an Object reference field.
+      
+      
+      
+   
    
    
    
@@ -1048,11 +1172,14 @@ setDecimal128
 
 .. _io_realm_RealmResults_setDecimal128_String__Decimal128_:
 
-.. admonition:: public **void** setDecimal128 (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **Decimal128 (?)** value)
+.. example:: 
 
 
-
-
+   
+   public **void** setDecimal128 (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **Decimal128 (?)** value)
+   _________________________________________________________________________________________________________________________________________________
+   
+   
    
    Sets the ``Decimal128``  value of the given field in all of the objects in the collection.
    
@@ -1077,6 +1204,13 @@ setDecimal128
    
    **Throws**
    
+   - **IllegalArgumentException (?)**- if field name doesn't exist, is a primary key property or isn't a ``Decimal128``  field.
+      
+      
+      
+      
+      
+   
    
    
    
@@ -1089,11 +1223,14 @@ setObjectId
 
 .. _io_realm_RealmResults_setObjectId_String__ObjectId_:
 
-.. admonition:: public **void** setObjectId (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **ObjectId (?)** value)
+.. example:: 
 
 
-
-
+   
+   public **void** setObjectId (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, **ObjectId (?)** value)
+   _____________________________________________________________________________________________________________________________________________
+   
+   
    
    Sets the ``ObjectId``  value of the given field in all of the objects in the collection.
    
@@ -1118,6 +1255,13 @@ setObjectId
    
    **Throws**
    
+   - **IllegalArgumentException (?)**- if field name doesn't exist, is a primary key property or isn't a ``ObjectId``  field.
+      
+      
+      
+      
+      
+   
    
    
    
@@ -1130,11 +1274,14 @@ setUUID
 
 .. _io_realm_RealmResults_setUUID_String__UUID_:
 
-.. admonition:: public **void** setUUID (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, `UUID <https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html>`__  value)
+.. example:: 
 
 
-
-
+   
+   public **void** setUUID (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, `UUID <https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html>`__  value)
+   __________________________________________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    Sets the ``UUID``  value of the given field in all of the objects in the collection.
    
@@ -1159,6 +1306,13 @@ setUUID
    
    **Throws**
    
+   - **IllegalArgumentException (?)**- if field name doesn't exist, is a primary key property or isn't a ``UUID``  field.
+      
+      
+      
+      
+      
+   
    
    
    
@@ -1171,11 +1325,14 @@ setList
 
 .. _io_realm_RealmResults_setList_String__RealmList_T__:
 
-.. admonition:: public **void** setList <**T (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, :ref:`io.realm.RealmList\<T> <io_realm_RealmList>` list)
+.. example:: 
 
 
-
-
+   
+   public **void** setList <**T (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, :ref:`io.realm.RealmList\<T> <io_realm_RealmList>` list)
+   ______________________________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    Replaces the RealmList at the given field on all objects in this collection.
    
@@ -1198,6 +1355,11 @@ setList
    
    **Throws**
    
+   - **IllegalArgumentException (?)**- if field name doesn't exist, isn't a RealmList field , if the objects in the list are not managed or the type of the objects in the list are wrong.
+      
+      
+      
+   
    
    
    
@@ -1210,11 +1372,14 @@ isFrozen
 
 .. _io_realm_RealmResults_isFrozen__:
 
-.. admonition:: public **boolean** isFrozen ()
+.. example:: 
 
 
-
-
+   
+   public **boolean** isFrozen ()
+   ______________________________
+   
+   
    
    
    
@@ -1236,11 +1401,14 @@ freeze
 
 .. _io_realm_RealmResults_freeze__:
 
-.. admonition:: public :ref:`RealmResults <io_realm_RealmResults>` freeze ()
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmResults <io_realm_RealmResults>` freeze ()
+   ____________________________________________________________
+   
+   
    
    
    
@@ -1262,11 +1430,14 @@ addChangeListener
 
 .. _io_realm_RealmResults_addChangeListener_RealmChangeListener_RealmResults_E___:
 
-.. admonition:: public **void** addChangeListener (:ref:`io.realm.RealmChangeListener\<io.realm.RealmResults\<E>> <io_realm_RealmChangeListener>` listener)
+.. example:: 
 
 
-
-
+   
+   public **void** addChangeListener (:ref:`io.realm.RealmChangeListener\<io.realm.RealmResults\<E>> <io_realm_RealmChangeListener>` listener)
+   ___________________________________________________________________________________________________________________________________________
+   
+   
    
    Adds a change listener to this :ref:`RealmResults <io_realm_RealmResults>`.
    
@@ -1315,6 +1486,19 @@ addChangeListener
    
    **Throws**
    
+   - **IllegalArgumentException (?)**- if the change listener is ``null`` .
+      
+      
+      
+      
+      
+   - **IllegalStateException (?)**- if you try to add a listener from a non-Looper or **android.app.IntentService (?)** thread.
+      
+      
+      
+      
+      
+   
    
    
    
@@ -1322,11 +1506,14 @@ addChangeListener
 
 .. _io_realm_RealmResults_addChangeListener_OrderedRealmCollectionChangeListener_RealmResults_E___:
 
-.. admonition:: public **void** addChangeListener (:ref:`io.realm.OrderedRealmCollectionChangeListener\<io.realm.RealmResults\<E>> <io_realm_OrderedRealmCollectionChangeListener>` listener)
+.. example:: 
 
 
-
-
+   
+   public **void** addChangeListener (:ref:`io.realm.OrderedRealmCollectionChangeListener\<io.realm.RealmResults\<E>> <io_realm_OrderedRealmCollectionChangeListener>` listener)
+   _____________________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    Adds a change listener to this :ref:`RealmResults <io_realm_RealmResults>`.
    
@@ -1375,6 +1562,19 @@ addChangeListener
    
    **Throws**
    
+   - **IllegalArgumentException (?)**- if the change listener is ``null`` .
+      
+      
+      
+      
+      
+   - **IllegalStateException (?)**- if you try to add a listener from a non-Looper or **android.app.IntentService (?)** thread.
+      
+      
+      
+      
+      
+   
    
    
    
@@ -1387,11 +1587,14 @@ removeAllChangeListeners
 
 .. _io_realm_RealmResults_removeAllChangeListeners__:
 
-.. admonition:: public **void** removeAllChangeListeners ()
+.. example:: 
 
 
-
-
+   
+   public **void** removeAllChangeListeners ()
+   ___________________________________________
+   
+   
    
    Removes all user-defined change listeners.
    
@@ -1401,6 +1604,11 @@ removeAllChangeListeners
    
    
    **Throws**
+   
+   - **IllegalStateException (?)**- if you try to remove listeners from a non-Looper Thread.
+      
+      
+      
    
    
    
@@ -1438,11 +1646,14 @@ removeChangeListener
 
 .. _io_realm_RealmResults_removeChangeListener_RealmChangeListener_RealmResults_E___:
 
-.. admonition:: public **void** removeChangeListener (:ref:`io.realm.RealmChangeListener\<io.realm.RealmResults\<E>> <io_realm_RealmChangeListener>` listener)
+.. example:: 
 
 
-
-
+   
+   public **void** removeChangeListener (:ref:`io.realm.RealmChangeListener\<io.realm.RealmResults\<E>> <io_realm_RealmChangeListener>` listener)
+   ______________________________________________________________________________________________________________________________________________
+   
+   
    
    Removes the specified change listener.
    
@@ -1460,6 +1671,17 @@ removeChangeListener
    
    
    **Throws**
+   
+   - **IllegalArgumentException (?)**- if the change listener is ``null`` .
+      
+      
+      
+      
+      
+   - **IllegalStateException (?)**- if you try to remove a listener from a non-Looper Thread.
+      
+      
+      
    
    
    
@@ -1492,11 +1714,14 @@ removeChangeListener
 
 .. _io_realm_RealmResults_removeChangeListener_OrderedRealmCollectionChangeListener_RealmResults_E___:
 
-.. admonition:: public **void** removeChangeListener (:ref:`io.realm.OrderedRealmCollectionChangeListener\<io.realm.RealmResults\<E>> <io_realm_OrderedRealmCollectionChangeListener>` listener)
+.. example:: 
 
 
-
-
+   
+   public **void** removeChangeListener (:ref:`io.realm.OrderedRealmCollectionChangeListener\<io.realm.RealmResults\<E>> <io_realm_OrderedRealmCollectionChangeListener>` listener)
+   ________________________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    Removes the specified change listener.
    
@@ -1514,6 +1739,17 @@ removeChangeListener
    
    
    **Throws**
+   
+   - **IllegalArgumentException (?)**- if the change listener is ``null`` .
+      
+      
+      
+      
+      
+   - **IllegalStateException (?)**- if you try to remove a listener from a non-Looper Thread.
+      
+      
+      
    
    
    
@@ -1551,11 +1787,14 @@ asFlowable
 
 .. _io_realm_RealmResults_asFlowable__:
 
-.. admonition:: public **<any> (?)** asFlowable ()
+.. example:: 
 
 
-
-
+   
+   public **<any> (?)** asFlowable ()
+   __________________________________
+   
+   
    
    Returns an Rx Flowable that monitors changes to this RealmResults. It will emit the current RealmResults when subscribed to. RealmResults will continually be emitted as the RealmResults are updated - ``onComplete``  will never be called.
    
@@ -1607,6 +1846,15 @@ asFlowable
    
    **Throws**
    
+   - **UnsupportedOperationException (?)**- if the required RxJava framework is not on the classpath or the corresponding Realm instance doesn't support RxJava.
+      
+      
+      
+   - **IllegalStateException (?)**- if the Realm wasn't opened on a Looper thread.
+      
+      
+      
+   
    
    
    
@@ -1643,11 +1891,14 @@ asChangesetObservable
 
 .. _io_realm_RealmResults_asChangesetObservable__:
 
-.. admonition:: public **<any> (?)** asChangesetObservable ()
+.. example:: 
 
 
-
-
+   
+   public **<any> (?)** asChangesetObservable ()
+   _____________________________________________
+   
+   
    
    Returns an Rx Observable that monitors changes to this RealmResults. It will emit the current RealmResults when subscribed. For each update to the RealmResult a pair consisting of the RealmResults and the :ref:`OrderedCollectionChangeSet <io_realm_OrderedCollectionChangeSet>` will be sent. The changeset will be ``null``  the first time an RealmResults is emitted.
    
@@ -1685,6 +1936,15 @@ asChangesetObservable
    
    **Throws**
    
+   - **UnsupportedOperationException (?)**- if the required RxJava framework is not on the classpath or the corresponding Realm instance doesn't support RxJava.
+      
+      
+      
+   - **IllegalStateException (?)**- if the Realm wasn't opened on a Looper thread.
+      
+      
+      
+   
    
    
    
@@ -1721,11 +1981,14 @@ asJSON
 
 .. _io_realm_RealmResults_asJSON__:
 
-.. admonition:: public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  asJSON ()
+.. example:: 
 
 
-
-
+   
+   public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  asJSON ()
+   ______________________________________________________________________________________________
+   
+   
    
    Returns a JSON representation of the matches of a :ref:`RealmQuery <io_realm_RealmQuery>`. Cycles will be returned as row indices. This is a helper method used to inspect data, or for debugging purpose, this method could pull a large string which could cause an OutOfMemory error.
    

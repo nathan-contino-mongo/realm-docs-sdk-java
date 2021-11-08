@@ -136,11 +136,14 @@ getOperationType
 
 .. _io_realm_mongodb_mongo_events_BaseChangeEvent_getOperationType__:
 
-.. admonition:: public :ref:`BaseChangeEvent.OperationType <io_realm_mongodb_mongo_events_BaseChangeEvent_OperationType>` getOperationType ()
+.. example:: 
 
 
-
-
+   
+   public :ref:`BaseChangeEvent.OperationType <io_realm_mongodb_mongo_events_BaseChangeEvent_OperationType>` getOperationType ()
+   _____________________________________________________________________________________________________________________________
+   
+   
    
    Returns the operation type of the change that triggered the change event.
    
@@ -160,11 +163,14 @@ getFullDocument
 
 .. _io_realm_mongodb_mongo_events_BaseChangeEvent_getFullDocument__:
 
-.. admonition:: public **DocumentT (?)** getFullDocument ()
+.. example:: 
 
 
-
-
+   
+   public **DocumentT (?)** getFullDocument ()
+   ___________________________________________
+   
+   
    
    The full document at some point after the change has been applied.
    
@@ -184,11 +190,14 @@ getDocumentKey
 
 .. _io_realm_mongodb_mongo_events_BaseChangeEvent_getDocumentKey__:
 
-.. admonition:: public **BsonDocument (?)** getDocumentKey ()
+.. example:: 
 
 
-
-
+   
+   public **BsonDocument (?)** getDocumentKey ()
+   _____________________________________________
+   
+   
    
    The unique identifier for the document that was actually changed.
    
@@ -208,11 +217,14 @@ getUpdateDescription
 
 .. _io_realm_mongodb_mongo_events_BaseChangeEvent_getUpdateDescription__:
 
-.. admonition:: public :ref:`UpdateDescription <io_realm_mongodb_mongo_events_UpdateDescription>` getUpdateDescription ()
+.. example:: 
 
 
-
-
+   
+   public :ref:`UpdateDescription <io_realm_mongodb_mongo_events_UpdateDescription>` getUpdateDescription ()
+   _________________________________________________________________________________________________________
+   
+   
    
    In the case of an update, the description of which fields have been added, removed or updated.
    
@@ -232,11 +244,14 @@ hasUncommittedWrites
 
 .. _io_realm_mongodb_mongo_events_BaseChangeEvent_hasUncommittedWrites__:
 
-.. admonition:: public **boolean** hasUncommittedWrites ()
+.. example:: 
 
 
-
-
+   
+   public **boolean** hasUncommittedWrites ()
+   __________________________________________
+   
+   
    
    Indicates a local change event that has not yet been synchronized with a remote data store. Used only for the sync use case.
    
@@ -256,11 +271,14 @@ toBsonDocument
 
 .. _io_realm_mongodb_mongo_events_BaseChangeEvent_toBsonDocument__:
 
-.. admonition:: public abstract **BsonDocument (?)** toBsonDocument ()
+.. example:: 
 
 
-
-
+   
+   public abstract **BsonDocument (?)** toBsonDocument ()
+   ______________________________________________________
+   
+   
    
    Converts the change event to a BSON representation, as it would look on a MongoDB realm change stream, or a Realm compact watch stream.
    

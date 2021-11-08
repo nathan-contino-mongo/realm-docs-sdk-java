@@ -643,11 +643,14 @@ isValid
 
 .. _io_realm_RealmList_isValid__:
 
-.. admonition:: public **boolean** isValid ()
+.. example:: 
 
 
-
-
+   
+   public **boolean** isValid ()
+   _____________________________
+   
+   
    
    
    
@@ -669,11 +672,14 @@ freeze
 
 .. _io_realm_RealmList_freeze__:
 
-.. admonition:: public :ref:`RealmList <io_realm_RealmList>` freeze ()
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmList <io_realm_RealmList>` freeze ()
+   ______________________________________________________
+   
+   
    
    
    
@@ -695,11 +701,14 @@ isFrozen
 
 .. _io_realm_RealmList_isFrozen__:
 
-.. admonition:: public **boolean** isFrozen ()
+.. example:: 
 
 
-
-
+   
+   public **boolean** isFrozen ()
+   ______________________________
+   
+   
    
    
    
@@ -721,11 +730,14 @@ isManaged
 
 .. _io_realm_RealmList_isManaged__:
 
-.. admonition:: public **boolean** isManaged ()
+.. example:: 
 
 
-
-
+   
+   public **boolean** isManaged ()
+   _______________________________
+   
+   
    
    
    
@@ -747,11 +759,14 @@ add
 
 .. _io_realm_RealmList_add_int__E_:
 
-.. admonition:: public **void** add (**int** location, **E (?)** element)
+.. example:: 
 
 
-
-
+   
+   public **void** add (**int** location, **E (?)** element)
+   _________________________________________________________
+   
+   
    
    Inserts the specified object into this List at the specified location. The object is inserted before any previous element at the specified location. If the location is equal to the size of this List, the object is added at the end.
    
@@ -788,6 +803,17 @@ add
    
    **Throws**
    
+   - **IllegalStateException (?)**- if Realm instance has been closed or container object has been removed.
+      
+      
+      
+   - **IndexOutOfBoundsException (?)**- if ``location < 0 || location > size()`` .
+      
+      
+      
+      
+      
+   
    
    
    
@@ -795,11 +821,14 @@ add
 
 .. _io_realm_RealmList_add_E_:
 
-.. admonition:: public **boolean** add (**E (?)** object)
+.. example:: 
 
 
-
-
+   
+   public **boolean** add (**E (?)** object)
+   _________________________________________
+   
+   
    
    Adds the specified object at the end of this List.
    
@@ -832,6 +861,11 @@ add
    
    **Throws**
    
+   - **IllegalStateException (?)**- if Realm instance has been closed or parent object has been removed.
+      
+      
+      
+   
    
    
    
@@ -844,11 +878,14 @@ set
 
 .. _io_realm_RealmList_set_int__E_:
 
-.. admonition:: public **E (?)** set (**int** location, **E (?)** object)
+.. example:: 
 
 
-
-
+   
+   public **E (?)** set (**int** location, **E (?)** object)
+   _________________________________________________________
+   
+   
    
    Replaces the element at the specified location in this list with the specified object.
    
@@ -885,6 +922,17 @@ set
    
    **Throws**
    
+   - **IllegalStateException (?)**- if Realm instance has been closed or parent object has been removed.
+      
+      
+      
+   - **IndexOutOfBoundsException (?)**- if ``location < 0 || location >= size()`` .
+      
+      
+      
+      
+      
+   
    
    
    
@@ -897,11 +945,14 @@ move
 
 .. _io_realm_RealmList_move_int__int_:
 
-.. admonition:: public **void** move (**int** oldPos, **int** newPos)
+.. example:: 
 
 
-
-
+   
+   public **void** move (**int** oldPos, **int** newPos)
+   _____________________________________________________
+   
+   
    
    Moves an object from one position to another, while maintaining a fixed sized list. RealmObjects will be shifted so no ``null``  values are introduced.
    
@@ -926,6 +977,15 @@ move
    
    **Throws**
    
+   - **IllegalStateException (?)**- if Realm instance has been closed or parent object has been removed.
+      
+      
+      
+   - `java.lang.IndexOutOfBoundsException <https://docs.oracle.com/javase/7/docs/api/java/lang/IndexOutOfBoundsException.html>`__ - if any position is outside [0, size()].
+      
+      
+      
+   
    
    
    
@@ -938,11 +998,14 @@ clear
 
 .. _io_realm_RealmList_clear__:
 
-.. admonition:: public **void** clear ()
+.. example:: 
 
 
-
-
+   
+   public **void** clear ()
+   ________________________
+   
+   
    
    Removes all elements from this list, leaving it empty. This method doesn't remove the objects from the Realm.
    
@@ -952,6 +1015,11 @@ clear
    
    
    **Throws**
+   
+   - **IllegalStateException (?)**- if Realm instance has been closed or parent object has been removed.
+      
+      
+      
    
    
    
@@ -1005,11 +1073,14 @@ remove
 
 .. _io_realm_RealmList_remove_int_:
 
-.. admonition:: public **E (?)** remove (**int** location)
+.. example:: 
 
 
-
-
+   
+   public **E (?)** remove (**int** location)
+   __________________________________________
+   
+   
    
    Removes the object at the specified location from this list.
    
@@ -1028,6 +1099,17 @@ remove
    
    **Throws**
    
+   - **IllegalStateException (?)**- if Realm instance has been closed or parent object has been removed.
+      
+      
+      
+   - **IndexOutOfBoundsException (?)**- if ``location < 0 || location >= size()`` .
+      
+      
+      
+      
+      
+   
    
    
    
@@ -1035,11 +1117,14 @@ remove
 
 .. _io_realm_RealmList_remove_Object_:
 
-.. admonition:: public **boolean** remove (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  object)
+.. example:: 
 
 
-
-
+   
+   public **boolean** remove (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  object)
+   ________________________________________________________________________________________________________________
+   
+   
    
    Removes one instance of the specified object from this ``Collection``  if one is contained. This implementation iterates over this ``Collection``  and tests each element ``e``  returned by the iterator, whether ``e``  is equal to the given object. If ``object != null``  then this test is performed using ``object.equals(e)`` , otherwise using ``object == null`` . If an element equal to the given object is found, then the ``remove``  method is called on the iterator and ``true``  is returned, ``false``  otherwise. If the iterator does not support removing elements, an ``UnsupportedOperationException``  is thrown.
    
@@ -1060,6 +1145,17 @@ remove
    
    **Throws**
    
+   - **ClassCastException (?)**- if the object passed is not of the correct type.
+      
+      
+      
+   - **NullPointerException (?)**- if ``object``  is ``null`` .
+      
+      
+      
+      
+      
+   
    
    
    
@@ -1072,11 +1168,14 @@ removeAll
 
 .. _io_realm_RealmList_removeAll_Collection____:
 
-.. admonition:: public **boolean** removeAll (`java.util.Collection\<?> <https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html>`__  collection)
+.. example:: 
 
 
-
-
+   
+   public **boolean** removeAll (`java.util.Collection\<?> <https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html>`__  collection)
+   _____________________________________________________________________________________________________________________________________________
+   
+   
    
    Removes all occurrences in this ``Collection``  of each object in the specified ``Collection`` . After this method returns none of the elements in the passed ``Collection``  can be found in this ``Collection``  anymore.
    
@@ -1101,6 +1200,19 @@ removeAll
    
    **Throws**
    
+   - **ClassCastException (?)**- if one or more elements of ``collection``  isn't of the correct type.
+      
+      
+      
+      
+      
+   - **NullPointerException (?)**- if ``collection``  is ``null`` .
+      
+      
+      
+      
+      
+   
    
    
    
@@ -1113,11 +1225,14 @@ deleteFirstFromRealm
 
 .. _io_realm_RealmList_deleteFirstFromRealm__:
 
-.. admonition:: public **boolean** deleteFirstFromRealm ()
+.. example:: 
 
 
-
-
+   
+   public **boolean** deleteFirstFromRealm ()
+   __________________________________________
+   
+   
    
    
    
@@ -1139,11 +1254,14 @@ deleteLastFromRealm
 
 .. _io_realm_RealmList_deleteLastFromRealm__:
 
-.. admonition:: public **boolean** deleteLastFromRealm ()
+.. example:: 
 
 
-
-
+   
+   public **boolean** deleteLastFromRealm ()
+   _________________________________________
+   
+   
    
    
    
@@ -1165,11 +1283,14 @@ get
 
 .. _io_realm_RealmList_get_int_:
 
-.. admonition:: public **E (?)** get (**int** location)
+.. example:: 
 
 
-
-
+   
+   public **E (?)** get (**int** location)
+   _______________________________________
+   
+   
    
    Returns the element at the specified location in this list.
    
@@ -1188,6 +1309,17 @@ get
    
    **Throws**
    
+   - **IllegalStateException (?)**- if Realm instance has been closed or parent object has been removed.
+      
+      
+      
+   - **IndexOutOfBoundsException (?)**- if ``location < 0 || location >= size()`` .
+      
+      
+      
+      
+      
+   
    
    
    
@@ -1200,11 +1332,14 @@ first
 
 .. _io_realm_RealmList_first__:
 
-.. admonition:: public **E (?)** first ()
+.. example:: 
 
 
-
-
+   
+   public **E (?)** first ()
+   _________________________
+   
+   
    
    
    
@@ -1221,11 +1356,14 @@ first
 
 .. _io_realm_RealmList_first_E_:
 
-.. admonition:: public **E (?)** first (**E (?)** defaultValue)
+.. example:: 
 
 
-
-
+   
+   public **E (?)** first (**E (?)** defaultValue)
+   _______________________________________________
+   
+   
    
    
    
@@ -1247,11 +1385,14 @@ last
 
 .. _io_realm_RealmList_last__:
 
-.. admonition:: public **E (?)** last ()
+.. example:: 
 
 
-
-
+   
+   public **E (?)** last ()
+   ________________________
+   
+   
    
    
    
@@ -1268,11 +1409,14 @@ last
 
 .. _io_realm_RealmList_last_E_:
 
-.. admonition:: public **E (?)** last (**E (?)** defaultValue)
+.. example:: 
 
 
-
-
+   
+   public **E (?)** last (**E (?)** defaultValue)
+   ______________________________________________
+   
+   
    
    
    
@@ -1294,11 +1438,14 @@ sort
 
 .. _io_realm_RealmList_sort_String_:
 
-.. admonition:: public :ref:`RealmResults <io_realm_RealmResults>` sort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmResults <io_realm_RealmResults>` sort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   _________________________________________________________________________________________________________________________________________________
+   
+   
    
    
    
@@ -1315,11 +1462,14 @@ sort
 
 .. _io_realm_RealmList_sort_String__Sort_:
 
-.. admonition:: public :ref:`RealmResults <io_realm_RealmResults>` sort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, :ref:`Sort <io_realm_Sort>` sortOrder)
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmResults <io_realm_RealmResults>` sort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName, :ref:`Sort <io_realm_Sort>` sortOrder)
+   ________________________________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    
    
@@ -1336,11 +1486,14 @@ sort
 
 .. _io_realm_RealmList_sort_String__Sort__String__Sort_:
 
-.. admonition:: public :ref:`RealmResults <io_realm_RealmResults>` sort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName1, :ref:`Sort <io_realm_Sort>` sortOrder1, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName2, :ref:`Sort <io_realm_Sort>` sortOrder2)
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmResults <io_realm_RealmResults>` sort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName1, :ref:`Sort <io_realm_Sort>` sortOrder1, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName2, :ref:`Sort <io_realm_Sort>` sortOrder2)
+   ____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    
    
@@ -1357,11 +1510,14 @@ sort
 
 .. _io_realm_RealmList_sort_String[]__Sort[]_:
 
-.. admonition:: public :ref:`RealmResults <io_realm_RealmResults>` sort (`java.lang.String[] <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldNames, :ref:`io.realm.Sort[] <io_realm_Sort>` sortOrders)
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmResults <io_realm_RealmResults>` sort (`java.lang.String[] <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldNames, :ref:`io.realm.Sort[] <io_realm_Sort>` sortOrders)
+   _________________________________________________________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    
    
@@ -1383,11 +1539,14 @@ deleteFromRealm
 
 .. _io_realm_RealmList_deleteFromRealm_int_:
 
-.. admonition:: public **void** deleteFromRealm (**int** location)
+.. example:: 
 
 
-
-
+   
+   public **void** deleteFromRealm (**int** location)
+   __________________________________________________
+   
+   
    
    
    
@@ -1409,11 +1568,14 @@ size
 
 .. _io_realm_RealmList_size__:
 
-.. admonition:: public **int** size ()
+.. example:: 
 
 
-
-
+   
+   public **int** size ()
+   ______________________
+   
+   
    
    Returns the number of elements in this ``List`` .
    
@@ -1425,6 +1587,11 @@ size
    
    
    **Throws**
+   
+   - **IllegalStateException (?)**- if Realm instance has been closed or parent object has been removed.
+      
+      
+      
    
    
    
@@ -1438,11 +1605,14 @@ where
 
 .. _io_realm_RealmList_where__:
 
-.. admonition:: public :ref:`RealmQuery <io_realm_RealmQuery>` where ()
+.. example:: 
 
 
-
-
+   
+   public :ref:`RealmQuery <io_realm_RealmQuery>` where ()
+   _______________________________________________________
+   
+   
    
    Returns a RealmQuery, which can be used to query for specific objects of this class.
    
@@ -1452,6 +1622,11 @@ where
    
    
    **Throws**
+   
+   - **IllegalStateException (?)**- if Realm instance has been closed or parent object has been removed.
+      
+      
+      
    
    
    
@@ -1489,11 +1664,14 @@ min
 
 .. _io_realm_RealmList_min_String_:
 
-.. admonition:: public `Number <https://docs.oracle.com/javase/7/docs/api/java/lang/Number.html>`__  min (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+.. example:: 
 
 
-
-
+   
+   public `Number <https://docs.oracle.com/javase/7/docs/api/java/lang/Number.html>`__  min (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   __________________________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    
    
@@ -1515,11 +1693,14 @@ max
 
 .. _io_realm_RealmList_max_String_:
 
-.. admonition:: public `Number <https://docs.oracle.com/javase/7/docs/api/java/lang/Number.html>`__  max (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+.. example:: 
 
 
-
-
+   
+   public `Number <https://docs.oracle.com/javase/7/docs/api/java/lang/Number.html>`__  max (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   __________________________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    
    
@@ -1541,11 +1722,14 @@ sum
 
 .. _io_realm_RealmList_sum_String_:
 
-.. admonition:: public `Number <https://docs.oracle.com/javase/7/docs/api/java/lang/Number.html>`__  sum (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+.. example:: 
 
 
-
-
+   
+   public `Number <https://docs.oracle.com/javase/7/docs/api/java/lang/Number.html>`__  sum (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   __________________________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    
    
@@ -1567,11 +1751,14 @@ average
 
 .. _io_realm_RealmList_average_String_:
 
-.. admonition:: public **double** average (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+.. example:: 
 
 
-
-
+   
+   public **double** average (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   ___________________________________________________________________________________________________________________
+   
+   
    
    
    
@@ -1593,11 +1780,14 @@ maxDate
 
 .. _io_realm_RealmList_maxDate_String_:
 
-.. admonition:: public `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  maxDate (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+.. example:: 
 
 
-
-
+   
+   public `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  maxDate (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   __________________________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    
    
@@ -1619,11 +1809,14 @@ minDate
 
 .. _io_realm_RealmList_minDate_String_:
 
-.. admonition:: public `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  minDate (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+.. example:: 
 
 
-
-
+   
+   public `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  minDate (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   __________________________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    
    
@@ -1645,11 +1838,14 @@ deleteAllFromRealm
 
 .. _io_realm_RealmList_deleteAllFromRealm__:
 
-.. admonition:: public **boolean** deleteAllFromRealm ()
+.. example:: 
 
 
-
-
+   
+   public **boolean** deleteAllFromRealm ()
+   ________________________________________
+   
+   
    
    
    
@@ -1671,11 +1867,14 @@ isLoaded
 
 .. _io_realm_RealmList_isLoaded__:
 
-.. admonition:: public **boolean** isLoaded ()
+.. example:: 
 
 
-
-
+   
+   public **boolean** isLoaded ()
+   ______________________________
+   
+   
    
    
    
@@ -1697,11 +1896,14 @@ load
 
 .. _io_realm_RealmList_load__:
 
-.. admonition:: public **boolean** load ()
+.. example:: 
 
 
-
-
+   
+   public **boolean** load ()
+   __________________________
+   
+   
    
    
    
@@ -1723,11 +1925,14 @@ contains
 
 .. _io_realm_RealmList_contains_Object_:
 
-.. admonition:: public **boolean** contains (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  object)
+.. example:: 
 
 
-
-
+   
+   public **boolean** contains (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  object)
+   __________________________________________________________________________________________________________________
+   
+   
    
    Returns ``true``  if the list contains the specified element when attached to a Realm. This method will query the native Realm underlying storage engine to quickly find the specified element.
    
@@ -1761,11 +1966,14 @@ iterator
 
 .. _io_realm_RealmList_iterator__:
 
-.. admonition:: public `Iterator <https://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html>`__  iterator ()
+.. example:: 
 
 
-
-
+   
+   public `Iterator <https://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html>`__  iterator ()
+   ____________________________________________________________________________________________________
+   
+   
    
    
    
@@ -1787,11 +1995,14 @@ listIterator
 
 .. _io_realm_RealmList_listIterator__:
 
-.. admonition:: public `ListIterator <https://docs.oracle.com/javase/7/docs/api/java/util/ListIterator.html>`__  listIterator ()
+.. example:: 
 
 
-
-
+   
+   public `ListIterator <https://docs.oracle.com/javase/7/docs/api/java/util/ListIterator.html>`__  listIterator ()
+   ________________________________________________________________________________________________________________
+   
+   
    
    
    
@@ -1808,11 +2019,14 @@ listIterator
 
 .. _io_realm_RealmList_listIterator_int_:
 
-.. admonition:: public `ListIterator <https://docs.oracle.com/javase/7/docs/api/java/util/ListIterator.html>`__  listIterator (**int** location)
+.. example:: 
 
 
-
-
+   
+   public `ListIterator <https://docs.oracle.com/javase/7/docs/api/java/util/ListIterator.html>`__  listIterator (**int** location)
+   ________________________________________________________________________________________________________________________________
+   
+   
    
    
    
@@ -1834,11 +2048,14 @@ createSnapshot
 
 .. _io_realm_RealmList_createSnapshot__:
 
-.. admonition:: public :ref:`OrderedRealmCollectionSnapshot <io_realm_OrderedRealmCollectionSnapshot>` createSnapshot ()
+.. example:: 
 
 
-
-
+   
+   public :ref:`OrderedRealmCollectionSnapshot <io_realm_OrderedRealmCollectionSnapshot>` createSnapshot ()
+   ________________________________________________________________________________________________________
+   
+   
    
    
    
@@ -1860,11 +2077,14 @@ getRealm
 
 .. _io_realm_RealmList_getRealm__:
 
-.. admonition:: public :ref:`Realm <io_realm_Realm>` getRealm ()
+.. example:: 
 
 
-
-
+   
+   public :ref:`Realm <io_realm_Realm>` getRealm ()
+   ________________________________________________
+   
+   
    
    Returns the :ref:`Realm <io_realm_Realm>` instance to which this collection belongs.
    
@@ -1881,6 +2101,13 @@ getRealm
    
    **Throws**
    
+   - **IllegalStateException (?)**- if the Realm is an instance of :ref:`DynamicRealm <io_realm_DynamicRealm>` or the :ref:`Realm <io_realm_Realm>` was already closed.
+      
+      
+      
+      
+      
+   
    
    
    
@@ -1893,11 +2120,14 @@ toString
 
 .. _io_realm_RealmList_toString__:
 
-.. admonition:: public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  toString ()
+.. example:: 
 
 
-
-
+   
+   public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  toString ()
+   ________________________________________________________________________________________________
+   
+   
    
    
    
@@ -1917,11 +2147,14 @@ asFlowable
 
 .. _io_realm_RealmList_asFlowable__:
 
-.. admonition:: public **<any> (?)** asFlowable ()
+.. example:: 
 
 
-
-
+   
+   public **<any> (?)** asFlowable ()
+   __________________________________
+   
+   
    
    Returns an Rx Flowable that monitors changes to this RealmList. It will emit the current RealmList when subscribed to. RealmList will continually be emitted as the RealmList is updated - ``onComplete``  will never be called.
    
@@ -1972,6 +2205,11 @@ asFlowable
    
    **Throws**
    
+   - **UnsupportedOperationException (?)**- if the required RxJava framework is not on the classpath or the corresponding Realm instance doesn't support RxJava.
+      
+      
+      
+   
    
    
    
@@ -2008,11 +2246,14 @@ asChangesetObservable
 
 .. _io_realm_RealmList_asChangesetObservable__:
 
-.. admonition:: public **<any> (?)** asChangesetObservable ()
+.. example:: 
 
 
-
-
+   
+   public **<any> (?)** asChangesetObservable ()
+   _____________________________________________
+   
+   
    
    Returns an Rx Observable that monitors changes to this RealmList. It will emit the current RealmList when subscribed. For each update to the RealmList a pair consisting of the RealmList and the :ref:`OrderedCollectionChangeSet <io_realm_OrderedCollectionChangeSet>` will be sent. The changeset will be ``null``  the first time an RealmList is emitted.
    
@@ -2050,6 +2291,15 @@ asChangesetObservable
    
    **Throws**
    
+   - **UnsupportedOperationException (?)**- if the required RxJava framework is not on the classpath or the corresponding Realm instance doesn't support RxJava.
+      
+      
+      
+   - **IllegalStateException (?)**- if the Realm wasn't opened on a Looper thread.
+      
+      
+      
+   
    
    
    
@@ -2086,11 +2336,14 @@ addChangeListener
 
 .. _io_realm_RealmList_addChangeListener_OrderedRealmCollectionChangeListener_RealmList_E___:
 
-.. admonition:: public **void** addChangeListener (:ref:`io.realm.OrderedRealmCollectionChangeListener\<io.realm.RealmList\<E>> <io_realm_OrderedRealmCollectionChangeListener>` listener)
+.. example:: 
 
 
-
-
+   
+   public **void** addChangeListener (:ref:`io.realm.OrderedRealmCollectionChangeListener\<io.realm.RealmList\<E>> <io_realm_OrderedRealmCollectionChangeListener>` listener)
+   __________________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    Adds a change listener to this :ref:`RealmList <io_realm_RealmList>`.
    
@@ -2139,6 +2392,19 @@ addChangeListener
    
    **Throws**
    
+   - **IllegalArgumentException (?)**- if the change listener is ``null`` .
+      
+      
+      
+      
+      
+   - **IllegalStateException (?)**- if you try to add a listener from a non-Looper or **android.app.IntentService (?)** thread.
+      
+      
+      
+      
+      
+   
    
    
    
@@ -2146,11 +2412,14 @@ addChangeListener
 
 .. _io_realm_RealmList_addChangeListener_RealmChangeListener_RealmList_E___:
 
-.. admonition:: public **void** addChangeListener (:ref:`io.realm.RealmChangeListener\<io.realm.RealmList\<E>> <io_realm_RealmChangeListener>` listener)
+.. example:: 
 
 
-
-
+   
+   public **void** addChangeListener (:ref:`io.realm.RealmChangeListener\<io.realm.RealmList\<E>> <io_realm_RealmChangeListener>` listener)
+   ________________________________________________________________________________________________________________________________________
+   
+   
    
    Adds a change listener to this :ref:`RealmList <io_realm_RealmList>`.
    
@@ -2199,6 +2468,19 @@ addChangeListener
    
    **Throws**
    
+   - **IllegalArgumentException (?)**- if the change listener is ``null`` .
+      
+      
+      
+      
+      
+   - **IllegalStateException (?)**- if you try to add a listener from a non-Looper or **android.app.IntentService (?)** thread.
+      
+      
+      
+      
+      
+   
    
    
    
@@ -2211,11 +2493,14 @@ removeChangeListener
 
 .. _io_realm_RealmList_removeChangeListener_OrderedRealmCollectionChangeListener_RealmList_E___:
 
-.. admonition:: public **void** removeChangeListener (:ref:`io.realm.OrderedRealmCollectionChangeListener\<io.realm.RealmList\<E>> <io_realm_OrderedRealmCollectionChangeListener>` listener)
+.. example:: 
 
 
-
-
+   
+   public **void** removeChangeListener (:ref:`io.realm.OrderedRealmCollectionChangeListener\<io.realm.RealmList\<E>> <io_realm_OrderedRealmCollectionChangeListener>` listener)
+   _____________________________________________________________________________________________________________________________________________________________________________
+   
+   
    
    Removes the specified change listener.
    
@@ -2233,6 +2518,17 @@ removeChangeListener
    
    
    **Throws**
+   
+   - **IllegalArgumentException (?)**- if the change listener is ``null`` .
+      
+      
+      
+      
+      
+   - **IllegalStateException (?)**- if you try to remove a listener from a non-Looper Thread.
+      
+      
+      
    
    
    
@@ -2265,11 +2561,14 @@ removeChangeListener
 
 .. _io_realm_RealmList_removeChangeListener_RealmChangeListener_RealmList_E___:
 
-.. admonition:: public **void** removeChangeListener (:ref:`io.realm.RealmChangeListener\<io.realm.RealmList\<E>> <io_realm_RealmChangeListener>` listener)
+.. example:: 
 
 
-
-
+   
+   public **void** removeChangeListener (:ref:`io.realm.RealmChangeListener\<io.realm.RealmList\<E>> <io_realm_RealmChangeListener>` listener)
+   ___________________________________________________________________________________________________________________________________________
+   
+   
    
    Removes the specified change listener.
    
@@ -2287,6 +2586,17 @@ removeChangeListener
    
    
    **Throws**
+   
+   - **IllegalArgumentException (?)**- if the change listener is ``null`` .
+      
+      
+      
+      
+      
+   - **IllegalStateException (?)**- if you try to remove a listener from a non-Looper Thread.
+      
+      
+      
    
    
    
@@ -2324,11 +2634,14 @@ removeAllChangeListeners
 
 .. _io_realm_RealmList_removeAllChangeListeners__:
 
-.. admonition:: public **void** removeAllChangeListeners ()
+.. example:: 
 
 
-
-
+   
+   public **void** removeAllChangeListeners ()
+   ___________________________________________
+   
+   
    
    Removes all user-defined change listeners.
    
@@ -2338,6 +2651,11 @@ removeAllChangeListeners
    
    
    **Throws**
+   
+   - **IllegalStateException (?)**- if you try to remove listeners from a non-Looper Thread.
+      
+      
+      
    
    
    
