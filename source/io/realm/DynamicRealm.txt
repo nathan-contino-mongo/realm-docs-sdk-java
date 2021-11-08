@@ -305,11 +305,11 @@ getInstance
        
        **Throws**
        
-       - **RealmFileException (?)** - if an error happened when accessing the underlying Realm file.
+       - :ref:`RealmFileException <io_realm_exceptions_RealmFileException>` - if an error happened when accessing the underlying Realm file.
           
           
           
-       - **IllegalArgumentException (?)** - if ``configuration``  argument is ``null`` .
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if ``configuration``  argument is ``null`` .
           
           
           
@@ -373,13 +373,13 @@ getInstanceAsync
        
        **Throws**
        
-       - **IllegalArgumentException (?)** - if a null :ref:`RealmConfiguration <io_realm_RealmConfiguration>` or a null :ref:`Callback <io_realm_DynamicRealm_Transaction_Callback>` is provided.
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if a null :ref:`RealmConfiguration <io_realm_RealmConfiguration>` or a null :ref:`Callback <io_realm_DynamicRealm_Transaction_Callback>` is provided.
           
           
           
           
           
-       - **IllegalStateException (?)** - if it is called from a non-Looper or **android.app.IntentService (?)** thread.
+       - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if it is called from a non-Looper or **android.app.IntentService (?)** thread.
           
           
           
@@ -435,7 +435,7 @@ createObject
        
        **Throws**
        
-       - **RealmException (?)** - if the object could not be created.
+       - :ref:`RealmException <io_realm_exceptions_RealmException>` - if the object could not be created.
           
           
           
@@ -466,15 +466,15 @@ createObject
        
        **Throws**
        
-       - **RealmException (?)** - if object could not be created due to the primary key being invalid.
+       - :ref:`RealmException <io_realm_exceptions_RealmException>` - if object could not be created due to the primary key being invalid.
           
           
           
-       - **IllegalStateException (?)** - if the model clazz does not have an primary key defined.
+       - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the model clazz does not have an primary key defined.
           
           
           
-       - **IllegalArgumentException (?)** - if the ``primaryKeyValue``  doesn't have a value that can be converted to the expected value.
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the ``primaryKeyValue``  doesn't have a value that can be converted to the expected value.
           
           
           
@@ -528,7 +528,7 @@ createEmbeddedObject
        
        **Throws**
        
-       - **IllegalArgumentException (?)** - if ``clazz``  is not an embedded class or if the property in the parent class cannot hold objects of the appropriate type.
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if ``clazz``  is not an embedded class or if the property in the parent class cannot hold objects of the appropriate type.
           
           
           
@@ -584,7 +584,7 @@ where
        
        **Throws**
        
-       - **IllegalArgumentException (?)** - if the class doesn't exist.
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the class doesn't exist.
           
           
           
@@ -644,7 +644,7 @@ addChangeListener
        
        **Throws**
        
-       - **IllegalArgumentException (?)** - if the change listener is ``null`` .
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the change listener is ``null`` .
           
           
           
@@ -712,13 +712,13 @@ removeChangeListener
        
        **Throws**
        
-       - **IllegalArgumentException (?)** - if the change listener is ``null`` .
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the change listener is ``null`` .
           
           
           
           
           
-       - **IllegalStateException (?)** - if you try to remove a listener from a non-Looper Thread.
+       - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if you try to remove a listener from a non-Looper Thread.
           
           
           
@@ -764,7 +764,7 @@ removeAllChangeListeners
        
        **Throws**
        
-       - **IllegalStateException (?)** - if you try to remove listeners from a non-Looper Thread.
+       - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if you try to remove listeners from a non-Looper Thread.
           
           
           
@@ -818,7 +818,7 @@ delete
        
        **Throws**
        
-       - **IllegalStateException (?)** - if the Realm is closed or called from an incorrect thread.
+       - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm is closed or called from an incorrect thread.
           
           
           
@@ -868,13 +868,13 @@ executeTransaction
        
        **Throws**
        
-       - **IllegalArgumentException (?)** - if the ``transaction``  is ``null`` .
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the ``transaction``  is ``null`` .
           
           
           
           
           
-       - **RealmException (?)** - if called from the UI thread, unless an explicit opt-in has been declared in :ref:`RealmConfiguration.Builder.allowWritesOnUiThread(boolean) <io_realm_RealmConfiguration_Builder_allowWritesOnUiThread_boolean_>`.
+       - :ref:`RealmException <io_realm_exceptions_RealmException>` - if called from the UI thread, unless an explicit opt-in has been declared in :ref:`RealmConfiguration.Builder.allowWritesOnUiThread(boolean) <io_realm_RealmConfiguration_Builder_allowWritesOnUiThread_boolean_>`.
           
           
           
@@ -922,7 +922,7 @@ executeTransactionAsync
        
        **Throws**
        
-       - **IllegalArgumentException (?)** - if the ``transaction``  is ``null`` , or if the Realm is opened from another thread.
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the ``transaction``  is ``null`` , or if the Realm is opened from another thread.
           
           
           
@@ -969,7 +969,7 @@ executeTransactionAsync
        
        **Throws**
        
-       - **IllegalArgumentException (?)** - if the ``transaction``  is ``null`` , or if the realm is opened from another thread.
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the ``transaction``  is ``null`` , or if the realm is opened from another thread.
           
           
           
@@ -1016,7 +1016,7 @@ executeTransactionAsync
        
        **Throws**
        
-       - **IllegalArgumentException (?)** - if the ``transaction``  is ``null`` , or if the realm is opened from another thread.
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the ``transaction``  is ``null`` , or if the realm is opened from another thread.
           
           
           
@@ -1067,7 +1067,7 @@ executeTransactionAsync
        
        **Throws**
        
-       - **IllegalArgumentException (?)** - if the ``transaction``  is ``null`` , or if the realm is opened from another thread.
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the ``transaction``  is ``null`` , or if the realm is opened from another thread.
           
           
           
