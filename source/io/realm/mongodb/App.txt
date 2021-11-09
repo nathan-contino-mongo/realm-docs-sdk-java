@@ -221,11 +221,7 @@ Method Summary
    
    * - 
        public :ref:`User <io_realm_mongodb_User>` 
-     - :ref:`currentUser <io_realm_mongodb_App_currentUser__>`  (
-        |	
-        |		
-        |			
-        |				)
+     - :ref:`currentUser <io_realm_mongodb_App_currentUser__>`  ()
        
        Returns the current user that is logged in and still valid.
        
@@ -234,11 +230,7 @@ Method Summary
    
    * - 
        public `Map <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__ 
-     - :ref:`allUsers <io_realm_mongodb_App_allUsers__>`  (
-        |	
-        |		
-        |			
-        |				)
+     - :ref:`allUsers <io_realm_mongodb_App_allUsers__>`  ()
        
        Returns all known users that are either :ref:`User.State.LOGGED_IN <io_realm_mongodb_User_State_LOGGED_IN>`  or :ref:`User.State.LOGGED_OUT <io_realm_mongodb_User_State_LOGGED_OUT>` .
        
@@ -249,11 +241,7 @@ Method Summary
    
    * - 
        public :ref:`User <io_realm_mongodb_User>` 
-     - :ref:`switchUser <io_realm_mongodb_App_switchUser_User_>`  (
-        |	
-        |		
-        |			
-        |				:ref:`User <io_realm_mongodb_User>`  user)
+     - :ref:`switchUser <io_realm_mongodb_App_switchUser_User_>`  (:ref:`User <io_realm_mongodb_User>`  user)
        
        Switch current user.
        
@@ -262,11 +250,7 @@ Method Summary
    
    * - 
        public :ref:`User <io_realm_mongodb_User>` 
-     - :ref:`removeUser <io_realm_mongodb_App_removeUser_User_>`  (
-        |	
-        |		
-        |			
-        |				:ref:`User <io_realm_mongodb_User>`  user)
+     - :ref:`removeUser <io_realm_mongodb_App_removeUser_User_>`  (:ref:`User <io_realm_mongodb_User>`  user)
        
        Removes a users credentials from this device.
        
@@ -275,11 +259,7 @@ Method Summary
    
    * - 
        public :ref:`User <io_realm_mongodb_User>` 
-     - :ref:`login <io_realm_mongodb_App_login_Credentials_>`  (
-        |	
-        |		
-        |			
-        |				:ref:`Credentials <io_realm_mongodb_Credentials>`  credentials)
+     - :ref:`login <io_realm_mongodb_App_login_Credentials_>`  (:ref:`Credentials <io_realm_mongodb_Credentials>`  credentials)
        
        Logs in as a user with the given credentials associated with an authentication provider.
        
@@ -288,13 +268,8 @@ Method Summary
    
    * - 
        public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` 
-     - :ref:`loginAsync <io_realm_mongodb_App_loginAsync_Credentials__App_Callback_User__>`  (
-        |					
-        |	
-        |		
-        |			
-        |				:ref:`Credentials <io_realm_mongodb_Credentials>`  credentials,
-        |					:ref:`io.realm.mongodb.App.Callback\<io.realm.mongodb.User> <io_realm_mongodb_App_Callback>`  callback)
+     - :ref:`loginAsync <io_realm_mongodb_App_loginAsync_Credentials__App_Callback_User__>`  (:ref:`Credentials <io_realm_mongodb_Credentials>`  credentials,
+        | ``+                               +`` :ref:`io.realm.mongodb.App.Callback\<io.realm.mongodb.User> <io_realm_mongodb_App_Callback>`  callback)
        
        Logs in as a user with the given credentials associated with an authentication provider.
        
@@ -303,11 +278,7 @@ Method Summary
    
    * - 
        public :ref:`EmailPasswordAuth <io_realm_mongodb_auth_EmailPasswordAuth>` 
-     - :ref:`getEmailPassword <io_realm_mongodb_App_getEmailPassword__>`  (
-        |	
-        |		
-        |			
-        |				)
+     - :ref:`getEmailPassword <io_realm_mongodb_App_getEmailPassword__>`  ()
        
        Returns a wrapper for interacting with functionality related to users either being created or logged in using the :ref:`Credentials.Provider.EMAIL_PASSWORD <io_realm_mongodb_Credentials_Provider_EMAIL_PASSWORD>`  identity provider.
        
@@ -318,11 +289,7 @@ Method Summary
    
    * - 
        public **void**
-     - :ref:`addAuthenticationListener <io_realm_mongodb_App_addAuthenticationListener_AuthenticationListener_>`  (
-        |	
-        |		
-        |			
-        |				:ref:`AuthenticationListener <io_realm_mongodb_AuthenticationListener>`  listener)
+     - :ref:`addAuthenticationListener <io_realm_mongodb_App_addAuthenticationListener_AuthenticationListener_>`  (:ref:`AuthenticationListener <io_realm_mongodb_AuthenticationListener>`  listener)
        
        Sets a global authentication listener that will be notified about User events like login and logout.
        
@@ -331,11 +298,7 @@ Method Summary
    
    * - 
        public **void**
-     - :ref:`removeAuthenticationListener <io_realm_mongodb_App_removeAuthenticationListener_AuthenticationListener_>`  (
-        |	
-        |		
-        |			
-        |				:ref:`AuthenticationListener <io_realm_mongodb_AuthenticationListener>`  listener)
+     - :ref:`removeAuthenticationListener <io_realm_mongodb_App_removeAuthenticationListener_AuthenticationListener_>`  (:ref:`AuthenticationListener <io_realm_mongodb_AuthenticationListener>`  listener)
        
        Removes the provided global authentication listener.
        
@@ -344,11 +307,7 @@ Method Summary
    
    * - 
        public :ref:`Sync <io_realm_mongodb_sync_Sync>` 
-     - :ref:`getSync <io_realm_mongodb_App_getSync__>`  (
-        |	
-        |		
-        |			
-        |				)
+     - :ref:`getSync <io_realm_mongodb_App_getSync__>`  ()
        
        Returns the *Sync* instance managing the ongoing *Realm Sync* sessions synchronizing data between the local and the remote *Realm App* associated with this app.
        
@@ -357,11 +316,7 @@ Method Summary
    
    * - 
        public :ref:`Functions <io_realm_mongodb_functions_Functions>` 
-     - :ref:`getFunctions <io_realm_mongodb_App_getFunctions_User_>`  (
-        |	
-        |		
-        |			
-        |				:ref:`User <io_realm_mongodb_User>`  user)
+     - :ref:`getFunctions <io_realm_mongodb_App_getFunctions_User_>`  (:ref:`User <io_realm_mongodb_User>`  user)
        
        Returns a *Functions* manager for invoking the Realm App's Realm Functions.
        
@@ -370,13 +325,8 @@ Method Summary
    
    * - 
        public :ref:`Functions <io_realm_mongodb_functions_Functions>` 
-     - :ref:`getFunctions <io_realm_mongodb_App_getFunctions_User__CodecRegistry_>`  (
-        |					
-        |	
-        |		
-        |			
-        |				:ref:`User <io_realm_mongodb_User>`  user,
-        |					**CodecRegistry (?)** codecRegistry)
+     - :ref:`getFunctions <io_realm_mongodb_App_getFunctions_User__CodecRegistry_>`  (:ref:`User <io_realm_mongodb_User>`  user,
+        | ``+                            +`` **CodecRegistry (?)** codecRegistry)
        
        Returns a *Functions* manager for invoking the Realm App's Realm Functions with a custom codec registry for encoding and decoding arguments and results.
        
@@ -385,11 +335,7 @@ Method Summary
    
    * - 
        public :ref:`AppConfiguration <io_realm_mongodb_AppConfiguration>` 
-     - :ref:`getConfiguration <io_realm_mongodb_App_getConfiguration__>`  (
-        |	
-        |		
-        |			
-        |				)
+     - :ref:`getConfiguration <io_realm_mongodb_App_getConfiguration__>`  ()
        
        Returns the configuration object for this app.
        
@@ -398,11 +344,7 @@ Method Summary
    
    * - 
        protected **void**
-     - :ref:`setNetworkTransport <io_realm_mongodb_App_setNetworkTransport_OsJavaNetworkTransport_>`  (
-        |	
-        |		
-        |			
-        |				**OsJavaNetworkTransport (?)** transport)
+     - :ref:`setNetworkTransport <io_realm_mongodb_App_setNetworkTransport_OsJavaNetworkTransport_>`  (**OsJavaNetworkTransport (?)** transport)
        
        Exposed for testing.
        
@@ -411,11 +353,7 @@ Method Summary
    
    * - 
        public **boolean**
-     - :ref:`equals <io_realm_mongodb_App_equals_Object_>`  (
-        |	
-        |		
-        |			
-        |				`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
+     - :ref:`equals <io_realm_mongodb_App_equals_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
        
        Two Apps are considered equal and will share their underlying state if they both refer to the same :ref:`AppConfiguration.getAppId() <io_realm_mongodb_AppConfiguration_getAppId__>` .
        
@@ -426,11 +364,7 @@ Method Summary
    
    * - 
        public **int**
-     - :ref:`hashCode <io_realm_mongodb_App_hashCode__>`  (
-        |	
-        |		
-        |			
-        |				)
+     - :ref:`hashCode <io_realm_mongodb_App_hashCode__>`  ()
        
        
        
@@ -484,11 +418,7 @@ currentUser
 .. list-table::
    :header-rows: 1
    
-   * - public :ref:`User <io_realm_mongodb_User>`  currentUser (
-        |	
-        |		
-        |			
-        |				)
+   * - public :ref:`User <io_realm_mongodb_User>`  currentUser ()
        
        
    
@@ -522,11 +452,7 @@ allUsers
 .. list-table::
    :header-rows: 1
    
-   * - public `Map <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  allUsers (
-        |	
-        |		
-        |			
-        |				)
+   * - public `Map <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  allUsers ()
        
        
    
@@ -560,11 +486,7 @@ switchUser
 .. list-table::
    :header-rows: 1
    
-   * - public :ref:`User <io_realm_mongodb_User>`  switchUser (
-        |	
-        |		
-        |			
-        |				:ref:`User <io_realm_mongodb_User>`  user)
+   * - public :ref:`User <io_realm_mongodb_User>`  switchUser (:ref:`User <io_realm_mongodb_User>`  user)
        
        
    
@@ -616,11 +538,7 @@ removeUser
 .. list-table::
    :header-rows: 1
    
-   * - public :ref:`User <io_realm_mongodb_User>`  removeUser (
-        |	
-        |		
-        |			
-        |				:ref:`User <io_realm_mongodb_User>`  user)
+   * - public :ref:`User <io_realm_mongodb_User>`  removeUser (:ref:`User <io_realm_mongodb_User>`  user)
        
        
    
@@ -666,11 +584,7 @@ login
 .. list-table::
    :header-rows: 1
    
-   * - public :ref:`User <io_realm_mongodb_User>`  login (
-        |	
-        |		
-        |			
-        |				:ref:`Credentials <io_realm_mongodb_Credentials>`  credentials)
+   * - public :ref:`User <io_realm_mongodb_User>`  login (:ref:`Credentials <io_realm_mongodb_Credentials>`  credentials)
        
        
    
@@ -726,13 +640,8 @@ loginAsync
 .. list-table::
    :header-rows: 1
    
-   * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`  loginAsync (
-        |					
-        |	
-        |		
-        |			
-        |				:ref:`Credentials <io_realm_mongodb_Credentials>`  credentials,
-        |					:ref:`io.realm.mongodb.App.Callback\<io.realm.mongodb.User> <io_realm_mongodb_App_Callback>`  callback)
+   * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`  loginAsync (:ref:`Credentials <io_realm_mongodb_Credentials>`  credentials,
+        | ``+                               +`` :ref:`io.realm.mongodb.App.Callback\<io.realm.mongodb.User> <io_realm_mongodb_App_Callback>`  callback)
        
        
    
@@ -792,11 +701,7 @@ getEmailPassword
 .. list-table::
    :header-rows: 1
    
-   * - public :ref:`EmailPasswordAuth <io_realm_mongodb_auth_EmailPasswordAuth>`  getEmailPassword (
-        |	
-        |		
-        |			
-        |				)
+   * - public :ref:`EmailPasswordAuth <io_realm_mongodb_auth_EmailPasswordAuth>`  getEmailPassword ()
        
        
    
@@ -828,11 +733,7 @@ addAuthenticationListener
 .. list-table::
    :header-rows: 1
    
-   * - public **void** addAuthenticationListener (
-        |	
-        |		
-        |			
-        |				:ref:`AuthenticationListener <io_realm_mongodb_AuthenticationListener>`  listener)
+   * - public **void** addAuthenticationListener (:ref:`AuthenticationListener <io_realm_mongodb_AuthenticationListener>`  listener)
        
        
    
@@ -882,11 +783,7 @@ removeAuthenticationListener
 .. list-table::
    :header-rows: 1
    
-   * - public **void** removeAuthenticationListener (
-        |	
-        |		
-        |			
-        |				:ref:`AuthenticationListener <io_realm_mongodb_AuthenticationListener>`  listener)
+   * - public **void** removeAuthenticationListener (:ref:`AuthenticationListener <io_realm_mongodb_AuthenticationListener>`  listener)
        
        
    
@@ -924,11 +821,7 @@ getSync
 .. list-table::
    :header-rows: 1
    
-   * - public :ref:`Sync <io_realm_mongodb_sync_Sync>`  getSync (
-        |	
-        |		
-        |			
-        |				)
+   * - public :ref:`Sync <io_realm_mongodb_sync_Sync>`  getSync ()
        
        
    
@@ -958,11 +851,7 @@ getFunctions
 .. list-table::
    :header-rows: 1
    
-   * - public :ref:`Functions <io_realm_mongodb_functions_Functions>`  getFunctions (
-        |	
-        |		
-        |			
-        |				:ref:`User <io_realm_mongodb_User>`  user)
+   * - public :ref:`Functions <io_realm_mongodb_functions_Functions>`  getFunctions (:ref:`User <io_realm_mongodb_User>`  user)
        
        
    
@@ -1005,13 +894,8 @@ getFunctions
 .. list-table::
    :header-rows: 1
    
-   * - public :ref:`Functions <io_realm_mongodb_functions_Functions>`  getFunctions (
-        |					
-        |	
-        |		
-        |			
-        |				:ref:`User <io_realm_mongodb_User>`  user,
-        |					**CodecRegistry (?)** codecRegistry)
+   * - public :ref:`Functions <io_realm_mongodb_functions_Functions>`  getFunctions (:ref:`User <io_realm_mongodb_User>`  user,
+        | ``+                            +`` **CodecRegistry (?)** codecRegistry)
        
        
    
@@ -1053,11 +937,7 @@ getConfiguration
 .. list-table::
    :header-rows: 1
    
-   * - public :ref:`AppConfiguration <io_realm_mongodb_AppConfiguration>`  getConfiguration (
-        |	
-        |		
-        |			
-        |				)
+   * - public :ref:`AppConfiguration <io_realm_mongodb_AppConfiguration>`  getConfiguration ()
        
        
    
@@ -1087,11 +967,7 @@ setNetworkTransport
 .. list-table::
    :header-rows: 1
    
-   * - protected **void** setNetworkTransport (
-        |	
-        |		
-        |			
-        |				**OsJavaNetworkTransport (?)** transport)
+   * - protected **void** setNetworkTransport (**OsJavaNetworkTransport (?)** transport)
        
        
    
@@ -1123,11 +999,7 @@ equals
 .. list-table::
    :header-rows: 1
    
-   * - public **boolean** equals (
-        |	
-        |		
-        |			
-        |				`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
+   * - public **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
        
        
    
@@ -1159,11 +1031,7 @@ hashCode
 .. list-table::
    :header-rows: 1
    
-   * - public **int** hashCode (
-        |	
-        |		
-        |			
-        |				)
+   * - public **int** hashCode ()
        
        
    
