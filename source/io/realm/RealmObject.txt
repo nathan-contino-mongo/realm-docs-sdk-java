@@ -290,6 +290,7 @@ Method Summary
    
    * - public static **void**
      - :ref:`addChangeListener <io_realm_RealmObject_addChangeListener_E__RealmObjectChangeListener_E__>` <**E (?)** >(**E (?)** object,
+       
                                           :ref:`io.realm.RealmObjectChangeListener\<E> <io_realm_RealmObjectChangeListener>` listener)
        
        Adds a change listener to a RealmObject to get detailed information about the changes.
@@ -299,6 +300,7 @@ Method Summary
    
    * - public static **void**
      - :ref:`addChangeListener <io_realm_RealmObject_addChangeListener_E__RealmChangeListener_E__>` <**E (?)** >(**E (?)** object,
+       
                                           :ref:`io.realm.RealmChangeListener\<E> <io_realm_RealmChangeListener>` listener)
        
        Adds a change listener to a RealmObject that will be triggered if any value field or referenced RealmObject field is changed, or the RealmList field itself is changed.
@@ -324,6 +326,7 @@ Method Summary
    
    * - public static **void**
      - :ref:`removeChangeListener <io_realm_RealmObject_removeChangeListener_E__RealmObjectChangeListener_>` <**E (?)** >(**E (?)** object,
+       
                                              :ref:`io.realm.RealmObjectChangeListener <io_realm_RealmObjectChangeListener>` listener)
        
        Removes a previously registered listener on the given RealmObject.
@@ -333,6 +336,7 @@ Method Summary
    
    * - public static **void**
      - :ref:`removeChangeListener <io_realm_RealmObject_removeChangeListener_E__RealmChangeListener_E__>` <**E (?)** >(**E (?)** object,
+       
                                              :ref:`io.realm.RealmChangeListener\<E> <io_realm_RealmChangeListener>` listener)
        
        Removes a previously registered listener on the given RealmObject.
@@ -433,6 +437,8 @@ deleteFromRealm
        
        
        
+       
+       
        **Throws**
        
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the corresponding Realm is closed or in an incorrect thread.
@@ -470,6 +476,8 @@ deleteFromRealm
        
    
    * - Deletes the object from the Realm it is currently associated with.After this method is called the object will be invalid and any operation (read or write) performed on it will fail with an IllegalStateException.
+       
+       
        
        
        
@@ -547,6 +555,8 @@ isValid
        
        
        
+       
+       
        .. seealso::
        
        
@@ -575,6 +585,8 @@ isValid
        
    
    * - Checks if the RealmObject is still valid to use i.e., the RealmObject hasn't been deleted nor has the :ref:`io.realm.Realm <io_realm_Realm>` been closed. It will always return ``true``  for unmanaged objects.
+       
+       
        
        
        
@@ -621,6 +633,8 @@ isFrozen
        
        
        
+       
+       
        .. seealso::
        
        
@@ -648,6 +662,8 @@ isFrozen
        
    
    * - Returns whether or not this RealmObject is frozen.
+       
+       
        
        
        
@@ -706,6 +722,8 @@ freeze
        
        
        
+       
+       
        **Throws**
        
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if this method is called from inside a write transaction.
@@ -739,6 +757,8 @@ freeze
        
        
        Note: Keeping a large number of frozen objects with different versions alive can have a negative impact on the filesize of the Realm. In order to avoid such a situation it is possible to set :ref:`RealmConfiguration.Builder.maxNumberOfActiveVersions(long) <io_realm_RealmConfiguration_Builder_maxNumberOfActiveVersions_long_>`.
+       
+       
        
        
        
@@ -824,6 +844,8 @@ isLoaded
        
        
        
+       
+       
        .. seealso::
        
        
@@ -884,6 +906,8 @@ isLoaded
         
        
        Synchronous RealmObjects are by definition blocking hence this method will always return ``true``  for them. This method will return ``true``  if called on an unmanaged object (created outside of Realm).
+       
+       
        
        
        
@@ -955,6 +979,8 @@ isManaged
        
        
        
+       
+       
    
    
 .. _io_realm_RealmObject_isManaged_E_:
@@ -975,6 +1001,8 @@ isManaged
        
        
        It is possible to create a managed object from an unmanaged object by using **Realm.copyToRealm(RealmModel, ImportFlag...) (?)**. An unmanaged object can be created from a managed object by using **Realm.copyFromRealm(RealmModel) (?)**.
+       
+       
        
        
        
@@ -1019,6 +1047,8 @@ getRealm
        
        
        
+       
+       
        **Throws**
        
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if this object is an instance of :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>` or this object was already deleted or the corresponding :ref:`Realm <io_realm_Realm>` was already closed.
@@ -1048,6 +1078,8 @@ getRealm
    * - returns :ref:`Realm <io_realm_Realm>` instance where the ``model``  belongs.
        
        You **must not** call **Realm.close() (?)** against returned instance.
+       
+       
        
        
        
@@ -1119,6 +1151,8 @@ load
        
        
        
+       
+       
    
    
 .. _io_realm_RealmObject_load_E_:
@@ -1133,6 +1167,8 @@ load
        
    
    * - Makes an asynchronous query blocking. This will also trigger any registered listeners.Note: This will return ``true``  if called for an unmanaged object (created outside of Realm).
+       
+       
        
        
        
@@ -1199,6 +1235,8 @@ addChangeListener
        
        
         
+       
+       
        
        
        
@@ -1282,6 +1320,8 @@ addChangeListener
        
        
        
+       
+       
        **Parameters**
        
        - ``listener`` - the change listener to be notified.
@@ -1327,6 +1367,7 @@ addChangeListener
    :header-rows: 1
    
    * - public static **void** addChangeListener <**E (?)** >(**E (?)** object,
+       
                                           :ref:`io.realm.RealmObjectChangeListener\<E> <io_realm_RealmObjectChangeListener>` listener)
        
        
@@ -1358,6 +1399,8 @@ addChangeListener
        
        
         
+       
+       
        
        
        
@@ -1411,6 +1454,7 @@ addChangeListener
    :header-rows: 1
    
    * - public static **void** addChangeListener <**E (?)** >(**E (?)** object,
+       
                                           :ref:`io.realm.RealmChangeListener\<E> <io_realm_RealmChangeListener>` listener)
        
        
@@ -1442,6 +1486,8 @@ addChangeListener
        
        
         
+       
+       
        
        
        
@@ -1506,6 +1552,8 @@ removeChangeListener
    * - Removes a previously registered listener.
        
        
+       
+       
        **Parameters**
        
        - ``listener`` - the instance to be removed.
@@ -1551,6 +1599,8 @@ removeChangeListener
    * - Removes a previously registered listener.
        
        
+       
+       
        **Parameters**
        
        - ``listener`` - the instance to be removed.
@@ -1590,11 +1640,14 @@ removeChangeListener
    :header-rows: 1
    
    * - public static **void** removeChangeListener <**E (?)** >(**E (?)** object,
+       
                                              :ref:`io.realm.RealmObjectChangeListener <io_realm_RealmObjectChangeListener>` listener)
        
        
    
    * - Removes a previously registered listener on the given RealmObject.
+       
+       
        
        
        **Parameters**
@@ -1644,11 +1697,14 @@ removeChangeListener
    :header-rows: 1
    
    * - public static **void** removeChangeListener <**E (?)** >(**E (?)** object,
+       
                                              :ref:`io.realm.RealmChangeListener\<E> <io_realm_RealmChangeListener>` listener)
        
        
    
    * - Removes a previously registered listener on the given RealmObject.
+       
+       
        
        
        **Parameters**
@@ -1716,6 +1772,8 @@ removeAllChangeListeners
        
        
        
+       
+       
    
    
 .. _io_realm_RealmObject_removeAllChangeListeners_E_:
@@ -1730,6 +1788,8 @@ removeAllChangeListeners
        
    
    * - Removes all registered listeners from the given RealmObject.
+       
+       
        
        
        **Parameters**
@@ -1819,6 +1879,8 @@ asFlowable
        
        
         
+       
+       
        
        
        **Type Parameters**
@@ -1924,6 +1986,8 @@ asFlowable
        
        
        
+       
+       
        **Parameters**
        
        - ``object`` - RealmObject class that is being observed. Must be this class or its super types.
@@ -2016,6 +2080,8 @@ asChangesetObservable
        
        
        
+       
+       
        **Throws**
        
        - `UnsupportedOperationException <https://docs.oracle.com/javase/7/docs/api/java/lang/UnsupportedOperationException.html>`__  - if the required RxJava framework is not on the classpath or the corresponding Realm instance doesn't support RxJava.
@@ -2079,6 +2145,8 @@ asChangesetObservable
            .observeOn(AndroidSchedulers.mainThread())
            .subscribe( ... );
            
+       
+       
        
        
        

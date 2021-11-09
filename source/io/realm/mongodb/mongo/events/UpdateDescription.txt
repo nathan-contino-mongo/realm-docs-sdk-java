@@ -90,6 +90,7 @@ Method Summary
    
    * - public static :ref:`UpdateDescription <io_realm_mongodb_mongo_events_UpdateDescription>`
      - :ref:`diff <io_realm_mongodb_mongo_events_UpdateDescription_diff_BsonDocument__BsonDocument_>` (**BsonDocument (?)** beforeDocument,
+       
                                           **BsonDocument (?)** afterDocument)
        
        Find the diff between two documents.
@@ -169,6 +170,8 @@ getUpdatedFields
        
        
        
+       
+       
    
    
 
@@ -188,6 +191,8 @@ getRemovedFields
        
    
    * - Returns a `List <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  containing the field names that have been removed in the corresponding update.
+       
+       
        
        
        
@@ -227,6 +232,8 @@ toUpdateDocument
        
        
        
+       
+       
    
    
 
@@ -255,6 +262,8 @@ toBsonDocument
        
        
        
+       
+       
    
    
 
@@ -274,6 +283,8 @@ fromBsonDocument
        
    
    * - Converts an update description BSON document from a MongoDB Change Event into an UpdateDescription object.
+       
+       
        
        
        **Parameters**
@@ -312,6 +323,8 @@ merge
    * - Unilaterally merge an update description into this update description.
        
        
+       
+       
        **Parameters**
        
        - ``otherDescription`` - the update description to merge into this
@@ -342,11 +355,14 @@ diff
    :header-rows: 1
    
    * - public static :ref:`UpdateDescription <io_realm_mongodb_mongo_events_UpdateDescription>` diff (**BsonDocument (?)** beforeDocument,
+       
                                           **BsonDocument (?)** afterDocument)
        
        
    
    * - Find the diff between two documents.NOTE: This does not do a full diff on [BsonArray]. If there is an inequality between the old and new array, the old array will simply be replaced by the new one.
+       
+       
        
        
        
@@ -398,6 +414,8 @@ isEmpty
        
        
        
+       
+       
    
    
 
@@ -426,6 +444,8 @@ equals
        
        
        
+       
+       
    
    
 
@@ -445,6 +465,8 @@ hashCode
        
    
    * - 
+       
+       
        
        
        

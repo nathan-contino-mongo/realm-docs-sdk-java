@@ -153,6 +153,7 @@ Method Summary
    
    * - public **void**
      - :ref:`add <io_realm_RealmList_add_int__E_>` (**int** location,
+       
                      **E (?)** element)
        
        Inserts the specified object into this List at the specified location.
@@ -170,6 +171,7 @@ Method Summary
    
    * - public **E (?)**
      - :ref:`set <io_realm_RealmList_set_int__E_>` (**int** location,
+       
                   **E (?)** object)
        
        Replaces the element at the specified location in this list with the specified object.
@@ -179,6 +181,7 @@ Method Summary
    
    * - public **void**
      - :ref:`move <io_realm_RealmList_move_int__int_>` (**int** oldPos,
+       
                       **int** newPos)
        
        Moves an object from one position to another, while maintaining a fixed sized list.
@@ -302,6 +305,7 @@ Method Summary
    
    * - public :ref:`RealmResults <io_realm_RealmResults>`
      - :ref:`sort <io_realm_RealmList_sort_String__Sort_>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+       
                               :ref:`Sort <io_realm_Sort>` sortOrder)
        
        
@@ -313,8 +317,11 @@ Method Summary
    
    * - public :ref:`RealmResults <io_realm_RealmResults>`
      - :ref:`sort <io_realm_RealmList_sort_String__Sort__String__Sort_>` (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName1,
+       
                               :ref:`Sort <io_realm_Sort>` sortOrder1,
+       
                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName2,
+       
                               :ref:`Sort <io_realm_Sort>` sortOrder2)
        
        
@@ -326,6 +333,7 @@ Method Summary
    
    * - public :ref:`RealmResults <io_realm_RealmResults>`
      - :ref:`sort <io_realm_RealmList_sort_String[]__Sort[]_>` (`java.lang.String[] <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldNames,
+       
                               :ref:`io.realm.Sort[] <io_realm_Sort>` sortOrders)
        
        
@@ -672,6 +680,8 @@ isValid
        
        
        
+       
+       
    
    
 
@@ -691,6 +701,8 @@ freeze
        
    
    * - 
+       
+       
        
        
        
@@ -732,6 +744,8 @@ isFrozen
        
        
        
+       
+       
    
    
 
@@ -762,6 +776,8 @@ isManaged
        
        
        
+       
+       
    
    
 
@@ -777,6 +793,7 @@ add
    :header-rows: 1
    
    * - public **void** add (**int** location,
+       
                      **E (?)** element)
        
        
@@ -793,6 +810,8 @@ add
           
           
           
+       
+       
        
        
        
@@ -861,6 +880,8 @@ add
        
        
        
+       
+       
        **Parameters**
        
        - ``object`` - the object to add.
@@ -899,6 +920,7 @@ set
    :header-rows: 1
    
    * - public **E (?)** set (**int** location,
+       
                   **E (?)** object)
        
        
@@ -915,6 +937,8 @@ set
           
           
           
+       
+       
        
        
        
@@ -968,11 +992,14 @@ move
    :header-rows: 1
    
    * - public **void** move (**int** oldPos,
+       
                       **int** newPos)
        
        
    
    * - Moves an object from one position to another, while maintaining a fixed sized list. RealmObjects will be shifted so no ``null``  values are introduced.
+       
+       
        
        
        
@@ -1033,6 +1060,8 @@ clear
        
        
        
+       
+       
        **Throws**
        
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if Realm instance has been closed or parent object has been removed.
@@ -1085,6 +1114,8 @@ remove
    * - Removes the object at the specified location from this list.
        
        
+       
+       
        **Parameters**
        
        - ``location`` - the index of the object to remove.
@@ -1128,6 +1159,8 @@ remove
        
    
    * - Removes one instance of the specified object from this ``Collection``  if one is contained. This implementation iterates over this ``Collection``  and tests each element ``e``  returned by the iterator, whether ``e``  is equal to the given object. If ``object != null``  then this test is performed using ``object.equals(e)`` , otherwise using ``object == null`` . If an element equal to the given object is found, then the ``remove``  method is called on the iterator and ``true``  is returned, ``false``  otherwise. If the iterator does not support removing elements, an ``UnsupportedOperationException``  is thrown.
+       
+       
        
        
        
@@ -1182,6 +1215,8 @@ removeAll
    * - Removes all occurrences in this ``Collection``  of each object in the specified ``Collection`` . After this method returns none of the elements in the passed ``Collection``  can be found in this ``Collection``  anymore.
        
        This implementation iterates over the ``Collection``  and tests each element ``e``  returned by the iterator, whether it is contained in the specified ``Collection`` . If this test is positive, then the ``remove``  method is called on the iterator.
+       
+       
        
        
        
@@ -1249,6 +1284,8 @@ deleteFirstFromRealm
        
        
        
+       
+       
    
    
 
@@ -1279,6 +1316,8 @@ deleteLastFromRealm
        
        
        
+       
+       
    
    
 
@@ -1298,6 +1337,8 @@ get
        
    
    * - Returns the element at the specified location in this list.
+       
+       
        
        
        **Parameters**
@@ -1359,6 +1400,8 @@ first
        
        
        
+       
+       
    
    
 .. _io_realm_RealmList_first_E_:
@@ -1373,6 +1416,8 @@ first
        
    
    * - 
+       
+       
        
        
        
@@ -1414,6 +1459,8 @@ last
        
        
        
+       
+       
    
    
 .. _io_realm_RealmList_last_E_:
@@ -1428,6 +1475,8 @@ last
        
    
    * - 
+       
+       
        
        
        
@@ -1469,6 +1518,8 @@ sort
        
        
        
+       
+       
    
    
 .. _io_realm_RealmList_sort_String__Sort_:
@@ -1479,11 +1530,14 @@ sort
    :header-rows: 1
    
    * - public :ref:`RealmResults <io_realm_RealmResults>` sort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+       
                               :ref:`Sort <io_realm_Sort>` sortOrder)
        
        
    
    * - 
+       
+       
        
        
        
@@ -1505,13 +1559,18 @@ sort
    :header-rows: 1
    
    * - public :ref:`RealmResults <io_realm_RealmResults>` sort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName1,
+       
                               :ref:`Sort <io_realm_Sort>` sortOrder1,
+       
                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName2,
+       
                               :ref:`Sort <io_realm_Sort>` sortOrder2)
        
        
    
    * - 
+       
+       
        
        
        
@@ -1533,11 +1592,14 @@ sort
    :header-rows: 1
    
    * - public :ref:`RealmResults <io_realm_RealmResults>` sort (`java.lang.String[] <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldNames,
+       
                               :ref:`io.realm.Sort[] <io_realm_Sort>` sortOrders)
        
        
    
    * - 
+       
+       
        
        
        
@@ -1579,6 +1641,8 @@ deleteFromRealm
        
        
        
+       
+       
    
    
 
@@ -1598,6 +1662,8 @@ size
        
    
    * - Returns the number of elements in this ``List`` .
+       
+       
        
        
        
@@ -1636,6 +1702,8 @@ where
        
    
    * - Returns a RealmQuery, which can be used to query for specific objects of this class.
+       
+       
        
        
        
@@ -1695,6 +1763,8 @@ min
        
        
        
+       
+       
    
    
 
@@ -1714,6 +1784,8 @@ max
        
    
    * - 
+       
+       
        
        
        
@@ -1755,6 +1827,8 @@ sum
        
        
        
+       
+       
    
    
 
@@ -1774,6 +1848,8 @@ average
        
    
    * - 
+       
+       
        
        
        
@@ -1815,6 +1891,8 @@ maxDate
        
        
        
+       
+       
    
    
 
@@ -1834,6 +1912,8 @@ minDate
        
    
    * - 
+       
+       
        
        
        
@@ -1875,6 +1955,8 @@ deleteAllFromRealm
        
        
        
+       
+       
    
    
 
@@ -1894,6 +1976,8 @@ isLoaded
        
    
    * - 
+       
+       
        
        
        
@@ -1935,6 +2019,8 @@ load
        
        
        
+       
+       
    
    
 
@@ -1956,6 +2042,8 @@ contains
    * - Returns ``true``  if the list contains the specified element when attached to a Realm. This method will query the native Realm underlying storage engine to quickly find the specified element.
        
        If the list is not attached to a Realm, the default `List.contains(Object) <https://docs.oracle.com/javase/7/docs/api/java/util/List/contains(Object).html>`__  implementation will occur.
+       
+       
        
        
        
@@ -2007,6 +2095,8 @@ iterator
        
        
        
+       
+       
    
    
 
@@ -2026,6 +2116,8 @@ listIterator
        
    
    * - 
+       
+       
        
        
        
@@ -2062,6 +2154,8 @@ listIterator
        
        
        
+       
+       
    
    
 
@@ -2081,6 +2175,8 @@ createSnapshot
        
    
    * - 
+       
+       
        
        
        
@@ -2123,6 +2219,8 @@ getRealm
        
        
        
+       
+       
        **Throws**
        
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm is an instance of :ref:`DynamicRealm <io_realm_DynamicRealm>` or the :ref:`Realm <io_realm_Realm>` was already closed.
@@ -2155,6 +2253,8 @@ toString
        
    
    * - 
+       
+       
        
        
        
@@ -2229,6 +2329,8 @@ asFlowable
        
        
        
+       
+       
        **Throws**
        
        - `UnsupportedOperationException <https://docs.oracle.com/javase/7/docs/api/java/lang/UnsupportedOperationException.html>`__  - if the required RxJava framework is not on the classpath or the corresponding Realm instance doesn't support RxJava.
@@ -2293,6 +2395,8 @@ asChangesetObservable
            .observeOn(AndroidSchedulers.mainThread())
            .subscribe( ... );
            
+       
+       
        
        
        
@@ -2384,6 +2488,8 @@ addChangeListener
        
        
        
+       
+       
        **Parameters**
        
        - ``listener`` - the change listener to be notified.
@@ -2461,6 +2567,8 @@ addChangeListener
        
        
        
+       
+       
        **Parameters**
        
        - ``listener`` - the change listener to be notified.
@@ -2511,6 +2619,8 @@ removeChangeListener
        
    
    * - Removes the specified change listener.
+       
+       
        
        
        **Parameters**
@@ -2568,6 +2678,8 @@ removeChangeListener
        
    
    * - Removes the specified change listener.
+       
+       
        
        
        **Parameters**
@@ -2630,6 +2742,8 @@ removeAllChangeListeners
        
    
    * - Removes all user-defined change listeners.
+       
+       
        
        
        

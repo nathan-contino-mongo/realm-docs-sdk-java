@@ -178,6 +178,8 @@ getSession
        
        
        
+       
+       
        **Parameters**
        
        - ``syncConfiguration`` - configuration object for the synchronized Realm.
@@ -239,6 +241,8 @@ getAllSessions
        
        
        
+       
+       
    
    
 
@@ -258,6 +262,8 @@ getOrCreateSession
        
    
    * - Gets any cached :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>` for the given :ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>` or create a new one if no one exists. Note: This is mainly for internal usage, consider using :ref:`getSession(SyncConfiguration) <io_realm_mongodb_sync_Sync_getSession_SyncConfiguration_>` instead.
+       
+       
        
        
        
@@ -308,6 +314,8 @@ reconnect
    * - Realm will automatically detect when a device gets connectivity after being offline and resume syncing.However, as some of these checks are performed using incremental backoff, this will in some cases not happen immediately.
        
        In those cases it can be beneficial to call this method manually, which will force all sessions to attempt to reconnect immediately and reset any timers they are using for incremental backoff.
+       
+       
        
        
        

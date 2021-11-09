@@ -191,6 +191,7 @@ Method Summary
    
    * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`
      - :ref:`linkCredentialsAsync <io_realm_mongodb_User_linkCredentialsAsync_Credentials__App_Callback_User__>` (:ref:`Credentials <io_realm_mongodb_Credentials>` credentials,
+       
                                                 :ref:`io.realm.mongodb.App.Callback\<io.realm.mongodb.User> <io_realm_mongodb_App_Callback>` callback)
        
        Links the current user with a new user identity represented by the given credentials.
@@ -336,6 +337,8 @@ getId
        
        
        
+       
+       
    
    
 
@@ -364,6 +367,8 @@ getProfile
        
        
        
+       
+       
    
    
 
@@ -383,6 +388,8 @@ getIdentities
        
    
    * - Returns a new list of the user's identities.
+       
+       
        
        
        
@@ -432,6 +439,8 @@ getProviderType
        
        
        
+       
+       
    
    
 
@@ -451,6 +460,8 @@ getAccessToken
        
    
    * - Returns the current access token for the user.
+       
+       
        
        
        
@@ -488,6 +499,8 @@ getRefreshToken
        
        
        
+       
+       
    
    
 
@@ -507,6 +520,8 @@ getDeviceId
        
    
    * - Returns a unique identifier for the device the user logged in to.
+       
+       
        
        
        
@@ -546,6 +561,8 @@ getApp
        
        
        
+       
+       
    
    
 
@@ -565,6 +582,8 @@ getState
        
    
    * - Returns the :ref:`State <io_realm_mongodb_User_State>` the user is in.
+       
+       
        
        
        
@@ -608,6 +627,8 @@ getCustomData
        
        
        
+       
+       
    
    
 
@@ -627,6 +648,8 @@ refreshCustomData
        
    
    * - Re-fetch custom user data from the Realm App.
+       
+       
        
        
        
@@ -658,6 +681,8 @@ refreshCustomData
        
    
    * - Re-fetch custom user data from the Realm App asynchronously.This is the asynchronous variant of :ref:`refreshCustomData() <io_realm_mongodb_User_refreshCustomData__>`.
+       
+       
        
        
        
@@ -715,6 +740,8 @@ isLoggedIn
        
        
        
+       
+       
    
    
 
@@ -750,6 +777,8 @@ linkCredentials
         
        
        Note: It is not possible to link two existing users of MongoDB Realm. The provided credentials must not have been used by another user.
+       
+       
        
        
        
@@ -792,6 +821,7 @@ linkCredentialsAsync
    :header-rows: 1
    
    * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` linkCredentialsAsync (:ref:`Credentials <io_realm_mongodb_Credentials>` credentials,
+       
                                                 :ref:`io.realm.mongodb.App.Callback\<io.realm.mongodb.User> <io_realm_mongodb_App_Callback>` callback)
        
        
@@ -813,6 +843,8 @@ linkCredentialsAsync
         
        
        Note: It is not possible to link two existing users of MongoDB Realm. The provided credentials must not have been used by another user.
+       
+       
        
        
        
@@ -869,6 +901,8 @@ remove
        
        
        
+       
+       
        **Throws**
        
        - :ref:`AppException <io_realm_mongodb_AppException>` - if an error occurred while trying to remove the user.
@@ -899,6 +933,8 @@ removeAsync
        
    
    * - Calling this will asynchronously remove the user and any Realms the user has from the device. No data is removed from the server. If the user is logged in when calling this method, the user is logged out before any data is deleted.
+       
+       
        
        
        **Parameters**
@@ -963,6 +999,8 @@ logOut
        
        
        
+       
+       
        **Throws**
        
        - :ref:`AppException <io_realm_mongodb_AppException>` - if an error occurred while trying to log the user out of the Realm App.
@@ -1003,6 +1041,8 @@ logOutAsync
        
        
        All other users will be marked as :ref:`User.State.LOGGED_OUT <io_realm_mongodb_User_State_LOGGED_OUT>` and will still be returned by :ref:`App.allUsers() <io_realm_mongodb_App_allUsers__>`. They can be removed completely by calling :ref:`User.remove() <io_realm_mongodb_User_remove__>`.
+       
+       
        
        
        
@@ -1057,6 +1097,8 @@ getApiKeys
        
        
        
+       
+       
        **Throws**
        
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if no user is currently logged in.
@@ -1097,6 +1139,8 @@ getFunctions
        
        
        
+       
+       
        .. seealso::
        
        
@@ -1124,6 +1168,8 @@ getFunctions
        
    
    * - Returns a *functions* manager for invoking Realm Functions with custom codec registry for encoding and decoding arguments and results.
+       
+       
        
        
        **Parameters**
@@ -1176,6 +1222,8 @@ getPush
        
        
        
+       
+       
        **Parameters**
        
        - ``serviceName`` - the service name used to connect to the server.
@@ -1210,6 +1258,8 @@ getMongoClient
        
    
    * - Returns a :ref:`MongoClient <io_realm_mongodb_mongo_MongoClient>` instance for accessing documents in the database.
+       
+       
        
        
        
@@ -1257,6 +1307,8 @@ equals
        
        
        
+       
+       
    
    
 
@@ -1276,6 +1328,8 @@ hashCode
        
    
    * - 
+       
+       
        
        
        
