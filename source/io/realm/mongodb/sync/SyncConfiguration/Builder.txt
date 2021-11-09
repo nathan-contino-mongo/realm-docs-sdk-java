@@ -210,7 +210,7 @@ Method Summary
    * - public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`
      - :ref:`allowWritesOnUiThread <io_realm_mongodb_sync_SyncConfiguration_Builder_allowWritesOnUiThread_boolean_>` (**boolean** allowWritesOnUiThread)
        
-       Sets whether or not calls to **Realm#executeTransaction (?)** are allowed from the UI thread.
+       Sets whether or not calls to **Realm.executeTransaction (?)** are allowed from the UI thread.
        
        
        
@@ -313,7 +313,7 @@ schemaVersion
        
        
    
-   * - Sets the schema version of the Realm.Synced Realms only support additive schema changes which can be applied without requiring a manual migration. The schema version will only be used as an indication to the underlying storage layer to remove or add indexes. These will be recalculated if the provided schema version differ from the version in the Realm file. **WARNING:** There is no guarantee that the value inserted here is the same returned by **Realm#getVersion() (?)**. Due to the nature of synced Realms, the value can both be higher and lower.
+   * - Sets the schema version of the Realm.Synced Realms only support additive schema changes which can be applied without requiring a manual migration. The schema version will only be used as an indication to the underlying storage layer to remove or add indexes. These will be recalculated if the provided schema version differ from the version in the Realm file. **WARNING:** There is no guarantee that the value inserted here is the same returned by **Realm.getVersion() (?)**. Due to the nature of synced Realms, the value can both be higher and lower.
        
        
        
@@ -602,7 +602,7 @@ initialData
        
        
    
-   * - Sets the initial data in :ref:`io.realm.Realm <io_realm_Realm>`. This transaction will be executed only the first time the Realm file is opened (created) or while migrating the data if **RealmConfiguration.Builder#deleteRealmIfMigrationNeeded() (?)** is set.
+   * - Sets the initial data in :ref:`io.realm.Realm <io_realm_Realm>`. This transaction will be executed only the first time the Realm file is opened (created) or while migrating the data if **RealmConfiguration.Builder.deleteRealmIfMigrationNeeded() (?)** is set.
        
        
        
@@ -935,7 +935,7 @@ urlPrefix
        
        
           
-          - **<a href="https://docs.realm.io/platform/guides/learn-realm-sync-and-integrate-with-a-proxy#adding-a-custom-proxy">Adding a custom proxy</a> (?)**
+          - **<a href="https://docs.realm.io/platform/guides/learn-realm-sync-and-integrate-with-a-proxy.adding-a-custom-proxy">Adding a custom proxy</a> (?)**
              
              
              
@@ -989,7 +989,7 @@ maxNumberOfActiveVersions
        
        
           
-          - **<a href="https://realm.io/docs/java/latest/#faq-large-realm-file-size">FAQ</a> (?)**
+          - **<a href="https://realm.io/docs/java/latest/.faq-large-realm-file-size">FAQ</a> (?)**
              
              
              
@@ -1014,9 +1014,9 @@ allowWritesOnUiThread
        
        
    
-   * - Sets whether or not calls to **Realm#executeTransaction (?)** are allowed from the UI thread.
+   * - Sets whether or not calls to **Realm.executeTransaction (?)** are allowed from the UI thread.
        
-       **WARNING: Realm does not allow synchronous transactions to be run on the main thread unless users explicitly opt in with this method.** We recommend diverting calls to ``executeTransaction``  to non-UI threads or, alternatively, using **Realm#executeTransactionAsync (?)**.
+       **WARNING: Realm does not allow synchronous transactions to be run on the main thread unless users explicitly opt in with this method.** We recommend diverting calls to ``executeTransaction``  to non-UI threads or, alternatively, using **Realm.executeTransactionAsync (?)**.
        
        
        

@@ -103,11 +103,11 @@ A RealmObject cannot be passed between different threads.
 
 
    
-   - **Realm#createObject(Class) (?)**
+   - **Realm.createObject(Class) (?)**
       
       
       
-   - **Realm#copyToRealm(RealmModel, ImportFlag...) (?)**
+   - **Realm.copyToRealm(RealmModel, ImportFlag...) (?)**
       
       
       
@@ -883,7 +883,7 @@ isLoaded
        
        
           
-          - **#isValid(RealmModel) (?)**
+          - **isValid(RealmModel) (?)**
              
              
              
@@ -908,13 +908,13 @@ isManaged
        
        
    
-   * - Checks if this object is managed by Realm. A managed object is just a wrapper around the data in the underlying Realm file. On Looper threads, a managed object will be live-updated so it always points to the latest data. It is possible to register a change listener using **#addChangeListener(RealmChangeListener) (?)** to be notified when changes happen. Managed objects are thread confined so that they cannot be accessed from other threads than the one that created them.
+   * - Checks if this object is managed by Realm. A managed object is just a wrapper around the data in the underlying Realm file. On Looper threads, a managed object will be live-updated so it always points to the latest data. It is possible to register a change listener using **addChangeListener(RealmChangeListener) (?)** to be notified when changes happen. Managed objects are thread confined so that they cannot be accessed from other threads than the one that created them.
        
        If this method returns ``false`` , the object is unmanaged. An unmanaged object is just a normal Java object, so it can be parsed freely across threads, but the data in the object is not connected to the underlying Realm, so it will not be live updated.
        
        
        
-       It is possible to create a managed object from an unmanaged object by using **Realm#copyToRealm(RealmModel, ImportFlag...) (?)**. An unmanaged object can be created from a managed object by using **Realm#copyFromRealm(RealmModel) (?)**.
+       It is possible to create a managed object from an unmanaged object by using **Realm.copyToRealm(RealmModel, ImportFlag...) (?)**. An unmanaged object can be created from a managed object by using **Realm.copyFromRealm(RealmModel) (?)**.
        
        
        
@@ -939,13 +939,13 @@ isManaged
        
        
    
-   * - Checks if this object is managed by Realm. A managed object is just a wrapper around the data in the underlying Realm file. On Looper threads, a managed object will be live-updated so it always points to the latest data. It is possible to register a change listener using **#addChangeListener(RealmModel, RealmChangeListener) (?)** to be notified when changes happen. Managed objects are thread confined so that they cannot be accessed from other threads than the one that created them.
+   * - Checks if this object is managed by Realm. A managed object is just a wrapper around the data in the underlying Realm file. On Looper threads, a managed object will be live-updated so it always points to the latest data. It is possible to register a change listener using **addChangeListener(RealmModel, RealmChangeListener) (?)** to be notified when changes happen. Managed objects are thread confined so that they cannot be accessed from other threads than the one that created them.
        
        If this method returns ``false`` , the object is unmanaged. An unmanaged object is just a normal Java object, so it can be parsed freely across threads, but the data in the object is not connected to the underlying Realm, so it will not be live updated.
        
        
        
-       It is possible to create a managed object from an unmanaged object by using **Realm#copyToRealm(RealmModel, ImportFlag...) (?)**. An unmanaged object can be created from a managed object by using **Realm#copyFromRealm(RealmModel) (?)**.
+       It is possible to create a managed object from an unmanaged object by using **Realm.copyToRealm(RealmModel, ImportFlag...) (?)**. An unmanaged object can be created from a managed object by using **Realm.copyFromRealm(RealmModel) (?)**.
        
        
        
@@ -977,7 +977,7 @@ getRealm
    
    * - Returns :ref:`Realm <io_realm_Realm>` instance where this :ref:`RealmObject <io_realm_RealmObject>` belongs.
        
-       You **must not** call **Realm#close() (?)** against returned instance.
+       You **must not** call **Realm.close() (?)** against returned instance.
        
        
        
@@ -1014,7 +1014,7 @@ getRealm
    
    * - returns :ref:`Realm <io_realm_Realm>` instance where the ``model``  belongs.
        
-       You **must not** call **Realm#close() (?)** against returned instance.
+       You **must not** call **Realm.close() (?)** against returned instance.
        
        
        
@@ -1790,7 +1790,7 @@ asFlowable
        
        
           
-          - **<a href="https://realm.io/docs/java/latest/#rxjava">RxJava and Realm</a> (?)**
+          - **<a href="https://realm.io/docs/java/latest/.rxjava">RxJava and Realm</a> (?)**
              
              
              
@@ -1888,7 +1888,7 @@ asFlowable
        
        
           
-          - **<a href="https://realm.io/docs/java/latest/#rxjava">RxJava and Realm</a> (?)**
+          - **<a href="https://realm.io/docs/java/latest/.rxjava">RxJava and Realm</a> (?)**
              
              
              
@@ -1965,7 +1965,7 @@ asChangesetObservable
        
        
           
-          - **<a href="https://realm.io/docs/java/latest/#rxjava">RxJava and Realm</a> (?)**
+          - **<a href="https://realm.io/docs/java/latest/.rxjava">RxJava and Realm</a> (?)**
              
              
              
@@ -2045,7 +2045,7 @@ asChangesetObservable
        
        
           
-          - **<a href="https://realm.io/docs/java/latest/#rxjava">RxJava and Realm</a> (?)**
+          - **<a href="https://realm.io/docs/java/latest/.rxjava">RxJava and Realm</a> (?)**
              
              
              

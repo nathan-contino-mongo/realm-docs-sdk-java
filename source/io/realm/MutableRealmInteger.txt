@@ -40,24 +40,24 @@ A ``MutableRealmInteger``  is a mutable, `Long <https://docs.oracle.com/javase/7
    
    
    
-- The **#equals (?)** operator compares the contained `Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__  values. ``null`` -valued ``MutableRealmInteger``  are ``.equals`` 
+- The **equals (?)** operator compares the contained `Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__  values. ``null`` -valued ``MutableRealmInteger``  are ``.equals`` 
    
    
    
    
-- The **#compareTo (?)** operator compares the contained `Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__  values. It considers ``null``  < any non-``null``  value.
+- The **compareTo (?)** operator compares the contained `Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__  values. It considers ``null``  < any non-``null``  value.
    
    
    
    
-- The **#increment (?)** and **#decrement (?)** operators throw `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  when applied to a ``null`` -valued ``MutableRealmInteger`` .
+- The **increment (?)** and **decrement (?)** operators throw `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  when applied to a ``null`` -valued ``MutableRealmInteger`` .
    
    
    
    
 
 
-``MutableRealmInteger`` s are most interesting as members of a managed :ref:`RealmModel <io_realm_RealmModel>` object. When managed, the **#increment (?)** and **#decrement (?)** operators implement a 
+``MutableRealmInteger`` s are most interesting as members of a managed :ref:`RealmModel <io_realm_RealmModel>` object. When managed, the **increment (?)** and **decrement (?)** operators implement a 
 
 `conflict free replicated data type <https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type>`__ : Simultaneous increments and decrements from multiple distributed clients will be aggregated correctly. For instance, if the value of ``counter``  field for the object representing user "Fred" is currently 0, then the following code, executed on two different devices, simultaneously, even if connected by only a slow, unreliable network, will 
 
@@ -446,7 +446,7 @@ set
        
        
    
-   * - Sets the ``MutableRealmInteger``  value. Calling ``set``  forcibly sets the ``MutableRealmInteger``  to the provided value. Doing this obliterates the effects of any calls to **#increment (?)** and **#decrement (?)** perceived before the call to ``set`` .
+   * - Sets the ``MutableRealmInteger``  value. Calling ``set``  forcibly sets the ``MutableRealmInteger``  to the provided value. Doing this obliterates the effects of any calls to **increment (?)** and **decrement (?)** perceived before the call to ``set`` .
        
        
        
@@ -477,7 +477,7 @@ set
        
        
    
-   * - Sets the ``MutableRealmInteger``  value. Calling **#set (?)** forcibly sets the ``MutableRealmInteger``  to the provided value. Doing this obliterates the effects of any calls to **#increment (?)** and **#decrement (?)** perceived before the call to **#set (?)**.
+   * - Sets the ``MutableRealmInteger``  value. Calling **set (?)** forcibly sets the ``MutableRealmInteger``  to the provided value. Doing this obliterates the effects of any calls to **increment (?)** and **decrement (?)** perceived before the call to **set (?)**.
        
        
        

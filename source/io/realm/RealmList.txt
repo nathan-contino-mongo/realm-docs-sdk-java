@@ -45,7 +45,7 @@ Only Realm can create managed RealmLists. Managed RealmLists will automatically 
 
 
 
-Unmanaged RealmLists can be created by the user and can contain both managed and unmanaged RealmObjects. This is useful when dealing with JSON deserializers like GSON or other frameworks that inject values into a class. Unmanaged elements in this list can be added to a Realm using the **Realm#copyToRealm(Iterable, ImportFlag...) (?)** method.
+Unmanaged RealmLists can be created by the user and can contain both managed and unmanaged RealmObjects. This is useful when dealing with JSON deserializers like GSON or other frameworks that inject values into a class. Unmanaged elements in this list can be added to a Realm using the **Realm.copyToRealm(Iterable, ImportFlag...) (?)** method.
 
 
 
@@ -764,12 +764,12 @@ add
    
    * - Inserts the specified object into this List at the specified location. The object is inserted before any previous element at the specified location. If the location is equal to the size of this List, the object is added at the end.
        
-       1. **Unmanaged RealmLists**: It is possible to add both managed and unmanaged objects. If adding managed objects to an unmanaged RealmList they will not be copied to the Realm again if using **Realm#copyToRealm(RealmModel, ImportFlag...) (?)** afterwards.
+       1. **Unmanaged RealmLists**: It is possible to add both managed and unmanaged objects. If adding managed objects to an unmanaged RealmList they will not be copied to the Realm again if using **Realm.copyToRealm(RealmModel, ImportFlag...) (?)** afterwards.
           
           
           
           
-       #. **Managed RealmLists**: It is possible to add unmanaged objects to a RealmList that is already managed. In that case the object will transparently be copied to Realm using **Realm#copyToRealm(RealmModel, ImportFlag...) (?)** or **Realm#copyToRealmOrUpdate(RealmModel, ImportFlag...) (?)** if it has a primary key.
+       #. **Managed RealmLists**: It is possible to add unmanaged objects to a RealmList that is already managed. In that case the object will transparently be copied to Realm using **Realm.copyToRealm(RealmModel, ImportFlag...) (?)** or **Realm.copyToRealmOrUpdate(RealmModel, ImportFlag...) (?)** if it has a primary key.
           
           
           
@@ -825,12 +825,12 @@ add
    
    * - Adds the specified object at the end of this List.
        
-       1. **Unmanaged RealmLists**: It is possible to add both managed and unmanaged objects. If adding managed objects to an unmanaged RealmList they will not be copied to the Realm again if using **Realm#copyToRealm(RealmModel, ImportFlag...) (?)** afterwards.
+       1. **Unmanaged RealmLists**: It is possible to add both managed and unmanaged objects. If adding managed objects to an unmanaged RealmList they will not be copied to the Realm again if using **Realm.copyToRealm(RealmModel, ImportFlag...) (?)** afterwards.
           
           
           
           
-       #. **Managed RealmLists**: It is possible to add unmanaged objects to a RealmList that is already managed. In that case the object will transparently be copied to Realm using **Realm#copyToRealm(RealmModel, ImportFlag...) (?)** or **Realm#copyToRealmOrUpdate(RealmModel, ImportFlag...) (?)** if it has a primary key.
+       #. **Managed RealmLists**: It is possible to add unmanaged objects to a RealmList that is already managed. In that case the object will transparently be copied to Realm using **Realm.copyToRealm(RealmModel, ImportFlag...) (?)** or **Realm.copyToRealmOrUpdate(RealmModel, ImportFlag...) (?)** if it has a primary key.
           
           
           
@@ -881,12 +881,12 @@ set
    
    * - Replaces the element at the specified location in this list with the specified object.
        
-       1. **Unmanaged RealmLists**: It is possible to add both managed and unmanaged objects. If adding managed objects to an unmanaged RealmList they will not be copied to the Realm again if using **Realm#copyToRealm(RealmModel, ImportFlag...) (?)** afterwards.
+       1. **Unmanaged RealmLists**: It is possible to add both managed and unmanaged objects. If adding managed objects to an unmanaged RealmList they will not be copied to the Realm again if using **Realm.copyToRealm(RealmModel, ImportFlag...) (?)** afterwards.
           
           
           
           
-       #. **Managed RealmLists**: It is possible to add unmanaged objects to a RealmList that is already managed. In that case the object will transparently be copied to Realm using **Realm#copyToRealm(RealmModel, ImportFlag...) (?)** or **Realm#copyToRealmOrUpdate(RealmModel, ImportFlag...) (?)** if it has a primary key.
+       #. **Managed RealmLists**: It is possible to add unmanaged objects to a RealmList that is already managed. In that case the object will transparently be copied to Realm using **Realm.copyToRealm(RealmModel, ImportFlag...) (?)** or **Realm.copyToRealmOrUpdate(RealmModel, ImportFlag...) (?)** if it has a primary key.
           
           
           
@@ -2014,7 +2014,7 @@ getRealm
    
    * - Returns the :ref:`Realm <io_realm_Realm>` instance to which this collection belongs.
        
-       Calling **Realm#close() (?)** on the returned instance is discouraged as it is the same as calling it on the original Realm instance which may cause the Realm to fully close invalidating the list.
+       Calling **Realm.close() (?)** on the returned instance is discouraged as it is the same as calling it on the original Realm instance which may cause the Realm to fully close invalidating the list.
        
        
        
@@ -2141,7 +2141,7 @@ asFlowable
        
        
           
-          - **<a href="https://realm.io/docs/java/latest/#rxjava">RxJava and Realm</a> (?)**
+          - **<a href="https://realm.io/docs/java/latest/.rxjava">RxJava and Realm</a> (?)**
              
              
              
@@ -2218,7 +2218,7 @@ asChangesetObservable
        
        
           
-          - **<a href="https://realm.io/docs/java/latest/#rxjava">RxJava and Realm</a> (?)**
+          - **<a href="https://realm.io/docs/java/latest/.rxjava">RxJava and Realm</a> (?)**
              
              
              

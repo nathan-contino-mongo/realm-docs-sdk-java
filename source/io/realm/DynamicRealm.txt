@@ -180,7 +180,7 @@ Method Summary
    * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`
      - :ref:`executeTransactionAsync <io_realm_DynamicRealm_executeTransactionAsync_DynamicRealm_Transaction_>` (:ref:`DynamicRealm.Transaction <io_realm_DynamicRealm_Transaction>` transaction)
        
-       Similar to **#executeTransaction(Transaction) (?)** but runs asynchronously on a worker thread.
+       Similar to **executeTransaction(Transaction) (?)** but runs asynchronously on a worker thread.
        
        
        
@@ -190,7 +190,7 @@ Method Summary
    * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`
      - :ref:`executeTransactionAsync <io_realm_DynamicRealm_executeTransactionAsync_DynamicRealm_Transaction__DynamicRealm_Transaction_OnSuccess_>` (:ref:`DynamicRealm.Transaction <io_realm_DynamicRealm_Transaction>` transaction, :ref:`DynamicRealm.Transaction.OnSuccess <io_realm_DynamicRealm_Transaction_OnSuccess>` onSuccess)
        
-       Similar to **#executeTransactionAsync(Transaction) (?)**, but also accepts an OnSuccess callback.
+       Similar to **executeTransactionAsync(Transaction) (?)**, but also accepts an OnSuccess callback.
        
        
        
@@ -200,7 +200,7 @@ Method Summary
    * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`
      - :ref:`executeTransactionAsync <io_realm_DynamicRealm_executeTransactionAsync_DynamicRealm_Transaction__DynamicRealm_Transaction_OnError_>` (:ref:`DynamicRealm.Transaction <io_realm_DynamicRealm_Transaction>` transaction, :ref:`DynamicRealm.Transaction.OnError <io_realm_DynamicRealm_Transaction_OnError>` onError)
        
-       Similar to **#executeTransactionAsync(Transaction) (?)**, but also accepts an OnError callback.
+       Similar to **executeTransactionAsync(Transaction) (?)**, but also accepts an OnError callback.
        
        
        
@@ -210,7 +210,7 @@ Method Summary
    * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`
      - :ref:`executeTransactionAsync <io_realm_DynamicRealm_executeTransactionAsync_DynamicRealm_Transaction__DynamicRealm_Transaction_OnSuccess__DynamicRealm_Transaction_OnError_>` (:ref:`DynamicRealm.Transaction <io_realm_DynamicRealm_Transaction>` transaction, :ref:`DynamicRealm.Transaction.OnSuccess <io_realm_DynamicRealm_Transaction_OnSuccess>` onSuccess, :ref:`DynamicRealm.Transaction.OnError <io_realm_DynamicRealm_Transaction_OnError>` onError)
        
-       Similar to **#executeTransactionAsync(Transaction) (?)**, but also accepts an OnSuccess and OnError callbacks.
+       Similar to **executeTransactionAsync(Transaction) (?)**, but also accepts an OnSuccess and OnError callbacks.
        
        
        
@@ -542,7 +542,7 @@ createEmbeddedObject
        
        
           
-          - **RealmClass#embedded() (?)**
+          - **RealmClass.embedded() (?)**
              
              
              
@@ -623,7 +623,7 @@ addChangeListener
    
    * - Adds a change listener to the Realm.The listeners will be executed when changes are committed by this or another thread.
        
-       Realm instances are cached per thread. For that reason it is important to remember to remove listeners again either using **#removeChangeListener(RealmChangeListener) (?)** or :ref:`removeAllChangeListeners() <io_realm_DynamicRealm_removeAllChangeListeners__>`. Not doing so can cause memory leaks.
+       Realm instances are cached per thread. For that reason it is important to remember to remove listeners again either using **removeChangeListener(RealmChangeListener) (?)** or :ref:`removeAllChangeListeners() <io_realm_DynamicRealm_removeAllChangeListeners__>`. Not doing so can cause memory leaks.
        
        
        
@@ -662,7 +662,7 @@ addChangeListener
              
              
              
-          - **#removeChangeListener(RealmChangeListener) (?)**
+          - **removeChangeListener(RealmChangeListener) (?)**
              
              
              
@@ -670,7 +670,7 @@ addChangeListener
              
              
              
-          - **#refresh() (?)**
+          - **refresh() (?)**
              
              
              
@@ -843,9 +843,9 @@ executeTransaction
        
        
    
-   * - Executes a given transaction on the DynamicRealm. **#beginTransaction() (?)** and **#commitTransaction() (?)** will be called automatically. If any exception is thrown during the transaction **#cancelTransaction() (?)** will be called instead of **#commitTransaction() (?)**.
+   * - Executes a given transaction on the DynamicRealm. **beginTransaction() (?)** and **commitTransaction() (?)** will be called automatically. If any exception is thrown during the transaction **cancelTransaction() (?)** will be called instead of **commitTransaction() (?)**.
        
-       Calling this method from the UI thread will throw a :ref:`RealmException <io_realm_exceptions_RealmException>`. Doing so may result in a drop of frames or even ANRs. We recommend calling this method from a non-UI thread or using **#executeTransactionAsync(Transaction) (?)** instead.
+       Calling this method from the UI thread will throw a :ref:`RealmException <io_realm_exceptions_RealmException>`. Doing so may result in a drop of frames or even ANRs. We recommend calling this method from a non-UI thread or using **executeTransactionAsync(Transaction) (?)** instead.
        
        
        
@@ -901,7 +901,7 @@ executeTransactionAsync
        
        
    
-   * - Similar to **#executeTransaction(Transaction) (?)** but runs asynchronously on a worker thread.
+   * - Similar to **executeTransaction(Transaction) (?)** but runs asynchronously on a worker thread.
        
        
        
@@ -944,7 +944,7 @@ executeTransactionAsync
        
        
    
-   * - Similar to **#executeTransactionAsync(Transaction) (?)**, but also accepts an OnSuccess callback.
+   * - Similar to **executeTransactionAsync(Transaction) (?)**, but also accepts an OnSuccess callback.
        
        
        
@@ -991,7 +991,7 @@ executeTransactionAsync
        
        
    
-   * - Similar to **#executeTransactionAsync(Transaction) (?)**, but also accepts an OnError callback.
+   * - Similar to **executeTransactionAsync(Transaction) (?)**, but also accepts an OnError callback.
        
        
        
@@ -1038,7 +1038,7 @@ executeTransactionAsync
        
        
    
-   * - Similar to **#executeTransactionAsync(Transaction) (?)**, but also accepts an OnSuccess and OnError callbacks.
+   * - Similar to **executeTransactionAsync(Transaction) (?)**, but also accepts an OnSuccess and OnError callbacks.
        
        
        

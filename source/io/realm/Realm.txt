@@ -25,11 +25,11 @@ io.realm
 
 
 
-The Realm class is the storage and transactional manager of your object persistent store. It is in charge of creating instances of your RealmObjects. Objects within a Realm can be queried and read at any time. Creating, modifying, and deleting objects must be done while inside a transaction. See **#executeTransaction(Transaction) (?)**
+The Realm class is the storage and transactional manager of your object persistent store. It is in charge of creating instances of your RealmObjects. Objects within a Realm can be queried and read at any time. Creating, modifying, and deleting objects must be done while inside a transaction. See **executeTransaction(Transaction) (?)**
 
 The transactions ensure that multiple instances (on multiple threads) can access the same objects in a consistent state with full ACID guarantees.
 
-It is important to remember to call the **#close() (?)** method when done with a Realm instance. Failing to do so can lead to `java.lang.OutOfMemoryError <https://docs.oracle.com/javase/7/docs/api/java/lang/OutOfMemoryError.html>`__  as the native resources cannot be freed.
+It is important to remember to call the **close() (?)** method when done with a Realm instance. Failing to do so can lead to `java.lang.OutOfMemoryError <https://docs.oracle.com/javase/7/docs/api/java/lang/OutOfMemoryError.html>`__  as the native resources cannot be freed.
 
 
 
@@ -39,7 +39,7 @@ Realm instances cannot be used across different threads. This means that you hav
 
 For the UI thread this means that opening and closing Realms should occur in either onCreate/onDestroy or onStart/onStop.
 
-Realm instances coordinate their state across threads using the **android.os.Handler (?)** mechanism. This also means that Realm instances on threads without a **android.os.Looper (?)** cannot receive updates unless **#refresh() (?)** is manually called.
+Realm instances coordinate their state across threads using the **android.os.Handler (?)** mechanism. This also means that Realm instances on threads without a **android.os.Looper (?)** cannot receive updates unless **refresh() (?)** is manually called.
 
 
 
@@ -523,7 +523,7 @@ Method Summary
    * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`
      - :ref:`executeTransactionAsync <io_realm_Realm_executeTransactionAsync_Realm_Transaction_>` (:ref:`Realm.Transaction <io_realm_Realm_Transaction>` transaction)
        
-       Similar to **#executeTransaction(Transaction) (?)** but runs asynchronously on a worker thread.
+       Similar to **executeTransaction(Transaction) (?)** but runs asynchronously on a worker thread.
        
        
        
@@ -533,7 +533,7 @@ Method Summary
    * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`
      - :ref:`executeTransactionAsync <io_realm_Realm_executeTransactionAsync_Realm_Transaction__Realm_Transaction_OnSuccess_>` (:ref:`Realm.Transaction <io_realm_Realm_Transaction>` transaction, :ref:`Realm.Transaction.OnSuccess <io_realm_Realm_Transaction_OnSuccess>` onSuccess)
        
-       Similar to **#executeTransactionAsync(Transaction) (?)**, but also accepts an OnSuccess callback.
+       Similar to **executeTransactionAsync(Transaction) (?)**, but also accepts an OnSuccess callback.
        
        
        
@@ -543,7 +543,7 @@ Method Summary
    * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`
      - :ref:`executeTransactionAsync <io_realm_Realm_executeTransactionAsync_Realm_Transaction__Realm_Transaction_OnError_>` (:ref:`Realm.Transaction <io_realm_Realm_Transaction>` transaction, :ref:`Realm.Transaction.OnError <io_realm_Realm_Transaction_OnError>` onError)
        
-       Similar to **#executeTransactionAsync(Transaction) (?)**, but also accepts an OnError callback.
+       Similar to **executeTransactionAsync(Transaction) (?)**, but also accepts an OnError callback.
        
        
        
@@ -553,7 +553,7 @@ Method Summary
    * - public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`
      - :ref:`executeTransactionAsync <io_realm_Realm_executeTransactionAsync_Realm_Transaction__Realm_Transaction_OnSuccess__Realm_Transaction_OnError_>` (:ref:`Realm.Transaction <io_realm_Realm_Transaction>` transaction, :ref:`Realm.Transaction.OnSuccess <io_realm_Realm_Transaction_OnSuccess>` onSuccess, :ref:`Realm.Transaction.OnError <io_realm_Realm_Transaction_OnError>` onError)
        
-       Similar to **#executeTransactionAsync(Transaction) (?)**, but also accepts an OnSuccess and OnError callbacks.
+       Similar to **executeTransactionAsync(Transaction) (?)**, but also accepts an OnSuccess and OnError callbacks.
        
        
        
@@ -858,7 +858,7 @@ init
           
           
           
-       - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if **Context#getFilesDir() (?)** could not be found.
+       - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if **Context.getFilesDir() (?)** could not be found.
           
           
           
@@ -962,7 +962,7 @@ init
           
           
           
-       - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if **Context#getFilesDir() (?)** could not be found.
+       - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if **Context.getFilesDir() (?)** could not be found.
           
           
           
@@ -1600,7 +1600,7 @@ createOrUpdateAllFromJson
        
        
           
-          - **#createAllFromJson(Class, org.json.JSONArray) (?)**
+          - **createAllFromJson(Class, org.json.JSONArray) (?)**
              
              
              
@@ -1689,7 +1689,7 @@ createOrUpdateAllFromJson
        
        
           
-          - **#createAllFromJson(Class, String) (?)**
+          - **createAllFromJson(Class, String) (?)**
              
              
              
@@ -1780,7 +1780,7 @@ createOrUpdateAllFromJson
        
        
           
-          - **#createOrUpdateAllFromJson(Class, java.io.InputStream) (?)**
+          - **createOrUpdateAllFromJson(Class, java.io.InputStream) (?)**
              
              
              
@@ -1866,7 +1866,7 @@ createObjectFromJson
        
        
           
-          - **#createOrUpdateObjectFromJson(Class, org.json.JSONObject) (?)**
+          - **createOrUpdateObjectFromJson(Class, org.json.JSONObject) (?)**
              
              
              
@@ -2122,7 +2122,7 @@ createOrUpdateObjectFromJson
        
        
           
-          - **#createObjectFromJson(Class, org.json.JSONObject) (?)**
+          - **createObjectFromJson(Class, org.json.JSONObject) (?)**
              
              
              
@@ -2211,7 +2211,7 @@ createOrUpdateObjectFromJson
        
        
           
-          - **#createObjectFromJson(Class, String) (?)**
+          - **createObjectFromJson(Class, String) (?)**
              
              
              
@@ -2304,7 +2304,7 @@ createOrUpdateObjectFromJson
        
        
           
-          - **#createObjectFromJson(Class, java.io.InputStream) (?)**
+          - **createObjectFromJson(Class, java.io.InputStream) (?)**
              
              
              
@@ -2341,7 +2341,7 @@ createObject
        
        
    
-   * - Instantiates and adds a new object to the Realm.This method is only available for model classes with no @PrimaryKey annotation. If you like to create an object that has a primary key, use **#createObject(Class, Object) (?)** or **#copyToRealm(RealmModel, ImportFlag...) (?)** instead.
+   * - Instantiates and adds a new object to the Realm.This method is only available for model classes with no @PrimaryKey annotation. If you like to create an object that has a primary key, use **createObject(Class, Object) (?)** or **copyToRealm(RealmModel, ImportFlag...) (?)** instead.
        
        
        
@@ -2374,7 +2374,7 @@ createObject
        
        
           
-          - **#createObject(Class, Object) (?)**
+          - **createObject(Class, Object) (?)**
              
              
              
@@ -2497,7 +2497,7 @@ createEmbeddedObject
        
        
           
-          - **RealmClass#embedded() (?)**
+          - **RealmClass.embedded() (?)**
              
              
              
@@ -2664,7 +2664,7 @@ copyToRealmOrUpdate
        
        
           
-          - **#copyToRealm(RealmModel, ImportFlag...) (?)**
+          - **copyToRealm(RealmModel, ImportFlag...) (?)**
              
              
              
@@ -2723,7 +2723,7 @@ copyToRealmOrUpdate
        
        
           
-          - **#copyToRealm(Iterable, ImportFlag...) (?)**
+          - **copyToRealm(Iterable, ImportFlag...) (?)**
              
              
              
@@ -2748,7 +2748,7 @@ insert
        
        
    
-   * - Inserts a list of an unmanaged RealmObjects. This is generally faster than **#copyToRealm(Iterable, ImportFlag...) (?)** since it doesn't return the inserted elements, and performs minimum allocations and checks. After being inserted any changes to the original objects will not be persisted.
+   * - Inserts a list of an unmanaged RealmObjects. This is generally faster than **copyToRealm(Iterable, ImportFlag...) (?)** since it doesn't return the inserted elements, and performs minimum allocations and checks. After being inserted any changes to the original objects will not be persisted.
        
        Please note:
        
@@ -2767,7 +2767,7 @@ insert
           
        
        
-       If you want the managed :ref:`RealmObject <io_realm_RealmObject>` returned, use **#copyToRealm(Iterable, ImportFlag...) (?)**, otherwise if you have a large number of object this method is generally faster.
+       If you want the managed :ref:`RealmObject <io_realm_RealmObject>` returned, use **copyToRealm(Iterable, ImportFlag...) (?)**, otherwise if you have a large number of object this method is generally faster.
        
        
        
@@ -2808,7 +2808,7 @@ insert
        
        
    
-   * - Inserts an unmanaged RealmObject. This is generally faster than **#copyToRealm(RealmModel, ImportFlag...) (?)** since it doesn't return the inserted elements, and performs minimum allocations and checks. After being inserted any changes to the original object will not be persisted.
+   * - Inserts an unmanaged RealmObject. This is generally faster than **copyToRealm(RealmModel, ImportFlag...) (?)** since it doesn't return the inserted elements, and performs minimum allocations and checks. After being inserted any changes to the original object will not be persisted.
        
        Please note:
        
@@ -2827,7 +2827,7 @@ insert
           
        
        
-       If you want the managed :ref:`RealmObject <io_realm_RealmObject>` returned, use **#copyToRealm(RealmModel, ImportFlag...) (?)**, otherwise if you have a large number of object this method is generally faster.
+       If you want the managed :ref:`RealmObject <io_realm_RealmObject>` returned, use **copyToRealm(RealmModel, ImportFlag...) (?)**, otherwise if you have a large number of object this method is generally faster.
        
        
        
@@ -2877,7 +2877,7 @@ insertOrUpdate
        
        
    
-   * - Inserts or updates a list of unmanaged RealmObjects. This is generally faster than **#copyToRealmOrUpdate(Iterable, ImportFlag...) (?)** since it doesn't return the inserted elements, and performs minimum allocations and checks. After being inserted any changes to the original objects will not be persisted.
+   * - Inserts or updates a list of unmanaged RealmObjects. This is generally faster than **copyToRealmOrUpdate(Iterable, ImportFlag...) (?)** since it doesn't return the inserted elements, and performs minimum allocations and checks. After being inserted any changes to the original objects will not be persisted.
        
        Please note:
        
@@ -2896,7 +2896,7 @@ insertOrUpdate
           
        
        
-       If you want the managed :ref:`RealmObject <io_realm_RealmObject>` returned, use **#copyToRealm(Iterable, ImportFlag...) (?)**, otherwise if you have a large number of object this method is generally faster.
+       If you want the managed :ref:`RealmObject <io_realm_RealmObject>` returned, use **copyToRealm(Iterable, ImportFlag...) (?)**, otherwise if you have a large number of object this method is generally faster.
        
        
        
@@ -2941,7 +2941,7 @@ insertOrUpdate
        
        
    
-   * - Inserts or updates an unmanaged RealmObject. This is generally faster than **#copyToRealmOrUpdate(RealmModel, ImportFlag...) (?)** since it doesn't return the inserted elements, and performs minimum allocations and checks. After being inserted any changes to the original object will not be persisted.
+   * - Inserts or updates an unmanaged RealmObject. This is generally faster than **copyToRealmOrUpdate(RealmModel, ImportFlag...) (?)** since it doesn't return the inserted elements, and performs minimum allocations and checks. After being inserted any changes to the original object will not be persisted.
        
        Please note:
        
@@ -2960,7 +2960,7 @@ insertOrUpdate
           
        
        
-       If you want the managed :ref:`RealmObject <io_realm_RealmObject>` returned, use **#copyToRealm(RealmModel, ImportFlag...) (?)**, otherwise if you have a large number of object this method is generally faster.
+       If you want the managed :ref:`RealmObject <io_realm_RealmObject>` returned, use **copyToRealm(RealmModel, ImportFlag...) (?)**, otherwise if you have a large number of object this method is generally faster.
        
        
        
@@ -3008,7 +3008,7 @@ copyFromRealm
    
    * - Makes an unmanaged in-memory copy of already persisted RealmObjects. This is a deep copy that will copy all referenced objects.The copied objects are all detached from Realm and they will no longer be automatically updated. This means that the copied objects might contain data that are no longer consistent with other managed Realm objects.
        
-       *WARNING*: Any changes to copied objects can be merged back into Realm using **#copyToRealmOrUpdate(RealmModel, ImportFlag...) (?)**, but all fields will be overridden, not just those that were changed. This includes references to other objects, and can potentially override changes made by other threads. This behaviour can be modified using :ref:`ImportFlag <io_realm_ImportFlag>`s.
+       *WARNING*: Any changes to copied objects can be merged back into Realm using **copyToRealmOrUpdate(RealmModel, ImportFlag...) (?)**, but all fields will be overridden, not just those that were changed. This includes references to other objects, and can potentially override changes made by other threads. This behaviour can be modified using :ref:`ImportFlag <io_realm_ImportFlag>`s.
        
        
        
@@ -3051,7 +3051,7 @@ copyFromRealm
        
        
           
-          - **#copyToRealmOrUpdate(Iterable, ImportFlag...) (?)**
+          - **copyToRealmOrUpdate(Iterable, ImportFlag...) (?)**
              
              
              
@@ -3073,7 +3073,7 @@ copyFromRealm
    
    * - Makes an unmanaged in-memory copy of already persisted RealmObjects. This is a deep copy that will copy all referenced objects up to the defined depth.The copied objects are all detached from Realm and they will no longer be automatically updated. This means that the copied objects might contain data that are no longer consistent with other managed Realm objects.
        
-       *WARNING*: Any changes to copied objects can be merged back into Realm using **#copyToRealmOrUpdate(Iterable, ImportFlag...) (?)**, but all fields will be overridden, not just those that were changed. This includes references to other objects even though they might be ``null``  due to ``maxDepth``  being reached. This can also potentially override changes made by other threads. This behaviour can be modified using :ref:`ImportFlag <io_realm_ImportFlag>`s.
+       *WARNING*: Any changes to copied objects can be merged back into Realm using **copyToRealmOrUpdate(Iterable, ImportFlag...) (?)**, but all fields will be overridden, not just those that were changed. This includes references to other objects even though they might be ``null``  due to ``maxDepth``  being reached. This can also potentially override changes made by other threads. This behaviour can be modified using :ref:`ImportFlag <io_realm_ImportFlag>`s.
        
        
        
@@ -3122,7 +3122,7 @@ copyFromRealm
        
        
           
-          - **#copyToRealmOrUpdate(Iterable, ImportFlag...) (?)**
+          - **copyToRealmOrUpdate(Iterable, ImportFlag...) (?)**
              
              
              
@@ -3146,7 +3146,7 @@ copyFromRealm
        
        The copied object(s) are all detached from Realm and they will no longer be automatically updated. This means that the copied objects might contain data that are no longer consistent with other managed Realm objects.
        
-       *WARNING*: Any changes to copied objects can be merged back into Realm using **#copyToRealmOrUpdate(RealmModel, ImportFlag...) (?)**, but all fields will be overridden, not just those that were changed. This includes references to other objects, and can potentially override changes made by other threads. This behaviour can be modified using :ref:`ImportFlag <io_realm_ImportFlag>`s.
+       *WARNING*: Any changes to copied objects can be merged back into Realm using **copyToRealmOrUpdate(RealmModel, ImportFlag...) (?)**, but all fields will be overridden, not just those that were changed. This includes references to other objects, and can potentially override changes made by other threads. This behaviour can be modified using :ref:`ImportFlag <io_realm_ImportFlag>`s.
        
        
        
@@ -3191,7 +3191,7 @@ copyFromRealm
        
        
           
-          - **#copyToRealmOrUpdate(RealmModel, ImportFlag...) (?)**
+          - **copyToRealmOrUpdate(RealmModel, ImportFlag...) (?)**
              
              
              
@@ -3215,7 +3215,7 @@ copyFromRealm
        
        The copied object(s) are all detached from Realm and they will no longer be automatically updated. This means that the copied objects might contain data that are no longer consistent with other managed Realm objects.
        
-       *WARNING*: Any changes to copied objects can be merged back into Realm using **#copyToRealmOrUpdate(RealmModel, ImportFlag...) (?)**, but all fields will be overridden, not just those that were changed. This includes references to other objects even though they might be ``null``  due to ``maxDepth``  being reached. This can also potentially override changes made by other threads. This behaviour can be modified using :ref:`ImportFlag <io_realm_ImportFlag>`s.
+       *WARNING*: Any changes to copied objects can be merged back into Realm using **copyToRealmOrUpdate(RealmModel, ImportFlag...) (?)**, but all fields will be overridden, not just those that were changed. This includes references to other objects even though they might be ``null``  due to ``maxDepth``  being reached. This can also potentially override changes made by other threads. This behaviour can be modified using :ref:`ImportFlag <io_realm_ImportFlag>`s.
        
        
        
@@ -3266,7 +3266,7 @@ copyFromRealm
        
        
           
-          - **#copyToRealmOrUpdate(RealmModel, ImportFlag...) (?)**
+          - **copyToRealmOrUpdate(RealmModel, ImportFlag...) (?)**
              
              
              
@@ -3339,7 +3339,7 @@ addChangeListener
    
    * - Adds a change listener to the Realm.The listeners will be executed when changes are committed by this or another thread.
        
-       Realm instances are per thread singletons and cached, so listeners should be removed manually even if calling **#close() (?)**. Otherwise there is a risk of memory leaks.
+       Realm instances are per thread singletons and cached, so listeners should be removed manually even if calling **close() (?)**. Otherwise there is a risk of memory leaks.
        
        
        
@@ -3384,7 +3384,7 @@ addChangeListener
              
              
              
-          - **#removeChangeListener(RealmChangeListener) (?)**
+          - **removeChangeListener(RealmChangeListener) (?)**
              
              
              
@@ -3519,9 +3519,9 @@ executeTransaction
        
        
    
-   * - Executes a given transaction on the Realm. **#beginTransaction() (?)** and **#commitTransaction() (?)** will be called automatically. If any exception is thrown during the transaction **#cancelTransaction() (?)** will be called instead of **#commitTransaction() (?)**.
+   * - Executes a given transaction on the Realm. **beginTransaction() (?)** and **commitTransaction() (?)** will be called automatically. If any exception is thrown during the transaction **cancelTransaction() (?)** will be called instead of **commitTransaction() (?)**.
        
-       Calling this method from the UI thread will throw a :ref:`RealmException <io_realm_exceptions_RealmException>`. Doing so may result in a drop of frames or even ANRs. We recommend calling this method from a non-UI thread or using **#executeTransactionAsync(Transaction) (?)** instead.
+       Calling this method from the UI thread will throw a :ref:`RealmException <io_realm_exceptions_RealmException>`. Doing so may result in a drop of frames or even ANRs. We recommend calling this method from a non-UI thread or using **executeTransactionAsync(Transaction) (?)** instead.
        
        
        
@@ -3581,7 +3581,7 @@ executeTransactionAsync
        
        
    
-   * - Similar to **#executeTransaction(Transaction) (?)** but runs asynchronously on a worker thread.
+   * - Similar to **executeTransaction(Transaction) (?)** but runs asynchronously on a worker thread.
        
        
        
@@ -3624,7 +3624,7 @@ executeTransactionAsync
        
        
    
-   * - Similar to **#executeTransactionAsync(Transaction) (?)**, but also accepts an OnSuccess callback.
+   * - Similar to **executeTransactionAsync(Transaction) (?)**, but also accepts an OnSuccess callback.
        
        
        
@@ -3671,7 +3671,7 @@ executeTransactionAsync
        
        
    
-   * - Similar to **#executeTransactionAsync(Transaction) (?)**, but also accepts an OnError callback.
+   * - Similar to **executeTransactionAsync(Transaction) (?)**, but also accepts an OnError callback.
        
        
        
@@ -3718,7 +3718,7 @@ executeTransactionAsync
        
        
    
-   * - Similar to **#executeTransactionAsync(Transaction) (?)**, but also accepts an OnSuccess and OnError callbacks.
+   * - Similar to **executeTransactionAsync(Transaction) (?)**, but also accepts an OnSuccess and OnError callbacks.
        
        
        

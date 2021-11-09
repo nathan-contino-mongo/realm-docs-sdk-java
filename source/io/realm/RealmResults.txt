@@ -29,7 +29,7 @@ io.realm
 
 This class holds all the matches of a :ref:`RealmQuery <io_realm_RealmQuery>` for a given Realm. The objects are not copied from the Realm to the RealmResults list, but are just referenced from the RealmResult instead. This saves memory and increases speed.
 
-RealmResults are live views, which means that if it is on an **Looper (?)** thread, it will automatically update its query results after a transaction has been committed. If on a non-looper thread, **Realm#refresh() (?)** must be called to update the results.
+RealmResults are live views, which means that if it is on an **Looper (?)** thread, it will automatically update its query results after a transaction has been committed. If on a non-looper thread, **Realm.refresh() (?)** must be called to update the results.
 
 
 
@@ -37,7 +37,7 @@ Updates to RealmObjects from a RealmResults list must be done from within a tran
 
 A RealmResults object cannot be passed between different threads.
 
-Notice that a RealmResults is never ``null``  not even in the case where it contains no objects. You should always use the **RealmResults#size() (?)** method to check if a RealmResults is empty or not.
+Notice that a RealmResults is never ``null``  not even in the case where it contains no objects. You should always use the **RealmResults.size() (?)** method to check if a RealmResults is empty or not.
 
 
 
@@ -1796,7 +1796,7 @@ asFlowable
        
        
           
-          - **<a href="https://realm.io/docs/java/latest/#rxjava">RxJava and Realm</a> (?)**
+          - **<a href="https://realm.io/docs/java/latest/.rxjava">RxJava and Realm</a> (?)**
              
              
              
@@ -1873,7 +1873,7 @@ asChangesetObservable
        
        
           
-          - **<a href="https://realm.io/docs/java/latest/#rxjava">RxJava and Realm</a> (?)**
+          - **<a href="https://realm.io/docs/java/latest/.rxjava">RxJava and Realm</a> (?)**
              
              
              
