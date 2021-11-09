@@ -2261,7 +2261,7 @@ addChangeListener
                  super.onCreate(savedInstanceState);
                  dogs = realm.where(Person.class).findFirst().getDogs();
                  dogs.addChangeListener(new OrderedRealmCollectionChangeListener<RealmList<Dog>>() {
-                     \@Override
+                     @Override
                      public void onChange(RealmList<Dog> dogs, OrderedCollectionChangeSet changeSet) {
                          // React to change
                      }
@@ -2336,7 +2336,7 @@ addChangeListener
                  super.onCreate(savedInstanceState);
                  dogs = realm.where(Person.class).findFirst().getDogs();
                  dogs.addChangeListener(new RealmChangeListener<RealmList<Dog>>() {
-                     \@Override
+                     @Override
                      public void onChange(RealmList<Dog> dogs) {
                          // React to change
                      }

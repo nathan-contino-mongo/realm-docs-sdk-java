@@ -1432,7 +1432,7 @@ addChangeListener
                  super.onCreate(savedInstanceState);
                  results = realm.where(Person.class).findAllAsync();
                  results.addChangeListener(new RealmChangeListener<RealmResults<Person>>() {
-                     \@Override
+                     @Override
                      public void onChange(RealmResults<Person> persons) {
                          // React to change
                      }
@@ -1507,7 +1507,7 @@ addChangeListener
                  super.onCreate(savedInstanceState);
                  results = realm.where(Person.class).findAllAsync();
                  results.addChangeListener(new OrderedRealmCollectionChangeListener<RealmResults<Person>>() {
-                     \@Override
+                     @Override
                      public void onChange(RealmResults<Person> persons, OrderedCollectionChangeSet changeSet) {
                          // React to change
                      }
