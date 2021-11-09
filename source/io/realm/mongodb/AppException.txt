@@ -25,6 +25,8 @@ io.realm.mongodb
 This class is a wrapper for all errors happening when communicating with a MongoDB Realm app. This include both exceptions and protocol errors. Only :ref:`getErrorCode() <io_realm_mongodb_AppException_getErrorCode__>`  is guaranteed to contain a value. If the error was caused by an underlying exception :ref:`getErrorMessage() <io_realm_mongodb_AppException_getErrorMessage__>`  is ``null``  and :ref:`getException() <io_realm_mongodb_AppException_getException__>`  is set, while if the error was a protocol error :ref:`getErrorMessage() <io_realm_mongodb_AppException_getErrorMessage__>`  is set and :ref:`getException() <io_realm_mongodb_AppException_getException__>`  is null.
 
 
+
+
 .. seealso::
 
 
@@ -191,6 +193,8 @@ getErrorCode
    * - Returns the :ref:`ErrorCode <io_realm_mongodb_ErrorCode>`  identifying the type of error.
        
        If :ref:`ErrorCode.UNKNOWN <io_realm_mongodb_ErrorCode_UNKNOWN>`  is returned, it means that the error could not be mapped to any known errors. In that case :ref:`getErrorType() <io_realm_mongodb_AppException_getErrorType__>`  and :ref:`getErrorIntValue() <io_realm_mongodb_AppException_getErrorIntValue__>`  will return the underlying error information which can better identify the type of error.
+       
+       
        
        
        
