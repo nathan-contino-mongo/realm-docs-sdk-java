@@ -775,7 +775,7 @@ isLoaded
            Person person = realm.where(Person.class).findFirstAsync();
            person.isLoaded(); // == false
            person.addChangeListener(new RealmChangeListener() {
-                \@Override
+                @Override
                 public void onChange(Person person) {
                     person.isLoaded(); // Always true here
                     if (person.isValid()) {
@@ -845,7 +845,7 @@ isLoaded
            Person person = realm.where(Person.class).findFirstAsync();
            RealmObject.isLoaded(person); // == false
            RealmObject.addChangeListener(person, new RealmChangeListener() {
-                \@Override
+                @Override
                 public void onChange(Person person) {
                     RealmObject.isLoaded(person); // always true here
                     if (RealmObject.isValid(person)) {
@@ -1144,7 +1144,7 @@ addChangeListener
           
                private Person person; // Strong reference to keep listeners alive
           
-               \@Override
+               @Override
                protected void onCreate(Bundle savedInstanceState) {
                  super.onCreate(savedInstanceState);
                  person = realm.where(Person.class).findFirst();
@@ -1221,7 +1221,7 @@ addChangeListener
           
                private Person person; // Strong reference to keep listeners alive
           
-               \@Override
+               @Override
                protected void onCreate(Bundle savedInstanceState) {
                  super.onCreate(savedInstanceState);
                  person = realm.where(Person.class).findFirst();
@@ -1298,7 +1298,7 @@ addChangeListener
           
                private Person person; // Strong reference to keep listeners alive
           
-               \@Override
+               @Override
                protected void onCreate(Bundle savedInstanceState) {
                  super.onCreate(savedInstanceState);
                  person = realm.where(Person.class).findFirst();
@@ -1379,7 +1379,7 @@ addChangeListener
           
                private Person person; // Strong reference to keep listeners alive
           
-               \@Override
+               @Override
                protected void onCreate(Bundle savedInstanceState) {
                  super.onCreate(savedInstanceState);
                  person = realm.where(Person.class).findFirst();

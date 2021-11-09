@@ -2256,7 +2256,7 @@ addChangeListener
           
                private RealmList<Dog> dogs; // Strong reference to keep listeners alive
           
-               \@Override
+               @Override
                protected void onCreate(Bundle savedInstanceState) {
                  super.onCreate(savedInstanceState);
                  dogs = realm.where(Person.class).findFirst().getDogs();
@@ -2331,7 +2331,7 @@ addChangeListener
           
                private RealmList<Dog> dogs; // Strong reference to keep listeners alive
           
-               \@Override
+               @Override
                protected void onCreate(Bundle savedInstanceState) {
                  super.onCreate(savedInstanceState);
                  dogs = realm.where(Person.class).findFirst().getDogs();

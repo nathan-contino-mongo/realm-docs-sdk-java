@@ -164,7 +164,7 @@ getChangeset
            // Example
            realm.where(Person.class).findFirstAsync().asChangesetObservable()
              .subscribe(new Consumer<ObjectChange>() {
-              \@Override
+              @Override
                public void accept(ObjectChange item) throws Exception {
                  item.getChangeset(); // Will return null the first two times
              }

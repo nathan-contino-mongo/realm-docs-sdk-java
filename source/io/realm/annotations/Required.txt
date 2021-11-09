@@ -30,15 +30,15 @@ When a field of type ``Boolean, Byte, Short, Integer, Long, Float, Double, Strin
 
 
 
-Fields with primitive types are implicitly required. Note, ``String``  is not a primitive type, so in Java it is default nullable unless it is marked ``\@Required`` . In Kotlin the reverse is true, so a ``String``  is non-null. To specify a nullable String in Kotlin you should use ``String?`` .
+Fields with primitive types are implicitly required. Note, ``String``  is not a primitive type, so in Java it is default nullable unless it is marked ``@Required`` . In Kotlin the reverse is true, so a ``String``  is non-null. To specify a nullable String in Kotlin you should use ``String?`` .
 
 
 
-If this annotation is used on a ``RealmList`` , the annotation is applied to the elements inside the list and not the list itself. The list itself is always non-null. This means that a list marked with this annotation are never allowed to hold ``null``  values even if the datatype would otherwise allow it. Realm will throw an exception if you attempt to store null values into a list marked ``\@Required`` .
+If this annotation is used on a ``RealmList`` , the annotation is applied to the elements inside the list and not the list itself. The list itself is always non-null. This means that a list marked with this annotation are never allowed to hold ``null``  values even if the datatype would otherwise allow it. Realm will throw an exception if you attempt to store null values into a list marked ``@Required`` .
 
 
 
-This annotation cannot be used on a ``RealmAny`` , as the inner value of a RealmAny field is always nullable. Realm will throw an exception if you attempt mark a ``RealmAny``  as ``\@Required`` .
+This annotation cannot be used on a ``RealmAny`` , as the inner value of a RealmAny field is always nullable. Realm will throw an exception if you attempt mark a ``RealmAny``  as ``@Required`` .
 
 
 

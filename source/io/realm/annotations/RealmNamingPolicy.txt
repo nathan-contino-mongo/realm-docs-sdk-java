@@ -69,7 +69,7 @@ An example of this:
 .. code-block:: java
 
    
-    \@RealmClass(name = "__person", fieldNamingPolicy = RealmNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
+    @RealmClass(name = "__person", fieldNamingPolicy = RealmNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
     public class Person implements RealmModel { // is converted to "__person" internally
         public string firstName; // Is converted to "first_name" internally
     }
@@ -136,7 +136,7 @@ Using Moshi, it would look something like this:
 
    
     public class Person extends RealmObject {
-        \@Json(name = "first_name") // Name used in JSON input.
+        @Json(name = "first_name") // Name used in JSON input.
         \@RealmField(name = "first_name") // Name used internally in the Realm file.
         public string firstName; // name used in Java
     }
