@@ -17,7 +17,7 @@ Interface SyncSession.ClientResetHandler
 io.realm.mongodb.sync
 =====================
 
-Callback for the specific error event known as a Client Reset, determined by the error code :ref:`ErrorCode.CLIENT_RESET <io_realm_mongodb_ErrorCode_CLIENT_RESET>`.
+Callback for the specific error event known as a Client Reset, determined by the error code :ref:`ErrorCode.CLIENT_RESET <io_realm_mongodb_ErrorCode_CLIENT_RESET>` .
 
 A synced Realm may need to be reset because the MongoDB Realm Server encountered an error and had to be restored from a backup or because it has been too long since the client connected to the server so the server has rotated the logs.
 
@@ -31,7 +31,7 @@ The client reset process can be initiated in one of two ways:
 
 
 
-1. Run :ref:`ClientResetRequiredError.executeClientReset() <io_realm_mongodb_sync_ClientResetRequiredError_executeClientReset__>` manually. All Realm instances must be closed before this method is called.
+1. Run :ref:`ClientResetRequiredError.executeClientReset() <io_realm_mongodb_sync_ClientResetRequiredError_executeClientReset__>`  manually. All Realm instances must be closed before this method is called.
    
    
    
@@ -54,9 +54,9 @@ Method Summary
      - Method and Description
    
    * - public **void**
-     - :ref:`onClientReset <io_realm_mongodb_sync_SyncSession_ClientResetHandler_onClientReset_SyncSession__ClientResetRequiredError_>` (:ref:`SyncSession <io_realm_mongodb_sync_SyncSession>` session,
+     - :ref:`onClientReset <io_realm_mongodb_sync_SyncSession_ClientResetHandler_onClientReset_SyncSession__ClientResetRequiredError_>`  (:ref:`SyncSession <io_realm_mongodb_sync_SyncSession>`  session,
        
-                               :ref:`ClientResetRequiredError <io_realm_mongodb_sync_ClientResetRequiredError>` error)
+                               :ref:`ClientResetRequiredError <io_realm_mongodb_sync_ClientResetRequiredError>`  error)
        
        Callback that indicates a Client Reset has happened.
        
@@ -81,9 +81,9 @@ onClientReset
 .. list-table::
    :header-rows: 1
    
-   * - public **void** onClientReset (:ref:`SyncSession <io_realm_mongodb_sync_SyncSession>` session,
+   * - public **void** onClientReset (:ref:`SyncSession <io_realm_mongodb_sync_SyncSession>`  session,
        
-                               :ref:`ClientResetRequiredError <io_realm_mongodb_sync_ClientResetRequiredError>` error)
+                               :ref:`ClientResetRequiredError <io_realm_mongodb_sync_ClientResetRequiredError>`  error)
        
        
    
@@ -94,13 +94,13 @@ onClientReset
        
        **Parameters**
        
-       - ``session`` - :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>` this error happened on.
+       - ``session`` - :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>`  this error happened on.
           
           
           
           
           
-       - ``error`` - :ref:`ClientResetRequiredError <io_realm_mongodb_sync_ClientResetRequiredError>` the specific Client Reset error.
+       - ``error`` - :ref:`ClientResetRequiredError <io_realm_mongodb_sync_ClientResetRequiredError>`  the specific Client Reset error.
           
           
           
