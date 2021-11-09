@@ -290,11 +290,7 @@ getConfiguration
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public :ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>`  getConfiguration ()
-       
-       
+   * -    public :ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>`  getConfiguration ()
    
    * - Returns the :ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>`  that is responsible for controlling the session.
        
@@ -324,11 +320,7 @@ getUser
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public :ref:`User <io_realm_mongodb_User>`  getUser ()
-       
-       
+   * -    public :ref:`User <io_realm_mongodb_User>`  getUser ()
    
    * - Returns the :ref:`User <io_realm_mongodb_User>`  defined by the :ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>`  that is used to connect to MongoDB Realm.
        
@@ -358,11 +350,7 @@ getServerUrl
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public `URI <https://docs.oracle.com/javase/7/docs/api/java/net/URI.html>`__  getServerUrl ()
-       
-       
+   * -    public `URI <https://docs.oracle.com/javase/7/docs/api/java/net/URI.html>`__  getServerUrl ()
    
    * - Returns the `URI <https://docs.oracle.com/javase/7/docs/api/java/net/URI.html>`__  describing the remote Realm which this session connects to and synchronizes changes with.
        
@@ -392,11 +380,7 @@ getState
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public :ref:`SyncSession.State <io_realm_mongodb_sync_SyncSession_State>`  getState ()
-       
-       
+   * -    public :ref:`SyncSession.State <io_realm_mongodb_sync_SyncSession_State>`  getState ()
    
    * - Get the current session's state, as defined in :ref:`SyncSession.State <io_realm_mongodb_sync_SyncSession_State>` .
        
@@ -440,11 +424,7 @@ getConnectionState
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public :ref:`ConnectionState <io_realm_mongodb_sync_ConnectionState>`  getConnectionState ()
-       
-       
+   * -    public :ref:`ConnectionState <io_realm_mongodb_sync_ConnectionState>`  getConnectionState ()
    
    * - Get the current state of the connection used by the session as defined in :ref:`ConnectionState <io_realm_mongodb_sync_ConnectionState>` .
        
@@ -486,11 +466,7 @@ isConnected
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public **boolean** isConnected ()
-       
-       
+   * -    public **boolean** isConnected ()
    
    * - Checks if the session is connected to the server and can synchronize data. This is a best guess effort. To conserve battery the underlying implementation uses heartbeats to detect if the connection is still available. So if no data is actively being synced and some time has elapsed since the last heartbeat, the connection could have been dropped but this method will still return ``true`` .
        
@@ -520,12 +496,8 @@ addDownloadProgressListener
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public synchronized **void** addDownloadProgressListener (:ref:`ProgressMode <io_realm_mongodb_sync_ProgressMode>`  mode,
-                                                                 :ref:`ProgressListener <io_realm_mongodb_sync_ProgressListener>`  listener)
-       
-       
+   * -    public synchronized **void** addDownloadProgressListener (:ref:`ProgressMode <io_realm_mongodb_sync_ProgressMode>`  mode,
+                                                              :ref:`ProgressListener <io_realm_mongodb_sync_ProgressListener>`  listener)
    
    * - Adds a progress listener tracking changes that need to be downloaded from the Realm Object Server.The :ref:`ProgressListener <io_realm_mongodb_sync_ProgressListener>`  will be triggered immediately when registered, and periodically afterwards.
        
@@ -571,12 +543,8 @@ addUploadProgressListener
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public synchronized **void** addUploadProgressListener (:ref:`ProgressMode <io_realm_mongodb_sync_ProgressMode>`  mode,
-                                                               :ref:`ProgressListener <io_realm_mongodb_sync_ProgressListener>`  listener)
-       
-       
+   * -    public synchronized **void** addUploadProgressListener (:ref:`ProgressMode <io_realm_mongodb_sync_ProgressMode>`  mode,
+                                                            :ref:`ProgressListener <io_realm_mongodb_sync_ProgressListener>`  listener)
    
    * - Adds a progress listener tracking changes that need to be uploaded from the device to the Realm Object Server.The :ref:`ProgressListener <io_realm_mongodb_sync_ProgressListener>`  will be triggered immediately when registered, and periodically afterwards.
        
@@ -622,11 +590,7 @@ removeProgressListener
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public synchronized **void** removeProgressListener (:ref:`ProgressListener <io_realm_mongodb_sync_ProgressListener>`  listener)
-       
-       
+   * -    public synchronized **void** removeProgressListener (:ref:`ProgressListener <io_realm_mongodb_sync_ProgressListener>`  listener)
    
    * - Removes a progress listener. If the listener wasn't registered, this method will do nothing.
        
@@ -662,11 +626,7 @@ addConnectionChangeListener
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public synchronized **void** addConnectionChangeListener (:ref:`ConnectionListener <io_realm_mongodb_sync_ConnectionListener>`  listener)
-       
-       
+   * -    public synchronized **void** addConnectionChangeListener (:ref:`ConnectionListener <io_realm_mongodb_sync_ConnectionListener>`  listener)
    
    * - Adds a listener tracking changes to the connection backing this session. See :ref:`ConnectionState <io_realm_mongodb_sync_ConnectionState>`  for further details.
        
@@ -726,11 +686,7 @@ removeConnectionChangeListener
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public synchronized **void** removeConnectionChangeListener (:ref:`ConnectionListener <io_realm_mongodb_sync_ConnectionListener>`  listener)
-       
-       
+   * -    public synchronized **void** removeConnectionChangeListener (:ref:`ConnectionListener <io_realm_mongodb_sync_ConnectionListener>`  listener)
    
    * - Removes a previously registered :ref:`ConnectionListener <io_realm_mongodb_sync_ConnectionListener>` .
        
@@ -778,11 +734,7 @@ downloadAllServerChanges
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public **void** downloadAllServerChanges ()
-       
-       
+   * -    public **void** downloadAllServerChanges ()
    
    * - Calling this method will block until all known remote changes have been downloaded and applied to the Realm. This will involve network access, so calling this method should only be done from a non-UI thread.If the device is offline, this method might never return.
        
@@ -821,12 +773,8 @@ downloadAllServerChanges
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public **boolean** downloadAllServerChanges (**long** timeout,
-                                                    `TimeUnit <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/TimeUnit.html>`__  unit)
-       
-       
+   * -    public **boolean** downloadAllServerChanges (**long** timeout,
+                                                 `TimeUnit <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/TimeUnit.html>`__  unit)
    
    * - Calling this method will block until all known remote changes have been downloaded and applied to the Realm or the specified timeout is hit. This will involve network access, so calling this method should only be done from a non-UI thread.This method cannot be called before the Realm has been opened.
        
@@ -874,11 +822,7 @@ uploadAllLocalChanges
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public **void** uploadAllLocalChanges ()
-       
-       
+   * -    public **void** uploadAllLocalChanges ()
    
    * - Calling this method will block until all known local changes have been uploaded to the server. This will involve network access, so calling this method should only be done from a non-UI thread.If the device is offline, this method might never return.
        
@@ -917,12 +861,8 @@ uploadAllLocalChanges
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public **boolean** uploadAllLocalChanges (**long** timeout,
-                                                 `TimeUnit <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/TimeUnit.html>`__  unit)
-       
-       
+   * -    public **boolean** uploadAllLocalChanges (**long** timeout,
+                                              `TimeUnit <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/TimeUnit.html>`__  unit)
    
    * - Calling this method will block until all known local changes have been uploaded to the server or the specified timeout is hit. This will involve network access, so calling this method should only be done from a non-UI thread.This method cannot be called before the Realm has been opened.
        
@@ -970,11 +910,7 @@ start
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public synchronized **void** start ()
-       
-       
+   * -    public synchronized **void** start ()
    
    * - Attempts to start the session and enable synchronization with the Realm Object Server.This happens automatically when opening the Realm instance, so doing it manually should only be needed if the session was stopped using :ref:`stop() <io_realm_mongodb_sync_SyncSession_stop__>` .
        
@@ -1028,11 +964,7 @@ stop
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public synchronized **void** stop ()
-       
-       
+   * -    public synchronized **void** stop ()
    
    * - Stops any synchronization with the Realm Object Server until the Realm is re-opened again after fully closing it.Synchronization can be re-enabled by calling :ref:`start() <io_realm_mongodb_sync_SyncSession_start__>`  again.
        

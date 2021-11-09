@@ -306,11 +306,7 @@ encryptionKey
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  encryptionKey (**byte[]** key)
-       
-       
+   * -    public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  encryptionKey (**byte[]** key)
    
    * - Sets the io.realm.Realm#ENCRYPTION_KEY_LENGTH bytes key used to encrypt and decrypt the Realm file.
        
@@ -356,11 +352,7 @@ schemaVersion
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  schemaVersion (**long** schemaVersion)
-       
-       
+   * -    public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  schemaVersion (**long** schemaVersion)
    
    * - Sets the schema version of the Realm.Synced Realms only support additive schema changes which can be applied without requiring a manual migration. The schema version will only be used as an indication to the underlying storage layer to remove or add indexes. These will be recalculated if the provided schema version differ from the version in the Realm file. **WARNING:** There is no guarantee that the value inserted here is the same returned by **Realm.getVersion() (?)**. Due to the nature of synced Realms, the value can both be higher and lower.
        
@@ -422,12 +414,8 @@ modules
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  modules (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  baseModule,
-                                                     `java.lang.Object[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  additionalModules)
-       
-       
+   * -    public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  modules (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  baseModule,
+                                                  `java.lang.Object[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  additionalModules)
    
    * - Replaces the existing module(s) with one or more :ref:`RealmModule <io_realm_annotations_RealmModule>` s. Using this method will replace the current schema for this Realm with the schema defined by the provided modules.
        
@@ -494,11 +482,7 @@ modules
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  modules (`java.lang.Iterable\<java.lang.Object> <https://docs.oracle.com/javase/7/docs/api/java/lang/Iterable.html>`__  modules)
-       
-       
+   * -    public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  modules (`java.lang.Iterable\<java.lang.Object> <https://docs.oracle.com/javase/7/docs/api/java/lang/Iterable.html>`__  modules)
    
    * - Replaces the existing module(s) with one or more :ref:`RealmModule <io_realm_annotations_RealmModule>` s. Using this method will replace the current schema for this Realm with the schema defined by the provided modules.
        
@@ -566,11 +550,7 @@ addModule
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  addModule (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  module)
-       
-       
+   * -    public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  addModule (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  module)
    
    * - Adds a module to the already defined modules.
        
@@ -598,11 +578,7 @@ rxFactory
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  rxFactory (:ref:`RxObservableFactory <io_realm_rx_RxObservableFactory>`  factory)
-       
-       
+   * -    public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  rxFactory (:ref:`RxObservableFactory <io_realm_rx_RxObservableFactory>`  factory)
    
    * - Sets the :ref:`RxObservableFactory <io_realm_rx_RxObservableFactory>`  used to create Rx Observables from Realm objects. The default factory is :ref:`RealmObservableFactory <io_realm_rx_RealmObservableFactory>` .
        
@@ -640,11 +616,7 @@ flowFactory
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  flowFactory (:ref:`FlowFactory <io_realm_coroutines_FlowFactory>`  factory)
-       
-       
+   * -    public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  flowFactory (:ref:`FlowFactory <io_realm_coroutines_FlowFactory>`  factory)
    
    * - Sets the :ref:`FlowFactory <io_realm_coroutines_FlowFactory>`  used to create coroutines Flows from Realm objects. The default factory is :ref:`RealmFlowFactory <io_realm_coroutines_RealmFlowFactory>` .
        
@@ -682,11 +654,7 @@ initialData
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  initialData (:ref:`Realm.Transaction <io_realm_Realm_Transaction>`  transaction)
-       
-       
+   * -    public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  initialData (:ref:`Realm.Transaction <io_realm_Realm_Transaction>`  transaction)
    
    * - Sets the initial data in :ref:`io.realm.Realm <io_realm_Realm>` . This transaction will be executed only the first time the Realm file is opened (created) or while migrating the data if **RealmConfiguration.Builder.deleteRealmIfMigrationNeeded() (?)** is set.
        
@@ -724,11 +692,7 @@ inMemory
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  inMemory ()
-       
-       
+   * -    public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  inMemory ()
    
    * - Setting this will create an in-memory Realm instead of saving it to disk. In-memory Realms might still use disk space if memory is running low, but all files created by an in-memory Realm will be deleted when the Realm is closed.Note that because in-memory Realms are not persisted, you must be sure to hold on to at least one non-closed reference to the in-memory Realm object with the specific name as long as you want the data to last.
        
@@ -758,11 +722,7 @@ errorHandler
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  errorHandler (:ref:`SyncSession.ErrorHandler <io_realm_mongodb_sync_SyncSession_ErrorHandler>`  errorHandler)
-       
-       
+   * -    public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  errorHandler (:ref:`SyncSession.ErrorHandler <io_realm_mongodb_sync_SyncSession_ErrorHandler>`  errorHandler)
    
    * - Sets the error handler used by this configuration.Only errors not handled by the defined ``SyncPolicy``  will be reported to this error handler.
        
@@ -812,11 +772,7 @@ clientResetHandler
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  clientResetHandler (:ref:`SyncSession.ClientResetHandler <io_realm_mongodb_sync_SyncSession_ClientResetHandler>`  handler)
-       
-       
+   * -    public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  clientResetHandler (:ref:`SyncSession.ClientResetHandler <io_realm_mongodb_sync_SyncSession_ClientResetHandler>`  handler)
    
    * - Sets the handler for when a Client Reset occurs. If no handler is set, and error is logged when a Client Reset occurs.
        
@@ -852,11 +808,7 @@ waitForInitialRemoteData
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  waitForInitialRemoteData ()
-       
-       
+   * -    public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  waitForInitialRemoteData ()
    
    * - Setting this will cause the Realm to download all known changes from the server the first time a Realm is opened. The Realm will not open until all the data has been downloaded. This means that if a device is offline the Realm will not open.Since downloading all changes can be an lengthy operation that might block the UI thread, Realms with this setting enabled should only be opened on background threads or with :ref:`Realm.getInstanceAsync(RealmConfiguration, Realm.Callback) <io_realm_Realm_getInstanceAsync_RealmConfiguration__Realm_Callback_>`  on the UI thread.
        
@@ -887,12 +839,8 @@ waitForInitialRemoteData
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  waitForInitialRemoteData (**long** timeout,
-                                                                      `TimeUnit <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/TimeUnit.html>`__  unit)
-       
-       
+   * -    public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  waitForInitialRemoteData (**long** timeout,
+                                                                   `TimeUnit <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/TimeUnit.html>`__  unit)
    
    * - Setting this will cause the Realm to download all known changes from the server the first time a Realm is opened. The Realm will not open until all the data has been downloaded. This means that if a device is offline the Realm will not open.Since downloading all changes can be an lengthy operation that might block the UI thread, Realms with this setting enabled should only be opened on background threads or with :ref:`Realm.getInstanceAsync(RealmConfiguration, Realm.Callback) <io_realm_Realm_getInstanceAsync_RealmConfiguration__Realm_Callback_>`  on the UI thread.
        
@@ -942,11 +890,7 @@ readOnly
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  readOnly ()
-       
-       
+   * -    public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  readOnly ()
    
    * - Setting this will cause the Realm to become read only and all write transactions made against this Realm will fail with an `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__ .
        
@@ -980,11 +924,7 @@ compactOnLaunch
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  compactOnLaunch ()
-       
-       
+   * -    public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  compactOnLaunch ()
    
    * - Setting this will cause Realm to compact the Realm file if the Realm file has grown too large and a significant amount of space can be recovered. See :ref:`DefaultCompactOnLaunchCallback <io_realm_DefaultCompactOnLaunchCallback>`  for details.
        
@@ -1009,11 +949,7 @@ compactOnLaunch
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  compactOnLaunch (:ref:`CompactOnLaunchCallback <io_realm_CompactOnLaunchCallback>`  compactOnLaunch)
-       
-       
+   * -    public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  compactOnLaunch (:ref:`CompactOnLaunchCallback <io_realm_CompactOnLaunchCallback>`  compactOnLaunch)
    
    * - Sets this to determine if the Realm file should be compacted before returned to the user. It is passed the total file size (data + free space) and the bytes used by data in the file.
        
@@ -1049,11 +985,7 @@ urlPrefix
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  urlPrefix (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  urlPrefix)
-       
-       
+   * -    public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  urlPrefix (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  urlPrefix)
    
    * - The prefix that is prepended to the path in the WebSocket request that initiates a sync connection to MongoDB Realm. The value specified must match the server’s configuration otherwise the device will not be able to create a connection. This value is optional and should only be set if a specific firewall rule requires it.
        
@@ -1102,11 +1034,7 @@ maxNumberOfActiveVersions
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  maxNumberOfActiveVersions (**long** number)
-       
-       
+   * -    public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  maxNumberOfActiveVersions (**long** number)
    
    * - Sets the maximum number of live versions in the Realm file before an `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  is thrown when attempting to write more data.
        
@@ -1163,11 +1091,7 @@ allowWritesOnUiThread
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  allowWritesOnUiThread (**boolean** allowWritesOnUiThread)
-       
-       
+   * -    public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  allowWritesOnUiThread (**boolean** allowWritesOnUiThread)
    
    * - Sets whether or not calls to **Realm.executeTransaction (?)** are allowed from the UI thread.
        
@@ -1201,11 +1125,7 @@ allowQueriesOnUiThread
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  allowQueriesOnUiThread (**boolean** allowQueriesOnUiThread)
-       
-       
+   * -    public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  allowQueriesOnUiThread (**boolean** allowQueriesOnUiThread)
    
    * - Sets whether or not ``RealmQueries``  are allowed from the UI thread.
        
@@ -1239,11 +1159,7 @@ build
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public :ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>`  build ()
-       
-       
+   * -    public :ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>`  build ()
    
    * - Creates the RealmConfiguration based on the builder parameters.
        

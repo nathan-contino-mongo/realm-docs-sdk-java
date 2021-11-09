@@ -148,11 +148,7 @@ getOperationType
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public :ref:`BaseChangeEvent.OperationType <io_realm_mongodb_mongo_events_BaseChangeEvent_OperationType>`  getOperationType ()
-       
-       
+   * -    public :ref:`BaseChangeEvent.OperationType <io_realm_mongodb_mongo_events_BaseChangeEvent_OperationType>`  getOperationType ()
    
    * - Returns the operation type of the change that triggered the change event.
        
@@ -180,11 +176,7 @@ getFullDocument
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public **DocumentT (?)** getFullDocument ()
-       
-       
+   * -    public **DocumentT (?)** getFullDocument ()
    
    * - The full document at some point after the change has been applied.
        
@@ -212,11 +204,7 @@ getDocumentKey
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public **BsonDocument (?)** getDocumentKey ()
-       
-       
+   * -    public **BsonDocument (?)** getDocumentKey ()
    
    * - The unique identifier for the document that was actually changed.
        
@@ -244,11 +232,7 @@ getUpdateDescription
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public :ref:`UpdateDescription <io_realm_mongodb_mongo_events_UpdateDescription>`  getUpdateDescription ()
-       
-       
+   * -    public :ref:`UpdateDescription <io_realm_mongodb_mongo_events_UpdateDescription>`  getUpdateDescription ()
    
    * - In the case of an update, the description of which fields have been added, removed or updated.
        
@@ -276,11 +260,7 @@ hasUncommittedWrites
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public **boolean** hasUncommittedWrites ()
-       
-       
+   * -    public **boolean** hasUncommittedWrites ()
    
    * - Indicates a local change event that has not yet been synchronized with a remote data store. Used only for the sync use case.
        
@@ -308,11 +288,7 @@ toBsonDocument
 .. list-table::
    :header-rows: 1
    
-   * - .. parsed-literal::
-       
-          public abstract **BsonDocument (?)** toBsonDocument ()
-       
-       
+   * -    public abstract **BsonDocument (?)** toBsonDocument ()
    
    * - Converts the change event to a BSON representation, as it would look on a MongoDB realm change stream, or a Realm compact watch stream.
        
