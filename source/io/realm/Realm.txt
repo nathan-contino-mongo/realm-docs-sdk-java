@@ -2588,7 +2588,7 @@ createObject
    
    * -    public **E (?)** createObject <**E (?)** >(`java.lang.Class\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  clazz)
    
-   * - Instantiates and adds a new object to the Realm.This method is only available for model classes with no @PrimaryKey annotation. If you like to create an object that has a primary key, use :ref:`createObject(Class, Object) <io_realm_Realm_createObject_Class__Object_>`  or **copyToRealm(RealmModel, ImportFlag...) (?)** instead.
+   * - Instantiates and adds a new object to the Realm.This method is only available for model classes with no @PrimaryKey annotation. If you like to create an object that has a primary key, use :ref:`createObject(Class, Object) <io_realm_Realm_createObject_Class__Object_>`  or :ref:`copyToRealm(RealmModel, ImportFlag...) <io_realm_Realm_copyToRealm_RealmModel__ImportFlag____>`  instead.
        
        
        
@@ -2777,7 +2777,7 @@ copyToRealm
 
 .. _io_realm_Realm_copyToRealm_E_ImportFlag_:
 
-.. _io_realm_Realm_copyToRealm_E__ImportFlag____:
+.. _io_realm_Realm_copyToRealm_RealmModel__ImportFlag____:
 
 .. list-table::
    :header-rows: 1
@@ -2888,7 +2888,7 @@ copyToRealmOrUpdate
 
 .. _io_realm_Realm_copyToRealmOrUpdate_E_ImportFlag_:
 
-.. _io_realm_Realm_copyToRealmOrUpdate_E__ImportFlag____:
+.. _io_realm_Realm_copyToRealmOrUpdate_RealmModel__ImportFlag____:
 
 .. list-table::
    :header-rows: 1
@@ -2939,7 +2939,7 @@ copyToRealmOrUpdate
        
        
           
-          - **copyToRealm(RealmModel, ImportFlag...) (?)**
+          - :ref:`copyToRealm(RealmModel, ImportFlag...) <io_realm_Realm_copyToRealm_RealmModel__ImportFlag____>` 
              
              
              
@@ -3094,7 +3094,7 @@ insert
    
    * -    public **void** insert (:ref:`RealmModel <io_realm_RealmModel>`  object)
    
-   * - Inserts an unmanaged RealmObject. This is generally faster than **copyToRealm(RealmModel, ImportFlag...) (?)** since it doesn't return the inserted elements, and performs minimum allocations and checks. After being inserted any changes to the original object will not be persisted.
+   * - Inserts an unmanaged RealmObject. This is generally faster than :ref:`copyToRealm(RealmModel, ImportFlag...) <io_realm_Realm_copyToRealm_RealmModel__ImportFlag____>`  since it doesn't return the inserted elements, and performs minimum allocations and checks. After being inserted any changes to the original object will not be persisted.
        
        Please note:
        
@@ -3113,7 +3113,7 @@ insert
           
        
        
-       If you want the managed :ref:`RealmObject <io_realm_RealmObject>`  returned, use **copyToRealm(RealmModel, ImportFlag...) (?)**, otherwise if you have a large number of object this method is generally faster.
+       If you want the managed :ref:`RealmObject <io_realm_RealmObject>`  returned, use :ref:`copyToRealm(RealmModel, ImportFlag...) <io_realm_Realm_copyToRealm_RealmModel__ImportFlag____>` , otherwise if you have a large number of object this method is generally faster.
        
        
        
@@ -3235,7 +3235,7 @@ insertOrUpdate
    
    * -    public **void** insertOrUpdate (:ref:`RealmModel <io_realm_RealmModel>`  object)
    
-   * - Inserts or updates an unmanaged RealmObject. This is generally faster than **copyToRealmOrUpdate(RealmModel, ImportFlag...) (?)** since it doesn't return the inserted elements, and performs minimum allocations and checks. After being inserted any changes to the original object will not be persisted.
+   * - Inserts or updates an unmanaged RealmObject. This is generally faster than :ref:`copyToRealmOrUpdate(RealmModel, ImportFlag...) <io_realm_Realm_copyToRealmOrUpdate_RealmModel__ImportFlag____>`  since it doesn't return the inserted elements, and performs minimum allocations and checks. After being inserted any changes to the original object will not be persisted.
        
        Please note:
        
@@ -3254,7 +3254,7 @@ insertOrUpdate
           
        
        
-       If you want the managed :ref:`RealmObject <io_realm_RealmObject>`  returned, use **copyToRealm(RealmModel, ImportFlag...) (?)**, otherwise if you have a large number of object this method is generally faster.
+       If you want the managed :ref:`RealmObject <io_realm_RealmObject>`  returned, use :ref:`copyToRealm(RealmModel, ImportFlag...) <io_realm_Realm_copyToRealm_RealmModel__ImportFlag____>` , otherwise if you have a large number of object this method is generally faster.
        
        
        
@@ -3306,7 +3306,7 @@ copyFromRealm
    
    * - Makes an unmanaged in-memory copy of already persisted RealmObjects. This is a deep copy that will copy all referenced objects.The copied objects are all detached from Realm and they will no longer be automatically updated. This means that the copied objects might contain data that are no longer consistent with other managed Realm objects.
        
-       *WARNING*: Any changes to copied objects can be merged back into Realm using **copyToRealmOrUpdate(RealmModel, ImportFlag...) (?)**, but all fields will be overridden, not just those that were changed. This includes references to other objects, and can potentially override changes made by other threads. This behaviour can be modified using :ref:`ImportFlag <io_realm_ImportFlag>` s.
+       *WARNING*: Any changes to copied objects can be merged back into Realm using :ref:`copyToRealmOrUpdate(RealmModel, ImportFlag...) <io_realm_Realm_copyToRealmOrUpdate_RealmModel__ImportFlag____>` , but all fields will be overridden, not just those that were changed. This includes references to other objects, and can potentially override changes made by other threads. This behaviour can be modified using :ref:`ImportFlag <io_realm_ImportFlag>` s.
        
        
        
@@ -3442,7 +3442,7 @@ copyFromRealm
 
 .. _io_realm_Realm_copyFromRealm_E_:
 
-.. _io_realm_Realm_copyFromRealm_E_:
+.. _io_realm_Realm_copyFromRealm_RealmModel_:
 
 .. list-table::
    :header-rows: 1
@@ -3453,7 +3453,7 @@ copyFromRealm
        
        The copied object(s) are all detached from Realm and they will no longer be automatically updated. This means that the copied objects might contain data that are no longer consistent with other managed Realm objects.
        
-       *WARNING*: Any changes to copied objects can be merged back into Realm using **copyToRealmOrUpdate(RealmModel, ImportFlag...) (?)**, but all fields will be overridden, not just those that were changed. This includes references to other objects, and can potentially override changes made by other threads. This behaviour can be modified using :ref:`ImportFlag <io_realm_ImportFlag>` s.
+       *WARNING*: Any changes to copied objects can be merged back into Realm using :ref:`copyToRealmOrUpdate(RealmModel, ImportFlag...) <io_realm_Realm_copyToRealmOrUpdate_RealmModel__ImportFlag____>` , but all fields will be overridden, not just those that were changed. This includes references to other objects, and can potentially override changes made by other threads. This behaviour can be modified using :ref:`ImportFlag <io_realm_ImportFlag>` s.
        
        
        
@@ -3500,7 +3500,7 @@ copyFromRealm
        
        
           
-          - **copyToRealmOrUpdate(RealmModel, ImportFlag...) (?)**
+          - :ref:`copyToRealmOrUpdate(RealmModel, ImportFlag...) <io_realm_Realm_copyToRealmOrUpdate_RealmModel__ImportFlag____>` 
              
              
              
@@ -3515,7 +3515,7 @@ copyFromRealm
 
 .. _io_realm_Realm_copyFromRealm_E_int_:
 
-.. _io_realm_Realm_copyFromRealm_E__int_:
+.. _io_realm_Realm_copyFromRealm_RealmModel__int_:
 
 .. list-table::
    :header-rows: 1
@@ -3527,7 +3527,7 @@ copyFromRealm
        
        The copied object(s) are all detached from Realm and they will no longer be automatically updated. This means that the copied objects might contain data that are no longer consistent with other managed Realm objects.
        
-       *WARNING*: Any changes to copied objects can be merged back into Realm using **copyToRealmOrUpdate(RealmModel, ImportFlag...) (?)**, but all fields will be overridden, not just those that were changed. This includes references to other objects even though they might be ``null``  due to ``maxDepth``  being reached. This can also potentially override changes made by other threads. This behaviour can be modified using :ref:`ImportFlag <io_realm_ImportFlag>` s.
+       *WARNING*: Any changes to copied objects can be merged back into Realm using :ref:`copyToRealmOrUpdate(RealmModel, ImportFlag...) <io_realm_Realm_copyToRealmOrUpdate_RealmModel__ImportFlag____>` , but all fields will be overridden, not just those that were changed. This includes references to other objects even though they might be ``null``  due to ``maxDepth``  being reached. This can also potentially override changes made by other threads. This behaviour can be modified using :ref:`ImportFlag <io_realm_ImportFlag>` s.
        
        
        
@@ -3580,7 +3580,7 @@ copyFromRealm
        
        
           
-          - **copyToRealmOrUpdate(RealmModel, ImportFlag...) (?)**
+          - :ref:`copyToRealmOrUpdate(RealmModel, ImportFlag...) <io_realm_Realm_copyToRealmOrUpdate_RealmModel__ImportFlag____>` 
              
              
              

@@ -102,7 +102,7 @@ A RealmObject cannot be passed between different threads.
       
       
       
-   - **Realm.copyToRealm(RealmModel, ImportFlag...) (?)**
+   - :ref:`Realm.copyToRealm(RealmModel, ImportFlag...) <io_realm_Realm_copyToRealm_RealmModel__ImportFlag____>` 
       
       
       
@@ -519,7 +519,7 @@ deleteFromRealm
 
 .. _io_realm_RealmObject_deleteFromRealm_E_:
 
-.. _io_realm_RealmObject_deleteFromRealm_E_:
+.. _io_realm_RealmObject_deleteFromRealm_RealmModel_:
 
 .. list-table::
    :header-rows: 1
@@ -628,7 +628,7 @@ isValid
 
 .. _io_realm_RealmObject_isValid_E_:
 
-.. _io_realm_RealmObject_isValid_E_:
+.. _io_realm_RealmObject_isValid_RealmModel_:
 
 .. list-table::
    :header-rows: 1
@@ -705,7 +705,7 @@ isFrozen
 
 .. _io_realm_RealmObject_isFrozen_E_:
 
-.. _io_realm_RealmObject_isFrozen_E_:
+.. _io_realm_RealmObject_isFrozen_RealmModel_:
 
 .. list-table::
    :header-rows: 1
@@ -792,7 +792,7 @@ freeze
 
 .. _io_realm_RealmObject_freeze_E_:
 
-.. _io_realm_RealmObject_freeze_E_:
+.. _io_realm_RealmObject_freeze_RealmModel_:
 
 .. list-table::
    :header-rows: 1
@@ -916,7 +916,7 @@ isLoaded
 
 .. _io_realm_RealmObject_isLoaded_E_:
 
-.. _io_realm_RealmObject_isLoaded_E_:
+.. _io_realm_RealmObject_isLoaded_RealmModel_:
 
 .. list-table::
    :header-rows: 1
@@ -983,7 +983,7 @@ isLoaded
        
        
           
-          - **isValid(RealmModel) (?)**
+          - :ref:`isValid(RealmModel) <io_realm_RealmObject_isValid_RealmModel_>` 
              
              
              
@@ -1016,7 +1016,7 @@ isManaged
        
        
        
-       It is possible to create a managed object from an unmanaged object by using **Realm.copyToRealm(RealmModel, ImportFlag...) (?)**. An unmanaged object can be created from a managed object by using **Realm.copyFromRealm(RealmModel) (?)**.
+       It is possible to create a managed object from an unmanaged object by using :ref:`Realm.copyToRealm(RealmModel, ImportFlag...) <io_realm_Realm_copyToRealm_RealmModel__ImportFlag____>` . An unmanaged object can be created from a managed object by using :ref:`Realm.copyFromRealm(RealmModel) <io_realm_Realm_copyFromRealm_RealmModel_>` .
        
        
        
@@ -1038,20 +1038,20 @@ isManaged
 
 .. _io_realm_RealmObject_isManaged_E_:
 
-.. _io_realm_RealmObject_isManaged_E_:
+.. _io_realm_RealmObject_isManaged_RealmModel_:
 
 .. list-table::
    :header-rows: 1
    
    * -    public static **boolean** isManaged <**E (?)** >(**E (?)** object)
    
-   * - Checks if this object is managed by Realm. A managed object is just a wrapper around the data in the underlying Realm file. On Looper threads, a managed object will be live-updated so it always points to the latest data. It is possible to register a change listener using **addChangeListener(RealmModel, RealmChangeListener) (?)** to be notified when changes happen. Managed objects are thread confined so that they cannot be accessed from other threads than the one that created them.
+   * - Checks if this object is managed by Realm. A managed object is just a wrapper around the data in the underlying Realm file. On Looper threads, a managed object will be live-updated so it always points to the latest data. It is possible to register a change listener using :ref:`addChangeListener(RealmModel, RealmChangeListener) <io_realm_RealmObject_addChangeListener_RealmModel__RealmChangeListener_>`  to be notified when changes happen. Managed objects are thread confined so that they cannot be accessed from other threads than the one that created them.
        
        If this method returns ``false`` , the object is unmanaged. An unmanaged object is just a normal Java object, so it can be parsed freely across threads, but the data in the object is not connected to the underlying Realm, so it will not be live updated.
        
        
        
-       It is possible to create a managed object from an unmanaged object by using **Realm.copyToRealm(RealmModel, ImportFlag...) (?)**. An unmanaged object can be created from a managed object by using **Realm.copyFromRealm(RealmModel) (?)**.
+       It is possible to create a managed object from an unmanaged object by using :ref:`Realm.copyToRealm(RealmModel, ImportFlag...) <io_realm_Realm_copyToRealm_RealmModel__ImportFlag____>` . An unmanaged object can be created from a managed object by using :ref:`Realm.copyFromRealm(RealmModel) <io_realm_Realm_copyFromRealm_RealmModel_>` .
        
        
        
@@ -1210,7 +1210,7 @@ load
 
 .. _io_realm_RealmObject_load_E_:
 
-.. _io_realm_RealmObject_load_E_:
+.. _io_realm_RealmObject_load_RealmModel_:
 
 .. list-table::
    :header-rows: 1
@@ -1414,7 +1414,7 @@ addChangeListener
 
 .. _io_realm_RealmObject_addChangeListener_E_RealmObjectChangeListener_:
 
-.. _io_realm_RealmObject_addChangeListener_E__RealmObjectChangeListener_:
+.. _io_realm_RealmObject_addChangeListener_RealmModel__RealmObjectChangeListener_:
 
 .. list-table::
    :header-rows: 1
@@ -1500,7 +1500,7 @@ addChangeListener
 
 .. _io_realm_RealmObject_addChangeListener_E_RealmChangeListener_:
 
-.. _io_realm_RealmObject_addChangeListener_E__RealmChangeListener_:
+.. _io_realm_RealmObject_addChangeListener_RealmModel__RealmChangeListener_:
 
 .. list-table::
    :header-rows: 1
@@ -1685,7 +1685,7 @@ removeChangeListener
 
 .. _io_realm_RealmObject_removeChangeListener_E_RealmObjectChangeListener_:
 
-.. _io_realm_RealmObject_removeChangeListener_E__RealmObjectChangeListener_:
+.. _io_realm_RealmObject_removeChangeListener_RealmModel__RealmObjectChangeListener_:
 
 .. list-table::
    :header-rows: 1
@@ -1741,7 +1741,7 @@ removeChangeListener
 
 .. _io_realm_RealmObject_removeChangeListener_E_RealmChangeListener_:
 
-.. _io_realm_RealmObject_removeChangeListener_E__RealmChangeListener_:
+.. _io_realm_RealmObject_removeChangeListener_RealmModel__RealmChangeListener_:
 
 .. list-table::
    :header-rows: 1
@@ -1827,7 +1827,7 @@ removeAllChangeListeners
 
 .. _io_realm_RealmObject_removeAllChangeListeners_E_:
 
-.. _io_realm_RealmObject_removeAllChangeListeners_E_:
+.. _io_realm_RealmObject_removeAllChangeListeners_RealmModel_:
 
 .. list-table::
    :header-rows: 1
@@ -1978,7 +1978,7 @@ asFlowable
 
 .. _io_realm_RealmObject_asFlowable_E_:
 
-.. _io_realm_RealmObject_asFlowable_E_:
+.. _io_realm_RealmObject_asFlowable_RealmModel_:
 
 .. list-table::
    :header-rows: 1
@@ -2163,7 +2163,7 @@ asChangesetObservable
 
 .. _io_realm_RealmObject_asChangesetObservable_E_:
 
-.. _io_realm_RealmObject_asChangesetObservable_E_:
+.. _io_realm_RealmObject_asChangesetObservable_RealmModel_:
 
 .. list-table::
    :header-rows: 1
