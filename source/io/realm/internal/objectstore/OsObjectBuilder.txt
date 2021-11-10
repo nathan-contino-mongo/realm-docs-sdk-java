@@ -27,7 +27,7 @@ io.realm.internal.objectstore
 - `java.lang.AutoCloseable <https://docs.oracle.com/javase/7/docs/api/java/lang/AutoCloseable.html>`__ 
 
 
-This class is a wrapper around building up object data for calling \`Object::create()\`Fill the object data by calling the various \`addX()\` methods, then create a new Object or update an existing one by calling :ref:`createNewObject() <io_realm_internal_objectstore_OsObjectBuilder_createNewObject__>` , :ref:`updateExistingTopLevelObject() <io_realm_internal_objectstore_OsObjectBuilder_updateExistingTopLevelObject__>`  or :ref:`updateExistingEmbeddedObject(RealmObjectProxy) <io_realm_internal_objectstore_OsObjectBuilder_updateExistingEmbeddedObject_RealmObjectProxy_>` .
+This class is a wrapper around building up object data for calling \`Object::create()\`Fill the object data by calling the various \`addX()\` methods, then create a new Object or update an existing one by calling  :ref:`createNewObject() <io_realm_internal_objectstore_OsObjectBuilder_createNewObject__>` ,  :ref:`updateExistingTopLevelObject() <io_realm_internal_objectstore_OsObjectBuilder_updateExistingTopLevelObject__>`  or  :ref:`updateExistingEmbeddedObject(RealmObjectProxy) <io_realm_internal_objectstore_OsObjectBuilder_updateExistingEmbeddedObject_RealmObjectProxy_>` .
 
 
 
@@ -42,7 +42,7 @@ Design thoughts
 
 Ideally we would have sent all properties across in one JNI call, but the only way to do that would have been using two \`Object[]\` arrays which would have resulted in a ton of JNI calls back again for resolving the primitive values of boxed types (since JNI do not know about boxed primitives).
 
-The upside of making a JNI call for each property is that we do minimal allocations on the Java side. Also each method call is fairly lightweight as no checks are performed compared to using Proxy setters and :ref:`io.realm.internal.UncheckedRow <io_realm_internal_UncheckedRow>` . The only downside is the current need for sending the key as well. Hopefully we can change that to schema indices at some point.
+The upside of making a JNI call for each property is that we do minimal allocations on the Java side. Also each method call is fairly lightweight as no checks are performed compared to using Proxy setters and  :ref:`io.realm.internal.UncheckedRow <io_realm_internal_UncheckedRow>` . The only downside is the current need for sending the key as well. Hopefully we can change that to schema indices at some point.
 
 
 
@@ -73,8 +73,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addBinarySet <io_realm_internal_objectstore_OsObjectBuilder_addBinarySet_long__RealmSet_byte[]__>`  (**long** columnKey,
-                                  :ref:`io.realm.RealmSet\<byte[]> <io_realm_RealmSet>`  set)
+        :ref:`addBinarySet <io_realm_internal_objectstore_OsObjectBuilder_addBinarySet_long__RealmSet_byte[]__>`  (**long** columnKey,
+                                   :ref:`io.realm.RealmSet\<byte[]> <io_realm_RealmSet>`  set)
        
        
        
@@ -84,8 +84,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addBinaryValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addBinaryValueDictionary_long__RealmDictionary_byte[]__>`  (**long** columnKey,
-                                              :ref:`io.realm.RealmDictionary\<byte[]> <io_realm_RealmDictionary>`  dictionary)
+        :ref:`addBinaryValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addBinaryValueDictionary_long__RealmDictionary_byte[]__>`  (**long** columnKey,
+                                               :ref:`io.realm.RealmDictionary\<byte[]> <io_realm_RealmDictionary>`  dictionary)
        
        
        
@@ -95,7 +95,7 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addBoolean <io_realm_internal_objectstore_OsObjectBuilder_addBoolean_long__Boolean_>`  (**long** columnKey,
+        :ref:`addBoolean <io_realm_internal_objectstore_OsObjectBuilder_addBoolean_long__Boolean_>`  (**long** columnKey,
                                 `Boolean <https://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html>`__  val)
        
        
@@ -106,8 +106,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addBooleanList <io_realm_internal_objectstore_OsObjectBuilder_addBooleanList_long__RealmList_Boolean__>`  (**long** columnKey,
-                                    :ref:`io.realm.RealmList\<java.lang.Boolean> <io_realm_RealmList>`  list)
+        :ref:`addBooleanList <io_realm_internal_objectstore_OsObjectBuilder_addBooleanList_long__RealmList_Boolean__>`  (**long** columnKey,
+                                     :ref:`io.realm.RealmList\<java.lang.Boolean> <io_realm_RealmList>`  list)
        
        
        
@@ -117,8 +117,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addBooleanSet <io_realm_internal_objectstore_OsObjectBuilder_addBooleanSet_long__RealmSet_Boolean__>`  (**long** columnKey,
-                                   :ref:`io.realm.RealmSet\<java.lang.Boolean> <io_realm_RealmSet>`  set)
+        :ref:`addBooleanSet <io_realm_internal_objectstore_OsObjectBuilder_addBooleanSet_long__RealmSet_Boolean__>`  (**long** columnKey,
+                                    :ref:`io.realm.RealmSet\<java.lang.Boolean> <io_realm_RealmSet>`  set)
        
        
        
@@ -128,8 +128,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addBooleanValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addBooleanValueDictionary_long__RealmDictionary_Boolean__>`  (**long** columnKey,
-                                               :ref:`io.realm.RealmDictionary\<java.lang.Boolean> <io_realm_RealmDictionary>`  dictionary)
+        :ref:`addBooleanValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addBooleanValueDictionary_long__RealmDictionary_Boolean__>`  (**long** columnKey,
+                                                :ref:`io.realm.RealmDictionary\<java.lang.Boolean> <io_realm_RealmDictionary>`  dictionary)
        
        
        
@@ -139,7 +139,7 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addByteArray <io_realm_internal_objectstore_OsObjectBuilder_addByteArray_long__byte[]_>`  (**long** columnKey,
+        :ref:`addByteArray <io_realm_internal_objectstore_OsObjectBuilder_addByteArray_long__byte[]_>`  (**long** columnKey,
                                   **byte[]** val)
        
        
@@ -150,8 +150,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addByteArrayList <io_realm_internal_objectstore_OsObjectBuilder_addByteArrayList_long__RealmList_byte[]__>`  (**long** columnKey,
-                                      :ref:`io.realm.RealmList\<byte[]> <io_realm_RealmList>`  list)
+        :ref:`addByteArrayList <io_realm_internal_objectstore_OsObjectBuilder_addByteArrayList_long__RealmList_byte[]__>`  (**long** columnKey,
+                                       :ref:`io.realm.RealmList\<byte[]> <io_realm_RealmList>`  list)
        
        
        
@@ -161,8 +161,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addByteList <io_realm_internal_objectstore_OsObjectBuilder_addByteList_long__RealmList_Byte__>`  (**long** columnKey,
-                                 :ref:`io.realm.RealmList\<java.lang.Byte> <io_realm_RealmList>`  list)
+        :ref:`addByteList <io_realm_internal_objectstore_OsObjectBuilder_addByteList_long__RealmList_Byte__>`  (**long** columnKey,
+                                  :ref:`io.realm.RealmList\<java.lang.Byte> <io_realm_RealmList>`  list)
        
        
        
@@ -172,8 +172,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addByteSet <io_realm_internal_objectstore_OsObjectBuilder_addByteSet_long__RealmSet_Byte__>`  (**long** columnKey,
-                                :ref:`io.realm.RealmSet\<java.lang.Byte> <io_realm_RealmSet>`  set)
+        :ref:`addByteSet <io_realm_internal_objectstore_OsObjectBuilder_addByteSet_long__RealmSet_Byte__>`  (**long** columnKey,
+                                 :ref:`io.realm.RealmSet\<java.lang.Byte> <io_realm_RealmSet>`  set)
        
        
        
@@ -183,8 +183,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addByteValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addByteValueDictionary_long__RealmDictionary_Byte__>`  (**long** columnKey,
-                                            :ref:`io.realm.RealmDictionary\<java.lang.Byte> <io_realm_RealmDictionary>`  dictionary)
+        :ref:`addByteValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addByteValueDictionary_long__RealmDictionary_Byte__>`  (**long** columnKey,
+                                             :ref:`io.realm.RealmDictionary\<java.lang.Byte> <io_realm_RealmDictionary>`  dictionary)
        
        
        
@@ -194,7 +194,7 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addDate <io_realm_internal_objectstore_OsObjectBuilder_addDate_long__Date_>`  (**long** columnKey,
+        :ref:`addDate <io_realm_internal_objectstore_OsObjectBuilder_addDate_long__Date_>`  (**long** columnKey,
                              `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  val)
        
        
@@ -205,8 +205,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addDateList <io_realm_internal_objectstore_OsObjectBuilder_addDateList_long__RealmList_Date__>`  (**long** columnKey,
-                                 :ref:`io.realm.RealmList\<java.util.Date> <io_realm_RealmList>`  list)
+        :ref:`addDateList <io_realm_internal_objectstore_OsObjectBuilder_addDateList_long__RealmList_Date__>`  (**long** columnKey,
+                                  :ref:`io.realm.RealmList\<java.util.Date> <io_realm_RealmList>`  list)
        
        
        
@@ -216,8 +216,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addDateSet <io_realm_internal_objectstore_OsObjectBuilder_addDateSet_long__RealmSet_Date__>`  (**long** columnKey,
-                                :ref:`io.realm.RealmSet\<java.util.Date> <io_realm_RealmSet>`  set)
+        :ref:`addDateSet <io_realm_internal_objectstore_OsObjectBuilder_addDateSet_long__RealmSet_Date__>`  (**long** columnKey,
+                                 :ref:`io.realm.RealmSet\<java.util.Date> <io_realm_RealmSet>`  set)
        
        
        
@@ -227,8 +227,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addDateValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addDateValueDictionary_long__RealmDictionary_Date__>`  (**long** columnKey,
-                                            :ref:`io.realm.RealmDictionary\<java.util.Date> <io_realm_RealmDictionary>`  dictionary)
+        :ref:`addDateValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addDateValueDictionary_long__RealmDictionary_Date__>`  (**long** columnKey,
+                                             :ref:`io.realm.RealmDictionary\<java.util.Date> <io_realm_RealmDictionary>`  dictionary)
        
        
        
@@ -238,7 +238,7 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addDecimal128 <io_realm_internal_objectstore_OsObjectBuilder_addDecimal128_long__Decimal128_>`  (**long** columnKey,
+        :ref:`addDecimal128 <io_realm_internal_objectstore_OsObjectBuilder_addDecimal128_long__Decimal128_>`  (**long** columnKey,
                                    **Decimal128 (?)** val)
        
        
@@ -249,8 +249,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addDecimal128List <io_realm_internal_objectstore_OsObjectBuilder_addDecimal128List_long__RealmList_Decimal128__>`  (**long** columnKey,
-                                       :ref:`io.realm.RealmList\<Decimal128> <io_realm_RealmList>`  list)
+        :ref:`addDecimal128List <io_realm_internal_objectstore_OsObjectBuilder_addDecimal128List_long__RealmList_Decimal128__>`  (**long** columnKey,
+                                        :ref:`io.realm.RealmList\<Decimal128> <io_realm_RealmList>`  list)
        
        
        
@@ -260,8 +260,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addDecimal128Set <io_realm_internal_objectstore_OsObjectBuilder_addDecimal128Set_long__RealmSet_Decimal128__>`  (**long** columnKey,
-                                      :ref:`io.realm.RealmSet\<Decimal128> <io_realm_RealmSet>`  set)
+        :ref:`addDecimal128Set <io_realm_internal_objectstore_OsObjectBuilder_addDecimal128Set_long__RealmSet_Decimal128__>`  (**long** columnKey,
+                                       :ref:`io.realm.RealmSet\<Decimal128> <io_realm_RealmSet>`  set)
        
        
        
@@ -271,8 +271,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addDecimal128ValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addDecimal128ValueDictionary_long__RealmDictionary_Decimal128__>`  (**long** columnKey,
-                                                  :ref:`io.realm.RealmDictionary\<Decimal128> <io_realm_RealmDictionary>`  dictionary)
+        :ref:`addDecimal128ValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addDecimal128ValueDictionary_long__RealmDictionary_Decimal128__>`  (**long** columnKey,
+                                                   :ref:`io.realm.RealmDictionary\<Decimal128> <io_realm_RealmDictionary>`  dictionary)
        
        
        
@@ -282,7 +282,7 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addDouble <io_realm_internal_objectstore_OsObjectBuilder_addDouble_long__Double_>`  (**long** columnKey,
+        :ref:`addDouble <io_realm_internal_objectstore_OsObjectBuilder_addDouble_long__Double_>`  (**long** columnKey,
                                `Double <https://docs.oracle.com/javase/7/docs/api/java/lang/Double.html>`__  val)
        
        
@@ -293,8 +293,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addDoubleList <io_realm_internal_objectstore_OsObjectBuilder_addDoubleList_long__RealmList_Double__>`  (**long** columnKey,
-                                   :ref:`io.realm.RealmList\<java.lang.Double> <io_realm_RealmList>`  list)
+        :ref:`addDoubleList <io_realm_internal_objectstore_OsObjectBuilder_addDoubleList_long__RealmList_Double__>`  (**long** columnKey,
+                                    :ref:`io.realm.RealmList\<java.lang.Double> <io_realm_RealmList>`  list)
        
        
        
@@ -304,8 +304,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addDoubleSet <io_realm_internal_objectstore_OsObjectBuilder_addDoubleSet_long__RealmSet_Double__>`  (**long** columnKey,
-                                  :ref:`io.realm.RealmSet\<java.lang.Double> <io_realm_RealmSet>`  set)
+        :ref:`addDoubleSet <io_realm_internal_objectstore_OsObjectBuilder_addDoubleSet_long__RealmSet_Double__>`  (**long** columnKey,
+                                   :ref:`io.realm.RealmSet\<java.lang.Double> <io_realm_RealmSet>`  set)
        
        
        
@@ -315,8 +315,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addDoubleValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addDoubleValueDictionary_long__RealmDictionary_Double__>`  (**long** columnKey,
-                                              :ref:`io.realm.RealmDictionary\<java.lang.Double> <io_realm_RealmDictionary>`  dictionary)
+        :ref:`addDoubleValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addDoubleValueDictionary_long__RealmDictionary_Double__>`  (**long** columnKey,
+                                               :ref:`io.realm.RealmDictionary\<java.lang.Double> <io_realm_RealmDictionary>`  dictionary)
        
        
        
@@ -326,7 +326,7 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addFloat <io_realm_internal_objectstore_OsObjectBuilder_addFloat_long__Float_>`  (**long** columnKey,
+        :ref:`addFloat <io_realm_internal_objectstore_OsObjectBuilder_addFloat_long__Float_>`  (**long** columnKey,
                               `Float <https://docs.oracle.com/javase/7/docs/api/java/lang/Float.html>`__  val)
        
        
@@ -337,8 +337,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addFloatList <io_realm_internal_objectstore_OsObjectBuilder_addFloatList_long__RealmList_Float__>`  (**long** columnKey,
-                                  :ref:`io.realm.RealmList\<java.lang.Float> <io_realm_RealmList>`  list)
+        :ref:`addFloatList <io_realm_internal_objectstore_OsObjectBuilder_addFloatList_long__RealmList_Float__>`  (**long** columnKey,
+                                   :ref:`io.realm.RealmList\<java.lang.Float> <io_realm_RealmList>`  list)
        
        
        
@@ -348,8 +348,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addFloatSet <io_realm_internal_objectstore_OsObjectBuilder_addFloatSet_long__RealmSet_Float__>`  (**long** columnKey,
-                                 :ref:`io.realm.RealmSet\<java.lang.Float> <io_realm_RealmSet>`  set)
+        :ref:`addFloatSet <io_realm_internal_objectstore_OsObjectBuilder_addFloatSet_long__RealmSet_Float__>`  (**long** columnKey,
+                                  :ref:`io.realm.RealmSet\<java.lang.Float> <io_realm_RealmSet>`  set)
        
        
        
@@ -359,8 +359,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addFloatValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addFloatValueDictionary_long__RealmDictionary_Float__>`  (**long** columnKey,
-                                             :ref:`io.realm.RealmDictionary\<java.lang.Float> <io_realm_RealmDictionary>`  dictionary)
+        :ref:`addFloatValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addFloatValueDictionary_long__RealmDictionary_Float__>`  (**long** columnKey,
+                                              :ref:`io.realm.RealmDictionary\<java.lang.Float> <io_realm_RealmDictionary>`  dictionary)
        
        
        
@@ -370,7 +370,7 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addInteger <io_realm_internal_objectstore_OsObjectBuilder_addInteger_long__Long_>`  (**long** columnKey,
+        :ref:`addInteger <io_realm_internal_objectstore_OsObjectBuilder_addInteger_long__Long_>`  (**long** columnKey,
                                 `Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__  val)
        
        
@@ -381,7 +381,7 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addInteger <io_realm_internal_objectstore_OsObjectBuilder_addInteger_long__Integer_>`  (**long** columnKey,
+        :ref:`addInteger <io_realm_internal_objectstore_OsObjectBuilder_addInteger_long__Integer_>`  (**long** columnKey,
                                 `Integer <https://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html>`__  val)
        
        
@@ -392,7 +392,7 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addInteger <io_realm_internal_objectstore_OsObjectBuilder_addInteger_long__Short_>`  (**long** columnKey,
+        :ref:`addInteger <io_realm_internal_objectstore_OsObjectBuilder_addInteger_long__Short_>`  (**long** columnKey,
                                 `Short <https://docs.oracle.com/javase/7/docs/api/java/lang/Short.html>`__  val)
        
        
@@ -403,7 +403,7 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addInteger <io_realm_internal_objectstore_OsObjectBuilder_addInteger_long__Byte_>`  (**long** columnKey,
+        :ref:`addInteger <io_realm_internal_objectstore_OsObjectBuilder_addInteger_long__Byte_>`  (**long** columnKey,
                                 `Byte <https://docs.oracle.com/javase/7/docs/api/java/lang/Byte.html>`__  val)
        
        
@@ -414,8 +414,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addIntegerList <io_realm_internal_objectstore_OsObjectBuilder_addIntegerList_long__RealmList_Integer__>`  (**long** columnKey,
-                                    :ref:`io.realm.RealmList\<java.lang.Integer> <io_realm_RealmList>`  list)
+        :ref:`addIntegerList <io_realm_internal_objectstore_OsObjectBuilder_addIntegerList_long__RealmList_Integer__>`  (**long** columnKey,
+                                     :ref:`io.realm.RealmList\<java.lang.Integer> <io_realm_RealmList>`  list)
        
        
        
@@ -425,8 +425,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addIntegerSet <io_realm_internal_objectstore_OsObjectBuilder_addIntegerSet_long__RealmSet_Integer__>`  (**long** columnKey,
-                                   :ref:`io.realm.RealmSet\<java.lang.Integer> <io_realm_RealmSet>`  set)
+        :ref:`addIntegerSet <io_realm_internal_objectstore_OsObjectBuilder_addIntegerSet_long__RealmSet_Integer__>`  (**long** columnKey,
+                                    :ref:`io.realm.RealmSet\<java.lang.Integer> <io_realm_RealmSet>`  set)
        
        
        
@@ -436,8 +436,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addIntegerValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addIntegerValueDictionary_long__RealmDictionary_Integer__>`  (**long** columnKey,
-                                               :ref:`io.realm.RealmDictionary\<java.lang.Integer> <io_realm_RealmDictionary>`  dictionary)
+        :ref:`addIntegerValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addIntegerValueDictionary_long__RealmDictionary_Integer__>`  (**long** columnKey,
+                                                :ref:`io.realm.RealmDictionary\<java.lang.Integer> <io_realm_RealmDictionary>`  dictionary)
        
        
        
@@ -447,8 +447,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addLongList <io_realm_internal_objectstore_OsObjectBuilder_addLongList_long__RealmList_Long__>`  (**long** columnKey,
-                                 :ref:`io.realm.RealmList\<java.lang.Long> <io_realm_RealmList>`  list)
+        :ref:`addLongList <io_realm_internal_objectstore_OsObjectBuilder_addLongList_long__RealmList_Long__>`  (**long** columnKey,
+                                  :ref:`io.realm.RealmList\<java.lang.Long> <io_realm_RealmList>`  list)
        
        
        
@@ -458,8 +458,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addLongSet <io_realm_internal_objectstore_OsObjectBuilder_addLongSet_long__RealmSet_Long__>`  (**long** columnKey,
-                                :ref:`io.realm.RealmSet\<java.lang.Long> <io_realm_RealmSet>`  set)
+        :ref:`addLongSet <io_realm_internal_objectstore_OsObjectBuilder_addLongSet_long__RealmSet_Long__>`  (**long** columnKey,
+                                 :ref:`io.realm.RealmSet\<java.lang.Long> <io_realm_RealmSet>`  set)
        
        
        
@@ -469,8 +469,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addLongValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addLongValueDictionary_long__RealmDictionary_Long__>`  (**long** columnKey,
-                                            :ref:`io.realm.RealmDictionary\<java.lang.Long> <io_realm_RealmDictionary>`  dictionary)
+        :ref:`addLongValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addLongValueDictionary_long__RealmDictionary_Long__>`  (**long** columnKey,
+                                             :ref:`io.realm.RealmDictionary\<java.lang.Long> <io_realm_RealmDictionary>`  dictionary)
        
        
        
@@ -480,8 +480,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addMutableRealmInteger <io_realm_internal_objectstore_OsObjectBuilder_addMutableRealmInteger_long__MutableRealmInteger_>`  (**long** columnKey,
-                                            :ref:`MutableRealmInteger <io_realm_MutableRealmInteger>`  val)
+        :ref:`addMutableRealmInteger <io_realm_internal_objectstore_OsObjectBuilder_addMutableRealmInteger_long__MutableRealmInteger_>`  (**long** columnKey,
+                                             :ref:`MutableRealmInteger <io_realm_MutableRealmInteger>`  val)
        
        
        
@@ -491,8 +491,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addMutableRealmIntegerList <io_realm_internal_objectstore_OsObjectBuilder_addMutableRealmIntegerList_long__RealmList_MutableRealmInteger__>`  (**long** columnKey,
-                                                :ref:`io.realm.RealmList\<io.realm.MutableRealmInteger> <io_realm_RealmList>`  list)
+        :ref:`addMutableRealmIntegerList <io_realm_internal_objectstore_OsObjectBuilder_addMutableRealmIntegerList_long__RealmList_MutableRealmInteger__>`  (**long** columnKey,
+                                                 :ref:`io.realm.RealmList\<io.realm.MutableRealmInteger> <io_realm_RealmList>`  list)
        
        
        
@@ -502,7 +502,7 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addNull <io_realm_internal_objectstore_OsObjectBuilder_addNull_long_>`  (**long** columnKey)
+        :ref:`addNull <io_realm_internal_objectstore_OsObjectBuilder_addNull_long_>`  (**long** columnKey)
        
        
        
@@ -512,8 +512,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addObject <io_realm_internal_objectstore_OsObjectBuilder_addObject_long__RealmModel_>`  (**long** columnKey,
-                               :ref:`RealmModel <io_realm_RealmModel>`  val)
+        :ref:`addObject <io_realm_internal_objectstore_OsObjectBuilder_addObject_long__RealmModel_>`  (**long** columnKey,
+                                :ref:`RealmModel <io_realm_RealmModel>`  val)
        
        
        
@@ -523,8 +523,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addObjectDictionary <io_realm_internal_objectstore_OsObjectBuilder_addObjectDictionary_long__RealmDictionary_T__>`  <**T (?)** >(**long** columnKey,
-                                         :ref:`io.realm.RealmDictionary\<T> <io_realm_RealmDictionary>`  dictionary)
+        :ref:`addObjectDictionary <io_realm_internal_objectstore_OsObjectBuilder_addObjectDictionary_long__RealmDictionary_T__>`  <**T (?)** >(**long** columnKey,
+                                          :ref:`io.realm.RealmDictionary\<T> <io_realm_RealmDictionary>`  dictionary)
        
        
        
@@ -534,7 +534,7 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addObjectId <io_realm_internal_objectstore_OsObjectBuilder_addObjectId_long__ObjectId_>`  (**long** columnKey,
+        :ref:`addObjectId <io_realm_internal_objectstore_OsObjectBuilder_addObjectId_long__ObjectId_>`  (**long** columnKey,
                                  **ObjectId (?)** val)
        
        
@@ -545,8 +545,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addObjectIdList <io_realm_internal_objectstore_OsObjectBuilder_addObjectIdList_long__RealmList_ObjectId__>`  (**long** columnKey,
-                                     :ref:`io.realm.RealmList\<ObjectId> <io_realm_RealmList>`  list)
+        :ref:`addObjectIdList <io_realm_internal_objectstore_OsObjectBuilder_addObjectIdList_long__RealmList_ObjectId__>`  (**long** columnKey,
+                                      :ref:`io.realm.RealmList\<ObjectId> <io_realm_RealmList>`  list)
        
        
        
@@ -556,8 +556,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addObjectIdSet <io_realm_internal_objectstore_OsObjectBuilder_addObjectIdSet_long__RealmSet_ObjectId__>`  (**long** columnKey,
-                                    :ref:`io.realm.RealmSet\<ObjectId> <io_realm_RealmSet>`  set)
+        :ref:`addObjectIdSet <io_realm_internal_objectstore_OsObjectBuilder_addObjectIdSet_long__RealmSet_ObjectId__>`  (**long** columnKey,
+                                     :ref:`io.realm.RealmSet\<ObjectId> <io_realm_RealmSet>`  set)
        
        
        
@@ -567,8 +567,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addObjectIdValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addObjectIdValueDictionary_long__RealmDictionary_ObjectId__>`  (**long** columnKey,
-                                                :ref:`io.realm.RealmDictionary\<ObjectId> <io_realm_RealmDictionary>`  dictionary)
+        :ref:`addObjectIdValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addObjectIdValueDictionary_long__RealmDictionary_ObjectId__>`  (**long** columnKey,
+                                                 :ref:`io.realm.RealmDictionary\<ObjectId> <io_realm_RealmDictionary>`  dictionary)
        
        
        
@@ -578,8 +578,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addObjectList <io_realm_internal_objectstore_OsObjectBuilder_addObjectList_long__RealmList_T__>`  <**T (?)** >(**long** columnKey,
-                                   :ref:`io.realm.RealmList\<T> <io_realm_RealmList>`  list)
+        :ref:`addObjectList <io_realm_internal_objectstore_OsObjectBuilder_addObjectList_long__RealmList_T__>`  <**T (?)** >(**long** columnKey,
+                                    :ref:`io.realm.RealmList\<T> <io_realm_RealmList>`  list)
        
        
        
@@ -589,8 +589,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addObjectSet <io_realm_internal_objectstore_OsObjectBuilder_addObjectSet_long__RealmSet_T__>`  <**T (?)** >(**long** columnKey,
-                                  :ref:`io.realm.RealmSet\<T> <io_realm_RealmSet>`  set)
+        :ref:`addObjectSet <io_realm_internal_objectstore_OsObjectBuilder_addObjectSet_long__RealmSet_T__>`  <**T (?)** >(**long** columnKey,
+                                   :ref:`io.realm.RealmSet\<T> <io_realm_RealmSet>`  set)
        
        
        
@@ -600,7 +600,7 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addRealmAny <io_realm_internal_objectstore_OsObjectBuilder_addRealmAny_long__long_>`  (**long** columnKey,
+        :ref:`addRealmAny <io_realm_internal_objectstore_OsObjectBuilder_addRealmAny_long__long_>`  (**long** columnKey,
                                  **long** realmAnyPtr)
        
        
@@ -611,8 +611,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addRealmAnyList <io_realm_internal_objectstore_OsObjectBuilder_addRealmAnyList_long__RealmList_RealmAny__>`  (**long** columnKey,
-                                     :ref:`io.realm.RealmList\<io.realm.RealmAny> <io_realm_RealmList>`  list)
+        :ref:`addRealmAnyList <io_realm_internal_objectstore_OsObjectBuilder_addRealmAnyList_long__RealmList_RealmAny__>`  (**long** columnKey,
+                                      :ref:`io.realm.RealmList\<io.realm.RealmAny> <io_realm_RealmList>`  list)
        
        
        
@@ -622,8 +622,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addRealmAnySet <io_realm_internal_objectstore_OsObjectBuilder_addRealmAnySet_long__RealmSet_RealmAny__>`  (**long** columnKey,
-                                    :ref:`io.realm.RealmSet\<io.realm.RealmAny> <io_realm_RealmSet>`  set)
+        :ref:`addRealmAnySet <io_realm_internal_objectstore_OsObjectBuilder_addRealmAnySet_long__RealmSet_RealmAny__>`  (**long** columnKey,
+                                     :ref:`io.realm.RealmSet\<io.realm.RealmAny> <io_realm_RealmSet>`  set)
        
        
        
@@ -633,8 +633,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addRealmAnyValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addRealmAnyValueDictionary_long__RealmDictionary_RealmAny__>`  (**long** columnKey,
-                                                :ref:`io.realm.RealmDictionary\<io.realm.RealmAny> <io_realm_RealmDictionary>`  dictionary)
+        :ref:`addRealmAnyValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addRealmAnyValueDictionary_long__RealmDictionary_RealmAny__>`  (**long** columnKey,
+                                                 :ref:`io.realm.RealmDictionary\<io.realm.RealmAny> <io_realm_RealmDictionary>`  dictionary)
        
        
        
@@ -644,8 +644,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addShortList <io_realm_internal_objectstore_OsObjectBuilder_addShortList_long__RealmList_Short__>`  (**long** columnKey,
-                                  :ref:`io.realm.RealmList\<java.lang.Short> <io_realm_RealmList>`  list)
+        :ref:`addShortList <io_realm_internal_objectstore_OsObjectBuilder_addShortList_long__RealmList_Short__>`  (**long** columnKey,
+                                   :ref:`io.realm.RealmList\<java.lang.Short> <io_realm_RealmList>`  list)
        
        
        
@@ -655,8 +655,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addShortSet <io_realm_internal_objectstore_OsObjectBuilder_addShortSet_long__RealmSet_Short__>`  (**long** columnKey,
-                                 :ref:`io.realm.RealmSet\<java.lang.Short> <io_realm_RealmSet>`  set)
+        :ref:`addShortSet <io_realm_internal_objectstore_OsObjectBuilder_addShortSet_long__RealmSet_Short__>`  (**long** columnKey,
+                                  :ref:`io.realm.RealmSet\<java.lang.Short> <io_realm_RealmSet>`  set)
        
        
        
@@ -666,8 +666,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addShortValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addShortValueDictionary_long__RealmDictionary_Short__>`  (**long** columnKey,
-                                             :ref:`io.realm.RealmDictionary\<java.lang.Short> <io_realm_RealmDictionary>`  dictionary)
+        :ref:`addShortValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addShortValueDictionary_long__RealmDictionary_Short__>`  (**long** columnKey,
+                                              :ref:`io.realm.RealmDictionary\<java.lang.Short> <io_realm_RealmDictionary>`  dictionary)
        
        
        
@@ -677,7 +677,7 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addString <io_realm_internal_objectstore_OsObjectBuilder_addString_long__String_>`  (**long** columnKey,
+        :ref:`addString <io_realm_internal_objectstore_OsObjectBuilder_addString_long__String_>`  (**long** columnKey,
                                `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  val)
        
        
@@ -688,8 +688,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addStringList <io_realm_internal_objectstore_OsObjectBuilder_addStringList_long__RealmList_String__>`  (**long** columnKey,
-                                   :ref:`io.realm.RealmList\<java.lang.String> <io_realm_RealmList>`  list)
+        :ref:`addStringList <io_realm_internal_objectstore_OsObjectBuilder_addStringList_long__RealmList_String__>`  (**long** columnKey,
+                                    :ref:`io.realm.RealmList\<java.lang.String> <io_realm_RealmList>`  list)
        
        
        
@@ -699,8 +699,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addStringSet <io_realm_internal_objectstore_OsObjectBuilder_addStringSet_long__RealmSet_String__>`  (**long** columnKey,
-                                  :ref:`io.realm.RealmSet\<java.lang.String> <io_realm_RealmSet>`  set)
+        :ref:`addStringSet <io_realm_internal_objectstore_OsObjectBuilder_addStringSet_long__RealmSet_String__>`  (**long** columnKey,
+                                   :ref:`io.realm.RealmSet\<java.lang.String> <io_realm_RealmSet>`  set)
        
        
        
@@ -710,8 +710,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addStringValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addStringValueDictionary_long__RealmDictionary_String__>`  (**long** columnKey,
-                                              :ref:`io.realm.RealmDictionary\<java.lang.String> <io_realm_RealmDictionary>`  dictionary)
+        :ref:`addStringValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addStringValueDictionary_long__RealmDictionary_String__>`  (**long** columnKey,
+                                               :ref:`io.realm.RealmDictionary\<java.lang.String> <io_realm_RealmDictionary>`  dictionary)
        
        
        
@@ -721,7 +721,7 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addUUID <io_realm_internal_objectstore_OsObjectBuilder_addUUID_long__UUID_>`  (**long** columnKey,
+        :ref:`addUUID <io_realm_internal_objectstore_OsObjectBuilder_addUUID_long__UUID_>`  (**long** columnKey,
                              `UUID <https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html>`__  val)
        
        
@@ -732,8 +732,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addUUIDList <io_realm_internal_objectstore_OsObjectBuilder_addUUIDList_long__RealmList_UUID__>`  (**long** columnKey,
-                                 :ref:`io.realm.RealmList\<java.util.UUID> <io_realm_RealmList>`  list)
+        :ref:`addUUIDList <io_realm_internal_objectstore_OsObjectBuilder_addUUIDList_long__RealmList_UUID__>`  (**long** columnKey,
+                                  :ref:`io.realm.RealmList\<java.util.UUID> <io_realm_RealmList>`  list)
        
        
        
@@ -743,8 +743,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addUUIDSet <io_realm_internal_objectstore_OsObjectBuilder_addUUIDSet_long__RealmSet_UUID__>`  (**long** columnKey,
-                                :ref:`io.realm.RealmSet\<java.util.UUID> <io_realm_RealmSet>`  set)
+        :ref:`addUUIDSet <io_realm_internal_objectstore_OsObjectBuilder_addUUIDSet_long__RealmSet_UUID__>`  (**long** columnKey,
+                                 :ref:`io.realm.RealmSet\<java.util.UUID> <io_realm_RealmSet>`  set)
        
        
        
@@ -754,8 +754,8 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addUUIDValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addUUIDValueDictionary_long__RealmDictionary_UUID__>`  (**long** columnKey,
-                                            :ref:`io.realm.RealmDictionary\<java.util.UUID> <io_realm_RealmDictionary>`  dictionary)
+        :ref:`addUUIDValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addUUIDValueDictionary_long__RealmDictionary_UUID__>`  (**long** columnKey,
+                                             :ref:`io.realm.RealmDictionary\<java.util.UUID> <io_realm_RealmDictionary>`  dictionary)
        
        
        
@@ -765,7 +765,7 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`close <io_realm_internal_objectstore_OsObjectBuilder_close__>`  ()
+        :ref:`close <io_realm_internal_objectstore_OsObjectBuilder_close__>`  ()
        
        Manually closes the underlying Builder
        
@@ -773,9 +773,9 @@ Method Summary
        
    
    * - 
-       public :ref:`UncheckedRow <io_realm_internal_UncheckedRow>` 
+       public  :ref:`UncheckedRow <io_realm_internal_UncheckedRow>` 
      - 
-       :ref:`createNewObject <io_realm_internal_objectstore_OsObjectBuilder_createNewObject__>`  ()
+        :ref:`createNewObject <io_realm_internal_objectstore_OsObjectBuilder_createNewObject__>`  ()
        
        Create a new object.
        
@@ -785,7 +785,7 @@ Method Summary
    * - 
        public **long**
      - 
-       :ref:`getNativePtr <io_realm_internal_objectstore_OsObjectBuilder_getNativePtr__>`  ()
+        :ref:`getNativePtr <io_realm_internal_objectstore_OsObjectBuilder_getNativePtr__>`  ()
        
        Returns the underlying native pointer representing this builder.
        
@@ -795,7 +795,7 @@ Method Summary
    * - 
        public static native **void**
      - 
-       :ref:`nativeAddRealmAnyDictionaryEntry <io_realm_internal_objectstore_OsObjectBuilder_nativeAddRealmAnyDictionaryEntry_long__String__long_>`  (**long** dictionaryPtr,
+        :ref:`nativeAddRealmAnyDictionaryEntry <io_realm_internal_objectstore_OsObjectBuilder_nativeAddRealmAnyDictionaryEntry_long__String__long_>`  (**long** dictionaryPtr,
                                                                     `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  key,
                                                                     **long** realmAnyPtr)
        
@@ -807,7 +807,7 @@ Method Summary
    * - 
        public static native **void**
      - 
-       :ref:`nativeAddRealmAnyListItem <io_realm_internal_objectstore_OsObjectBuilder_nativeAddRealmAnyListItem_long__long_>`  (**long** listPtr,
+        :ref:`nativeAddRealmAnyListItem <io_realm_internal_objectstore_OsObjectBuilder_nativeAddRealmAnyListItem_long__long_>`  (**long** listPtr,
                                                              **long** realmAnyPtr)
        
        
@@ -818,7 +818,7 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`updateExistingEmbeddedObject <io_realm_internal_objectstore_OsObjectBuilder_updateExistingEmbeddedObject_RealmObjectProxy_>`  (:ref:`RealmObjectProxy <io_realm_internal_RealmObjectProxy>`  embeddedObject)
+        :ref:`updateExistingEmbeddedObject <io_realm_internal_objectstore_OsObjectBuilder_updateExistingEmbeddedObject_RealmObjectProxy_>`  ( :ref:`RealmObjectProxy <io_realm_internal_RealmObjectProxy>`  embeddedObject)
        
        Updates an existing embedded object.
        
@@ -828,7 +828,7 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`updateExistingTopLevelObject <io_realm_internal_objectstore_OsObjectBuilder_updateExistingTopLevelObject__>`  ()
+        :ref:`updateExistingTopLevelObject <io_realm_internal_objectstore_OsObjectBuilder_updateExistingTopLevelObject__>`  ()
        
        Updates any existing object if it exists, otherwise creates a new one.
        
@@ -874,7 +874,7 @@ addBinarySet
    :header-rows: 1
    
    * -    public **void** addBinarySet (**long** columnKey,
-                                  :ref:`io.realm.RealmSet\<byte[]> <io_realm_RealmSet>`  set)
+                                   :ref:`io.realm.RealmSet\<byte[]> <io_realm_RealmSet>`  set)
    
    * - 
        
@@ -913,7 +913,7 @@ addBinaryValueDictionary
    :header-rows: 1
    
    * -    public **void** addBinaryValueDictionary (**long** columnKey,
-                                              :ref:`io.realm.RealmDictionary\<byte[]> <io_realm_RealmDictionary>`  dictionary)
+                                               :ref:`io.realm.RealmDictionary\<byte[]> <io_realm_RealmDictionary>`  dictionary)
    
    * - 
        
@@ -989,7 +989,7 @@ addBooleanList
    :header-rows: 1
    
    * -    public **void** addBooleanList (**long** columnKey,
-                                    :ref:`io.realm.RealmList\<java.lang.Boolean> <io_realm_RealmList>`  list)
+                                     :ref:`io.realm.RealmList\<java.lang.Boolean> <io_realm_RealmList>`  list)
    
    * - 
        
@@ -1028,7 +1028,7 @@ addBooleanSet
    :header-rows: 1
    
    * -    public **void** addBooleanSet (**long** columnKey,
-                                   :ref:`io.realm.RealmSet\<java.lang.Boolean> <io_realm_RealmSet>`  set)
+                                    :ref:`io.realm.RealmSet\<java.lang.Boolean> <io_realm_RealmSet>`  set)
    
    * - 
        
@@ -1067,7 +1067,7 @@ addBooleanValueDictionary
    :header-rows: 1
    
    * -    public **void** addBooleanValueDictionary (**long** columnKey,
-                                               :ref:`io.realm.RealmDictionary\<java.lang.Boolean> <io_realm_RealmDictionary>`  dictionary)
+                                                :ref:`io.realm.RealmDictionary\<java.lang.Boolean> <io_realm_RealmDictionary>`  dictionary)
    
    * - 
        
@@ -1145,7 +1145,7 @@ addByteArrayList
    :header-rows: 1
    
    * -    public **void** addByteArrayList (**long** columnKey,
-                                      :ref:`io.realm.RealmList\<byte[]> <io_realm_RealmList>`  list)
+                                       :ref:`io.realm.RealmList\<byte[]> <io_realm_RealmList>`  list)
    
    * - 
        
@@ -1184,7 +1184,7 @@ addByteList
    :header-rows: 1
    
    * -    public **void** addByteList (**long** columnKey,
-                                 :ref:`io.realm.RealmList\<java.lang.Byte> <io_realm_RealmList>`  list)
+                                  :ref:`io.realm.RealmList\<java.lang.Byte> <io_realm_RealmList>`  list)
    
    * - 
        
@@ -1223,7 +1223,7 @@ addByteSet
    :header-rows: 1
    
    * -    public **void** addByteSet (**long** columnKey,
-                                :ref:`io.realm.RealmSet\<java.lang.Byte> <io_realm_RealmSet>`  set)
+                                 :ref:`io.realm.RealmSet\<java.lang.Byte> <io_realm_RealmSet>`  set)
    
    * - 
        
@@ -1262,7 +1262,7 @@ addByteValueDictionary
    :header-rows: 1
    
    * -    public **void** addByteValueDictionary (**long** columnKey,
-                                            :ref:`io.realm.RealmDictionary\<java.lang.Byte> <io_realm_RealmDictionary>`  dictionary)
+                                             :ref:`io.realm.RealmDictionary\<java.lang.Byte> <io_realm_RealmDictionary>`  dictionary)
    
    * - 
        
@@ -1338,7 +1338,7 @@ addDateList
    :header-rows: 1
    
    * -    public **void** addDateList (**long** columnKey,
-                                 :ref:`io.realm.RealmList\<java.util.Date> <io_realm_RealmList>`  list)
+                                  :ref:`io.realm.RealmList\<java.util.Date> <io_realm_RealmList>`  list)
    
    * - 
        
@@ -1377,7 +1377,7 @@ addDateSet
    :header-rows: 1
    
    * -    public **void** addDateSet (**long** columnKey,
-                                :ref:`io.realm.RealmSet\<java.util.Date> <io_realm_RealmSet>`  set)
+                                 :ref:`io.realm.RealmSet\<java.util.Date> <io_realm_RealmSet>`  set)
    
    * - 
        
@@ -1416,7 +1416,7 @@ addDateValueDictionary
    :header-rows: 1
    
    * -    public **void** addDateValueDictionary (**long** columnKey,
-                                            :ref:`io.realm.RealmDictionary\<java.util.Date> <io_realm_RealmDictionary>`  dictionary)
+                                             :ref:`io.realm.RealmDictionary\<java.util.Date> <io_realm_RealmDictionary>`  dictionary)
    
    * - 
        
@@ -1492,7 +1492,7 @@ addDecimal128List
    :header-rows: 1
    
    * -    public **void** addDecimal128List (**long** columnKey,
-                                       :ref:`io.realm.RealmList\<Decimal128> <io_realm_RealmList>`  list)
+                                        :ref:`io.realm.RealmList\<Decimal128> <io_realm_RealmList>`  list)
    
    * - 
        
@@ -1531,7 +1531,7 @@ addDecimal128Set
    :header-rows: 1
    
    * -    public **void** addDecimal128Set (**long** columnKey,
-                                      :ref:`io.realm.RealmSet\<Decimal128> <io_realm_RealmSet>`  set)
+                                       :ref:`io.realm.RealmSet\<Decimal128> <io_realm_RealmSet>`  set)
    
    * - 
        
@@ -1570,7 +1570,7 @@ addDecimal128ValueDictionary
    :header-rows: 1
    
    * -    public **void** addDecimal128ValueDictionary (**long** columnKey,
-                                                  :ref:`io.realm.RealmDictionary\<Decimal128> <io_realm_RealmDictionary>`  dictionary)
+                                                   :ref:`io.realm.RealmDictionary\<Decimal128> <io_realm_RealmDictionary>`  dictionary)
    
    * - 
        
@@ -1646,7 +1646,7 @@ addDoubleList
    :header-rows: 1
    
    * -    public **void** addDoubleList (**long** columnKey,
-                                   :ref:`io.realm.RealmList\<java.lang.Double> <io_realm_RealmList>`  list)
+                                    :ref:`io.realm.RealmList\<java.lang.Double> <io_realm_RealmList>`  list)
    
    * - 
        
@@ -1685,7 +1685,7 @@ addDoubleSet
    :header-rows: 1
    
    * -    public **void** addDoubleSet (**long** columnKey,
-                                  :ref:`io.realm.RealmSet\<java.lang.Double> <io_realm_RealmSet>`  set)
+                                   :ref:`io.realm.RealmSet\<java.lang.Double> <io_realm_RealmSet>`  set)
    
    * - 
        
@@ -1724,7 +1724,7 @@ addDoubleValueDictionary
    :header-rows: 1
    
    * -    public **void** addDoubleValueDictionary (**long** columnKey,
-                                              :ref:`io.realm.RealmDictionary\<java.lang.Double> <io_realm_RealmDictionary>`  dictionary)
+                                               :ref:`io.realm.RealmDictionary\<java.lang.Double> <io_realm_RealmDictionary>`  dictionary)
    
    * - 
        
@@ -1800,7 +1800,7 @@ addFloatList
    :header-rows: 1
    
    * -    public **void** addFloatList (**long** columnKey,
-                                  :ref:`io.realm.RealmList\<java.lang.Float> <io_realm_RealmList>`  list)
+                                   :ref:`io.realm.RealmList\<java.lang.Float> <io_realm_RealmList>`  list)
    
    * - 
        
@@ -1839,7 +1839,7 @@ addFloatSet
    :header-rows: 1
    
    * -    public **void** addFloatSet (**long** columnKey,
-                                 :ref:`io.realm.RealmSet\<java.lang.Float> <io_realm_RealmSet>`  set)
+                                  :ref:`io.realm.RealmSet\<java.lang.Float> <io_realm_RealmSet>`  set)
    
    * - 
        
@@ -1878,7 +1878,7 @@ addFloatValueDictionary
    :header-rows: 1
    
    * -    public **void** addFloatValueDictionary (**long** columnKey,
-                                             :ref:`io.realm.RealmDictionary\<java.lang.Float> <io_realm_RealmDictionary>`  dictionary)
+                                              :ref:`io.realm.RealmDictionary\<java.lang.Float> <io_realm_RealmDictionary>`  dictionary)
    
    * - 
        
@@ -2026,7 +2026,7 @@ addIntegerList
    :header-rows: 1
    
    * -    public **void** addIntegerList (**long** columnKey,
-                                    :ref:`io.realm.RealmList\<java.lang.Integer> <io_realm_RealmList>`  list)
+                                     :ref:`io.realm.RealmList\<java.lang.Integer> <io_realm_RealmList>`  list)
    
    * - 
        
@@ -2065,7 +2065,7 @@ addIntegerSet
    :header-rows: 1
    
    * -    public **void** addIntegerSet (**long** columnKey,
-                                   :ref:`io.realm.RealmSet\<java.lang.Integer> <io_realm_RealmSet>`  set)
+                                    :ref:`io.realm.RealmSet\<java.lang.Integer> <io_realm_RealmSet>`  set)
    
    * - 
        
@@ -2104,7 +2104,7 @@ addIntegerValueDictionary
    :header-rows: 1
    
    * -    public **void** addIntegerValueDictionary (**long** columnKey,
-                                               :ref:`io.realm.RealmDictionary\<java.lang.Integer> <io_realm_RealmDictionary>`  dictionary)
+                                                :ref:`io.realm.RealmDictionary\<java.lang.Integer> <io_realm_RealmDictionary>`  dictionary)
    
    * - 
        
@@ -2143,7 +2143,7 @@ addLongList
    :header-rows: 1
    
    * -    public **void** addLongList (**long** columnKey,
-                                 :ref:`io.realm.RealmList\<java.lang.Long> <io_realm_RealmList>`  list)
+                                  :ref:`io.realm.RealmList\<java.lang.Long> <io_realm_RealmList>`  list)
    
    * - 
        
@@ -2182,7 +2182,7 @@ addLongSet
    :header-rows: 1
    
    * -    public **void** addLongSet (**long** columnKey,
-                                :ref:`io.realm.RealmSet\<java.lang.Long> <io_realm_RealmSet>`  set)
+                                 :ref:`io.realm.RealmSet\<java.lang.Long> <io_realm_RealmSet>`  set)
    
    * - 
        
@@ -2221,7 +2221,7 @@ addLongValueDictionary
    :header-rows: 1
    
    * -    public **void** addLongValueDictionary (**long** columnKey,
-                                            :ref:`io.realm.RealmDictionary\<java.lang.Long> <io_realm_RealmDictionary>`  dictionary)
+                                             :ref:`io.realm.RealmDictionary\<java.lang.Long> <io_realm_RealmDictionary>`  dictionary)
    
    * - 
        
@@ -2258,7 +2258,7 @@ addMutableRealmInteger
    :header-rows: 1
    
    * -    public **void** addMutableRealmInteger (**long** columnKey,
-                                            :ref:`MutableRealmInteger <io_realm_MutableRealmInteger>`  val)
+                                             :ref:`MutableRealmInteger <io_realm_MutableRealmInteger>`  val)
    
    * - 
        
@@ -2297,7 +2297,7 @@ addMutableRealmIntegerList
    :header-rows: 1
    
    * -    public **void** addMutableRealmIntegerList (**long** columnKey,
-                                                :ref:`io.realm.RealmList\<io.realm.MutableRealmInteger> <io_realm_RealmList>`  list)
+                                                 :ref:`io.realm.RealmList\<io.realm.MutableRealmInteger> <io_realm_RealmList>`  list)
    
    * - 
        
@@ -2368,7 +2368,7 @@ addObject
    :header-rows: 1
    
    * -    public **void** addObject (**long** columnKey,
-                               :ref:`RealmModel <io_realm_RealmModel>`  val)
+                                :ref:`RealmModel <io_realm_RealmModel>`  val)
    
    * - 
        
@@ -2407,7 +2407,7 @@ addObjectDictionary
    :header-rows: 1
    
    * -    public **void** addObjectDictionary <**T (?)** >(**long** columnKey,
-                                         :ref:`io.realm.RealmDictionary\<T> <io_realm_RealmDictionary>`  dictionary)
+                                          :ref:`io.realm.RealmDictionary\<T> <io_realm_RealmDictionary>`  dictionary)
    
    * - 
        
@@ -2483,7 +2483,7 @@ addObjectIdList
    :header-rows: 1
    
    * -    public **void** addObjectIdList (**long** columnKey,
-                                     :ref:`io.realm.RealmList\<ObjectId> <io_realm_RealmList>`  list)
+                                      :ref:`io.realm.RealmList\<ObjectId> <io_realm_RealmList>`  list)
    
    * - 
        
@@ -2522,7 +2522,7 @@ addObjectIdSet
    :header-rows: 1
    
    * -    public **void** addObjectIdSet (**long** columnKey,
-                                    :ref:`io.realm.RealmSet\<ObjectId> <io_realm_RealmSet>`  set)
+                                     :ref:`io.realm.RealmSet\<ObjectId> <io_realm_RealmSet>`  set)
    
    * - 
        
@@ -2561,7 +2561,7 @@ addObjectIdValueDictionary
    :header-rows: 1
    
    * -    public **void** addObjectIdValueDictionary (**long** columnKey,
-                                                :ref:`io.realm.RealmDictionary\<ObjectId> <io_realm_RealmDictionary>`  dictionary)
+                                                 :ref:`io.realm.RealmDictionary\<ObjectId> <io_realm_RealmDictionary>`  dictionary)
    
    * - 
        
@@ -2600,7 +2600,7 @@ addObjectList
    :header-rows: 1
    
    * -    public **void** addObjectList <**T (?)** >(**long** columnKey,
-                                   :ref:`io.realm.RealmList\<T> <io_realm_RealmList>`  list)
+                                    :ref:`io.realm.RealmList\<T> <io_realm_RealmList>`  list)
    
    * - 
        
@@ -2639,7 +2639,7 @@ addObjectSet
    :header-rows: 1
    
    * -    public **void** addObjectSet <**T (?)** >(**long** columnKey,
-                                  :ref:`io.realm.RealmSet\<T> <io_realm_RealmSet>`  set)
+                                   :ref:`io.realm.RealmSet\<T> <io_realm_RealmSet>`  set)
    
    * - 
        
@@ -2715,7 +2715,7 @@ addRealmAnyList
    :header-rows: 1
    
    * -    public **void** addRealmAnyList (**long** columnKey,
-                                     :ref:`io.realm.RealmList\<io.realm.RealmAny> <io_realm_RealmList>`  list)
+                                      :ref:`io.realm.RealmList\<io.realm.RealmAny> <io_realm_RealmList>`  list)
    
    * - 
        
@@ -2754,7 +2754,7 @@ addRealmAnySet
    :header-rows: 1
    
    * -    public **void** addRealmAnySet (**long** columnKey,
-                                    :ref:`io.realm.RealmSet\<io.realm.RealmAny> <io_realm_RealmSet>`  set)
+                                     :ref:`io.realm.RealmSet\<io.realm.RealmAny> <io_realm_RealmSet>`  set)
    
    * - 
        
@@ -2793,7 +2793,7 @@ addRealmAnyValueDictionary
    :header-rows: 1
    
    * -    public **void** addRealmAnyValueDictionary (**long** columnKey,
-                                                :ref:`io.realm.RealmDictionary\<io.realm.RealmAny> <io_realm_RealmDictionary>`  dictionary)
+                                                 :ref:`io.realm.RealmDictionary\<io.realm.RealmAny> <io_realm_RealmDictionary>`  dictionary)
    
    * - 
        
@@ -2832,7 +2832,7 @@ addShortList
    :header-rows: 1
    
    * -    public **void** addShortList (**long** columnKey,
-                                  :ref:`io.realm.RealmList\<java.lang.Short> <io_realm_RealmList>`  list)
+                                   :ref:`io.realm.RealmList\<java.lang.Short> <io_realm_RealmList>`  list)
    
    * - 
        
@@ -2871,7 +2871,7 @@ addShortSet
    :header-rows: 1
    
    * -    public **void** addShortSet (**long** columnKey,
-                                 :ref:`io.realm.RealmSet\<java.lang.Short> <io_realm_RealmSet>`  set)
+                                  :ref:`io.realm.RealmSet\<java.lang.Short> <io_realm_RealmSet>`  set)
    
    * - 
        
@@ -2910,7 +2910,7 @@ addShortValueDictionary
    :header-rows: 1
    
    * -    public **void** addShortValueDictionary (**long** columnKey,
-                                             :ref:`io.realm.RealmDictionary\<java.lang.Short> <io_realm_RealmDictionary>`  dictionary)
+                                              :ref:`io.realm.RealmDictionary\<java.lang.Short> <io_realm_RealmDictionary>`  dictionary)
    
    * - 
        
@@ -2986,7 +2986,7 @@ addStringList
    :header-rows: 1
    
    * -    public **void** addStringList (**long** columnKey,
-                                   :ref:`io.realm.RealmList\<java.lang.String> <io_realm_RealmList>`  list)
+                                    :ref:`io.realm.RealmList\<java.lang.String> <io_realm_RealmList>`  list)
    
    * - 
        
@@ -3025,7 +3025,7 @@ addStringSet
    :header-rows: 1
    
    * -    public **void** addStringSet (**long** columnKey,
-                                  :ref:`io.realm.RealmSet\<java.lang.String> <io_realm_RealmSet>`  set)
+                                   :ref:`io.realm.RealmSet\<java.lang.String> <io_realm_RealmSet>`  set)
    
    * - 
        
@@ -3064,7 +3064,7 @@ addStringValueDictionary
    :header-rows: 1
    
    * -    public **void** addStringValueDictionary (**long** columnKey,
-                                              :ref:`io.realm.RealmDictionary\<java.lang.String> <io_realm_RealmDictionary>`  dictionary)
+                                               :ref:`io.realm.RealmDictionary\<java.lang.String> <io_realm_RealmDictionary>`  dictionary)
    
    * - 
        
@@ -3140,7 +3140,7 @@ addUUIDList
    :header-rows: 1
    
    * -    public **void** addUUIDList (**long** columnKey,
-                                 :ref:`io.realm.RealmList\<java.util.UUID> <io_realm_RealmList>`  list)
+                                  :ref:`io.realm.RealmList\<java.util.UUID> <io_realm_RealmList>`  list)
    
    * - 
        
@@ -3179,7 +3179,7 @@ addUUIDSet
    :header-rows: 1
    
    * -    public **void** addUUIDSet (**long** columnKey,
-                                :ref:`io.realm.RealmSet\<java.util.UUID> <io_realm_RealmSet>`  set)
+                                 :ref:`io.realm.RealmSet\<java.util.UUID> <io_realm_RealmSet>`  set)
    
    * - 
        
@@ -3218,7 +3218,7 @@ addUUIDValueDictionary
    :header-rows: 1
    
    * -    public **void** addUUIDValueDictionary (**long** columnKey,
-                                            :ref:`io.realm.RealmDictionary\<java.util.UUID> <io_realm_RealmDictionary>`  dictionary)
+                                             :ref:`io.realm.RealmDictionary\<java.util.UUID> <io_realm_RealmDictionary>`  dictionary)
    
    * - 
        
@@ -3290,7 +3290,7 @@ createNewObject
 .. list-table::
    :header-rows: 1
    
-   * -    public :ref:`UncheckedRow <io_realm_internal_UncheckedRow>`  createNewObject ()
+   * -    public  :ref:`UncheckedRow <io_realm_internal_UncheckedRow>`  createNewObject ()
    
    * - Create a new object.The builder is automatically closed after calling this method.
        
@@ -3437,7 +3437,7 @@ updateExistingEmbeddedObject
 .. list-table::
    :header-rows: 1
    
-   * -    public **void** updateExistingEmbeddedObject (:ref:`RealmObjectProxy <io_realm_internal_RealmObjectProxy>`  embeddedObject)
+   * -    public **void** updateExistingEmbeddedObject ( :ref:`RealmObjectProxy <io_realm_internal_RealmObjectProxy>`  embeddedObject)
    
    * - Updates an existing embedded object.The builder is automatically closed after calling this method.
        

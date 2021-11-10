@@ -19,7 +19,7 @@ io.realm.internal
 
 `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
 
-Utility class used to cache the mapping between object field names and their column indices. The ``ColumnIndices``  instance is dedicated to a single **io.realm.BaseRealm (?)** instance. Different Realm instances will never share the same column indices cache. The column info cache is loaded lazily. A :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  will be added to the cache when the relevant Realm object gets accessed.
+Utility class used to cache the mapping between object field names and their column indices. The ``ColumnIndices``  instance is dedicated to a single **io.realm.BaseRealm (?)** instance. Different Realm instances will never share the same column indices cache. The column info cache is loaded lazily. A  :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  will be added to the cache when the relevant Realm object gets accessed.
 
 This class can be mutated, after construction, in two ways:
 
@@ -35,7 +35,7 @@ This class can be mutated, after construction, in two ways:
    
 
 
-Immutable instances of this class protect against the first possibility by throwing on calls to ``copyFrom`` . :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  for its mutability contract. There are two, redundant, lookup methods, for schema members: by Class and by String. Query lookups must be done by the name of the class and use the String-keyed lookup table. Although it would be possible to use the same table to look up ColumnInfo by Class, the class lookup is very fast and on a hot path, so we maintain the redundant table.
+Immutable instances of this class protect against the first possibility by throwing on calls to ``copyFrom`` .  :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  for its mutability contract. There are two, redundant, lookup methods, for schema members: by Class and by String. Query lookups must be done by the name of the class and use the String-keyed lookup table. Although it would be possible to use the same table to look up ColumnInfo by Class, the class lookup is very fast and on a hot path, so we maintain the redundant table.
 
 
 
@@ -60,11 +60,11 @@ Method Summary
      - Method and Description
    
    * - 
-       public :ref:`ColumnInfo <io_realm_internal_ColumnInfo>` 
+       public  :ref:`ColumnInfo <io_realm_internal_ColumnInfo>` 
      - 
-       :ref:`getColumnInfo <io_realm_internal_ColumnIndices_getColumnInfo_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  simpleClassName)
+        :ref:`getColumnInfo <io_realm_internal_ColumnIndices_getColumnInfo_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  simpleClassName)
        
-       Returns the :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  for the provided internal class name.
+       Returns the  :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  for the provided internal class name.
        
        
        
@@ -72,11 +72,11 @@ Method Summary
        
    
    * - 
-       public :ref:`ColumnInfo <io_realm_internal_ColumnInfo>` 
+       public  :ref:`ColumnInfo <io_realm_internal_ColumnInfo>` 
      - 
-       :ref:`getColumnInfo <io_realm_internal_ColumnIndices_getColumnInfo_Class___extends_RealmModel__>`  (`java.lang.Class\<? extends io.realm.RealmModel> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  clazz)
+        :ref:`getColumnInfo <io_realm_internal_ColumnIndices_getColumnInfo_Class___extends_RealmModel__>`  (`java.lang.Class\<? extends io.realm.RealmModel> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  clazz)
        
-       Returns the :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  for the passed class.
+       Returns the  :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  for the passed class.
        
        
        
@@ -86,9 +86,9 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`refresh <io_realm_internal_ColumnIndices_refresh__>`  ()
+        :ref:`refresh <io_realm_internal_ColumnIndices_refresh__>`  ()
        
-       Refreshes all the existing :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  in the cache.
+       Refreshes all the existing  :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  in the cache.
        
        
        
@@ -98,7 +98,7 @@ Method Summary
    * - 
        public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
      - 
-       :ref:`toString <io_realm_internal_ColumnIndices_toString__>`  ()
+        :ref:`toString <io_realm_internal_ColumnIndices_toString__>`  ()
        
        
        
@@ -139,9 +139,9 @@ getColumnInfo
 .. list-table::
    :header-rows: 1
    
-   * -    public :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  getColumnInfo (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  simpleClassName)
+   * -    public  :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  getColumnInfo (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  simpleClassName)
    
-   * - Returns the :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  for the provided internal class name.
+   * - Returns the  :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  for the provided internal class name.
        
        
        
@@ -162,7 +162,7 @@ getColumnInfo
        
        **Throws**
        
-       - :ref:`io.realm.exceptions.RealmException <io_realm_exceptions_RealmException>`  - if the class cannot be found in the schema.
+       -  :ref:`io.realm.exceptions.RealmException <io_realm_exceptions_RealmException>`  - if the class cannot be found in the schema.
           
           
           
@@ -180,9 +180,9 @@ getColumnInfo
 .. list-table::
    :header-rows: 1
    
-   * -    public :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  getColumnInfo (`java.lang.Class\<? extends io.realm.RealmModel> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  clazz)
+   * -    public  :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  getColumnInfo (`java.lang.Class\<? extends io.realm.RealmModel> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  clazz)
    
-   * - Returns the :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  for the passed class.
+   * - Returns the  :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  for the passed class.
        
        
        
@@ -203,7 +203,7 @@ getColumnInfo
        
        **Throws**
        
-       - :ref:`io.realm.exceptions.RealmException <io_realm_exceptions_RealmException>`  - if the class cannot be found in the schema.
+       -  :ref:`io.realm.exceptions.RealmException <io_realm_exceptions_RealmException>`  - if the class cannot be found in the schema.
           
           
           
@@ -236,7 +236,7 @@ refresh
    
    * -    public **void** refresh ()
    
-   * - Refreshes all the existing :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  in the cache.
+   * - Refreshes all the existing  :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  in the cache.
        
        
        

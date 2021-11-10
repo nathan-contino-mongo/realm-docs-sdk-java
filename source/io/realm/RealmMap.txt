@@ -24,21 +24,21 @@ io.realm
 
 
 - `java.util.Map <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__ 
-- :ref:`io.realm.internal.ManageableObject <io_realm_internal_ManageableObject>` 
-- :ref:`io.realm.internal.Freezable <io_realm_internal_Freezable>` 
+-  :ref:`io.realm.internal.ManageableObject <io_realm_internal_ManageableObject>` 
+-  :ref:`io.realm.internal.Freezable <io_realm_internal_Freezable>` 
 
 
 RealmMap is used to map keys to values. A RealmMap cannot contain duplicate keys and each key can map to at most one value. A RealmMap cannot have ``null``  keys but can have ``null``  values.
 
-Similarly to :ref:`RealmList <io_realm_RealmList>` s, a RealmDictionary can operate in managed and unmanaged modes. In managed mode a RealmDictionary persists all its contents inside a Realm whereas in unmanaged mode it functions like a `HashMap <https://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html>`__ .
+Similarly to  :ref:`RealmList <io_realm_RealmList>` s, a RealmDictionary can operate in managed and unmanaged modes. In managed mode a RealmDictionary persists all its contents inside a Realm whereas in unmanaged mode it functions like a `HashMap <https://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html>`__ .
 
 
 
-Managed RealmDictionaries can only be created by Realm and will automatically update its content whenever the underlying Realm is updated. Managed RealmDictionaries can only be accessed using the getter that points to a RealmDictionary field of a :ref:`RealmObject <io_realm_RealmObject>` .
+Managed RealmDictionaries can only be created by Realm and will automatically update its content whenever the underlying Realm is updated. Managed RealmDictionaries can only be accessed using the getter that points to a RealmDictionary field of a  :ref:`RealmObject <io_realm_RealmObject>` .
 
 
 
-Unmanaged RealmDictionaries can be created by the user and can contain both managed and unmanaged RealmObjects. This is useful when dealing with JSON deserializers like GSON or other frameworks that inject values into a class. Unmanaged RealmMaps can be added to a Realm using the :ref:`Realm.copyToRealm(Iterable, ImportFlag...) <io_realm_Realm_copyToRealm_Iterable__ImportFlag____>`  method.
+Unmanaged RealmDictionaries can be created by the user and can contain both managed and unmanaged RealmObjects. This is useful when dealing with JSON deserializers like GSON or other frameworks that inject values into a class. Unmanaged RealmMaps can be added to a Realm using the  :ref:`Realm.copyToRealm(Iterable, ImportFlag...) <io_realm_Realm_copyToRealm_Iterable__ImportFlag____>`  method.
 
 
 
@@ -86,21 +86,9 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`addChangeListener <io_realm_RealmMap_addChangeListener_RealmChangeListener_RealmMap_K__V___>`  (:ref:`io.realm.RealmChangeListener\<io.realm.RealmMap\<K, V>> <io_realm_RealmChangeListener>`  listener)
+        :ref:`addChangeListener <io_realm_RealmMap_addChangeListener_RealmChangeListener_RealmMap_K__V___>`  ( :ref:`io.realm.RealmChangeListener\<io.realm.RealmMap\<K, V>> <io_realm_RealmChangeListener>`  listener)
        
-       Adds a change listener to this :ref:`RealmMap <io_realm_RealmMap>` .
-       
-       
-       
-       
-       
-   
-   * - 
-       public **void**
-     - 
-       :ref:`addChangeListener <io_realm_RealmMap_addChangeListener_MapChangeListener_K__V__>`  (:ref:`io.realm.MapChangeListener\<K, V> <io_realm_MapChangeListener>`  listener)
-       
-       Adds a change listener to this :ref:`RealmMap <io_realm_RealmMap>` .
+       Adds a change listener to this  :ref:`RealmMap <io_realm_RealmMap>` .
        
        
        
@@ -110,7 +98,19 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`clear <io_realm_RealmMap_clear__>`  ()
+        :ref:`addChangeListener <io_realm_RealmMap_addChangeListener_MapChangeListener_K__V__>`  ( :ref:`io.realm.MapChangeListener\<K, V> <io_realm_MapChangeListener>`  listener)
+       
+       Adds a change listener to this  :ref:`RealmMap <io_realm_RealmMap>` .
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+        :ref:`clear <io_realm_RealmMap_clear__>`  ()
        
        
        
@@ -120,7 +120,7 @@ Method Summary
    * - 
        public **boolean**
      - 
-       :ref:`containsKey <io_realm_RealmMap_containsKey_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  key)
+        :ref:`containsKey <io_realm_RealmMap_containsKey_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  key)
        
        
        
@@ -130,7 +130,7 @@ Method Summary
    * - 
        public **boolean**
      - 
-       :ref:`containsValue <io_realm_RealmMap_containsValue_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  value)
+        :ref:`containsValue <io_realm_RealmMap_containsValue_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  value)
        
        
        
@@ -140,7 +140,7 @@ Method Summary
    * - 
        public `Set <https://docs.oracle.com/javase/7/docs/api/java/util/Set.html>`__ 
      - 
-       :ref:`entrySet <io_realm_RealmMap_entrySet__>`  ()
+        :ref:`entrySet <io_realm_RealmMap_entrySet__>`  ()
        
        
        
@@ -148,9 +148,9 @@ Method Summary
        
    
    * - 
-       public :ref:`RealmMap <io_realm_RealmMap>` 
+       public  :ref:`RealmMap <io_realm_RealmMap>` 
      - 
-       :ref:`freeze <io_realm_RealmMap_freeze__>`  ()
+        :ref:`freeze <io_realm_RealmMap_freeze__>`  ()
        
        
        
@@ -160,7 +160,7 @@ Method Summary
    * - 
        public **V (?)**
      - 
-       :ref:`get <io_realm_RealmMap_get_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  key)
+        :ref:`get <io_realm_RealmMap_get_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  key)
        
        
        
@@ -170,7 +170,7 @@ Method Summary
    * - 
        public **boolean**
      - 
-       :ref:`isEmpty <io_realm_RealmMap_isEmpty__>`  ()
+        :ref:`isEmpty <io_realm_RealmMap_isEmpty__>`  ()
        
        
        
@@ -180,19 +180,7 @@ Method Summary
    * - 
        public **boolean**
      - 
-       :ref:`isFrozen <io_realm_RealmMap_isFrozen__>`  ()
-       
-       
-       
-       
-       
-       
-       
-   
-   * - 
-       public **boolean**
-     - 
-       :ref:`isManaged <io_realm_RealmMap_isManaged__>`  ()
+        :ref:`isFrozen <io_realm_RealmMap_isFrozen__>`  ()
        
        
        
@@ -204,7 +192,19 @@ Method Summary
    * - 
        public **boolean**
      - 
-       :ref:`isValid <io_realm_RealmMap_isValid__>`  ()
+        :ref:`isManaged <io_realm_RealmMap_isManaged__>`  ()
+       
+       
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+        :ref:`isValid <io_realm_RealmMap_isValid__>`  ()
        
        
        
@@ -216,7 +216,7 @@ Method Summary
    * - 
        public `Set <https://docs.oracle.com/javase/7/docs/api/java/util/Set.html>`__ 
      - 
-       :ref:`keySet <io_realm_RealmMap_keySet__>`  ()
+        :ref:`keySet <io_realm_RealmMap_keySet__>`  ()
        
        
        
@@ -226,7 +226,7 @@ Method Summary
    * - 
        public **V (?)**
      - 
-       :ref:`put <io_realm_RealmMap_put_K__V_>`  (**K (?)** key,
+        :ref:`put <io_realm_RealmMap_put_K__V_>`  (**K (?)** key,
                       **V (?)** value)
        
        
@@ -237,7 +237,7 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`putAll <io_realm_RealmMap_putAll_Map___extends_K____extends_V__>`  (`java.util.Map\<? extends K, ? extends V> <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  m)
+        :ref:`putAll <io_realm_RealmMap_putAll_Map___extends_K____extends_V__>`  (`java.util.Map\<? extends K, ? extends V> <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  m)
        
        
        
@@ -247,7 +247,7 @@ Method Summary
    * - 
        public **V (?)**
      - 
-       :ref:`remove <io_realm_RealmMap_remove_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  key)
+        :ref:`remove <io_realm_RealmMap_remove_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  key)
        
        
        
@@ -257,7 +257,7 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`removeAllChangeListeners <io_realm_RealmMap_removeAllChangeListeners__>`  ()
+        :ref:`removeAllChangeListeners <io_realm_RealmMap_removeAllChangeListeners__>`  ()
        
        Removes all user-defined change listeners.
        
@@ -267,7 +267,7 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`removeChangeListener <io_realm_RealmMap_removeChangeListener_RealmChangeListener_RealmMap_K__V___>`  (:ref:`io.realm.RealmChangeListener\<io.realm.RealmMap\<K, V>> <io_realm_RealmChangeListener>`  listener)
+        :ref:`removeChangeListener <io_realm_RealmMap_removeChangeListener_RealmChangeListener_RealmMap_K__V___>`  ( :ref:`io.realm.RealmChangeListener\<io.realm.RealmMap\<K, V>> <io_realm_RealmChangeListener>`  listener)
        
        Removes the specified change listener.
        
@@ -277,7 +277,7 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`removeChangeListener <io_realm_RealmMap_removeChangeListener_MapChangeListener_K__V__>`  (:ref:`io.realm.MapChangeListener\<K, V> <io_realm_MapChangeListener>`  listener)
+        :ref:`removeChangeListener <io_realm_RealmMap_removeChangeListener_MapChangeListener_K__V__>`  ( :ref:`io.realm.MapChangeListener\<K, V> <io_realm_MapChangeListener>`  listener)
        
        Removes the specified change listener.
        
@@ -287,7 +287,7 @@ Method Summary
    * - 
        public **int**
      - 
-       :ref:`size <io_realm_RealmMap_size__>`  ()
+        :ref:`size <io_realm_RealmMap_size__>`  ()
        
        
        
@@ -297,7 +297,7 @@ Method Summary
    * - 
        public `Collection <https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html>`__ 
      - 
-       :ref:`values <io_realm_RealmMap_values__>`  ()
+        :ref:`values <io_realm_RealmMap_values__>`  ()
        
        
        
@@ -353,9 +353,9 @@ addChangeListener
 .. list-table::
    :header-rows: 1
    
-   * -    public **void** addChangeListener (:ref:`io.realm.RealmChangeListener\<io.realm.RealmMap\<K, V>> <io_realm_RealmChangeListener>`  listener)
+   * -    public **void** addChangeListener ( :ref:`io.realm.RealmChangeListener\<io.realm.RealmMap\<K, V>> <io_realm_RealmChangeListener>`  listener)
    
-   * - Adds a change listener to this :ref:`RealmMap <io_realm_RealmMap>` .
+   * - Adds a change listener to this  :ref:`RealmMap <io_realm_RealmMap>` .
        
        Registering a change listener will not prevent the underlying RealmMap from being garbage collected. If the RealmMap is garbage collected, the change listener will stop being triggered. To avoid this, keep a strong reference for as long as appropriate e.g. in a class variable.
        
@@ -426,7 +426,7 @@ addChangeListener
        
        
           
-          - :ref:`io.realm.RealmChangeListener <io_realm_RealmChangeListener>` 
+          -  :ref:`io.realm.RealmChangeListener <io_realm_RealmChangeListener>` 
              
              
              
@@ -444,9 +444,9 @@ addChangeListener
 .. list-table::
    :header-rows: 1
    
-   * -    public **void** addChangeListener (:ref:`io.realm.MapChangeListener\<K, V> <io_realm_MapChangeListener>`  listener)
+   * -    public **void** addChangeListener ( :ref:`io.realm.MapChangeListener\<K, V> <io_realm_MapChangeListener>`  listener)
    
-   * - Adds a change listener to this :ref:`RealmMap <io_realm_RealmMap>` .
+   * - Adds a change listener to this  :ref:`RealmMap <io_realm_RealmMap>` .
        
        Registering a change listener will not prevent the underlying RealmMap from being garbage collected. If the RealmMap is garbage collected, the change listener will stop being triggered. To avoid this, keep a strong reference for as long as appropriate e.g. in a class variable.
        
@@ -674,7 +674,7 @@ freeze
 .. list-table::
    :header-rows: 1
    
-   * -    public :ref:`RealmMap <io_realm_RealmMap>`  freeze ()
+   * -    public  :ref:`RealmMap <io_realm_RealmMap>`  freeze ()
    
    * - 
        
@@ -1064,7 +1064,7 @@ removeAllChangeListeners
        
        
           
-          - :ref:`io.realm.RealmChangeListener <io_realm_RealmChangeListener>` 
+          -  :ref:`io.realm.RealmChangeListener <io_realm_RealmChangeListener>` 
              
              
              
@@ -1095,7 +1095,7 @@ removeChangeListener
 .. list-table::
    :header-rows: 1
    
-   * -    public **void** removeChangeListener (:ref:`io.realm.RealmChangeListener\<io.realm.RealmMap\<K, V>> <io_realm_RealmChangeListener>`  listener)
+   * -    public **void** removeChangeListener ( :ref:`io.realm.RealmChangeListener\<io.realm.RealmMap\<K, V>> <io_realm_RealmChangeListener>`  listener)
    
    * - Removes the specified change listener.
        
@@ -1136,7 +1136,7 @@ removeChangeListener
        
        
           
-          - :ref:`io.realm.RealmChangeListener <io_realm_RealmChangeListener>` 
+          -  :ref:`io.realm.RealmChangeListener <io_realm_RealmChangeListener>` 
              
              
              
@@ -1154,7 +1154,7 @@ removeChangeListener
 .. list-table::
    :header-rows: 1
    
-   * -    public **void** removeChangeListener (:ref:`io.realm.MapChangeListener\<K, V> <io_realm_MapChangeListener>`  listener)
+   * -    public **void** removeChangeListener ( :ref:`io.realm.MapChangeListener\<K, V> <io_realm_MapChangeListener>`  listener)
    
    * - Removes the specified change listener.
        

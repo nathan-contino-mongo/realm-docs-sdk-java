@@ -20,9 +20,9 @@ io.realm.mongodb.sync
 `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
  | 		`java.lang.Enum <https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html>`__ 
 
-Enum describing the states a SyncSession can be in. The initial state is :ref:`State.INACTIVE <io_realm_mongodb_sync_SyncSession_State_INACTIVE>` .
+Enum describing the states a SyncSession can be in. The initial state is  :ref:`State.INACTIVE <io_realm_mongodb_sync_SyncSession_State_INACTIVE>` .
 
-A Realm will automatically synchronize data with the server if the session is either :ref:`State.ACTIVE <io_realm_mongodb_sync_SyncSession_State_ACTIVE>`  or :ref:`State.DYING <io_realm_mongodb_sync_SyncSession_State_DYING>`  and **isConnected() (?)** returns ``true`` .
+A Realm will automatically synchronize data with the server if the session is either  :ref:`State.ACTIVE <io_realm_mongodb_sync_SyncSession_State_ACTIVE>`  or  :ref:`State.DYING <io_realm_mongodb_sync_SyncSession_State_DYING>`  and **isConnected() (?)** returns ``true`` .
 
 
 
@@ -38,27 +38,27 @@ Enum Constant Summary
    * - Enum Constant
      - Description
    
-   * - :ref:`INACTIVE <io_realm_mongodb_sync_SyncSession_State_INACTIVE>` 
+   * -  :ref:`INACTIVE <io_realm_mongodb_sync_SyncSession_State_INACTIVE>` 
      - This is the initial state.
        
        
        
    
-   * - :ref:`ACTIVE <io_realm_mongodb_sync_SyncSession_State_ACTIVE>` 
-     - The Realm is open and data will be synchronized between the device and the server if the underlying connection is :ref:`ConnectionState.CONNECTED <io_realm_mongodb_sync_ConnectionState_CONNECTED>` .
+   * -  :ref:`ACTIVE <io_realm_mongodb_sync_SyncSession_State_ACTIVE>` 
+     - The Realm is open and data will be synchronized between the device and the server if the underlying connection is  :ref:`ConnectionState.CONNECTED <io_realm_mongodb_sync_ConnectionState_CONNECTED>` .
        
        
        
        
        
    
-   * - :ref:`DYING <io_realm_mongodb_sync_SyncSession_State_DYING>` 
+   * -  :ref:`DYING <io_realm_mongodb_sync_SyncSession_State_DYING>` 
      - The Realm was closed, but still contains data that needs to be synchronized to the server.
        
        
        
    
-   * - :ref:`WAITING_FOR_ACCESS_TOKEN <io_realm_mongodb_sync_SyncSession_State_WAITING_FOR_ACCESS_TOKEN>` 
+   * -  :ref:`WAITING_FOR_ACCESS_TOKEN <io_realm_mongodb_sync_SyncSession_State_WAITING_FOR_ACCESS_TOKEN>` 
      - The user is attempting to synchronize data but needs a valid access token to do so.
        
        
@@ -77,9 +77,9 @@ Method Summary
      - Method and Description
    
    * - 
-       public static :ref:`SyncSession.State <io_realm_mongodb_sync_SyncSession_State>` 
+       public static  :ref:`SyncSession.State <io_realm_mongodb_sync_SyncSession_State>` 
      - 
-       :ref:`valueOf <io_realm_mongodb_sync_SyncSession_State_valueOf_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+        :ref:`valueOf <io_realm_mongodb_sync_SyncSession_State_valueOf_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
        
        
        
@@ -87,9 +87,9 @@ Method Summary
        
    
    * - 
-       public static :ref:`SyncSession.State <io_realm_mongodb_sync_SyncSession_State>` 
+       public static  :ref:`SyncSession.State <io_realm_mongodb_sync_SyncSession_State>` 
      - 
-       :ref:`values <io_realm_mongodb_sync_SyncSession_State_values__>`  ()
+        :ref:`values <io_realm_mongodb_sync_SyncSession_State_values__>`  ()
        
        
        
@@ -122,7 +122,7 @@ Enum Constant Detail
 ``INACTIVE`` 
 -------------
 
-public static final :ref:`SyncSession.State <io_realm_mongodb_sync_SyncSession_State>` 
+public static final  :ref:`SyncSession.State <io_realm_mongodb_sync_SyncSession_State>` 
 
 This is the initial state. The session is closed. No data is being synchronized. The session
  will automatically transition to {@link #ACTIVE} when a Realm is opened.
@@ -136,7 +136,7 @@ This is the initial state. The session is closed. No data is being synchronized.
 ``ACTIVE`` 
 -----------
 
-public static final :ref:`SyncSession.State <io_realm_mongodb_sync_SyncSession_State>` 
+public static final  :ref:`SyncSession.State <io_realm_mongodb_sync_SyncSession_State>` 
 
 The Realm is open and data will be synchronized between the device and the server
  if the underlying connection is {@link ConnectionState#CONNECTED}.
@@ -153,7 +153,7 @@ The Realm is open and data will be synchronized between the device and the serve
 ``DYING`` 
 ----------
 
-public static final :ref:`SyncSession.State <io_realm_mongodb_sync_SyncSession_State>` 
+public static final  :ref:`SyncSession.State <io_realm_mongodb_sync_SyncSession_State>` 
 
 The Realm was closed, but still contains data that needs to be synchronized to the server.
  The session will attempt to upload all local data before going {@link #INACTIVE}.
@@ -167,7 +167,7 @@ The Realm was closed, but still contains data that needs to be synchronized to t
 ``WAITING_FOR_ACCESS_TOKEN`` 
 -----------------------------
 
-public static final :ref:`SyncSession.State <io_realm_mongodb_sync_SyncSession_State>` 
+public static final  :ref:`SyncSession.State <io_realm_mongodb_sync_SyncSession_State>` 
 
 The user is attempting to synchronize data but needs a valid access token to do so. Realm
  will either use a cached token or automatically try to acquire one based on the current
@@ -200,7 +200,7 @@ valueOf
 .. list-table::
    :header-rows: 1
    
-   * -    public static :ref:`SyncSession.State <io_realm_mongodb_sync_SyncSession_State>`  valueOf (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+   * -    public static  :ref:`SyncSession.State <io_realm_mongodb_sync_SyncSession_State>`  valueOf (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
    
    * - 
        
@@ -236,7 +236,7 @@ values
 .. list-table::
    :header-rows: 1
    
-   * -    public static :ref:`SyncSession.State <io_realm_mongodb_sync_SyncSession_State>`  values ()
+   * -    public static  :ref:`SyncSession.State <io_realm_mongodb_sync_SyncSession_State>`  values ()
    
    * - 
        

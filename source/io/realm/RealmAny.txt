@@ -19,7 +19,7 @@ io.realm
 
 `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
 
-:ref:`io.realm.RealmAny <io_realm_RealmAny>`  is used to represent a polymorphic Realm value.
+ :ref:`io.realm.RealmAny <io_realm_RealmAny>`  is used to represent a polymorphic Realm value.
 
 At any particular moment an instance of this class stores a definite value of a definite type. If, for instance, that is an double value, you may call asDouble() to extract that value. You may call getType() to discover what type of value is currently stored. Calling asDouble() on an instance that does not store an double would raise a `java.lang.ClassCastException <https://docs.oracle.com/javase/7/docs/api/java/lang/ClassCastException.html>`__ .
 
@@ -88,7 +88,7 @@ It is crucial to understand that the act of extracting a value of a particular t
     
     
 
-getValueClass() returns the Java class that represents the inner value wrapped by the RealmAny instance. If the resulting class is a realization of :ref:`io.realm.RealmModel <io_realm_RealmModel>`  asRealmModel() can be called to cast the RealmAny value to a Realm object reference.
+getValueClass() returns the Java class that represents the inner value wrapped by the RealmAny instance. If the resulting class is a realization of  :ref:`io.realm.RealmModel <io_realm_RealmModel>`  asRealmModel() can be called to cast the RealmAny value to a Realm object reference.
 
 
 
@@ -119,7 +119,7 @@ RealmAny values can also be sorted. The sorting order used between different Rea
    
 
 
-This has implications on how :ref:`RealmQuery.sort(String) <io_realm_RealmQuery_sort_String_>` , :ref:`RealmQuery.minRealmAny(String) <io_realm_RealmQuery_minRealmAny_String_>`  and :ref:`RealmQuery.maxRealmAny(String) <io_realm_RealmQuery_maxRealmAny_String_>`  work. Especially ``min()``  and ``max()``  will not only take numeric fields into account, but will use the sorting order to determine the "largest" or "lowest" value.
+This has implications on how  :ref:`RealmQuery.sort(String) <io_realm_RealmQuery_sort_String_>` ,  :ref:`RealmQuery.minRealmAny(String) <io_realm_RealmQuery_minRealmAny_String_>`  and  :ref:`RealmQuery.maxRealmAny(String) <io_realm_RealmQuery_maxRealmAny_String_>`  work. Especially ``min()``  and ``max()``  will not only take numeric fields into account, but will use the sorting order to determine the "largest" or "lowest" value.
 
 
 
@@ -151,7 +151,7 @@ Method Summary
    * - 
        public **byte**
      - 
-       :ref:`asBinary <io_realm_RealmAny_asBinary__>`  ()
+        :ref:`asBinary <io_realm_RealmAny_asBinary__>`  ()
        
        Gets this value as a byte[] if it is one, otherwise throws exception.
        
@@ -161,7 +161,7 @@ Method Summary
    * - 
        public `Boolean <https://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html>`__ 
      - 
-       :ref:`asBoolean <io_realm_RealmAny_asBoolean__>`  ()
+        :ref:`asBoolean <io_realm_RealmAny_asBoolean__>`  ()
        
        Gets this value as a Boolean if it is one, otherwise throws exception.
        
@@ -171,7 +171,7 @@ Method Summary
    * - 
        public `Byte <https://docs.oracle.com/javase/7/docs/api/java/lang/Byte.html>`__ 
      - 
-       :ref:`asByte <io_realm_RealmAny_asByte__>`  ()
+        :ref:`asByte <io_realm_RealmAny_asByte__>`  ()
        
        Gets this value as a Byte if it is one, otherwise throws exception.
        
@@ -181,7 +181,7 @@ Method Summary
    * - 
        public `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__ 
      - 
-       :ref:`asDate <io_realm_RealmAny_asDate__>`  ()
+        :ref:`asDate <io_realm_RealmAny_asDate__>`  ()
        
        Gets this value as a Date if it is one, otherwise throws exception.
        
@@ -191,7 +191,7 @@ Method Summary
    * - 
        public **Decimal128 (?)**
      - 
-       :ref:`asDecimal128 <io_realm_RealmAny_asDecimal128__>`  ()
+        :ref:`asDecimal128 <io_realm_RealmAny_asDecimal128__>`  ()
        
        Gets this value as a Decimal128 if it is one, otherwise throws exception.
        
@@ -201,7 +201,7 @@ Method Summary
    * - 
        public `Double <https://docs.oracle.com/javase/7/docs/api/java/lang/Double.html>`__ 
      - 
-       :ref:`asDouble <io_realm_RealmAny_asDouble__>`  ()
+        :ref:`asDouble <io_realm_RealmAny_asDouble__>`  ()
        
        Gets this value as a Double if it is one, otherwise throws exception.
        
@@ -211,7 +211,7 @@ Method Summary
    * - 
        public `Float <https://docs.oracle.com/javase/7/docs/api/java/lang/Float.html>`__ 
      - 
-       :ref:`asFloat <io_realm_RealmAny_asFloat__>`  ()
+        :ref:`asFloat <io_realm_RealmAny_asFloat__>`  ()
        
        Gets this value as a Float if it is one, otherwise throws exception.
        
@@ -221,7 +221,7 @@ Method Summary
    * - 
        public `Integer <https://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html>`__ 
      - 
-       :ref:`asInteger <io_realm_RealmAny_asInteger__>`  ()
+        :ref:`asInteger <io_realm_RealmAny_asInteger__>`  ()
        
        Gets this value as a Integer if it is one, otherwise throws exception.
        
@@ -231,7 +231,7 @@ Method Summary
    * - 
        public `Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__ 
      - 
-       :ref:`asLong <io_realm_RealmAny_asLong__>`  ()
+        :ref:`asLong <io_realm_RealmAny_asLong__>`  ()
        
        Gets this value as a Long if it is one, otherwise throws exception.
        
@@ -241,7 +241,7 @@ Method Summary
    * - 
        public **ObjectId (?)**
      - 
-       :ref:`asObjectId <io_realm_RealmAny_asObjectId__>`  ()
+        :ref:`asObjectId <io_realm_RealmAny_asObjectId__>`  ()
        
        Gets this value as a ObjectId if it is one, otherwise throws exception.
        
@@ -251,7 +251,7 @@ Method Summary
    * - 
        public **T (?)**
      - 
-       :ref:`asRealmModel <io_realm_RealmAny_asRealmModel_Class_T__>`  <**T (?)** >(`java.lang.Class\<T> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  clazz)
+        :ref:`asRealmModel <io_realm_RealmAny_asRealmModel_Class_T__>`  <**T (?)** >(`java.lang.Class\<T> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  clazz)
        
        Gets this value as a RealmModel if it is one, otherwise throws exception.
        
@@ -261,7 +261,7 @@ Method Summary
    * - 
        public `Short <https://docs.oracle.com/javase/7/docs/api/java/lang/Short.html>`__ 
      - 
-       :ref:`asShort <io_realm_RealmAny_asShort__>`  ()
+        :ref:`asShort <io_realm_RealmAny_asShort__>`  ()
        
        Gets this value as a Short if it is one, otherwise throws exception.
        
@@ -271,7 +271,7 @@ Method Summary
    * - 
        public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
      - 
-       :ref:`asString <io_realm_RealmAny_asString__>`  ()
+        :ref:`asString <io_realm_RealmAny_asString__>`  ()
        
        Gets this value as a String if it is one, otherwise throws exception.
        
@@ -281,7 +281,7 @@ Method Summary
    * - 
        public `UUID <https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html>`__ 
      - 
-       :ref:`asUUID <io_realm_RealmAny_asUUID__>`  ()
+        :ref:`asUUID <io_realm_RealmAny_asUUID__>`  ()
        
        Gets this value as a UUID if it is one, otherwise throws exception.
        
@@ -291,7 +291,7 @@ Method Summary
    * - 
        public final **boolean**
      - 
-       :ref:`coercedEquals <io_realm_RealmAny_coercedEquals_RealmAny_>`  (:ref:`RealmAny <io_realm_RealmAny>`  other)
+        :ref:`coercedEquals <io_realm_RealmAny_coercedEquals_RealmAny_>`  ( :ref:`RealmAny <io_realm_RealmAny>`  other)
        
        
        
@@ -301,7 +301,7 @@ Method Summary
    * - 
        public final **boolean**
      - 
-       :ref:`equals <io_realm_RealmAny_equals_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  other)
+        :ref:`equals <io_realm_RealmAny_equals_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  other)
        
        Two ``RealmAny`` s are ``.equals``  if and only if their contents are equal.
        
@@ -311,9 +311,9 @@ Method Summary
        
    
    * - 
-       public :ref:`RealmAny.Type <io_realm_RealmAny_Type>` 
+       public  :ref:`RealmAny.Type <io_realm_RealmAny_Type>` 
      - 
-       :ref:`getType <io_realm_RealmAny_getType__>`  ()
+        :ref:`getType <io_realm_RealmAny_getType__>`  ()
        
        Gets the inner type of this RealmAny object.
        
@@ -323,7 +323,7 @@ Method Summary
    * - 
        public `Class <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__ 
      - 
-       :ref:`getValueClass <io_realm_RealmAny_getValueClass__>`  ()
+        :ref:`getValueClass <io_realm_RealmAny_getValueClass__>`  ()
        
        Returns the Java class that represents the inner value wrapped by this RealmAny value.
        
@@ -333,7 +333,7 @@ Method Summary
    * - 
        public final **int**
      - 
-       :ref:`hashCode <io_realm_RealmAny_hashCode__>`  ()
+        :ref:`hashCode <io_realm_RealmAny_hashCode__>`  ()
        
        A ``RealmAny`` 's hash code is, exactly, the hash code of its value.
        
@@ -345,7 +345,7 @@ Method Summary
    * - 
        public **boolean**
      - 
-       :ref:`isNull <io_realm_RealmAny_isNull__>`  ()
+        :ref:`isNull <io_realm_RealmAny_isNull__>`  ()
        
        Returns true if the inner value is null, false otherwise.
        
@@ -353,9 +353,9 @@ Method Summary
        
    
    * - 
-       public static :ref:`RealmAny <io_realm_RealmAny>` 
+       public static  :ref:`RealmAny <io_realm_RealmAny>` 
      - 
-       :ref:`nullValue <io_realm_RealmAny_nullValue__>`  ()
+        :ref:`nullValue <io_realm_RealmAny_nullValue__>`  ()
        
        Creates a new RealmAny of a null value.
        
@@ -365,7 +365,7 @@ Method Summary
    * - 
        public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
      - 
-       :ref:`toString <io_realm_RealmAny_toString__>`  ()
+        :ref:`toString <io_realm_RealmAny_toString__>`  ()
        
        
        
@@ -373,9 +373,9 @@ Method Summary
        
    
    * - 
-       public static :ref:`RealmAny <io_realm_RealmAny>` 
+       public static  :ref:`RealmAny <io_realm_RealmAny>` 
      - 
-       :ref:`valueOf <io_realm_RealmAny_valueOf_Decimal128_>`  (**Decimal128 (?)** value)
+        :ref:`valueOf <io_realm_RealmAny_valueOf_Decimal128_>`  (**Decimal128 (?)** value)
        
        Creates a new RealmAny with the specified value.
        
@@ -383,9 +383,9 @@ Method Summary
        
    
    * - 
-       public static :ref:`RealmAny <io_realm_RealmAny>` 
+       public static  :ref:`RealmAny <io_realm_RealmAny>` 
      - 
-       :ref:`valueOf <io_realm_RealmAny_valueOf_ObjectId_>`  (**ObjectId (?)** value)
+        :ref:`valueOf <io_realm_RealmAny_valueOf_ObjectId_>`  (**ObjectId (?)** value)
        
        Creates a new RealmAny with the specified value.
        
@@ -393,9 +393,9 @@ Method Summary
        
    
    * - 
-       public static :ref:`RealmAny <io_realm_RealmAny>` 
+       public static  :ref:`RealmAny <io_realm_RealmAny>` 
      - 
-       :ref:`valueOf <io_realm_RealmAny_valueOf_Date_>`  (`Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  value)
+        :ref:`valueOf <io_realm_RealmAny_valueOf_Date_>`  (`Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  value)
        
        Creates a new RealmAny with the specified value.
        
@@ -403,9 +403,9 @@ Method Summary
        
    
    * - 
-       public static :ref:`RealmAny <io_realm_RealmAny>` 
+       public static  :ref:`RealmAny <io_realm_RealmAny>` 
      - 
-       :ref:`valueOf <io_realm_RealmAny_valueOf_byte[]_>`  (**byte[]** value)
+        :ref:`valueOf <io_realm_RealmAny_valueOf_byte[]_>`  (**byte[]** value)
        
        Creates a new RealmAny with the specified value.
        
@@ -413,9 +413,9 @@ Method Summary
        
    
    * - 
-       public static :ref:`RealmAny <io_realm_RealmAny>` 
+       public static  :ref:`RealmAny <io_realm_RealmAny>` 
      - 
-       :ref:`valueOf <io_realm_RealmAny_valueOf_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
+        :ref:`valueOf <io_realm_RealmAny_valueOf_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
        
        Creates a new RealmAny with the specified value.
        
@@ -423,9 +423,9 @@ Method Summary
        
    
    * - 
-       public static :ref:`RealmAny <io_realm_RealmAny>` 
+       public static  :ref:`RealmAny <io_realm_RealmAny>` 
      - 
-       :ref:`valueOf <io_realm_RealmAny_valueOf_Double_>`  (`Double <https://docs.oracle.com/javase/7/docs/api/java/lang/Double.html>`__  value)
+        :ref:`valueOf <io_realm_RealmAny_valueOf_Double_>`  (`Double <https://docs.oracle.com/javase/7/docs/api/java/lang/Double.html>`__  value)
        
        Creates a new RealmAny with the specified value.
        
@@ -433,9 +433,9 @@ Method Summary
        
    
    * - 
-       public static :ref:`RealmAny <io_realm_RealmAny>` 
+       public static  :ref:`RealmAny <io_realm_RealmAny>` 
      - 
-       :ref:`valueOf <io_realm_RealmAny_valueOf_Float_>`  (`Float <https://docs.oracle.com/javase/7/docs/api/java/lang/Float.html>`__  value)
+        :ref:`valueOf <io_realm_RealmAny_valueOf_Float_>`  (`Float <https://docs.oracle.com/javase/7/docs/api/java/lang/Float.html>`__  value)
        
        Creates a new RealmAny with the specified value.
        
@@ -443,9 +443,9 @@ Method Summary
        
    
    * - 
-       public static :ref:`RealmAny <io_realm_RealmAny>` 
+       public static  :ref:`RealmAny <io_realm_RealmAny>` 
      - 
-       :ref:`valueOf <io_realm_RealmAny_valueOf_Boolean_>`  (`Boolean <https://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html>`__  value)
+        :ref:`valueOf <io_realm_RealmAny_valueOf_Boolean_>`  (`Boolean <https://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html>`__  value)
        
        Creates a new RealmAny with the specified value.
        
@@ -453,9 +453,9 @@ Method Summary
        
    
    * - 
-       public static :ref:`RealmAny <io_realm_RealmAny>` 
+       public static  :ref:`RealmAny <io_realm_RealmAny>` 
      - 
-       :ref:`valueOf <io_realm_RealmAny_valueOf_Long_>`  (`Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__  value)
+        :ref:`valueOf <io_realm_RealmAny_valueOf_Long_>`  (`Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__  value)
        
        Creates a new RealmAny with the specified value.
        
@@ -463,9 +463,9 @@ Method Summary
        
    
    * - 
-       public static :ref:`RealmAny <io_realm_RealmAny>` 
+       public static  :ref:`RealmAny <io_realm_RealmAny>` 
      - 
-       :ref:`valueOf <io_realm_RealmAny_valueOf_Integer_>`  (`Integer <https://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html>`__  value)
+        :ref:`valueOf <io_realm_RealmAny_valueOf_Integer_>`  (`Integer <https://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html>`__  value)
        
        Creates a new RealmAny with the specified value.
        
@@ -473,9 +473,9 @@ Method Summary
        
    
    * - 
-       public static :ref:`RealmAny <io_realm_RealmAny>` 
+       public static  :ref:`RealmAny <io_realm_RealmAny>` 
      - 
-       :ref:`valueOf <io_realm_RealmAny_valueOf_Short_>`  (`Short <https://docs.oracle.com/javase/7/docs/api/java/lang/Short.html>`__  value)
+        :ref:`valueOf <io_realm_RealmAny_valueOf_Short_>`  (`Short <https://docs.oracle.com/javase/7/docs/api/java/lang/Short.html>`__  value)
        
        Creates a new RealmAny with the specified value.
        
@@ -483,9 +483,9 @@ Method Summary
        
    
    * - 
-       public static :ref:`RealmAny <io_realm_RealmAny>` 
+       public static  :ref:`RealmAny <io_realm_RealmAny>` 
      - 
-       :ref:`valueOf <io_realm_RealmAny_valueOf_Byte_>`  (`Byte <https://docs.oracle.com/javase/7/docs/api/java/lang/Byte.html>`__  value)
+        :ref:`valueOf <io_realm_RealmAny_valueOf_Byte_>`  (`Byte <https://docs.oracle.com/javase/7/docs/api/java/lang/Byte.html>`__  value)
        
        Creates a new RealmAny with the specified value.
        
@@ -1150,7 +1150,7 @@ coercedEquals
 .. list-table::
    :header-rows: 1
    
-   * -    public final **boolean** coercedEquals (:ref:`RealmAny <io_realm_RealmAny>`  other)
+   * -    public final **boolean** coercedEquals ( :ref:`RealmAny <io_realm_RealmAny>`  other)
    
    * - 
        
@@ -1230,7 +1230,7 @@ getType
 .. list-table::
    :header-rows: 1
    
-   * -    public :ref:`RealmAny.Type <io_realm_RealmAny_Type>`  getType ()
+   * -    public  :ref:`RealmAny.Type <io_realm_RealmAny_Type>`  getType ()
    
    * - Gets the inner type of this RealmAny object.
        
@@ -1384,7 +1384,7 @@ nullValue
 .. list-table::
    :header-rows: 1
    
-   * -    public static :ref:`RealmAny <io_realm_RealmAny>`  nullValue ()
+   * -    public static  :ref:`RealmAny <io_realm_RealmAny>`  nullValue ()
    
    * - Creates a new RealmAny of a null value.
        
@@ -1454,9 +1454,9 @@ valueOf
 .. list-table::
    :header-rows: 1
    
-   * -    public static :ref:`RealmAny <io_realm_RealmAny>`  valueOf (**Decimal128 (?)** value)
+   * -    public static  :ref:`RealmAny <io_realm_RealmAny>`  valueOf (**Decimal128 (?)** value)
    
-   * - Creates a new RealmAny with the specified value. If the value is not null the type will be :ref:`RealmAny.Type.DECIMAL128 <io_realm_RealmAny_Type_DECIMAL128>` , :ref:`RealmAny.Type.NULL <io_realm_RealmAny_Type_NULL>`  otherwise.
+   * - Creates a new RealmAny with the specified value. If the value is not null the type will be  :ref:`RealmAny.Type.DECIMAL128 <io_realm_RealmAny_Type_DECIMAL128>` ,  :ref:`RealmAny.Type.NULL <io_realm_RealmAny_Type_NULL>`  otherwise.
        
        
        
@@ -1485,9 +1485,9 @@ valueOf
 .. list-table::
    :header-rows: 1
    
-   * -    public static :ref:`RealmAny <io_realm_RealmAny>`  valueOf (**ObjectId (?)** value)
+   * -    public static  :ref:`RealmAny <io_realm_RealmAny>`  valueOf (**ObjectId (?)** value)
    
-   * - Creates a new RealmAny with the specified value. If the value is not null the type will be :ref:`RealmAny.Type.OBJECT_ID <io_realm_RealmAny_Type_OBJECT_ID>` , :ref:`RealmAny.Type.NULL <io_realm_RealmAny_Type_NULL>`  otherwise.
+   * - Creates a new RealmAny with the specified value. If the value is not null the type will be  :ref:`RealmAny.Type.OBJECT_ID <io_realm_RealmAny_Type_OBJECT_ID>` ,  :ref:`RealmAny.Type.NULL <io_realm_RealmAny_Type_NULL>`  otherwise.
        
        
        
@@ -1516,9 +1516,9 @@ valueOf
 .. list-table::
    :header-rows: 1
    
-   * -    public static :ref:`RealmAny <io_realm_RealmAny>`  valueOf (`Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  value)
+   * -    public static  :ref:`RealmAny <io_realm_RealmAny>`  valueOf (`Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  value)
    
-   * - Creates a new RealmAny with the specified value. If the value is not null the type will be :ref:`RealmAny.Type.DATE <io_realm_RealmAny_Type_DATE>` , :ref:`RealmAny.Type.NULL <io_realm_RealmAny_Type_NULL>`  otherwise.
+   * - Creates a new RealmAny with the specified value. If the value is not null the type will be  :ref:`RealmAny.Type.DATE <io_realm_RealmAny_Type_DATE>` ,  :ref:`RealmAny.Type.NULL <io_realm_RealmAny_Type_NULL>`  otherwise.
        
        
        
@@ -1549,9 +1549,9 @@ valueOf
 .. list-table::
    :header-rows: 1
    
-   * -    public static :ref:`RealmAny <io_realm_RealmAny>`  valueOf (**byte[]** value)
+   * -    public static  :ref:`RealmAny <io_realm_RealmAny>`  valueOf (**byte[]** value)
    
-   * - Creates a new RealmAny with the specified value. If the value is not null the type will be :ref:`RealmAny.Type.BINARY <io_realm_RealmAny_Type_BINARY>` , :ref:`RealmAny.Type.NULL <io_realm_RealmAny_Type_NULL>`  otherwise.
+   * - Creates a new RealmAny with the specified value. If the value is not null the type will be  :ref:`RealmAny.Type.BINARY <io_realm_RealmAny_Type_BINARY>` ,  :ref:`RealmAny.Type.NULL <io_realm_RealmAny_Type_NULL>`  otherwise.
        
        
        
@@ -1580,9 +1580,9 @@ valueOf
 .. list-table::
    :header-rows: 1
    
-   * -    public static :ref:`RealmAny <io_realm_RealmAny>`  valueOf (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
+   * -    public static  :ref:`RealmAny <io_realm_RealmAny>`  valueOf (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
    
-   * - Creates a new RealmAny with the specified value. If the value is not null the type will be :ref:`RealmAny.Type.STRING <io_realm_RealmAny_Type_STRING>` , :ref:`RealmAny.Type.NULL <io_realm_RealmAny_Type_NULL>`  otherwise.
+   * - Creates a new RealmAny with the specified value. If the value is not null the type will be  :ref:`RealmAny.Type.STRING <io_realm_RealmAny_Type_STRING>` ,  :ref:`RealmAny.Type.NULL <io_realm_RealmAny_Type_NULL>`  otherwise.
        
        
        
@@ -1611,9 +1611,9 @@ valueOf
 .. list-table::
    :header-rows: 1
    
-   * -    public static :ref:`RealmAny <io_realm_RealmAny>`  valueOf (`Double <https://docs.oracle.com/javase/7/docs/api/java/lang/Double.html>`__  value)
+   * -    public static  :ref:`RealmAny <io_realm_RealmAny>`  valueOf (`Double <https://docs.oracle.com/javase/7/docs/api/java/lang/Double.html>`__  value)
    
-   * - Creates a new RealmAny with the specified value. If the value is not null the type will be :ref:`RealmAny.Type.DOUBLE <io_realm_RealmAny_Type_DOUBLE>` , :ref:`RealmAny.Type.NULL <io_realm_RealmAny_Type_NULL>`  otherwise.
+   * - Creates a new RealmAny with the specified value. If the value is not null the type will be  :ref:`RealmAny.Type.DOUBLE <io_realm_RealmAny_Type_DOUBLE>` ,  :ref:`RealmAny.Type.NULL <io_realm_RealmAny_Type_NULL>`  otherwise.
        
        
        
@@ -1642,9 +1642,9 @@ valueOf
 .. list-table::
    :header-rows: 1
    
-   * -    public static :ref:`RealmAny <io_realm_RealmAny>`  valueOf (`Float <https://docs.oracle.com/javase/7/docs/api/java/lang/Float.html>`__  value)
+   * -    public static  :ref:`RealmAny <io_realm_RealmAny>`  valueOf (`Float <https://docs.oracle.com/javase/7/docs/api/java/lang/Float.html>`__  value)
    
-   * - Creates a new RealmAny with the specified value. If the value is not null the type will be :ref:`RealmAny.Type.FLOAT <io_realm_RealmAny_Type_FLOAT>` , :ref:`RealmAny.Type.NULL <io_realm_RealmAny_Type_NULL>`  otherwise.
+   * - Creates a new RealmAny with the specified value. If the value is not null the type will be  :ref:`RealmAny.Type.FLOAT <io_realm_RealmAny_Type_FLOAT>` ,  :ref:`RealmAny.Type.NULL <io_realm_RealmAny_Type_NULL>`  otherwise.
        
        
        
@@ -1673,9 +1673,9 @@ valueOf
 .. list-table::
    :header-rows: 1
    
-   * -    public static :ref:`RealmAny <io_realm_RealmAny>`  valueOf (`Boolean <https://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html>`__  value)
+   * -    public static  :ref:`RealmAny <io_realm_RealmAny>`  valueOf (`Boolean <https://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html>`__  value)
    
-   * - Creates a new RealmAny with the specified value. If the value is not null the type will be :ref:`RealmAny.Type.BOOLEAN <io_realm_RealmAny_Type_BOOLEAN>` , :ref:`RealmAny.Type.NULL <io_realm_RealmAny_Type_NULL>`  otherwise.
+   * - Creates a new RealmAny with the specified value. If the value is not null the type will be  :ref:`RealmAny.Type.BOOLEAN <io_realm_RealmAny_Type_BOOLEAN>` ,  :ref:`RealmAny.Type.NULL <io_realm_RealmAny_Type_NULL>`  otherwise.
        
        
        
@@ -1704,9 +1704,9 @@ valueOf
 .. list-table::
    :header-rows: 1
    
-   * -    public static :ref:`RealmAny <io_realm_RealmAny>`  valueOf (`Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__  value)
+   * -    public static  :ref:`RealmAny <io_realm_RealmAny>`  valueOf (`Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__  value)
    
-   * - Creates a new RealmAny with the specified value. If the value is not null the type will be :ref:`RealmAny.Type.INTEGER <io_realm_RealmAny_Type_INTEGER>` , :ref:`RealmAny.Type.NULL <io_realm_RealmAny_Type_NULL>`  otherwise.
+   * - Creates a new RealmAny with the specified value. If the value is not null the type will be  :ref:`RealmAny.Type.INTEGER <io_realm_RealmAny_Type_INTEGER>` ,  :ref:`RealmAny.Type.NULL <io_realm_RealmAny_Type_NULL>`  otherwise.
        
        
        
@@ -1735,9 +1735,9 @@ valueOf
 .. list-table::
    :header-rows: 1
    
-   * -    public static :ref:`RealmAny <io_realm_RealmAny>`  valueOf (`Integer <https://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html>`__  value)
+   * -    public static  :ref:`RealmAny <io_realm_RealmAny>`  valueOf (`Integer <https://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html>`__  value)
    
-   * - Creates a new RealmAny with the specified value. If the value is not null the type will be :ref:`RealmAny.Type.INTEGER <io_realm_RealmAny_Type_INTEGER>` , :ref:`RealmAny.Type.NULL <io_realm_RealmAny_Type_NULL>`  otherwise.
+   * - Creates a new RealmAny with the specified value. If the value is not null the type will be  :ref:`RealmAny.Type.INTEGER <io_realm_RealmAny_Type_INTEGER>` ,  :ref:`RealmAny.Type.NULL <io_realm_RealmAny_Type_NULL>`  otherwise.
        
        
        
@@ -1766,9 +1766,9 @@ valueOf
 .. list-table::
    :header-rows: 1
    
-   * -    public static :ref:`RealmAny <io_realm_RealmAny>`  valueOf (`Short <https://docs.oracle.com/javase/7/docs/api/java/lang/Short.html>`__  value)
+   * -    public static  :ref:`RealmAny <io_realm_RealmAny>`  valueOf (`Short <https://docs.oracle.com/javase/7/docs/api/java/lang/Short.html>`__  value)
    
-   * - Creates a new RealmAny with the specified value. If the value is not null the type will be :ref:`RealmAny.Type.INTEGER <io_realm_RealmAny_Type_INTEGER>` , :ref:`RealmAny.Type.NULL <io_realm_RealmAny_Type_NULL>`  otherwise.
+   * - Creates a new RealmAny with the specified value. If the value is not null the type will be  :ref:`RealmAny.Type.INTEGER <io_realm_RealmAny_Type_INTEGER>` ,  :ref:`RealmAny.Type.NULL <io_realm_RealmAny_Type_NULL>`  otherwise.
        
        
        
@@ -1797,9 +1797,9 @@ valueOf
 .. list-table::
    :header-rows: 1
    
-   * -    public static :ref:`RealmAny <io_realm_RealmAny>`  valueOf (`Byte <https://docs.oracle.com/javase/7/docs/api/java/lang/Byte.html>`__  value)
+   * -    public static  :ref:`RealmAny <io_realm_RealmAny>`  valueOf (`Byte <https://docs.oracle.com/javase/7/docs/api/java/lang/Byte.html>`__  value)
    
-   * - Creates a new RealmAny with the specified value. If the value is not null the type will be :ref:`RealmAny.Type.INTEGER <io_realm_RealmAny_Type_INTEGER>` , :ref:`RealmAny.Type.NULL <io_realm_RealmAny_Type_NULL>`  otherwise.
+   * - Creates a new RealmAny with the specified value. If the value is not null the type will be  :ref:`RealmAny.Type.INTEGER <io_realm_RealmAny_Type_INTEGER>` ,  :ref:`RealmAny.Type.NULL <io_realm_RealmAny_Type_NULL>`  otherwise.
        
        
        
