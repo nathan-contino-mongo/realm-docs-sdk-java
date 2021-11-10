@@ -100,23 +100,29 @@ Element Detail
        - They must have exactly 1 parent linking to them when the embedded object is added to the Realm. Embedded objects can be the parent of other embedded objects. The parent cannot be changed later, except by copying the object.
           
           
-       - They cannot have fields annotated with {@code \@PrimaryKey}.
+       - They cannot have fields annotated with ``@PrimaryKey`` .
+          
+          
           
           
        - When a parent object is deleted, all embedded objects are also deleted.
           
           
-       - It is possible to define an easy reference to the parent object using the {@code \@LinkingObjects} annotation:
+       - It is possible to define an easy reference to the parent object using the ``@LinkingObjects``  annotation:
           
           
+          
+                   
           
           .. code-block:: java
           
-                      {@code
+             
                            @LinkingObjects
                            public Parent parent;
-                      }
                       
+          
+          
+                   
           
           
        
@@ -141,9 +147,9 @@ Element Detail
    
    * - ``public RealmNamingPolicy fieldNamingPolicy`` 
        
-       The naming policy applied to all fields in this class. The default policy is {@link RealmNamingPolicy#NO_POLICY}.
+       The naming policy applied to all fields in this class. The default policy is :ref:`RealmNamingPolicy.NO_POLICY <io_realm_annotations_RealmNamingPolicy_NO_POLICY>` .
        
-       It is possible to override the naming policy for each field by using the {@link RealmField} annotation.
+       It is possible to override the naming policy for each field by using the :ref:`RealmField <io_realm_annotations_RealmField>`  annotation.
        
        
        
@@ -179,7 +185,7 @@ Element Detail
    
    * - ``public String name`` 
        
-       Manually set the internal name used by Realm for this class. If this class is part of any modules, this will also override any name policy set using {@link RealmModule#classNamingPolicy()}.
+       Manually set the internal name used by Realm for this class. If this class is part of any modules, this will also override any name policy set using **RealmModule.classNamingPolicy() (?)**.
        
        
        
@@ -213,7 +219,7 @@ Element Detail
    
    * - ``public String value`` 
        
-       Manually set the internal name used by Realm for this class. If this class is part of any modules, this will also override any name policy set using {@link RealmModule#classNamingPolicy()}.
+       Manually set the internal name used by Realm for this class. If this class is part of any modules, this will also override any name policy set using **RealmModule.classNamingPolicy() (?)**.
        
        
        
