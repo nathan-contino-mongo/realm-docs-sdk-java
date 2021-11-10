@@ -56,31 +56,11 @@ Method Summary
      - Method and Description
    
    * - 
-       public :ref:`OrderedCollectionChangeSet.State <io_realm_OrderedCollectionChangeSet_State>` 
+       public :ref:`OrderedCollectionChangeSet.Range <io_realm_OrderedCollectionChangeSet_Range>` 
      - 
-       :ref:`getState <io_realm_OrderedCollectionChangeSet_getState__>`  ()
+       :ref:`getChangeRanges <io_realm_OrderedCollectionChangeSet_getChangeRanges__>`  ()
        
-       Returns the state represented by this change.
-       
-       
-       
-   
-   * - 
-       public **int**
-     - 
-       :ref:`getDeletions <io_realm_OrderedCollectionChangeSet_getDeletions__>`  ()
-       
-       The deleted indices in the previous version of the collection.
-       
-       
-       
-   
-   * - 
-       public **int**
-     - 
-       :ref:`getInsertions <io_realm_OrderedCollectionChangeSet_getInsertions__>`  ()
-       
-       The inserted indices in the new version of the collection.
+       The modified ranges of objects in the new version of the collection.
        
        
        
@@ -106,21 +86,11 @@ Method Summary
        
    
    * - 
-       public :ref:`OrderedCollectionChangeSet.Range <io_realm_OrderedCollectionChangeSet_Range>` 
+       public **int**
      - 
-       :ref:`getInsertionRanges <io_realm_OrderedCollectionChangeSet_getInsertionRanges__>`  ()
+       :ref:`getDeletions <io_realm_OrderedCollectionChangeSet_getDeletions__>`  ()
        
-       The inserted ranges of objects in the new version of the collection.
-       
-       
-       
-   
-   * - 
-       public :ref:`OrderedCollectionChangeSet.Range <io_realm_OrderedCollectionChangeSet_Range>` 
-     - 
-       :ref:`getChangeRanges <io_realm_OrderedCollectionChangeSet_getChangeRanges__>`  ()
-       
-       The modified ranges of objects in the new version of the collection.
+       The deleted indices in the previous version of the collection.
        
        
        
@@ -135,141 +105,71 @@ Method Summary
        
        
    
+   * - 
+       public :ref:`OrderedCollectionChangeSet.Range <io_realm_OrderedCollectionChangeSet_Range>` 
+     - 
+       :ref:`getInsertionRanges <io_realm_OrderedCollectionChangeSet_getInsertionRanges__>`  ()
+       
+       The inserted ranges of objects in the new version of the collection.
+       
+       
+       
+   
+   * - 
+       public **int**
+     - 
+       :ref:`getInsertions <io_realm_OrderedCollectionChangeSet_getInsertions__>`  ()
+       
+       The inserted indices in the new version of the collection.
+       
+       
+       
+   
+   * - 
+       public :ref:`OrderedCollectionChangeSet.State <io_realm_OrderedCollectionChangeSet_State>` 
+     - 
+       :ref:`getState <io_realm_OrderedCollectionChangeSet_getState__>`  ()
+       
+       Returns the state represented by this change.
+       
+       
+       
+   
    
 
 
 Method Detail
 =============
 
-.. _getState:
+.. _getChangeRanges:
 
-.. _getState__:
+.. _getChangeRanges__:
 
-.. _OrderedCollectionChangeSet_getState:
+.. _OrderedCollectionChangeSet_getChangeRanges:
 
-.. _OrderedCollectionChangeSet_getState__:
+.. _OrderedCollectionChangeSet_getChangeRanges__:
 
-.. _io_realm_OrderedCollectionChangeSet_getState:
+.. _io_realm_OrderedCollectionChangeSet_getChangeRanges:
 
-.. _io_realm_OrderedCollectionChangeSet_getState__:
-
-
-
-getState
---------
-
-.. _io_realm_OrderedCollectionChangeSet_getState__:
-
-.. _io_realm_OrderedCollectionChangeSet_getState__:
-
-.. _io_realm_OrderedCollectionChangeSet_getState__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public :ref:`OrderedCollectionChangeSet.State <io_realm_OrderedCollectionChangeSet_State>`  getState ()
-   
-   * - Returns the state represented by this change. See :ref:`State <io_realm_OrderedCollectionChangeSet_State>`  for a description of the different states a changeset can be in.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       .. seealso::
-       
-       
-          
-          - :ref:`State <io_realm_OrderedCollectionChangeSet_State>` 
-             
-             
-             
-          
-          
-          
-       
-       
-   
-   
-.. _getDeletions:
-
-.. _getDeletions__:
-
-.. _OrderedCollectionChangeSet_getDeletions:
-
-.. _OrderedCollectionChangeSet_getDeletions__:
-
-.. _io_realm_OrderedCollectionChangeSet_getDeletions:
-
-.. _io_realm_OrderedCollectionChangeSet_getDeletions__:
+.. _io_realm_OrderedCollectionChangeSet_getChangeRanges__:
 
 
 
-getDeletions
-------------
+getChangeRanges
+---------------
 
-.. _io_realm_OrderedCollectionChangeSet_getDeletions__:
+.. _io_realm_OrderedCollectionChangeSet_getChangeRanges__:
 
-.. _io_realm_OrderedCollectionChangeSet_getDeletions__:
+.. _io_realm_OrderedCollectionChangeSet_getChangeRanges__:
 
-.. _io_realm_OrderedCollectionChangeSet_getDeletions__:
+.. _io_realm_OrderedCollectionChangeSet_getChangeRanges__:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public **int** getDeletions ()
+   * -    public :ref:`OrderedCollectionChangeSet.Range <io_realm_OrderedCollectionChangeSet_Range>`  getChangeRanges ()
    
-   * - The deleted indices in the previous version of the collection.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-.. _getInsertions:
-
-.. _getInsertions__:
-
-.. _OrderedCollectionChangeSet_getInsertions:
-
-.. _OrderedCollectionChangeSet_getInsertions__:
-
-.. _io_realm_OrderedCollectionChangeSet_getInsertions:
-
-.. _io_realm_OrderedCollectionChangeSet_getInsertions__:
-
-
-
-getInsertions
--------------
-
-.. _io_realm_OrderedCollectionChangeSet_getInsertions__:
-
-.. _io_realm_OrderedCollectionChangeSet_getInsertions__:
-
-.. _io_realm_OrderedCollectionChangeSet_getInsertions__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **int** getInsertions ()
-   
-   * - The inserted indices in the new version of the collection.
+   * - The modified ranges of objects in the new version of the collection.
        
        
        
@@ -371,77 +271,35 @@ getDeletionRanges
        
    
    
-.. _getInsertionRanges:
+.. _getDeletions:
 
-.. _getInsertionRanges__:
+.. _getDeletions__:
 
-.. _OrderedCollectionChangeSet_getInsertionRanges:
+.. _OrderedCollectionChangeSet_getDeletions:
 
-.. _OrderedCollectionChangeSet_getInsertionRanges__:
+.. _OrderedCollectionChangeSet_getDeletions__:
 
-.. _io_realm_OrderedCollectionChangeSet_getInsertionRanges:
+.. _io_realm_OrderedCollectionChangeSet_getDeletions:
 
-.. _io_realm_OrderedCollectionChangeSet_getInsertionRanges__:
-
-
-
-getInsertionRanges
-------------------
-
-.. _io_realm_OrderedCollectionChangeSet_getInsertionRanges__:
-
-.. _io_realm_OrderedCollectionChangeSet_getInsertionRanges__:
-
-.. _io_realm_OrderedCollectionChangeSet_getInsertionRanges__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public :ref:`OrderedCollectionChangeSet.Range <io_realm_OrderedCollectionChangeSet_Range>`  getInsertionRanges ()
-   
-   * - The inserted ranges of objects in the new version of the collection.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-.. _getChangeRanges:
-
-.. _getChangeRanges__:
-
-.. _OrderedCollectionChangeSet_getChangeRanges:
-
-.. _OrderedCollectionChangeSet_getChangeRanges__:
-
-.. _io_realm_OrderedCollectionChangeSet_getChangeRanges:
-
-.. _io_realm_OrderedCollectionChangeSet_getChangeRanges__:
+.. _io_realm_OrderedCollectionChangeSet_getDeletions__:
 
 
 
-getChangeRanges
----------------
+getDeletions
+------------
 
-.. _io_realm_OrderedCollectionChangeSet_getChangeRanges__:
+.. _io_realm_OrderedCollectionChangeSet_getDeletions__:
 
-.. _io_realm_OrderedCollectionChangeSet_getChangeRanges__:
+.. _io_realm_OrderedCollectionChangeSet_getDeletions__:
 
-.. _io_realm_OrderedCollectionChangeSet_getChangeRanges__:
+.. _io_realm_OrderedCollectionChangeSet_getDeletions__:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public :ref:`OrderedCollectionChangeSet.Range <io_realm_OrderedCollectionChangeSet_Range>`  getChangeRanges ()
+   * -    public **int** getDeletions ()
    
-   * - The modified ranges of objects in the new version of the collection.
+   * - The deleted indices in the previous version of the collection.
        
        
        
@@ -493,6 +351,148 @@ getError
        
        
        
+       
+       
+   
+   
+.. _getInsertionRanges:
+
+.. _getInsertionRanges__:
+
+.. _OrderedCollectionChangeSet_getInsertionRanges:
+
+.. _OrderedCollectionChangeSet_getInsertionRanges__:
+
+.. _io_realm_OrderedCollectionChangeSet_getInsertionRanges:
+
+.. _io_realm_OrderedCollectionChangeSet_getInsertionRanges__:
+
+
+
+getInsertionRanges
+------------------
+
+.. _io_realm_OrderedCollectionChangeSet_getInsertionRanges__:
+
+.. _io_realm_OrderedCollectionChangeSet_getInsertionRanges__:
+
+.. _io_realm_OrderedCollectionChangeSet_getInsertionRanges__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`OrderedCollectionChangeSet.Range <io_realm_OrderedCollectionChangeSet_Range>`  getInsertionRanges ()
+   
+   * - The inserted ranges of objects in the new version of the collection.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getInsertions:
+
+.. _getInsertions__:
+
+.. _OrderedCollectionChangeSet_getInsertions:
+
+.. _OrderedCollectionChangeSet_getInsertions__:
+
+.. _io_realm_OrderedCollectionChangeSet_getInsertions:
+
+.. _io_realm_OrderedCollectionChangeSet_getInsertions__:
+
+
+
+getInsertions
+-------------
+
+.. _io_realm_OrderedCollectionChangeSet_getInsertions__:
+
+.. _io_realm_OrderedCollectionChangeSet_getInsertions__:
+
+.. _io_realm_OrderedCollectionChangeSet_getInsertions__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **int** getInsertions ()
+   
+   * - The inserted indices in the new version of the collection.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getState:
+
+.. _getState__:
+
+.. _OrderedCollectionChangeSet_getState:
+
+.. _OrderedCollectionChangeSet_getState__:
+
+.. _io_realm_OrderedCollectionChangeSet_getState:
+
+.. _io_realm_OrderedCollectionChangeSet_getState__:
+
+
+
+getState
+--------
+
+.. _io_realm_OrderedCollectionChangeSet_getState__:
+
+.. _io_realm_OrderedCollectionChangeSet_getState__:
+
+.. _io_realm_OrderedCollectionChangeSet_getState__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`OrderedCollectionChangeSet.State <io_realm_OrderedCollectionChangeSet_State>`  getState ()
+   
+   * - Returns the state represented by this change. See :ref:`State <io_realm_OrderedCollectionChangeSet_State>`  for a description of the different states a changeset can be in.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       .. seealso::
+       
+       
+          
+          - :ref:`State <io_realm_OrderedCollectionChangeSet_State>` 
+             
+             
+             
+          
+          
+          
        
        
    

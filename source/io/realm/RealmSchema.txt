@@ -52,6 +52,49 @@ Method Summary
      - Method and Description
    
    * - 
+       public **boolean**
+     - 
+       :ref:`contains <io_realm_RealmSchema_contains_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
+       
+       Checks if a given class already exists in the schema.
+       
+       
+       
+   
+   * - 
+       public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` 
+     - 
+       :ref:`create <io_realm_RealmSchema_create_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
+       
+       Adds a new class to the Realm.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`createKeyPathMapping <io_realm_RealmSchema_createKeyPathMapping__>`  ()
+       
+       Create the underlying keypath mapping.
+       
+       
+       
+   
+   * - 
+       public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` 
+     - 
+       :ref:`createWithPrimaryKeyField <io_realm_RealmSchema_createWithPrimaryKeyField_String__String__Class_____FieldAttribute____>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className,
+                                                                     `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  primaryKeyFieldName,
+                                                                     `java.lang.Class\<?> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  fieldType,
+                                                                     :ref:`io.realm.FieldAttribute[] <io_realm_FieldAttribute>`  attributes)
+       
+       Adds a new class to the Realm with a primary key field defined.
+       
+       
+       
+   
+   * - 
        public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` 
      - 
        :ref:`get <io_realm_RealmSchema_get_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
@@ -76,24 +119,11 @@ Method Summary
        
    
    * - 
-       public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` 
+       protected final :ref:`ColumnInfo <io_realm_internal_ColumnInfo>` 
      - 
-       :ref:`create <io_realm_RealmSchema_create_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
-       
-       Adds a new class to the Realm.
+       :ref:`getColumnInfo <io_realm_RealmSchema_getColumnInfo_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
        
        
-       
-   
-   * - 
-       public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` 
-     - 
-       :ref:`createWithPrimaryKeyField <io_realm_RealmSchema_createWithPrimaryKeyField_String__String__Class_____FieldAttribute____>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className,
-                                                                     `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  primaryKeyFieldName,
-                                                                     `java.lang.Class\<?> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  fieldType,
-                                                                     :ref:`io.realm.FieldAttribute[] <io_realm_FieldAttribute>`  attributes)
-       
-       Adds a new class to the Realm with a primary key field defined.
        
        
        
@@ -119,36 +149,6 @@ Method Summary
        
        
    
-   * - 
-       public **boolean**
-     - 
-       :ref:`contains <io_realm_RealmSchema_contains_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
-       
-       Checks if a given class already exists in the schema.
-       
-       
-       
-   
-   * - 
-       protected final :ref:`ColumnInfo <io_realm_internal_ColumnInfo>` 
-     - 
-       :ref:`getColumnInfo <io_realm_RealmSchema_getColumnInfo_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
-       
-       
-       
-       
-       
-   
-   * - 
-       public **void**
-     - 
-       :ref:`createKeyPathMapping <io_realm_RealmSchema_createKeyPathMapping__>`  ()
-       
-       Create the underlying keypath mapping.
-       
-       
-       
-   
    
 
 
@@ -169,6 +169,237 @@ Inherited Methods
 Method Detail
 =============
 
+.. _contains:
+
+.. _contains__:
+
+.. _RealmSchema_contains:
+
+.. _RealmSchema_contains__:
+
+.. _io_realm_RealmSchema_contains:
+
+.. _io_realm_RealmSchema_contains__:
+
+
+
+contains
+--------
+
+.. _io_realm_RealmSchema_contains_String_:
+
+.. _io_realm_RealmSchema_contains_String_:
+
+.. _io_realm_RealmSchema_contains_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** contains (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
+   
+   * - Checks if a given class already exists in the schema.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``className`` - class name to check.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _create:
+
+.. _create__:
+
+.. _RealmSchema_create:
+
+.. _RealmSchema_create__:
+
+.. _io_realm_RealmSchema_create:
+
+.. _io_realm_RealmSchema_create__:
+
+
+
+create
+------
+
+.. _io_realm_RealmSchema_create_String_:
+
+.. _io_realm_RealmSchema_create_String_:
+
+.. _io_realm_RealmSchema_create_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`  create (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
+   
+   * - Adds a new class to the Realm.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``className`` - name of the class.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `UnsupportedOperationException <https://docs.oracle.com/javase/7/docs/api/java/lang/UnsupportedOperationException.html>`__  - if this :ref:`RealmSchema <io_realm_RealmSchema>`  is immutable.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _createKeyPathMapping:
+
+.. _createKeyPathMapping__:
+
+.. _RealmSchema_createKeyPathMapping:
+
+.. _RealmSchema_createKeyPathMapping__:
+
+.. _io_realm_RealmSchema_createKeyPathMapping:
+
+.. _io_realm_RealmSchema_createKeyPathMapping__:
+
+
+
+createKeyPathMapping
+--------------------
+
+.. _io_realm_RealmSchema_createKeyPathMapping__:
+
+.. _io_realm_RealmSchema_createKeyPathMapping__:
+
+.. _io_realm_RealmSchema_createKeyPathMapping__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** createKeyPathMapping ()
+   
+   * - Create the underlying keypath mapping. Should only be called by typed Realms.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _createWithPrimaryKeyField:
+
+.. _createWithPrimaryKeyField__:
+
+.. _RealmSchema_createWithPrimaryKeyField:
+
+.. _RealmSchema_createWithPrimaryKeyField__:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField__:
+
+
+
+createWithPrimaryKeyField
+-------------------------
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_String__String__Class_____FieldAttribute____:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_String_String_Class_FieldAttribute_:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_String__String__Class__FieldAttribute_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`  createWithPrimaryKeyField (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className,
+                                                                     `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  primaryKeyFieldName,
+                                                                     `java.lang.Class\<?> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  fieldType,
+                                                                     :ref:`io.realm.FieldAttribute[] <io_realm_FieldAttribute>`  attributes)
+   
+   * - Adds a new class to the Realm with a primary key field defined.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``className`` - name of the class.
+          
+          
+          
+       - ``primaryKeyFieldName`` - name of the primary key field.
+          
+          
+          
+       - ``fieldType`` - type of field to add. Only ``byte`` , ``short`` , ``int`` , ``long``  and their boxed types or the ``String``  is supported.
+          
+          
+          
+          
+          
+       - ``attributes`` - set of attributes for this field. This method implicitly adds :ref:`FieldAttribute.PRIMARY_KEY <io_realm_FieldAttribute_PRIMARY_KEY>`  and :ref:`FieldAttribute.INDEXED <io_realm_FieldAttribute_INDEXED>`  attributes to the field.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `UnsupportedOperationException <https://docs.oracle.com/javase/7/docs/api/java/lang/UnsupportedOperationException.html>`__  - if this :ref:`RealmSchema <io_realm_RealmSchema>`  is immutable.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
 .. _get:
 
 .. _get__:
@@ -265,138 +496,41 @@ getAll
        
    
    
-.. _create:
+.. _getColumnInfo:
 
-.. _create__:
+.. _getColumnInfo__:
 
-.. _RealmSchema_create:
+.. _RealmSchema_getColumnInfo:
 
-.. _RealmSchema_create__:
+.. _RealmSchema_getColumnInfo__:
 
-.. _io_realm_RealmSchema_create:
+.. _io_realm_RealmSchema_getColumnInfo:
 
-.. _io_realm_RealmSchema_create__:
-
-
-
-create
-------
-
-.. _io_realm_RealmSchema_create_String_:
-
-.. _io_realm_RealmSchema_create_String_:
-
-.. _io_realm_RealmSchema_create_String_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`  create (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
-   
-   * - Adds a new class to the Realm.
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``className`` - name of the class.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `UnsupportedOperationException <https://docs.oracle.com/javase/7/docs/api/java/lang/UnsupportedOperationException.html>`__  - if this :ref:`RealmSchema <io_realm_RealmSchema>`  is immutable.
-          
-          
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
-.. _createWithPrimaryKeyField:
-
-.. _createWithPrimaryKeyField__:
-
-.. _RealmSchema_createWithPrimaryKeyField:
-
-.. _RealmSchema_createWithPrimaryKeyField__:
-
-.. _io_realm_RealmSchema_createWithPrimaryKeyField:
-
-.. _io_realm_RealmSchema_createWithPrimaryKeyField__:
+.. _io_realm_RealmSchema_getColumnInfo__:
 
 
 
-createWithPrimaryKeyField
--------------------------
+getColumnInfo
+-------------
 
-.. _io_realm_RealmSchema_createWithPrimaryKeyField_String__String__Class_____FieldAttribute____:
+.. _io_realm_RealmSchema_getColumnInfo_String_:
 
-.. _io_realm_RealmSchema_createWithPrimaryKeyField_String_String_Class_FieldAttribute_:
+.. _io_realm_RealmSchema_getColumnInfo_String_:
 
-.. _io_realm_RealmSchema_createWithPrimaryKeyField_String__String__Class__FieldAttribute_:
+.. _io_realm_RealmSchema_getColumnInfo_String_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`  createWithPrimaryKeyField (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className,
-                                                                     `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  primaryKeyFieldName,
-                                                                     `java.lang.Class\<?> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  fieldType,
-                                                                     :ref:`io.realm.FieldAttribute[] <io_realm_FieldAttribute>`  attributes)
+   * -    protected final :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  getColumnInfo (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
    
-   * - Adds a new class to the Realm with a primary key field defined.
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``className`` - name of the class.
-          
-          
-          
-       - ``primaryKeyFieldName`` - name of the primary key field.
-          
-          
-          
-       - ``fieldType`` - type of field to add. Only ``byte`` , ``short`` , ``int`` , ``long``  and their boxed types or the ``String``  is supported.
-          
-          
-          
-          
-          
-       - ``attributes`` - set of attributes for this field. This method implicitly adds :ref:`FieldAttribute.PRIMARY_KEY <io_realm_FieldAttribute_PRIMARY_KEY>`  and :ref:`FieldAttribute.INDEXED <io_realm_FieldAttribute_INDEXED>`  attributes to the field.
-          
-          
-          
-          
-          
+   * - 
        
        
        
        
        
        
-       **Throws**
-       
-       - `UnsupportedOperationException <https://docs.oracle.com/javase/7/docs/api/java/lang/UnsupportedOperationException.html>`__  - if this :ref:`RealmSchema <io_realm_RealmSchema>`  is immutable.
-          
-          
-          
-          
-          
        
        
        
@@ -524,140 +658,6 @@ rename
           
           
           
-       
-       
-       
-       
-       
-   
-   
-.. _contains:
-
-.. _contains__:
-
-.. _RealmSchema_contains:
-
-.. _RealmSchema_contains__:
-
-.. _io_realm_RealmSchema_contains:
-
-.. _io_realm_RealmSchema_contains__:
-
-
-
-contains
---------
-
-.. _io_realm_RealmSchema_contains_String_:
-
-.. _io_realm_RealmSchema_contains_String_:
-
-.. _io_realm_RealmSchema_contains_String_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **boolean** contains (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
-   
-   * - Checks if a given class already exists in the schema.
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``className`` - class name to check.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-.. _getColumnInfo:
-
-.. _getColumnInfo__:
-
-.. _RealmSchema_getColumnInfo:
-
-.. _RealmSchema_getColumnInfo__:
-
-.. _io_realm_RealmSchema_getColumnInfo:
-
-.. _io_realm_RealmSchema_getColumnInfo__:
-
-
-
-getColumnInfo
--------------
-
-.. _io_realm_RealmSchema_getColumnInfo_String_:
-
-.. _io_realm_RealmSchema_getColumnInfo_String_:
-
-.. _io_realm_RealmSchema_getColumnInfo_String_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    protected final :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  getColumnInfo (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
-   
-   * - 
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-.. _createKeyPathMapping:
-
-.. _createKeyPathMapping__:
-
-.. _RealmSchema_createKeyPathMapping:
-
-.. _RealmSchema_createKeyPathMapping__:
-
-.. _io_realm_RealmSchema_createKeyPathMapping:
-
-.. _io_realm_RealmSchema_createKeyPathMapping__:
-
-
-
-createKeyPathMapping
---------------------
-
-.. _io_realm_RealmSchema_createKeyPathMapping__:
-
-.. _io_realm_RealmSchema_createKeyPathMapping__:
-
-.. _io_realm_RealmSchema_createKeyPathMapping__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **void** createKeyPathMapping ()
-   
-   * - Create the underlying keypath mapping. Should only be called by typed Realms.
-       
-       
-       
-       
-       
-       
        
        
        
