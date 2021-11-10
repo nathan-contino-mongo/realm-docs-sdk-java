@@ -24,9 +24,7 @@ io.realm.annotations
 - `java.lang.annotation.Annotation <https://docs.oracle.com/javase/7/docs/api/java/lang/annotation/Annotation.html>`__ 
 
 
-By default a Realm can store all classes extending RealmObject in a project. However, if you want to restrict a Realm to only contain a subset of classes or want to share them between a library project and an app project, you must use a RealmModule.
-
-A RealmModule is a collection of classes extending RealmObject that can be combined with other RealmModules to create the schema for a Realm. This makes it easier to control versioning and migration of those Realms.
+By default a Realm can store all classes extending RealmObject in a project. However, if you want to restrict a Realm to only contain a subset of classes or want to share them between a library project and an app project, you must use a RealmModule.A RealmModule is a collection of classes extending RealmObject that can be combined with other RealmModules to create the schema for a Realm. This makes it easier to control versioning and migration of those Realms.
 
 A RealmModule can either be a library module or an app module. The distinction is made by setting ``library = true`` . Setting ``library = true``  is normally only relevant for library authors. See below for further details.
 
@@ -87,15 +85,11 @@ Optional Element Summary
        
        
        
-       
-       
    
    * - public :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` 
        
        
      - The naming policy applied to all classes part of this module.
-       
-       
        
        
        
@@ -107,8 +101,6 @@ Optional Element Summary
        
        
        
-       
-       
    
    * - public :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` 
        
@@ -117,15 +109,11 @@ Optional Element Summary
        
        
        
-       
-       
    
    * - public **boolean**
        
        
      - Setting this to true will mark this module as a library module.
-       
-       
        
        
        
@@ -192,8 +180,6 @@ Element Detail
        
        
        If a class is part of multiple modules, the same naming policy must be applied to both modules, otherwise an error will be thrown.
-       
-       
        
        
        

@@ -19,15 +19,11 @@ io.realm
 
 `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
 
-Class for interacting with the Realm schema. This makes it possible to inspect, add, delete and change the classes in the Realm.
-
-:ref:`Realm.getSchema() <io_realm_Realm_getSchema__>`  returns an immutable ``RealmSchema``  which can only be used for inspecting. Use :ref:`DynamicRealm.getSchema() <io_realm_DynamicRealm_getSchema__>`  to get a mutable schema.
+Class for interacting with the Realm schema. This makes it possible to inspect, add, delete and change the classes in the Realm.:ref:`Realm.getSchema() <io_realm_Realm_getSchema__>`  returns an immutable ``RealmSchema``  which can only be used for inspecting. Use :ref:`DynamicRealm.getSchema() <io_realm_DynamicRealm_getSchema__>`  to get a mutable schema.
 
 
 
 All changes must happen inside a write transaction for the particular Realm.
-
-
 
 
 
@@ -88,8 +84,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` 
@@ -103,8 +97,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public abstract **void**
@@ -112,8 +104,6 @@ Method Summary
        :ref:`remove <io_realm_RealmSchema_remove_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
        
        Removes a class from the Realm.
-       
-       
        
        
        
@@ -128,8 +118,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public **boolean**
@@ -137,8 +125,6 @@ Method Summary
        :ref:`contains <io_realm_RealmSchema_contains_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
        
        Checks if a given class already exists in the schema.
-       
-       
        
        
        
@@ -152,8 +138,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public **void**
@@ -161,8 +145,6 @@ Method Summary
        :ref:`createKeyPathMapping <io_realm_RealmSchema_createKeyPathMapping__>`  ()
        
        Create the underlying keypath mapping.
-       
-       
        
        
        
@@ -225,8 +207,6 @@ get
        **Parameters**
        
        - ``className`` - name of the class
-          
-          
           
           
           
@@ -318,13 +298,9 @@ create
        
        
        
-       
-       
        **Parameters**
        
        - ``className`` - name of the class.
-          
-          
           
           
           
@@ -385,19 +361,13 @@ createWithPrimaryKeyField
        
        
        
-       
-       
        **Parameters**
        
        - ``className`` - name of the class.
           
           
           
-          
-          
        - ``primaryKeyFieldName`` - name of the primary key field.
-          
-          
           
           
           
@@ -475,8 +445,6 @@ remove
           
           
           
-          
-          
        
        
        
@@ -532,19 +500,13 @@ rename
        
        
        
-       
-       
        **Parameters**
        
        - ``oldClassName`` - old class name.
           
           
           
-          
-          
        - ``newClassName`` - new class name.
-          
-          
           
           
           
@@ -602,13 +564,9 @@ contains
        
        
        
-       
-       
        **Parameters**
        
        - ``className`` - class name to check.
-          
-          
           
           
           
@@ -663,8 +621,6 @@ getColumnInfo
        
        
        
-       
-       
    
    
 .. _createKeyPathMapping:
@@ -696,8 +652,6 @@ createKeyPathMapping
    * -    public **void** createKeyPathMapping ()
    
    * - Create the underlying keypath mapping. Should only be called by typed Realms.
-       
-       
        
        
        

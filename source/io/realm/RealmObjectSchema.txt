@@ -19,9 +19,7 @@ io.realm
 
 `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
 
-Class for interacting with the schema for a given RealmObject class. This makes it possible to inspect, add, delete or change the fields for given class.
-
-If this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`  is retrieved from an immutable :ref:`RealmSchema <io_realm_RealmSchema>` , this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`  will be immutable as well.
+Class for interacting with the schema for a given RealmObject class. This makes it possible to inspect, add, delete or change the fields for given class.If this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`  is retrieved from an immutable :ref:`RealmSchema <io_realm_RealmSchema>` , this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`  will be immutable as well.
 
 
 
@@ -75,8 +73,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` 
@@ -84,8 +80,6 @@ Method Summary
        :ref:`setClassName <io_realm_RealmObjectSchema_setClassName_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
        
        Sets a new name for this RealmObject class.
-       
-       
        
        
        
@@ -98,8 +92,6 @@ Method Summary
                                                     :ref:`io.realm.FieldAttribute[] <io_realm_FieldAttribute>`  attributes)
        
        Adds a new simple field to the RealmObject class.
-       
-       
        
        
        
@@ -204,8 +196,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` 
@@ -214,8 +204,6 @@ Method Summary
                                                        `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  newFieldName)
        
        Renames a field from one name to another.
-       
-       
        
        
        
@@ -229,8 +217,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` 
@@ -238,8 +224,6 @@ Method Summary
        :ref:`addIndex <io_realm_RealmObjectSchema_addIndex_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
        
        Adds an index to a given field.
-       
-       
        
        
        
@@ -253,8 +237,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` 
@@ -262,8 +244,6 @@ Method Summary
        :ref:`removeIndex <io_realm_RealmObjectSchema_removeIndex_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
        
        Removes an index from a given field.
-       
-       
        
        
        
@@ -277,8 +257,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` 
@@ -286,8 +264,6 @@ Method Summary
        :ref:`removePrimaryKey <io_realm_RealmObjectSchema_removePrimaryKey__>`  ()
        
        Removes the primary key from this class.
-       
-       
        
        
        
@@ -351,8 +327,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public **boolean**
@@ -360,8 +334,6 @@ Method Summary
        :ref:`hasPrimaryKey <io_realm_RealmObjectSchema_hasPrimaryKey__>`  ()
        
        Checks if the class has a primary key defined.
-       
-       
        
        
        
@@ -375,8 +347,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public `Set <https://docs.oracle.com/javase/7/docs/api/java/util/Set.html>`__ 
@@ -384,8 +354,6 @@ Method Summary
        :ref:`getFieldNames <io_realm_RealmObjectSchema_getFieldNames__>`  ()
        
        Returns all fields in this class.
-       
-       
        
        
        
@@ -399,8 +367,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public :ref:`RealmFieldType <io_realm_RealmFieldType>` 
@@ -408,8 +374,6 @@ Method Summary
        :ref:`getFieldType <io_realm_RealmObjectSchema_getFieldType_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
        
        Returns the type used by the underlying storage engine to represent this field.
-       
-       
        
        
        
@@ -432,8 +396,6 @@ Method Summary
        :ref:`setEmbedded <io_realm_RealmObjectSchema_setEmbedded_boolean_>`  (**boolean** embedded)
        
        Converts the class to be embedded or not.
-       
-       
        
        
        
@@ -488,8 +450,6 @@ getClassName
    
    * - Returns the name of the RealmObject class being represented by this schema.
        
-       
-       
        - When using a normal :ref:`Realm <io_realm_Realm>`  this name is the same as the :ref:`RealmObject <io_realm_RealmObject>`  class.
           
           
@@ -511,13 +471,9 @@ getClassName
        
        
        
-       
-       
        **Throws**
        
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if this schema defintion is no longer part of the Realm.
-          
-          
           
           
           
@@ -561,13 +517,9 @@ setClassName
        
        
        
-       
-       
        **Parameters**
        
        - ``className`` - the new name for this class.
-          
-          
           
           
           
@@ -659,8 +611,6 @@ addField
           
           
           
-          
-          
        - ``fieldType`` - type of field to add. See :ref:`RealmObject <io_realm_RealmObject>`  for the full list.
           
           
@@ -668,8 +618,6 @@ addField
           
           
        - ``attributes`` - set of attributes for this field.
-          
-          
           
           
           
@@ -682,8 +630,6 @@ addField
        **Throws**
        
        - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the type isn't supported, field name is illegal or a field with that name already exists.
-          
-          
           
           
           
@@ -742,11 +688,7 @@ addRealmObjectField
           
           
           
-          
-          
        - ``objectSchema`` - schema for the Realm type being referenced.
-          
-          
           
           
           
@@ -759,8 +701,6 @@ addRealmObjectField
        **Throws**
        
        - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name is illegal or a field with that name already exists.
-          
-          
           
           
           
@@ -823,11 +763,7 @@ addRealmListField
           
           
           
-          
-          
        - ``objectSchema`` - schema for the Realm type being referenced.
-          
-          
           
           
           
@@ -840,8 +776,6 @@ addRealmListField
        **Throws**
        
        - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the field name is illegal or a field with that name already exists.
-          
-          
           
           
           
@@ -905,11 +839,7 @@ addRealmListField
           
           
           
-          
-          
        - ``primitiveType`` - simple type of elements in the array.
-          
-          
           
           
           
@@ -922,8 +852,6 @@ addRealmListField
        **Throws**
        
        - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the field name is illegal, a field with that name already exists or the element type isn't supported.
-          
-          
           
           
           
@@ -986,11 +914,7 @@ addRealmDictionaryField
           
           
           
-          
-          
        - ``objectSchema`` - schema for the Realm type being referenced.
-          
-          
           
           
           
@@ -1003,8 +927,6 @@ addRealmDictionaryField
        **Throws**
        
        - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the field name is illegal or a field with that name already exists.
-          
-          
           
           
           
@@ -1068,11 +990,7 @@ addRealmDictionaryField
           
           
           
-          
-          
        - ``primitiveType`` - simple type of elements in the array.
-          
-          
           
           
           
@@ -1085,8 +1003,6 @@ addRealmDictionaryField
        **Throws**
        
        - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the field name is illegal, a field with that name already exists or the element type isn't supported.
-          
-          
           
           
           
@@ -1149,11 +1065,7 @@ addRealmSetField
           
           
           
-          
-          
        - ``objectSchema`` - schema for the Realm type being referenced.
-          
-          
           
           
           
@@ -1166,8 +1078,6 @@ addRealmSetField
        **Throws**
        
        - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the field name is illegal or a field with that name already exists.
-          
-          
           
           
           
@@ -1231,11 +1141,7 @@ addRealmSetField
           
           
           
-          
-          
        - ``primitiveType`` - simple type of elements in the array.
-          
-          
           
           
           
@@ -1248,8 +1154,6 @@ addRealmSetField
        **Throws**
        
        - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the field name is illegal, a field with that name already exists or the element type isn't supported.
-          
-          
           
           
           
@@ -1299,13 +1203,9 @@ removeField
        
        
        
-       
-       
        **Parameters**
        
        - ``fieldName`` - field name to remove.
-          
-          
           
           
           
@@ -1318,8 +1218,6 @@ removeField
        **Throws**
        
        - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist.
-          
-          
           
           
           
@@ -1370,19 +1268,13 @@ renameField
        
        
        
-       
-       
        **Parameters**
        
        - ``currentFieldName`` - field name to rename.
           
           
           
-          
-          
        - ``newFieldName`` - the new field name.
-          
-          
           
           
           
@@ -1395,8 +1287,6 @@ renameField
        **Throws**
        
        - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or if the new field name already exists.
-          
-          
           
           
           
@@ -1446,13 +1336,9 @@ hasField
        
        
        
-       
-       
        **Parameters**
        
        - ``fieldName`` - field name to test.
-          
-          
           
           
           
@@ -1508,8 +1394,6 @@ addIndex
           
           
           
-          
-          
        
        
        
@@ -1519,8 +1403,6 @@ addIndex
        **Throws**
        
        - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist, the field cannot be indexed or it already has a index defined.
-          
-          
           
           
           
@@ -1570,13 +1452,9 @@ hasIndex
        
        
        
-       
-       
        **Parameters**
        
        - ``fieldName`` - existing field name to check.
-          
-          
           
           
           
@@ -1589,8 +1467,6 @@ hasIndex
        **Throws**
        
        - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist.
-          
-          
           
           
           
@@ -1656,8 +1532,6 @@ removeIndex
           
           
           
-          
-          
        
        
        
@@ -1667,8 +1541,6 @@ removeIndex
        **Throws**
        
        - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or the field doesn't have an index.
-          
-          
           
           
           
@@ -1726,8 +1598,6 @@ addPrimaryKey
           
           
           
-          
-          
        
        
        
@@ -1737,8 +1607,6 @@ addPrimaryKey
        **Throws**
        
        - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist, the field cannot be a primary key or it already has a primary key defined.
-          
-          
           
           
           
@@ -1800,8 +1668,6 @@ removePrimaryKey
           
           
           
-          
-          
        - `UnsupportedOperationException <https://docs.oracle.com/javase/7/docs/api/java/lang/UnsupportedOperationException.html>`__  - if this :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`  is immutable or of a synced Realm.
           
           
@@ -1858,8 +1724,6 @@ setRequired
        **Parameters**
        
        - ``fieldName`` - name of field in the class.
-          
-          
           
           
           
@@ -1956,8 +1820,6 @@ setNullable
           
           
           
-          
-          
        - ``nullable`` - ``true``  if field should be nullable, ``false``  otherwise.
           
           
@@ -1973,8 +1835,6 @@ setNullable
        **Throws**
        
        - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the field name doesn't exist, or cannot be set as nullable.
-          
-          
           
           
           
@@ -2032,8 +1892,6 @@ isRequired
           
           
           
-          
-          
        
        
        
@@ -2043,8 +1901,6 @@ isRequired
        **Throws**
        
        - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist.
-          
-          
           
           
           
@@ -2110,8 +1966,6 @@ isNullable
           
           
           
-          
-          
        
        
        
@@ -2121,8 +1975,6 @@ isNullable
        **Throws**
        
        - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist.
-          
-          
           
           
           
@@ -2180,13 +2032,9 @@ isPrimaryKey
        
        
        
-       
-       
        **Parameters**
        
        - ``fieldName`` - field to check.
-          
-          
           
           
           
@@ -2199,8 +2047,6 @@ isPrimaryKey
        **Throws**
        
        - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist.
-          
-          
           
           
           
@@ -2266,8 +2112,6 @@ hasPrimaryKey
        
        
        
-       
-       
        .. seealso::
        
        
@@ -2320,13 +2164,9 @@ getPrimaryKey
        
        
        
-       
-       
        **Throws**
        
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the class doesn't have a primary key defined.
-          
-          
           
           
           
@@ -2377,8 +2217,6 @@ getFieldNames
        
        
        
-       
-       
    
    
 .. _transform:
@@ -2418,13 +2256,9 @@ transform
        
        
        
-       
-       
        **Parameters**
        
        - ``function`` - transformation function.
-          
-          
           
           
           
@@ -2482,13 +2316,9 @@ getFieldType
        
        
        
-       
-       
        **Parameters**
        
        - ``fieldName`` - name of the target field.
-          
-          
           
           
           
@@ -2575,9 +2405,7 @@ setEmbedded
    
    * -    public **void** setEmbedded (**boolean** embedded)
    
-   * - Converts the class to be embedded or not.
-       
-       A class can only be marked as embedded if the following invariants are satisfied:
+   * - Converts the class to be embedded or not.A class can only be marked as embedded if the following invariants are satisfied:
        
        
        
@@ -2600,13 +2428,9 @@ setEmbedded
        
        
        
-       
-       
        **Throws**
        
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the class could not be converted because it broke some of the Embedded Objects invariants.
-          
-          
           
           
           

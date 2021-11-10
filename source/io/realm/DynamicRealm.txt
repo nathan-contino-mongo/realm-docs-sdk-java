@@ -37,8 +37,6 @@ This means that the schema is not created or validated until a Realm has been op
 
 
 
-
-
 .. seealso::
 
 
@@ -118,8 +116,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>` 
@@ -128,8 +124,6 @@ Method Summary
                                                 `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  primaryKeyValue)
        
        Creates an object with a given primary key.
-       
-       
        
        
        
@@ -145,8 +139,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public :ref:`RealmQuery <io_realm_RealmQuery>` 
@@ -154,8 +146,6 @@ Method Summary
        :ref:`where <io_realm_DynamicRealm_where_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
        
        Returns a RealmQuery, which can be used to query the provided class.
-       
-       
        
        
        
@@ -169,8 +159,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public **void**
@@ -178,8 +166,6 @@ Method Summary
        :ref:`removeChangeListener <io_realm_DynamicRealm_removeChangeListener_RealmChangeListener_DynamicRealm__>`  (:ref:`io.realm.RealmChangeListener\<io.realm.DynamicRealm> <io_realm_RealmChangeListener>`  listener)
        
        Removes the specified change listener.
-       
-       
        
        
        
@@ -193,8 +179,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public **void**
@@ -205,8 +189,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public **void**
@@ -214,8 +196,6 @@ Method Summary
        :ref:`executeTransaction <io_realm_DynamicRealm_executeTransaction_DynamicRealm_Transaction_>`  (:ref:`DynamicRealm.Transaction <io_realm_DynamicRealm_Transaction>`  transaction)
        
        Executes a given transaction on the DynamicRealm.
-       
-       
        
        
        
@@ -305,8 +285,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public :ref:`DynamicRealm <io_realm_DynamicRealm>` 
@@ -390,8 +368,6 @@ getInstance
           
           
           
-          
-          
        - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if ``configuration``  argument is ``null`` .
           
           
@@ -440,7 +416,7 @@ getInstanceAsync
 
 .. _io_realm_DynamicRealm_getInstanceAsync_RealmConfiguration_Callback_:
 
-.. _io_realm_DynamicRealm_getInstanceAsync_RealmConfiguration__App_Callback_:
+.. _io_realm_DynamicRealm_getInstanceAsync_RealmConfiguration__Callback_:
 
 .. list-table::
    :header-rows: 1
@@ -464,8 +440,6 @@ getInstanceAsync
           
           
        - ``callback`` - invoked to return the results.
-          
-          
           
           
           
@@ -543,13 +517,9 @@ createObject
        
        
        
-       
-       
        **Parameters**
        
        - ``className`` - the class name of the object to create.
-          
-          
           
           
           
@@ -562,8 +532,6 @@ createObject
        **Throws**
        
        - :ref:`RealmException <io_realm_exceptions_RealmException>`  - if the object could not be created.
-          
-          
           
           
           
@@ -603,11 +571,7 @@ createObject
           
           
           
-          
-          
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the model clazz does not have an primary key defined.
-          
-          
           
           
           
@@ -654,11 +618,7 @@ createEmbeddedObject
                                                         :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>`  parentObject,
                                                         `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  parentProperty)
    
-   * - Instantiates and adds a new embedded object to the Realm.
-       
-       This method should only be used to create objects of types marked as embedded.
-       
-       
+   * - Instantiates and adds a new embedded object to the Realm.This method should only be used to create objects of types marked as embedded.
        
        
        
@@ -671,17 +631,11 @@ createEmbeddedObject
           
           
           
-          
-          
        - ``parentObject`` - The parent object which should hold a reference to the embedded object. If the parent property is a list the embedded object will be added to the end of that list.
           
           
           
-          
-          
        - ``parentProperty`` - the property in the parent class which holds the reference.
-          
-          
           
           
           
@@ -753,13 +707,9 @@ where
        
        
        
-       
-       
        **Parameters**
        
        - ``className`` - the class of the object which is to be queried.
-          
-          
           
           
           
@@ -772,8 +722,6 @@ where
        **Throws**
        
        - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the class doesn't exist.
-          
-          
           
           
           
@@ -826,9 +774,7 @@ addChangeListener
    
    * -    public **void** addChangeListener (:ref:`io.realm.RealmChangeListener\<io.realm.DynamicRealm> <io_realm_RealmChangeListener>`  listener)
    
-   * - Adds a change listener to the Realm.
-       
-       The listeners will be executed when changes are committed by this or another thread.
+   * - Adds a change listener to the Realm.The listeners will be executed when changes are committed by this or another thread.
        
        Realm instances are cached per thread. For that reason it is important to remember to remove listeners again either using :ref:`removeChangeListener(RealmChangeListener) <io_realm_DynamicRealm_removeChangeListener_RealmChangeListener_>`  or :ref:`removeAllChangeListeners() <io_realm_DynamicRealm_removeAllChangeListeners__>` . Not doing so can cause memory leaks.
        
@@ -842,8 +788,6 @@ addChangeListener
        **Parameters**
        
        - ``listener`` - the change listener.
-          
-          
           
           
           
@@ -927,13 +871,9 @@ removeChangeListener
        
        
        
-       
-       
        **Parameters**
        
        - ``listener`` - the change listener to be removed.
-          
-          
           
           
           
@@ -952,8 +892,6 @@ removeChangeListener
           
           
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if you try to remove a listener from a non-Looper Thread.
-          
-          
           
           
           
@@ -1015,13 +953,9 @@ removeAllChangeListeners
        
        
        
-       
-       
        **Throws**
        
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if you try to remove listeners from a non-Looper Thread.
-          
-          
           
           
           
@@ -1079,13 +1013,9 @@ delete
        
        
        
-       
-       
        **Parameters**
        
        - ``className`` - the class for which all objects should be removed.
-          
-          
           
           
           
@@ -1098,8 +1028,6 @@ delete
        **Throws**
        
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm is closed or called from an incorrect thread.
-          
-          
           
           
           
@@ -1279,8 +1207,6 @@ executeTransactionAsync
           
           
           
-          
-          
        
        
        
@@ -1330,8 +1256,6 @@ executeTransactionAsync
           
           
        - ``onError`` - callback invoked when the transaction fails.
-          
-          
           
           
           
@@ -1388,11 +1312,7 @@ executeTransactionAsync
           
           
           
-          
-          
        - ``onError`` - callback invoked when the transaction fails.
-          
-          
           
           
           
@@ -1534,8 +1454,6 @@ getSchema
    * -    public :ref:`RealmSchema <io_realm_RealmSchema>`  getSchema ()
    
    * - Returns the mutable schema for this Realm.
-       
-       
        
        
        

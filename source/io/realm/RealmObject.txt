@@ -27,9 +27,7 @@ io.realm
 - :ref:`io.realm.internal.ManageableObject <io_realm_internal_ManageableObject>` 
 
 
-In Realm you define your RealmObject classes by sub-classing RealmObject and adding fields to be persisted. You then create your objects within a Realm, and use your custom subclasses instead of using the RealmObject class directly.
-
-An annotation processor will create a proxy class for your RealmObject subclass.
+In Realm you define your RealmObject classes by sub-classing RealmObject and adding fields to be persisted. You then create your objects within a Realm, and use your custom subclasses instead of using the RealmObject class directly.An annotation processor will create a proxy class for your RealmObject subclass.
 
 The following field data types are supported:
 
@@ -99,8 +97,6 @@ A RealmObject cannot be passed between different threads.
 
 
 
-
-
 .. seealso::
 
 
@@ -147,8 +143,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public static **void**
@@ -156,8 +150,6 @@ Method Summary
        :ref:`deleteFromRealm <io_realm_RealmObject_deleteFromRealm_E_>`  <**E (?)** >(**E (?)** object)
        
        Deletes the object from the Realm it is currently associated with.
-       
-       
        
        
        
@@ -195,8 +187,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public final **E (?)**
@@ -204,8 +194,6 @@ Method Summary
        :ref:`freeze <io_realm_RealmObject_freeze__>`  <**E (?)** >()
        
        Returns a frozen snapshot of this object.
-       
-       
        
        
        
@@ -219,8 +207,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public static **E (?)**
@@ -228,8 +214,6 @@ Method Summary
        :ref:`freeze <io_realm_RealmObject_freeze_E_>`  <**E (?)** >(**E (?)** object)
        
        Returns a frozen snapshot of this object.
-       
-       
        
        
        
@@ -243,8 +227,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public static **boolean**
@@ -252,8 +234,6 @@ Method Summary
        :ref:`isLoaded <io_realm_RealmObject_isLoaded_E_>`  <**E (?)** >(**E (?)** object)
        
        Checks if the query used to find this RealmObject has completed.
-       
-       
        
        
        
@@ -267,8 +247,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public static **boolean**
@@ -276,8 +254,6 @@ Method Summary
        :ref:`isManaged <io_realm_RealmObject_isManaged_E_>`  <**E (?)** >(**E (?)** object)
        
        Checks if this object is managed by Realm.
-       
-       
        
        
        
@@ -315,8 +291,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public static **boolean**
@@ -324,8 +298,6 @@ Method Summary
        :ref:`load <io_realm_RealmObject_load_E_>`  <**E (?)** >(**E (?)** object)
        
        Makes an asynchronous query blocking.
-       
-       
        
        
        
@@ -339,8 +311,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public final **void**
@@ -348,8 +318,6 @@ Method Summary
        :ref:`addChangeListener <io_realm_RealmObject_addChangeListener_RealmChangeListener_E__>`  <**E (?)** >(:ref:`io.realm.RealmChangeListener\<E> <io_realm_RealmChangeListener>`  listener)
        
        Adds a change listener to this RealmObject that will be triggered if any value field or referenced RealmObject field is changed, or the RealmList field itself is changed.
-       
-       
        
        
        
@@ -364,8 +332,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public static **void**
@@ -374,8 +340,6 @@ Method Summary
                                               :ref:`io.realm.RealmChangeListener\<E> <io_realm_RealmChangeListener>`  listener)
        
        Adds a change listener to a RealmObject that will be triggered if any value field or referenced RealmObject field is changed, or the RealmList field itself is changed.
-       
-       
        
        
        
@@ -389,8 +353,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public final **void**
@@ -398,8 +360,6 @@ Method Summary
        :ref:`removeChangeListener <io_realm_RealmObject_removeChangeListener_RealmChangeListener_>`  (:ref:`io.realm.RealmChangeListener <io_realm_RealmChangeListener>`  listener)
        
        Removes a previously registered listener.
-       
-       
        
        
        
@@ -414,8 +374,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public static **void**
@@ -424,8 +382,6 @@ Method Summary
                                                  :ref:`io.realm.RealmChangeListener\<E> <io_realm_RealmChangeListener>`  listener)
        
        Removes a previously registered listener on the given RealmObject.
-       
-       
        
        
        
@@ -439,8 +395,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public static **void**
@@ -448,8 +402,6 @@ Method Summary
        :ref:`removeAllChangeListeners <io_realm_RealmObject_removeAllChangeListeners_E_>`  <**E (?)** >(**E (?)** object)
        
        Removes all registered listeners from the given RealmObject.
-       
-       
        
        
        
@@ -463,8 +415,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public final **<any> (?)**
@@ -472,8 +422,6 @@ Method Summary
        :ref:`asChangesetObservable <io_realm_RealmObject_asChangesetObservable__>`  <**E (?)** >()
        
        Returns an Rx Observable that monitors changes to this RealmObject.
-       
-       
        
        
        
@@ -487,8 +435,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public static **<any> (?)**
@@ -496,8 +442,6 @@ Method Summary
        :ref:`asChangesetObservable <io_realm_RealmObject_asChangesetObservable_E_>`  <**E (?)** >(**E (?)** object)
        
        Returns an Rx Observable that monitors changes to this RealmObject.
-       
-       
        
        
        
@@ -550,11 +494,7 @@ deleteFromRealm
    
    * -    public final **void** deleteFromRealm ()
    
-   * - Deletes the object from the Realm it is currently associated to.
-       
-       After this method is called the object will be invalid and any operation (read or write) performed on it will fail with an IllegalStateException.
-       
-       
+   * - Deletes the object from the Realm it is currently associated to.After this method is called the object will be invalid and any operation (read or write) performed on it will fail with an IllegalStateException.
        
        
        
@@ -568,8 +508,6 @@ deleteFromRealm
        **Throws**
        
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the corresponding Realm is closed or in an incorrect thread.
-          
-          
           
           
           
@@ -605,11 +543,7 @@ deleteFromRealm
    
    * -    public static **void** deleteFromRealm <**E (?)** >(**E (?)** object)
    
-   * - Deletes the object from the Realm it is currently associated with.
-       
-       After this method is called the object will be invalid and any operation (read or write) performed on it will fail with an IllegalStateException.
-       
-       
+   * - Deletes the object from the Realm it is currently associated with.After this method is called the object will be invalid and any operation (read or write) performed on it will fail with an IllegalStateException.
        
        
        
@@ -623,8 +557,6 @@ deleteFromRealm
        **Throws**
        
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the corresponding Realm is closed or in an incorrect thread.
-          
-          
           
           
           
@@ -709,8 +641,6 @@ isValid
        
        
        
-       
-       
        .. seealso::
        
        
@@ -748,8 +678,6 @@ isValid
        **Parameters**
        
        - ``object`` - RealmObject to check validity for.
-          
-          
           
           
           
@@ -805,8 +733,6 @@ isFrozen
        
        
        
-       
-       
        .. seealso::
        
        
@@ -834,8 +760,6 @@ isFrozen
    * -    public static **boolean** isFrozen <**E (?)** >(**E (?)** object)
    
    * - Returns whether or not this RealmObject is frozen.
-       
-       
        
        
        
@@ -918,8 +842,6 @@ freeze
           
           
           
-          
-          
        
        
        
@@ -965,8 +887,6 @@ freeze
           
           
           
-          
-          
        
        
        
@@ -1002,9 +922,7 @@ isLoaded
    
    * -    public final **boolean** isLoaded ()
    
-   * - Checks if the query used to find this RealmObject has completed.
-       
-       Async methods like :ref:`RealmQuery.findFirstAsync() <io_realm_RealmQuery_findFirstAsync__>`  return an :ref:`RealmObject <io_realm_RealmObject>`  that represents the future result of the :ref:`RealmQuery <io_realm_RealmQuery>` . It can be considered similar to a `java.util.concurrent.Future <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Future.html>`__  in this regard.
+   * - Checks if the query used to find this RealmObject has completed.Async methods like :ref:`RealmQuery.findFirstAsync() <io_realm_RealmQuery_findFirstAsync__>`  return an :ref:`RealmObject <io_realm_RealmObject>`  that represents the future result of the :ref:`RealmQuery <io_realm_RealmQuery>` . It can be considered similar to a `java.util.concurrent.Future <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Future.html>`__  in this regard.
        
        
        
@@ -1080,9 +998,7 @@ isLoaded
    
    * -    public static **boolean** isLoaded <**E (?)** >(**E (?)** object)
    
-   * - Checks if the query used to find this RealmObject has completed.
-       
-       Async methods like :ref:`RealmQuery.findFirstAsync() <io_realm_RealmQuery_findFirstAsync__>`  return an :ref:`RealmObject <io_realm_RealmObject>`  that represents the future result of the :ref:`RealmQuery <io_realm_RealmQuery>` . It can be considered similar to a `java.util.concurrent.Future <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Future.html>`__  in this regard.
+   * - Checks if the query used to find this RealmObject has completed.Async methods like :ref:`RealmQuery.findFirstAsync() <io_realm_RealmQuery_findFirstAsync__>`  return an :ref:`RealmObject <io_realm_RealmObject>`  that represents the future result of the :ref:`RealmQuery <io_realm_RealmQuery>` . It can be considered similar to a `java.util.concurrent.Future <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Future.html>`__  in this regard.
        
        
        
@@ -1127,8 +1043,6 @@ isLoaded
        **Parameters**
        
        - ``object`` - RealmObject to check.
-          
-          
           
           
           
@@ -1387,9 +1301,7 @@ load
    
    * -    public final **boolean** load ()
    
-   * - Makes an asynchronous query blocking. This will also trigger any registered listeners.
-       
-       Note: This will return ``true``  if called for an unmanaged object (created outside of Realm).
+   * - Makes an asynchronous query blocking. This will also trigger any registered listeners.Note: This will return ``true``  if called for an unmanaged object (created outside of Realm).
        
        
        
@@ -1418,9 +1330,7 @@ load
    
    * -    public static **boolean** load <**E (?)** >(**E (?)** object)
    
-   * - Makes an asynchronous query blocking. This will also trigger any registered listeners.
-       
-       Note: This will return ``true``  if called for an unmanaged object (created outside of Realm).
+   * - Makes an asynchronous query blocking. This will also trigger any registered listeners.Note: This will return ``true``  if called for an unmanaged object (created outside of Realm).
        
        
        
@@ -1432,8 +1342,6 @@ load
        **Parameters**
        
        - ``object`` - RealmObject to force load.
-          
-          
           
           
           
@@ -1476,9 +1384,7 @@ addChangeListener
    
    * -    public final **void** addChangeListener <**E (?)** >(:ref:`io.realm.RealmObjectChangeListener\<E> <io_realm_RealmObjectChangeListener>`  listener)
    
-   * - Adds a change listener to this RealmObject to get detailed information about changes. The listener will be triggered if any value field or referenced RealmObject field is changed, or the RealmList field itself is changed.
-       
-       Registering a change listener will not prevent the underlying RealmObject from being garbage collected. If the RealmObject is garbage collected, the change listener will stop being triggered. To avoid this, keep a strong reference for as long as appropriate e.g. in a class variable.
+   * - Adds a change listener to this RealmObject to get detailed information about changes. The listener will be triggered if any value field or referenced RealmObject field is changed, or the RealmList field itself is changed.Registering a change listener will not prevent the underlying RealmObject from being garbage collected. If the RealmObject is garbage collected, the change listener will stop being triggered. To avoid this, keep a strong reference for as long as appropriate e.g. in a class variable.
        
         
        
@@ -1511,13 +1417,9 @@ addChangeListener
        
        
        
-       
-       
        **Parameters**
        
        - ``listener`` - the change listener to be notified.
-          
-          
           
           
           
@@ -1545,8 +1447,6 @@ addChangeListener
           
           
           
-          
-          
        
        
        
@@ -1565,9 +1465,7 @@ addChangeListener
    
    * -    public final **void** addChangeListener <**E (?)** >(:ref:`io.realm.RealmChangeListener\<E> <io_realm_RealmChangeListener>`  listener)
    
-   * - Adds a change listener to this RealmObject that will be triggered if any value field or referenced RealmObject field is changed, or the RealmList field itself is changed.
-       
-       Registering a change listener will not prevent the underlying RealmObject from being garbage collected. If the RealmObject is garbage collected, the change listener will stop being triggered. To avoid this, keep a strong reference for as long as appropriate e.g. in a class variable.
+   * - Adds a change listener to this RealmObject that will be triggered if any value field or referenced RealmObject field is changed, or the RealmList field itself is changed.Registering a change listener will not prevent the underlying RealmObject from being garbage collected. If the RealmObject is garbage collected, the change listener will stop being triggered. To avoid this, keep a strong reference for as long as appropriate e.g. in a class variable.
        
         
        
@@ -1600,13 +1498,9 @@ addChangeListener
        
        
        
-       
-       
        **Parameters**
        
        - ``listener`` - the change listener to be notified.
-          
-          
           
           
           
@@ -1631,8 +1525,6 @@ addChangeListener
           
           
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if you try to add a listener inside a transaction.
-          
-          
           
           
           
@@ -1655,9 +1547,7 @@ addChangeListener
    * -    public static **void** addChangeListener <**E (?)** >(**E (?)** object,
                                               :ref:`io.realm.RealmObjectChangeListener\<E> <io_realm_RealmObjectChangeListener>`  listener)
    
-   * - Adds a change listener to a RealmObject to get detailed information about the changes. The listener will be triggered if any value field or referenced RealmObject field is changed, or the RealmList field itself is changed.
-       
-       Registering a change listener will not prevent the underlying RealmObject from being garbage collected. If the RealmObject is garbage collected, the change listener will stop being triggered. To avoid this, keep a strong reference for as long as appropriate e.g. in a class variable.
+   * - Adds a change listener to a RealmObject to get detailed information about the changes. The listener will be triggered if any value field or referenced RealmObject field is changed, or the RealmList field itself is changed.Registering a change listener will not prevent the underlying RealmObject from being garbage collected. If the RealmObject is garbage collected, the change listener will stop being triggered. To avoid this, keep a strong reference for as long as appropriate e.g. in a class variable.
        
         
        
@@ -1690,19 +1580,13 @@ addChangeListener
        
        
        
-       
-       
        **Parameters**
        
        - ``object`` - RealmObject to add listener to.
           
           
           
-          
-          
        - ``listener`` - the change listener to be notified.
-          
-          
           
           
           
@@ -1730,8 +1614,6 @@ addChangeListener
           
           
           
-          
-          
        
        
        
@@ -1751,9 +1633,7 @@ addChangeListener
    * -    public static **void** addChangeListener <**E (?)** >(**E (?)** object,
                                               :ref:`io.realm.RealmChangeListener\<E> <io_realm_RealmChangeListener>`  listener)
    
-   * - Adds a change listener to a RealmObject that will be triggered if any value field or referenced RealmObject field is changed, or the RealmList field itself is changed.
-       
-       Registering a change listener will not prevent the underlying RealmObject from being garbage collected. If the RealmObject is garbage collected, the change listener will stop being triggered. To avoid this, keep a strong reference for as long as appropriate e.g. in a class variable.
+   * - Adds a change listener to a RealmObject that will be triggered if any value field or referenced RealmObject field is changed, or the RealmList field itself is changed.Registering a change listener will not prevent the underlying RealmObject from being garbage collected. If the RealmObject is garbage collected, the change listener will stop being triggered. To avoid this, keep a strong reference for as long as appropriate e.g. in a class variable.
        
         
        
@@ -1786,19 +1666,13 @@ addChangeListener
        
        
        
-       
-       
        **Parameters**
        
        - ``object`` - RealmObject to add listener to.
           
           
           
-          
-          
        - ``listener`` - the change listener to be notified.
-          
-          
           
           
           
@@ -1823,8 +1697,6 @@ addChangeListener
           
           
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if you try to add a listener inside a transaction.
-          
-          
           
           
           
@@ -1868,13 +1740,9 @@ removeChangeListener
        
        
        
-       
-       
        **Parameters**
        
        - ``listener`` - the instance to be removed.
-          
-          
           
           
           
@@ -1893,8 +1761,6 @@ removeChangeListener
           
           
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if you try to remove a listener from a non-Looper Thread.
-          
-          
           
           
           
@@ -1921,13 +1787,9 @@ removeChangeListener
        
        
        
-       
-       
        **Parameters**
        
        - ``listener`` - the instance to be removed.
-          
-          
           
           
           
@@ -1946,8 +1808,6 @@ removeChangeListener
           
           
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if you try to remove a listener from a non-Looper Thread.
-          
-          
           
           
           
@@ -1975,19 +1835,13 @@ removeChangeListener
        
        
        
-       
-       
        **Parameters**
        
        - ``object`` - RealmObject to remove listener from.
           
           
           
-          
-          
        - ``listener`` - the instance to be removed.
-          
-          
           
           
           
@@ -2009,11 +1863,7 @@ removeChangeListener
           
           
           
-          
-          
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if you try to remove a listener from a non-Looper Thread.
-          
-          
           
           
           
@@ -2041,19 +1891,13 @@ removeChangeListener
        
        
        
-       
-       
        **Parameters**
        
        - ``object`` - RealmObject to remove listener from.
           
           
           
-          
-          
        - ``listener`` - the instance to be removed.
-          
-          
           
           
           
@@ -2075,11 +1919,7 @@ removeChangeListener
           
           
           
-          
-          
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if you try to remove a listener from a non-Looper Thread.
-          
-          
           
           
           
@@ -2130,8 +1970,6 @@ removeAllChangeListeners
        
        
        
-       
-       
    
    
 .. _io_realm_RealmObject_removeAllChangeListeners_E_:
@@ -2150,13 +1988,9 @@ removeAllChangeListeners
        
        
        
-       
-       
        **Parameters**
        
        - ``object`` - RealmObject to remove all listeners from.
-          
-          
           
           
           
@@ -2257,15 +2091,9 @@ asFlowable
        
        
        
-       
-       
-       
-       
        **Type Parameters**
        
        - ``E`` - RealmObject class that is being observed. Must be this class or its super types.
-          
-          
           
           
           
@@ -2283,11 +2111,7 @@ asFlowable
           
           
           
-          
-          
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm wasn't opened on a Looper thread.
-          
-          
           
           
           
@@ -2374,13 +2198,9 @@ asFlowable
        
        
        
-       
-       
        **Parameters**
        
        - ``object`` - RealmObject class that is being observed. Must be this class or its super types.
-          
-          
           
           
           
@@ -2396,11 +2216,7 @@ asFlowable
           
           
           
-          
-          
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm wasn't opened on a Looper thread.
-          
-          
           
           
           
@@ -2496,11 +2312,7 @@ asChangesetObservable
           
           
           
-          
-          
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm wasn't opened on a Looper thread.
-          
-          
           
           
           
@@ -2575,8 +2387,6 @@ asChangesetObservable
           
           
           
-          
-          
        
        
        
@@ -2589,11 +2399,7 @@ asChangesetObservable
           
           
           
-          
-          
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm wasn't opened on a Looper thread.
-          
-          
           
           
           

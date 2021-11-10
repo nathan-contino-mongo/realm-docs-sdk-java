@@ -166,8 +166,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public **boolean**
@@ -175,8 +173,6 @@ Method Summary
        :ref:`add <io_realm_RealmList_add_E_>`  (**E (?)** object)
        
        Adds the specified object at the end of this List.
-       
-       
        
        
        
@@ -191,8 +187,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public **void**
@@ -201,8 +195,6 @@ Method Summary
                           **int** newPos)
        
        Moves an object from one position to another, while maintaining a fixed sized list.
-       
-       
        
        
        
@@ -216,8 +208,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public **E (?)**
@@ -225,8 +215,6 @@ Method Summary
        :ref:`remove <io_realm_RealmList_remove_int_>`  (**int** location)
        
        Removes the object at the specified location from this list.
-       
-       
        
        
        
@@ -285,8 +273,6 @@ Method Summary
        :ref:`get <io_realm_RealmList_get_int_>`  (**int** location)
        
        Returns the element at the specified location in this list.
-       
-       
        
        
        
@@ -422,8 +408,6 @@ Method Summary
        :ref:`where <io_realm_RealmList_where__>`  ()
        
        Returns a RealmQuery, which can be used to query for specific objects of this class.
-       
-       
        
        
        
@@ -617,8 +601,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public **<any> (?)**
@@ -629,8 +611,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public **<any> (?)**
@@ -638,8 +618,6 @@ Method Summary
        :ref:`asChangesetObservable <io_realm_RealmList_asChangesetObservable__>`  ()
        
        Returns an Rx Observable that monitors changes to this RealmList.
-       
-       
        
        
        
@@ -665,8 +643,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public **void**
@@ -689,8 +665,6 @@ Method Summary
        
        
        
-       
-       
    
    * - 
        public **void**
@@ -698,8 +672,6 @@ Method Summary
        :ref:`removeAllChangeListeners <io_realm_RealmList_removeAllChangeListeners__>`  ()
        
        Removes all user-defined change listeners.
-       
-       
        
        
        
@@ -742,16 +714,12 @@ Field Detail
 ----------
 
 
-
-
 .. _io_realm_RealmList_className:
 
 
 
 ``className`` 
 --------------
-
-
 
 
 .. _io_realm_RealmList_baseRealm:
@@ -764,8 +732,6 @@ Field Detail
 The **BaseRealm (?)** instance in which this list resides.
 
 Warning: This field is only exposed for internal usage, and should not be used.
-
-
 
 
 
@@ -980,8 +946,6 @@ add
    
    * - Inserts the specified object into this List at the specified location. The object is inserted before any previous element at the specified location. If the location is equal to the size of this List, the object is added at the end.
        
-       
-       
        1. **Unmanaged RealmLists**: It is possible to add both managed and unmanaged objects. If adding managed objects to an unmanaged RealmList they will not be copied to the Realm again if using :ref:`Realm.copyToRealm(RealmModel, ImportFlag...) <io_realm_Realm_copyToRealm_RealmModel__ImportFlag____>`  afterwards.
           
           
@@ -999,19 +963,13 @@ add
        
        
        
-       
-       
        **Parameters**
        
        - ``location`` - the index at which to insert.
           
           
           
-          
-          
        - ``element`` - the element to add.
-          
-          
           
           
           
@@ -1024,8 +982,6 @@ add
        **Throws**
        
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if Realm instance has been closed or container object has been removed.
-          
-          
           
           
           
@@ -1055,8 +1011,6 @@ add
    
    * - Adds the specified object at the end of this List.
        
-       
-       
        1. **Unmanaged RealmLists**: It is possible to add both managed and unmanaged objects. If adding managed objects to an unmanaged RealmList they will not be copied to the Realm again if using :ref:`Realm.copyToRealm(RealmModel, ImportFlag...) <io_realm_Realm_copyToRealm_RealmModel__ImportFlag____>`  afterwards.
           
           
@@ -1074,13 +1028,9 @@ add
        
        
        
-       
-       
        **Parameters**
        
        - ``object`` - the object to add.
-          
-          
           
           
           
@@ -1093,8 +1043,6 @@ add
        **Throws**
        
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if Realm instance has been closed or parent object has been removed.
-          
-          
           
           
           
@@ -1136,8 +1084,6 @@ set
    
    * - Replaces the element at the specified location in this list with the specified object.
        
-       
-       
        1. **Unmanaged RealmLists**: It is possible to add both managed and unmanaged objects. If adding managed objects to an unmanaged RealmList they will not be copied to the Realm again if using :ref:`Realm.copyToRealm(RealmModel, ImportFlag...) <io_realm_Realm_copyToRealm_RealmModel__ImportFlag____>`  afterwards.
           
           
@@ -1155,19 +1101,13 @@ set
        
        
        
-       
-       
        **Parameters**
        
        - ``location`` - the index at which to put the specified object.
           
           
           
-          
-          
        - ``object`` - the object to add.
-          
-          
           
           
           
@@ -1180,8 +1120,6 @@ set
        **Throws**
        
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if Realm instance has been closed or parent object has been removed.
-          
-          
           
           
           
@@ -1240,11 +1178,7 @@ move
           
           
           
-          
-          
        - ``newPos`` - target position. If newPos < oldPos the object at the location will be shifted to the right. If oldPos < newPos, indexes > oldPos will be shifted once to the left.
-          
-          
           
           
           
@@ -1260,11 +1194,7 @@ move
           
           
           
-          
-          
        - `java.lang.IndexOutOfBoundsException <https://docs.oracle.com/javase/7/docs/api/java/lang/IndexOutOfBoundsException.html>`__  - if any position is outside [0, size()].
-          
-          
           
           
           
@@ -1312,13 +1242,9 @@ clear
        
        
        
-       
-       
        **Throws**
        
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if Realm instance has been closed or parent object has been removed.
-          
-          
           
           
           
@@ -1384,13 +1310,9 @@ remove
        
        
        
-       
-       
        **Parameters**
        
        - ``location`` - the index of the object to remove.
-          
-          
           
           
           
@@ -1403,8 +1325,6 @@ remove
        **Throws**
        
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if Realm instance has been closed or parent object has been removed.
-          
-          
           
           
           
@@ -1445,8 +1365,6 @@ remove
           
           
           
-          
-          
        
        
        
@@ -1456,8 +1374,6 @@ remove
        **Throws**
        
        - `ClassCastException <https://docs.oracle.com/javase/7/docs/api/java/lang/ClassCastException.html>`__  - if the object passed is not of the correct type.
-          
-          
           
           
           
@@ -1516,8 +1432,6 @@ removeAll
        **Parameters**
        
        - ``collection`` - the collection of objects to remove.
-          
-          
           
           
           
@@ -1669,13 +1583,9 @@ get
        
        
        
-       
-       
        **Parameters**
        
        - ``location`` - the index of the element to return.
-          
-          
           
           
           
@@ -1688,8 +1598,6 @@ get
        **Throws**
        
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if Realm instance has been closed or parent object has been removed.
-          
-          
           
           
           
@@ -2067,8 +1975,6 @@ size
           
           
           
-          
-          
        
        
        
@@ -2113,13 +2019,9 @@ where
        
        
        
-       
-       
        **Throws**
        
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if Realm instance has been closed or parent object has been removed.
-          
-          
           
           
           
@@ -2585,8 +2487,6 @@ contains
           
           
           
-          
-          
        
        
        
@@ -2855,8 +2755,6 @@ toString
        
        
        
-       
-       
    
    
 .. _asFlowable:
@@ -2936,15 +2834,9 @@ asFlowable
        
        
        
-       
-       
-       
-       
        **Throws**
        
        - `UnsupportedOperationException <https://docs.oracle.com/javase/7/docs/api/java/lang/UnsupportedOperationException.html>`__  - if the required RxJava framework is not on the classpath or the corresponding Realm instance doesn't support RxJava.
-          
-          
           
           
           
@@ -3040,11 +2932,7 @@ asChangesetObservable
           
           
           
-          
-          
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm wasn't opened on a Looper thread.
-          
-          
           
           
           
@@ -3133,13 +3021,9 @@ addChangeListener
        
        
        
-       
-       
        **Parameters**
        
        - ``listener`` - the change listener to be notified.
-          
-          
           
           
           
@@ -3216,13 +3100,9 @@ addChangeListener
        
        
        
-       
-       
        **Parameters**
        
        - ``listener`` - the change listener to be notified.
-          
-          
           
           
           
@@ -3286,13 +3166,9 @@ removeChangeListener
        
        
        
-       
-       
        **Parameters**
        
        - ``listener`` - the change listener to be removed.
-          
-          
           
           
           
@@ -3311,8 +3187,6 @@ removeChangeListener
           
           
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if you try to remove a listener from a non-Looper Thread.
-          
-          
           
           
           
@@ -3353,13 +3227,9 @@ removeChangeListener
        
        
        
-       
-       
        **Parameters**
        
        - ``listener`` - the change listener to be removed.
-          
-          
           
           
           
@@ -3378,8 +3248,6 @@ removeChangeListener
           
           
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if you try to remove a listener from a non-Looper Thread.
-          
-          
           
           
           
@@ -3441,13 +3309,9 @@ removeAllChangeListeners
        
        
        
-       
-       
        **Throws**
        
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if you try to remove listeners from a non-Looper Thread.
-          
-          
           
           
           
