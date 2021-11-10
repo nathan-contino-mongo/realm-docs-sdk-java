@@ -25,11 +25,20 @@ The HttpLogObfuscator keeps sensitive information from being displayed in Logcat
 Constructors
 ============
 
-
-
-- ``io.realm.mongodb.log.obfuscator.HttpLogObfuscator(String, Map<String, RegexPatternObfuscator>)`` 
-
-
+.. list-table::
+   :header-rows: 1
+   
+   * - Constructor and Description
+   
+   * - :ref:`HttpLogObfuscator <io_realm_mongodb_log_obfuscator_HttpLogObfuscator>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  feature,
+             `java.util.Map\<java.lang.String, io.realm.internal.log.obfuscator.RegexPatternObfuscator> <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  patternObfuscatorMap)
+       
+       Constructor for creating an HTTP log obfuscator.
+       
+       
+       
+   
+   
 
 
 Method Summary
@@ -65,7 +74,7 @@ Method Summary
        public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
      - 
        :ref:`obfuscate <io_realm_mongodb_log_obfuscator_HttpLogObfuscator_obfuscate_List_String___String_>`  (`java.util.List\<java.lang.String> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  urlSegments,
-                                 `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  input)
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  input)
        
        Obfuscates a logcat entry or not depending on whether the request being sent matches the specified feature.
        
@@ -83,6 +92,51 @@ Inherited Methods
 - Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
 
 
+
+
+Constructor Detail
+==================
+
+.. _HttpLogObfuscator:
+
+.. _HttpLogObfuscator__:
+
+.. _io_realm_mongodb_log_obfuscator_HttpLogObfuscator:
+
+.. _io_realm_mongodb_log_obfuscator_HttpLogObfuscator__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public  HttpLogObfuscator (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  feature,
+             `java.util.Map\<java.lang.String, io.realm.internal.log.obfuscator.RegexPatternObfuscator> <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  patternObfuscatorMap)
+   
+   * - Constructor for creating an HTTP log obfuscator.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``feature`` - the feature to obfuscate, e.g. "providers" for login requests - see :ref:`io.realm.internal.network.LoggingInterceptor <io_realm_internal_network_LoggingInterceptor>` .
+          
+          
+          
+          
+          
+       - ``patternObfuscatorMap`` - `Map <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  of keys subject to being obfuscated and :ref:`RegexPatternObfuscator <io_realm_internal_log_obfuscator_RegexPatternObfuscator>` s used to determine which obfuscator has to be used for the given feature.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
 
 
 Method Detail
@@ -189,7 +243,7 @@ obfuscate
    :header-rows: 1
    
    * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  obfuscate (`java.util.List\<java.lang.String> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  urlSegments,
-                                 `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  input)
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  input)
    
    * - Obfuscates a logcat entry or not depending on whether the request being sent matches the specified feature. If it doesn't, the logcat entry will be returned unmodified.
        

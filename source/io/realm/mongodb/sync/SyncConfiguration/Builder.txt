@@ -25,12 +25,28 @@ Builder used to construct instances of a SyncConfiguration in a fluent manner.
 Constructors
 ============
 
-
-
-- ``io.realm.mongodb.sync.SyncConfiguration.Builder(User, String)`` 
-- ``io.realm.mongodb.sync.SyncConfiguration.Builder(User, ObjectId)`` 
-
-
+.. list-table::
+   :header-rows: 1
+   
+   * - Constructor and Description
+   
+   * - :ref:`Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  (:ref:`User <io_realm_mongodb_User>`  user,
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  partitionValue)
+       
+       Creates an instance of the builder for a *SyncConfiguration* with the given user and partition value.
+       
+       
+       
+   
+   * - :ref:`Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  (:ref:`User <io_realm_mongodb_User>`  user,
+             **ObjectId (?)** partitionValue)
+       
+       Creates an instance of the builder for a *SyncConfiguration* with the given user and partition value.
+       
+       
+       
+   
+   
 
 
 Method Summary
@@ -200,7 +216,7 @@ Method Summary
        public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>` 
      - 
        :ref:`modules <io_realm_mongodb_sync_SyncConfiguration_Builder_modules_Object__Object____>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  baseModule,
-                                                  `java.lang.Object[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  additionalModules)
+             `java.lang.Object[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  additionalModules)
        
        Replaces the existing module(s) with one or more :ref:`RealmModule <io_realm_annotations_RealmModule>` s.
        
@@ -257,7 +273,7 @@ Method Summary
        public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>` 
      - 
        :ref:`waitForInitialRemoteData <io_realm_mongodb_sync_SyncConfiguration_Builder_waitForInitialRemoteData_long__TimeUnit_>`  (**long** timeout,
-                                                                   `TimeUnit <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/TimeUnit.html>`__  unit)
+             `TimeUnit <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/TimeUnit.html>`__  unit)
        
        Setting this will cause the Realm to download all known changes from the server the first time a Realm is opened.
        
@@ -285,6 +301,83 @@ Inherited Methods
 - Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
 
 
+
+
+Constructor Detail
+==================
+
+.. _Builder:
+
+.. _Builder__:
+
+.. _io_realm_mongodb_sync_SyncConfiguration_Builder:
+
+.. _io_realm_mongodb_sync_SyncConfiguration_Builder__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public  Builder (:ref:`User <io_realm_mongodb_User>`  user,
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  partitionValue)
+   
+   * - Creates an instance of the builder for a *SyncConfiguration* with the given user and partition value.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``user`` - The user that will be used for accessing the Realm App.
+          
+          
+          
+       - ``partitionValue`` - The partition value identifying the remote Realm that will be synchronized.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _Builder:
+
+.. _Builder__:
+
+.. _io_realm_mongodb_sync_SyncConfiguration_Builder:
+
+.. _io_realm_mongodb_sync_SyncConfiguration_Builder__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public  Builder (:ref:`User <io_realm_mongodb_User>`  user,
+             **ObjectId (?)** partitionValue)
+   
+   * - Creates an instance of the builder for a *SyncConfiguration* with the given user and partition value.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``user`` - The user that will be used for accessing the Realm App.
+          
+          
+          
+       - ``partitionValue`` - The partition value identifying the remote Realm that will be synchronized.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
 
 
 Method Detail
@@ -952,7 +1045,7 @@ modules
    :header-rows: 1
    
    * -    public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  modules (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  baseModule,
-                                                  `java.lang.Object[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  additionalModules)
+             `java.lang.Object[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  additionalModules)
    
    * - Replaces the existing module(s) with one or more :ref:`RealmModule <io_realm_annotations_RealmModule>` s. Using this method will replace the current schema for this Realm with the schema defined by the provided modules.
        
@@ -1250,7 +1343,7 @@ waitForInitialRemoteData
    :header-rows: 1
    
    * -    public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  waitForInitialRemoteData (**long** timeout,
-                                                                   `TimeUnit <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/TimeUnit.html>`__  unit)
+             `TimeUnit <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/TimeUnit.html>`__  unit)
    
    * - Setting this will cause the Realm to download all known changes from the server the first time a Realm is opened. The Realm will not open until all the data has been downloaded. This means that if a device is offline the Realm will not open.Since downloading all changes can be an lengthy operation that might block the UI thread, Realms with this setting enabled should only be opened on background threads or with :ref:`Realm.getInstanceAsync(RealmConfiguration, Realm.Callback) <io_realm_Realm_getInstanceAsync_RealmConfiguration__Realm_Callback_>`  on the UI thread.
        

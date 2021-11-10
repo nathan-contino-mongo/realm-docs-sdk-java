@@ -44,16 +44,66 @@ This class is a wrapper for all errors happening when communicating with a Mongo
 Constructors
 ============
 
-
-
-- ``io.realm.mongodb.AppException(ErrorCode, String)`` 
-- ``io.realm.mongodb.AppException(String, int, String)`` 
-- ``io.realm.mongodb.AppException(ErrorCode, Throwable)`` 
-- ``io.realm.mongodb.AppException(ErrorCode, String, String)`` 
-- ``io.realm.mongodb.AppException(ErrorCode, String, Throwable)`` 
-- ``io.realm.mongodb.AppException(ErrorCode, String, int, String, Throwable)`` 
-
-
+.. list-table::
+   :header-rows: 1
+   
+   * - Constructor and Description
+   
+   * - :ref:`AppException <io_realm_mongodb_AppException>`  (:ref:`ErrorCode <io_realm_mongodb_ErrorCode>`  errorCode,
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  errorMessage)
+       
+       Create an error caused by an error in the protocol when communicating with the Object Server.
+       
+       
+       
+   
+   * - :ref:`AppException <io_realm_mongodb_AppException>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  errorType,
+             **int** errorCode,
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  errorMessage)
+       
+       Creates an unknown error that could not be mapped to any known error case.
+       
+       
+       
+   
+   * - :ref:`AppException <io_realm_mongodb_AppException>`  (:ref:`ErrorCode <io_realm_mongodb_ErrorCode>`  errorCode,
+             `Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__  exception)
+       
+       Create an error caused by an an exception when communicating with the Object Server.
+       
+       
+       
+   
+   * - :ref:`AppException <io_realm_mongodb_AppException>`  (:ref:`ErrorCode <io_realm_mongodb_ErrorCode>`  errorCode,
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  title,
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  hint)
+       
+       Errors happening while trying to authenticate a user.
+       
+       
+       
+   
+   * - :ref:`AppException <io_realm_mongodb_AppException>`  (:ref:`ErrorCode <io_realm_mongodb_ErrorCode>`  errorCode,
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  errorMessage,
+             `Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__  exception)
+       
+       Generic error happening that could happen anywhere.
+       
+       
+       
+   
+   * - :ref:`AppException <io_realm_mongodb_AppException>`  (:ref:`ErrorCode <io_realm_mongodb_ErrorCode>`  errorCode,
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  nativeErrorType,
+             **int** nativeErrorCode,
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  errorMessage,
+             `Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__  exception)
+       
+       
+       
+       
+       
+   
+   
 
 
 Method Summary
@@ -153,6 +203,233 @@ Inherited Methods
 - Methods inherited from interface `java.lang.RuntimeException <https://docs.oracle.com/javase/7/docs/api/java/lang/RuntimeException.html>`__ : 
 
 
+
+
+Constructor Detail
+==================
+
+.. _AppException:
+
+.. _AppException__:
+
+.. _io_realm_mongodb_AppException:
+
+.. _io_realm_mongodb_AppException__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public  AppException (:ref:`ErrorCode <io_realm_mongodb_ErrorCode>`  errorCode,
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  errorMessage)
+   
+   * - Create an error caused by an error in the protocol when communicating with the Object Server.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``errorCode`` - error code for this type of error.
+          
+          
+          
+       - ``errorMessage`` - detailed error message.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _AppException:
+
+.. _AppException__:
+
+.. _io_realm_mongodb_AppException:
+
+.. _io_realm_mongodb_AppException__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public  AppException (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  errorType,
+             **int** errorCode,
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  errorMessage)
+   
+   * - Creates an unknown error that could not be mapped to any known error case.This means that :ref:`getErrorCode() <io_realm_mongodb_AppException_getErrorCode__>`  will return :ref:`ErrorCode.UNKNOWN <io_realm_mongodb_ErrorCode_UNKNOWN>` , but :ref:`getErrorType() <io_realm_mongodb_AppException_getErrorType__>`  and :ref:`getErrorIntValue() <io_realm_mongodb_AppException_getErrorIntValue__>`  will return the underlying values which can help identify the real error.
+       
+       
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``errorCode`` - error code for this type of error.
+          
+          
+          
+       - ``errorMessage`` - detailed error message.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _AppException:
+
+.. _AppException__:
+
+.. _io_realm_mongodb_AppException:
+
+.. _io_realm_mongodb_AppException__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public  AppException (:ref:`ErrorCode <io_realm_mongodb_ErrorCode>`  errorCode,
+             `Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__  exception)
+   
+   * - Create an error caused by an an exception when communicating with the Object Server.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``errorCode`` - error code for this type of error.
+          
+          
+          
+       - ``exception`` - underlying exception causing this error.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _AppException:
+
+.. _AppException__:
+
+.. _io_realm_mongodb_AppException:
+
+.. _io_realm_mongodb_AppException__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public  AppException (:ref:`ErrorCode <io_realm_mongodb_ErrorCode>`  errorCode,
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  title,
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  hint)
+   
+   * - Errors happening while trying to authenticate a user.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``errorCode`` - error code for this type of error.
+          
+          
+          
+       - ``title`` - title for this type of error.
+          
+          
+          
+       - ``hint`` - a hint for resolving the error.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _AppException:
+
+.. _AppException__:
+
+.. _io_realm_mongodb_AppException:
+
+.. _io_realm_mongodb_AppException__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public  AppException (:ref:`ErrorCode <io_realm_mongodb_ErrorCode>`  errorCode,
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  errorMessage,
+             `Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__  exception)
+   
+   * - Generic error happening that could happen anywhere.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``errorCode`` - error code for this type of error.
+          
+          
+          
+       - ``errorMessage`` - detailed error message.
+          
+          
+          
+       - ``exception`` - underlying exception if the error was caused by this.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _AppException:
+
+.. _AppException__:
+
+.. _io_realm_mongodb_AppException:
+
+.. _io_realm_mongodb_AppException__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public  AppException (:ref:`ErrorCode <io_realm_mongodb_ErrorCode>`  errorCode,
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  nativeErrorType,
+             **int** nativeErrorCode,
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  errorMessage,
+             `Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__  exception)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+   
+   
 
 
 Method Detail

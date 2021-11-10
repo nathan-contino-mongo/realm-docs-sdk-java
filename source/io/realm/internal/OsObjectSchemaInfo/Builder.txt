@@ -25,12 +25,35 @@ io.realm.internal
 Constructors
 ============
 
-
-
-- ``io.realm.internal.OsObjectSchemaInfo.Builder(String, boolean, int, int)`` 
-- ``io.realm.internal.OsObjectSchemaInfo.Builder(String, String, boolean, int, int)`` 
-
-
+.. list-table::
+   :header-rows: 1
+   
+   * - Constructor and Description
+   
+   * - :ref:`Builder <io_realm_internal_OsObjectSchemaInfo_Builder>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  internalClassName,
+             **boolean** embedded,
+             **int** persistedPropertyCapacity,
+             **int** computedPropertyCapacity)
+       
+       Creates an empty builder for ``OsObjectSchemaInfo`` .
+       
+       
+       
+       
+       
+   
+   * - :ref:`Builder <io_realm_internal_OsObjectSchemaInfo_Builder>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  publicClassName,
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  internalClassName,
+             **boolean** embedded,
+             **int** persistedPropertyCapacity,
+             **int** computedPropertyCapacity)
+       
+       
+       
+       
+       
+   
+   
 
 
 Method Summary
@@ -46,8 +69,8 @@ Method Summary
        public :ref:`OsObjectSchemaInfo.Builder <io_realm_internal_OsObjectSchemaInfo_Builder>` 
      - 
        :ref:`addComputedLinkProperty <io_realm_internal_OsObjectSchemaInfo_Builder_addComputedLinkProperty_String__String__String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
-                                                                   `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  sourceClass,
-                                                                   `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  sourceClassName)
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  sourceClass,
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  sourceClassName)
        
        Adds a computed link property to this ``OsObjectSchemaInfo`` .
        
@@ -60,9 +83,9 @@ Method Summary
        public :ref:`OsObjectSchemaInfo.Builder <io_realm_internal_OsObjectSchemaInfo_Builder>` 
      - 
        :ref:`addPersistedLinkProperty <io_realm_internal_OsObjectSchemaInfo_Builder_addPersistedLinkProperty_String__String__RealmFieldType__String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  publicName,
-                                                                    `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  internalName,
-                                                                    :ref:`RealmFieldType <io_realm_RealmFieldType>`  type,
-                                                                    `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  linkedClassName)
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  internalName,
+             :ref:`RealmFieldType <io_realm_RealmFieldType>`  type,
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  linkedClassName)
        
        Adds a persisted link property to this ``OsObjectSchemaInfo`` .
        
@@ -75,9 +98,9 @@ Method Summary
        public :ref:`OsObjectSchemaInfo.Builder <io_realm_internal_OsObjectSchemaInfo_Builder>` 
      - 
        :ref:`addPersistedMapProperty <io_realm_internal_OsObjectSchemaInfo_Builder_addPersistedMapProperty_String__String__RealmFieldType__boolean_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  publicName,
-                                                                   `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  internalName,
-                                                                   :ref:`RealmFieldType <io_realm_RealmFieldType>`  type,
-                                                                   **boolean** isRequired)
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  internalName,
+             :ref:`RealmFieldType <io_realm_RealmFieldType>`  type,
+             **boolean** isRequired)
        
        Adds a persisted map property to this builder.
        
@@ -88,11 +111,11 @@ Method Summary
        public :ref:`OsObjectSchemaInfo.Builder <io_realm_internal_OsObjectSchemaInfo_Builder>` 
      - 
        :ref:`addPersistedProperty <io_realm_internal_OsObjectSchemaInfo_Builder_addPersistedProperty_String__String__RealmFieldType__boolean__boolean__boolean_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  publicName,
-                                                                `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  internalName,
-                                                                :ref:`RealmFieldType <io_realm_RealmFieldType>`  type,
-                                                                **boolean** isPrimaryKey,
-                                                                **boolean** isIndexed,
-                                                                **boolean** isRequired)
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  internalName,
+             :ref:`RealmFieldType <io_realm_RealmFieldType>`  type,
+             **boolean** isPrimaryKey,
+             **boolean** isIndexed,
+             **boolean** isRequired)
        
        Adds a persisted non-link, non value list property to this builder.
        
@@ -103,9 +126,9 @@ Method Summary
        public :ref:`OsObjectSchemaInfo.Builder <io_realm_internal_OsObjectSchemaInfo_Builder>` 
      - 
        :ref:`addPersistedSetProperty <io_realm_internal_OsObjectSchemaInfo_Builder_addPersistedSetProperty_String__String__RealmFieldType__boolean_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  publicName,
-                                                                   `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  internalName,
-                                                                   :ref:`RealmFieldType <io_realm_RealmFieldType>`  type,
-                                                                   **boolean** isRequired)
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  internalName,
+             :ref:`RealmFieldType <io_realm_RealmFieldType>`  type,
+             **boolean** isRequired)
        
        TODO: UNIFY THIS AND THE TWO ABOVE Adds a persisted set property to this builder.
        
@@ -116,9 +139,9 @@ Method Summary
        public :ref:`OsObjectSchemaInfo.Builder <io_realm_internal_OsObjectSchemaInfo_Builder>` 
      - 
        :ref:`addPersistedValueListProperty <io_realm_internal_OsObjectSchemaInfo_Builder_addPersistedValueListProperty_String__String__RealmFieldType__boolean_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  publicName,
-                                                                         `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  internalName,
-                                                                         :ref:`RealmFieldType <io_realm_RealmFieldType>`  type,
-                                                                         **boolean** isRequired)
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  internalName,
+             :ref:`RealmFieldType <io_realm_RealmFieldType>`  type,
+             **boolean** isRequired)
        
        Adds a persisted value list property to this builder.
        
@@ -150,6 +173,74 @@ Inherited Methods
 
 
 
+Constructor Detail
+==================
+
+.. _Builder:
+
+.. _Builder__:
+
+.. _io_realm_internal_OsObjectSchemaInfo_Builder:
+
+.. _io_realm_internal_OsObjectSchemaInfo_Builder__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public  Builder (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  internalClassName,
+             **boolean** embedded,
+             **int** persistedPropertyCapacity,
+             **int** computedPropertyCapacity)
+   
+   * - Creates an empty builder for ``OsObjectSchemaInfo`` . This constructor is intended to be used by the validation of schema, object schemas and properties through the object store.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``internalClassName`` - name of the class
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _Builder:
+
+.. _Builder__:
+
+.. _io_realm_internal_OsObjectSchemaInfo_Builder:
+
+.. _io_realm_internal_OsObjectSchemaInfo_Builder__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public  Builder (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  publicClassName,
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  internalClassName,
+             **boolean** embedded,
+             **int** persistedPropertyCapacity,
+             **int** computedPropertyCapacity)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
 Method Detail
 =============
 
@@ -174,8 +265,8 @@ addComputedLinkProperty
    :header-rows: 1
    
    * -    public :ref:`OsObjectSchemaInfo.Builder <io_realm_internal_OsObjectSchemaInfo_Builder>`  addComputedLinkProperty (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
-                                                                   `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  sourceClass,
-                                                                   `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  sourceClassName)
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  sourceClass,
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  sourceClassName)
    
    * - Adds a computed link property to this ``OsObjectSchemaInfo`` . A computed link property doesn't store information in the Realm file's schema. This property type will always be :ref:`RealmFieldType.LINKING_OBJECTS <io_realm_RealmFieldType_LINKING_OBJECTS>` .
        
@@ -230,9 +321,9 @@ addPersistedLinkProperty
    :header-rows: 1
    
    * -    public :ref:`OsObjectSchemaInfo.Builder <io_realm_internal_OsObjectSchemaInfo_Builder>`  addPersistedLinkProperty (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  publicName,
-                                                                    `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  internalName,
-                                                                    :ref:`RealmFieldType <io_realm_RealmFieldType>`  type,
-                                                                    `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  linkedClassName)
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  internalName,
+             :ref:`RealmFieldType <io_realm_RealmFieldType>`  type,
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  linkedClassName)
    
    * - Adds a persisted link property to this ``OsObjectSchemaInfo`` . A persisted link property will be stored in the Realm file's schema.
        
@@ -289,9 +380,9 @@ addPersistedMapProperty
    :header-rows: 1
    
    * -    public :ref:`OsObjectSchemaInfo.Builder <io_realm_internal_OsObjectSchemaInfo_Builder>`  addPersistedMapProperty (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  publicName,
-                                                                   `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  internalName,
-                                                                   :ref:`RealmFieldType <io_realm_RealmFieldType>`  type,
-                                                                   **boolean** isRequired)
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  internalName,
+             :ref:`RealmFieldType <io_realm_RealmFieldType>`  type,
+             **boolean** isRequired)
    
    * - Adds a persisted map property to this builder.
        
@@ -348,11 +439,11 @@ addPersistedProperty
    :header-rows: 1
    
    * -    public :ref:`OsObjectSchemaInfo.Builder <io_realm_internal_OsObjectSchemaInfo_Builder>`  addPersistedProperty (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  publicName,
-                                                                `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  internalName,
-                                                                :ref:`RealmFieldType <io_realm_RealmFieldType>`  type,
-                                                                **boolean** isPrimaryKey,
-                                                                **boolean** isIndexed,
-                                                                **boolean** isRequired)
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  internalName,
+             :ref:`RealmFieldType <io_realm_RealmFieldType>`  type,
+             **boolean** isPrimaryKey,
+             **boolean** isIndexed,
+             **boolean** isRequired)
    
    * - Adds a persisted non-link, non value list property to this builder.
        
@@ -417,9 +508,9 @@ addPersistedSetProperty
    :header-rows: 1
    
    * -    public :ref:`OsObjectSchemaInfo.Builder <io_realm_internal_OsObjectSchemaInfo_Builder>`  addPersistedSetProperty (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  publicName,
-                                                                   `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  internalName,
-                                                                   :ref:`RealmFieldType <io_realm_RealmFieldType>`  type,
-                                                                   **boolean** isRequired)
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  internalName,
+             :ref:`RealmFieldType <io_realm_RealmFieldType>`  type,
+             **boolean** isRequired)
    
    * - TODO: UNIFY THIS AND THE TWO ABOVE Adds a persisted set property to this builder.
        
@@ -476,9 +567,9 @@ addPersistedValueListProperty
    :header-rows: 1
    
    * -    public :ref:`OsObjectSchemaInfo.Builder <io_realm_internal_OsObjectSchemaInfo_Builder>`  addPersistedValueListProperty (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  publicName,
-                                                                         `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  internalName,
-                                                                         :ref:`RealmFieldType <io_realm_RealmFieldType>`  type,
-                                                                         **boolean** isRequired)
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  internalName,
+             :ref:`RealmFieldType <io_realm_RealmFieldType>`  type,
+             **boolean** isRequired)
    
    * - Adds a persisted value list property to this builder.
        

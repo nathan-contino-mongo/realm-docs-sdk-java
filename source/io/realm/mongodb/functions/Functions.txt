@@ -65,11 +65,20 @@ A *Functions* manager to call remote Realm functions for the associated Realm Ap
 Constructors
 ============
 
-
-
-- ``io.realm.mongodb.functions.Functions(User, CodecRegistry)`` 
-
-
+.. list-table::
+   :header-rows: 1
+   
+   * - Constructor and Description
+   
+   * - :ref:`Functions <io_realm_mongodb_functions_Functions>`  (:ref:`User <io_realm_mongodb_User>`  user,
+             **CodecRegistry (?)** codecRegistry)
+       
+       
+       
+       
+       
+   
+   
 
 
 Field Summary
@@ -104,8 +113,8 @@ Method Summary
        public **ResultT (?)**
      - 
        :ref:`callFunction <io_realm_mongodb_functions_Functions_callFunction_String__List______any__>`  <**ResultT (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
-                                     `java.util.List\<?> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  args,
-                                     **<any> (?)** resultDecoder)
+             `java.util.List\<?> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  args,
+             **<any> (?)** resultDecoder)
        
        Call a MongoDB Realm function synchronously with custom result decoder.
        
@@ -116,8 +125,8 @@ Method Summary
        public **ResultT (?)**
      - 
        :ref:`callFunction <io_realm_mongodb_functions_Functions_callFunction_String__List_____Class_ResultT__>`  <**ResultT (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
-                                     `java.util.List\<?> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  args,
-                                     `java.lang.Class\<ResultT> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  resultClass)
+             `java.util.List\<?> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  args,
+             `java.lang.Class\<ResultT> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  resultClass)
        
        Call a MongoDB Realm function synchronously with default codec registry encoding/decoding arguments/results.
        
@@ -128,9 +137,9 @@ Method Summary
        public **ResultT (?)**
      - 
        :ref:`callFunction <io_realm_mongodb_functions_Functions_callFunction_String__List_____Class_ResultT___CodecRegistry_>`  <**ResultT (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
-                                     `java.util.List\<?> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  args,
-                                     `java.lang.Class\<ResultT> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  resultClass,
-                                     **CodecRegistry (?)** codecRegistry)
+             `java.util.List\<?> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  args,
+             `java.lang.Class\<ResultT> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  resultClass,
+             **CodecRegistry (?)** codecRegistry)
        
        Call a MongoDB Realm function synchronously with custom codec registry encoding/decoding arguments/results.
        
@@ -141,9 +150,9 @@ Method Summary
        public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` 
      - 
        :ref:`callFunctionAsync <io_realm_mongodb_functions_Functions_callFunctionAsync_String__List______any___App_Callback_T__>`  <**T (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
-                                                 `java.util.List\<?> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  args,
-                                                 **<any> (?)** resultDecoder,
-                                                 :ref:`io.realm.mongodb.App.Callback\<T> <io_realm_mongodb_App_Callback>`  callback)
+             `java.util.List\<?> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  args,
+             **<any> (?)** resultDecoder,
+             :ref:`io.realm.mongodb.App.Callback\<T> <io_realm_mongodb_App_Callback>`  callback)
        
        Call a MongoDB Realm function asynchronously with custom result decoder.
        
@@ -154,9 +163,9 @@ Method Summary
        public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` 
      - 
        :ref:`callFunctionAsync <io_realm_mongodb_functions_Functions_callFunctionAsync_String__List_____Class_T___App_Callback_T__>`  <**T (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
-                                                 `java.util.List\<?> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  args,
-                                                 `java.lang.Class\<T> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  resultClass,
-                                                 :ref:`io.realm.mongodb.App.Callback\<T> <io_realm_mongodb_App_Callback>`  callback)
+             `java.util.List\<?> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  args,
+             `java.lang.Class\<T> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  resultClass,
+             :ref:`io.realm.mongodb.App.Callback\<T> <io_realm_mongodb_App_Callback>`  callback)
        
        Call a MongoDB Realm function asynchronously with custom codec registry for encoding/decoding arguments/results.
        
@@ -167,10 +176,10 @@ Method Summary
        public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` 
      - 
        :ref:`callFunctionAsync <io_realm_mongodb_functions_Functions_callFunctionAsync_String__List_____Class_T___CodecRegistry__App_Callback_T__>`  <**T (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
-                                                 `java.util.List\<?> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  args,
-                                                 `java.lang.Class\<T> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  resultClass,
-                                                 **CodecRegistry (?)** codecRegistry,
-                                                 :ref:`io.realm.mongodb.App.Callback\<T> <io_realm_mongodb_App_Callback>`  callback)
+             `java.util.List\<?> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  args,
+             `java.lang.Class\<T> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  resultClass,
+             **CodecRegistry (?)** codecRegistry,
+             :ref:`io.realm.mongodb.App.Callback\<T> <io_realm_mongodb_App_Callback>`  callback)
        
        Call a MongoDB Realm function asynchronously with custom codec registry for encoding/decoding arguments/results.
        
@@ -215,9 +224,9 @@ Method Summary
        protected abstract **T (?)**
      - 
        :ref:`invoke <io_realm_mongodb_functions_Functions_invoke_String__List_____CodecRegistry___any__>`  <**T (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
-                                     `java.util.List\<?> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  args,
-                                     **CodecRegistry (?)** codecRegistry,
-                                     **<any> (?)** resultDecoder)
+             `java.util.List\<?> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  args,
+             **CodecRegistry (?)** codecRegistry,
+             **<any> (?)** resultDecoder)
        
        
        
@@ -250,6 +259,35 @@ Field Detail
 
 
 
+Constructor Detail
+==================
+
+.. _Functions:
+
+.. _Functions__:
+
+.. _io_realm_mongodb_functions_Functions:
+
+.. _io_realm_mongodb_functions_Functions__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected  Functions (:ref:`User <io_realm_mongodb_User>`  user,
+             **CodecRegistry (?)** codecRegistry)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
 Method Detail
 =============
 
@@ -276,8 +314,8 @@ callFunction
    :header-rows: 1
    
    * -    public **ResultT (?)** callFunction <**ResultT (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
-                                     `java.util.List\<?> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  args,
-                                     **<any> (?)** resultDecoder)
+             `java.util.List\<?> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  args,
+             **<any> (?)** resultDecoder)
    
    * - Call a MongoDB Realm function synchronously with custom result decoder.The arguments will be encoded with the default codec registry encoding.
        
@@ -357,8 +395,8 @@ callFunction
    :header-rows: 1
    
    * -    public **ResultT (?)** callFunction <**ResultT (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
-                                     `java.util.List\<?> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  args,
-                                     `java.lang.Class\<ResultT> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  resultClass)
+             `java.util.List\<?> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  args,
+             `java.lang.Class\<ResultT> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  resultClass)
    
    * - Call a MongoDB Realm function synchronously with default codec registry encoding/decoding arguments/results.
        
@@ -434,9 +472,9 @@ callFunction
    :header-rows: 1
    
    * -    public **ResultT (?)** callFunction <**ResultT (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
-                                     `java.util.List\<?> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  args,
-                                     `java.lang.Class\<ResultT> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  resultClass,
-                                     **CodecRegistry (?)** codecRegistry)
+             `java.util.List\<?> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  args,
+             `java.lang.Class\<ResultT> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  resultClass,
+             **CodecRegistry (?)** codecRegistry)
    
    * - Call a MongoDB Realm function synchronously with custom codec registry encoding/decoding arguments/results.
        
@@ -531,9 +569,9 @@ callFunctionAsync
    :header-rows: 1
    
    * -    public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`  callFunctionAsync <**T (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
-                                                 `java.util.List\<?> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  args,
-                                                 **<any> (?)** resultDecoder,
-                                                 :ref:`io.realm.mongodb.App.Callback\<T> <io_realm_mongodb_App_Callback>`  callback)
+             `java.util.List\<?> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  args,
+             **<any> (?)** resultDecoder,
+             :ref:`io.realm.mongodb.App.Callback\<T> <io_realm_mongodb_App_Callback>`  callback)
    
    * - Call a MongoDB Realm function asynchronously with custom result decoder.This is the asynchronous equivalent of **callFunction(String, List, Decoder) (?)**.
        
@@ -623,9 +661,9 @@ callFunctionAsync
    :header-rows: 1
    
    * -    public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`  callFunctionAsync <**T (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
-                                                 `java.util.List\<?> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  args,
-                                                 `java.lang.Class\<T> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  resultClass,
-                                                 :ref:`io.realm.mongodb.App.Callback\<T> <io_realm_mongodb_App_Callback>`  callback)
+             `java.util.List\<?> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  args,
+             `java.lang.Class\<T> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  resultClass,
+             :ref:`io.realm.mongodb.App.Callback\<T> <io_realm_mongodb_App_Callback>`  callback)
    
    * - Call a MongoDB Realm function asynchronously with custom codec registry for encoding/decoding arguments/results.This is the asynchronous equivalent of :ref:`callFunction(String, List, Class) <io_realm_mongodb_functions_Functions_callFunction_String__List__Class_>` .
        
@@ -713,10 +751,10 @@ callFunctionAsync
    :header-rows: 1
    
    * -    public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`  callFunctionAsync <**T (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
-                                                 `java.util.List\<?> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  args,
-                                                 `java.lang.Class\<T> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  resultClass,
-                                                 **CodecRegistry (?)** codecRegistry,
-                                                 :ref:`io.realm.mongodb.App.Callback\<T> <io_realm_mongodb_App_Callback>`  callback)
+             `java.util.List\<?> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  args,
+             `java.lang.Class\<T> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  resultClass,
+             **CodecRegistry (?)** codecRegistry,
+             :ref:`io.realm.mongodb.App.Callback\<T> <io_realm_mongodb_App_Callback>`  callback)
    
    * - Call a MongoDB Realm function asynchronously with custom codec registry for encoding/decoding arguments/results.This is the asynchronous equivalent of :ref:`callFunction(String, List, Class, CodecRegistry) <io_realm_mongodb_functions_Functions_callFunction_String__List__Class__CodecRegistry_>` .
        
@@ -933,9 +971,9 @@ invoke
    :header-rows: 1
    
    * -    protected abstract **T (?)** invoke <**T (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
-                                     `java.util.List\<?> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  args,
-                                     **CodecRegistry (?)** codecRegistry,
-                                     **<any> (?)** resultDecoder)
+             `java.util.List\<?> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  args,
+             **CodecRegistry (?)** codecRegistry,
+             **<any> (?)** resultDecoder)
    
    * - 
        

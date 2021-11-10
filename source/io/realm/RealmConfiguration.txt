@@ -54,11 +54,35 @@ This will create a RealmConfiguration with the following properties.
 Constructors
 ============
 
-
-
-- ``io.realm.RealmConfiguration(File, String, byte[], long, RealmMigration, boolean, OsRealmConfig.Durability, RealmProxyMediator, RxObservableFactory, FlowFactory, Realm.Transaction, boolean, CompactOnLaunchCallback, boolean, long, boolean, boolean)`` 
-
-
+.. list-table::
+   :header-rows: 1
+   
+   * - Constructor and Description
+   
+   * - :ref:`RealmConfiguration <io_realm_RealmConfiguration>`  (`File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  realmPath,
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  assetFilePath,
+             **byte[]** key,
+             **long** schemaVersion,
+             :ref:`RealmMigration <io_realm_RealmMigration>`  migration,
+             **boolean** deleteRealmIfMigrationNeeded,
+             :ref:`OsRealmConfig.Durability <io_realm_internal_OsRealmConfig_Durability>`  durability,
+             :ref:`RealmProxyMediator <io_realm_internal_RealmProxyMediator>`  schemaMediator,
+             :ref:`RxObservableFactory <io_realm_rx_RxObservableFactory>`  rxObservableFactory,
+             :ref:`FlowFactory <io_realm_coroutines_FlowFactory>`  flowFactory,
+             :ref:`Realm.Transaction <io_realm_Realm_Transaction>`  initialDataTransaction,
+             **boolean** readOnly,
+             :ref:`CompactOnLaunchCallback <io_realm_CompactOnLaunchCallback>`  compactOnLaunch,
+             **boolean** isRecoveryConfiguration,
+             **long** maxNumberOfActiveVersions,
+             **boolean** allowWritesOnUiThread,
+             **boolean** allowQueriesOnUiThread)
+       
+       
+       
+       
+       
+   
+   
 
 
 Nested Class Summary
@@ -115,8 +139,8 @@ Method Summary
        protected static :ref:`RealmProxyMediator <io_realm_internal_RealmProxyMediator>` 
      - 
        :ref:`createSchemaMediator <io_realm_RealmConfiguration_createSchemaMediator_Set_Object___Set_Class___extends_RealmModel____boolean_>`  (`java.util.Set\<java.lang.Object> <https://docs.oracle.com/javase/7/docs/api/java/util/Set.html>`__  modules,
-                                                                  `java.util.Set\<java.lang.Class\<? extends io.realm.RealmModel>> <https://docs.oracle.com/javase/7/docs/api/java/util/Set.html>`__  debugSchema,
-                                                                  **boolean** excludeDebugSchema)
+             `java.util.Set\<java.lang.Class\<? extends io.realm.RealmModel>> <https://docs.oracle.com/javase/7/docs/api/java/util/Set.html>`__  debugSchema,
+             **boolean** excludeDebugSchema)
        
        
        
@@ -137,8 +161,8 @@ Method Summary
        protected static :ref:`RealmConfiguration <io_realm_RealmConfiguration>` 
      - 
        :ref:`forRecovery <io_realm_RealmConfiguration_forRecovery_String__byte[]__RealmProxyMediator_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  canonicalPath,
-                                                         **byte[]** encryptionKey,
-                                                         :ref:`RealmProxyMediator <io_realm_internal_RealmProxyMediator>`  schemaMediator)
+             **byte[]** encryptionKey,
+             :ref:`RealmProxyMediator <io_realm_internal_RealmProxyMediator>`  schemaMediator)
        
        
        
@@ -419,6 +443,50 @@ Field Detail
 
 
 
+Constructor Detail
+==================
+
+.. _RealmConfiguration:
+
+.. _RealmConfiguration__:
+
+.. _io_realm_RealmConfiguration:
+
+.. _io_realm_RealmConfiguration__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected  RealmConfiguration (`File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  realmPath,
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  assetFilePath,
+             **byte[]** key,
+             **long** schemaVersion,
+             :ref:`RealmMigration <io_realm_RealmMigration>`  migration,
+             **boolean** deleteRealmIfMigrationNeeded,
+             :ref:`OsRealmConfig.Durability <io_realm_internal_OsRealmConfig_Durability>`  durability,
+             :ref:`RealmProxyMediator <io_realm_internal_RealmProxyMediator>`  schemaMediator,
+             :ref:`RxObservableFactory <io_realm_rx_RxObservableFactory>`  rxObservableFactory,
+             :ref:`FlowFactory <io_realm_coroutines_FlowFactory>`  flowFactory,
+             :ref:`Realm.Transaction <io_realm_Realm_Transaction>`  initialDataTransaction,
+             **boolean** readOnly,
+             :ref:`CompactOnLaunchCallback <io_realm_CompactOnLaunchCallback>`  compactOnLaunch,
+             **boolean** isRecoveryConfiguration,
+             **long** maxNumberOfActiveVersions,
+             **boolean** allowWritesOnUiThread,
+             **boolean** allowQueriesOnUiThread)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
 Method Detail
 =============
 
@@ -445,8 +513,8 @@ createSchemaMediator
    :header-rows: 1
    
    * -    protected static :ref:`RealmProxyMediator <io_realm_internal_RealmProxyMediator>`  createSchemaMediator (`java.util.Set\<java.lang.Object> <https://docs.oracle.com/javase/7/docs/api/java/util/Set.html>`__  modules,
-                                                                  `java.util.Set\<java.lang.Class\<? extends io.realm.RealmModel>> <https://docs.oracle.com/javase/7/docs/api/java/util/Set.html>`__  debugSchema,
-                                                                  **boolean** excludeDebugSchema)
+             `java.util.Set\<java.lang.Class\<? extends io.realm.RealmModel>> <https://docs.oracle.com/javase/7/docs/api/java/util/Set.html>`__  debugSchema,
+             **boolean** excludeDebugSchema)
    
    * - 
        
@@ -523,8 +591,8 @@ forRecovery
    :header-rows: 1
    
    * -    protected static :ref:`RealmConfiguration <io_realm_RealmConfiguration>`  forRecovery (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  canonicalPath,
-                                                         **byte[]** encryptionKey,
-                                                         :ref:`RealmProxyMediator <io_realm_internal_RealmProxyMediator>`  schemaMediator)
+             **byte[]** encryptionKey,
+             :ref:`RealmProxyMediator <io_realm_internal_RealmProxyMediator>`  schemaMediator)
    
    * - 
        

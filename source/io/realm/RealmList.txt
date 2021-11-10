@@ -56,12 +56,26 @@ Unmanaged RealmLists can be created by the user and can contain both managed and
 Constructors
 ============
 
-
-
-- ``io.realm.RealmList()`` 
-- ``io.realm.RealmList(E...)`` 
-
-
+.. list-table::
+   :header-rows: 1
+   
+   * - Constructor and Description
+   
+   * - :ref:`RealmList <io_realm_RealmList>`  ()
+       
+       Creates a RealmList in unmanaged mode, where the elements are not controlled by a Realm.
+       
+       
+       
+   
+   * - :ref:`RealmList <io_realm_RealmList>`  (**E[] (?)** objects)
+       
+       Creates a RealmList in unmanaged mode with an initial list of elements.
+       
+       
+       
+   
+   
 
 
 Field Summary
@@ -122,7 +136,7 @@ Method Summary
        public **void**
      - 
        :ref:`add <io_realm_RealmList_add_int__E_>`  (**int** location,
-                         **E (?)** element)
+             **E (?)** element)
        
        Inserts the specified object into this List at the specified location.
        
@@ -497,7 +511,7 @@ Method Summary
        public **void**
      - 
        :ref:`move <io_realm_RealmList_move_int__int_>`  (**int** oldPos,
-                          **int** newPos)
+             **int** newPos)
        
        Moves an object from one position to another, while maintaining a fixed sized list.
        
@@ -572,7 +586,7 @@ Method Summary
        public **E (?)**
      - 
        :ref:`set <io_realm_RealmList_set_int__E_>`  (**int** location,
-                      **E (?)** object)
+             **E (?)** object)
        
        Replaces the element at the specified location in this list with the specified object.
        
@@ -595,7 +609,7 @@ Method Summary
        public :ref:`RealmResults <io_realm_RealmResults>` 
      - 
        :ref:`sort <io_realm_RealmList_sort_String[]__Sort[]_>`  (`java.lang.String[] <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldNames,
-                                  :ref:`io.realm.Sort[] <io_realm_Sort>`  sortOrders)
+             :ref:`io.realm.Sort[] <io_realm_Sort>`  sortOrders)
        
        
        
@@ -608,9 +622,9 @@ Method Summary
        public :ref:`RealmResults <io_realm_RealmResults>` 
      - 
        :ref:`sort <io_realm_RealmList_sort_String__Sort__String__Sort_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName1,
-                                  :ref:`Sort <io_realm_Sort>`  sortOrder1,
-                                  `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName2,
-                                  :ref:`Sort <io_realm_Sort>`  sortOrder2)
+             :ref:`Sort <io_realm_Sort>`  sortOrder1,
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName2,
+             :ref:`Sort <io_realm_Sort>`  sortOrder2)
        
        
        
@@ -623,7 +637,7 @@ Method Summary
        public :ref:`RealmResults <io_realm_RealmResults>` 
      - 
        :ref:`sort <io_realm_RealmList_sort_String__Sort_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                                  :ref:`Sort <io_realm_Sort>`  sortOrder)
+             :ref:`Sort <io_realm_Sort>`  sortOrder)
        
        
        
@@ -724,6 +738,77 @@ Warning: This field is only exposed for internal usage, and should not be used.
 
 
 
+Constructor Detail
+==================
+
+.. _RealmList:
+
+.. _RealmList__:
+
+.. _io_realm_RealmList:
+
+.. _io_realm_RealmList__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public  RealmList ()
+   
+   * - Creates a RealmList in unmanaged mode, where the elements are not controlled by a Realm. This effectively makes the RealmList function as a `java.util.ArrayList <https://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html>`__  and it is not possible to query the objects in this state.
+       
+       Use :ref:`io.realm.Realm.copyToRealm(Iterable, ImportFlag...) <io_realm_Realm_copyToRealm_Iterable__ImportFlag____>`  to properly persist its elements in Realm.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _RealmList:
+
+.. _RealmList__:
+
+.. _io_realm_RealmList:
+
+.. _io_realm_RealmList__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public  RealmList (**E[] (?)** objects)
+   
+   * - Creates a RealmList in unmanaged mode with an initial list of elements. A RealmList in unmanaged mode function as a `java.util.ArrayList <https://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html>`__  and it is not possible to query the objects in this state.
+       
+       Use :ref:`io.realm.Realm.copyToRealm(Iterable, ImportFlag...) <io_realm_Realm_copyToRealm_Iterable__ImportFlag____>`  to properly persist all unmanaged elements in Realm.
+       
+       
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``objects`` - initial objects in the list.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+
+
 Method Detail
 =============
 
@@ -807,7 +892,7 @@ add
    :header-rows: 1
    
    * -    public **void** add (**int** location,
-                         **E (?)** element)
+             **E (?)** element)
    
    * - Inserts the specified object into this List at the specified location. The object is inserted before any previous element at the specified location. If the location is equal to the size of this List, the object is added at the end.
        
@@ -2311,7 +2396,7 @@ move
    :header-rows: 1
    
    * -    public **void** move (**int** oldPos,
-                          **int** newPos)
+             **int** newPos)
    
    * - Moves an object from one position to another, while maintaining a fixed sized list. RealmObjects will be shifted so no ``null``  values are introduced.
        
@@ -2744,7 +2829,7 @@ set
    :header-rows: 1
    
    * -    public **E (?)** set (**int** location,
-                      **E (?)** object)
+             **E (?)** object)
    
    * - Replaces the element at the specified location in this list with the specified object.
        
@@ -2877,7 +2962,7 @@ sort
    :header-rows: 1
    
    * -    public :ref:`RealmResults <io_realm_RealmResults>`  sort (`java.lang.String[] <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldNames,
-                                  :ref:`io.realm.Sort[] <io_realm_Sort>`  sortOrders)
+             :ref:`io.realm.Sort[] <io_realm_Sort>`  sortOrders)
    
    * - 
        
@@ -2903,9 +2988,9 @@ sort
    :header-rows: 1
    
    * -    public :ref:`RealmResults <io_realm_RealmResults>`  sort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName1,
-                                  :ref:`Sort <io_realm_Sort>`  sortOrder1,
-                                  `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName2,
-                                  :ref:`Sort <io_realm_Sort>`  sortOrder2)
+             :ref:`Sort <io_realm_Sort>`  sortOrder1,
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName2,
+             :ref:`Sort <io_realm_Sort>`  sortOrder2)
    
    * - 
        
@@ -2931,7 +3016,7 @@ sort
    :header-rows: 1
    
    * -    public :ref:`RealmResults <io_realm_RealmResults>`  sort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                                  :ref:`Sort <io_realm_Sort>`  sortOrder)
+             :ref:`Sort <io_realm_Sort>`  sortOrder)
    
    * - 
        

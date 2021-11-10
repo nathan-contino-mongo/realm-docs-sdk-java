@@ -27,11 +27,19 @@ Builder used to construct instances of a :ref:`AppConfiguration <io_realm_mongod
 Constructors
 ============
 
-
-
-- ``io.realm.mongodb.AppConfiguration.Builder(String)`` 
-
-
+.. list-table::
+   :header-rows: 1
+   
+   * - Constructor and Description
+   
+   * - :ref:`Builder <io_realm_mongodb_AppConfiguration_Builder>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  appId)
+       
+       Creates an instance of the Builder for the AppConfiguration.
+       
+       
+       
+   
+   
 
 
 Method Summary
@@ -47,7 +55,7 @@ Method Summary
        public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>` 
      - 
        :ref:`addCustomRequestHeader <io_realm_mongodb_AppConfiguration_Builder_addCustomRequestHeader_String__String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  headerName,
-                                                                `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  headerValue)
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  headerValue)
        
        Adds an extra HTTP header to append to every request to a Realm Object Server.
        
@@ -172,7 +180,7 @@ Method Summary
        public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>` 
      - 
        :ref:`requestTimeout <io_realm_mongodb_AppConfiguration_Builder_requestTimeout_long__TimeUnit_>`  (**long** time,
-                                                        `TimeUnit <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/TimeUnit.html>`__  unit)
+             `TimeUnit <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/TimeUnit.html>`__  unit)
        
        Sets the default timeout used by network requests against the MongoDB Realm application.
        
@@ -202,6 +210,42 @@ Inherited Methods
 
 
 
+Constructor Detail
+==================
+
+.. _Builder:
+
+.. _Builder__:
+
+.. _io_realm_mongodb_AppConfiguration_Builder:
+
+.. _io_realm_mongodb_AppConfiguration_Builder__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public  Builder (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  appId)
+   
+   * - Creates an instance of the Builder for the AppConfiguration.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``appId`` - the application id of the MongoDB Realm Application.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+
+
 Method Detail
 =============
 
@@ -226,7 +270,7 @@ addCustomRequestHeader
    :header-rows: 1
    
    * -    public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>`  addCustomRequestHeader (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  headerName,
-                                                                `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  headerValue)
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  headerValue)
    
    * - Adds an extra HTTP header to append to every request to a Realm Object Server.
        
@@ -832,7 +876,7 @@ requestTimeout
    :header-rows: 1
    
    * -    public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>`  requestTimeout (**long** time,
-                                                        `TimeUnit <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/TimeUnit.html>`__  unit)
+             `TimeUnit <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/TimeUnit.html>`__  unit)
    
    * - Sets the default timeout used by network requests against the MongoDB Realm application. Requests will terminate with a failure if they exceed this limit. The default value is :ref:`AppConfiguration.DEFAULT_REQUEST_TIMEOUT <io_realm_mongodb_AppConfiguration_DEFAULT_REQUEST_TIMEOUT>`  seconds.
        

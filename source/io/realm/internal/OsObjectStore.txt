@@ -25,11 +25,19 @@ Java wrapper for methods in object_store.hpp.
 Constructors
 ============
 
-
-
-- ``io.realm.internal.OsObjectStore()`` 
-
-
+.. list-table::
+   :header-rows: 1
+   
+   * - Constructor and Description
+   
+   * - :ref:`OsObjectStore <io_realm_internal_OsObjectStore>`  ()
+       
+       
+       
+       
+       
+   
+   
 
 
 Field Summary
@@ -64,7 +72,7 @@ Method Summary
        public static **boolean**
      - 
        :ref:`callWithLock <io_realm_internal_OsObjectStore_callWithLock_RealmConfiguration__Runnable_>`  (:ref:`RealmConfiguration <io_realm_RealmConfiguration>`  configuration,
-                                            `Runnable <https://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html>`__  runnable)
+             `Runnable <https://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html>`__  runnable)
        
        Try to grab an exclusive lock on the given Realm file.
        
@@ -75,7 +83,7 @@ Method Summary
        public static **boolean**
      - 
        :ref:`deleteTableForObject <io_realm_internal_OsObjectStore_deleteTableForObject_OsSharedRealm__String_>`  (:ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  sharedRealm,
-                                                    `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
        
        Deletes the table with the given class name.
        
@@ -86,7 +94,7 @@ Method Summary
        public static `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
      - 
        :ref:`getPrimaryKeyForObject <io_realm_internal_OsObjectStore_getPrimaryKeyForObject_OsSharedRealm__String_>`  (:ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  sharedRealm,
-                                                     `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
        
        
        
@@ -109,8 +117,8 @@ Method Summary
        public static **void**
      - 
        :ref:`setPrimaryKeyForObject <io_realm_internal_OsObjectStore_setPrimaryKeyForObject_OsSharedRealm__String__String_>`  (:ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  sharedRealm,
-                                                   `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className,
-                                                   `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  primaryKeyFieldName)
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className,
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  primaryKeyFieldName)
        
        Sets the primary key field for the given class.
        
@@ -121,7 +129,7 @@ Method Summary
        public static **void**
      - 
        :ref:`setSchemaVersion <io_realm_internal_OsObjectStore_setSchemaVersion_OsSharedRealm__long_>`  (:ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  sharedRealm,
-                                             **long** schemaVersion)
+             **long** schemaVersion)
        
        Sets the schema version to the given :ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>` .
        
@@ -156,6 +164,34 @@ Field Detail
 
 
 
+Constructor Detail
+==================
+
+.. _OsObjectStore:
+
+.. _OsObjectStore__:
+
+.. _io_realm_internal_OsObjectStore:
+
+.. _io_realm_internal_OsObjectStore__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public  OsObjectStore ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
 Method Detail
 =============
 
@@ -180,7 +216,7 @@ callWithLock
    :header-rows: 1
    
    * -    public static **boolean** callWithLock (:ref:`RealmConfiguration <io_realm_RealmConfiguration>`  configuration,
-                                            `Runnable <https://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html>`__  runnable)
+             `Runnable <https://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html>`__  runnable)
    
    * - Try to grab an exclusive lock on the given Realm file. If the lock can be acquired, the ``runnable``  will be executed while the lock is held. The lock will ensure no one else can read from or write to the Realm file at the same time.
        
@@ -231,7 +267,7 @@ deleteTableForObject
    :header-rows: 1
    
    * -    public static **boolean** deleteTableForObject (:ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  sharedRealm,
-                                                    `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
    
    * - Deletes the table with the given class name.
        
@@ -276,7 +312,7 @@ getPrimaryKeyForObject
    :header-rows: 1
    
    * -    public static `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getPrimaryKeyForObject (:ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  sharedRealm,
-                                                     `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
    
    * - 
        
@@ -349,8 +385,8 @@ setPrimaryKeyForObject
    :header-rows: 1
    
    * -    public static **void** setPrimaryKeyForObject (:ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  sharedRealm,
-                                                   `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className,
-                                                   `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  primaryKeyFieldName)
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className,
+             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  primaryKeyFieldName)
    
    * - Sets the primary key field for the given class.NOTE: The search index has to be added to the field before calling this method.
        
@@ -413,7 +449,7 @@ setSchemaVersion
    :header-rows: 1
    
    * -    public static **void** setSchemaVersion (:ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  sharedRealm,
-                                             **long** schemaVersion)
+             **long** schemaVersion)
    
    * - Sets the schema version to the given :ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>` . This method will create meta tables if they don't exist.
        
