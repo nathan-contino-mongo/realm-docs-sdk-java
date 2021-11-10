@@ -17,7 +17,7 @@ Interface RealmObjectChangeListener
 io.realm
 ========
 
-``RealmObjectChangeListener``  can be registered on a  :ref:`RealmModel <io_realm_RealmModel>`  or  :ref:`RealmObject <io_realm_RealmObject>`  to receive detailed notifications when an object changes.
+``RealmObjectChangeListener``  can be registered on a :ref:`RealmModel <io_realm_RealmModel>`  or :ref:`RealmObject <io_realm_RealmObject>`  to receive detailed notifications when an object changes.
 
 Realm instances on a thread without an **android.os.Looper (?)** cannot register a ``RealmObjectChangeListener`` .
 
@@ -32,15 +32,15 @@ Listener cannot be registered inside a transaction.
 
 
    
-   -  :ref:`Realm.addChangeListener(RealmChangeListener) <io_realm_Realm_addChangeListener_RealmChangeListener_>` 
+   - :ref:`Realm.addChangeListener(RealmChangeListener) <io_realm_Realm_addChangeListener_RealmChangeListener_>` 
       
       
       
-   -  :ref:`Realm.removeAllChangeListeners() <io_realm_Realm_removeAllChangeListeners__>` 
+   - :ref:`Realm.removeAllChangeListeners() <io_realm_Realm_removeAllChangeListeners__>` 
       
       
       
-   -  :ref:`Realm.removeChangeListener(RealmChangeListener) <io_realm_Realm_removeChangeListener_RealmChangeListener_>` 
+   - :ref:`Realm.removeChangeListener(RealmChangeListener) <io_realm_Realm_removeChangeListener_RealmChangeListener_>` 
       
       
       
@@ -62,10 +62,10 @@ Method Summary
    * - 
        public **void**
      - 
-        :ref:`onChange <io_realm_RealmObjectChangeListener_onChange_T__ObjectChangeSet_>`  (**T (?)** t,
-                               :ref:`ObjectChangeSet <io_realm_ObjectChangeSet>`  changeSet)
+       :ref:`onChange <io_realm_RealmObjectChangeListener_onChange_T__ObjectChangeSet_>`  (**T (?)** t,
+                              :ref:`ObjectChangeSet <io_realm_ObjectChangeSet>`  changeSet)
        
-       When this gets called to return the results of an asynchronous query made by  :ref:`RealmQuery.findFirstAsync() <io_realm_RealmQuery_findFirstAsync__>` , ``changeSet``  will be ``null`` .
+       When this gets called to return the results of an asynchronous query made by :ref:`RealmQuery.findFirstAsync() <io_realm_RealmQuery_findFirstAsync__>` , ``changeSet``  will be ``null`` .
        
        
        
@@ -99,9 +99,9 @@ onChange
    :header-rows: 1
    
    * -    public **void** onChange (**T (?)** t,
-                               :ref:`ObjectChangeSet <io_realm_ObjectChangeSet>`  changeSet)
+                              :ref:`ObjectChangeSet <io_realm_ObjectChangeSet>`  changeSet)
    
-   * - When this gets called to return the results of an asynchronous query made by  :ref:`RealmQuery.findFirstAsync() <io_realm_RealmQuery_findFirstAsync__>` , ``changeSet``  will be ``null`` .
+   * - When this gets called to return the results of an asynchronous query made by :ref:`RealmQuery.findFirstAsync() <io_realm_RealmQuery_findFirstAsync__>` , ``changeSet``  will be ``null`` .
        
        When this gets called because the object was deleted, ``changeSet.isDeleted()``  will return ``true``  and ``changeSet.getFieldChanges()``  will return ``null`` .
        
@@ -115,7 +115,7 @@ onChange
        
        If a field points to a RealmList, this listener will only be triggered if one or multiple objects are inserted, removed or moved within the List. Updating the objects in the RealmList will not trigger this listener.
        
-       Changes to  :ref:`LinkingObjects <io_realm_annotations_LinkingObjects>`  annotated  :ref:`RealmResults <io_realm_RealmResults>`  fields will not be monitored, nor reported through this change listener.
+       Changes to :ref:`LinkingObjects <io_realm_annotations_LinkingObjects>`  annotated :ref:`RealmResults <io_realm_RealmResults>`  fields will not be monitored, nor reported through this change listener.
        
        
        

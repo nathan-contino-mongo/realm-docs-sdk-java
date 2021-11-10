@@ -19,7 +19,7 @@ io.realm.internal
 
 `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
 
-An ObserverPairList holds a list of ObserverPairs. An  :ref:`ObserverPair <io_realm_internal_ObserverPairList_ObserverPair>`  is pair containing an observer and a listener. The observer is the object to react to the changes through the listener. The observer is saved as a weak reference in the pair to control the life cycle of the listener. When the observer gets GCed, the corresponding pair will be removed from the list. So DO NOT keep a strong reference to the observer in the subclass of listener since it will cause leaks!
+An ObserverPairList holds a list of ObserverPairs. An :ref:`ObserverPair <io_realm_internal_ObserverPairList_ObserverPair>`  is pair containing an observer and a listener. The observer is the object to react to the changes through the listener. The observer is saved as a weak reference in the pair to control the life cycle of the listener. When the observer gets GCed, the corresponding pair will be removed from the list. So DO NOT keep a strong reference to the observer in the subclass of listener since it will cause leaks!
 
 This class is not thread safe and it is not supposed to be.
 
@@ -66,7 +66,7 @@ Method Summary
    * - 
        public **void**
      - 
-        :ref:`add <io_realm_internal_ObserverPairList_add_T_>`  (**T (?)** pair)
+       :ref:`add <io_realm_internal_ObserverPairList_add_T_>`  (**T (?)** pair)
        
        
        
@@ -76,7 +76,7 @@ Method Summary
    * - 
        public **void**
      - 
-        :ref:`clear <io_realm_internal_ObserverPairList_clear__>`  ()
+       :ref:`clear <io_realm_internal_ObserverPairList_clear__>`  ()
        
        
        
@@ -86,7 +86,7 @@ Method Summary
    * - 
        public **void**
      - 
-        :ref:`foreach <io_realm_internal_ObserverPairList_foreach_ObserverPairList_Callback_T__>`  ( :ref:`io.realm.internal.ObserverPairList.Callback\<T> <io_realm_internal_ObserverPairList_Callback>`  callback)
+       :ref:`foreach <io_realm_internal_ObserverPairList_foreach_ObserverPairList_Callback_T__>`  (:ref:`io.realm.internal.ObserverPairList.Callback\<T> <io_realm_internal_ObserverPairList_Callback>`  callback)
        
        Iterate every valid pair in the list and call the callback on it.
        
@@ -96,7 +96,7 @@ Method Summary
    * - 
        public **boolean**
      - 
-        :ref:`isEmpty <io_realm_internal_ObserverPairList_isEmpty__>`  ()
+       :ref:`isEmpty <io_realm_internal_ObserverPairList_isEmpty__>`  ()
        
        
        
@@ -106,7 +106,7 @@ Method Summary
    * - 
        public **void**
      - 
-        :ref:`remove <io_realm_internal_ObserverPairList_remove_S__U_>`  <**S (?)** , **U (?)** >(**S (?)** observer,
+       :ref:`remove <io_realm_internal_ObserverPairList_remove_S__U_>`  <**S (?)** , **U (?)** >(**S (?)** observer,
                             **U (?)** listener)
        
        
@@ -117,7 +117,7 @@ Method Summary
    * - 
        public **int**
      - 
-        :ref:`size <io_realm_internal_ObserverPairList_size__>`  ()
+       :ref:`size <io_realm_internal_ObserverPairList_size__>`  ()
        
        
        
@@ -230,7 +230,7 @@ foreach
 .. list-table::
    :header-rows: 1
    
-   * -    public **void** foreach ( :ref:`io.realm.internal.ObserverPairList.Callback\<T> <io_realm_internal_ObserverPairList_Callback>`  callback)
+   * -    public **void** foreach (:ref:`io.realm.internal.ObserverPairList.Callback\<T> <io_realm_internal_ObserverPairList_Callback>`  callback)
    
    * - Iterate every valid pair in the list and call the callback on it. The pair with GCed observer will be removed and callback won't be executed. Before executing the callback, a strong reference to the observer will be kept and passed to the callback in case the observer gets GCed before callback returns.
        
