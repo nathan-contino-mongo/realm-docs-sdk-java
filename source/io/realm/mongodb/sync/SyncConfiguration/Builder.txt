@@ -30,16 +30,14 @@ Constructors
    
    * - Constructor and Description
    
-   * - :ref:`Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  (:ref:`User <io_realm_mongodb_User>`  user,
-             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  partitionValue)
+   * - :ref:`Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  (:ref:`User <io_realm_mongodb_User>`  user, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  partitionValue)
        
        Creates an instance of the builder for a *SyncConfiguration* with the given user and partition value.
        
        
        
    
-   * - :ref:`Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  (:ref:`User <io_realm_mongodb_User>`  user,
-             **ObjectId (?)** partitionValue)
+   * - :ref:`Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  (:ref:`User <io_realm_mongodb_User>`  user, **ObjectId (?)** partitionValue)
        
        Creates an instance of the builder for a *SyncConfiguration* with the given user and partition value.
        
@@ -215,8 +213,7 @@ Method Summary
    * - 
        public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>` 
      - 
-       :ref:`modules <io_realm_mongodb_sync_SyncConfiguration_Builder_modules_Object__Object____>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  baseModule,
-             `java.lang.Object[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  additionalModules)
+       :ref:`modules <io_realm_mongodb_sync_SyncConfiguration_Builder_modules_Object__Object____>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  baseModule, `java.lang.Object[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  additionalModules)
        
        Replaces the existing module(s) with one or more :ref:`RealmModule <io_realm_annotations_RealmModule>` s.
        
@@ -272,8 +269,7 @@ Method Summary
    * - 
        public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>` 
      - 
-       :ref:`waitForInitialRemoteData <io_realm_mongodb_sync_SyncConfiguration_Builder_waitForInitialRemoteData_long__TimeUnit_>`  (**long** timeout,
-             `TimeUnit <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/TimeUnit.html>`__  unit)
+       :ref:`waitForInitialRemoteData <io_realm_mongodb_sync_SyncConfiguration_Builder_waitForInitialRemoteData_long__TimeUnit_>`  (**long** timeout, `TimeUnit <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/TimeUnit.html>`__  unit)
        
        Setting this will cause the Realm to download all known changes from the server the first time a Realm is opened.
        
@@ -317,8 +313,7 @@ Constructor Detail
 .. list-table::
    :header-rows: 1
    
-   * -    public  Builder (:ref:`User <io_realm_mongodb_User>`  user,
-             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  partitionValue)
+   * -    public  Builder (:ref:`User <io_realm_mongodb_User>`  user, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  partitionValue)
    
    * - Creates an instance of the builder for a *SyncConfiguration* with the given user and partition value.
        
@@ -353,8 +348,7 @@ Constructor Detail
 .. list-table::
    :header-rows: 1
    
-   * -    public  Builder (:ref:`User <io_realm_mongodb_User>`  user,
-             **ObjectId (?)** partitionValue)
+   * -    public  Builder (:ref:`User <io_realm_mongodb_User>`  user, **ObjectId (?)** partitionValue)
    
    * - Creates an instance of the builder for a *SyncConfiguration* with the given user and partition value.
        
@@ -1044,8 +1038,7 @@ modules
 .. list-table::
    :header-rows: 1
    
-   * -    public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  modules (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  baseModule,
-             `java.lang.Object[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  additionalModules)
+   * -    public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  modules (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  baseModule, `java.lang.Object[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  additionalModules)
    
    * - Replaces the existing module(s) with one or more :ref:`RealmModule <io_realm_annotations_RealmModule>` s. Using this method will replace the current schema for this Realm with the schema defined by the provided modules.
        
@@ -1342,8 +1335,7 @@ waitForInitialRemoteData
 .. list-table::
    :header-rows: 1
    
-   * -    public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  waitForInitialRemoteData (**long** timeout,
-             `TimeUnit <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/TimeUnit.html>`__  unit)
+   * -    public :ref:`SyncConfiguration.Builder <io_realm_mongodb_sync_SyncConfiguration_Builder>`  waitForInitialRemoteData (**long** timeout, `TimeUnit <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/TimeUnit.html>`__  unit)
    
    * - Setting this will cause the Realm to download all known changes from the server the first time a Realm is opened. The Realm will not open until all the data has been downloaded. This means that if a device is offline the Realm will not open.Since downloading all changes can be an lengthy operation that might block the UI thread, Realms with this setting enabled should only be opened on background threads or with :ref:`Realm.getInstanceAsync(RealmConfiguration, Realm.Callback) <io_realm_Realm_getInstanceAsync_RealmConfiguration__Realm_Callback_>`  on the UI thread.
        
