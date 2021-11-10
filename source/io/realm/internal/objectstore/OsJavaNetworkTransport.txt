@@ -1,0 +1,731 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class OsJavaNetworkTransport
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport:
+
+
+
+io.realm.internal.objectstore
+=============================
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+Java implementation of the transport layer exposed by ObjectStore when communicating with the MongoDB Realm Server.
+
+
+Constructors
+============
+
+
+
+- ``io.realm.internal.objectstore.OsJavaNetworkTransport()`` 
+
+
+
+
+Nested Class Summary
+====================
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Class and Description
+   
+   * - ``public abstract static`` 
+     - ``io.realm.internal.objectstore.OsJavaNetworkTransport.Response`` 
+   
+   * - ``public static`` 
+     - ``io.realm.internal.objectstore.OsJavaNetworkTransport.Request`` 
+   
+   * - ``public abstract static`` 
+     - ``io.realm.internal.objectstore.OsJavaNetworkTransport.NetworkTransportJNIResultCallback`` 
+   
+   
+
+
+Field Summary
+=============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Field and Description
+   
+   * - ``public static final int`` 
+       
+       
+     - ``ERROR_IO`` 
+       
+       
+   
+   * - ``public static final int`` 
+       
+       
+     - ``ERROR_INTERRUPTED`` 
+       
+       
+   
+   * - ``public static final int`` 
+       
+       
+     - ``ERROR_UNKNOWN`` 
+       
+       
+   
+   
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addCustomRequestHeader <io_realm_internal_objectstore_OsJavaNetworkTransport_addCustomRequestHeader_String__String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  headerName,
+                                            `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  headerValue)
+       
+       
+       
+       
+       
+   
+   * - 
+       public abstract :ref:`OsJavaNetworkTransport.Response <io_realm_internal_objectstore_OsJavaNetworkTransport_Response>` 
+     - 
+       :ref:`executeRequest <io_realm_internal_objectstore_OsJavaNetworkTransport_executeRequest_String__String__long__Map_String__String___String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  method,
+                                                                        `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  url,
+                                                                        **long** timeoutMs,
+                                                                        `java.util.Map\<java.lang.String, java.lang.String> <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  headers,
+                                                                        `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  body)
+       
+       This method is responsible for actually exucuting the network request.
+       
+       
+       
+   
+   * - 
+       public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`getAuthorizationHeaderName <io_realm_internal_objectstore_OsJavaNetworkTransport_getAuthorizationHeaderName__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public `Map <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__ 
+     - 
+       :ref:`getCustomRequestHeaders <io_realm_internal_objectstore_OsJavaNetworkTransport_getCustomRequestHeaders__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`handleResponse <io_realm_internal_objectstore_OsJavaNetworkTransport_handleResponse_OsJavaNetworkTransport_Response__long_>`  (:ref:`OsJavaNetworkTransport.Response <io_realm_internal_objectstore_OsJavaNetworkTransport_Response>`  response,
+                                    **long** completionBlockPtr)
+       
+       Pass back network response back to ObjectStore.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`reset <io_realm_internal_objectstore_OsJavaNetworkTransport_reset__>`  ()
+       
+       Reset to their default.
+       
+       
+       
+   
+   * - 
+       public abstract **void**
+     - 
+       :ref:`sendRequestAsync <io_realm_internal_objectstore_OsJavaNetworkTransport_sendRequestAsync_String__String__long__Map_String__String___String__long_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  method,
+                                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  url,
+                                               **long** timeoutMs,
+                                               `java.util.Map\<java.lang.String, java.lang.String> <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  headers,
+                                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  body,
+                                               **long** completionBlockPtr)
+       
+       This method is being called from JNI in order to execute the network transport itself.
+       
+       
+       
+   
+   * - 
+       public abstract :ref:`OsJavaNetworkTransport.Response <io_realm_internal_objectstore_OsJavaNetworkTransport_Response>` 
+     - 
+       :ref:`sendStreamingRequest <io_realm_internal_objectstore_OsJavaNetworkTransport_sendStreamingRequest_OsJavaNetworkTransport_Request_>`  (:ref:`OsJavaNetworkTransport.Request <io_realm_internal_objectstore_OsJavaNetworkTransport_Request>`  request)
+       
+       This method is being called from Java when executing streaming requests.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setAuthorizationHeaderName <io_realm_internal_objectstore_OsJavaNetworkTransport_setAuthorizationHeaderName_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  headerName)
+       
+       
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+
+
+
+
+Field Detail
+============
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_ERROR_IO:
+
+
+
+``ERROR_IO`` 
+-------------
+
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_ERROR_INTERRUPTED:
+
+
+
+``ERROR_INTERRUPTED`` 
+----------------------
+
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_ERROR_UNKNOWN:
+
+
+
+``ERROR_UNKNOWN`` 
+------------------
+
+
+
+
+Method Detail
+=============
+
+.. _addCustomRequestHeader:
+
+.. _addCustomRequestHeader__:
+
+.. _OsJavaNetworkTransport_addCustomRequestHeader:
+
+.. _OsJavaNetworkTransport_addCustomRequestHeader__:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_addCustomRequestHeader:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_addCustomRequestHeader__:
+
+
+
+addCustomRequestHeader
+----------------------
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_addCustomRequestHeader_String__String_:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_addCustomRequestHeader_String_String_:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_addCustomRequestHeader_String__String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addCustomRequestHeader (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  headerName,
+                                            `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  headerValue)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _executeRequest:
+
+.. _executeRequest__:
+
+.. _OsJavaNetworkTransport_executeRequest:
+
+.. _OsJavaNetworkTransport_executeRequest__:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_executeRequest:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_executeRequest__:
+
+
+
+executeRequest
+--------------
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_executeRequest_String__String__long__Map_String__String___String_:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_executeRequest_String_String_long_Map_String_:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_executeRequest_String__String__long__Map__String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public abstract :ref:`OsJavaNetworkTransport.Response <io_realm_internal_objectstore_OsJavaNetworkTransport_Response>`  executeRequest (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  method,
+                                                                        `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  url,
+                                                                        **long** timeoutMs,
+                                                                        `java.util.Map\<java.lang.String, java.lang.String> <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  headers,
+                                                                        `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  body)
+   
+   * - This method is responsible for actually exucuting the network request. The thread on which this method is called should be controlled by :ref:`sendRequestAsync(String, String, long, Map, String, long) <io_realm_internal_objectstore_OsJavaNetworkTransport_sendRequestAsync_String__String__long__Map__String__long_>` . Warning: This method is not allowed to throw. Any exception should be wrapped in a :ref:`Response <io_realm_internal_objectstore_OsJavaNetworkTransport_Response>`  and be returned as a result.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``method`` - Which kind of HTTP method in lowercase.
+          
+          
+          
+       - ``url`` - Url to connect to.
+          
+          
+          
+       - ``timeoutMs`` - How long does the request has to complete?
+          
+          
+          
+       - ``headers`` - Which headers to send?
+          
+          
+          
+       - ``body`` - Which body to include?
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getAuthorizationHeaderName:
+
+.. _getAuthorizationHeaderName__:
+
+.. _OsJavaNetworkTransport_getAuthorizationHeaderName:
+
+.. _OsJavaNetworkTransport_getAuthorizationHeaderName__:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_getAuthorizationHeaderName:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_getAuthorizationHeaderName__:
+
+
+
+getAuthorizationHeaderName
+--------------------------
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_getAuthorizationHeaderName__:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_getAuthorizationHeaderName__:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_getAuthorizationHeaderName__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getAuthorizationHeaderName ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getCustomRequestHeaders:
+
+.. _getCustomRequestHeaders__:
+
+.. _OsJavaNetworkTransport_getCustomRequestHeaders:
+
+.. _OsJavaNetworkTransport_getCustomRequestHeaders__:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_getCustomRequestHeaders:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_getCustomRequestHeaders__:
+
+
+
+getCustomRequestHeaders
+-----------------------
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_getCustomRequestHeaders__:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_getCustomRequestHeaders__:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_getCustomRequestHeaders__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `Map <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  getCustomRequestHeaders ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _handleResponse:
+
+.. _handleResponse__:
+
+.. _OsJavaNetworkTransport_handleResponse:
+
+.. _OsJavaNetworkTransport_handleResponse__:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_handleResponse:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_handleResponse__:
+
+
+
+handleResponse
+--------------
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_handleResponse_OsJavaNetworkTransport_Response__long_:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_handleResponse_Response_long_:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_handleResponse_Response__long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** handleResponse (:ref:`OsJavaNetworkTransport.Response <io_realm_internal_objectstore_OsJavaNetworkTransport_Response>`  response,
+                                    **long** completionBlockPtr)
+   
+   * - Pass back network response back to ObjectStore. All Exceptions should also be wrapped in Response object. The ``completionBlockPtr``  is deleted by the native side and is no longer valid after calling this method.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``response`` - the response to a given request. Including exceptions.
+          
+          
+          
+       - ``completionBlockPtr`` - The native completion block responsible for handling the response.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _reset:
+
+.. _reset__:
+
+.. _OsJavaNetworkTransport_reset:
+
+.. _OsJavaNetworkTransport_reset__:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_reset:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_reset__:
+
+
+
+reset
+-----
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_reset__:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_reset__:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_reset__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** reset ()
+   
+   * - Reset to their default. Used for testing.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _sendRequestAsync:
+
+.. _sendRequestAsync__:
+
+.. _OsJavaNetworkTransport_sendRequestAsync:
+
+.. _OsJavaNetworkTransport_sendRequestAsync__:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_sendRequestAsync:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_sendRequestAsync__:
+
+
+
+sendRequestAsync
+----------------
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_sendRequestAsync_String__String__long__Map_String__String___String__long_:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_sendRequestAsync_String_String_long_Map_String_long_:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_sendRequestAsync_String__String__long__Map__String__long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public abstract **void** sendRequestAsync (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  method,
+                                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  url,
+                                               **long** timeoutMs,
+                                               `java.util.Map\<java.lang.String, java.lang.String> <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  headers,
+                                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  body,
+                                               **long** completionBlockPtr)
+   
+   * - This method is being called from JNI in order to execute the network transport itself. All logic around retry and parsing of results should be done by ObjectStore. Warning: This method is not allowed to throw. Any exception should be wrapped in a :ref:`Response <io_realm_internal_objectstore_OsJavaNetworkTransport_Response>`  and be returned as a result. This method assumes the network request is executed in an asynchronous manner. The actual request itself should always be executed within :ref:`executeRequest(String, String, long, Map, String) <io_realm_internal_objectstore_OsJavaNetworkTransport_executeRequest_String__String__long__Map__String_>`  as that allow sub-classes to modify the behaviour on the thread actually doing the request.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``method`` - Which kind of HTTP method in lowercase.
+          
+          
+          
+       - ``url`` - Url to connect to.
+          
+          
+          
+       - ``timeoutMs`` - How long does the request has to complete?
+          
+          
+          
+       - ``headers`` - Which headers to send?
+          
+          
+          
+       - ``body`` - Which body to include?
+          
+          
+          
+       - ``completionBlockPtr`` - completion block that must be called on the C++ side. Must be passed through :ref:`handleResponse(Response, long) <io_realm_internal_objectstore_OsJavaNetworkTransport_handleResponse_Response__long_>` .
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _sendStreamingRequest:
+
+.. _sendStreamingRequest__:
+
+.. _OsJavaNetworkTransport_sendStreamingRequest:
+
+.. _OsJavaNetworkTransport_sendStreamingRequest__:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_sendStreamingRequest:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_sendStreamingRequest__:
+
+
+
+sendStreamingRequest
+--------------------
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_sendStreamingRequest_OsJavaNetworkTransport_Request_:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_sendStreamingRequest_Request_:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_sendStreamingRequest_Request_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public abstract :ref:`OsJavaNetworkTransport.Response <io_realm_internal_objectstore_OsJavaNetworkTransport_Response>`  sendStreamingRequest (:ref:`OsJavaNetworkTransport.Request <io_realm_internal_objectstore_OsJavaNetworkTransport_Request>`  request)
+   
+   * - This method is being called from Java when executing streaming requests. It returns a :ref:`Response <io_realm_internal_objectstore_OsJavaNetworkTransport_Response>`  which body can be access line by line. Warning: this method and the returning :ref:`Response <io_realm_internal_objectstore_OsJavaNetworkTransport_Response>`  throws exceptions
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``request`` - streaming request
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `IOException <https://docs.oracle.com/javase/7/docs/api/java/io/IOException.html>`__  - if the request fails to execute
+          
+          
+          
+       - :ref:`AppException <io_realm_mongodb_AppException>`  - on an http error
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _setAuthorizationHeaderName:
+
+.. _setAuthorizationHeaderName__:
+
+.. _OsJavaNetworkTransport_setAuthorizationHeaderName:
+
+.. _OsJavaNetworkTransport_setAuthorizationHeaderName__:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_setAuthorizationHeaderName:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_setAuthorizationHeaderName__:
+
+
+
+setAuthorizationHeaderName
+--------------------------
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_setAuthorizationHeaderName_String_:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_setAuthorizationHeaderName_String_:
+
+.. _io_realm_internal_objectstore_OsJavaNetworkTransport_setAuthorizationHeaderName_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setAuthorizationHeaderName (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  headerName)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

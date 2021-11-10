@@ -1,0 +1,802 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class RealmCollectionTests
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_RealmCollectionTests:
+
+
+
+io.realm
+========
+
+:ref:`io.realm.CollectionTests <io_realm_CollectionTests>` 
+ | 		`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+Test class for all methods part of the the :ref:`RealmCollection <io_realm_RealmCollection>`  interface. This class only tests methods that have the same behavior no matter if the collection is managed or not. Methods tested in this class: # RealmCollection - RealmQuery where(); - Number min(String fieldName); - Number max(String fieldName); - Number sum(String fieldName); - double average(String fieldName); - Date maxDate(String fieldName); - Date minDate(String fieldName); - void deleteAllFromRealm(); - boolean isLoaded(); - boolean load(); - boolean isValid(); - BaseRealm getRealm(); # Collection - public boolean add(E object); - public boolean addAll(Collection
+
+ collection); - public void deleteAll(); + public boolean contains(Object object); + public boolean containsAll(Collection collection); + public boolean equals(Object object); + public int hashCode(); + public boolean isEmpty(); - public Iterator iterator(); + public boolean remove(Object object); + public boolean removeAll(Collection collection); + public boolean retainAll(Collection collection); + public int size(); + public Object[] toArray(); + public T[] toArray(T[] array);
+
+
+.. seealso::
+
+
+   
+   - :ref:`ManagedRealmCollectionTests <io_realm_ManagedRealmCollectionTests>` 
+      
+      
+      
+   - :ref:`UnManagedRealmCollectionTests <io_realm_UnManagedRealmCollectionTests>` 
+      
+      
+      
+   
+   
+   
+
+
+
+Constructors
+============
+
+
+
+- ``io.realm.RealmCollectionTests(CollectionTests.CollectionClass)`` 
+
+
+
+
+Field Summary
+=============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Field and Description
+   
+   * - ``public final io.realm.TestRealmConfigurationFactory`` 
+       
+       
+     - ``configFactory`` 
+       
+       
+   
+   
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public static `List <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__ 
+     - 
+       :ref:`data <io_realm_RealmCollectionTests_data__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setup <io_realm_RealmCollectionTests_setup__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`tearDown <io_realm_RealmCollectionTests_tearDown__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`contains <io_realm_RealmCollectionTests_contains__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`contains_realmObjectFromOtherRealm <io_realm_RealmCollectionTests_contains_realmObjectFromOtherRealm__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`contains_wrongType <io_realm_RealmCollectionTests_contains_wrongType__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`contains_null <io_realm_RealmCollectionTests_contains_null__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`contains_customEqualMethod <io_realm_RealmCollectionTests_contains_customEqualMethod__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`containsAll <io_realm_RealmCollectionTests_containsAll__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`containsAll_emptyInput <io_realm_RealmCollectionTests_containsAll_emptyInput__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`containsAll_nullInput <io_realm_RealmCollectionTests_containsAll_nullInput__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`equals <io_realm_RealmCollectionTests_equals__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`hashCode_allObjects <io_realm_RealmCollectionTests_hashCode_allObjects__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`isEmpty <io_realm_RealmCollectionTests_isEmpty__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`size <io_realm_RealmCollectionTests_size__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`toArray <io_realm_RealmCollectionTests_toArray__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`toArray_inputArray <io_realm_RealmCollectionTests_toArray_inputArray__>`  ()
+       
+       
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface :ref:`io.realm.CollectionTests <io_realm_CollectionTests>` : 
+   
+   ``populateRealm`` , ``populateInMemoryList`` , ``populateCollectionOnDeletedLinkView`` , ``populatePartialNullRowsForNumericTesting`` , ``createStringCollection`` 
+   
+   
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+
+
+
+
+Field Detail
+============
+
+.. _io_realm_RealmCollectionTests_configFactory:
+
+
+
+``configFactory`` 
+------------------
+
+
+
+
+Method Detail
+=============
+
+
+
+data
+----
+
+.. _io_realm_RealmCollectionTests_data__:
+
+.. _io_realm_RealmCollectionTests_data__:
+
+.. _io_realm_RealmCollectionTests_data__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static `List <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  data ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+setup
+-----
+
+.. _io_realm_RealmCollectionTests_setup__:
+
+.. _io_realm_RealmCollectionTests_setup__:
+
+.. _io_realm_RealmCollectionTests_setup__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setup ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+tearDown
+--------
+
+.. _io_realm_RealmCollectionTests_tearDown__:
+
+.. _io_realm_RealmCollectionTests_tearDown__:
+
+.. _io_realm_RealmCollectionTests_tearDown__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** tearDown ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+contains
+--------
+
+.. _io_realm_RealmCollectionTests_contains__:
+
+.. _io_realm_RealmCollectionTests_contains__:
+
+.. _io_realm_RealmCollectionTests_contains__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** contains ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+contains_realmObjectFromOtherRealm
+----------------------------------
+
+.. _io_realm_RealmCollectionTests_contains_realmObjectFromOtherRealm__:
+
+.. _io_realm_RealmCollectionTests_contains_realmObjectFromOtherRealm__:
+
+.. _io_realm_RealmCollectionTests_contains_realmObjectFromOtherRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** contains_realmObjectFromOtherRealm ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+contains_wrongType
+------------------
+
+.. _io_realm_RealmCollectionTests_contains_wrongType__:
+
+.. _io_realm_RealmCollectionTests_contains_wrongType__:
+
+.. _io_realm_RealmCollectionTests_contains_wrongType__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** contains_wrongType ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+contains_null
+-------------
+
+.. _io_realm_RealmCollectionTests_contains_null__:
+
+.. _io_realm_RealmCollectionTests_contains_null__:
+
+.. _io_realm_RealmCollectionTests_contains_null__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** contains_null ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+contains_customEqualMethod
+--------------------------
+
+.. _io_realm_RealmCollectionTests_contains_customEqualMethod__:
+
+.. _io_realm_RealmCollectionTests_contains_customEqualMethod__:
+
+.. _io_realm_RealmCollectionTests_contains_customEqualMethod__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** contains_customEqualMethod ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+containsAll
+-----------
+
+.. _io_realm_RealmCollectionTests_containsAll__:
+
+.. _io_realm_RealmCollectionTests_containsAll__:
+
+.. _io_realm_RealmCollectionTests_containsAll__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** containsAll ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+containsAll_emptyInput
+----------------------
+
+.. _io_realm_RealmCollectionTests_containsAll_emptyInput__:
+
+.. _io_realm_RealmCollectionTests_containsAll_emptyInput__:
+
+.. _io_realm_RealmCollectionTests_containsAll_emptyInput__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** containsAll_emptyInput ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+containsAll_nullInput
+---------------------
+
+.. _io_realm_RealmCollectionTests_containsAll_nullInput__:
+
+.. _io_realm_RealmCollectionTests_containsAll_nullInput__:
+
+.. _io_realm_RealmCollectionTests_containsAll_nullInput__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** containsAll_nullInput ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+equals
+------
+
+.. _io_realm_RealmCollectionTests_equals__:
+
+.. _io_realm_RealmCollectionTests_equals__:
+
+.. _io_realm_RealmCollectionTests_equals__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** equals ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+hashCode_allObjects
+-------------------
+
+.. _io_realm_RealmCollectionTests_hashCode_allObjects__:
+
+.. _io_realm_RealmCollectionTests_hashCode_allObjects__:
+
+.. _io_realm_RealmCollectionTests_hashCode_allObjects__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** hashCode_allObjects ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+isEmpty
+-------
+
+.. _io_realm_RealmCollectionTests_isEmpty__:
+
+.. _io_realm_RealmCollectionTests_isEmpty__:
+
+.. _io_realm_RealmCollectionTests_isEmpty__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** isEmpty ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+size
+----
+
+.. _io_realm_RealmCollectionTests_size__:
+
+.. _io_realm_RealmCollectionTests_size__:
+
+.. _io_realm_RealmCollectionTests_size__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** size ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+toArray
+-------
+
+.. _io_realm_RealmCollectionTests_toArray__:
+
+.. _io_realm_RealmCollectionTests_toArray__:
+
+.. _io_realm_RealmCollectionTests_toArray__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** toArray ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+toArray_inputArray
+------------------
+
+.. _io_realm_RealmCollectionTests_toArray_inputArray__:
+
+.. _io_realm_RealmCollectionTests_toArray_inputArray__:
+
+.. _io_realm_RealmCollectionTests_toArray_inputArray__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** toArray_inputArray ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

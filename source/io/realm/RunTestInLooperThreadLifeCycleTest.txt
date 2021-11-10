@@ -1,0 +1,231 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class RunTestInLooperThreadLifeCycleTest
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_RunTestInLooperThreadLifeCycleTest:
+
+
+
+io.realm
+========
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+Meta test. Checking the lifecycle of @RunTestInLooperThreadTest does the right thing. Current order is: - @RunTestInLooperThread(before = ) - @Before() - @RunTestInLooperThread/@Test - @After : This is called when exiting the test method. Warning: Looper test is still running. - looperThread.runAfterTest(Runnable) : This is called when \`testComplete()\` is called. This can be both before and after \`@After\` has run.
+
+
+Constructors
+============
+
+
+
+- ``io.realm.RunTestInLooperThreadLifeCycleTest()`` 
+
+
+
+
+Nested Class Summary
+====================
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Class and Description
+   
+   * - ``public static`` 
+     - ``io.realm.RunTestInLooperThreadLifeCycleTest.PrepareLooperTest`` 
+   
+   
+
+
+Field Summary
+=============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Field and Description
+   
+   * - ``public final io.realm.rule.RunInLooperThread`` 
+       
+       
+     - ``looperThread`` 
+       
+       
+   
+   
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public **void**
+     - 
+       :ref:`before <io_realm_RunTestInLooperThreadLifeCycleTest_before__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`after <io_realm_RunTestInLooperThreadLifeCycleTest_after__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`looperTest <io_realm_RunTestInLooperThreadLifeCycleTest_looperTest__>`  ()
+       
+       
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+
+
+
+
+Field Detail
+============
+
+.. _io_realm_RunTestInLooperThreadLifeCycleTest_looperThread:
+
+
+
+``looperThread`` 
+-----------------
+
+
+
+
+Method Detail
+=============
+
+
+
+before
+------
+
+.. _io_realm_RunTestInLooperThreadLifeCycleTest_before__:
+
+.. _io_realm_RunTestInLooperThreadLifeCycleTest_before__:
+
+.. _io_realm_RunTestInLooperThreadLifeCycleTest_before__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** before ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+after
+-----
+
+.. _io_realm_RunTestInLooperThreadLifeCycleTest_after__:
+
+.. _io_realm_RunTestInLooperThreadLifeCycleTest_after__:
+
+.. _io_realm_RunTestInLooperThreadLifeCycleTest_after__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** after ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+looperTest
+----------
+
+.. _io_realm_RunTestInLooperThreadLifeCycleTest_looperTest__:
+
+.. _io_realm_RunTestInLooperThreadLifeCycleTest_looperTest__:
+
+.. _io_realm_RunTestInLooperThreadLifeCycleTest_looperTest__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** looperTest ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

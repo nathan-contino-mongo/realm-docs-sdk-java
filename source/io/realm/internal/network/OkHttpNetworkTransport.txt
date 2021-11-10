@@ -1,0 +1,343 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class OkHttpNetworkTransport
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_internal_network_OkHttpNetworkTransport:
+
+
+
+io.realm.internal.network
+=========================
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+ | 		:ref:`io.realm.internal.objectstore.OsJavaNetworkTransport <io_realm_internal_objectstore_OsJavaNetworkTransport>` 
+
+
+
+
+Constructors
+============
+
+
+
+- ``io.realm.internal.network.OkHttpNetworkTransport(HttpLogObfuscator)`` 
+
+
+
+
+Nested Class Summary
+====================
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Class and Description
+   
+   * - ``public static`` 
+     - ``io.realm.internal.network.OkHttpNetworkTransport.Response`` 
+   
+   
+
+
+Field Summary
+=============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Field and Description
+   
+   * - ``public static final MediaType`` 
+       
+       
+     - ``JSON`` 
+       
+       
+   
+   
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public :ref:`OsJavaNetworkTransport.Response <io_realm_internal_objectstore_OsJavaNetworkTransport_Response>` 
+     - 
+       :ref:`executeRequest <io_realm_internal_network_OkHttpNetworkTransport_executeRequest_String__String__long__Map_String__String___String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  method,
+                                                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  url,
+                                                               **long** timeoutMs,
+                                                               `java.util.Map\<java.lang.String, java.lang.String> <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  headers,
+                                                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  body)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`reset <io_realm_internal_network_OkHttpNetworkTransport_reset__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`sendRequestAsync <io_realm_internal_network_OkHttpNetworkTransport_sendRequestAsync_String__String__long__Map_String__String___String__long_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  method,
+                                      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  url,
+                                      **long** timeoutMs,
+                                      `java.util.Map\<java.lang.String, java.lang.String> <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  headers,
+                                      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  body,
+                                      **long** completionBlockPtr)
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`OsJavaNetworkTransport.Response <io_realm_internal_objectstore_OsJavaNetworkTransport_Response>` 
+     - 
+       :ref:`sendStreamingRequest <io_realm_internal_network_OkHttpNetworkTransport_sendStreamingRequest_OsJavaNetworkTransport_Request_>`  (:ref:`OsJavaNetworkTransport.Request <io_realm_internal_objectstore_OsJavaNetworkTransport_Request>`  request)
+       
+       
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+- Methods inherited from interface :ref:`io.realm.internal.objectstore.OsJavaNetworkTransport <io_realm_internal_objectstore_OsJavaNetworkTransport>` : 
+   
+   ``sendRequestAsync`` , ``executeRequest`` , ``handleResponse`` , ``sendStreamingRequest`` , ``setAuthorizationHeaderName`` , ``addCustomRequestHeader`` , ``getAuthorizationHeaderName`` , ``getCustomRequestHeaders`` , ``reset`` 
+   
+   
+
+
+
+
+Field Detail
+============
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_JSON:
+
+
+
+``JSON`` 
+---------
+
+
+
+
+Method Detail
+=============
+
+.. _executeRequest:
+
+.. _executeRequest__:
+
+.. _OkHttpNetworkTransport_executeRequest:
+
+.. _OkHttpNetworkTransport_executeRequest__:
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_executeRequest:
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_executeRequest__:
+
+
+
+executeRequest
+--------------
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_executeRequest_String__String__long__Map_String__String___String_:
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_executeRequest_String_String_long_Map_String_:
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_executeRequest_String__String__long__Map__String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`OsJavaNetworkTransport.Response <io_realm_internal_objectstore_OsJavaNetworkTransport_Response>`  executeRequest (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  method,
+                                                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  url,
+                                                               **long** timeoutMs,
+                                                               `java.util.Map\<java.lang.String, java.lang.String> <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  headers,
+                                                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  body)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _reset:
+
+.. _reset__:
+
+.. _OkHttpNetworkTransport_reset:
+
+.. _OkHttpNetworkTransport_reset__:
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_reset:
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_reset__:
+
+
+
+reset
+-----
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_reset__:
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_reset__:
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_reset__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** reset ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _sendRequestAsync:
+
+.. _sendRequestAsync__:
+
+.. _OkHttpNetworkTransport_sendRequestAsync:
+
+.. _OkHttpNetworkTransport_sendRequestAsync__:
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_sendRequestAsync:
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_sendRequestAsync__:
+
+
+
+sendRequestAsync
+----------------
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_sendRequestAsync_String__String__long__Map_String__String___String__long_:
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_sendRequestAsync_String_String_long_Map_String_long_:
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_sendRequestAsync_String__String__long__Map__String__long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** sendRequestAsync (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  method,
+                                      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  url,
+                                      **long** timeoutMs,
+                                      `java.util.Map\<java.lang.String, java.lang.String> <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  headers,
+                                      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  body,
+                                      **long** completionBlockPtr)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _sendStreamingRequest:
+
+.. _sendStreamingRequest__:
+
+.. _OkHttpNetworkTransport_sendStreamingRequest:
+
+.. _OkHttpNetworkTransport_sendStreamingRequest__:
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_sendStreamingRequest:
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_sendStreamingRequest__:
+
+
+
+sendStreamingRequest
+--------------------
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_sendStreamingRequest_OsJavaNetworkTransport_Request_:
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_sendStreamingRequest_Request_:
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_sendStreamingRequest_Request_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`OsJavaNetworkTransport.Response <io_realm_internal_objectstore_OsJavaNetworkTransport_Response>`  sendStreamingRequest (:ref:`OsJavaNetworkTransport.Request <io_realm_internal_objectstore_OsJavaNetworkTransport_Request>`  request)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

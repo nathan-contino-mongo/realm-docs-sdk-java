@@ -1,0 +1,6996 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class RealmTests
+^^^^^^^^^^^^^^^^
+
+.. _io_realm_RealmTests:
+
+
+
+io.realm
+========
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+
+
+
+Constructors
+============
+
+
+
+- ``io.realm.RealmTests()`` 
+
+
+
+
+Field Summary
+=============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Field and Description
+   
+   * - ``public final UiThreadTestRule`` 
+       
+       
+     - ``uiThreadTestRule`` 
+       
+       
+   
+   * - ``public final io.realm.TestRealmConfigurationFactory`` 
+       
+       
+     - ``configFactory`` 
+       
+       
+   
+   * - ``public final TemporaryFolder`` 
+       
+       
+     - ``tmpFolder`` 
+       
+       
+   
+   * - ``public final ExpectedException`` 
+       
+       
+     - ``thrown`` 
+       
+       
+   
+   * - ``public final BlockingLooperThread`` 
+       
+       
+     - ``looperThread`` 
+       
+       
+   
+   
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setUp <io_realm_RealmTests_setUp__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`tearDown <io_realm_RealmTests_tearDown__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`getInstance_writeProtectedFile <io_realm_RealmTests_getInstance_writeProtectedFile__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`getInstance_writeProtectedFileWithContext <io_realm_RealmTests_getInstance_writeProtectedFileWithContext__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`getInstance_twiceWhenRxJavaUnavailable <io_realm_RealmTests_getInstance_twiceWhenRxJavaUnavailable__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`checkIfValid <io_realm_RealmTests_checkIfValid__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`getInstance <io_realm_RealmTests_getInstance__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`where <io_realm_RealmTests_where__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`where_throwsIfClassArgIsNotASubtype <io_realm_RealmTests_where_throwsIfClassArgIsNotASubtype__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`where_queryResults <io_realm_RealmTests_where_queryResults__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`where_equalTo_wrongFieldTypeAsInput <io_realm_RealmTests_where_equalTo_wrongFieldTypeAsInput__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`where_equalTo_invalidFieldName <io_realm_RealmTests_where_equalTo_invalidFieldName__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`beginTransaction <io_realm_RealmTests_beginTransaction__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`nestedTransaction <io_realm_RealmTests_nestedTransaction__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`methodCalledOnWrongThread <io_realm_RealmTests_methodCalledOnWrongThread__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`methodCalledOnClosedRealm <io_realm_RealmTests_methodCalledOnClosedRealm__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`commitTransaction <io_realm_RealmTests_commitTransaction__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`commitTransaction_afterCancelTransaction <io_realm_RealmTests_commitTransaction_afterCancelTransaction__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`commitTransaction_twice <io_realm_RealmTests_commitTransaction_twice__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`cancelTransaction <io_realm_RealmTests_cancelTransaction__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`executeTransaction_null <io_realm_RealmTests_executeTransaction_null__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`executeTransaction_success <io_realm_RealmTests_executeTransaction_success__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`executeTransaction_canceled <io_realm_RealmTests_executeTransaction_canceled__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`executeTransaction_cancelInsideClosureThrowsException <io_realm_RealmTests_executeTransaction_cancelInsideClosureThrowsException__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`executeTransaction_mainThreadWritesAllowed <io_realm_RealmTests_executeTransaction_mainThreadWritesAllowed__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`executeTransaction_mainThreadWritesNotAllowed <io_realm_RealmTests_executeTransaction_mainThreadWritesNotAllowed__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`executeTransaction_runsOnNonUiThread <io_realm_RealmTests_executeTransaction_runsOnNonUiThread__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`delete_type <io_realm_RealmTests_delete_type__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`realmConfiguration_fileName <io_realm_RealmTests_realmConfiguration_fileName__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`utf8Tests <io_realm_RealmTests_utf8Tests__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`unicodeStrings <io_realm_RealmTests_unicodeStrings__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`getInstance_referenceCounting <io_realm_RealmTests_getInstance_referenceCounting__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`getInstance_referenceCounting_doubleClose <io_realm_RealmTests_getInstance_referenceCounting_doubleClose__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`writeCopyTo <io_realm_RealmTests_writeCopyTo__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`compactRealm <io_realm_RealmTests_compactRealm__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`compactRealm_failsIfOpen <io_realm_RealmTests_compactRealm_failsIfOpen__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`compactRealm_encryptedEmptyRealm <io_realm_RealmTests_compactRealm_encryptedEmptyRealm__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`compactRealm_encryptedPopulatedRealm <io_realm_RealmTests_compactRealm_encryptedPopulatedRealm__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`compactRealm_emptyRealm <io_realm_RealmTests_compactRealm_emptyRealm__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`compactRealm_populatedRealm <io_realm_RealmTests_compactRealm_populatedRealm__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`compactRealm_onExternalStorage <io_realm_RealmTests_compactRealm_onExternalStorage__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`compactOnLaunch_shouldCompact <io_realm_RealmTests_compactOnLaunch_shouldCompact__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`compactOnLaunch_shouldNotCompact <io_realm_RealmTests_compactOnLaunch_shouldNotCompact__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`compactOnLaunch_multipleThread <io_realm_RealmTests_compactOnLaunch_multipleThread__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`compactOnLaunch_insufficientAmount <io_realm_RealmTests_compactOnLaunch_insufficientAmount__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`compactOnLaunch_throwsInTheCallback <io_realm_RealmTests_compactOnLaunch_throwsInTheCallback__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`defaultCompactOnLaunch <io_realm_RealmTests_defaultCompactOnLaunch__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`defaultCompactOnLaunch_onlyCallback <io_realm_RealmTests_defaultCompactOnLaunch_onlyCallback__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`defaultCompactOnLaunch_insufficientAmount <io_realm_RealmTests_defaultCompactOnLaunch_insufficientAmount__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealm_null <io_realm_RealmTests_copyToRealm_null__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealm_managedObject <io_realm_RealmTests_copyToRealm_managedObject__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealm_fromOtherRealm <io_realm_RealmTests_copyToRealm_fromOtherRealm__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealm <io_realm_RealmTests_copyToRealm__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealm_cyclicObjectReferences <io_realm_RealmTests_copyToRealm_cyclicObjectReferences__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealm_cyclicObjectReferencesWithPK <io_realm_RealmTests_copyToRealm_cyclicObjectReferencesWithPK__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealm_cyclicListReferences <io_realm_RealmTests_copyToRealm_cyclicListReferences__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealm_convertsNullToDefaultValue <io_realm_RealmTests_copyToRealm_convertsNullToDefaultValue__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealm_primaryKeyIsSetDirectly <io_realm_RealmTests_copyToRealm_primaryKeyIsSetDirectly__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealm_stringPrimaryKeyIsNull <io_realm_RealmTests_copyToRealm_stringPrimaryKeyIsNull__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealm_boxedNumberPrimaryKeyIsNull <io_realm_RealmTests_copyToRealm_boxedNumberPrimaryKeyIsNull__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealm_duplicatedPrimaryKeyThrows <io_realm_RealmTests_copyToRealm_duplicatedPrimaryKeyThrows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealm_duplicatedNullPrimaryKeyThrows <io_realm_RealmTests_copyToRealm_duplicatedNullPrimaryKeyThrows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealm_doNotCopyReferencedObjectIfManaged <io_realm_RealmTests_copyToRealm_doNotCopyReferencedObjectIfManaged__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealm_list <io_realm_RealmTests_copyToRealm_list__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealm_objectInOtherThreadThrows <io_realm_RealmTests_copyToRealm_objectInOtherThreadThrows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealmOrUpdate_null <io_realm_RealmTests_copyToRealmOrUpdate_null__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealmOrUpdate_stringPrimaryKeyFieldIsNull <io_realm_RealmTests_copyToRealmOrUpdate_stringPrimaryKeyFieldIsNull__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealmOrUpdate_boxedBytePrimaryKeyFieldIsNull <io_realm_RealmTests_copyToRealmOrUpdate_boxedBytePrimaryKeyFieldIsNull__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealmOrUpdate_boxedShortPrimaryKeyFieldIsNull <io_realm_RealmTests_copyToRealmOrUpdate_boxedShortPrimaryKeyFieldIsNull__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealmOrUpdate_boxedIntegerPrimaryKeyFieldIsNull <io_realm_RealmTests_copyToRealmOrUpdate_boxedIntegerPrimaryKeyFieldIsNull__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealmOrUpdate_boxedLongPrimaryKeyFieldIsNull <io_realm_RealmTests_copyToRealmOrUpdate_boxedLongPrimaryKeyFieldIsNull__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealmOrUpdate_noPrimaryKeyField <io_realm_RealmTests_copyToRealmOrUpdate_noPrimaryKeyField__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealmOrUpdate_addNewObjects <io_realm_RealmTests_copyToRealmOrUpdate_addNewObjects__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealmOrUpdate_updateExistingObject <io_realm_RealmTests_copyToRealmOrUpdate_updateExistingObject__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealmOrUpdate_overrideOwnList <io_realm_RealmTests_copyToRealmOrUpdate_overrideOwnList__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealmOrUpdate_cyclicObject <io_realm_RealmTests_copyToRealmOrUpdate_cyclicObject__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealmOrUpdate_defaultValuesOverrideExistingData <io_realm_RealmTests_copyToRealmOrUpdate_defaultValuesOverrideExistingData__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealmOrUpdate_referencesNotDeleted <io_realm_RealmTests_copyToRealmOrUpdate_referencesNotDeleted__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealmOrUpdate_primaryKeyMixInObjectGraph <io_realm_RealmTests_copyToRealmOrUpdate_primaryKeyMixInObjectGraph__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealmOrUpdate_iterable <io_realm_RealmTests_copyToRealmOrUpdate_iterable__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealmOrUpdate_iterableChildObjects <io_realm_RealmTests_copyToRealmOrUpdate_iterableChildObjects__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealmOrUpdate_objectInOtherThreadThrows <io_realm_RealmTests_copyToRealmOrUpdate_objectInOtherThreadThrows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealmOrUpdate_listHasObjectInOtherThreadThrows <io_realm_RealmTests_copyToRealmOrUpdate_listHasObjectInOtherThreadThrows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealmOrUpdate_bug4957 <io_realm_RealmTests_copyToRealmOrUpdate_bug4957__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`getInstance_differentEncryptionKeys <io_realm_RealmTests_getInstance_differentEncryptionKeys__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`writeEncryptedCopyTo <io_realm_RealmTests_writeEncryptedCopyTo__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`writeEncryptedCopyTo_wrongKeyLength <io_realm_RealmTests_writeEncryptedCopyTo_wrongKeyLength__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`deleteRealm_failures <io_realm_RealmTests_deleteRealm_failures__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setter_updateField <io_realm_RealmTests_setter_updateField__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`deleteRealm <io_realm_RealmTests_deleteRealm__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`callMutableMethodOutsideTransaction <io_realm_RealmTests_callMutableMethodOutsideTransaction__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`createObject_cannotCreateDynamicRealmObject <io_realm_RealmTests_createObject_cannotCreateDynamicRealmObject__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`createObject_absentPrimaryKeyThrows <io_realm_RealmTests_createObject_absentPrimaryKeyThrows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`createObjectWithPrimaryKey <io_realm_RealmTests_createObjectWithPrimaryKey__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`createObjectWithPrimaryKey_noPrimaryKeyField <io_realm_RealmTests_createObjectWithPrimaryKey_noPrimaryKeyField__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`createObjectWithPrimaryKey_wrongValueType <io_realm_RealmTests_createObjectWithPrimaryKey_wrongValueType__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`createObjectWithPrimaryKey_valueAlreadyExists <io_realm_RealmTests_createObjectWithPrimaryKey_valueAlreadyExists__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`createObjectWithPrimaryKey_null <io_realm_RealmTests_createObjectWithPrimaryKey_null__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`createObjectWithPrimaryKey_nullOnRequired <io_realm_RealmTests_createObjectWithPrimaryKey_nullOnRequired__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`createObjectWithPrimaryKey_nullDuplicated <io_realm_RealmTests_createObjectWithPrimaryKey_nullDuplicated__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`createObject_defaultValueFromModelField <io_realm_RealmTests_createObject_defaultValueFromModelField__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`createObject_overwriteNullifiedLinkWithDefaultValue <io_realm_RealmTests_createObject_overwriteNullifiedLinkWithDefaultValue__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`createObject_defaultValueFromModelConstructor <io_realm_RealmTests_createObject_defaultValueFromModelConstructor__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`createObject_defaultValueSetterInConstructor <io_realm_RealmTests_createObject_defaultValueSetterInConstructor__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`createObject_defaultValueFromOtherConstructor <io_realm_RealmTests_createObject_defaultValueFromOtherConstructor__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealm_defaultValuesAreIgnored <io_realm_RealmTests_copyToRealm_defaultValuesAreIgnored__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyFromRealm_defaultValuesAreIgnored <io_realm_RealmTests_copyFromRealm_defaultValuesAreIgnored__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`close_differentThread <io_realm_RealmTests_close_differentThread__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`isClosed <io_realm_RealmTests_isClosed__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`isClosed_differentThread <io_realm_RealmTests_isClosed_differentThread__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`columnIndicesIsPopulatedWhenSkippingInitialization <io_realm_RealmTests_columnIndicesIsPopulatedWhenSkippingInitialization__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`isInTransaction <io_realm_RealmTests_isInTransaction__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`closingRealmWhileOtherThreadIsOpeningRealm <io_realm_RealmTests_closingRealmWhileOtherThreadIsOpeningRealm__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`openRealmWhileTransactionInAnotherThread <io_realm_RealmTests_openRealmWhileTransactionInAnotherThread__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`isEmpty <io_realm_RealmTests_isEmpty__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyFromRealm_invalidObjectThrows <io_realm_RealmTests_copyFromRealm_invalidObjectThrows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyFromRealm_invalidDepthThrows <io_realm_RealmTests_copyFromRealm_invalidDepthThrows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyFromRealm <io_realm_RealmTests_copyFromRealm__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyFromRealm_newCopyEachTime <io_realm_RealmTests_copyFromRealm_newCopyEachTime__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyFromRealm_cyclicObjectGraph <io_realm_RealmTests_copyFromRealm_cyclicObjectGraph__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyFromRealm_checkMaxDepth <io_realm_RealmTests_copyFromRealm_checkMaxDepth__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyFromRealm_sameObjectDifferentDepths <io_realm_RealmTests_copyFromRealm_sameObjectDifferentDepths__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyFromRealm_list_invalidListThrows <io_realm_RealmTests_copyFromRealm_list_invalidListThrows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyFromRealm_emptyList <io_realm_RealmTests_copyFromRealm_emptyList__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyFromRealm_list_invalidDepthThrows <io_realm_RealmTests_copyFromRealm_list_invalidDepthThrows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyFromRealm_list_sameElements <io_realm_RealmTests_copyFromRealm_list_sameElements__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyFromRealm_dynamicRealmObjectThrows <io_realm_RealmTests_copyFromRealm_dynamicRealmObjectThrows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyFromRealm_dynamicRealmListThrows <io_realm_RealmTests_copyFromRealm_dynamicRealmListThrows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`closeRealmInChangeListener <io_realm_RealmTests_closeRealmInChangeListener__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`closeRealmInChangeListenerWhenThereIsListenerOnEmptyObject <io_realm_RealmTests_closeRealmInChangeListenerWhenThereIsListenerOnEmptyObject__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`closeRealmInChangeListenerWhenThereIsListenerOnObject <io_realm_RealmTests_closeRealmInChangeListenerWhenThereIsListenerOnObject__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`closeRealmInChangeListenerWhenThereIsListenerOnResults <io_realm_RealmTests_closeRealmInChangeListenerWhenThereIsListenerOnResults__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addChangeListener_throwOnAddingNullListenerFromLooperThread <io_realm_RealmTests_addChangeListener_throwOnAddingNullListenerFromLooperThread__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addChangeListener_throwOnAddingNullListenerFromNonLooperThread <io_realm_RealmTests_addChangeListener_throwOnAddingNullListenerFromNonLooperThread__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`removeChangeListener_throwOnRemovingNullListenerFromLooperThread <io_realm_RealmTests_removeChangeListener_throwOnRemovingNullListenerFromLooperThread__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`removeChangeListener_throwOnRemovingNullListenerFromNonLooperThread <io_realm_RealmTests_removeChangeListener_throwOnRemovingNullListenerFromNonLooperThread__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`removeChangeListenerThrowExceptionOnWrongThread <io_realm_RealmTests_removeChangeListenerThrowExceptionOnWrongThread__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`removeAllChangeListenersThrowExceptionOnWrongThreadThread <io_realm_RealmTests_removeAllChangeListenersThrowExceptionOnWrongThreadThread__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`deleteAll <io_realm_RealmTests_deleteAll__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`deleteAll_realmWithMoreTables <io_realm_RealmTests_deleteAll_realmWithMoreTables__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`waitForChange_emptyDataChange <io_realm_RealmTests_waitForChange_emptyDataChange__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`waitForChange_withDataChange <io_realm_RealmTests_waitForChange_withDataChange__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`waitForChange_syncBackgroundRealmResults <io_realm_RealmTests_waitForChange_syncBackgroundRealmResults__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`stopWaitForChange <io_realm_RealmTests_stopWaitForChange__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`waitForChange_stopWaitForChangeDisablesWaiting <io_realm_RealmTests_waitForChange_stopWaitForChangeDisablesWaiting__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`waitForChange_stopWaitForChangeReleasesAllWaitingThreads <io_realm_RealmTests_waitForChange_stopWaitForChangeReleasesAllWaitingThreads__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`waitForChange_interruptingThread <io_realm_RealmTests_waitForChange_interruptingThread__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`waitForChange_onLooperThread <io_realm_RealmTests_waitForChange_onLooperThread__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`waitForChange_illegalWaitInsideTransaction <io_realm_RealmTests_waitForChange_illegalWaitInsideTransaction__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`waitForChange_stopWaitingOnClosedRealmThrows <io_realm_RealmTests_waitForChange_stopWaitingOnClosedRealmThrows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`waitForChange_runWithRealmThread <io_realm_RealmTests_waitForChange_runWithRealmThread__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`waitForChange_endRealmThread <io_realm_RealmTests_waitForChange_endRealmThread__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`getGlobalInstanceCount <io_realm_RealmTests_getGlobalInstanceCount__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`getLocalInstanceCount <io_realm_RealmTests_getLocalInstanceCount__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`namedPipeDirForExternalStorage <io_realm_RealmTests_namedPipeDirForExternalStorage__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`getInstanceAsync_nonLooperThreadShouldThrow <io_realm_RealmTests_getInstanceAsync_nonLooperThreadShouldThrow__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`getInstanceAsync_nullConfigShouldThrow <io_realm_RealmTests_getInstanceAsync_nullConfigShouldThrow__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`init_waitForFilesDir <io_realm_RealmTests_init_waitForFilesDir__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`refresh_triggerNotifications <io_realm_RealmTests_refresh_triggerNotifications__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`refresh_nonLooperThreadAdvances <io_realm_RealmTests_refresh_nonLooperThreadAdvances__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`refresh_forceSynchronousNotifications <io_realm_RealmTests_refresh_forceSynchronousNotifications__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`refresh_insideTransactionThrows <io_realm_RealmTests_refresh_insideTransactionThrows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`beginTransaction_readOnlyThrows <io_realm_RealmTests_beginTransaction_readOnlyThrows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`getInstance_wrongSchemaInReadonlyThrows <io_realm_RealmTests_getInstance_wrongSchemaInReadonlyThrows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`getInstance_migrationExceptionThrows_migrationBlockDefiend_realmInstancesShouldBeClosed <io_realm_RealmTests_getInstance_migrationExceptionThrows_migrationBlockDefiend_realmInstancesShouldBeClosed__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`hittingMaxNumberOfVersionsThrows <io_realm_RealmTests_hittingMaxNumberOfVersionsThrows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`numberOfVersionsDecreasedOnClose <io_realm_RealmTests_numberOfVersionsDecreasedOnClose__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`encryption_stressTest <io_realm_RealmTests_encryption_stressTest__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`getNumberOfActiveVersions <io_realm_RealmTests_getNumberOfActiveVersions__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`getCachedInstanceDoNotTriggerStrictMode <io_realm_RealmTests_getCachedInstanceDoNotTriggerStrictMode__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`getCachedInstanceFromOtherThreadDoNotTriggerStrictMode <io_realm_RealmTests_getCachedInstanceFromOtherThreadDoNotTriggerStrictMode__>`  ()
+       
+       
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+
+
+
+
+Field Detail
+============
+
+.. _io_realm_RealmTests_uiThreadTestRule:
+
+
+
+``uiThreadTestRule`` 
+---------------------
+
+
+.. _io_realm_RealmTests_configFactory:
+
+
+
+``configFactory`` 
+------------------
+
+
+.. _io_realm_RealmTests_tmpFolder:
+
+
+
+``tmpFolder`` 
+--------------
+
+
+.. _io_realm_RealmTests_thrown:
+
+
+
+``thrown`` 
+-----------
+
+
+.. _io_realm_RealmTests_looperThread:
+
+
+
+``looperThread`` 
+-----------------
+
+
+
+
+Method Detail
+=============
+
+
+
+setUp
+-----
+
+.. _io_realm_RealmTests_setUp__:
+
+.. _io_realm_RealmTests_setUp__:
+
+.. _io_realm_RealmTests_setUp__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setUp ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+tearDown
+--------
+
+.. _io_realm_RealmTests_tearDown__:
+
+.. _io_realm_RealmTests_tearDown__:
+
+.. _io_realm_RealmTests_tearDown__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** tearDown ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getInstance_writeProtectedFile
+------------------------------
+
+.. _io_realm_RealmTests_getInstance_writeProtectedFile__:
+
+.. _io_realm_RealmTests_getInstance_writeProtectedFile__:
+
+.. _io_realm_RealmTests_getInstance_writeProtectedFile__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** getInstance_writeProtectedFile ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getInstance_writeProtectedFileWithContext
+-----------------------------------------
+
+.. _io_realm_RealmTests_getInstance_writeProtectedFileWithContext__:
+
+.. _io_realm_RealmTests_getInstance_writeProtectedFileWithContext__:
+
+.. _io_realm_RealmTests_getInstance_writeProtectedFileWithContext__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** getInstance_writeProtectedFileWithContext ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getInstance_twiceWhenRxJavaUnavailable
+--------------------------------------
+
+.. _io_realm_RealmTests_getInstance_twiceWhenRxJavaUnavailable__:
+
+.. _io_realm_RealmTests_getInstance_twiceWhenRxJavaUnavailable__:
+
+.. _io_realm_RealmTests_getInstance_twiceWhenRxJavaUnavailable__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** getInstance_twiceWhenRxJavaUnavailable ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+checkIfValid
+------------
+
+.. _io_realm_RealmTests_checkIfValid__:
+
+.. _io_realm_RealmTests_checkIfValid__:
+
+.. _io_realm_RealmTests_checkIfValid__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** checkIfValid ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getInstance
+-----------
+
+.. _io_realm_RealmTests_getInstance__:
+
+.. _io_realm_RealmTests_getInstance__:
+
+.. _io_realm_RealmTests_getInstance__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** getInstance ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+where
+-----
+
+.. _io_realm_RealmTests_where__:
+
+.. _io_realm_RealmTests_where__:
+
+.. _io_realm_RealmTests_where__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** where ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+where_throwsIfClassArgIsNotASubtype
+-----------------------------------
+
+.. _io_realm_RealmTests_where_throwsIfClassArgIsNotASubtype__:
+
+.. _io_realm_RealmTests_where_throwsIfClassArgIsNotASubtype__:
+
+.. _io_realm_RealmTests_where_throwsIfClassArgIsNotASubtype__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** where_throwsIfClassArgIsNotASubtype ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+where_queryResults
+------------------
+
+.. _io_realm_RealmTests_where_queryResults__:
+
+.. _io_realm_RealmTests_where_queryResults__:
+
+.. _io_realm_RealmTests_where_queryResults__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** where_queryResults ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+where_equalTo_wrongFieldTypeAsInput
+-----------------------------------
+
+.. _io_realm_RealmTests_where_equalTo_wrongFieldTypeAsInput__:
+
+.. _io_realm_RealmTests_where_equalTo_wrongFieldTypeAsInput__:
+
+.. _io_realm_RealmTests_where_equalTo_wrongFieldTypeAsInput__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** where_equalTo_wrongFieldTypeAsInput ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+where_equalTo_invalidFieldName
+------------------------------
+
+.. _io_realm_RealmTests_where_equalTo_invalidFieldName__:
+
+.. _io_realm_RealmTests_where_equalTo_invalidFieldName__:
+
+.. _io_realm_RealmTests_where_equalTo_invalidFieldName__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** where_equalTo_invalidFieldName ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+beginTransaction
+----------------
+
+.. _io_realm_RealmTests_beginTransaction__:
+
+.. _io_realm_RealmTests_beginTransaction__:
+
+.. _io_realm_RealmTests_beginTransaction__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** beginTransaction ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+nestedTransaction
+-----------------
+
+.. _io_realm_RealmTests_nestedTransaction__:
+
+.. _io_realm_RealmTests_nestedTransaction__:
+
+.. _io_realm_RealmTests_nestedTransaction__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** nestedTransaction ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+methodCalledOnWrongThread
+-------------------------
+
+.. _io_realm_RealmTests_methodCalledOnWrongThread__:
+
+.. _io_realm_RealmTests_methodCalledOnWrongThread__:
+
+.. _io_realm_RealmTests_methodCalledOnWrongThread__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** methodCalledOnWrongThread ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+methodCalledOnClosedRealm
+-------------------------
+
+.. _io_realm_RealmTests_methodCalledOnClosedRealm__:
+
+.. _io_realm_RealmTests_methodCalledOnClosedRealm__:
+
+.. _io_realm_RealmTests_methodCalledOnClosedRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** methodCalledOnClosedRealm ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+commitTransaction
+-----------------
+
+.. _io_realm_RealmTests_commitTransaction__:
+
+.. _io_realm_RealmTests_commitTransaction__:
+
+.. _io_realm_RealmTests_commitTransaction__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** commitTransaction ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+commitTransaction_afterCancelTransaction
+----------------------------------------
+
+.. _io_realm_RealmTests_commitTransaction_afterCancelTransaction__:
+
+.. _io_realm_RealmTests_commitTransaction_afterCancelTransaction__:
+
+.. _io_realm_RealmTests_commitTransaction_afterCancelTransaction__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** commitTransaction_afterCancelTransaction ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+commitTransaction_twice
+-----------------------
+
+.. _io_realm_RealmTests_commitTransaction_twice__:
+
+.. _io_realm_RealmTests_commitTransaction_twice__:
+
+.. _io_realm_RealmTests_commitTransaction_twice__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** commitTransaction_twice ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+cancelTransaction
+-----------------
+
+.. _io_realm_RealmTests_cancelTransaction__:
+
+.. _io_realm_RealmTests_cancelTransaction__:
+
+.. _io_realm_RealmTests_cancelTransaction__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** cancelTransaction ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+executeTransaction_null
+-----------------------
+
+.. _io_realm_RealmTests_executeTransaction_null__:
+
+.. _io_realm_RealmTests_executeTransaction_null__:
+
+.. _io_realm_RealmTests_executeTransaction_null__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** executeTransaction_null ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+executeTransaction_success
+--------------------------
+
+.. _io_realm_RealmTests_executeTransaction_success__:
+
+.. _io_realm_RealmTests_executeTransaction_success__:
+
+.. _io_realm_RealmTests_executeTransaction_success__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** executeTransaction_success ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+executeTransaction_canceled
+---------------------------
+
+.. _io_realm_RealmTests_executeTransaction_canceled__:
+
+.. _io_realm_RealmTests_executeTransaction_canceled__:
+
+.. _io_realm_RealmTests_executeTransaction_canceled__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** executeTransaction_canceled ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+executeTransaction_cancelInsideClosureThrowsException
+-----------------------------------------------------
+
+.. _io_realm_RealmTests_executeTransaction_cancelInsideClosureThrowsException__:
+
+.. _io_realm_RealmTests_executeTransaction_cancelInsideClosureThrowsException__:
+
+.. _io_realm_RealmTests_executeTransaction_cancelInsideClosureThrowsException__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** executeTransaction_cancelInsideClosureThrowsException ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+executeTransaction_mainThreadWritesAllowed
+------------------------------------------
+
+.. _io_realm_RealmTests_executeTransaction_mainThreadWritesAllowed__:
+
+.. _io_realm_RealmTests_executeTransaction_mainThreadWritesAllowed__:
+
+.. _io_realm_RealmTests_executeTransaction_mainThreadWritesAllowed__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** executeTransaction_mainThreadWritesAllowed ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+executeTransaction_mainThreadWritesNotAllowed
+---------------------------------------------
+
+.. _io_realm_RealmTests_executeTransaction_mainThreadWritesNotAllowed__:
+
+.. _io_realm_RealmTests_executeTransaction_mainThreadWritesNotAllowed__:
+
+.. _io_realm_RealmTests_executeTransaction_mainThreadWritesNotAllowed__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** executeTransaction_mainThreadWritesNotAllowed ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+executeTransaction_runsOnNonUiThread
+------------------------------------
+
+.. _io_realm_RealmTests_executeTransaction_runsOnNonUiThread__:
+
+.. _io_realm_RealmTests_executeTransaction_runsOnNonUiThread__:
+
+.. _io_realm_RealmTests_executeTransaction_runsOnNonUiThread__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** executeTransaction_runsOnNonUiThread ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+delete_type
+-----------
+
+.. _io_realm_RealmTests_delete_type__:
+
+.. _io_realm_RealmTests_delete_type__:
+
+.. _io_realm_RealmTests_delete_type__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** delete_type ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+realmConfiguration_fileName
+---------------------------
+
+.. _io_realm_RealmTests_realmConfiguration_fileName__:
+
+.. _io_realm_RealmTests_realmConfiguration_fileName__:
+
+.. _io_realm_RealmTests_realmConfiguration_fileName__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** realmConfiguration_fileName ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+utf8Tests
+---------
+
+.. _io_realm_RealmTests_utf8Tests__:
+
+.. _io_realm_RealmTests_utf8Tests__:
+
+.. _io_realm_RealmTests_utf8Tests__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** utf8Tests ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+unicodeStrings
+--------------
+
+.. _io_realm_RealmTests_unicodeStrings__:
+
+.. _io_realm_RealmTests_unicodeStrings__:
+
+.. _io_realm_RealmTests_unicodeStrings__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** unicodeStrings ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getInstance_referenceCounting
+-----------------------------
+
+.. _io_realm_RealmTests_getInstance_referenceCounting__:
+
+.. _io_realm_RealmTests_getInstance_referenceCounting__:
+
+.. _io_realm_RealmTests_getInstance_referenceCounting__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** getInstance_referenceCounting ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getInstance_referenceCounting_doubleClose
+-----------------------------------------
+
+.. _io_realm_RealmTests_getInstance_referenceCounting_doubleClose__:
+
+.. _io_realm_RealmTests_getInstance_referenceCounting_doubleClose__:
+
+.. _io_realm_RealmTests_getInstance_referenceCounting_doubleClose__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** getInstance_referenceCounting_doubleClose ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+writeCopyTo
+-----------
+
+.. _io_realm_RealmTests_writeCopyTo__:
+
+.. _io_realm_RealmTests_writeCopyTo__:
+
+.. _io_realm_RealmTests_writeCopyTo__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** writeCopyTo ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+compactRealm
+------------
+
+.. _io_realm_RealmTests_compactRealm__:
+
+.. _io_realm_RealmTests_compactRealm__:
+
+.. _io_realm_RealmTests_compactRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** compactRealm ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+compactRealm_failsIfOpen
+------------------------
+
+.. _io_realm_RealmTests_compactRealm_failsIfOpen__:
+
+.. _io_realm_RealmTests_compactRealm_failsIfOpen__:
+
+.. _io_realm_RealmTests_compactRealm_failsIfOpen__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** compactRealm_failsIfOpen ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+compactRealm_encryptedEmptyRealm
+--------------------------------
+
+.. _io_realm_RealmTests_compactRealm_encryptedEmptyRealm__:
+
+.. _io_realm_RealmTests_compactRealm_encryptedEmptyRealm__:
+
+.. _io_realm_RealmTests_compactRealm_encryptedEmptyRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** compactRealm_encryptedEmptyRealm ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+compactRealm_encryptedPopulatedRealm
+------------------------------------
+
+.. _io_realm_RealmTests_compactRealm_encryptedPopulatedRealm__:
+
+.. _io_realm_RealmTests_compactRealm_encryptedPopulatedRealm__:
+
+.. _io_realm_RealmTests_compactRealm_encryptedPopulatedRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** compactRealm_encryptedPopulatedRealm ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+compactRealm_emptyRealm
+-----------------------
+
+.. _io_realm_RealmTests_compactRealm_emptyRealm__:
+
+.. _io_realm_RealmTests_compactRealm_emptyRealm__:
+
+.. _io_realm_RealmTests_compactRealm_emptyRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** compactRealm_emptyRealm ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+compactRealm_populatedRealm
+---------------------------
+
+.. _io_realm_RealmTests_compactRealm_populatedRealm__:
+
+.. _io_realm_RealmTests_compactRealm_populatedRealm__:
+
+.. _io_realm_RealmTests_compactRealm_populatedRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** compactRealm_populatedRealm ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+compactRealm_onExternalStorage
+------------------------------
+
+.. _io_realm_RealmTests_compactRealm_onExternalStorage__:
+
+.. _io_realm_RealmTests_compactRealm_onExternalStorage__:
+
+.. _io_realm_RealmTests_compactRealm_onExternalStorage__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** compactRealm_onExternalStorage ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+compactOnLaunch_shouldCompact
+-----------------------------
+
+.. _io_realm_RealmTests_compactOnLaunch_shouldCompact__:
+
+.. _io_realm_RealmTests_compactOnLaunch_shouldCompact__:
+
+.. _io_realm_RealmTests_compactOnLaunch_shouldCompact__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** compactOnLaunch_shouldCompact ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+compactOnLaunch_shouldNotCompact
+--------------------------------
+
+.. _io_realm_RealmTests_compactOnLaunch_shouldNotCompact__:
+
+.. _io_realm_RealmTests_compactOnLaunch_shouldNotCompact__:
+
+.. _io_realm_RealmTests_compactOnLaunch_shouldNotCompact__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** compactOnLaunch_shouldNotCompact ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+compactOnLaunch_multipleThread
+------------------------------
+
+.. _io_realm_RealmTests_compactOnLaunch_multipleThread__:
+
+.. _io_realm_RealmTests_compactOnLaunch_multipleThread__:
+
+.. _io_realm_RealmTests_compactOnLaunch_multipleThread__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** compactOnLaunch_multipleThread ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+compactOnLaunch_insufficientAmount
+----------------------------------
+
+.. _io_realm_RealmTests_compactOnLaunch_insufficientAmount__:
+
+.. _io_realm_RealmTests_compactOnLaunch_insufficientAmount__:
+
+.. _io_realm_RealmTests_compactOnLaunch_insufficientAmount__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** compactOnLaunch_insufficientAmount ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+compactOnLaunch_throwsInTheCallback
+-----------------------------------
+
+.. _io_realm_RealmTests_compactOnLaunch_throwsInTheCallback__:
+
+.. _io_realm_RealmTests_compactOnLaunch_throwsInTheCallback__:
+
+.. _io_realm_RealmTests_compactOnLaunch_throwsInTheCallback__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** compactOnLaunch_throwsInTheCallback ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+defaultCompactOnLaunch
+----------------------
+
+.. _io_realm_RealmTests_defaultCompactOnLaunch__:
+
+.. _io_realm_RealmTests_defaultCompactOnLaunch__:
+
+.. _io_realm_RealmTests_defaultCompactOnLaunch__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** defaultCompactOnLaunch ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+defaultCompactOnLaunch_onlyCallback
+-----------------------------------
+
+.. _io_realm_RealmTests_defaultCompactOnLaunch_onlyCallback__:
+
+.. _io_realm_RealmTests_defaultCompactOnLaunch_onlyCallback__:
+
+.. _io_realm_RealmTests_defaultCompactOnLaunch_onlyCallback__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** defaultCompactOnLaunch_onlyCallback ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+defaultCompactOnLaunch_insufficientAmount
+-----------------------------------------
+
+.. _io_realm_RealmTests_defaultCompactOnLaunch_insufficientAmount__:
+
+.. _io_realm_RealmTests_defaultCompactOnLaunch_insufficientAmount__:
+
+.. _io_realm_RealmTests_defaultCompactOnLaunch_insufficientAmount__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** defaultCompactOnLaunch_insufficientAmount ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealm_null
+----------------
+
+.. _io_realm_RealmTests_copyToRealm_null__:
+
+.. _io_realm_RealmTests_copyToRealm_null__:
+
+.. _io_realm_RealmTests_copyToRealm_null__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealm_null ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealm_managedObject
+-------------------------
+
+.. _io_realm_RealmTests_copyToRealm_managedObject__:
+
+.. _io_realm_RealmTests_copyToRealm_managedObject__:
+
+.. _io_realm_RealmTests_copyToRealm_managedObject__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealm_managedObject ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealm_fromOtherRealm
+--------------------------
+
+.. _io_realm_RealmTests_copyToRealm_fromOtherRealm__:
+
+.. _io_realm_RealmTests_copyToRealm_fromOtherRealm__:
+
+.. _io_realm_RealmTests_copyToRealm_fromOtherRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealm_fromOtherRealm ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealm
+-----------
+
+.. _io_realm_RealmTests_copyToRealm__:
+
+.. _io_realm_RealmTests_copyToRealm__:
+
+.. _io_realm_RealmTests_copyToRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealm ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealm_cyclicObjectReferences
+----------------------------------
+
+.. _io_realm_RealmTests_copyToRealm_cyclicObjectReferences__:
+
+.. _io_realm_RealmTests_copyToRealm_cyclicObjectReferences__:
+
+.. _io_realm_RealmTests_copyToRealm_cyclicObjectReferences__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealm_cyclicObjectReferences ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealm_cyclicObjectReferencesWithPK
+----------------------------------------
+
+.. _io_realm_RealmTests_copyToRealm_cyclicObjectReferencesWithPK__:
+
+.. _io_realm_RealmTests_copyToRealm_cyclicObjectReferencesWithPK__:
+
+.. _io_realm_RealmTests_copyToRealm_cyclicObjectReferencesWithPK__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealm_cyclicObjectReferencesWithPK ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealm_cyclicListReferences
+--------------------------------
+
+.. _io_realm_RealmTests_copyToRealm_cyclicListReferences__:
+
+.. _io_realm_RealmTests_copyToRealm_cyclicListReferences__:
+
+.. _io_realm_RealmTests_copyToRealm_cyclicListReferences__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealm_cyclicListReferences ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealm_convertsNullToDefaultValue
+--------------------------------------
+
+.. _io_realm_RealmTests_copyToRealm_convertsNullToDefaultValue__:
+
+.. _io_realm_RealmTests_copyToRealm_convertsNullToDefaultValue__:
+
+.. _io_realm_RealmTests_copyToRealm_convertsNullToDefaultValue__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealm_convertsNullToDefaultValue ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealm_primaryKeyIsSetDirectly
+-----------------------------------
+
+.. _io_realm_RealmTests_copyToRealm_primaryKeyIsSetDirectly__:
+
+.. _io_realm_RealmTests_copyToRealm_primaryKeyIsSetDirectly__:
+
+.. _io_realm_RealmTests_copyToRealm_primaryKeyIsSetDirectly__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealm_primaryKeyIsSetDirectly ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealm_stringPrimaryKeyIsNull
+----------------------------------
+
+.. _io_realm_RealmTests_copyToRealm_stringPrimaryKeyIsNull__:
+
+.. _io_realm_RealmTests_copyToRealm_stringPrimaryKeyIsNull__:
+
+.. _io_realm_RealmTests_copyToRealm_stringPrimaryKeyIsNull__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealm_stringPrimaryKeyIsNull ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealm_boxedNumberPrimaryKeyIsNull
+---------------------------------------
+
+.. _io_realm_RealmTests_copyToRealm_boxedNumberPrimaryKeyIsNull__:
+
+.. _io_realm_RealmTests_copyToRealm_boxedNumberPrimaryKeyIsNull__:
+
+.. _io_realm_RealmTests_copyToRealm_boxedNumberPrimaryKeyIsNull__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealm_boxedNumberPrimaryKeyIsNull ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealm_duplicatedPrimaryKeyThrows
+--------------------------------------
+
+.. _io_realm_RealmTests_copyToRealm_duplicatedPrimaryKeyThrows__:
+
+.. _io_realm_RealmTests_copyToRealm_duplicatedPrimaryKeyThrows__:
+
+.. _io_realm_RealmTests_copyToRealm_duplicatedPrimaryKeyThrows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealm_duplicatedPrimaryKeyThrows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealm_duplicatedNullPrimaryKeyThrows
+------------------------------------------
+
+.. _io_realm_RealmTests_copyToRealm_duplicatedNullPrimaryKeyThrows__:
+
+.. _io_realm_RealmTests_copyToRealm_duplicatedNullPrimaryKeyThrows__:
+
+.. _io_realm_RealmTests_copyToRealm_duplicatedNullPrimaryKeyThrows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealm_duplicatedNullPrimaryKeyThrows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealm_doNotCopyReferencedObjectIfManaged
+----------------------------------------------
+
+.. _io_realm_RealmTests_copyToRealm_doNotCopyReferencedObjectIfManaged__:
+
+.. _io_realm_RealmTests_copyToRealm_doNotCopyReferencedObjectIfManaged__:
+
+.. _io_realm_RealmTests_copyToRealm_doNotCopyReferencedObjectIfManaged__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealm_doNotCopyReferencedObjectIfManaged ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealm_list
+----------------
+
+.. _io_realm_RealmTests_copyToRealm_list__:
+
+.. _io_realm_RealmTests_copyToRealm_list__:
+
+.. _io_realm_RealmTests_copyToRealm_list__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealm_list ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealm_objectInOtherThreadThrows
+-------------------------------------
+
+.. _io_realm_RealmTests_copyToRealm_objectInOtherThreadThrows__:
+
+.. _io_realm_RealmTests_copyToRealm_objectInOtherThreadThrows__:
+
+.. _io_realm_RealmTests_copyToRealm_objectInOtherThreadThrows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealm_objectInOtherThreadThrows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealmOrUpdate_null
+------------------------
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_null__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_null__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_null__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealmOrUpdate_null ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealmOrUpdate_stringPrimaryKeyFieldIsNull
+-----------------------------------------------
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_stringPrimaryKeyFieldIsNull__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_stringPrimaryKeyFieldIsNull__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_stringPrimaryKeyFieldIsNull__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealmOrUpdate_stringPrimaryKeyFieldIsNull ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealmOrUpdate_boxedBytePrimaryKeyFieldIsNull
+--------------------------------------------------
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_boxedBytePrimaryKeyFieldIsNull__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_boxedBytePrimaryKeyFieldIsNull__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_boxedBytePrimaryKeyFieldIsNull__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealmOrUpdate_boxedBytePrimaryKeyFieldIsNull ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealmOrUpdate_boxedShortPrimaryKeyFieldIsNull
+---------------------------------------------------
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_boxedShortPrimaryKeyFieldIsNull__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_boxedShortPrimaryKeyFieldIsNull__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_boxedShortPrimaryKeyFieldIsNull__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealmOrUpdate_boxedShortPrimaryKeyFieldIsNull ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealmOrUpdate_boxedIntegerPrimaryKeyFieldIsNull
+-----------------------------------------------------
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_boxedIntegerPrimaryKeyFieldIsNull__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_boxedIntegerPrimaryKeyFieldIsNull__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_boxedIntegerPrimaryKeyFieldIsNull__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealmOrUpdate_boxedIntegerPrimaryKeyFieldIsNull ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealmOrUpdate_boxedLongPrimaryKeyFieldIsNull
+--------------------------------------------------
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_boxedLongPrimaryKeyFieldIsNull__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_boxedLongPrimaryKeyFieldIsNull__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_boxedLongPrimaryKeyFieldIsNull__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealmOrUpdate_boxedLongPrimaryKeyFieldIsNull ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealmOrUpdate_noPrimaryKeyField
+-------------------------------------
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_noPrimaryKeyField__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_noPrimaryKeyField__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_noPrimaryKeyField__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealmOrUpdate_noPrimaryKeyField ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealmOrUpdate_addNewObjects
+---------------------------------
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_addNewObjects__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_addNewObjects__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_addNewObjects__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealmOrUpdate_addNewObjects ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealmOrUpdate_updateExistingObject
+----------------------------------------
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_updateExistingObject__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_updateExistingObject__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_updateExistingObject__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealmOrUpdate_updateExistingObject ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealmOrUpdate_overrideOwnList
+-----------------------------------
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_overrideOwnList__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_overrideOwnList__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_overrideOwnList__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealmOrUpdate_overrideOwnList ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealmOrUpdate_cyclicObject
+--------------------------------
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_cyclicObject__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_cyclicObject__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_cyclicObject__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealmOrUpdate_cyclicObject ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealmOrUpdate_defaultValuesOverrideExistingData
+-----------------------------------------------------
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_defaultValuesOverrideExistingData__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_defaultValuesOverrideExistingData__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_defaultValuesOverrideExistingData__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealmOrUpdate_defaultValuesOverrideExistingData ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealmOrUpdate_referencesNotDeleted
+----------------------------------------
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_referencesNotDeleted__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_referencesNotDeleted__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_referencesNotDeleted__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealmOrUpdate_referencesNotDeleted ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealmOrUpdate_primaryKeyMixInObjectGraph
+----------------------------------------------
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_primaryKeyMixInObjectGraph__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_primaryKeyMixInObjectGraph__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_primaryKeyMixInObjectGraph__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealmOrUpdate_primaryKeyMixInObjectGraph ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealmOrUpdate_iterable
+----------------------------
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_iterable__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_iterable__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_iterable__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealmOrUpdate_iterable ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealmOrUpdate_iterableChildObjects
+----------------------------------------
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_iterableChildObjects__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_iterableChildObjects__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_iterableChildObjects__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealmOrUpdate_iterableChildObjects ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealmOrUpdate_objectInOtherThreadThrows
+---------------------------------------------
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_objectInOtherThreadThrows__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_objectInOtherThreadThrows__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_objectInOtherThreadThrows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealmOrUpdate_objectInOtherThreadThrows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealmOrUpdate_listHasObjectInOtherThreadThrows
+----------------------------------------------------
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_listHasObjectInOtherThreadThrows__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_listHasObjectInOtherThreadThrows__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_listHasObjectInOtherThreadThrows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealmOrUpdate_listHasObjectInOtherThreadThrows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealmOrUpdate_bug4957
+---------------------------
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_bug4957__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_bug4957__:
+
+.. _io_realm_RealmTests_copyToRealmOrUpdate_bug4957__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealmOrUpdate_bug4957 ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getInstance_differentEncryptionKeys
+-----------------------------------
+
+.. _io_realm_RealmTests_getInstance_differentEncryptionKeys__:
+
+.. _io_realm_RealmTests_getInstance_differentEncryptionKeys__:
+
+.. _io_realm_RealmTests_getInstance_differentEncryptionKeys__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** getInstance_differentEncryptionKeys ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+writeEncryptedCopyTo
+--------------------
+
+.. _io_realm_RealmTests_writeEncryptedCopyTo__:
+
+.. _io_realm_RealmTests_writeEncryptedCopyTo__:
+
+.. _io_realm_RealmTests_writeEncryptedCopyTo__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** writeEncryptedCopyTo ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+writeEncryptedCopyTo_wrongKeyLength
+-----------------------------------
+
+.. _io_realm_RealmTests_writeEncryptedCopyTo_wrongKeyLength__:
+
+.. _io_realm_RealmTests_writeEncryptedCopyTo_wrongKeyLength__:
+
+.. _io_realm_RealmTests_writeEncryptedCopyTo_wrongKeyLength__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** writeEncryptedCopyTo_wrongKeyLength ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+deleteRealm_failures
+--------------------
+
+.. _io_realm_RealmTests_deleteRealm_failures__:
+
+.. _io_realm_RealmTests_deleteRealm_failures__:
+
+.. _io_realm_RealmTests_deleteRealm_failures__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** deleteRealm_failures ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+setter_updateField
+------------------
+
+.. _io_realm_RealmTests_setter_updateField__:
+
+.. _io_realm_RealmTests_setter_updateField__:
+
+.. _io_realm_RealmTests_setter_updateField__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setter_updateField ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+deleteRealm
+-----------
+
+.. _io_realm_RealmTests_deleteRealm__:
+
+.. _io_realm_RealmTests_deleteRealm__:
+
+.. _io_realm_RealmTests_deleteRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** deleteRealm ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+callMutableMethodOutsideTransaction
+-----------------------------------
+
+.. _io_realm_RealmTests_callMutableMethodOutsideTransaction__:
+
+.. _io_realm_RealmTests_callMutableMethodOutsideTransaction__:
+
+.. _io_realm_RealmTests_callMutableMethodOutsideTransaction__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** callMutableMethodOutsideTransaction ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+createObject_cannotCreateDynamicRealmObject
+-------------------------------------------
+
+.. _io_realm_RealmTests_createObject_cannotCreateDynamicRealmObject__:
+
+.. _io_realm_RealmTests_createObject_cannotCreateDynamicRealmObject__:
+
+.. _io_realm_RealmTests_createObject_cannotCreateDynamicRealmObject__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** createObject_cannotCreateDynamicRealmObject ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+createObject_absentPrimaryKeyThrows
+-----------------------------------
+
+.. _io_realm_RealmTests_createObject_absentPrimaryKeyThrows__:
+
+.. _io_realm_RealmTests_createObject_absentPrimaryKeyThrows__:
+
+.. _io_realm_RealmTests_createObject_absentPrimaryKeyThrows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** createObject_absentPrimaryKeyThrows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+createObjectWithPrimaryKey
+--------------------------
+
+.. _io_realm_RealmTests_createObjectWithPrimaryKey__:
+
+.. _io_realm_RealmTests_createObjectWithPrimaryKey__:
+
+.. _io_realm_RealmTests_createObjectWithPrimaryKey__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** createObjectWithPrimaryKey ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+createObjectWithPrimaryKey_noPrimaryKeyField
+--------------------------------------------
+
+.. _io_realm_RealmTests_createObjectWithPrimaryKey_noPrimaryKeyField__:
+
+.. _io_realm_RealmTests_createObjectWithPrimaryKey_noPrimaryKeyField__:
+
+.. _io_realm_RealmTests_createObjectWithPrimaryKey_noPrimaryKeyField__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** createObjectWithPrimaryKey_noPrimaryKeyField ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+createObjectWithPrimaryKey_wrongValueType
+-----------------------------------------
+
+.. _io_realm_RealmTests_createObjectWithPrimaryKey_wrongValueType__:
+
+.. _io_realm_RealmTests_createObjectWithPrimaryKey_wrongValueType__:
+
+.. _io_realm_RealmTests_createObjectWithPrimaryKey_wrongValueType__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** createObjectWithPrimaryKey_wrongValueType ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+createObjectWithPrimaryKey_valueAlreadyExists
+---------------------------------------------
+
+.. _io_realm_RealmTests_createObjectWithPrimaryKey_valueAlreadyExists__:
+
+.. _io_realm_RealmTests_createObjectWithPrimaryKey_valueAlreadyExists__:
+
+.. _io_realm_RealmTests_createObjectWithPrimaryKey_valueAlreadyExists__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** createObjectWithPrimaryKey_valueAlreadyExists ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+createObjectWithPrimaryKey_null
+-------------------------------
+
+.. _io_realm_RealmTests_createObjectWithPrimaryKey_null__:
+
+.. _io_realm_RealmTests_createObjectWithPrimaryKey_null__:
+
+.. _io_realm_RealmTests_createObjectWithPrimaryKey_null__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** createObjectWithPrimaryKey_null ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+createObjectWithPrimaryKey_nullOnRequired
+-----------------------------------------
+
+.. _io_realm_RealmTests_createObjectWithPrimaryKey_nullOnRequired__:
+
+.. _io_realm_RealmTests_createObjectWithPrimaryKey_nullOnRequired__:
+
+.. _io_realm_RealmTests_createObjectWithPrimaryKey_nullOnRequired__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** createObjectWithPrimaryKey_nullOnRequired ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+createObjectWithPrimaryKey_nullDuplicated
+-----------------------------------------
+
+.. _io_realm_RealmTests_createObjectWithPrimaryKey_nullDuplicated__:
+
+.. _io_realm_RealmTests_createObjectWithPrimaryKey_nullDuplicated__:
+
+.. _io_realm_RealmTests_createObjectWithPrimaryKey_nullDuplicated__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** createObjectWithPrimaryKey_nullDuplicated ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+createObject_defaultValueFromModelField
+---------------------------------------
+
+.. _io_realm_RealmTests_createObject_defaultValueFromModelField__:
+
+.. _io_realm_RealmTests_createObject_defaultValueFromModelField__:
+
+.. _io_realm_RealmTests_createObject_defaultValueFromModelField__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** createObject_defaultValueFromModelField ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+createObject_overwriteNullifiedLinkWithDefaultValue
+---------------------------------------------------
+
+.. _io_realm_RealmTests_createObject_overwriteNullifiedLinkWithDefaultValue__:
+
+.. _io_realm_RealmTests_createObject_overwriteNullifiedLinkWithDefaultValue__:
+
+.. _io_realm_RealmTests_createObject_overwriteNullifiedLinkWithDefaultValue__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** createObject_overwriteNullifiedLinkWithDefaultValue ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+createObject_defaultValueFromModelConstructor
+---------------------------------------------
+
+.. _io_realm_RealmTests_createObject_defaultValueFromModelConstructor__:
+
+.. _io_realm_RealmTests_createObject_defaultValueFromModelConstructor__:
+
+.. _io_realm_RealmTests_createObject_defaultValueFromModelConstructor__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** createObject_defaultValueFromModelConstructor ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+createObject_defaultValueSetterInConstructor
+--------------------------------------------
+
+.. _io_realm_RealmTests_createObject_defaultValueSetterInConstructor__:
+
+.. _io_realm_RealmTests_createObject_defaultValueSetterInConstructor__:
+
+.. _io_realm_RealmTests_createObject_defaultValueSetterInConstructor__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** createObject_defaultValueSetterInConstructor ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+createObject_defaultValueFromOtherConstructor
+---------------------------------------------
+
+.. _io_realm_RealmTests_createObject_defaultValueFromOtherConstructor__:
+
+.. _io_realm_RealmTests_createObject_defaultValueFromOtherConstructor__:
+
+.. _io_realm_RealmTests_createObject_defaultValueFromOtherConstructor__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** createObject_defaultValueFromOtherConstructor ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealm_defaultValuesAreIgnored
+-----------------------------------
+
+.. _io_realm_RealmTests_copyToRealm_defaultValuesAreIgnored__:
+
+.. _io_realm_RealmTests_copyToRealm_defaultValuesAreIgnored__:
+
+.. _io_realm_RealmTests_copyToRealm_defaultValuesAreIgnored__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealm_defaultValuesAreIgnored ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyFromRealm_defaultValuesAreIgnored
+-------------------------------------
+
+.. _io_realm_RealmTests_copyFromRealm_defaultValuesAreIgnored__:
+
+.. _io_realm_RealmTests_copyFromRealm_defaultValuesAreIgnored__:
+
+.. _io_realm_RealmTests_copyFromRealm_defaultValuesAreIgnored__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyFromRealm_defaultValuesAreIgnored ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+close_differentThread
+---------------------
+
+.. _io_realm_RealmTests_close_differentThread__:
+
+.. _io_realm_RealmTests_close_differentThread__:
+
+.. _io_realm_RealmTests_close_differentThread__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** close_differentThread ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+isClosed
+--------
+
+.. _io_realm_RealmTests_isClosed__:
+
+.. _io_realm_RealmTests_isClosed__:
+
+.. _io_realm_RealmTests_isClosed__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** isClosed ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+isClosed_differentThread
+------------------------
+
+.. _io_realm_RealmTests_isClosed_differentThread__:
+
+.. _io_realm_RealmTests_isClosed_differentThread__:
+
+.. _io_realm_RealmTests_isClosed_differentThread__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** isClosed_differentThread ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+columnIndicesIsPopulatedWhenSkippingInitialization
+--------------------------------------------------
+
+.. _io_realm_RealmTests_columnIndicesIsPopulatedWhenSkippingInitialization__:
+
+.. _io_realm_RealmTests_columnIndicesIsPopulatedWhenSkippingInitialization__:
+
+.. _io_realm_RealmTests_columnIndicesIsPopulatedWhenSkippingInitialization__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** columnIndicesIsPopulatedWhenSkippingInitialization ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+isInTransaction
+---------------
+
+.. _io_realm_RealmTests_isInTransaction__:
+
+.. _io_realm_RealmTests_isInTransaction__:
+
+.. _io_realm_RealmTests_isInTransaction__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** isInTransaction ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+closingRealmWhileOtherThreadIsOpeningRealm
+------------------------------------------
+
+.. _io_realm_RealmTests_closingRealmWhileOtherThreadIsOpeningRealm__:
+
+.. _io_realm_RealmTests_closingRealmWhileOtherThreadIsOpeningRealm__:
+
+.. _io_realm_RealmTests_closingRealmWhileOtherThreadIsOpeningRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** closingRealmWhileOtherThreadIsOpeningRealm ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+openRealmWhileTransactionInAnotherThread
+----------------------------------------
+
+.. _io_realm_RealmTests_openRealmWhileTransactionInAnotherThread__:
+
+.. _io_realm_RealmTests_openRealmWhileTransactionInAnotherThread__:
+
+.. _io_realm_RealmTests_openRealmWhileTransactionInAnotherThread__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** openRealmWhileTransactionInAnotherThread ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+isEmpty
+-------
+
+.. _io_realm_RealmTests_isEmpty__:
+
+.. _io_realm_RealmTests_isEmpty__:
+
+.. _io_realm_RealmTests_isEmpty__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** isEmpty ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyFromRealm_invalidObjectThrows
+---------------------------------
+
+.. _io_realm_RealmTests_copyFromRealm_invalidObjectThrows__:
+
+.. _io_realm_RealmTests_copyFromRealm_invalidObjectThrows__:
+
+.. _io_realm_RealmTests_copyFromRealm_invalidObjectThrows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyFromRealm_invalidObjectThrows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyFromRealm_invalidDepthThrows
+--------------------------------
+
+.. _io_realm_RealmTests_copyFromRealm_invalidDepthThrows__:
+
+.. _io_realm_RealmTests_copyFromRealm_invalidDepthThrows__:
+
+.. _io_realm_RealmTests_copyFromRealm_invalidDepthThrows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyFromRealm_invalidDepthThrows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyFromRealm
+-------------
+
+.. _io_realm_RealmTests_copyFromRealm__:
+
+.. _io_realm_RealmTests_copyFromRealm__:
+
+.. _io_realm_RealmTests_copyFromRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyFromRealm ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyFromRealm_newCopyEachTime
+-----------------------------
+
+.. _io_realm_RealmTests_copyFromRealm_newCopyEachTime__:
+
+.. _io_realm_RealmTests_copyFromRealm_newCopyEachTime__:
+
+.. _io_realm_RealmTests_copyFromRealm_newCopyEachTime__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyFromRealm_newCopyEachTime ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyFromRealm_cyclicObjectGraph
+-------------------------------
+
+.. _io_realm_RealmTests_copyFromRealm_cyclicObjectGraph__:
+
+.. _io_realm_RealmTests_copyFromRealm_cyclicObjectGraph__:
+
+.. _io_realm_RealmTests_copyFromRealm_cyclicObjectGraph__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyFromRealm_cyclicObjectGraph ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyFromRealm_checkMaxDepth
+---------------------------
+
+.. _io_realm_RealmTests_copyFromRealm_checkMaxDepth__:
+
+.. _io_realm_RealmTests_copyFromRealm_checkMaxDepth__:
+
+.. _io_realm_RealmTests_copyFromRealm_checkMaxDepth__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyFromRealm_checkMaxDepth ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyFromRealm_sameObjectDifferentDepths
+---------------------------------------
+
+.. _io_realm_RealmTests_copyFromRealm_sameObjectDifferentDepths__:
+
+.. _io_realm_RealmTests_copyFromRealm_sameObjectDifferentDepths__:
+
+.. _io_realm_RealmTests_copyFromRealm_sameObjectDifferentDepths__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyFromRealm_sameObjectDifferentDepths ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyFromRealm_list_invalidListThrows
+------------------------------------
+
+.. _io_realm_RealmTests_copyFromRealm_list_invalidListThrows__:
+
+.. _io_realm_RealmTests_copyFromRealm_list_invalidListThrows__:
+
+.. _io_realm_RealmTests_copyFromRealm_list_invalidListThrows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyFromRealm_list_invalidListThrows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyFromRealm_emptyList
+-----------------------
+
+.. _io_realm_RealmTests_copyFromRealm_emptyList__:
+
+.. _io_realm_RealmTests_copyFromRealm_emptyList__:
+
+.. _io_realm_RealmTests_copyFromRealm_emptyList__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyFromRealm_emptyList ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyFromRealm_list_invalidDepthThrows
+-------------------------------------
+
+.. _io_realm_RealmTests_copyFromRealm_list_invalidDepthThrows__:
+
+.. _io_realm_RealmTests_copyFromRealm_list_invalidDepthThrows__:
+
+.. _io_realm_RealmTests_copyFromRealm_list_invalidDepthThrows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyFromRealm_list_invalidDepthThrows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyFromRealm_list_sameElements
+-------------------------------
+
+.. _io_realm_RealmTests_copyFromRealm_list_sameElements__:
+
+.. _io_realm_RealmTests_copyFromRealm_list_sameElements__:
+
+.. _io_realm_RealmTests_copyFromRealm_list_sameElements__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyFromRealm_list_sameElements ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyFromRealm_dynamicRealmObjectThrows
+--------------------------------------
+
+.. _io_realm_RealmTests_copyFromRealm_dynamicRealmObjectThrows__:
+
+.. _io_realm_RealmTests_copyFromRealm_dynamicRealmObjectThrows__:
+
+.. _io_realm_RealmTests_copyFromRealm_dynamicRealmObjectThrows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyFromRealm_dynamicRealmObjectThrows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyFromRealm_dynamicRealmListThrows
+------------------------------------
+
+.. _io_realm_RealmTests_copyFromRealm_dynamicRealmListThrows__:
+
+.. _io_realm_RealmTests_copyFromRealm_dynamicRealmListThrows__:
+
+.. _io_realm_RealmTests_copyFromRealm_dynamicRealmListThrows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyFromRealm_dynamicRealmListThrows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+closeRealmInChangeListener
+--------------------------
+
+.. _io_realm_RealmTests_closeRealmInChangeListener__:
+
+.. _io_realm_RealmTests_closeRealmInChangeListener__:
+
+.. _io_realm_RealmTests_closeRealmInChangeListener__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** closeRealmInChangeListener ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+closeRealmInChangeListenerWhenThereIsListenerOnEmptyObject
+----------------------------------------------------------
+
+.. _io_realm_RealmTests_closeRealmInChangeListenerWhenThereIsListenerOnEmptyObject__:
+
+.. _io_realm_RealmTests_closeRealmInChangeListenerWhenThereIsListenerOnEmptyObject__:
+
+.. _io_realm_RealmTests_closeRealmInChangeListenerWhenThereIsListenerOnEmptyObject__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** closeRealmInChangeListenerWhenThereIsListenerOnEmptyObject ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+closeRealmInChangeListenerWhenThereIsListenerOnObject
+-----------------------------------------------------
+
+.. _io_realm_RealmTests_closeRealmInChangeListenerWhenThereIsListenerOnObject__:
+
+.. _io_realm_RealmTests_closeRealmInChangeListenerWhenThereIsListenerOnObject__:
+
+.. _io_realm_RealmTests_closeRealmInChangeListenerWhenThereIsListenerOnObject__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** closeRealmInChangeListenerWhenThereIsListenerOnObject ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+closeRealmInChangeListenerWhenThereIsListenerOnResults
+------------------------------------------------------
+
+.. _io_realm_RealmTests_closeRealmInChangeListenerWhenThereIsListenerOnResults__:
+
+.. _io_realm_RealmTests_closeRealmInChangeListenerWhenThereIsListenerOnResults__:
+
+.. _io_realm_RealmTests_closeRealmInChangeListenerWhenThereIsListenerOnResults__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** closeRealmInChangeListenerWhenThereIsListenerOnResults ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+addChangeListener_throwOnAddingNullListenerFromLooperThread
+-----------------------------------------------------------
+
+.. _io_realm_RealmTests_addChangeListener_throwOnAddingNullListenerFromLooperThread__:
+
+.. _io_realm_RealmTests_addChangeListener_throwOnAddingNullListenerFromLooperThread__:
+
+.. _io_realm_RealmTests_addChangeListener_throwOnAddingNullListenerFromLooperThread__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addChangeListener_throwOnAddingNullListenerFromLooperThread ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+addChangeListener_throwOnAddingNullListenerFromNonLooperThread
+--------------------------------------------------------------
+
+.. _io_realm_RealmTests_addChangeListener_throwOnAddingNullListenerFromNonLooperThread__:
+
+.. _io_realm_RealmTests_addChangeListener_throwOnAddingNullListenerFromNonLooperThread__:
+
+.. _io_realm_RealmTests_addChangeListener_throwOnAddingNullListenerFromNonLooperThread__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addChangeListener_throwOnAddingNullListenerFromNonLooperThread ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+removeChangeListener_throwOnRemovingNullListenerFromLooperThread
+----------------------------------------------------------------
+
+.. _io_realm_RealmTests_removeChangeListener_throwOnRemovingNullListenerFromLooperThread__:
+
+.. _io_realm_RealmTests_removeChangeListener_throwOnRemovingNullListenerFromLooperThread__:
+
+.. _io_realm_RealmTests_removeChangeListener_throwOnRemovingNullListenerFromLooperThread__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** removeChangeListener_throwOnRemovingNullListenerFromLooperThread ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+removeChangeListener_throwOnRemovingNullListenerFromNonLooperThread
+-------------------------------------------------------------------
+
+.. _io_realm_RealmTests_removeChangeListener_throwOnRemovingNullListenerFromNonLooperThread__:
+
+.. _io_realm_RealmTests_removeChangeListener_throwOnRemovingNullListenerFromNonLooperThread__:
+
+.. _io_realm_RealmTests_removeChangeListener_throwOnRemovingNullListenerFromNonLooperThread__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** removeChangeListener_throwOnRemovingNullListenerFromNonLooperThread ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+removeChangeListenerThrowExceptionOnWrongThread
+-----------------------------------------------
+
+.. _io_realm_RealmTests_removeChangeListenerThrowExceptionOnWrongThread__:
+
+.. _io_realm_RealmTests_removeChangeListenerThrowExceptionOnWrongThread__:
+
+.. _io_realm_RealmTests_removeChangeListenerThrowExceptionOnWrongThread__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** removeChangeListenerThrowExceptionOnWrongThread ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+removeAllChangeListenersThrowExceptionOnWrongThreadThread
+---------------------------------------------------------
+
+.. _io_realm_RealmTests_removeAllChangeListenersThrowExceptionOnWrongThreadThread__:
+
+.. _io_realm_RealmTests_removeAllChangeListenersThrowExceptionOnWrongThreadThread__:
+
+.. _io_realm_RealmTests_removeAllChangeListenersThrowExceptionOnWrongThreadThread__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** removeAllChangeListenersThrowExceptionOnWrongThreadThread ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+deleteAll
+---------
+
+.. _io_realm_RealmTests_deleteAll__:
+
+.. _io_realm_RealmTests_deleteAll__:
+
+.. _io_realm_RealmTests_deleteAll__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** deleteAll ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+deleteAll_realmWithMoreTables
+-----------------------------
+
+.. _io_realm_RealmTests_deleteAll_realmWithMoreTables__:
+
+.. _io_realm_RealmTests_deleteAll_realmWithMoreTables__:
+
+.. _io_realm_RealmTests_deleteAll_realmWithMoreTables__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** deleteAll_realmWithMoreTables ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+waitForChange_emptyDataChange
+-----------------------------
+
+.. _io_realm_RealmTests_waitForChange_emptyDataChange__:
+
+.. _io_realm_RealmTests_waitForChange_emptyDataChange__:
+
+.. _io_realm_RealmTests_waitForChange_emptyDataChange__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** waitForChange_emptyDataChange ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+waitForChange_withDataChange
+----------------------------
+
+.. _io_realm_RealmTests_waitForChange_withDataChange__:
+
+.. _io_realm_RealmTests_waitForChange_withDataChange__:
+
+.. _io_realm_RealmTests_waitForChange_withDataChange__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** waitForChange_withDataChange ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+waitForChange_syncBackgroundRealmResults
+----------------------------------------
+
+.. _io_realm_RealmTests_waitForChange_syncBackgroundRealmResults__:
+
+.. _io_realm_RealmTests_waitForChange_syncBackgroundRealmResults__:
+
+.. _io_realm_RealmTests_waitForChange_syncBackgroundRealmResults__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** waitForChange_syncBackgroundRealmResults ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+stopWaitForChange
+-----------------
+
+.. _io_realm_RealmTests_stopWaitForChange__:
+
+.. _io_realm_RealmTests_stopWaitForChange__:
+
+.. _io_realm_RealmTests_stopWaitForChange__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** stopWaitForChange ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+waitForChange_stopWaitForChangeDisablesWaiting
+----------------------------------------------
+
+.. _io_realm_RealmTests_waitForChange_stopWaitForChangeDisablesWaiting__:
+
+.. _io_realm_RealmTests_waitForChange_stopWaitForChangeDisablesWaiting__:
+
+.. _io_realm_RealmTests_waitForChange_stopWaitForChangeDisablesWaiting__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** waitForChange_stopWaitForChangeDisablesWaiting ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+waitForChange_stopWaitForChangeReleasesAllWaitingThreads
+--------------------------------------------------------
+
+.. _io_realm_RealmTests_waitForChange_stopWaitForChangeReleasesAllWaitingThreads__:
+
+.. _io_realm_RealmTests_waitForChange_stopWaitForChangeReleasesAllWaitingThreads__:
+
+.. _io_realm_RealmTests_waitForChange_stopWaitForChangeReleasesAllWaitingThreads__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** waitForChange_stopWaitForChangeReleasesAllWaitingThreads ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+waitForChange_interruptingThread
+--------------------------------
+
+.. _io_realm_RealmTests_waitForChange_interruptingThread__:
+
+.. _io_realm_RealmTests_waitForChange_interruptingThread__:
+
+.. _io_realm_RealmTests_waitForChange_interruptingThread__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** waitForChange_interruptingThread ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+waitForChange_onLooperThread
+----------------------------
+
+.. _io_realm_RealmTests_waitForChange_onLooperThread__:
+
+.. _io_realm_RealmTests_waitForChange_onLooperThread__:
+
+.. _io_realm_RealmTests_waitForChange_onLooperThread__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** waitForChange_onLooperThread ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+waitForChange_illegalWaitInsideTransaction
+------------------------------------------
+
+.. _io_realm_RealmTests_waitForChange_illegalWaitInsideTransaction__:
+
+.. _io_realm_RealmTests_waitForChange_illegalWaitInsideTransaction__:
+
+.. _io_realm_RealmTests_waitForChange_illegalWaitInsideTransaction__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** waitForChange_illegalWaitInsideTransaction ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+waitForChange_stopWaitingOnClosedRealmThrows
+--------------------------------------------
+
+.. _io_realm_RealmTests_waitForChange_stopWaitingOnClosedRealmThrows__:
+
+.. _io_realm_RealmTests_waitForChange_stopWaitingOnClosedRealmThrows__:
+
+.. _io_realm_RealmTests_waitForChange_stopWaitingOnClosedRealmThrows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** waitForChange_stopWaitingOnClosedRealmThrows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+waitForChange_runWithRealmThread
+--------------------------------
+
+.. _io_realm_RealmTests_waitForChange_runWithRealmThread__:
+
+.. _io_realm_RealmTests_waitForChange_runWithRealmThread__:
+
+.. _io_realm_RealmTests_waitForChange_runWithRealmThread__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** waitForChange_runWithRealmThread ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+waitForChange_endRealmThread
+----------------------------
+
+.. _io_realm_RealmTests_waitForChange_endRealmThread__:
+
+.. _io_realm_RealmTests_waitForChange_endRealmThread__:
+
+.. _io_realm_RealmTests_waitForChange_endRealmThread__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** waitForChange_endRealmThread ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getGlobalInstanceCount
+----------------------
+
+.. _io_realm_RealmTests_getGlobalInstanceCount__:
+
+.. _io_realm_RealmTests_getGlobalInstanceCount__:
+
+.. _io_realm_RealmTests_getGlobalInstanceCount__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** getGlobalInstanceCount ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getLocalInstanceCount
+---------------------
+
+.. _io_realm_RealmTests_getLocalInstanceCount__:
+
+.. _io_realm_RealmTests_getLocalInstanceCount__:
+
+.. _io_realm_RealmTests_getLocalInstanceCount__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** getLocalInstanceCount ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+namedPipeDirForExternalStorage
+------------------------------
+
+.. _io_realm_RealmTests_namedPipeDirForExternalStorage__:
+
+.. _io_realm_RealmTests_namedPipeDirForExternalStorage__:
+
+.. _io_realm_RealmTests_namedPipeDirForExternalStorage__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** namedPipeDirForExternalStorage ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getInstanceAsync_nonLooperThreadShouldThrow
+-------------------------------------------
+
+.. _io_realm_RealmTests_getInstanceAsync_nonLooperThreadShouldThrow__:
+
+.. _io_realm_RealmTests_getInstanceAsync_nonLooperThreadShouldThrow__:
+
+.. _io_realm_RealmTests_getInstanceAsync_nonLooperThreadShouldThrow__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** getInstanceAsync_nonLooperThreadShouldThrow ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getInstanceAsync_nullConfigShouldThrow
+--------------------------------------
+
+.. _io_realm_RealmTests_getInstanceAsync_nullConfigShouldThrow__:
+
+.. _io_realm_RealmTests_getInstanceAsync_nullConfigShouldThrow__:
+
+.. _io_realm_RealmTests_getInstanceAsync_nullConfigShouldThrow__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** getInstanceAsync_nullConfigShouldThrow ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+init_waitForFilesDir
+--------------------
+
+.. _io_realm_RealmTests_init_waitForFilesDir__:
+
+.. _io_realm_RealmTests_init_waitForFilesDir__:
+
+.. _io_realm_RealmTests_init_waitForFilesDir__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** init_waitForFilesDir ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+refresh_triggerNotifications
+----------------------------
+
+.. _io_realm_RealmTests_refresh_triggerNotifications__:
+
+.. _io_realm_RealmTests_refresh_triggerNotifications__:
+
+.. _io_realm_RealmTests_refresh_triggerNotifications__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** refresh_triggerNotifications ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+refresh_nonLooperThreadAdvances
+-------------------------------
+
+.. _io_realm_RealmTests_refresh_nonLooperThreadAdvances__:
+
+.. _io_realm_RealmTests_refresh_nonLooperThreadAdvances__:
+
+.. _io_realm_RealmTests_refresh_nonLooperThreadAdvances__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** refresh_nonLooperThreadAdvances ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+refresh_forceSynchronousNotifications
+-------------------------------------
+
+.. _io_realm_RealmTests_refresh_forceSynchronousNotifications__:
+
+.. _io_realm_RealmTests_refresh_forceSynchronousNotifications__:
+
+.. _io_realm_RealmTests_refresh_forceSynchronousNotifications__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** refresh_forceSynchronousNotifications ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+refresh_insideTransactionThrows
+-------------------------------
+
+.. _io_realm_RealmTests_refresh_insideTransactionThrows__:
+
+.. _io_realm_RealmTests_refresh_insideTransactionThrows__:
+
+.. _io_realm_RealmTests_refresh_insideTransactionThrows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** refresh_insideTransactionThrows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+beginTransaction_readOnlyThrows
+-------------------------------
+
+.. _io_realm_RealmTests_beginTransaction_readOnlyThrows__:
+
+.. _io_realm_RealmTests_beginTransaction_readOnlyThrows__:
+
+.. _io_realm_RealmTests_beginTransaction_readOnlyThrows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** beginTransaction_readOnlyThrows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getInstance_wrongSchemaInReadonlyThrows
+---------------------------------------
+
+.. _io_realm_RealmTests_getInstance_wrongSchemaInReadonlyThrows__:
+
+.. _io_realm_RealmTests_getInstance_wrongSchemaInReadonlyThrows__:
+
+.. _io_realm_RealmTests_getInstance_wrongSchemaInReadonlyThrows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** getInstance_wrongSchemaInReadonlyThrows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getInstance_migrationExceptionThrows_migrationBlockDefiend_realmInstancesShouldBeClosed
+---------------------------------------------------------------------------------------
+
+.. _io_realm_RealmTests_getInstance_migrationExceptionThrows_migrationBlockDefiend_realmInstancesShouldBeClosed__:
+
+.. _io_realm_RealmTests_getInstance_migrationExceptionThrows_migrationBlockDefiend_realmInstancesShouldBeClosed__:
+
+.. _io_realm_RealmTests_getInstance_migrationExceptionThrows_migrationBlockDefiend_realmInstancesShouldBeClosed__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** getInstance_migrationExceptionThrows_migrationBlockDefiend_realmInstancesShouldBeClosed ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+hittingMaxNumberOfVersionsThrows
+--------------------------------
+
+.. _io_realm_RealmTests_hittingMaxNumberOfVersionsThrows__:
+
+.. _io_realm_RealmTests_hittingMaxNumberOfVersionsThrows__:
+
+.. _io_realm_RealmTests_hittingMaxNumberOfVersionsThrows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** hittingMaxNumberOfVersionsThrows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+numberOfVersionsDecreasedOnClose
+--------------------------------
+
+.. _io_realm_RealmTests_numberOfVersionsDecreasedOnClose__:
+
+.. _io_realm_RealmTests_numberOfVersionsDecreasedOnClose__:
+
+.. _io_realm_RealmTests_numberOfVersionsDecreasedOnClose__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** numberOfVersionsDecreasedOnClose ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+encryption_stressTest
+---------------------
+
+.. _io_realm_RealmTests_encryption_stressTest__:
+
+.. _io_realm_RealmTests_encryption_stressTest__:
+
+.. _io_realm_RealmTests_encryption_stressTest__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** encryption_stressTest ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getNumberOfActiveVersions
+-------------------------
+
+.. _io_realm_RealmTests_getNumberOfActiveVersions__:
+
+.. _io_realm_RealmTests_getNumberOfActiveVersions__:
+
+.. _io_realm_RealmTests_getNumberOfActiveVersions__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** getNumberOfActiveVersions ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getCachedInstanceDoNotTriggerStrictMode
+---------------------------------------
+
+.. _io_realm_RealmTests_getCachedInstanceDoNotTriggerStrictMode__:
+
+.. _io_realm_RealmTests_getCachedInstanceDoNotTriggerStrictMode__:
+
+.. _io_realm_RealmTests_getCachedInstanceDoNotTriggerStrictMode__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** getCachedInstanceDoNotTriggerStrictMode ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getCachedInstanceFromOtherThreadDoNotTriggerStrictMode
+------------------------------------------------------
+
+.. _io_realm_RealmTests_getCachedInstanceFromOtherThreadDoNotTriggerStrictMode__:
+
+.. _io_realm_RealmTests_getCachedInstanceFromOtherThreadDoNotTriggerStrictMode__:
+
+.. _io_realm_RealmTests_getCachedInstanceFromOtherThreadDoNotTriggerStrictMode__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** getCachedInstanceFromOtherThreadDoNotTriggerStrictMode ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

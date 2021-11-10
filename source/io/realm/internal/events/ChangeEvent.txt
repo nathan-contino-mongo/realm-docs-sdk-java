@@ -1,0 +1,287 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class ChangeEvent
+^^^^^^^^^^^^^^^^^
+
+.. _io_realm_internal_events_ChangeEvent:
+
+
+
+io.realm.internal.events
+========================
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+ | 		:ref:`io.realm.mongodb.mongo.events.BaseChangeEvent <io_realm_mongodb_mongo_events_BaseChangeEvent>` 
+
+The representation of a MongoDB Realm change event
+
+
+.. seealso::
+
+
+   
+   - `Realm - Database change events <https://docs.mongodb.com/realm/triggers/database-triggers/index.html#database-change-events>`__ 
+      
+      
+      
+      
+   
+   
+   
+
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public **BsonDocument (?)**
+     - 
+       :ref:`getId <io_realm_internal_events_ChangeEvent_getId__>`  ()
+       
+       Returns the ID of the change event itself.
+       
+       
+       
+   
+   * - 
+       public :ref:`MongoNamespace <io_realm_mongodb_mongo_MongoNamespace>` 
+     - 
+       :ref:`getNamespace <io_realm_internal_events_ChangeEvent_getNamespace__>`  ()
+       
+       The namespace the change relates to.
+       
+       
+       
+   
+   * - 
+       public **BsonDocument (?)**
+     - 
+       :ref:`toBsonDocument <io_realm_internal_events_ChangeEvent_toBsonDocument__>`  ()
+       
+       Serializes this change event into a **BsonDocument (?)**.
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`ChangeEvent <io_realm_internal_events_ChangeEvent>` 
+     - 
+       :ref:`withoutUncommittedWrites <io_realm_internal_events_ChangeEvent_withoutUncommittedWrites__>`  ()
+       
+       Creates a copy of this change event with uncommitted writes flag set to false.
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+- Methods inherited from interface :ref:`io.realm.mongodb.mongo.events.BaseChangeEvent <io_realm_mongodb_mongo_events_BaseChangeEvent>` : 
+   
+   ``getOperationType`` , ``getFullDocument`` , ``getDocumentKey`` , ``getUpdateDescription`` , ``hasUncommittedWrites`` , ``toBsonDocument`` 
+   
+   
+
+
+
+
+Method Detail
+=============
+
+.. _getId:
+
+.. _getId__:
+
+.. _ChangeEvent_getId:
+
+.. _ChangeEvent_getId__:
+
+.. _io_realm_internal_events_ChangeEvent_getId:
+
+.. _io_realm_internal_events_ChangeEvent_getId__:
+
+
+
+getId
+-----
+
+.. _io_realm_internal_events_ChangeEvent_getId__:
+
+.. _io_realm_internal_events_ChangeEvent_getId__:
+
+.. _io_realm_internal_events_ChangeEvent_getId__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **BsonDocument (?)** getId ()
+   
+   * - Returns the ID of the change event itself.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getNamespace:
+
+.. _getNamespace__:
+
+.. _ChangeEvent_getNamespace:
+
+.. _ChangeEvent_getNamespace__:
+
+.. _io_realm_internal_events_ChangeEvent_getNamespace:
+
+.. _io_realm_internal_events_ChangeEvent_getNamespace__:
+
+
+
+getNamespace
+------------
+
+.. _io_realm_internal_events_ChangeEvent_getNamespace__:
+
+.. _io_realm_internal_events_ChangeEvent_getNamespace__:
+
+.. _io_realm_internal_events_ChangeEvent_getNamespace__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`MongoNamespace <io_realm_mongodb_mongo_MongoNamespace>`  getNamespace ()
+   
+   * - The namespace the change relates to.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _toBsonDocument:
+
+.. _toBsonDocument__:
+
+.. _ChangeEvent_toBsonDocument:
+
+.. _ChangeEvent_toBsonDocument__:
+
+.. _io_realm_internal_events_ChangeEvent_toBsonDocument:
+
+.. _io_realm_internal_events_ChangeEvent_toBsonDocument__:
+
+
+
+toBsonDocument
+--------------
+
+.. _io_realm_internal_events_ChangeEvent_toBsonDocument__:
+
+.. _io_realm_internal_events_ChangeEvent_toBsonDocument__:
+
+.. _io_realm_internal_events_ChangeEvent_toBsonDocument__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **BsonDocument (?)** toBsonDocument ()
+   
+   * - Serializes this change event into a **BsonDocument (?)**.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _withoutUncommittedWrites:
+
+.. _withoutUncommittedWrites__:
+
+.. _ChangeEvent_withoutUncommittedWrites:
+
+.. _ChangeEvent_withoutUncommittedWrites__:
+
+.. _io_realm_internal_events_ChangeEvent_withoutUncommittedWrites:
+
+.. _io_realm_internal_events_ChangeEvent_withoutUncommittedWrites__:
+
+
+
+withoutUncommittedWrites
+------------------------
+
+.. _io_realm_internal_events_ChangeEvent_withoutUncommittedWrites__:
+
+.. _io_realm_internal_events_ChangeEvent_withoutUncommittedWrites__:
+
+.. _io_realm_internal_events_ChangeEvent_withoutUncommittedWrites__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`ChangeEvent <io_realm_internal_events_ChangeEvent>`  withoutUncommittedWrites ()
+   
+   * - Creates a copy of this change event with uncommitted writes flag set to false.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

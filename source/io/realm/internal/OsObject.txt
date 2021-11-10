@@ -1,0 +1,701 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class OsObject
+^^^^^^^^^^^^^^
+
+.. _io_realm_internal_OsObject:
+
+
+
+io.realm.internal
+=================
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+*Implemented interfaces:*
+
+
+
+- :ref:`io.realm.internal.NativeObject <io_realm_internal_NativeObject>` 
+
+
+Java wrapper for Object Store's ``Object``  class.
+
+
+
+
+Constructors
+============
+
+
+
+- ``io.realm.internal.OsObject(OsSharedRealm, UncheckedRow)`` 
+
+
+
+
+Nested Class Summary
+====================
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Class and Description
+   
+   * - ``public static`` 
+     - ``io.realm.internal.OsObject.ObjectObserverPair`` 
+   
+   
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addListener <io_realm_internal_OsObject_addListener_T__RealmObjectChangeListener_T__>`  <**T (?)** >(**T (?)** observer,
+                                 :ref:`io.realm.RealmObjectChangeListener\<T> <io_realm_RealmObjectChangeListener>`  listener)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static :ref:`UncheckedRow <io_realm_internal_UncheckedRow>` 
+     - 
+       :ref:`create <io_realm_internal_OsObject_create_Table_>`  (:ref:`Table <io_realm_internal_Table>`  table)
+       
+       Create an object in the given table which doesn't have a primary key column defined.
+       
+       
+       
+   
+   * - 
+       public static **long**
+     - 
+       :ref:`createEmbeddedObject <io_realm_internal_OsObject_createEmbeddedObject_Table__long__long_>`  (:ref:`Table <io_realm_internal_Table>`  parentTable,
+                                                 **long** parentObjectKey,
+                                                 **long** parentColumnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static **long**
+     - 
+       :ref:`createRow <io_realm_internal_OsObject_createRow_Table_>`  (:ref:`Table <io_realm_internal_Table>`  table)
+       
+       Create a row in the given table which doesn't have a primary key column defined.
+       
+       
+       
+   
+   * - 
+       public static **long**
+     - 
+       :ref:`createRowWithPrimaryKey <io_realm_internal_OsObject_createRowWithPrimaryKey_Table__long__Object_>`  (:ref:`Table <io_realm_internal_Table>`  table,
+                                                    **long** primaryKeyColumnIndex,
+                                                    `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  primaryKeyValue)
+       
+       Create an object in the given table which has a primary key column defined, and set the primary key with given value.
+       
+       
+       
+   
+   * - 
+       public static :ref:`UncheckedRow <io_realm_internal_UncheckedRow>` 
+     - 
+       :ref:`createWithPrimaryKey <io_realm_internal_OsObject_createWithPrimaryKey_Table__Object_>`  (:ref:`Table <io_realm_internal_Table>`  table,
+                                                         `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  primaryKeyValue)
+       
+       Create an object in the given table which has a primary key column defined, and set the primary key with given value.
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`getNativeFinalizerPtr <io_realm_internal_OsObject_getNativeFinalizerPtr__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`getNativePtr <io_realm_internal_OsObject_getNativePtr__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`removeListener <io_realm_internal_OsObject_removeListener_T__RealmObjectChangeListener_T__>`  <**T (?)** >(**T (?)** observer,
+                                    :ref:`io.realm.RealmObjectChangeListener\<T> <io_realm_RealmObjectChangeListener>`  listener)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`removeListener <io_realm_internal_OsObject_removeListener_T_>`  <**T (?)** >(**T (?)** observer)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setObserverPairs <io_realm_internal_OsObject_setObserverPairs_ObserverPairList_OsObject_ObjectObserverPair__>`  (:ref:`io.realm.internal.ObserverPairList\<io.realm.internal.OsObject.ObjectObserverPair> <io_realm_internal_ObserverPairList>`  pairs)
+       
+       
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+
+
+
+
+Method Detail
+=============
+
+.. _addListener:
+
+.. _addListener__:
+
+.. _OsObject_addListener:
+
+.. _OsObject_addListener__:
+
+.. _io_realm_internal_OsObject_addListener:
+
+.. _io_realm_internal_OsObject_addListener__:
+
+
+
+addListener
+-----------
+
+.. _io_realm_internal_OsObject_addListener_T__RealmObjectChangeListener_T__:
+
+.. _io_realm_internal_OsObject_addListener_T_RealmObjectChangeListener_:
+
+.. _io_realm_internal_OsObject_addListener_T__RealmObjectChangeListener_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addListener <**T (?)** >(**T (?)** observer,
+                                 :ref:`io.realm.RealmObjectChangeListener\<T> <io_realm_RealmObjectChangeListener>`  listener)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _create:
+
+.. _create__:
+
+.. _OsObject_create:
+
+.. _OsObject_create__:
+
+.. _io_realm_internal_OsObject_create:
+
+.. _io_realm_internal_OsObject_create__:
+
+
+
+create
+------
+
+.. _io_realm_internal_OsObject_create_Table_:
+
+.. _io_realm_internal_OsObject_create_Table_:
+
+.. _io_realm_internal_OsObject_create_Table_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`UncheckedRow <io_realm_internal_UncheckedRow>`  create (:ref:`Table <io_realm_internal_Table>`  table)
+   
+   * - Create an object in the given table which doesn't have a primary key column defined.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``table`` - the table where the object is created. This table must be atached to :ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>` .
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _createEmbeddedObject:
+
+.. _createEmbeddedObject__:
+
+.. _OsObject_createEmbeddedObject:
+
+.. _OsObject_createEmbeddedObject__:
+
+.. _io_realm_internal_OsObject_createEmbeddedObject:
+
+.. _io_realm_internal_OsObject_createEmbeddedObject__:
+
+
+
+createEmbeddedObject
+--------------------
+
+.. _io_realm_internal_OsObject_createEmbeddedObject_Table__long__long_:
+
+.. _io_realm_internal_OsObject_createEmbeddedObject_Table_long_long_:
+
+.. _io_realm_internal_OsObject_createEmbeddedObject_Table__long__long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **long** createEmbeddedObject (:ref:`Table <io_realm_internal_Table>`  parentTable,
+                                                 **long** parentObjectKey,
+                                                 **long** parentColumnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _createRow:
+
+.. _createRow__:
+
+.. _OsObject_createRow:
+
+.. _OsObject_createRow__:
+
+.. _io_realm_internal_OsObject_createRow:
+
+.. _io_realm_internal_OsObject_createRow__:
+
+
+
+createRow
+---------
+
+.. _io_realm_internal_OsObject_createRow_Table_:
+
+.. _io_realm_internal_OsObject_createRow_Table_:
+
+.. _io_realm_internal_OsObject_createRow_Table_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **long** createRow (:ref:`Table <io_realm_internal_Table>`  table)
+   
+   * - Create a row in the given table which doesn't have a primary key column defined. This is used for the fast bulk insertion.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``table`` - the table where the object is created.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _createRowWithPrimaryKey:
+
+.. _createRowWithPrimaryKey__:
+
+.. _OsObject_createRowWithPrimaryKey:
+
+.. _OsObject_createRowWithPrimaryKey__:
+
+.. _io_realm_internal_OsObject_createRowWithPrimaryKey:
+
+.. _io_realm_internal_OsObject_createRowWithPrimaryKey__:
+
+
+
+createRowWithPrimaryKey
+-----------------------
+
+.. _io_realm_internal_OsObject_createRowWithPrimaryKey_Table__long__Object_:
+
+.. _io_realm_internal_OsObject_createRowWithPrimaryKey_Table_long_Object_:
+
+.. _io_realm_internal_OsObject_createRowWithPrimaryKey_Table__long__Object_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **long** createRowWithPrimaryKey (:ref:`Table <io_realm_internal_Table>`  table,
+                                                    **long** primaryKeyColumnIndex,
+                                                    `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  primaryKeyValue)
+   
+   * - Create an object in the given table which has a primary key column defined, and set the primary key with given value. This is used for the fast bulk insertion.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``table`` - the table where the object is created.
+          
+          
+          
+       - ``primaryKeyColumnIndex`` - the column index of primary key field.
+          
+          
+          
+       - ``primaryKeyValue`` - the primary key value.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _createWithPrimaryKey:
+
+.. _createWithPrimaryKey__:
+
+.. _OsObject_createWithPrimaryKey:
+
+.. _OsObject_createWithPrimaryKey__:
+
+.. _io_realm_internal_OsObject_createWithPrimaryKey:
+
+.. _io_realm_internal_OsObject_createWithPrimaryKey__:
+
+
+
+createWithPrimaryKey
+--------------------
+
+.. _io_realm_internal_OsObject_createWithPrimaryKey_Table__Object_:
+
+.. _io_realm_internal_OsObject_createWithPrimaryKey_Table_Object_:
+
+.. _io_realm_internal_OsObject_createWithPrimaryKey_Table__Object_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`UncheckedRow <io_realm_internal_UncheckedRow>`  createWithPrimaryKey (:ref:`Table <io_realm_internal_Table>`  table,
+                                                         `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  primaryKeyValue)
+   
+   * - Create an object in the given table which has a primary key column defined, and set the primary key with given value.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``table`` - the table where the object is created. This table must be atached to :ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>` .
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getNativeFinalizerPtr:
+
+.. _getNativeFinalizerPtr__:
+
+.. _OsObject_getNativeFinalizerPtr:
+
+.. _OsObject_getNativeFinalizerPtr__:
+
+.. _io_realm_internal_OsObject_getNativeFinalizerPtr:
+
+.. _io_realm_internal_OsObject_getNativeFinalizerPtr__:
+
+
+
+getNativeFinalizerPtr
+---------------------
+
+.. _io_realm_internal_OsObject_getNativeFinalizerPtr__:
+
+.. _io_realm_internal_OsObject_getNativeFinalizerPtr__:
+
+.. _io_realm_internal_OsObject_getNativeFinalizerPtr__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** getNativeFinalizerPtr ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getNativePtr:
+
+.. _getNativePtr__:
+
+.. _OsObject_getNativePtr:
+
+.. _OsObject_getNativePtr__:
+
+.. _io_realm_internal_OsObject_getNativePtr:
+
+.. _io_realm_internal_OsObject_getNativePtr__:
+
+
+
+getNativePtr
+------------
+
+.. _io_realm_internal_OsObject_getNativePtr__:
+
+.. _io_realm_internal_OsObject_getNativePtr__:
+
+.. _io_realm_internal_OsObject_getNativePtr__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** getNativePtr ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _removeListener:
+
+.. _removeListener__:
+
+.. _OsObject_removeListener:
+
+.. _OsObject_removeListener__:
+
+.. _io_realm_internal_OsObject_removeListener:
+
+.. _io_realm_internal_OsObject_removeListener__:
+
+
+
+removeListener
+--------------
+
+.. _io_realm_internal_OsObject_removeListener_T__RealmObjectChangeListener_T__:
+
+.. _io_realm_internal_OsObject_removeListener_T_RealmObjectChangeListener_:
+
+.. _io_realm_internal_OsObject_removeListener_T__RealmObjectChangeListener_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** removeListener <**T (?)** >(**T (?)** observer,
+                                    :ref:`io.realm.RealmObjectChangeListener\<T> <io_realm_RealmObjectChangeListener>`  listener)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_internal_OsObject_removeListener_T_:
+
+.. _io_realm_internal_OsObject_removeListener_T_:
+
+.. _io_realm_internal_OsObject_removeListener_T_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** removeListener <**T (?)** >(**T (?)** observer)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setObserverPairs:
+
+.. _setObserverPairs__:
+
+.. _OsObject_setObserverPairs:
+
+.. _OsObject_setObserverPairs__:
+
+.. _io_realm_internal_OsObject_setObserverPairs:
+
+.. _io_realm_internal_OsObject_setObserverPairs__:
+
+
+
+setObserverPairs
+----------------
+
+.. _io_realm_internal_OsObject_setObserverPairs_ObserverPairList_OsObject_ObjectObserverPair__:
+
+.. _io_realm_internal_OsObject_setObserverPairs_ObserverPairList_:
+
+.. _io_realm_internal_OsObject_setObserverPairs_ObserverPairList_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setObserverPairs (:ref:`io.realm.internal.ObserverPairList\<io.realm.internal.OsObject.ObjectObserverPair> <io_realm_internal_ObserverPairList>`  pairs)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

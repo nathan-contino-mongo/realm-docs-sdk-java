@@ -1,0 +1,2576 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class RxJavaTests
+^^^^^^^^^^^^^^^^^
+
+.. _io_realm_RxJavaTests:
+
+
+
+io.realm
+========
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+This class contains tests for the RxJava integration. Note that all tests must be run using @RunTestInLooperThread due to how the Observables are constructed.
+
+
+Constructors
+============
+
+
+
+- ``io.realm.RxJavaTests()`` 
+
+
+
+
+Field Summary
+=============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Field and Description
+   
+   * - ``public final io.realm.rule.RunInLooperThread`` 
+       
+       
+     - ``looperThread`` 
+       
+       
+   
+   
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setUp <io_realm_RxJavaTests_setUp__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`realmObject_emittedOnSubscribe <io_realm_RxJavaTests_realmObject_emittedOnSubscribe__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`realmObject_emitChangesetOnSubscribe <io_realm_RxJavaTests_realmObject_emitChangesetOnSubscribe__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`dynamicRealmObject_emitChangesetOnSubscribe <io_realm_RxJavaTests_dynamicRealmObject_emitChangesetOnSubscribe__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`realmObject_emittedOnUpdate <io_realm_RxJavaTests_realmObject_emittedOnUpdate__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`realmObject_emittedChangesetOnUpdate <io_realm_RxJavaTests_realmObject_emittedChangesetOnUpdate__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`dynamicRealmObject_emittedChangesetOnUpdate <io_realm_RxJavaTests_dynamicRealmObject_emittedChangesetOnUpdate__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`findFirst_emittedOnSubscribe <io_realm_RxJavaTests_findFirst_emittedOnSubscribe__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`findFirstAsync_emittedOnSubscribe <io_realm_RxJavaTests_findFirstAsync_emittedOnSubscribe__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`findFirstAsync_emittedOnUpdate <io_realm_RxJavaTests_findFirstAsync_emittedOnUpdate__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`findFirstAsync_emittedOnDelete <io_realm_RxJavaTests_findFirstAsync_emittedOnDelete__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`realmResults_emittedOnSubscribe <io_realm_RxJavaTests_realmResults_emittedOnSubscribe__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`realmResults_emittedChangesetOnSubscribe <io_realm_RxJavaTests_realmResults_emittedChangesetOnSubscribe__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`realmList_emittedOnSubscribe <io_realm_RxJavaTests_realmList_emittedOnSubscribe__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`realmList_emittedChangesetOnSubscribe <io_realm_RxJavaTests_realmList_emittedChangesetOnSubscribe__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`dynamicRealmResults_emittedOnSubscribe <io_realm_RxJavaTests_dynamicRealmResults_emittedOnSubscribe__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`dynamicRealmResults_emittedChangesetOnSubscribe <io_realm_RxJavaTests_dynamicRealmResults_emittedChangesetOnSubscribe__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`realmResults_emittedOnUpdate <io_realm_RxJavaTests_realmResults_emittedOnUpdate__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`realmResults_emittedChangesetOnUpdate <io_realm_RxJavaTests_realmResults_emittedChangesetOnUpdate__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`realmList_emittedOnUpdate <io_realm_RxJavaTests_realmList_emittedOnUpdate__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`realmList_emittedChangesetOnUpdate <io_realm_RxJavaTests_realmList_emittedChangesetOnUpdate__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`realmList_parentDeletionCompleteFlowable <io_realm_RxJavaTests_realmList_parentDeletionCompleteFlowable__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`realmList_parentDeletionCompleteObservable <io_realm_RxJavaTests_realmList_parentDeletionCompleteObservable__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`dynamicRealmList_parentDeletionCompleteFlowable <io_realm_RxJavaTests_dynamicRealmList_parentDeletionCompleteFlowable__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`dynamicRealmList_parentDeletionCompleteObservable <io_realm_RxJavaTests_dynamicRealmList_parentDeletionCompleteObservable__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`dynamicRealmResults_emittedOnUpdate <io_realm_RxJavaTests_dynamicRealmResults_emittedOnUpdate__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`dynamicRealmResults_emittedChangesetOnUpdate <io_realm_RxJavaTests_dynamicRealmResults_emittedChangesetOnUpdate__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`findAllAsync_emittedOnSubscribe <io_realm_RxJavaTests_findAllAsync_emittedOnSubscribe__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`findAllAsync_emittedOnUpdate <io_realm_RxJavaTests_findAllAsync_emittedOnUpdate__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`realm_emittedOnSubscribe <io_realm_RxJavaTests_realm_emittedOnSubscribe__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`realm_emittedOnUpdate <io_realm_RxJavaTests_realm_emittedOnUpdate__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`dynamicRealm_emittedOnSubscribe <io_realm_RxJavaTests_dynamicRealm_emittedOnSubscribe__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`dynamicRealm_emittedOnUpdate <io_realm_RxJavaTests_dynamicRealm_emittedOnUpdate__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`unsubscribe_sameThread <io_realm_RxJavaTests_unsubscribe_sameThread__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`unsubscribe_fromOtherThread <io_realm_RxJavaTests_unsubscribe_fromOtherThread__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`wrongGenericClassThrows <io_realm_RxJavaTests_wrongGenericClassThrows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`realm_closeInDoOnUnsubscribe <io_realm_RxJavaTests_realm_closeInDoOnUnsubscribe__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`dynamicRealm_closeInDoOnUnsubscribe <io_realm_RxJavaTests_dynamicRealm_closeInDoOnUnsubscribe__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`realmResults_closeInDoOnUnsubscribe <io_realm_RxJavaTests_realmResults_closeInDoOnUnsubscribe__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`realmList_closeInDoOnUnsubscribe <io_realm_RxJavaTests_realmList_closeInDoOnUnsubscribe__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`dynamicRealmResults_closeInDoOnUnsubscribe <io_realm_RxJavaTests_dynamicRealmResults_closeInDoOnUnsubscribe__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`realmObject_closeInDoOnUnsubscribe <io_realm_RxJavaTests_realmObject_closeInDoOnUnsubscribe__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`dynamicRealmObject_closeInDoOnUnsubscribe <io_realm_RxJavaTests_dynamicRealmObject_closeInDoOnUnsubscribe__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`realmResults_gcStressTest <io_realm_RxJavaTests_realmResults_gcStressTest__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`dynamicRealmResults_gcStressTest <io_realm_RxJavaTests_dynamicRealmResults_gcStressTest__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`realmObject_gcStressTest <io_realm_RxJavaTests_realmObject_gcStressTest__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`dynamicRealmObject_gcStressTest <io_realm_RxJavaTests_dynamicRealmObject_gcStressTest__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`asFlowable_frozenRealm <io_realm_RxJavaTests_asFlowable_frozenRealm__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`asFlowable_frozenDynamicRealm <io_realm_RxJavaTests_asFlowable_frozenDynamicRealm__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`asFlowable_frozenRealmResults <io_realm_RxJavaTests_asFlowable_frozenRealmResults__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`asChangesetObservable_frozenRealmResults <io_realm_RxJavaTests_asChangesetObservable_frozenRealmResults__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`asFlowable_frozenDynamicRealmResults <io_realm_RxJavaTests_asFlowable_frozenDynamicRealmResults__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`asChangesetObservable_frozenDynamicRealmResults <io_realm_RxJavaTests_asChangesetObservable_frozenDynamicRealmResults__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`asFlowable_frozenRealmList <io_realm_RxJavaTests_asFlowable_frozenRealmList__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`asChangesetObservable_frozenRealmList <io_realm_RxJavaTests_asChangesetObservable_frozenRealmList__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`asFlowable_frozenDynamicRealmList <io_realm_RxJavaTests_asFlowable_frozenDynamicRealmList__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`asChangesetObservable_frozenDynamicRealmList <io_realm_RxJavaTests_asChangesetObservable_frozenDynamicRealmList__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`asFlowable_frozenRealmObject <io_realm_RxJavaTests_asFlowable_frozenRealmObject__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`asChangesetObservable_frozenRealmObject <io_realm_RxJavaTests_asChangesetObservable_frozenRealmObject__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`asFlowable_frozenDynamicRealmObject <io_realm_RxJavaTests_asFlowable_frozenDynamicRealmObject__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`asChangesetObservable_frozenDynamicRealmObject <io_realm_RxJavaTests_asChangesetObservable_frozenDynamicRealmObject__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`realmResults_readableAcrossThreads <io_realm_RxJavaTests_realmResults_readableAcrossThreads__>`  ()
+       
+       
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+
+
+
+
+Field Detail
+============
+
+.. _io_realm_RxJavaTests_looperThread:
+
+
+
+``looperThread`` 
+-----------------
+
+
+
+
+Method Detail
+=============
+
+
+
+setUp
+-----
+
+.. _io_realm_RxJavaTests_setUp__:
+
+.. _io_realm_RxJavaTests_setUp__:
+
+.. _io_realm_RxJavaTests_setUp__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setUp ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+realmObject_emittedOnSubscribe
+------------------------------
+
+.. _io_realm_RxJavaTests_realmObject_emittedOnSubscribe__:
+
+.. _io_realm_RxJavaTests_realmObject_emittedOnSubscribe__:
+
+.. _io_realm_RxJavaTests_realmObject_emittedOnSubscribe__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** realmObject_emittedOnSubscribe ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+realmObject_emitChangesetOnSubscribe
+------------------------------------
+
+.. _io_realm_RxJavaTests_realmObject_emitChangesetOnSubscribe__:
+
+.. _io_realm_RxJavaTests_realmObject_emitChangesetOnSubscribe__:
+
+.. _io_realm_RxJavaTests_realmObject_emitChangesetOnSubscribe__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** realmObject_emitChangesetOnSubscribe ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+dynamicRealmObject_emitChangesetOnSubscribe
+-------------------------------------------
+
+.. _io_realm_RxJavaTests_dynamicRealmObject_emitChangesetOnSubscribe__:
+
+.. _io_realm_RxJavaTests_dynamicRealmObject_emitChangesetOnSubscribe__:
+
+.. _io_realm_RxJavaTests_dynamicRealmObject_emitChangesetOnSubscribe__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** dynamicRealmObject_emitChangesetOnSubscribe ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+realmObject_emittedOnUpdate
+---------------------------
+
+.. _io_realm_RxJavaTests_realmObject_emittedOnUpdate__:
+
+.. _io_realm_RxJavaTests_realmObject_emittedOnUpdate__:
+
+.. _io_realm_RxJavaTests_realmObject_emittedOnUpdate__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** realmObject_emittedOnUpdate ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+realmObject_emittedChangesetOnUpdate
+------------------------------------
+
+.. _io_realm_RxJavaTests_realmObject_emittedChangesetOnUpdate__:
+
+.. _io_realm_RxJavaTests_realmObject_emittedChangesetOnUpdate__:
+
+.. _io_realm_RxJavaTests_realmObject_emittedChangesetOnUpdate__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** realmObject_emittedChangesetOnUpdate ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+dynamicRealmObject_emittedChangesetOnUpdate
+-------------------------------------------
+
+.. _io_realm_RxJavaTests_dynamicRealmObject_emittedChangesetOnUpdate__:
+
+.. _io_realm_RxJavaTests_dynamicRealmObject_emittedChangesetOnUpdate__:
+
+.. _io_realm_RxJavaTests_dynamicRealmObject_emittedChangesetOnUpdate__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** dynamicRealmObject_emittedChangesetOnUpdate ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+findFirst_emittedOnSubscribe
+----------------------------
+
+.. _io_realm_RxJavaTests_findFirst_emittedOnSubscribe__:
+
+.. _io_realm_RxJavaTests_findFirst_emittedOnSubscribe__:
+
+.. _io_realm_RxJavaTests_findFirst_emittedOnSubscribe__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** findFirst_emittedOnSubscribe ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+findFirstAsync_emittedOnSubscribe
+---------------------------------
+
+.. _io_realm_RxJavaTests_findFirstAsync_emittedOnSubscribe__:
+
+.. _io_realm_RxJavaTests_findFirstAsync_emittedOnSubscribe__:
+
+.. _io_realm_RxJavaTests_findFirstAsync_emittedOnSubscribe__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** findFirstAsync_emittedOnSubscribe ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+findFirstAsync_emittedOnUpdate
+------------------------------
+
+.. _io_realm_RxJavaTests_findFirstAsync_emittedOnUpdate__:
+
+.. _io_realm_RxJavaTests_findFirstAsync_emittedOnUpdate__:
+
+.. _io_realm_RxJavaTests_findFirstAsync_emittedOnUpdate__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** findFirstAsync_emittedOnUpdate ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+findFirstAsync_emittedOnDelete
+------------------------------
+
+.. _io_realm_RxJavaTests_findFirstAsync_emittedOnDelete__:
+
+.. _io_realm_RxJavaTests_findFirstAsync_emittedOnDelete__:
+
+.. _io_realm_RxJavaTests_findFirstAsync_emittedOnDelete__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** findFirstAsync_emittedOnDelete ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+realmResults_emittedOnSubscribe
+-------------------------------
+
+.. _io_realm_RxJavaTests_realmResults_emittedOnSubscribe__:
+
+.. _io_realm_RxJavaTests_realmResults_emittedOnSubscribe__:
+
+.. _io_realm_RxJavaTests_realmResults_emittedOnSubscribe__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** realmResults_emittedOnSubscribe ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+realmResults_emittedChangesetOnSubscribe
+----------------------------------------
+
+.. _io_realm_RxJavaTests_realmResults_emittedChangesetOnSubscribe__:
+
+.. _io_realm_RxJavaTests_realmResults_emittedChangesetOnSubscribe__:
+
+.. _io_realm_RxJavaTests_realmResults_emittedChangesetOnSubscribe__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** realmResults_emittedChangesetOnSubscribe ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+realmList_emittedOnSubscribe
+----------------------------
+
+.. _io_realm_RxJavaTests_realmList_emittedOnSubscribe__:
+
+.. _io_realm_RxJavaTests_realmList_emittedOnSubscribe__:
+
+.. _io_realm_RxJavaTests_realmList_emittedOnSubscribe__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** realmList_emittedOnSubscribe ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+realmList_emittedChangesetOnSubscribe
+-------------------------------------
+
+.. _io_realm_RxJavaTests_realmList_emittedChangesetOnSubscribe__:
+
+.. _io_realm_RxJavaTests_realmList_emittedChangesetOnSubscribe__:
+
+.. _io_realm_RxJavaTests_realmList_emittedChangesetOnSubscribe__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** realmList_emittedChangesetOnSubscribe ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+dynamicRealmResults_emittedOnSubscribe
+--------------------------------------
+
+.. _io_realm_RxJavaTests_dynamicRealmResults_emittedOnSubscribe__:
+
+.. _io_realm_RxJavaTests_dynamicRealmResults_emittedOnSubscribe__:
+
+.. _io_realm_RxJavaTests_dynamicRealmResults_emittedOnSubscribe__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** dynamicRealmResults_emittedOnSubscribe ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+dynamicRealmResults_emittedChangesetOnSubscribe
+-----------------------------------------------
+
+.. _io_realm_RxJavaTests_dynamicRealmResults_emittedChangesetOnSubscribe__:
+
+.. _io_realm_RxJavaTests_dynamicRealmResults_emittedChangesetOnSubscribe__:
+
+.. _io_realm_RxJavaTests_dynamicRealmResults_emittedChangesetOnSubscribe__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** dynamicRealmResults_emittedChangesetOnSubscribe ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+realmResults_emittedOnUpdate
+----------------------------
+
+.. _io_realm_RxJavaTests_realmResults_emittedOnUpdate__:
+
+.. _io_realm_RxJavaTests_realmResults_emittedOnUpdate__:
+
+.. _io_realm_RxJavaTests_realmResults_emittedOnUpdate__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** realmResults_emittedOnUpdate ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+realmResults_emittedChangesetOnUpdate
+-------------------------------------
+
+.. _io_realm_RxJavaTests_realmResults_emittedChangesetOnUpdate__:
+
+.. _io_realm_RxJavaTests_realmResults_emittedChangesetOnUpdate__:
+
+.. _io_realm_RxJavaTests_realmResults_emittedChangesetOnUpdate__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** realmResults_emittedChangesetOnUpdate ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+realmList_emittedOnUpdate
+-------------------------
+
+.. _io_realm_RxJavaTests_realmList_emittedOnUpdate__:
+
+.. _io_realm_RxJavaTests_realmList_emittedOnUpdate__:
+
+.. _io_realm_RxJavaTests_realmList_emittedOnUpdate__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** realmList_emittedOnUpdate ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+realmList_emittedChangesetOnUpdate
+----------------------------------
+
+.. _io_realm_RxJavaTests_realmList_emittedChangesetOnUpdate__:
+
+.. _io_realm_RxJavaTests_realmList_emittedChangesetOnUpdate__:
+
+.. _io_realm_RxJavaTests_realmList_emittedChangesetOnUpdate__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** realmList_emittedChangesetOnUpdate ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+realmList_parentDeletionCompleteFlowable
+----------------------------------------
+
+.. _io_realm_RxJavaTests_realmList_parentDeletionCompleteFlowable__:
+
+.. _io_realm_RxJavaTests_realmList_parentDeletionCompleteFlowable__:
+
+.. _io_realm_RxJavaTests_realmList_parentDeletionCompleteFlowable__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** realmList_parentDeletionCompleteFlowable ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+realmList_parentDeletionCompleteObservable
+------------------------------------------
+
+.. _io_realm_RxJavaTests_realmList_parentDeletionCompleteObservable__:
+
+.. _io_realm_RxJavaTests_realmList_parentDeletionCompleteObservable__:
+
+.. _io_realm_RxJavaTests_realmList_parentDeletionCompleteObservable__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** realmList_parentDeletionCompleteObservable ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+dynamicRealmList_parentDeletionCompleteFlowable
+-----------------------------------------------
+
+.. _io_realm_RxJavaTests_dynamicRealmList_parentDeletionCompleteFlowable__:
+
+.. _io_realm_RxJavaTests_dynamicRealmList_parentDeletionCompleteFlowable__:
+
+.. _io_realm_RxJavaTests_dynamicRealmList_parentDeletionCompleteFlowable__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** dynamicRealmList_parentDeletionCompleteFlowable ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+dynamicRealmList_parentDeletionCompleteObservable
+-------------------------------------------------
+
+.. _io_realm_RxJavaTests_dynamicRealmList_parentDeletionCompleteObservable__:
+
+.. _io_realm_RxJavaTests_dynamicRealmList_parentDeletionCompleteObservable__:
+
+.. _io_realm_RxJavaTests_dynamicRealmList_parentDeletionCompleteObservable__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** dynamicRealmList_parentDeletionCompleteObservable ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+dynamicRealmResults_emittedOnUpdate
+-----------------------------------
+
+.. _io_realm_RxJavaTests_dynamicRealmResults_emittedOnUpdate__:
+
+.. _io_realm_RxJavaTests_dynamicRealmResults_emittedOnUpdate__:
+
+.. _io_realm_RxJavaTests_dynamicRealmResults_emittedOnUpdate__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** dynamicRealmResults_emittedOnUpdate ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+dynamicRealmResults_emittedChangesetOnUpdate
+--------------------------------------------
+
+.. _io_realm_RxJavaTests_dynamicRealmResults_emittedChangesetOnUpdate__:
+
+.. _io_realm_RxJavaTests_dynamicRealmResults_emittedChangesetOnUpdate__:
+
+.. _io_realm_RxJavaTests_dynamicRealmResults_emittedChangesetOnUpdate__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** dynamicRealmResults_emittedChangesetOnUpdate ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+findAllAsync_emittedOnSubscribe
+-------------------------------
+
+.. _io_realm_RxJavaTests_findAllAsync_emittedOnSubscribe__:
+
+.. _io_realm_RxJavaTests_findAllAsync_emittedOnSubscribe__:
+
+.. _io_realm_RxJavaTests_findAllAsync_emittedOnSubscribe__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** findAllAsync_emittedOnSubscribe ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+findAllAsync_emittedOnUpdate
+----------------------------
+
+.. _io_realm_RxJavaTests_findAllAsync_emittedOnUpdate__:
+
+.. _io_realm_RxJavaTests_findAllAsync_emittedOnUpdate__:
+
+.. _io_realm_RxJavaTests_findAllAsync_emittedOnUpdate__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** findAllAsync_emittedOnUpdate ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+realm_emittedOnSubscribe
+------------------------
+
+.. _io_realm_RxJavaTests_realm_emittedOnSubscribe__:
+
+.. _io_realm_RxJavaTests_realm_emittedOnSubscribe__:
+
+.. _io_realm_RxJavaTests_realm_emittedOnSubscribe__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** realm_emittedOnSubscribe ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+realm_emittedOnUpdate
+---------------------
+
+.. _io_realm_RxJavaTests_realm_emittedOnUpdate__:
+
+.. _io_realm_RxJavaTests_realm_emittedOnUpdate__:
+
+.. _io_realm_RxJavaTests_realm_emittedOnUpdate__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** realm_emittedOnUpdate ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+dynamicRealm_emittedOnSubscribe
+-------------------------------
+
+.. _io_realm_RxJavaTests_dynamicRealm_emittedOnSubscribe__:
+
+.. _io_realm_RxJavaTests_dynamicRealm_emittedOnSubscribe__:
+
+.. _io_realm_RxJavaTests_dynamicRealm_emittedOnSubscribe__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** dynamicRealm_emittedOnSubscribe ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+dynamicRealm_emittedOnUpdate
+----------------------------
+
+.. _io_realm_RxJavaTests_dynamicRealm_emittedOnUpdate__:
+
+.. _io_realm_RxJavaTests_dynamicRealm_emittedOnUpdate__:
+
+.. _io_realm_RxJavaTests_dynamicRealm_emittedOnUpdate__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** dynamicRealm_emittedOnUpdate ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+unsubscribe_sameThread
+----------------------
+
+.. _io_realm_RxJavaTests_unsubscribe_sameThread__:
+
+.. _io_realm_RxJavaTests_unsubscribe_sameThread__:
+
+.. _io_realm_RxJavaTests_unsubscribe_sameThread__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** unsubscribe_sameThread ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+unsubscribe_fromOtherThread
+---------------------------
+
+.. _io_realm_RxJavaTests_unsubscribe_fromOtherThread__:
+
+.. _io_realm_RxJavaTests_unsubscribe_fromOtherThread__:
+
+.. _io_realm_RxJavaTests_unsubscribe_fromOtherThread__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** unsubscribe_fromOtherThread ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+wrongGenericClassThrows
+-----------------------
+
+.. _io_realm_RxJavaTests_wrongGenericClassThrows__:
+
+.. _io_realm_RxJavaTests_wrongGenericClassThrows__:
+
+.. _io_realm_RxJavaTests_wrongGenericClassThrows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** wrongGenericClassThrows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+realm_closeInDoOnUnsubscribe
+----------------------------
+
+.. _io_realm_RxJavaTests_realm_closeInDoOnUnsubscribe__:
+
+.. _io_realm_RxJavaTests_realm_closeInDoOnUnsubscribe__:
+
+.. _io_realm_RxJavaTests_realm_closeInDoOnUnsubscribe__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** realm_closeInDoOnUnsubscribe ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+dynamicRealm_closeInDoOnUnsubscribe
+-----------------------------------
+
+.. _io_realm_RxJavaTests_dynamicRealm_closeInDoOnUnsubscribe__:
+
+.. _io_realm_RxJavaTests_dynamicRealm_closeInDoOnUnsubscribe__:
+
+.. _io_realm_RxJavaTests_dynamicRealm_closeInDoOnUnsubscribe__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** dynamicRealm_closeInDoOnUnsubscribe ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+realmResults_closeInDoOnUnsubscribe
+-----------------------------------
+
+.. _io_realm_RxJavaTests_realmResults_closeInDoOnUnsubscribe__:
+
+.. _io_realm_RxJavaTests_realmResults_closeInDoOnUnsubscribe__:
+
+.. _io_realm_RxJavaTests_realmResults_closeInDoOnUnsubscribe__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** realmResults_closeInDoOnUnsubscribe ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+realmList_closeInDoOnUnsubscribe
+--------------------------------
+
+.. _io_realm_RxJavaTests_realmList_closeInDoOnUnsubscribe__:
+
+.. _io_realm_RxJavaTests_realmList_closeInDoOnUnsubscribe__:
+
+.. _io_realm_RxJavaTests_realmList_closeInDoOnUnsubscribe__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** realmList_closeInDoOnUnsubscribe ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+dynamicRealmResults_closeInDoOnUnsubscribe
+------------------------------------------
+
+.. _io_realm_RxJavaTests_dynamicRealmResults_closeInDoOnUnsubscribe__:
+
+.. _io_realm_RxJavaTests_dynamicRealmResults_closeInDoOnUnsubscribe__:
+
+.. _io_realm_RxJavaTests_dynamicRealmResults_closeInDoOnUnsubscribe__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** dynamicRealmResults_closeInDoOnUnsubscribe ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+realmObject_closeInDoOnUnsubscribe
+----------------------------------
+
+.. _io_realm_RxJavaTests_realmObject_closeInDoOnUnsubscribe__:
+
+.. _io_realm_RxJavaTests_realmObject_closeInDoOnUnsubscribe__:
+
+.. _io_realm_RxJavaTests_realmObject_closeInDoOnUnsubscribe__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** realmObject_closeInDoOnUnsubscribe ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+dynamicRealmObject_closeInDoOnUnsubscribe
+-----------------------------------------
+
+.. _io_realm_RxJavaTests_dynamicRealmObject_closeInDoOnUnsubscribe__:
+
+.. _io_realm_RxJavaTests_dynamicRealmObject_closeInDoOnUnsubscribe__:
+
+.. _io_realm_RxJavaTests_dynamicRealmObject_closeInDoOnUnsubscribe__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** dynamicRealmObject_closeInDoOnUnsubscribe ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+realmResults_gcStressTest
+-------------------------
+
+.. _io_realm_RxJavaTests_realmResults_gcStressTest__:
+
+.. _io_realm_RxJavaTests_realmResults_gcStressTest__:
+
+.. _io_realm_RxJavaTests_realmResults_gcStressTest__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** realmResults_gcStressTest ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+dynamicRealmResults_gcStressTest
+--------------------------------
+
+.. _io_realm_RxJavaTests_dynamicRealmResults_gcStressTest__:
+
+.. _io_realm_RxJavaTests_dynamicRealmResults_gcStressTest__:
+
+.. _io_realm_RxJavaTests_dynamicRealmResults_gcStressTest__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** dynamicRealmResults_gcStressTest ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+realmObject_gcStressTest
+------------------------
+
+.. _io_realm_RxJavaTests_realmObject_gcStressTest__:
+
+.. _io_realm_RxJavaTests_realmObject_gcStressTest__:
+
+.. _io_realm_RxJavaTests_realmObject_gcStressTest__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** realmObject_gcStressTest ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+dynamicRealmObject_gcStressTest
+-------------------------------
+
+.. _io_realm_RxJavaTests_dynamicRealmObject_gcStressTest__:
+
+.. _io_realm_RxJavaTests_dynamicRealmObject_gcStressTest__:
+
+.. _io_realm_RxJavaTests_dynamicRealmObject_gcStressTest__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** dynamicRealmObject_gcStressTest ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+asFlowable_frozenRealm
+----------------------
+
+.. _io_realm_RxJavaTests_asFlowable_frozenRealm__:
+
+.. _io_realm_RxJavaTests_asFlowable_frozenRealm__:
+
+.. _io_realm_RxJavaTests_asFlowable_frozenRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** asFlowable_frozenRealm ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+asFlowable_frozenDynamicRealm
+-----------------------------
+
+.. _io_realm_RxJavaTests_asFlowable_frozenDynamicRealm__:
+
+.. _io_realm_RxJavaTests_asFlowable_frozenDynamicRealm__:
+
+.. _io_realm_RxJavaTests_asFlowable_frozenDynamicRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** asFlowable_frozenDynamicRealm ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+asFlowable_frozenRealmResults
+-----------------------------
+
+.. _io_realm_RxJavaTests_asFlowable_frozenRealmResults__:
+
+.. _io_realm_RxJavaTests_asFlowable_frozenRealmResults__:
+
+.. _io_realm_RxJavaTests_asFlowable_frozenRealmResults__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** asFlowable_frozenRealmResults ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+asChangesetObservable_frozenRealmResults
+----------------------------------------
+
+.. _io_realm_RxJavaTests_asChangesetObservable_frozenRealmResults__:
+
+.. _io_realm_RxJavaTests_asChangesetObservable_frozenRealmResults__:
+
+.. _io_realm_RxJavaTests_asChangesetObservable_frozenRealmResults__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** asChangesetObservable_frozenRealmResults ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+asFlowable_frozenDynamicRealmResults
+------------------------------------
+
+.. _io_realm_RxJavaTests_asFlowable_frozenDynamicRealmResults__:
+
+.. _io_realm_RxJavaTests_asFlowable_frozenDynamicRealmResults__:
+
+.. _io_realm_RxJavaTests_asFlowable_frozenDynamicRealmResults__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** asFlowable_frozenDynamicRealmResults ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+asChangesetObservable_frozenDynamicRealmResults
+-----------------------------------------------
+
+.. _io_realm_RxJavaTests_asChangesetObservable_frozenDynamicRealmResults__:
+
+.. _io_realm_RxJavaTests_asChangesetObservable_frozenDynamicRealmResults__:
+
+.. _io_realm_RxJavaTests_asChangesetObservable_frozenDynamicRealmResults__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** asChangesetObservable_frozenDynamicRealmResults ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+asFlowable_frozenRealmList
+--------------------------
+
+.. _io_realm_RxJavaTests_asFlowable_frozenRealmList__:
+
+.. _io_realm_RxJavaTests_asFlowable_frozenRealmList__:
+
+.. _io_realm_RxJavaTests_asFlowable_frozenRealmList__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** asFlowable_frozenRealmList ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+asChangesetObservable_frozenRealmList
+-------------------------------------
+
+.. _io_realm_RxJavaTests_asChangesetObservable_frozenRealmList__:
+
+.. _io_realm_RxJavaTests_asChangesetObservable_frozenRealmList__:
+
+.. _io_realm_RxJavaTests_asChangesetObservable_frozenRealmList__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** asChangesetObservable_frozenRealmList ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+asFlowable_frozenDynamicRealmList
+---------------------------------
+
+.. _io_realm_RxJavaTests_asFlowable_frozenDynamicRealmList__:
+
+.. _io_realm_RxJavaTests_asFlowable_frozenDynamicRealmList__:
+
+.. _io_realm_RxJavaTests_asFlowable_frozenDynamicRealmList__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** asFlowable_frozenDynamicRealmList ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+asChangesetObservable_frozenDynamicRealmList
+--------------------------------------------
+
+.. _io_realm_RxJavaTests_asChangesetObservable_frozenDynamicRealmList__:
+
+.. _io_realm_RxJavaTests_asChangesetObservable_frozenDynamicRealmList__:
+
+.. _io_realm_RxJavaTests_asChangesetObservable_frozenDynamicRealmList__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** asChangesetObservable_frozenDynamicRealmList ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+asFlowable_frozenRealmObject
+----------------------------
+
+.. _io_realm_RxJavaTests_asFlowable_frozenRealmObject__:
+
+.. _io_realm_RxJavaTests_asFlowable_frozenRealmObject__:
+
+.. _io_realm_RxJavaTests_asFlowable_frozenRealmObject__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** asFlowable_frozenRealmObject ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+asChangesetObservable_frozenRealmObject
+---------------------------------------
+
+.. _io_realm_RxJavaTests_asChangesetObservable_frozenRealmObject__:
+
+.. _io_realm_RxJavaTests_asChangesetObservable_frozenRealmObject__:
+
+.. _io_realm_RxJavaTests_asChangesetObservable_frozenRealmObject__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** asChangesetObservable_frozenRealmObject ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+asFlowable_frozenDynamicRealmObject
+-----------------------------------
+
+.. _io_realm_RxJavaTests_asFlowable_frozenDynamicRealmObject__:
+
+.. _io_realm_RxJavaTests_asFlowable_frozenDynamicRealmObject__:
+
+.. _io_realm_RxJavaTests_asFlowable_frozenDynamicRealmObject__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** asFlowable_frozenDynamicRealmObject ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+asChangesetObservable_frozenDynamicRealmObject
+----------------------------------------------
+
+.. _io_realm_RxJavaTests_asChangesetObservable_frozenDynamicRealmObject__:
+
+.. _io_realm_RxJavaTests_asChangesetObservable_frozenDynamicRealmObject__:
+
+.. _io_realm_RxJavaTests_asChangesetObservable_frozenDynamicRealmObject__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** asChangesetObservable_frozenDynamicRealmObject ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+realmResults_readableAcrossThreads
+----------------------------------
+
+.. _io_realm_RxJavaTests_realmResults_readableAcrossThreads__:
+
+.. _io_realm_RxJavaTests_realmResults_readableAcrossThreads__:
+
+.. _io_realm_RxJavaTests_realmResults_readableAcrossThreads__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** realmResults_readableAcrossThreads ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

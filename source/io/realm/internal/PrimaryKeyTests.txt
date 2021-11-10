@@ -1,0 +1,656 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class PrimaryKeyTests
+^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_internal_PrimaryKeyTests:
+
+
+
+io.realm.internal
+=================
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+
+
+
+Constructors
+============
+
+
+
+- ``io.realm.internal.PrimaryKeyTests()`` 
+
+
+
+
+Field Summary
+=============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Field and Description
+   
+   * - ``public final io.realm.TestRealmConfigurationFactory`` 
+       
+       
+     - ``configFactory`` 
+       
+       
+   
+   
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setUp <io_realm_internal_PrimaryKeyTests_setUp__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`tearDown <io_realm_internal_PrimaryKeyTests_tearDown__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`removingPrimaryKeyRemovesConstraint_typeSetters <io_realm_internal_PrimaryKeyTests_removingPrimaryKeyRemovesConstraint_typeSetters__>`  ()
+       
+       This test surfaces a bunch of problems, most of them seem to be around caching of the schema during a transaction 1) Removing the primary key do not invalidate the cache in RealmSchema and those cached are ImmutableRealmObjectSchema so do not change when the primary key is removed.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addEmptyRowWithPrimaryKeyWrongTypeStringThrows <io_realm_internal_PrimaryKeyTests_addEmptyRowWithPrimaryKeyWrongTypeStringThrows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addEmptyRowWithPrimaryKeyNullString <io_realm_internal_PrimaryKeyTests_addEmptyRowWithPrimaryKeyNullString__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addEmptyRowWithPrimaryKeyWrongTypeIntegerThrows <io_realm_internal_PrimaryKeyTests_addEmptyRowWithPrimaryKeyWrongTypeIntegerThrows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addEmptyRowWithPrimaryKeyString <io_realm_internal_PrimaryKeyTests_addEmptyRowWithPrimaryKeyString__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addEmptyRowWithPrimaryKeyLong <io_realm_internal_PrimaryKeyTests_addEmptyRowWithPrimaryKeyLong__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`createTableWithIntegerPrimaryKeyNullable <io_realm_internal_PrimaryKeyTests_createTableWithIntegerPrimaryKeyNullable__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`createTableWithStringPrimaryKeyNullable <io_realm_internal_PrimaryKeyTests_createTableWithStringPrimaryKeyNullable__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`createTableWithObjectIdPrimaryKeyNullable <io_realm_internal_PrimaryKeyTests_createTableWithObjectIdPrimaryKeyNullable__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`createTableWithIntegerPrimaryKey <io_realm_internal_PrimaryKeyTests_createTableWithIntegerPrimaryKey__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`createTableWithStringPrimaryKey <io_realm_internal_PrimaryKeyTests_createTableWithStringPrimaryKey__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`createTableWithObjectIdPrimaryKey <io_realm_internal_PrimaryKeyTests_createTableWithObjectIdPrimaryKey__>`  ()
+       
+       
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+
+
+
+
+Field Detail
+============
+
+.. _io_realm_internal_PrimaryKeyTests_configFactory:
+
+
+
+``configFactory`` 
+------------------
+
+
+
+
+Method Detail
+=============
+
+
+
+setUp
+-----
+
+.. _io_realm_internal_PrimaryKeyTests_setUp__:
+
+.. _io_realm_internal_PrimaryKeyTests_setUp__:
+
+.. _io_realm_internal_PrimaryKeyTests_setUp__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setUp ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+tearDown
+--------
+
+.. _io_realm_internal_PrimaryKeyTests_tearDown__:
+
+.. _io_realm_internal_PrimaryKeyTests_tearDown__:
+
+.. _io_realm_internal_PrimaryKeyTests_tearDown__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** tearDown ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+removingPrimaryKeyRemovesConstraint_typeSetters
+-----------------------------------------------
+
+.. _io_realm_internal_PrimaryKeyTests_removingPrimaryKeyRemovesConstraint_typeSetters__:
+
+.. _io_realm_internal_PrimaryKeyTests_removingPrimaryKeyRemovesConstraint_typeSetters__:
+
+.. _io_realm_internal_PrimaryKeyTests_removingPrimaryKeyRemovesConstraint_typeSetters__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** removingPrimaryKeyRemovesConstraint_typeSetters ()
+   
+   * - This test surfaces a bunch of problems, most of them seem to be around caching of the schema during a transaction 1) Removing the primary key do not invalidate the cache in RealmSchema and those cached are ImmutableRealmObjectSchema so do not change when the primary key is removed. 2) Addding \`schema.refresh()\` to RealmObjectSchema.removePrimaryKey()\` causes RealmPrimaryKeyConstraintException anyway. Unclear why.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+addEmptyRowWithPrimaryKeyWrongTypeStringThrows
+----------------------------------------------
+
+.. _io_realm_internal_PrimaryKeyTests_addEmptyRowWithPrimaryKeyWrongTypeStringThrows__:
+
+.. _io_realm_internal_PrimaryKeyTests_addEmptyRowWithPrimaryKeyWrongTypeStringThrows__:
+
+.. _io_realm_internal_PrimaryKeyTests_addEmptyRowWithPrimaryKeyWrongTypeStringThrows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addEmptyRowWithPrimaryKeyWrongTypeStringThrows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+addEmptyRowWithPrimaryKeyNullString
+-----------------------------------
+
+.. _io_realm_internal_PrimaryKeyTests_addEmptyRowWithPrimaryKeyNullString__:
+
+.. _io_realm_internal_PrimaryKeyTests_addEmptyRowWithPrimaryKeyNullString__:
+
+.. _io_realm_internal_PrimaryKeyTests_addEmptyRowWithPrimaryKeyNullString__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addEmptyRowWithPrimaryKeyNullString ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+addEmptyRowWithPrimaryKeyWrongTypeIntegerThrows
+-----------------------------------------------
+
+.. _io_realm_internal_PrimaryKeyTests_addEmptyRowWithPrimaryKeyWrongTypeIntegerThrows__:
+
+.. _io_realm_internal_PrimaryKeyTests_addEmptyRowWithPrimaryKeyWrongTypeIntegerThrows__:
+
+.. _io_realm_internal_PrimaryKeyTests_addEmptyRowWithPrimaryKeyWrongTypeIntegerThrows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addEmptyRowWithPrimaryKeyWrongTypeIntegerThrows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+addEmptyRowWithPrimaryKeyString
+-------------------------------
+
+.. _io_realm_internal_PrimaryKeyTests_addEmptyRowWithPrimaryKeyString__:
+
+.. _io_realm_internal_PrimaryKeyTests_addEmptyRowWithPrimaryKeyString__:
+
+.. _io_realm_internal_PrimaryKeyTests_addEmptyRowWithPrimaryKeyString__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addEmptyRowWithPrimaryKeyString ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+addEmptyRowWithPrimaryKeyLong
+-----------------------------
+
+.. _io_realm_internal_PrimaryKeyTests_addEmptyRowWithPrimaryKeyLong__:
+
+.. _io_realm_internal_PrimaryKeyTests_addEmptyRowWithPrimaryKeyLong__:
+
+.. _io_realm_internal_PrimaryKeyTests_addEmptyRowWithPrimaryKeyLong__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addEmptyRowWithPrimaryKeyLong ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+createTableWithIntegerPrimaryKeyNullable
+----------------------------------------
+
+.. _io_realm_internal_PrimaryKeyTests_createTableWithIntegerPrimaryKeyNullable__:
+
+.. _io_realm_internal_PrimaryKeyTests_createTableWithIntegerPrimaryKeyNullable__:
+
+.. _io_realm_internal_PrimaryKeyTests_createTableWithIntegerPrimaryKeyNullable__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** createTableWithIntegerPrimaryKeyNullable ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+createTableWithStringPrimaryKeyNullable
+---------------------------------------
+
+.. _io_realm_internal_PrimaryKeyTests_createTableWithStringPrimaryKeyNullable__:
+
+.. _io_realm_internal_PrimaryKeyTests_createTableWithStringPrimaryKeyNullable__:
+
+.. _io_realm_internal_PrimaryKeyTests_createTableWithStringPrimaryKeyNullable__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** createTableWithStringPrimaryKeyNullable ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+createTableWithObjectIdPrimaryKeyNullable
+-----------------------------------------
+
+.. _io_realm_internal_PrimaryKeyTests_createTableWithObjectIdPrimaryKeyNullable__:
+
+.. _io_realm_internal_PrimaryKeyTests_createTableWithObjectIdPrimaryKeyNullable__:
+
+.. _io_realm_internal_PrimaryKeyTests_createTableWithObjectIdPrimaryKeyNullable__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** createTableWithObjectIdPrimaryKeyNullable ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+createTableWithIntegerPrimaryKey
+--------------------------------
+
+.. _io_realm_internal_PrimaryKeyTests_createTableWithIntegerPrimaryKey__:
+
+.. _io_realm_internal_PrimaryKeyTests_createTableWithIntegerPrimaryKey__:
+
+.. _io_realm_internal_PrimaryKeyTests_createTableWithIntegerPrimaryKey__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** createTableWithIntegerPrimaryKey ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+createTableWithStringPrimaryKey
+-------------------------------
+
+.. _io_realm_internal_PrimaryKeyTests_createTableWithStringPrimaryKey__:
+
+.. _io_realm_internal_PrimaryKeyTests_createTableWithStringPrimaryKey__:
+
+.. _io_realm_internal_PrimaryKeyTests_createTableWithStringPrimaryKey__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** createTableWithStringPrimaryKey ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+createTableWithObjectIdPrimaryKey
+---------------------------------
+
+.. _io_realm_internal_PrimaryKeyTests_createTableWithObjectIdPrimaryKey__:
+
+.. _io_realm_internal_PrimaryKeyTests_createTableWithObjectIdPrimaryKey__:
+
+.. _io_realm_internal_PrimaryKeyTests_createTableWithObjectIdPrimaryKey__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** createTableWithObjectIdPrimaryKey ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

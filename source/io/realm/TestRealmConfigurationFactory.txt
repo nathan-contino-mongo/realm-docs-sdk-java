@@ -1,0 +1,802 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class TestRealmConfigurationFactory
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_TestRealmConfigurationFactory:
+
+
+
+io.realm
+========
+
+**TemporaryFolder (?)**
+ | 		`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+Rule that creates the :ref:`RealmConfiguration  <io_realm_RealmConfiguration>`  in a temporary directory and deletes the Realm created with that configuration once the test finishes. Be sure to close all Realm instances before finishing the test. Otherwise :ref:`Realm.deleteRealm(RealmConfiguration) <io_realm_Realm_deleteRealm_RealmConfiguration_>`  will throw an exception in the :ref:`after() <io_realm_TestRealmConfigurationFactory_after__>`  method. The temp directory will be deleted regardless if the :ref:`Realm.deleteRealm(RealmConfiguration) <io_realm_Realm_deleteRealm_RealmConfiguration_>`  fails or not.
+
+
+
+
+Constructors
+============
+
+
+
+- ``io.realm.TestRealmConfigurationFactory()`` 
+
+
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public **Statement (?)**
+     - 
+       :ref:`apply <io_realm_TestRealmConfigurationFactory_apply_Statement__Description_>`  (**Statement (?)** base,
+                                **Description (?)** description)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected **void**
+     - 
+       :ref:`before <io_realm_TestRealmConfigurationFactory_before__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       protected **void**
+     - 
+       :ref:`after <io_realm_TestRealmConfigurationFactory_after__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`create <io_realm_TestRealmConfigurationFactory_create__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public `File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__ 
+     - 
+       :ref:`getRoot <io_realm_TestRealmConfigurationFactory_getRoot__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       protected **void**
+     - 
+       :ref:`setTestName <io_realm_TestRealmConfigurationFactory_setTestName_Description_>`  (**Description (?)** description)
+       
+       To be called in the :ref:`apply(Statement, Description) <io_realm_TestRealmConfigurationFactory_apply_Statement__Description_>` .
+       
+       
+       
+       
+       
+   
+   * - 
+       public synchronized **void**
+     - 
+       :ref:`setUnitTestFailed <io_realm_TestRealmConfigurationFactory_setUnitTestFailed__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` 
+     - 
+       :ref:`createConfigurationBuilder <io_realm_TestRealmConfigurationFactory_createConfigurationBuilder__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`RealmConfiguration <io_realm_RealmConfiguration>` 
+     - 
+       :ref:`createSchemaConfiguration <io_realm_TestRealmConfigurationFactory_createSchemaConfiguration_boolean__Class___extends_RealmModel___Class___extends_RealmModel_____>`  (**boolean** exclude,
+                                                             `java.lang.Class\<? extends io.realm.RealmModel> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  firstClass,
+                                                             `java.lang.Class[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  additionalClasses)
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`RealmConfiguration <io_realm_RealmConfiguration>` 
+     - 
+       :ref:`createConfiguration <io_realm_TestRealmConfigurationFactory_createConfiguration__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`RealmConfiguration <io_realm_RealmConfiguration>` 
+     - 
+       :ref:`createConfiguration <io_realm_TestRealmConfigurationFactory_createConfiguration_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`RealmConfiguration <io_realm_RealmConfiguration>` 
+     - 
+       :ref:`createConfiguration <io_realm_TestRealmConfigurationFactory_createConfiguration_String__String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  subDir,
+                                                       `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`RealmConfiguration <io_realm_RealmConfiguration>` 
+     - 
+       :ref:`createConfiguration <io_realm_TestRealmConfigurationFactory_createConfiguration_String__byte[]_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
+                                                       **byte[]** key)
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`RealmConfiguration <io_realm_RealmConfiguration>` 
+     - 
+       :ref:`createConfiguration <io_realm_TestRealmConfigurationFactory_createConfiguration_String__Object_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
+                                                       `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  module)
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`RealmConfiguration <io_realm_RealmConfiguration>` 
+     - 
+       :ref:`createConfiguration <io_realm_TestRealmConfigurationFactory_createConfiguration_String__String__Object__byte[]__boolean__Class___extends_RealmModel___Class___extends_RealmModel_____>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  subDir,
+                                                       `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
+                                                       `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  module,
+                                                       **byte[]** key,
+                                                       **boolean** exclude,
+                                                       `java.lang.Class\<? extends io.realm.RealmModel> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  firstClass,
+                                                       `java.lang.Class[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  additionalClasses)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyRealmFromAssets <io_realm_TestRealmConfigurationFactory_copyRealmFromAssets_Context__String__String_>`  (**Context (?)** context,
+                                         `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  realmPath,
+                                         `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  newName)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyRealmFromAssets <io_realm_TestRealmConfigurationFactory_copyRealmFromAssets_Context__String__RealmConfiguration_>`  (**Context (?)** context,
+                                         `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  realmPath,
+                                         :ref:`RealmConfiguration <io_realm_RealmConfiguration>`  config)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyFileFromAssets <io_realm_TestRealmConfigurationFactory_copyFileFromAssets_Context__String__File_>`  (**Context (?)** context,
+                                        `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  assetPath,
+                                        `File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  outFile)
+       
+       
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface **TemporaryFolder (?)**: 
+   
+   
+   
+   
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+
+
+
+
+Method Detail
+=============
+
+
+
+apply
+-----
+
+.. _io_realm_TestRealmConfigurationFactory_apply_Statement__Description_:
+
+.. _io_realm_TestRealmConfigurationFactory_apply_Statement_Description_:
+
+.. _io_realm_TestRealmConfigurationFactory_apply_Statement__Description_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **Statement (?)** apply (**Statement (?)** base,
+                                **Description (?)** description)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+before
+------
+
+.. _io_realm_TestRealmConfigurationFactory_before__:
+
+.. _io_realm_TestRealmConfigurationFactory_before__:
+
+.. _io_realm_TestRealmConfigurationFactory_before__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected **void** before ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+after
+-----
+
+.. _io_realm_TestRealmConfigurationFactory_after__:
+
+.. _io_realm_TestRealmConfigurationFactory_after__:
+
+.. _io_realm_TestRealmConfigurationFactory_after__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected **void** after ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+create
+------
+
+.. _io_realm_TestRealmConfigurationFactory_create__:
+
+.. _io_realm_TestRealmConfigurationFactory_create__:
+
+.. _io_realm_TestRealmConfigurationFactory_create__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** create ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getRoot
+-------
+
+.. _io_realm_TestRealmConfigurationFactory_getRoot__:
+
+.. _io_realm_TestRealmConfigurationFactory_getRoot__:
+
+.. _io_realm_TestRealmConfigurationFactory_getRoot__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  getRoot ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+setTestName
+-----------
+
+.. _io_realm_TestRealmConfigurationFactory_setTestName_Description_:
+
+.. _io_realm_TestRealmConfigurationFactory_setTestName_Description_:
+
+.. _io_realm_TestRealmConfigurationFactory_setTestName_Description_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected **void** setTestName (**Description (?)** description)
+   
+   * - To be called in the :ref:`apply(Statement, Description) <io_realm_TestRealmConfigurationFactory_apply_Statement__Description_>` .
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+setUnitTestFailed
+-----------------
+
+.. _io_realm_TestRealmConfigurationFactory_setUnitTestFailed__:
+
+.. _io_realm_TestRealmConfigurationFactory_setUnitTestFailed__:
+
+.. _io_realm_TestRealmConfigurationFactory_setUnitTestFailed__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public synchronized **void** setUnitTestFailed ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+createConfigurationBuilder
+--------------------------
+
+.. _io_realm_TestRealmConfigurationFactory_createConfigurationBuilder__:
+
+.. _io_realm_TestRealmConfigurationFactory_createConfigurationBuilder__:
+
+.. _io_realm_TestRealmConfigurationFactory_createConfigurationBuilder__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>`  createConfigurationBuilder ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+createSchemaConfiguration
+-------------------------
+
+.. _io_realm_TestRealmConfigurationFactory_createSchemaConfiguration_boolean__Class___extends_RealmModel___Class___extends_RealmModel_____:
+
+.. _io_realm_TestRealmConfigurationFactory_createSchemaConfiguration_boolean_Class_Class_:
+
+.. _io_realm_TestRealmConfigurationFactory_createSchemaConfiguration_boolean__Class__Class_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`RealmConfiguration <io_realm_RealmConfiguration>`  createSchemaConfiguration (**boolean** exclude,
+                                                             `java.lang.Class\<? extends io.realm.RealmModel> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  firstClass,
+                                                             `java.lang.Class[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  additionalClasses)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+createConfiguration
+-------------------
+
+.. _io_realm_TestRealmConfigurationFactory_createConfiguration__:
+
+.. _io_realm_TestRealmConfigurationFactory_createConfiguration__:
+
+.. _io_realm_TestRealmConfigurationFactory_createConfiguration__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`RealmConfiguration <io_realm_RealmConfiguration>`  createConfiguration ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_TestRealmConfigurationFactory_createConfiguration_String_:
+
+.. _io_realm_TestRealmConfigurationFactory_createConfiguration_String_:
+
+.. _io_realm_TestRealmConfigurationFactory_createConfiguration_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`RealmConfiguration <io_realm_RealmConfiguration>`  createConfiguration (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_TestRealmConfigurationFactory_createConfiguration_String__String_:
+
+.. _io_realm_TestRealmConfigurationFactory_createConfiguration_String_String_:
+
+.. _io_realm_TestRealmConfigurationFactory_createConfiguration_String__String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`RealmConfiguration <io_realm_RealmConfiguration>`  createConfiguration (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  subDir,
+                                                       `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_TestRealmConfigurationFactory_createConfiguration_String__byte[]_:
+
+.. _io_realm_TestRealmConfigurationFactory_createConfiguration_String_byte_:
+
+.. _io_realm_TestRealmConfigurationFactory_createConfiguration_String__byte_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`RealmConfiguration <io_realm_RealmConfiguration>`  createConfiguration (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
+                                                       **byte[]** key)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_TestRealmConfigurationFactory_createConfiguration_String__Object_:
+
+.. _io_realm_TestRealmConfigurationFactory_createConfiguration_String_Object_:
+
+.. _io_realm_TestRealmConfigurationFactory_createConfiguration_String__Object_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`RealmConfiguration <io_realm_RealmConfiguration>`  createConfiguration (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
+                                                       `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  module)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_TestRealmConfigurationFactory_createConfiguration_String__String__Object__byte[]__boolean__Class___extends_RealmModel___Class___extends_RealmModel_____:
+
+.. _io_realm_TestRealmConfigurationFactory_createConfiguration_String_String_Object_byte_boolean_Class_Class_:
+
+.. _io_realm_TestRealmConfigurationFactory_createConfiguration_String__String__Object__byte__boolean__Class__Class_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`RealmConfiguration <io_realm_RealmConfiguration>`  createConfiguration (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  subDir,
+                                                       `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
+                                                       `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  module,
+                                                       **byte[]** key,
+                                                       **boolean** exclude,
+                                                       `java.lang.Class\<? extends io.realm.RealmModel> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  firstClass,
+                                                       `java.lang.Class[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  additionalClasses)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyRealmFromAssets
+-------------------
+
+.. _io_realm_TestRealmConfigurationFactory_copyRealmFromAssets_Context__String__String_:
+
+.. _io_realm_TestRealmConfigurationFactory_copyRealmFromAssets_Context_String_String_:
+
+.. _io_realm_TestRealmConfigurationFactory_copyRealmFromAssets_Context__String__String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyRealmFromAssets (**Context (?)** context,
+                                         `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  realmPath,
+                                         `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  newName)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_TestRealmConfigurationFactory_copyRealmFromAssets_Context__String__RealmConfiguration_:
+
+.. _io_realm_TestRealmConfigurationFactory_copyRealmFromAssets_Context_String_RealmConfiguration_:
+
+.. _io_realm_TestRealmConfigurationFactory_copyRealmFromAssets_Context__String__RealmConfiguration_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyRealmFromAssets (**Context (?)** context,
+                                         `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  realmPath,
+                                         :ref:`RealmConfiguration <io_realm_RealmConfiguration>`  config)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyFileFromAssets
+------------------
+
+.. _io_realm_TestRealmConfigurationFactory_copyFileFromAssets_Context__String__File_:
+
+.. _io_realm_TestRealmConfigurationFactory_copyFileFromAssets_Context_String_File_:
+
+.. _io_realm_TestRealmConfigurationFactory_copyFileFromAssets_Context__String__File_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyFileFromAssets (**Context (?)** context,
+                                        `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  assetPath,
+                                        `File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  outFile)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

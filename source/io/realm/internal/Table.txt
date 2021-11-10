@@ -1,0 +1,5845 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class Table
+^^^^^^^^^^^
+
+.. _io_realm_internal_Table:
+
+
+
+io.realm.internal
+=================
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+*Implemented interfaces:*
+
+
+
+- :ref:`io.realm.internal.NativeObject <io_realm_internal_NativeObject>` 
+
+
+This class is a base class for all Realm tables. The class supports all low level methods (define/insert/delete/update) a table has. All the native communications to the Realm C++ library are also handled by this class.
+
+
+Field Summary
+=============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Field and Description
+   
+   * - ``public static final int`` 
+       
+       
+     - ``CLASS_NAME_MAX_LENGTH`` 
+       
+       
+   
+   * - ``public static final long`` 
+       
+       
+     - ``INFINITE`` 
+       
+       
+   
+   * - ``public static final boolean`` 
+       
+       
+     - ``NULLABLE`` 
+       
+       
+   
+   * - ``public static final boolean`` 
+       
+       
+     - ``NOT_NULLABLE`` 
+       
+       
+   
+   * - ``public static final int`` 
+       
+       
+     - ``NO_MATCH`` 
+       
+       
+   
+   * - ``public static final int`` 
+       
+       
+     - ``MAX_BINARY_SIZE`` 
+       
+       
+   
+   * - ``public static final int`` 
+       
+       
+     - ``MAX_STRING_SIZE`` 
+       
+       
+   
+   
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public **long**
+     - 
+       :ref:`addColumn <io_realm_internal_Table_addColumn_RealmFieldType__String_>`  (:ref:`RealmFieldType <io_realm_RealmFieldType>`  type,
+                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+       
+       Adds a non-nullable column to the table dynamically.
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`addColumn <io_realm_internal_Table_addColumn_RealmFieldType__String__boolean_>`  (:ref:`RealmFieldType <io_realm_RealmFieldType>`  type,
+                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
+                               **boolean** isNullable)
+       
+       Adds a column to the table dynamically.
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`addColumnDictionaryLink <io_realm_internal_Table_addColumnDictionaryLink_RealmFieldType__String__Table_>`  (:ref:`RealmFieldType <io_realm_RealmFieldType>`  type,
+                                             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
+                                             :ref:`Table <io_realm_internal_Table>`  table)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`addColumnLink <io_realm_internal_Table_addColumnLink_RealmFieldType__String__Table_>`  (:ref:`RealmFieldType <io_realm_RealmFieldType>`  type,
+                                   `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
+                                   :ref:`Table <io_realm_internal_Table>`  table)
+       
+       Adds a link column to the table dynamically.
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`addColumnSetLink <io_realm_internal_Table_addColumnSetLink_RealmFieldType__String__Table_>`  (:ref:`RealmFieldType <io_realm_RealmFieldType>`  type,
+                                      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
+                                      :ref:`Table <io_realm_internal_Table>`  table)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addSearchIndex <io_realm_internal_Table_addSearchIndex_long_>`  (**long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`clear <io_realm_internal_Table_clear__>`  ()
+       
+       Clears the table i.e., deleting all rows in the table.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`convertColumnToNotNullable <io_realm_internal_Table_convertColumnToNotNullable_long_>`  (**long** columnKey)
+       
+       Converts a column to be not nullable.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`convertColumnToNullable <io_realm_internal_Table_convertColumnToNullable_long_>`  (**long** columnKey)
+       
+       Converts a column to be nullable.
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`count <io_realm_internal_Table_count_long__String_>`  (**long** columnKey,
+                           `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`count <io_realm_internal_Table_count_long__double_>`  (**long** columnKey,
+                           **double** value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`count <io_realm_internal_Table_count_long__float_>`  (**long** columnKey,
+                           **float** value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`count <io_realm_internal_Table_count_long__long_>`  (**long** columnKey,
+                           **long** value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`findFirstBoolean <io_realm_internal_Table_findFirstBoolean_long__boolean_>`  (**long** columnKey,
+                                      **boolean** value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`findFirstDate <io_realm_internal_Table_findFirstDate_long__Date_>`  (**long** columnKey,
+                                   `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  date)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`findFirstDecimal128 <io_realm_internal_Table_findFirstDecimal128_long__Decimal128_>`  (**long** columnKey,
+                                         **Decimal128 (?)** value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`findFirstDouble <io_realm_internal_Table_findFirstDouble_long__double_>`  (**long** columnKey,
+                                     **double** value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`findFirstFloat <io_realm_internal_Table_findFirstFloat_long__float_>`  (**long** columnKey,
+                                    **float** value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`findFirstLong <io_realm_internal_Table_findFirstLong_long__long_>`  (**long** columnKey,
+                                   **long** value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`findFirstNull <io_realm_internal_Table_findFirstNull_long_>`  (**long** columnKey)
+       
+       Searches for first occurrence of null.
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`findFirstObjectId <io_realm_internal_Table_findFirstObjectId_long__ObjectId_>`  (**long** columnKey,
+                                       **ObjectId (?)** value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`findFirstString <io_realm_internal_Table_findFirstString_long__String_>`  (**long** columnKey,
+                                     `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`findFirstUUID <io_realm_internal_Table_findFirstUUID_long__UUID_>`  (**long** columnKey,
+                                   `UUID <https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html>`__  value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`Table <io_realm_internal_Table>` 
+     - 
+       :ref:`freeze <io_realm_internal_Table_freeze_OsSharedRealm_>`  (:ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  frozenRealm)
+       
+       Returns a frozen copy of this table.
+       
+       
+       
+   
+   * - 
+       public **byte**
+     - 
+       :ref:`getBinaryByteArray <io_realm_internal_Table_getBinaryByteArray_long__long_>`  (**long** columnKey,
+                                        **long** rowKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`getBoolean <io_realm_internal_Table_getBoolean_long__long_>`  (**long** columnKey,
+                                   **long** rowKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`CheckedRow <io_realm_internal_CheckedRow>` 
+     - 
+       :ref:`getCheckedRow <io_realm_internal_Table_getCheckedRow_long_>`  (**long** objKey)
+       
+       Returns a wrapper around Row access.
+       
+       
+       
+   
+   * - 
+       public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`getClassName <io_realm_internal_Table_getClassName__>`  ()
+       
+       Returns the class name for the table.
+       
+       
+       
+   
+   * - 
+       public static `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`getClassNameForTable <io_realm_internal_Table_getClassNameForTable_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`getColumnCount <io_realm_internal_Table_getColumnCount__>`  ()
+       
+       Returns the number of columns in the table.
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`getColumnKey <io_realm_internal_Table_getColumnKey_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  columnName)
+       
+       
+       
+       
+       
+   
+   * - 
+       public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`getColumnName <io_realm_internal_Table_getColumnName_long_>`  (**long** columnKey)
+       
+       Returns the name of a column identified by columnKey.
+       
+       
+       
+   
+   * - 
+       public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`getColumnNames <io_realm_internal_Table_getColumnNames__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`RealmFieldType <io_realm_RealmFieldType>` 
+     - 
+       :ref:`getColumnType <io_realm_internal_Table_getColumnType_long_>`  (**long** columnKey)
+       
+       Gets the type of a column identified by the columnKey.
+       
+       
+       
+   
+   * - 
+       public `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__ 
+     - 
+       :ref:`getDate <io_realm_internal_Table_getDate_long__long_>`  (**long** columnKey,
+                             **long** rowKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **double**
+     - 
+       :ref:`getDouble <io_realm_internal_Table_getDouble_long__long_>`  (**long** columnKey,
+                                 **long** rowKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **float**
+     - 
+       :ref:`getFloat <io_realm_internal_Table_getFloat_long__long_>`  (**long** columnKey,
+                               **long** rowKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`getLink <io_realm_internal_Table_getLink_long__long_>`  (**long** columnKey,
+                             **long** rowKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`Table <io_realm_internal_Table>` 
+     - 
+       :ref:`getLinkTarget <io_realm_internal_Table_getLinkTarget_long_>`  (**long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`getLong <io_realm_internal_Table_getLong_long__long_>`  (**long** columnKey,
+                             **long** rowKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`getName <io_realm_internal_Table_getName__>`  ()
+       
+       Returns the table name as it is in the associated group.
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`getNativeFinalizerPtr <io_realm_internal_Table_getNativeFinalizerPtr__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`getNativePtr <io_realm_internal_Table_getNativePtr__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>` 
+     - 
+       :ref:`getSharedRealm <io_realm_internal_Table_getSharedRealm__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`getString <io_realm_internal_Table_getString_long__long_>`  (**long** columnKey,
+                                 **long** rowKey)
+       
+       Gets the value of a (string) cell.
+       
+       
+       
+   
+   * - 
+       public :ref:`Table <io_realm_internal_Table>` 
+     - 
+       :ref:`getTable <io_realm_internal_Table_getTable__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public static `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`getTableNameForClass <io_realm_internal_Table_getTableNameForClass_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`UncheckedRow <io_realm_internal_UncheckedRow>` 
+     - 
+       :ref:`getUncheckedRow <io_realm_internal_Table_getUncheckedRow_long_>`  (**long** rowKey)
+       
+       Returns a non-checking Row.
+       
+       
+       
+   
+   * - 
+       public :ref:`UncheckedRow <io_realm_internal_UncheckedRow>` 
+     - 
+       :ref:`getUncheckedRowByPointer <io_realm_internal_Table_getUncheckedRowByPointer_long_>`  (**long** nativeRowPointer)
+       
+       Returns a non-checking Row.
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`hasSameSchema <io_realm_internal_Table_hasSameSchema_Table_>`  (:ref:`Table <io_realm_internal_Table>`  table)
+       
+       Compares the schema of the current instance of Table with another instance.
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`hasSearchIndex <io_realm_internal_Table_hasSearchIndex_long_>`  (**long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`incrementLong <io_realm_internal_Table_incrementLong_long__long__long_>`  (**long** columnKey,
+                                   **long** rowKey,
+                                   **long** value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`isColumnNullable <io_realm_internal_Table_isColumnNullable_long_>`  (**long** columnKey)
+       
+       Checks whether the specific column is nullable?
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`isEmbedded <io_realm_internal_Table_isEmbedded__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`isEmpty <io_realm_internal_Table_isEmpty__>`  ()
+       
+       Checks whether this table is empty or not.
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`isNullLink <io_realm_internal_Table_isNullLink_long__long_>`  (**long** columnKey,
+                                   **long** rowKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`isValid <io_realm_internal_Table_isValid__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`moveLastOver <io_realm_internal_Table_moveLastOver_long_>`  (**long** rowKey)
+       
+       Removes a row from the specific row key.
+       
+       
+       
+   
+   * - 
+       public static native **long**
+     - 
+       :ref:`nativeFindFirstDecimal128 <io_realm_internal_Table_nativeFindFirstDecimal128_long__long__long__long_>`  (**long** nativeTableRefPtr,
+                                                             **long** columnKey,
+                                                             **long** low,
+                                                             **long** high)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static native **long**
+     - 
+       :ref:`nativeFindFirstInt <io_realm_internal_Table_nativeFindFirstInt_long__long__long_>`  (**long** nativeTableRefPtr,
+                                                      **long** columnKey,
+                                                      **long** value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static native **long**
+     - 
+       :ref:`nativeFindFirstNull <io_realm_internal_Table_nativeFindFirstNull_long__long_>`  (**long** nativeTableRefPtr,
+                                                       **long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static native **long**
+     - 
+       :ref:`nativeFindFirstObjectId <io_realm_internal_Table_nativeFindFirstObjectId_long__long__String_>`  (**long** nativeTableRefPtr,
+                                                           **long** columnKey,
+                                                           `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static native **long**
+     - 
+       :ref:`nativeFindFirstString <io_realm_internal_Table_nativeFindFirstString_long__long__String_>`  (**long** nativeTableRefPtr,
+                                                         **long** columnKey,
+                                                         `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static native **long**
+     - 
+       :ref:`nativeFindFirstUUID <io_realm_internal_Table_nativeFindFirstUUID_long__long__String_>`  (**long** nativeTableRefPtr,
+                                                       **long** columnKey,
+                                                       `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static native **void**
+     - 
+       :ref:`nativeIncrementLong <io_realm_internal_Table_nativeIncrementLong_long__long__long__long_>`  (**long** nativeTableRefPtr,
+                                                       **long** columnKey,
+                                                       **long** rowKey,
+                                                       **long** value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static native **void**
+     - 
+       :ref:`nativeNullifyLink <io_realm_internal_Table_nativeNullifyLink_long__long__long_>`  (**long** nativePtr,
+                                                     **long** columnKey,
+                                                     **long** rowKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static native **void**
+     - 
+       :ref:`nativeSetBoolean <io_realm_internal_Table_nativeSetBoolean_long__long__long__boolean__boolean_>`  (**long** nativeTableRefPtr,
+                                                    **long** columnKey,
+                                                    **long** rowKey,
+                                                    **boolean** value,
+                                                    **boolean** isDefault)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static native **void**
+     - 
+       :ref:`nativeSetByteArray <io_realm_internal_Table_nativeSetByteArray_long__long__long__byte[]__boolean_>`  (**long** nativePtr,
+                                                      **long** columnKey,
+                                                      **long** rowKey,
+                                                      **byte[]** data,
+                                                      **boolean** isDefault)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static native **void**
+     - 
+       :ref:`nativeSetDecimal128 <io_realm_internal_Table_nativeSetDecimal128_long__long__long__long__long__boolean_>`  (**long** nativeTableRefPtr,
+                                                       **long** columnKey,
+                                                       **long** rowKey,
+                                                       **long** low,
+                                                       **long** high,
+                                                       **boolean** isDefault)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static native **void**
+     - 
+       :ref:`nativeSetDouble <io_realm_internal_Table_nativeSetDouble_long__long__long__double__boolean_>`  (**long** nativeTableRefPtr,
+                                                   **long** columnKey,
+                                                   **long** rowKey,
+                                                   **double** value,
+                                                   **boolean** isDefault)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static native **void**
+     - 
+       :ref:`nativeSetFloat <io_realm_internal_Table_nativeSetFloat_long__long__long__float__boolean_>`  (**long** nativeTableRefPtr,
+                                                  **long** columnKey,
+                                                  **long** rowKey,
+                                                  **float** value,
+                                                  **boolean** isDefault)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static native **void**
+     - 
+       :ref:`nativeSetLink <io_realm_internal_Table_nativeSetLink_long__long__long__long__boolean_>`  (**long** nativeTableRefPtr,
+                                                 **long** columnKey,
+                                                 **long** rowKey,
+                                                 **long** value,
+                                                 **boolean** isDefault)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static native **void**
+     - 
+       :ref:`nativeSetLong <io_realm_internal_Table_nativeSetLong_long__long__long__long__boolean_>`  (**long** nativeTableRefPtr,
+                                                 **long** columnKey,
+                                                 **long** rowKey,
+                                                 **long** value,
+                                                 **boolean** isDefault)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static native **void**
+     - 
+       :ref:`nativeSetNull <io_realm_internal_Table_nativeSetNull_long__long__long__boolean_>`  (**long** nativeTableRefPtr,
+                                                 **long** columnKey,
+                                                 **long** rowKey,
+                                                 **boolean** isDefault)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static native **void**
+     - 
+       :ref:`nativeSetObjectId <io_realm_internal_Table_nativeSetObjectId_long__long__long__String__boolean_>`  (**long** nativeTableRefPtr,
+                                                     **long** columnKey,
+                                                     **long** rowKey,
+                                                     `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  data,
+                                                     **boolean** isDefault)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static native **void**
+     - 
+       :ref:`nativeSetRealmAny <io_realm_internal_Table_nativeSetRealmAny_long__long__long__long__boolean_>`  (**long** nativeTableRefPtr,
+                                                     **long** columnKey,
+                                                     **long** rowKey,
+                                                     **long** value,
+                                                     **boolean** isDefault)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static native **void**
+     - 
+       :ref:`nativeSetString <io_realm_internal_Table_nativeSetString_long__long__long__String__boolean_>`  (**long** nativeTableRefPtr,
+                                                   **long** columnKey,
+                                                   **long** rowKey,
+                                                   `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value,
+                                                   **boolean** isDefault)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static native **void**
+     - 
+       :ref:`nativeSetTimestamp <io_realm_internal_Table_nativeSetTimestamp_long__long__long__long__boolean_>`  (**long** nativeTableRefPtr,
+                                                      **long** columnKey,
+                                                      **long** rowKey,
+                                                      **long** dateTimeValue,
+                                                      **boolean** isDefault)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static native **void**
+     - 
+       :ref:`nativeSetUUID <io_realm_internal_Table_nativeSetUUID_long__long__long__String__boolean_>`  (**long** nativeTableRefPtr,
+                                                 **long** columnKey,
+                                                 **long** rowKey,
+                                                 `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  data,
+                                                 **boolean** isDefault)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`nullifyLink <io_realm_internal_Table_nullifyLink_long__long_>`  (**long** columnKey,
+                                 **long** rowKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`removeColumn <io_realm_internal_Table_removeColumn_long_>`  (**long** columnKey)
+       
+       Removes a column in the table dynamically.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`removeSearchIndex <io_realm_internal_Table_removeSearchIndex_long_>`  (**long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`renameColumn <io_realm_internal_Table_renameColumn_long__String_>`  (**long** columnKey,
+                                  `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  newName)
+       
+       Renames a column in the table.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setBinaryByteArray <io_realm_internal_Table_setBinaryByteArray_long__long__byte[]__boolean_>`  (**long** columnKey,
+                                        **long** rowKey,
+                                        **byte[]** data,
+                                        **boolean** isDefault)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setBoolean <io_realm_internal_Table_setBoolean_long__long__boolean__boolean_>`  (**long** columnKey,
+                                **long** rowKey,
+                                **boolean** value,
+                                **boolean** isDefault)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setDate <io_realm_internal_Table_setDate_long__long__Date__boolean_>`  (**long** columnKey,
+                             **long** rowKey,
+                             `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  date,
+                             **boolean** isDefault)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setDecimal128 <io_realm_internal_Table_setDecimal128_long__long__Decimal128__boolean_>`  (**long** columnKey,
+                                   **long** rowKey,
+                                   **Decimal128 (?)** value,
+                                   **boolean** isDefault)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setDouble <io_realm_internal_Table_setDouble_long__long__double__boolean_>`  (**long** columnKey,
+                               **long** rowKey,
+                               **double** value,
+                               **boolean** isDefault)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`setEmbedded <io_realm_internal_Table_setEmbedded_boolean_>`  (**boolean** embedded)
+       
+       Returns true if the state was changed, false if not.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setFloat <io_realm_internal_Table_setFloat_long__long__float__boolean_>`  (**long** columnKey,
+                              **long** rowKey,
+                              **float** value,
+                              **boolean** isDefault)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setLink <io_realm_internal_Table_setLink_long__long__long__boolean_>`  (**long** columnKey,
+                             **long** rowKey,
+                             **long** value,
+                             **boolean** isDefault)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setLong <io_realm_internal_Table_setLong_long__long__long__boolean_>`  (**long** columnKey,
+                             **long** rowKey,
+                             **long** value,
+                             **boolean** isDefault)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setNull <io_realm_internal_Table_setNull_long__long__boolean_>`  (**long** columnKey,
+                             **long** rowKey,
+                             **boolean** isDefault)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setObjectId <io_realm_internal_Table_setObjectId_long__long__ObjectId__boolean_>`  (**long** columnKey,
+                                 **long** rowKey,
+                                 **ObjectId (?)** value,
+                                 **boolean** isDefault)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setRealmAny <io_realm_internal_Table_setRealmAny_long__long__long__boolean_>`  (**long** columnKey,
+                                 **long** rowKey,
+                                 **long** nativePtr,
+                                 **boolean** isDefault)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setString <io_realm_internal_Table_setString_long__long__String__boolean_>`  (**long** columnKey,
+                               **long** rowKey,
+                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value,
+                               **boolean** isDefault)
+       
+       Sets a String value to a cell of Table, pointed by column and row key.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setUUID <io_realm_internal_Table_setUUID_long__long__UUID__boolean_>`  (**long** columnKey,
+                             **long** rowKey,
+                             `UUID <https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html>`__  value,
+                             **boolean** isDefault)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`size <io_realm_internal_Table_size__>`  ()
+       
+       Gets the number of entries/rows of this table.
+       
+       
+       
+   
+   * - 
+       public static **void**
+     - 
+       :ref:`throwDuplicatePrimaryKeyException <io_realm_internal_Table_throwDuplicatePrimaryKeyException_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  value)
+       
+       Throws a properly formatted exception when multiple objects with the same primary key value is detected.
+       
+       
+       
+   
+   * - 
+       public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`toString <io_realm_internal_Table_toString__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`TableQuery <io_realm_internal_TableQuery>` 
+     - 
+       :ref:`where <io_realm_internal_Table_where__>`  ()
+       
+       
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+
+
+
+
+Field Detail
+============
+
+.. _io_realm_internal_Table_CLASS_NAME_MAX_LENGTH:
+
+
+
+``CLASS_NAME_MAX_LENGTH`` 
+--------------------------
+
+
+.. _io_realm_internal_Table_INFINITE:
+
+
+
+``INFINITE`` 
+-------------
+
+
+.. _io_realm_internal_Table_NULLABLE:
+
+
+
+``NULLABLE`` 
+-------------
+
+
+.. _io_realm_internal_Table_NOT_NULLABLE:
+
+
+
+``NOT_NULLABLE`` 
+-----------------
+
+
+.. _io_realm_internal_Table_NO_MATCH:
+
+
+
+``NO_MATCH`` 
+-------------
+
+
+.. _io_realm_internal_Table_MAX_BINARY_SIZE:
+
+
+
+``MAX_BINARY_SIZE`` 
+--------------------
+
+
+.. _io_realm_internal_Table_MAX_STRING_SIZE:
+
+
+
+``MAX_STRING_SIZE`` 
+--------------------
+
+
+
+
+Method Detail
+=============
+
+.. _addColumn:
+
+.. _addColumn__:
+
+.. _Table_addColumn:
+
+.. _Table_addColumn__:
+
+.. _io_realm_internal_Table_addColumn:
+
+.. _io_realm_internal_Table_addColumn__:
+
+
+
+addColumn
+---------
+
+.. _io_realm_internal_Table_addColumn_RealmFieldType__String_:
+
+.. _io_realm_internal_Table_addColumn_RealmFieldType_String_:
+
+.. _io_realm_internal_Table_addColumn_RealmFieldType__String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** addColumn (:ref:`RealmFieldType <io_realm_RealmFieldType>`  type,
+                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+   
+   * - Adds a non-nullable column to the table dynamically.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_internal_Table_addColumn_RealmFieldType__String__boolean_:
+
+.. _io_realm_internal_Table_addColumn_RealmFieldType_String_boolean_:
+
+.. _io_realm_internal_Table_addColumn_RealmFieldType__String__boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** addColumn (:ref:`RealmFieldType <io_realm_RealmFieldType>`  type,
+                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
+                               **boolean** isNullable)
+   
+   * - Adds a column to the table dynamically.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``type`` - the column type.
+          
+          
+          
+       - ``name`` - the field/column name.
+          
+          
+          
+       - ``isNullable`` - ``true``  if column can contain null values, ``false``  otherwise.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addColumnDictionaryLink:
+
+.. _addColumnDictionaryLink__:
+
+.. _Table_addColumnDictionaryLink:
+
+.. _Table_addColumnDictionaryLink__:
+
+.. _io_realm_internal_Table_addColumnDictionaryLink:
+
+.. _io_realm_internal_Table_addColumnDictionaryLink__:
+
+
+
+addColumnDictionaryLink
+-----------------------
+
+.. _io_realm_internal_Table_addColumnDictionaryLink_RealmFieldType__String__Table_:
+
+.. _io_realm_internal_Table_addColumnDictionaryLink_RealmFieldType_String_Table_:
+
+.. _io_realm_internal_Table_addColumnDictionaryLink_RealmFieldType__String__Table_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** addColumnDictionaryLink (:ref:`RealmFieldType <io_realm_RealmFieldType>`  type,
+                                             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
+                                             :ref:`Table <io_realm_internal_Table>`  table)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addColumnLink:
+
+.. _addColumnLink__:
+
+.. _Table_addColumnLink:
+
+.. _Table_addColumnLink__:
+
+.. _io_realm_internal_Table_addColumnLink:
+
+.. _io_realm_internal_Table_addColumnLink__:
+
+
+
+addColumnLink
+-------------
+
+.. _io_realm_internal_Table_addColumnLink_RealmFieldType__String__Table_:
+
+.. _io_realm_internal_Table_addColumnLink_RealmFieldType_String_Table_:
+
+.. _io_realm_internal_Table_addColumnLink_RealmFieldType__String__Table_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** addColumnLink (:ref:`RealmFieldType <io_realm_RealmFieldType>`  type,
+                                   `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
+                                   :ref:`Table <io_realm_internal_Table>`  table)
+   
+   * - Adds a link column to the table dynamically.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addColumnSetLink:
+
+.. _addColumnSetLink__:
+
+.. _Table_addColumnSetLink:
+
+.. _Table_addColumnSetLink__:
+
+.. _io_realm_internal_Table_addColumnSetLink:
+
+.. _io_realm_internal_Table_addColumnSetLink__:
+
+
+
+addColumnSetLink
+----------------
+
+.. _io_realm_internal_Table_addColumnSetLink_RealmFieldType__String__Table_:
+
+.. _io_realm_internal_Table_addColumnSetLink_RealmFieldType_String_Table_:
+
+.. _io_realm_internal_Table_addColumnSetLink_RealmFieldType__String__Table_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** addColumnSetLink (:ref:`RealmFieldType <io_realm_RealmFieldType>`  type,
+                                      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
+                                      :ref:`Table <io_realm_internal_Table>`  table)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addSearchIndex:
+
+.. _addSearchIndex__:
+
+.. _Table_addSearchIndex:
+
+.. _Table_addSearchIndex__:
+
+.. _io_realm_internal_Table_addSearchIndex:
+
+.. _io_realm_internal_Table_addSearchIndex__:
+
+
+
+addSearchIndex
+--------------
+
+.. _io_realm_internal_Table_addSearchIndex_long_:
+
+.. _io_realm_internal_Table_addSearchIndex_long_:
+
+.. _io_realm_internal_Table_addSearchIndex_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addSearchIndex (**long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _clear:
+
+.. _clear__:
+
+.. _Table_clear:
+
+.. _Table_clear__:
+
+.. _io_realm_internal_Table_clear:
+
+.. _io_realm_internal_Table_clear__:
+
+
+
+clear
+-----
+
+.. _io_realm_internal_Table_clear__:
+
+.. _io_realm_internal_Table_clear__:
+
+.. _io_realm_internal_Table_clear__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** clear ()
+   
+   * - Clears the table i.e., deleting all rows in the table.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _convertColumnToNotNullable:
+
+.. _convertColumnToNotNullable__:
+
+.. _Table_convertColumnToNotNullable:
+
+.. _Table_convertColumnToNotNullable__:
+
+.. _io_realm_internal_Table_convertColumnToNotNullable:
+
+.. _io_realm_internal_Table_convertColumnToNotNullable__:
+
+
+
+convertColumnToNotNullable
+--------------------------
+
+.. _io_realm_internal_Table_convertColumnToNotNullable_long_:
+
+.. _io_realm_internal_Table_convertColumnToNotNullable_long_:
+
+.. _io_realm_internal_Table_convertColumnToNotNullable_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** convertColumnToNotNullable (**long** columnKey)
+   
+   * - Converts a column to be not nullable. null values will be converted to default values.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``columnKey`` - the key for the column to convert.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _convertColumnToNullable:
+
+.. _convertColumnToNullable__:
+
+.. _Table_convertColumnToNullable:
+
+.. _Table_convertColumnToNullable__:
+
+.. _io_realm_internal_Table_convertColumnToNullable:
+
+.. _io_realm_internal_Table_convertColumnToNullable__:
+
+
+
+convertColumnToNullable
+-----------------------
+
+.. _io_realm_internal_Table_convertColumnToNullable_long_:
+
+.. _io_realm_internal_Table_convertColumnToNullable_long_:
+
+.. _io_realm_internal_Table_convertColumnToNullable_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** convertColumnToNullable (**long** columnKey)
+   
+   * - Converts a column to be nullable.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``columnKey`` - the key for the column to convert.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _count:
+
+.. _count__:
+
+.. _Table_count:
+
+.. _Table_count__:
+
+.. _io_realm_internal_Table_count:
+
+.. _io_realm_internal_Table_count__:
+
+
+
+count
+-----
+
+.. _io_realm_internal_Table_count_long__String_:
+
+.. _io_realm_internal_Table_count_long_String_:
+
+.. _io_realm_internal_Table_count_long__String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** count (**long** columnKey,
+                           `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_internal_Table_count_long__double_:
+
+.. _io_realm_internal_Table_count_long_double_:
+
+.. _io_realm_internal_Table_count_long__double_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** count (**long** columnKey,
+                           **double** value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_internal_Table_count_long__float_:
+
+.. _io_realm_internal_Table_count_long_float_:
+
+.. _io_realm_internal_Table_count_long__float_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** count (**long** columnKey,
+                           **float** value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_internal_Table_count_long__long_:
+
+.. _io_realm_internal_Table_count_long_long_:
+
+.. _io_realm_internal_Table_count_long__long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** count (**long** columnKey,
+                           **long** value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _findFirstBoolean:
+
+.. _findFirstBoolean__:
+
+.. _Table_findFirstBoolean:
+
+.. _Table_findFirstBoolean__:
+
+.. _io_realm_internal_Table_findFirstBoolean:
+
+.. _io_realm_internal_Table_findFirstBoolean__:
+
+
+
+findFirstBoolean
+----------------
+
+.. _io_realm_internal_Table_findFirstBoolean_long__boolean_:
+
+.. _io_realm_internal_Table_findFirstBoolean_long_boolean_:
+
+.. _io_realm_internal_Table_findFirstBoolean_long__boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** findFirstBoolean (**long** columnKey,
+                                      **boolean** value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _findFirstDate:
+
+.. _findFirstDate__:
+
+.. _Table_findFirstDate:
+
+.. _Table_findFirstDate__:
+
+.. _io_realm_internal_Table_findFirstDate:
+
+.. _io_realm_internal_Table_findFirstDate__:
+
+
+
+findFirstDate
+-------------
+
+.. _io_realm_internal_Table_findFirstDate_long__Date_:
+
+.. _io_realm_internal_Table_findFirstDate_long_Date_:
+
+.. _io_realm_internal_Table_findFirstDate_long__Date_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** findFirstDate (**long** columnKey,
+                                   `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  date)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _findFirstDecimal128:
+
+.. _findFirstDecimal128__:
+
+.. _Table_findFirstDecimal128:
+
+.. _Table_findFirstDecimal128__:
+
+.. _io_realm_internal_Table_findFirstDecimal128:
+
+.. _io_realm_internal_Table_findFirstDecimal128__:
+
+
+
+findFirstDecimal128
+-------------------
+
+.. _io_realm_internal_Table_findFirstDecimal128_long__Decimal128_:
+
+.. _io_realm_internal_Table_findFirstDecimal128_long_Decimal128_:
+
+.. _io_realm_internal_Table_findFirstDecimal128_long__Decimal128_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** findFirstDecimal128 (**long** columnKey,
+                                         **Decimal128 (?)** value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _findFirstDouble:
+
+.. _findFirstDouble__:
+
+.. _Table_findFirstDouble:
+
+.. _Table_findFirstDouble__:
+
+.. _io_realm_internal_Table_findFirstDouble:
+
+.. _io_realm_internal_Table_findFirstDouble__:
+
+
+
+findFirstDouble
+---------------
+
+.. _io_realm_internal_Table_findFirstDouble_long__double_:
+
+.. _io_realm_internal_Table_findFirstDouble_long_double_:
+
+.. _io_realm_internal_Table_findFirstDouble_long__double_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** findFirstDouble (**long** columnKey,
+                                     **double** value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _findFirstFloat:
+
+.. _findFirstFloat__:
+
+.. _Table_findFirstFloat:
+
+.. _Table_findFirstFloat__:
+
+.. _io_realm_internal_Table_findFirstFloat:
+
+.. _io_realm_internal_Table_findFirstFloat__:
+
+
+
+findFirstFloat
+--------------
+
+.. _io_realm_internal_Table_findFirstFloat_long__float_:
+
+.. _io_realm_internal_Table_findFirstFloat_long_float_:
+
+.. _io_realm_internal_Table_findFirstFloat_long__float_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** findFirstFloat (**long** columnKey,
+                                    **float** value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _findFirstLong:
+
+.. _findFirstLong__:
+
+.. _Table_findFirstLong:
+
+.. _Table_findFirstLong__:
+
+.. _io_realm_internal_Table_findFirstLong:
+
+.. _io_realm_internal_Table_findFirstLong__:
+
+
+
+findFirstLong
+-------------
+
+.. _io_realm_internal_Table_findFirstLong_long__long_:
+
+.. _io_realm_internal_Table_findFirstLong_long_long_:
+
+.. _io_realm_internal_Table_findFirstLong_long__long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** findFirstLong (**long** columnKey,
+                                   **long** value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _findFirstNull:
+
+.. _findFirstNull__:
+
+.. _Table_findFirstNull:
+
+.. _Table_findFirstNull__:
+
+.. _io_realm_internal_Table_findFirstNull:
+
+.. _io_realm_internal_Table_findFirstNull__:
+
+
+
+findFirstNull
+-------------
+
+.. _io_realm_internal_Table_findFirstNull_long_:
+
+.. _io_realm_internal_Table_findFirstNull_long_:
+
+.. _io_realm_internal_Table_findFirstNull_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** findFirstNull (**long** columnKey)
+   
+   * - Searches for first occurrence of null. Beware that the order in the column is undefined.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``columnKey`` - the column to search in.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _findFirstObjectId:
+
+.. _findFirstObjectId__:
+
+.. _Table_findFirstObjectId:
+
+.. _Table_findFirstObjectId__:
+
+.. _io_realm_internal_Table_findFirstObjectId:
+
+.. _io_realm_internal_Table_findFirstObjectId__:
+
+
+
+findFirstObjectId
+-----------------
+
+.. _io_realm_internal_Table_findFirstObjectId_long__ObjectId_:
+
+.. _io_realm_internal_Table_findFirstObjectId_long_ObjectId_:
+
+.. _io_realm_internal_Table_findFirstObjectId_long__ObjectId_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** findFirstObjectId (**long** columnKey,
+                                       **ObjectId (?)** value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _findFirstString:
+
+.. _findFirstString__:
+
+.. _Table_findFirstString:
+
+.. _Table_findFirstString__:
+
+.. _io_realm_internal_Table_findFirstString:
+
+.. _io_realm_internal_Table_findFirstString__:
+
+
+
+findFirstString
+---------------
+
+.. _io_realm_internal_Table_findFirstString_long__String_:
+
+.. _io_realm_internal_Table_findFirstString_long_String_:
+
+.. _io_realm_internal_Table_findFirstString_long__String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** findFirstString (**long** columnKey,
+                                     `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _findFirstUUID:
+
+.. _findFirstUUID__:
+
+.. _Table_findFirstUUID:
+
+.. _Table_findFirstUUID__:
+
+.. _io_realm_internal_Table_findFirstUUID:
+
+.. _io_realm_internal_Table_findFirstUUID__:
+
+
+
+findFirstUUID
+-------------
+
+.. _io_realm_internal_Table_findFirstUUID_long__UUID_:
+
+.. _io_realm_internal_Table_findFirstUUID_long_UUID_:
+
+.. _io_realm_internal_Table_findFirstUUID_long__UUID_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** findFirstUUID (**long** columnKey,
+                                   `UUID <https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html>`__  value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _freeze:
+
+.. _freeze__:
+
+.. _Table_freeze:
+
+.. _Table_freeze__:
+
+.. _io_realm_internal_Table_freeze:
+
+.. _io_realm_internal_Table_freeze__:
+
+
+
+freeze
+------
+
+.. _io_realm_internal_Table_freeze_OsSharedRealm_:
+
+.. _io_realm_internal_Table_freeze_OsSharedRealm_:
+
+.. _io_realm_internal_Table_freeze_OsSharedRealm_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`Table <io_realm_internal_Table>`  freeze (:ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  frozenRealm)
+   
+   * - Returns a frozen copy of this table.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getBinaryByteArray:
+
+.. _getBinaryByteArray__:
+
+.. _Table_getBinaryByteArray:
+
+.. _Table_getBinaryByteArray__:
+
+.. _io_realm_internal_Table_getBinaryByteArray:
+
+.. _io_realm_internal_Table_getBinaryByteArray__:
+
+
+
+getBinaryByteArray
+------------------
+
+.. _io_realm_internal_Table_getBinaryByteArray_long__long_:
+
+.. _io_realm_internal_Table_getBinaryByteArray_long_long_:
+
+.. _io_realm_internal_Table_getBinaryByteArray_long__long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **byte** getBinaryByteArray (**long** columnKey,
+                                        **long** rowKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getBoolean:
+
+.. _getBoolean__:
+
+.. _Table_getBoolean:
+
+.. _Table_getBoolean__:
+
+.. _io_realm_internal_Table_getBoolean:
+
+.. _io_realm_internal_Table_getBoolean__:
+
+
+
+getBoolean
+----------
+
+.. _io_realm_internal_Table_getBoolean_long__long_:
+
+.. _io_realm_internal_Table_getBoolean_long_long_:
+
+.. _io_realm_internal_Table_getBoolean_long__long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** getBoolean (**long** columnKey,
+                                   **long** rowKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getCheckedRow:
+
+.. _getCheckedRow__:
+
+.. _Table_getCheckedRow:
+
+.. _Table_getCheckedRow__:
+
+.. _io_realm_internal_Table_getCheckedRow:
+
+.. _io_realm_internal_Table_getCheckedRow__:
+
+
+
+getCheckedRow
+-------------
+
+.. _io_realm_internal_Table_getCheckedRow_long_:
+
+.. _io_realm_internal_Table_getCheckedRow_long_:
+
+.. _io_realm_internal_Table_getCheckedRow_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`CheckedRow <io_realm_internal_CheckedRow>`  getCheckedRow (**long** objKey)
+   
+   * - Returns a wrapper around Row access. All access will be error checked in JNI and will throw an appropriate `RuntimeException <https://docs.oracle.com/javase/7/docs/api/java/lang/RuntimeException.html>`__  if used incorrectly.
+       
+       If error checking is done elsewhere, consider using :ref:`getUncheckedRow(long) <io_realm_internal_Table_getUncheckedRow_long_>`  for better performance.
+       
+       
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``objKey`` - the Object Key.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getClassName:
+
+.. _getClassName__:
+
+.. _Table_getClassName:
+
+.. _Table_getClassName__:
+
+.. _io_realm_internal_Table_getClassName:
+
+.. _io_realm_internal_Table_getClassName__:
+
+
+
+getClassName
+------------
+
+.. _io_realm_internal_Table_getClassName__:
+
+.. _io_realm_internal_Table_getClassName__:
+
+.. _io_realm_internal_Table_getClassName__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getClassName ()
+   
+   * - Returns the class name for the table.
+       
+       
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the table has been deleted or no longer is part of the group.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _getClassNameForTable:
+
+.. _getClassNameForTable__:
+
+.. _Table_getClassNameForTable:
+
+.. _Table_getClassNameForTable__:
+
+.. _io_realm_internal_Table_getClassNameForTable:
+
+.. _io_realm_internal_Table_getClassNameForTable__:
+
+
+
+getClassNameForTable
+--------------------
+
+.. _io_realm_internal_Table_getClassNameForTable_String_:
+
+.. _io_realm_internal_Table_getClassNameForTable_String_:
+
+.. _io_realm_internal_Table_getClassNameForTable_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getClassNameForTable (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getColumnCount:
+
+.. _getColumnCount__:
+
+.. _Table_getColumnCount:
+
+.. _Table_getColumnCount__:
+
+.. _io_realm_internal_Table_getColumnCount:
+
+.. _io_realm_internal_Table_getColumnCount__:
+
+
+
+getColumnCount
+--------------
+
+.. _io_realm_internal_Table_getColumnCount__:
+
+.. _io_realm_internal_Table_getColumnCount__:
+
+.. _io_realm_internal_Table_getColumnCount__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** getColumnCount ()
+   
+   * - Returns the number of columns in the table.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getColumnKey:
+
+.. _getColumnKey__:
+
+.. _Table_getColumnKey:
+
+.. _Table_getColumnKey__:
+
+.. _io_realm_internal_Table_getColumnKey:
+
+.. _io_realm_internal_Table_getColumnKey__:
+
+
+
+getColumnKey
+------------
+
+.. _io_realm_internal_Table_getColumnKey_String_:
+
+.. _io_realm_internal_Table_getColumnKey_String_:
+
+.. _io_realm_internal_Table_getColumnKey_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** getColumnKey (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  columnName)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getColumnName:
+
+.. _getColumnName__:
+
+.. _Table_getColumnName:
+
+.. _Table_getColumnName__:
+
+.. _io_realm_internal_Table_getColumnName:
+
+.. _io_realm_internal_Table_getColumnName__:
+
+
+
+getColumnName
+-------------
+
+.. _io_realm_internal_Table_getColumnName_long_:
+
+.. _io_realm_internal_Table_getColumnName_long_:
+
+.. _io_realm_internal_Table_getColumnName_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getColumnName (**long** columnKey)
+   
+   * - Returns the name of a column identified by columnKey.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``columnKey`` - the key of the column to find.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getColumnNames:
+
+.. _getColumnNames__:
+
+.. _Table_getColumnNames:
+
+.. _Table_getColumnNames__:
+
+.. _io_realm_internal_Table_getColumnNames:
+
+.. _io_realm_internal_Table_getColumnNames__:
+
+
+
+getColumnNames
+--------------
+
+.. _io_realm_internal_Table_getColumnNames__:
+
+.. _io_realm_internal_Table_getColumnNames__:
+
+.. _io_realm_internal_Table_getColumnNames__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getColumnNames ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getColumnType:
+
+.. _getColumnType__:
+
+.. _Table_getColumnType:
+
+.. _Table_getColumnType__:
+
+.. _io_realm_internal_Table_getColumnType:
+
+.. _io_realm_internal_Table_getColumnType__:
+
+
+
+getColumnType
+-------------
+
+.. _io_realm_internal_Table_getColumnType_long_:
+
+.. _io_realm_internal_Table_getColumnType_long_:
+
+.. _io_realm_internal_Table_getColumnType_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`RealmFieldType <io_realm_RealmFieldType>`  getColumnType (**long** columnKey)
+   
+   * - Gets the type of a column identified by the columnKey.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``columnKey`` - key of the column.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getDate:
+
+.. _getDate__:
+
+.. _Table_getDate:
+
+.. _Table_getDate__:
+
+.. _io_realm_internal_Table_getDate:
+
+.. _io_realm_internal_Table_getDate__:
+
+
+
+getDate
+-------
+
+.. _io_realm_internal_Table_getDate_long__long_:
+
+.. _io_realm_internal_Table_getDate_long_long_:
+
+.. _io_realm_internal_Table_getDate_long__long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  getDate (**long** columnKey,
+                             **long** rowKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getDouble:
+
+.. _getDouble__:
+
+.. _Table_getDouble:
+
+.. _Table_getDouble__:
+
+.. _io_realm_internal_Table_getDouble:
+
+.. _io_realm_internal_Table_getDouble__:
+
+
+
+getDouble
+---------
+
+.. _io_realm_internal_Table_getDouble_long__long_:
+
+.. _io_realm_internal_Table_getDouble_long_long_:
+
+.. _io_realm_internal_Table_getDouble_long__long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **double** getDouble (**long** columnKey,
+                                 **long** rowKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getFloat:
+
+.. _getFloat__:
+
+.. _Table_getFloat:
+
+.. _Table_getFloat__:
+
+.. _io_realm_internal_Table_getFloat:
+
+.. _io_realm_internal_Table_getFloat__:
+
+
+
+getFloat
+--------
+
+.. _io_realm_internal_Table_getFloat_long__long_:
+
+.. _io_realm_internal_Table_getFloat_long_long_:
+
+.. _io_realm_internal_Table_getFloat_long__long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **float** getFloat (**long** columnKey,
+                               **long** rowKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getLink:
+
+.. _getLink__:
+
+.. _Table_getLink:
+
+.. _Table_getLink__:
+
+.. _io_realm_internal_Table_getLink:
+
+.. _io_realm_internal_Table_getLink__:
+
+
+
+getLink
+-------
+
+.. _io_realm_internal_Table_getLink_long__long_:
+
+.. _io_realm_internal_Table_getLink_long_long_:
+
+.. _io_realm_internal_Table_getLink_long__long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** getLink (**long** columnKey,
+                             **long** rowKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getLinkTarget:
+
+.. _getLinkTarget__:
+
+.. _Table_getLinkTarget:
+
+.. _Table_getLinkTarget__:
+
+.. _io_realm_internal_Table_getLinkTarget:
+
+.. _io_realm_internal_Table_getLinkTarget__:
+
+
+
+getLinkTarget
+-------------
+
+.. _io_realm_internal_Table_getLinkTarget_long_:
+
+.. _io_realm_internal_Table_getLinkTarget_long_:
+
+.. _io_realm_internal_Table_getLinkTarget_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`Table <io_realm_internal_Table>`  getLinkTarget (**long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getLong:
+
+.. _getLong__:
+
+.. _Table_getLong:
+
+.. _Table_getLong__:
+
+.. _io_realm_internal_Table_getLong:
+
+.. _io_realm_internal_Table_getLong__:
+
+
+
+getLong
+-------
+
+.. _io_realm_internal_Table_getLong_long__long_:
+
+.. _io_realm_internal_Table_getLong_long_long_:
+
+.. _io_realm_internal_Table_getLong_long__long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** getLong (**long** columnKey,
+                             **long** rowKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getName:
+
+.. _getName__:
+
+.. _Table_getName:
+
+.. _Table_getName__:
+
+.. _io_realm_internal_Table_getName:
+
+.. _io_realm_internal_Table_getName__:
+
+
+
+getName
+-------
+
+.. _io_realm_internal_Table_getName__:
+
+.. _io_realm_internal_Table_getName__:
+
+.. _io_realm_internal_Table_getName__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getName ()
+   
+   * - Returns the table name as it is in the associated group.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getNativeFinalizerPtr:
+
+.. _getNativeFinalizerPtr__:
+
+.. _Table_getNativeFinalizerPtr:
+
+.. _Table_getNativeFinalizerPtr__:
+
+.. _io_realm_internal_Table_getNativeFinalizerPtr:
+
+.. _io_realm_internal_Table_getNativeFinalizerPtr__:
+
+
+
+getNativeFinalizerPtr
+---------------------
+
+.. _io_realm_internal_Table_getNativeFinalizerPtr__:
+
+.. _io_realm_internal_Table_getNativeFinalizerPtr__:
+
+.. _io_realm_internal_Table_getNativeFinalizerPtr__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** getNativeFinalizerPtr ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getNativePtr:
+
+.. _getNativePtr__:
+
+.. _Table_getNativePtr:
+
+.. _Table_getNativePtr__:
+
+.. _io_realm_internal_Table_getNativePtr:
+
+.. _io_realm_internal_Table_getNativePtr__:
+
+
+
+getNativePtr
+------------
+
+.. _io_realm_internal_Table_getNativePtr__:
+
+.. _io_realm_internal_Table_getNativePtr__:
+
+.. _io_realm_internal_Table_getNativePtr__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** getNativePtr ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getSharedRealm:
+
+.. _getSharedRealm__:
+
+.. _Table_getSharedRealm:
+
+.. _Table_getSharedRealm__:
+
+.. _io_realm_internal_Table_getSharedRealm:
+
+.. _io_realm_internal_Table_getSharedRealm__:
+
+
+
+getSharedRealm
+--------------
+
+.. _io_realm_internal_Table_getSharedRealm__:
+
+.. _io_realm_internal_Table_getSharedRealm__:
+
+.. _io_realm_internal_Table_getSharedRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  getSharedRealm ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getString:
+
+.. _getString__:
+
+.. _Table_getString:
+
+.. _Table_getString__:
+
+.. _io_realm_internal_Table_getString:
+
+.. _io_realm_internal_Table_getString__:
+
+
+
+getString
+---------
+
+.. _io_realm_internal_Table_getString_long__long_:
+
+.. _io_realm_internal_Table_getString_long_long_:
+
+.. _io_realm_internal_Table_getString_long__long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getString (**long** columnKey,
+                                 **long** rowKey)
+   
+   * - Gets the value of a (string) cell.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``columnKey`` - column key.
+          
+          
+          
+       - ``rowKey`` - row key.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getTable:
+
+.. _getTable__:
+
+.. _Table_getTable:
+
+.. _Table_getTable__:
+
+.. _io_realm_internal_Table_getTable:
+
+.. _io_realm_internal_Table_getTable__:
+
+
+
+getTable
+--------
+
+.. _io_realm_internal_Table_getTable__:
+
+.. _io_realm_internal_Table_getTable__:
+
+.. _io_realm_internal_Table_getTable__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`Table <io_realm_internal_Table>`  getTable ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getTableNameForClass:
+
+.. _getTableNameForClass__:
+
+.. _Table_getTableNameForClass:
+
+.. _Table_getTableNameForClass__:
+
+.. _io_realm_internal_Table_getTableNameForClass:
+
+.. _io_realm_internal_Table_getTableNameForClass__:
+
+
+
+getTableNameForClass
+--------------------
+
+.. _io_realm_internal_Table_getTableNameForClass_String_:
+
+.. _io_realm_internal_Table_getTableNameForClass_String_:
+
+.. _io_realm_internal_Table_getTableNameForClass_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getTableNameForClass (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getUncheckedRow:
+
+.. _getUncheckedRow__:
+
+.. _Table_getUncheckedRow:
+
+.. _Table_getUncheckedRow__:
+
+.. _io_realm_internal_Table_getUncheckedRow:
+
+.. _io_realm_internal_Table_getUncheckedRow__:
+
+
+
+getUncheckedRow
+---------------
+
+.. _io_realm_internal_Table_getUncheckedRow_long_:
+
+.. _io_realm_internal_Table_getUncheckedRow_long_:
+
+.. _io_realm_internal_Table_getUncheckedRow_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`UncheckedRow <io_realm_internal_UncheckedRow>`  getUncheckedRow (**long** rowKey)
+   
+   * - Returns a non-checking Row. Incorrect use of this Row will cause a hard core crash. If error checking is required, use :ref:`getCheckedRow(long) <io_realm_internal_Table_getCheckedRow_long_>`  instead.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``rowKey`` - row key to fetch.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getUncheckedRowByPointer:
+
+.. _getUncheckedRowByPointer__:
+
+.. _Table_getUncheckedRowByPointer:
+
+.. _Table_getUncheckedRowByPointer__:
+
+.. _io_realm_internal_Table_getUncheckedRowByPointer:
+
+.. _io_realm_internal_Table_getUncheckedRowByPointer__:
+
+
+
+getUncheckedRowByPointer
+------------------------
+
+.. _io_realm_internal_Table_getUncheckedRowByPointer_long_:
+
+.. _io_realm_internal_Table_getUncheckedRowByPointer_long_:
+
+.. _io_realm_internal_Table_getUncheckedRowByPointer_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`UncheckedRow <io_realm_internal_UncheckedRow>`  getUncheckedRowByPointer (**long** nativeRowPointer)
+   
+   * - Returns a non-checking Row. Incorrect use of this Row will cause a hard core crash. If error checking is required, use :ref:`getCheckedRow(long) <io_realm_internal_Table_getCheckedRow_long_>`  instead.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``nativeRowPointer`` - the pointer to the row to fetch.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _hasSameSchema:
+
+.. _hasSameSchema__:
+
+.. _Table_hasSameSchema:
+
+.. _Table_hasSameSchema__:
+
+.. _io_realm_internal_Table_hasSameSchema:
+
+.. _io_realm_internal_Table_hasSameSchema__:
+
+
+
+hasSameSchema
+-------------
+
+.. _io_realm_internal_Table_hasSameSchema_Table_:
+
+.. _io_realm_internal_Table_hasSameSchema_Table_:
+
+.. _io_realm_internal_Table_hasSameSchema_Table_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** hasSameSchema (:ref:`Table <io_realm_internal_Table>`  table)
+   
+   * - Compares the schema of the current instance of Table with another instance.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``table`` - the instance to compare with. It cannot be null.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _hasSearchIndex:
+
+.. _hasSearchIndex__:
+
+.. _Table_hasSearchIndex:
+
+.. _Table_hasSearchIndex__:
+
+.. _io_realm_internal_Table_hasSearchIndex:
+
+.. _io_realm_internal_Table_hasSearchIndex__:
+
+
+
+hasSearchIndex
+--------------
+
+.. _io_realm_internal_Table_hasSearchIndex_long_:
+
+.. _io_realm_internal_Table_hasSearchIndex_long_:
+
+.. _io_realm_internal_Table_hasSearchIndex_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** hasSearchIndex (**long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _incrementLong:
+
+.. _incrementLong__:
+
+.. _Table_incrementLong:
+
+.. _Table_incrementLong__:
+
+.. _io_realm_internal_Table_incrementLong:
+
+.. _io_realm_internal_Table_incrementLong__:
+
+
+
+incrementLong
+-------------
+
+.. _io_realm_internal_Table_incrementLong_long__long__long_:
+
+.. _io_realm_internal_Table_incrementLong_long_long_long_:
+
+.. _io_realm_internal_Table_incrementLong_long__long__long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** incrementLong (**long** columnKey,
+                                   **long** rowKey,
+                                   **long** value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _isColumnNullable:
+
+.. _isColumnNullable__:
+
+.. _Table_isColumnNullable:
+
+.. _Table_isColumnNullable__:
+
+.. _io_realm_internal_Table_isColumnNullable:
+
+.. _io_realm_internal_Table_isColumnNullable__:
+
+
+
+isColumnNullable
+----------------
+
+.. _io_realm_internal_Table_isColumnNullable_long_:
+
+.. _io_realm_internal_Table_isColumnNullable_long_:
+
+.. _io_realm_internal_Table_isColumnNullable_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** isColumnNullable (**long** columnKey)
+   
+   * - Checks whether the specific column is nullable?
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``columnKey`` - the column to check.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _isEmbedded:
+
+.. _isEmbedded__:
+
+.. _Table_isEmbedded:
+
+.. _Table_isEmbedded__:
+
+.. _io_realm_internal_Table_isEmbedded:
+
+.. _io_realm_internal_Table_isEmbedded__:
+
+
+
+isEmbedded
+----------
+
+.. _io_realm_internal_Table_isEmbedded__:
+
+.. _io_realm_internal_Table_isEmbedded__:
+
+.. _io_realm_internal_Table_isEmbedded__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** isEmbedded ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _isEmpty:
+
+.. _isEmpty__:
+
+.. _Table_isEmpty:
+
+.. _Table_isEmpty__:
+
+.. _io_realm_internal_Table_isEmpty:
+
+.. _io_realm_internal_Table_isEmpty__:
+
+
+
+isEmpty
+-------
+
+.. _io_realm_internal_Table_isEmpty__:
+
+.. _io_realm_internal_Table_isEmpty__:
+
+.. _io_realm_internal_Table_isEmpty__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** isEmpty ()
+   
+   * - Checks whether this table is empty or not.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _isNullLink:
+
+.. _isNullLink__:
+
+.. _Table_isNullLink:
+
+.. _Table_isNullLink__:
+
+.. _io_realm_internal_Table_isNullLink:
+
+.. _io_realm_internal_Table_isNullLink__:
+
+
+
+isNullLink
+----------
+
+.. _io_realm_internal_Table_isNullLink_long__long_:
+
+.. _io_realm_internal_Table_isNullLink_long_long_:
+
+.. _io_realm_internal_Table_isNullLink_long__long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** isNullLink (**long** columnKey,
+                                   **long** rowKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _isValid:
+
+.. _isValid__:
+
+.. _Table_isValid:
+
+.. _Table_isValid__:
+
+.. _io_realm_internal_Table_isValid:
+
+.. _io_realm_internal_Table_isValid__:
+
+
+
+isValid
+-------
+
+.. _io_realm_internal_Table_isValid__:
+
+.. _io_realm_internal_Table_isValid__:
+
+.. _io_realm_internal_Table_isValid__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** isValid ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _moveLastOver:
+
+.. _moveLastOver__:
+
+.. _Table_moveLastOver:
+
+.. _Table_moveLastOver__:
+
+.. _io_realm_internal_Table_moveLastOver:
+
+.. _io_realm_internal_Table_moveLastOver__:
+
+
+
+moveLastOver
+------------
+
+.. _io_realm_internal_Table_moveLastOver_long_:
+
+.. _io_realm_internal_Table_moveLastOver_long_:
+
+.. _io_realm_internal_Table_moveLastOver_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** moveLastOver (**long** rowKey)
+   
+   * - Removes a row from the specific row key. If it is not the last row in the table, it then moves the last row into the vacated slot.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``rowKey`` - the row key
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeFindFirstDecimal128:
+
+.. _nativeFindFirstDecimal128__:
+
+.. _Table_nativeFindFirstDecimal128:
+
+.. _Table_nativeFindFirstDecimal128__:
+
+.. _io_realm_internal_Table_nativeFindFirstDecimal128:
+
+.. _io_realm_internal_Table_nativeFindFirstDecimal128__:
+
+
+
+nativeFindFirstDecimal128
+-------------------------
+
+.. _io_realm_internal_Table_nativeFindFirstDecimal128_long__long__long__long_:
+
+.. _io_realm_internal_Table_nativeFindFirstDecimal128_long_long_long_long_:
+
+.. _io_realm_internal_Table_nativeFindFirstDecimal128_long__long__long__long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static native **long** nativeFindFirstDecimal128 (**long** nativeTableRefPtr,
+                                                             **long** columnKey,
+                                                             **long** low,
+                                                             **long** high)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeFindFirstInt:
+
+.. _nativeFindFirstInt__:
+
+.. _Table_nativeFindFirstInt:
+
+.. _Table_nativeFindFirstInt__:
+
+.. _io_realm_internal_Table_nativeFindFirstInt:
+
+.. _io_realm_internal_Table_nativeFindFirstInt__:
+
+
+
+nativeFindFirstInt
+------------------
+
+.. _io_realm_internal_Table_nativeFindFirstInt_long__long__long_:
+
+.. _io_realm_internal_Table_nativeFindFirstInt_long_long_long_:
+
+.. _io_realm_internal_Table_nativeFindFirstInt_long__long__long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static native **long** nativeFindFirstInt (**long** nativeTableRefPtr,
+                                                      **long** columnKey,
+                                                      **long** value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeFindFirstNull:
+
+.. _nativeFindFirstNull__:
+
+.. _Table_nativeFindFirstNull:
+
+.. _Table_nativeFindFirstNull__:
+
+.. _io_realm_internal_Table_nativeFindFirstNull:
+
+.. _io_realm_internal_Table_nativeFindFirstNull__:
+
+
+
+nativeFindFirstNull
+-------------------
+
+.. _io_realm_internal_Table_nativeFindFirstNull_long__long_:
+
+.. _io_realm_internal_Table_nativeFindFirstNull_long_long_:
+
+.. _io_realm_internal_Table_nativeFindFirstNull_long__long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static native **long** nativeFindFirstNull (**long** nativeTableRefPtr,
+                                                       **long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeFindFirstObjectId:
+
+.. _nativeFindFirstObjectId__:
+
+.. _Table_nativeFindFirstObjectId:
+
+.. _Table_nativeFindFirstObjectId__:
+
+.. _io_realm_internal_Table_nativeFindFirstObjectId:
+
+.. _io_realm_internal_Table_nativeFindFirstObjectId__:
+
+
+
+nativeFindFirstObjectId
+-----------------------
+
+.. _io_realm_internal_Table_nativeFindFirstObjectId_long__long__String_:
+
+.. _io_realm_internal_Table_nativeFindFirstObjectId_long_long_String_:
+
+.. _io_realm_internal_Table_nativeFindFirstObjectId_long__long__String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static native **long** nativeFindFirstObjectId (**long** nativeTableRefPtr,
+                                                           **long** columnKey,
+                                                           `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeFindFirstString:
+
+.. _nativeFindFirstString__:
+
+.. _Table_nativeFindFirstString:
+
+.. _Table_nativeFindFirstString__:
+
+.. _io_realm_internal_Table_nativeFindFirstString:
+
+.. _io_realm_internal_Table_nativeFindFirstString__:
+
+
+
+nativeFindFirstString
+---------------------
+
+.. _io_realm_internal_Table_nativeFindFirstString_long__long__String_:
+
+.. _io_realm_internal_Table_nativeFindFirstString_long_long_String_:
+
+.. _io_realm_internal_Table_nativeFindFirstString_long__long__String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static native **long** nativeFindFirstString (**long** nativeTableRefPtr,
+                                                         **long** columnKey,
+                                                         `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeFindFirstUUID:
+
+.. _nativeFindFirstUUID__:
+
+.. _Table_nativeFindFirstUUID:
+
+.. _Table_nativeFindFirstUUID__:
+
+.. _io_realm_internal_Table_nativeFindFirstUUID:
+
+.. _io_realm_internal_Table_nativeFindFirstUUID__:
+
+
+
+nativeFindFirstUUID
+-------------------
+
+.. _io_realm_internal_Table_nativeFindFirstUUID_long__long__String_:
+
+.. _io_realm_internal_Table_nativeFindFirstUUID_long_long_String_:
+
+.. _io_realm_internal_Table_nativeFindFirstUUID_long__long__String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static native **long** nativeFindFirstUUID (**long** nativeTableRefPtr,
+                                                       **long** columnKey,
+                                                       `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeIncrementLong:
+
+.. _nativeIncrementLong__:
+
+.. _Table_nativeIncrementLong:
+
+.. _Table_nativeIncrementLong__:
+
+.. _io_realm_internal_Table_nativeIncrementLong:
+
+.. _io_realm_internal_Table_nativeIncrementLong__:
+
+
+
+nativeIncrementLong
+-------------------
+
+.. _io_realm_internal_Table_nativeIncrementLong_long__long__long__long_:
+
+.. _io_realm_internal_Table_nativeIncrementLong_long_long_long_long_:
+
+.. _io_realm_internal_Table_nativeIncrementLong_long__long__long__long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static native **void** nativeIncrementLong (**long** nativeTableRefPtr,
+                                                       **long** columnKey,
+                                                       **long** rowKey,
+                                                       **long** value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeNullifyLink:
+
+.. _nativeNullifyLink__:
+
+.. _Table_nativeNullifyLink:
+
+.. _Table_nativeNullifyLink__:
+
+.. _io_realm_internal_Table_nativeNullifyLink:
+
+.. _io_realm_internal_Table_nativeNullifyLink__:
+
+
+
+nativeNullifyLink
+-----------------
+
+.. _io_realm_internal_Table_nativeNullifyLink_long__long__long_:
+
+.. _io_realm_internal_Table_nativeNullifyLink_long_long_long_:
+
+.. _io_realm_internal_Table_nativeNullifyLink_long__long__long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static native **void** nativeNullifyLink (**long** nativePtr,
+                                                     **long** columnKey,
+                                                     **long** rowKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeSetBoolean:
+
+.. _nativeSetBoolean__:
+
+.. _Table_nativeSetBoolean:
+
+.. _Table_nativeSetBoolean__:
+
+.. _io_realm_internal_Table_nativeSetBoolean:
+
+.. _io_realm_internal_Table_nativeSetBoolean__:
+
+
+
+nativeSetBoolean
+----------------
+
+.. _io_realm_internal_Table_nativeSetBoolean_long__long__long__boolean__boolean_:
+
+.. _io_realm_internal_Table_nativeSetBoolean_long_long_long_boolean_boolean_:
+
+.. _io_realm_internal_Table_nativeSetBoolean_long__long__long__boolean__boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static native **void** nativeSetBoolean (**long** nativeTableRefPtr,
+                                                    **long** columnKey,
+                                                    **long** rowKey,
+                                                    **boolean** value,
+                                                    **boolean** isDefault)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeSetByteArray:
+
+.. _nativeSetByteArray__:
+
+.. _Table_nativeSetByteArray:
+
+.. _Table_nativeSetByteArray__:
+
+.. _io_realm_internal_Table_nativeSetByteArray:
+
+.. _io_realm_internal_Table_nativeSetByteArray__:
+
+
+
+nativeSetByteArray
+------------------
+
+.. _io_realm_internal_Table_nativeSetByteArray_long__long__long__byte[]__boolean_:
+
+.. _io_realm_internal_Table_nativeSetByteArray_long_long_long_byte_boolean_:
+
+.. _io_realm_internal_Table_nativeSetByteArray_long__long__long__byte__boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static native **void** nativeSetByteArray (**long** nativePtr,
+                                                      **long** columnKey,
+                                                      **long** rowKey,
+                                                      **byte[]** data,
+                                                      **boolean** isDefault)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeSetDecimal128:
+
+.. _nativeSetDecimal128__:
+
+.. _Table_nativeSetDecimal128:
+
+.. _Table_nativeSetDecimal128__:
+
+.. _io_realm_internal_Table_nativeSetDecimal128:
+
+.. _io_realm_internal_Table_nativeSetDecimal128__:
+
+
+
+nativeSetDecimal128
+-------------------
+
+.. _io_realm_internal_Table_nativeSetDecimal128_long__long__long__long__long__boolean_:
+
+.. _io_realm_internal_Table_nativeSetDecimal128_long_long_long_long_long_boolean_:
+
+.. _io_realm_internal_Table_nativeSetDecimal128_long__long__long__long__long__boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static native **void** nativeSetDecimal128 (**long** nativeTableRefPtr,
+                                                       **long** columnKey,
+                                                       **long** rowKey,
+                                                       **long** low,
+                                                       **long** high,
+                                                       **boolean** isDefault)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeSetDouble:
+
+.. _nativeSetDouble__:
+
+.. _Table_nativeSetDouble:
+
+.. _Table_nativeSetDouble__:
+
+.. _io_realm_internal_Table_nativeSetDouble:
+
+.. _io_realm_internal_Table_nativeSetDouble__:
+
+
+
+nativeSetDouble
+---------------
+
+.. _io_realm_internal_Table_nativeSetDouble_long__long__long__double__boolean_:
+
+.. _io_realm_internal_Table_nativeSetDouble_long_long_long_double_boolean_:
+
+.. _io_realm_internal_Table_nativeSetDouble_long__long__long__double__boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static native **void** nativeSetDouble (**long** nativeTableRefPtr,
+                                                   **long** columnKey,
+                                                   **long** rowKey,
+                                                   **double** value,
+                                                   **boolean** isDefault)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeSetFloat:
+
+.. _nativeSetFloat__:
+
+.. _Table_nativeSetFloat:
+
+.. _Table_nativeSetFloat__:
+
+.. _io_realm_internal_Table_nativeSetFloat:
+
+.. _io_realm_internal_Table_nativeSetFloat__:
+
+
+
+nativeSetFloat
+--------------
+
+.. _io_realm_internal_Table_nativeSetFloat_long__long__long__float__boolean_:
+
+.. _io_realm_internal_Table_nativeSetFloat_long_long_long_float_boolean_:
+
+.. _io_realm_internal_Table_nativeSetFloat_long__long__long__float__boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static native **void** nativeSetFloat (**long** nativeTableRefPtr,
+                                                  **long** columnKey,
+                                                  **long** rowKey,
+                                                  **float** value,
+                                                  **boolean** isDefault)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeSetLink:
+
+.. _nativeSetLink__:
+
+.. _Table_nativeSetLink:
+
+.. _Table_nativeSetLink__:
+
+.. _io_realm_internal_Table_nativeSetLink:
+
+.. _io_realm_internal_Table_nativeSetLink__:
+
+
+
+nativeSetLink
+-------------
+
+.. _io_realm_internal_Table_nativeSetLink_long__long__long__long__boolean_:
+
+.. _io_realm_internal_Table_nativeSetLink_long_long_long_long_boolean_:
+
+.. _io_realm_internal_Table_nativeSetLink_long__long__long__long__boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static native **void** nativeSetLink (**long** nativeTableRefPtr,
+                                                 **long** columnKey,
+                                                 **long** rowKey,
+                                                 **long** value,
+                                                 **boolean** isDefault)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeSetLong:
+
+.. _nativeSetLong__:
+
+.. _Table_nativeSetLong:
+
+.. _Table_nativeSetLong__:
+
+.. _io_realm_internal_Table_nativeSetLong:
+
+.. _io_realm_internal_Table_nativeSetLong__:
+
+
+
+nativeSetLong
+-------------
+
+.. _io_realm_internal_Table_nativeSetLong_long__long__long__long__boolean_:
+
+.. _io_realm_internal_Table_nativeSetLong_long_long_long_long_boolean_:
+
+.. _io_realm_internal_Table_nativeSetLong_long__long__long__long__boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static native **void** nativeSetLong (**long** nativeTableRefPtr,
+                                                 **long** columnKey,
+                                                 **long** rowKey,
+                                                 **long** value,
+                                                 **boolean** isDefault)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeSetNull:
+
+.. _nativeSetNull__:
+
+.. _Table_nativeSetNull:
+
+.. _Table_nativeSetNull__:
+
+.. _io_realm_internal_Table_nativeSetNull:
+
+.. _io_realm_internal_Table_nativeSetNull__:
+
+
+
+nativeSetNull
+-------------
+
+.. _io_realm_internal_Table_nativeSetNull_long__long__long__boolean_:
+
+.. _io_realm_internal_Table_nativeSetNull_long_long_long_boolean_:
+
+.. _io_realm_internal_Table_nativeSetNull_long__long__long__boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static native **void** nativeSetNull (**long** nativeTableRefPtr,
+                                                 **long** columnKey,
+                                                 **long** rowKey,
+                                                 **boolean** isDefault)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeSetObjectId:
+
+.. _nativeSetObjectId__:
+
+.. _Table_nativeSetObjectId:
+
+.. _Table_nativeSetObjectId__:
+
+.. _io_realm_internal_Table_nativeSetObjectId:
+
+.. _io_realm_internal_Table_nativeSetObjectId__:
+
+
+
+nativeSetObjectId
+-----------------
+
+.. _io_realm_internal_Table_nativeSetObjectId_long__long__long__String__boolean_:
+
+.. _io_realm_internal_Table_nativeSetObjectId_long_long_long_String_boolean_:
+
+.. _io_realm_internal_Table_nativeSetObjectId_long__long__long__String__boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static native **void** nativeSetObjectId (**long** nativeTableRefPtr,
+                                                     **long** columnKey,
+                                                     **long** rowKey,
+                                                     `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  data,
+                                                     **boolean** isDefault)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeSetRealmAny:
+
+.. _nativeSetRealmAny__:
+
+.. _Table_nativeSetRealmAny:
+
+.. _Table_nativeSetRealmAny__:
+
+.. _io_realm_internal_Table_nativeSetRealmAny:
+
+.. _io_realm_internal_Table_nativeSetRealmAny__:
+
+
+
+nativeSetRealmAny
+-----------------
+
+.. _io_realm_internal_Table_nativeSetRealmAny_long__long__long__long__boolean_:
+
+.. _io_realm_internal_Table_nativeSetRealmAny_long_long_long_long_boolean_:
+
+.. _io_realm_internal_Table_nativeSetRealmAny_long__long__long__long__boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static native **void** nativeSetRealmAny (**long** nativeTableRefPtr,
+                                                     **long** columnKey,
+                                                     **long** rowKey,
+                                                     **long** value,
+                                                     **boolean** isDefault)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeSetString:
+
+.. _nativeSetString__:
+
+.. _Table_nativeSetString:
+
+.. _Table_nativeSetString__:
+
+.. _io_realm_internal_Table_nativeSetString:
+
+.. _io_realm_internal_Table_nativeSetString__:
+
+
+
+nativeSetString
+---------------
+
+.. _io_realm_internal_Table_nativeSetString_long__long__long__String__boolean_:
+
+.. _io_realm_internal_Table_nativeSetString_long_long_long_String_boolean_:
+
+.. _io_realm_internal_Table_nativeSetString_long__long__long__String__boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static native **void** nativeSetString (**long** nativeTableRefPtr,
+                                                   **long** columnKey,
+                                                   **long** rowKey,
+                                                   `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value,
+                                                   **boolean** isDefault)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeSetTimestamp:
+
+.. _nativeSetTimestamp__:
+
+.. _Table_nativeSetTimestamp:
+
+.. _Table_nativeSetTimestamp__:
+
+.. _io_realm_internal_Table_nativeSetTimestamp:
+
+.. _io_realm_internal_Table_nativeSetTimestamp__:
+
+
+
+nativeSetTimestamp
+------------------
+
+.. _io_realm_internal_Table_nativeSetTimestamp_long__long__long__long__boolean_:
+
+.. _io_realm_internal_Table_nativeSetTimestamp_long_long_long_long_boolean_:
+
+.. _io_realm_internal_Table_nativeSetTimestamp_long__long__long__long__boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static native **void** nativeSetTimestamp (**long** nativeTableRefPtr,
+                                                      **long** columnKey,
+                                                      **long** rowKey,
+                                                      **long** dateTimeValue,
+                                                      **boolean** isDefault)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeSetUUID:
+
+.. _nativeSetUUID__:
+
+.. _Table_nativeSetUUID:
+
+.. _Table_nativeSetUUID__:
+
+.. _io_realm_internal_Table_nativeSetUUID:
+
+.. _io_realm_internal_Table_nativeSetUUID__:
+
+
+
+nativeSetUUID
+-------------
+
+.. _io_realm_internal_Table_nativeSetUUID_long__long__long__String__boolean_:
+
+.. _io_realm_internal_Table_nativeSetUUID_long_long_long_String_boolean_:
+
+.. _io_realm_internal_Table_nativeSetUUID_long__long__long__String__boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static native **void** nativeSetUUID (**long** nativeTableRefPtr,
+                                                 **long** columnKey,
+                                                 **long** rowKey,
+                                                 `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  data,
+                                                 **boolean** isDefault)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nullifyLink:
+
+.. _nullifyLink__:
+
+.. _Table_nullifyLink:
+
+.. _Table_nullifyLink__:
+
+.. _io_realm_internal_Table_nullifyLink:
+
+.. _io_realm_internal_Table_nullifyLink__:
+
+
+
+nullifyLink
+-----------
+
+.. _io_realm_internal_Table_nullifyLink_long__long_:
+
+.. _io_realm_internal_Table_nullifyLink_long_long_:
+
+.. _io_realm_internal_Table_nullifyLink_long__long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** nullifyLink (**long** columnKey,
+                                 **long** rowKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _removeColumn:
+
+.. _removeColumn__:
+
+.. _Table_removeColumn:
+
+.. _Table_removeColumn__:
+
+.. _io_realm_internal_Table_removeColumn:
+
+.. _io_realm_internal_Table_removeColumn__:
+
+
+
+removeColumn
+------------
+
+.. _io_realm_internal_Table_removeColumn_long_:
+
+.. _io_realm_internal_Table_removeColumn_long_:
+
+.. _io_realm_internal_Table_removeColumn_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** removeColumn (**long** columnKey)
+   
+   * - Removes a column in the table dynamically.It should be noted if ``columnKey``  is the same as the primary key column key, the primary key column is removed from the meta table.
+       
+       
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``columnKey`` - the column key to be removed.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _removeSearchIndex:
+
+.. _removeSearchIndex__:
+
+.. _Table_removeSearchIndex:
+
+.. _Table_removeSearchIndex__:
+
+.. _io_realm_internal_Table_removeSearchIndex:
+
+.. _io_realm_internal_Table_removeSearchIndex__:
+
+
+
+removeSearchIndex
+-----------------
+
+.. _io_realm_internal_Table_removeSearchIndex_long_:
+
+.. _io_realm_internal_Table_removeSearchIndex_long_:
+
+.. _io_realm_internal_Table_removeSearchIndex_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** removeSearchIndex (**long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _renameColumn:
+
+.. _renameColumn__:
+
+.. _Table_renameColumn:
+
+.. _Table_renameColumn__:
+
+.. _io_realm_internal_Table_renameColumn:
+
+.. _io_realm_internal_Table_renameColumn__:
+
+
+
+renameColumn
+------------
+
+.. _io_realm_internal_Table_renameColumn_long__String_:
+
+.. _io_realm_internal_Table_renameColumn_long_String_:
+
+.. _io_realm_internal_Table_renameColumn_long__String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** renameColumn (**long** columnKey,
+                                  `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  newName)
+   
+   * - Renames a column in the table. If the column is a primary key column, the corresponding entry in PrimaryKeyTable will be renamed accordingly.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``columnKey`` - the column to be renamed.
+          
+          
+          
+       - ``newName`` - a new name replacing the old column name.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if ``newFieldName``  is an empty string, or exceeds field name length limit.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _setBinaryByteArray:
+
+.. _setBinaryByteArray__:
+
+.. _Table_setBinaryByteArray:
+
+.. _Table_setBinaryByteArray__:
+
+.. _io_realm_internal_Table_setBinaryByteArray:
+
+.. _io_realm_internal_Table_setBinaryByteArray__:
+
+
+
+setBinaryByteArray
+------------------
+
+.. _io_realm_internal_Table_setBinaryByteArray_long__long__byte[]__boolean_:
+
+.. _io_realm_internal_Table_setBinaryByteArray_long_long_byte_boolean_:
+
+.. _io_realm_internal_Table_setBinaryByteArray_long__long__byte__boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setBinaryByteArray (**long** columnKey,
+                                        **long** rowKey,
+                                        **byte[]** data,
+                                        **boolean** isDefault)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setBoolean:
+
+.. _setBoolean__:
+
+.. _Table_setBoolean:
+
+.. _Table_setBoolean__:
+
+.. _io_realm_internal_Table_setBoolean:
+
+.. _io_realm_internal_Table_setBoolean__:
+
+
+
+setBoolean
+----------
+
+.. _io_realm_internal_Table_setBoolean_long__long__boolean__boolean_:
+
+.. _io_realm_internal_Table_setBoolean_long_long_boolean_boolean_:
+
+.. _io_realm_internal_Table_setBoolean_long__long__boolean__boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setBoolean (**long** columnKey,
+                                **long** rowKey,
+                                **boolean** value,
+                                **boolean** isDefault)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setDate:
+
+.. _setDate__:
+
+.. _Table_setDate:
+
+.. _Table_setDate__:
+
+.. _io_realm_internal_Table_setDate:
+
+.. _io_realm_internal_Table_setDate__:
+
+
+
+setDate
+-------
+
+.. _io_realm_internal_Table_setDate_long__long__Date__boolean_:
+
+.. _io_realm_internal_Table_setDate_long_long_Date_boolean_:
+
+.. _io_realm_internal_Table_setDate_long__long__Date__boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setDate (**long** columnKey,
+                             **long** rowKey,
+                             `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  date,
+                             **boolean** isDefault)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setDecimal128:
+
+.. _setDecimal128__:
+
+.. _Table_setDecimal128:
+
+.. _Table_setDecimal128__:
+
+.. _io_realm_internal_Table_setDecimal128:
+
+.. _io_realm_internal_Table_setDecimal128__:
+
+
+
+setDecimal128
+-------------
+
+.. _io_realm_internal_Table_setDecimal128_long__long__Decimal128__boolean_:
+
+.. _io_realm_internal_Table_setDecimal128_long_long_Decimal128_boolean_:
+
+.. _io_realm_internal_Table_setDecimal128_long__long__Decimal128__boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setDecimal128 (**long** columnKey,
+                                   **long** rowKey,
+                                   **Decimal128 (?)** value,
+                                   **boolean** isDefault)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setDouble:
+
+.. _setDouble__:
+
+.. _Table_setDouble:
+
+.. _Table_setDouble__:
+
+.. _io_realm_internal_Table_setDouble:
+
+.. _io_realm_internal_Table_setDouble__:
+
+
+
+setDouble
+---------
+
+.. _io_realm_internal_Table_setDouble_long__long__double__boolean_:
+
+.. _io_realm_internal_Table_setDouble_long_long_double_boolean_:
+
+.. _io_realm_internal_Table_setDouble_long__long__double__boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setDouble (**long** columnKey,
+                               **long** rowKey,
+                               **double** value,
+                               **boolean** isDefault)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setEmbedded:
+
+.. _setEmbedded__:
+
+.. _Table_setEmbedded:
+
+.. _Table_setEmbedded__:
+
+.. _io_realm_internal_Table_setEmbedded:
+
+.. _io_realm_internal_Table_setEmbedded__:
+
+
+
+setEmbedded
+-----------
+
+.. _io_realm_internal_Table_setEmbedded_boolean_:
+
+.. _io_realm_internal_Table_setEmbedded_boolean_:
+
+.. _io_realm_internal_Table_setEmbedded_boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** setEmbedded (**boolean** embedded)
+   
+   * - Returns true if the state was changed, false if not. If false was returned, it meant some invariant was broken when trying to change the state
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setFloat:
+
+.. _setFloat__:
+
+.. _Table_setFloat:
+
+.. _Table_setFloat__:
+
+.. _io_realm_internal_Table_setFloat:
+
+.. _io_realm_internal_Table_setFloat__:
+
+
+
+setFloat
+--------
+
+.. _io_realm_internal_Table_setFloat_long__long__float__boolean_:
+
+.. _io_realm_internal_Table_setFloat_long_long_float_boolean_:
+
+.. _io_realm_internal_Table_setFloat_long__long__float__boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setFloat (**long** columnKey,
+                              **long** rowKey,
+                              **float** value,
+                              **boolean** isDefault)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setLink:
+
+.. _setLink__:
+
+.. _Table_setLink:
+
+.. _Table_setLink__:
+
+.. _io_realm_internal_Table_setLink:
+
+.. _io_realm_internal_Table_setLink__:
+
+
+
+setLink
+-------
+
+.. _io_realm_internal_Table_setLink_long__long__long__boolean_:
+
+.. _io_realm_internal_Table_setLink_long_long_long_boolean_:
+
+.. _io_realm_internal_Table_setLink_long__long__long__boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setLink (**long** columnKey,
+                             **long** rowKey,
+                             **long** value,
+                             **boolean** isDefault)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setLong:
+
+.. _setLong__:
+
+.. _Table_setLong:
+
+.. _Table_setLong__:
+
+.. _io_realm_internal_Table_setLong:
+
+.. _io_realm_internal_Table_setLong__:
+
+
+
+setLong
+-------
+
+.. _io_realm_internal_Table_setLong_long__long__long__boolean_:
+
+.. _io_realm_internal_Table_setLong_long_long_long_boolean_:
+
+.. _io_realm_internal_Table_setLong_long__long__long__boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setLong (**long** columnKey,
+                             **long** rowKey,
+                             **long** value,
+                             **boolean** isDefault)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setNull:
+
+.. _setNull__:
+
+.. _Table_setNull:
+
+.. _Table_setNull__:
+
+.. _io_realm_internal_Table_setNull:
+
+.. _io_realm_internal_Table_setNull__:
+
+
+
+setNull
+-------
+
+.. _io_realm_internal_Table_setNull_long__long__boolean_:
+
+.. _io_realm_internal_Table_setNull_long_long_boolean_:
+
+.. _io_realm_internal_Table_setNull_long__long__boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setNull (**long** columnKey,
+                             **long** rowKey,
+                             **boolean** isDefault)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setObjectId:
+
+.. _setObjectId__:
+
+.. _Table_setObjectId:
+
+.. _Table_setObjectId__:
+
+.. _io_realm_internal_Table_setObjectId:
+
+.. _io_realm_internal_Table_setObjectId__:
+
+
+
+setObjectId
+-----------
+
+.. _io_realm_internal_Table_setObjectId_long__long__ObjectId__boolean_:
+
+.. _io_realm_internal_Table_setObjectId_long_long_ObjectId_boolean_:
+
+.. _io_realm_internal_Table_setObjectId_long__long__ObjectId__boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setObjectId (**long** columnKey,
+                                 **long** rowKey,
+                                 **ObjectId (?)** value,
+                                 **boolean** isDefault)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setRealmAny:
+
+.. _setRealmAny__:
+
+.. _Table_setRealmAny:
+
+.. _Table_setRealmAny__:
+
+.. _io_realm_internal_Table_setRealmAny:
+
+.. _io_realm_internal_Table_setRealmAny__:
+
+
+
+setRealmAny
+-----------
+
+.. _io_realm_internal_Table_setRealmAny_long__long__long__boolean_:
+
+.. _io_realm_internal_Table_setRealmAny_long_long_long_boolean_:
+
+.. _io_realm_internal_Table_setRealmAny_long__long__long__boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setRealmAny (**long** columnKey,
+                                 **long** rowKey,
+                                 **long** nativePtr,
+                                 **boolean** isDefault)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setString:
+
+.. _setString__:
+
+.. _Table_setString:
+
+.. _Table_setString__:
+
+.. _io_realm_internal_Table_setString:
+
+.. _io_realm_internal_Table_setString__:
+
+
+
+setString
+---------
+
+.. _io_realm_internal_Table_setString_long__long__String__boolean_:
+
+.. _io_realm_internal_Table_setString_long_long_String_boolean_:
+
+.. _io_realm_internal_Table_setString_long__long__String__boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setString (**long** columnKey,
+                               **long** rowKey,
+                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value,
+                               **boolean** isDefault)
+   
+   * - Sets a String value to a cell of Table, pointed by column and row key.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``columnKey`` - cell column.
+          
+          
+          
+       - ``rowKey`` - cell row.
+          
+          
+          
+       - ``value`` - a String value to set in the cell.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setUUID:
+
+.. _setUUID__:
+
+.. _Table_setUUID:
+
+.. _Table_setUUID__:
+
+.. _io_realm_internal_Table_setUUID:
+
+.. _io_realm_internal_Table_setUUID__:
+
+
+
+setUUID
+-------
+
+.. _io_realm_internal_Table_setUUID_long__long__UUID__boolean_:
+
+.. _io_realm_internal_Table_setUUID_long_long_UUID_boolean_:
+
+.. _io_realm_internal_Table_setUUID_long__long__UUID__boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setUUID (**long** columnKey,
+                             **long** rowKey,
+                             `UUID <https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html>`__  value,
+                             **boolean** isDefault)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _size:
+
+.. _size__:
+
+.. _Table_size:
+
+.. _Table_size__:
+
+.. _io_realm_internal_Table_size:
+
+.. _io_realm_internal_Table_size__:
+
+
+
+size
+----
+
+.. _io_realm_internal_Table_size__:
+
+.. _io_realm_internal_Table_size__:
+
+.. _io_realm_internal_Table_size__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** size ()
+   
+   * - Gets the number of entries/rows of this table.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _throwDuplicatePrimaryKeyException:
+
+.. _throwDuplicatePrimaryKeyException__:
+
+.. _Table_throwDuplicatePrimaryKeyException:
+
+.. _Table_throwDuplicatePrimaryKeyException__:
+
+.. _io_realm_internal_Table_throwDuplicatePrimaryKeyException:
+
+.. _io_realm_internal_Table_throwDuplicatePrimaryKeyException__:
+
+
+
+throwDuplicatePrimaryKeyException
+---------------------------------
+
+.. _io_realm_internal_Table_throwDuplicatePrimaryKeyException_Object_:
+
+.. _io_realm_internal_Table_throwDuplicatePrimaryKeyException_Object_:
+
+.. _io_realm_internal_Table_throwDuplicatePrimaryKeyException_Object_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **void** throwDuplicatePrimaryKeyException (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  value)
+   
+   * - Throws a properly formatted exception when multiple objects with the same primary key value is detected.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``value`` - the primary key value.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _toString:
+
+.. _toString__:
+
+.. _Table_toString:
+
+.. _Table_toString__:
+
+.. _io_realm_internal_Table_toString:
+
+.. _io_realm_internal_Table_toString__:
+
+
+
+toString
+--------
+
+.. _io_realm_internal_Table_toString__:
+
+.. _io_realm_internal_Table_toString__:
+
+.. _io_realm_internal_Table_toString__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  toString ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _where:
+
+.. _where__:
+
+.. _Table_where:
+
+.. _Table_where__:
+
+.. _io_realm_internal_Table_where:
+
+.. _io_realm_internal_Table_where__:
+
+
+
+where
+-----
+
+.. _io_realm_internal_Table_where__:
+
+.. _io_realm_internal_Table_where__:
+
+.. _io_realm_internal_Table_where__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`TableQuery <io_realm_internal_TableQuery>`  where ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

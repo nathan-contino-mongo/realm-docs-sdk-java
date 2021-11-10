@@ -1,0 +1,871 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class RealmCacheTests
+^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_RealmCacheTests:
+
+
+
+io.realm
+========
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+
+
+
+Constructors
+============
+
+
+
+- ``io.realm.RealmCacheTests()`` 
+
+
+
+
+Field Summary
+=============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Field and Description
+   
+   * - ``public final io.realm.rule.RunInLooperThread`` 
+       
+       
+     - ``looperThread`` 
+       
+       
+   
+   * - ``public final io.realm.TestRealmConfigurationFactory`` 
+       
+       
+     - ``configFactory`` 
+       
+       
+   
+   
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setUp <io_realm_RealmCacheTests_setUp__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`typedRealmCacheIsCleared <io_realm_RealmCacheTests_typedRealmCacheIsCleared__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`dynamicRealmCacheIsCleared <io_realm_RealmCacheTests_dynamicRealmCacheIsCleared__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`getInstanceClearsCacheWhenFailed <io_realm_RealmCacheTests_getInstanceClearsCacheWhenFailed__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`realmCache <io_realm_RealmCacheTests_realmCache__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`dontCacheWrongConfigurations <io_realm_RealmCacheTests_dontCacheWrongConfigurations__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`deletingRealmAlsoClearsConfigurationCache <io_realm_RealmCacheTests_deletingRealmAlsoClearsConfigurationCache__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`getInstance_shouldNotBeBlockedByTransactionInAnotherThread <io_realm_RealmCacheTests_getInstance_shouldNotBeBlockedByTransactionInAnotherThread__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`differentThreadsDifferentInstance <io_realm_RealmCacheTests_differentThreadsDifferentInstance__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`getInstance_differentConfigurationsShouldNotBlockEachOther <io_realm_RealmCacheTests_getInstance_differentConfigurationsShouldNotBlockEachOther__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`releaseCacheInOneThread <io_realm_RealmCacheTests_releaseCacheInOneThread__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`getInstanceAsync_typedRealm <io_realm_RealmCacheTests_getInstanceAsync_typedRealm__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`getInstanceAsync_dynamicRealm <io_realm_RealmCacheTests_getInstanceAsync_dynamicRealm__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`getInstanceAsync_callbackDeliveredInFollowingEventLoopWhenLocalCacheExist <io_realm_RealmCacheTests_getInstanceAsync_callbackDeliveredInFollowingEventLoopWhenLocalCacheExist__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`getInstanceAsync_callbackDeliveredInFollowingEventLoopWhenGlobalCacheExist <io_realm_RealmCacheTests_getInstanceAsync_callbackDeliveredInFollowingEventLoopWhenGlobalCacheExist__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`getInstanceAsync_typedRealmShouldStillBeInitializedInBGIfOnlyDynamicRealmExists <io_realm_RealmCacheTests_getInstanceAsync_typedRealmShouldStillBeInitializedInBGIfOnlyDynamicRealmExists__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`getInstanceAsync_onError <io_realm_RealmCacheTests_getInstanceAsync_onError__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`getInstanceAsync_cancelBeforePostShouldNotCreateRealmInstanceOnTheCallerThread <io_realm_RealmCacheTests_getInstanceAsync_cancelBeforePostShouldNotCreateRealmInstanceOnTheCallerThread__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`typedRealmAndDynamicRealmShareTheSameCache <io_realm_RealmCacheTests_typedRealmAndDynamicRealmShareTheSameCache__>`  ()
+       
+       
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+
+
+
+
+Field Detail
+============
+
+.. _io_realm_RealmCacheTests_looperThread:
+
+
+
+``looperThread`` 
+-----------------
+
+
+.. _io_realm_RealmCacheTests_configFactory:
+
+
+
+``configFactory`` 
+------------------
+
+
+
+
+Method Detail
+=============
+
+
+
+setUp
+-----
+
+.. _io_realm_RealmCacheTests_setUp__:
+
+.. _io_realm_RealmCacheTests_setUp__:
+
+.. _io_realm_RealmCacheTests_setUp__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setUp ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+typedRealmCacheIsCleared
+------------------------
+
+.. _io_realm_RealmCacheTests_typedRealmCacheIsCleared__:
+
+.. _io_realm_RealmCacheTests_typedRealmCacheIsCleared__:
+
+.. _io_realm_RealmCacheTests_typedRealmCacheIsCleared__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** typedRealmCacheIsCleared ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+dynamicRealmCacheIsCleared
+--------------------------
+
+.. _io_realm_RealmCacheTests_dynamicRealmCacheIsCleared__:
+
+.. _io_realm_RealmCacheTests_dynamicRealmCacheIsCleared__:
+
+.. _io_realm_RealmCacheTests_dynamicRealmCacheIsCleared__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** dynamicRealmCacheIsCleared ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getInstanceClearsCacheWhenFailed
+--------------------------------
+
+.. _io_realm_RealmCacheTests_getInstanceClearsCacheWhenFailed__:
+
+.. _io_realm_RealmCacheTests_getInstanceClearsCacheWhenFailed__:
+
+.. _io_realm_RealmCacheTests_getInstanceClearsCacheWhenFailed__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** getInstanceClearsCacheWhenFailed ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+realmCache
+----------
+
+.. _io_realm_RealmCacheTests_realmCache__:
+
+.. _io_realm_RealmCacheTests_realmCache__:
+
+.. _io_realm_RealmCacheTests_realmCache__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** realmCache ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+dontCacheWrongConfigurations
+----------------------------
+
+.. _io_realm_RealmCacheTests_dontCacheWrongConfigurations__:
+
+.. _io_realm_RealmCacheTests_dontCacheWrongConfigurations__:
+
+.. _io_realm_RealmCacheTests_dontCacheWrongConfigurations__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** dontCacheWrongConfigurations ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+deletingRealmAlsoClearsConfigurationCache
+-----------------------------------------
+
+.. _io_realm_RealmCacheTests_deletingRealmAlsoClearsConfigurationCache__:
+
+.. _io_realm_RealmCacheTests_deletingRealmAlsoClearsConfigurationCache__:
+
+.. _io_realm_RealmCacheTests_deletingRealmAlsoClearsConfigurationCache__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** deletingRealmAlsoClearsConfigurationCache ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getInstance_shouldNotBeBlockedByTransactionInAnotherThread
+----------------------------------------------------------
+
+.. _io_realm_RealmCacheTests_getInstance_shouldNotBeBlockedByTransactionInAnotherThread__:
+
+.. _io_realm_RealmCacheTests_getInstance_shouldNotBeBlockedByTransactionInAnotherThread__:
+
+.. _io_realm_RealmCacheTests_getInstance_shouldNotBeBlockedByTransactionInAnotherThread__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** getInstance_shouldNotBeBlockedByTransactionInAnotherThread ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+differentThreadsDifferentInstance
+---------------------------------
+
+.. _io_realm_RealmCacheTests_differentThreadsDifferentInstance__:
+
+.. _io_realm_RealmCacheTests_differentThreadsDifferentInstance__:
+
+.. _io_realm_RealmCacheTests_differentThreadsDifferentInstance__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** differentThreadsDifferentInstance ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getInstance_differentConfigurationsShouldNotBlockEachOther
+----------------------------------------------------------
+
+.. _io_realm_RealmCacheTests_getInstance_differentConfigurationsShouldNotBlockEachOther__:
+
+.. _io_realm_RealmCacheTests_getInstance_differentConfigurationsShouldNotBlockEachOther__:
+
+.. _io_realm_RealmCacheTests_getInstance_differentConfigurationsShouldNotBlockEachOther__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** getInstance_differentConfigurationsShouldNotBlockEachOther ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+releaseCacheInOneThread
+-----------------------
+
+.. _io_realm_RealmCacheTests_releaseCacheInOneThread__:
+
+.. _io_realm_RealmCacheTests_releaseCacheInOneThread__:
+
+.. _io_realm_RealmCacheTests_releaseCacheInOneThread__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** releaseCacheInOneThread ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getInstanceAsync_typedRealm
+---------------------------
+
+.. _io_realm_RealmCacheTests_getInstanceAsync_typedRealm__:
+
+.. _io_realm_RealmCacheTests_getInstanceAsync_typedRealm__:
+
+.. _io_realm_RealmCacheTests_getInstanceAsync_typedRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** getInstanceAsync_typedRealm ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getInstanceAsync_dynamicRealm
+-----------------------------
+
+.. _io_realm_RealmCacheTests_getInstanceAsync_dynamicRealm__:
+
+.. _io_realm_RealmCacheTests_getInstanceAsync_dynamicRealm__:
+
+.. _io_realm_RealmCacheTests_getInstanceAsync_dynamicRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** getInstanceAsync_dynamicRealm ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getInstanceAsync_callbackDeliveredInFollowingEventLoopWhenLocalCacheExist
+-------------------------------------------------------------------------
+
+.. _io_realm_RealmCacheTests_getInstanceAsync_callbackDeliveredInFollowingEventLoopWhenLocalCacheExist__:
+
+.. _io_realm_RealmCacheTests_getInstanceAsync_callbackDeliveredInFollowingEventLoopWhenLocalCacheExist__:
+
+.. _io_realm_RealmCacheTests_getInstanceAsync_callbackDeliveredInFollowingEventLoopWhenLocalCacheExist__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** getInstanceAsync_callbackDeliveredInFollowingEventLoopWhenLocalCacheExist ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getInstanceAsync_callbackDeliveredInFollowingEventLoopWhenGlobalCacheExist
+--------------------------------------------------------------------------
+
+.. _io_realm_RealmCacheTests_getInstanceAsync_callbackDeliveredInFollowingEventLoopWhenGlobalCacheExist__:
+
+.. _io_realm_RealmCacheTests_getInstanceAsync_callbackDeliveredInFollowingEventLoopWhenGlobalCacheExist__:
+
+.. _io_realm_RealmCacheTests_getInstanceAsync_callbackDeliveredInFollowingEventLoopWhenGlobalCacheExist__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** getInstanceAsync_callbackDeliveredInFollowingEventLoopWhenGlobalCacheExist ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getInstanceAsync_typedRealmShouldStillBeInitializedInBGIfOnlyDynamicRealmExists
+-------------------------------------------------------------------------------
+
+.. _io_realm_RealmCacheTests_getInstanceAsync_typedRealmShouldStillBeInitializedInBGIfOnlyDynamicRealmExists__:
+
+.. _io_realm_RealmCacheTests_getInstanceAsync_typedRealmShouldStillBeInitializedInBGIfOnlyDynamicRealmExists__:
+
+.. _io_realm_RealmCacheTests_getInstanceAsync_typedRealmShouldStillBeInitializedInBGIfOnlyDynamicRealmExists__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** getInstanceAsync_typedRealmShouldStillBeInitializedInBGIfOnlyDynamicRealmExists ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getInstanceAsync_onError
+------------------------
+
+.. _io_realm_RealmCacheTests_getInstanceAsync_onError__:
+
+.. _io_realm_RealmCacheTests_getInstanceAsync_onError__:
+
+.. _io_realm_RealmCacheTests_getInstanceAsync_onError__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** getInstanceAsync_onError ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getInstanceAsync_cancelBeforePostShouldNotCreateRealmInstanceOnTheCallerThread
+------------------------------------------------------------------------------
+
+.. _io_realm_RealmCacheTests_getInstanceAsync_cancelBeforePostShouldNotCreateRealmInstanceOnTheCallerThread__:
+
+.. _io_realm_RealmCacheTests_getInstanceAsync_cancelBeforePostShouldNotCreateRealmInstanceOnTheCallerThread__:
+
+.. _io_realm_RealmCacheTests_getInstanceAsync_cancelBeforePostShouldNotCreateRealmInstanceOnTheCallerThread__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** getInstanceAsync_cancelBeforePostShouldNotCreateRealmInstanceOnTheCallerThread ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+typedRealmAndDynamicRealmShareTheSameCache
+------------------------------------------
+
+.. _io_realm_RealmCacheTests_typedRealmAndDynamicRealmShareTheSameCache__:
+
+.. _io_realm_RealmCacheTests_typedRealmAndDynamicRealmShareTheSameCache__:
+
+.. _io_realm_RealmCacheTests_typedRealmAndDynamicRealmShareTheSameCache__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** typedRealmAndDynamicRealmShareTheSameCache ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

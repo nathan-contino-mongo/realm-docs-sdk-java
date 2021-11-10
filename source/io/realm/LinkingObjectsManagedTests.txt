@@ -1,0 +1,1183 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class LinkingObjectsManagedTests
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_LinkingObjectsManagedTests:
+
+
+
+io.realm
+========
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+
+
+
+Constructors
+============
+
+
+
+- ``io.realm.LinkingObjectsManagedTests()`` 
+
+
+
+
+Field Summary
+=============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Field and Description
+   
+   * - ``public final io.realm.TestRealmConfigurationFactory`` 
+       
+       
+     - ``configFactory`` 
+       
+       
+   
+   * - ``public final io.realm.rule.RunInLooperThread`` 
+       
+       
+     - ``looperThread`` 
+       
+       
+   
+   * - ``public final ExpectedException`` 
+       
+       
+     - ``thrown`` 
+       
+       
+   
+   
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setUp <io_realm_LinkingObjectsManagedTests_setUp__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`tearDown <io_realm_LinkingObjectsManagedTests_tearDown__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`basic_singleBacklinkObject <io_realm_LinkingObjectsManagedTests_basic_singleBacklinkObject__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`basic_singleBacklinkList <io_realm_LinkingObjectsManagedTests_basic_singleBacklinkList__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`basic_multipleBacklinksObject <io_realm_LinkingObjectsManagedTests_basic_multipleBacklinksObject__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`basic_multipleBacklinksList <io_realm_LinkingObjectsManagedTests_basic_multipleBacklinksList__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`basic_multipleReferencesFromParentList <io_realm_LinkingObjectsManagedTests_basic_multipleReferencesFromParentList__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`issue4487_checkIfTableIsCorrect <io_realm_LinkingObjectsManagedTests_issue4487_checkIfTableIsCorrect__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`notification_notSentAfterUnregisterListenerModelObject <io_realm_LinkingObjectsManagedTests_notification_notSentAfterUnregisterListenerModelObject__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`notification_onCommitRealmResults <io_realm_LinkingObjectsManagedTests_notification_onCommitRealmResults__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`notification_notSentAfterUnregisterListenerRealmResults <io_realm_LinkingObjectsManagedTests_notification_notSentAfterUnregisterListenerRealmResults__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`notification_onDeleteRealmResults <io_realm_LinkingObjectsManagedTests_notification_onDeleteRealmResults__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`notification_notSentOnUnrelatedChangeRealmResults <io_realm_LinkingObjectsManagedTests_notification_notSentOnUnrelatedChangeRealmResults__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`json_updateObject <io_realm_LinkingObjectsManagedTests_json_updateObject__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`json_updateList <io_realm_LinkingObjectsManagedTests_json_updateList__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`linkingObjects_IllegalStateException_ifNotYetLoaded <io_realm_LinkingObjectsManagedTests_linkingObjects_IllegalStateException_ifNotYetLoaded__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`linkingObjects_IllegalStateException_ifDeleted <io_realm_LinkingObjectsManagedTests_linkingObjects_IllegalStateException_ifDeleted__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`linkingObjects_IllegalStateException_ifDeletedIndirectly <io_realm_LinkingObjectsManagedTests_linkingObjects_IllegalStateException_ifDeletedIndirectly__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`migration_backlinkedFieldInUse <io_realm_LinkingObjectsManagedTests_migration_backlinkedFieldInUse__>`  ()
+       
+       Table validation should fail if the backlinked column already exists in the target table.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`migration_backlinkedSourceClassDoesntExist <io_realm_LinkingObjectsManagedTests_migration_backlinkedSourceClassDoesntExist__>`  ()
+       
+       Schema validation should fail if the backlinked column points to a non-existent class.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`migration_backlinkedSourceFieldDoesntExist <io_realm_LinkingObjectsManagedTests_migration_backlinkedSourceFieldDoesntExist__>`  ()
+       
+       Schema validation should fail if the backlinked column points to a non-existent field in the source class.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`migration_backlinkedSourceFieldWrongType <io_realm_LinkingObjectsManagedTests_migration_backlinkedSourceFieldWrongType__>`  ()
+       
+       Table validation should fail if the backlinked column points to a field of the wrong type.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`query_multipleReferencesWithDistinct <io_realm_LinkingObjectsManagedTests_query_multipleReferencesWithDistinct__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealm_modelWithRenamedTargetFields <io_realm_LinkingObjectsManagedTests_copyToRealm_modelWithRenamedTargetFields__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`insert_modelWithRenamedTargetFields <io_realm_LinkingObjectsManagedTests_insert_modelWithRenamedTargetFields__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`query_modelWithRenamedFields <io_realm_LinkingObjectsManagedTests_query_modelWithRenamedFields__>`  ()
+       
+       
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+
+
+
+
+Field Detail
+============
+
+.. _io_realm_LinkingObjectsManagedTests_configFactory:
+
+
+
+``configFactory`` 
+------------------
+
+
+.. _io_realm_LinkingObjectsManagedTests_looperThread:
+
+
+
+``looperThread`` 
+-----------------
+
+
+.. _io_realm_LinkingObjectsManagedTests_thrown:
+
+
+
+``thrown`` 
+-----------
+
+
+
+
+Method Detail
+=============
+
+
+
+setUp
+-----
+
+.. _io_realm_LinkingObjectsManagedTests_setUp__:
+
+.. _io_realm_LinkingObjectsManagedTests_setUp__:
+
+.. _io_realm_LinkingObjectsManagedTests_setUp__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setUp ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+tearDown
+--------
+
+.. _io_realm_LinkingObjectsManagedTests_tearDown__:
+
+.. _io_realm_LinkingObjectsManagedTests_tearDown__:
+
+.. _io_realm_LinkingObjectsManagedTests_tearDown__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** tearDown ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+basic_singleBacklinkObject
+--------------------------
+
+.. _io_realm_LinkingObjectsManagedTests_basic_singleBacklinkObject__:
+
+.. _io_realm_LinkingObjectsManagedTests_basic_singleBacklinkObject__:
+
+.. _io_realm_LinkingObjectsManagedTests_basic_singleBacklinkObject__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** basic_singleBacklinkObject ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+basic_singleBacklinkList
+------------------------
+
+.. _io_realm_LinkingObjectsManagedTests_basic_singleBacklinkList__:
+
+.. _io_realm_LinkingObjectsManagedTests_basic_singleBacklinkList__:
+
+.. _io_realm_LinkingObjectsManagedTests_basic_singleBacklinkList__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** basic_singleBacklinkList ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+basic_multipleBacklinksObject
+-----------------------------
+
+.. _io_realm_LinkingObjectsManagedTests_basic_multipleBacklinksObject__:
+
+.. _io_realm_LinkingObjectsManagedTests_basic_multipleBacklinksObject__:
+
+.. _io_realm_LinkingObjectsManagedTests_basic_multipleBacklinksObject__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** basic_multipleBacklinksObject ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+basic_multipleBacklinksList
+---------------------------
+
+.. _io_realm_LinkingObjectsManagedTests_basic_multipleBacklinksList__:
+
+.. _io_realm_LinkingObjectsManagedTests_basic_multipleBacklinksList__:
+
+.. _io_realm_LinkingObjectsManagedTests_basic_multipleBacklinksList__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** basic_multipleBacklinksList ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+basic_multipleReferencesFromParentList
+--------------------------------------
+
+.. _io_realm_LinkingObjectsManagedTests_basic_multipleReferencesFromParentList__:
+
+.. _io_realm_LinkingObjectsManagedTests_basic_multipleReferencesFromParentList__:
+
+.. _io_realm_LinkingObjectsManagedTests_basic_multipleReferencesFromParentList__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** basic_multipleReferencesFromParentList ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+issue4487_checkIfTableIsCorrect
+-------------------------------
+
+.. _io_realm_LinkingObjectsManagedTests_issue4487_checkIfTableIsCorrect__:
+
+.. _io_realm_LinkingObjectsManagedTests_issue4487_checkIfTableIsCorrect__:
+
+.. _io_realm_LinkingObjectsManagedTests_issue4487_checkIfTableIsCorrect__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** issue4487_checkIfTableIsCorrect ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+notification_notSentAfterUnregisterListenerModelObject
+------------------------------------------------------
+
+.. _io_realm_LinkingObjectsManagedTests_notification_notSentAfterUnregisterListenerModelObject__:
+
+.. _io_realm_LinkingObjectsManagedTests_notification_notSentAfterUnregisterListenerModelObject__:
+
+.. _io_realm_LinkingObjectsManagedTests_notification_notSentAfterUnregisterListenerModelObject__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** notification_notSentAfterUnregisterListenerModelObject ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+notification_onCommitRealmResults
+---------------------------------
+
+.. _io_realm_LinkingObjectsManagedTests_notification_onCommitRealmResults__:
+
+.. _io_realm_LinkingObjectsManagedTests_notification_onCommitRealmResults__:
+
+.. _io_realm_LinkingObjectsManagedTests_notification_onCommitRealmResults__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** notification_onCommitRealmResults ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+notification_notSentAfterUnregisterListenerRealmResults
+-------------------------------------------------------
+
+.. _io_realm_LinkingObjectsManagedTests_notification_notSentAfterUnregisterListenerRealmResults__:
+
+.. _io_realm_LinkingObjectsManagedTests_notification_notSentAfterUnregisterListenerRealmResults__:
+
+.. _io_realm_LinkingObjectsManagedTests_notification_notSentAfterUnregisterListenerRealmResults__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** notification_notSentAfterUnregisterListenerRealmResults ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+notification_onDeleteRealmResults
+---------------------------------
+
+.. _io_realm_LinkingObjectsManagedTests_notification_onDeleteRealmResults__:
+
+.. _io_realm_LinkingObjectsManagedTests_notification_onDeleteRealmResults__:
+
+.. _io_realm_LinkingObjectsManagedTests_notification_onDeleteRealmResults__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** notification_onDeleteRealmResults ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+notification_notSentOnUnrelatedChangeRealmResults
+-------------------------------------------------
+
+.. _io_realm_LinkingObjectsManagedTests_notification_notSentOnUnrelatedChangeRealmResults__:
+
+.. _io_realm_LinkingObjectsManagedTests_notification_notSentOnUnrelatedChangeRealmResults__:
+
+.. _io_realm_LinkingObjectsManagedTests_notification_notSentOnUnrelatedChangeRealmResults__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** notification_notSentOnUnrelatedChangeRealmResults ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+json_updateObject
+-----------------
+
+.. _io_realm_LinkingObjectsManagedTests_json_updateObject__:
+
+.. _io_realm_LinkingObjectsManagedTests_json_updateObject__:
+
+.. _io_realm_LinkingObjectsManagedTests_json_updateObject__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** json_updateObject ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+json_updateList
+---------------
+
+.. _io_realm_LinkingObjectsManagedTests_json_updateList__:
+
+.. _io_realm_LinkingObjectsManagedTests_json_updateList__:
+
+.. _io_realm_LinkingObjectsManagedTests_json_updateList__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** json_updateList ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+linkingObjects_IllegalStateException_ifNotYetLoaded
+---------------------------------------------------
+
+.. _io_realm_LinkingObjectsManagedTests_linkingObjects_IllegalStateException_ifNotYetLoaded__:
+
+.. _io_realm_LinkingObjectsManagedTests_linkingObjects_IllegalStateException_ifNotYetLoaded__:
+
+.. _io_realm_LinkingObjectsManagedTests_linkingObjects_IllegalStateException_ifNotYetLoaded__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** linkingObjects_IllegalStateException_ifNotYetLoaded ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+linkingObjects_IllegalStateException_ifDeleted
+----------------------------------------------
+
+.. _io_realm_LinkingObjectsManagedTests_linkingObjects_IllegalStateException_ifDeleted__:
+
+.. _io_realm_LinkingObjectsManagedTests_linkingObjects_IllegalStateException_ifDeleted__:
+
+.. _io_realm_LinkingObjectsManagedTests_linkingObjects_IllegalStateException_ifDeleted__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** linkingObjects_IllegalStateException_ifDeleted ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+linkingObjects_IllegalStateException_ifDeletedIndirectly
+--------------------------------------------------------
+
+.. _io_realm_LinkingObjectsManagedTests_linkingObjects_IllegalStateException_ifDeletedIndirectly__:
+
+.. _io_realm_LinkingObjectsManagedTests_linkingObjects_IllegalStateException_ifDeletedIndirectly__:
+
+.. _io_realm_LinkingObjectsManagedTests_linkingObjects_IllegalStateException_ifDeletedIndirectly__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** linkingObjects_IllegalStateException_ifDeletedIndirectly ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+migration_backlinkedFieldInUse
+------------------------------
+
+.. _io_realm_LinkingObjectsManagedTests_migration_backlinkedFieldInUse__:
+
+.. _io_realm_LinkingObjectsManagedTests_migration_backlinkedFieldInUse__:
+
+.. _io_realm_LinkingObjectsManagedTests_migration_backlinkedFieldInUse__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** migration_backlinkedFieldInUse ()
+   
+   * - Table validation should fail if the backlinked column already exists in the target table. The realm \`backlinks-fieldInUse.realm\` contains the classes \`BacklinksSource\` and \`BacklinksTarget\` except that in the definition of ``BacklinksTarget`` , the field parent is defined as:
+       
+        
+       
+       .. code-block:: java
+       
+          
+               private RealmList<BacklinksSource> parents;
+           
+       
+       
+        
+       
+       The backlinked field does exist but it is list of links to ``BacklinksSource``  children not a list of backlinks to ``BacklinksSource``  parents of which the ``BacklinksTarget``  is a child.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+migration_backlinkedSourceClassDoesntExist
+------------------------------------------
+
+.. _io_realm_LinkingObjectsManagedTests_migration_backlinkedSourceClassDoesntExist__:
+
+.. _io_realm_LinkingObjectsManagedTests_migration_backlinkedSourceClassDoesntExist__:
+
+.. _io_realm_LinkingObjectsManagedTests_migration_backlinkedSourceClassDoesntExist__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** migration_backlinkedSourceClassDoesntExist ()
+   
+   * - Schema validation should fail if the backlinked column points to a non-existent class. Since the configuration contains only the single class \`BacklinksTarget\`, basic validation passes. The computed property validation, however, should fail, seeking the \`BacklinksSource\` table.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+migration_backlinkedSourceFieldDoesntExist
+------------------------------------------
+
+.. _io_realm_LinkingObjectsManagedTests_migration_backlinkedSourceFieldDoesntExist__:
+
+.. _io_realm_LinkingObjectsManagedTests_migration_backlinkedSourceFieldDoesntExist__:
+
+.. _io_realm_LinkingObjectsManagedTests_migration_backlinkedSourceFieldDoesntExist__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** migration_backlinkedSourceFieldDoesntExist ()
+   
+   * - Schema validation should fail if the backlinked column points to a non-existent field in the source class.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+migration_backlinkedSourceFieldWrongType
+----------------------------------------
+
+.. _io_realm_LinkingObjectsManagedTests_migration_backlinkedSourceFieldWrongType__:
+
+.. _io_realm_LinkingObjectsManagedTests_migration_backlinkedSourceFieldWrongType__:
+
+.. _io_realm_LinkingObjectsManagedTests_migration_backlinkedSourceFieldWrongType__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** migration_backlinkedSourceFieldWrongType ()
+   
+   * - Table validation should fail if the backlinked column points to a field of the wrong type.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+query_multipleReferencesWithDistinct
+------------------------------------
+
+.. _io_realm_LinkingObjectsManagedTests_query_multipleReferencesWithDistinct__:
+
+.. _io_realm_LinkingObjectsManagedTests_query_multipleReferencesWithDistinct__:
+
+.. _io_realm_LinkingObjectsManagedTests_query_multipleReferencesWithDistinct__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** query_multipleReferencesWithDistinct ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealm_modelWithRenamedTargetFields
+----------------------------------------
+
+.. _io_realm_LinkingObjectsManagedTests_copyToRealm_modelWithRenamedTargetFields__:
+
+.. _io_realm_LinkingObjectsManagedTests_copyToRealm_modelWithRenamedTargetFields__:
+
+.. _io_realm_LinkingObjectsManagedTests_copyToRealm_modelWithRenamedTargetFields__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealm_modelWithRenamedTargetFields ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+insert_modelWithRenamedTargetFields
+-----------------------------------
+
+.. _io_realm_LinkingObjectsManagedTests_insert_modelWithRenamedTargetFields__:
+
+.. _io_realm_LinkingObjectsManagedTests_insert_modelWithRenamedTargetFields__:
+
+.. _io_realm_LinkingObjectsManagedTests_insert_modelWithRenamedTargetFields__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** insert_modelWithRenamedTargetFields ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+query_modelWithRenamedFields
+----------------------------
+
+.. _io_realm_LinkingObjectsManagedTests_query_modelWithRenamedFields__:
+
+.. _io_realm_LinkingObjectsManagedTests_query_modelWithRenamedFields__:
+
+.. _io_realm_LinkingObjectsManagedTests_query_modelWithRenamedFields__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** query_modelWithRenamedFields ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

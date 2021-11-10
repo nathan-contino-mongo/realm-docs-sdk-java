@@ -1,0 +1,178 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class HttpUtils
+^^^^^^^^^^^^^^^
+
+.. _io_realm_objectserver_utils_HttpUtils:
+
+
+
+io.realm.objectserver.utils
+===========================
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+Start and Stop the node server responsible of creating a temp directory & start a sync server on it for each unit test. WARNING: This class is called before Realm is initialized, so RealmLog cannot be used.
+
+
+Constructors
+============
+
+
+
+- ``io.realm.objectserver.utils.HttpUtils()`` 
+
+
+
+
+Field Summary
+=============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Field and Description
+   
+   * - ``public static final java.lang.String`` 
+       
+       
+     - ``TAG`` 
+       
+       
+   
+   
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public static **void**
+     - 
+       :ref:`startSyncServer <io_realm_objectserver_utils_HttpUtils_startSyncServer__>`  ()
+       
+       Start the sync server.
+       
+       
+       
+   
+   * - 
+       public static **void**
+     - 
+       :ref:`stopSyncServer <io_realm_objectserver_utils_HttpUtils_stopSyncServer__>`  ()
+       
+       Stop the sync server if it is alive.
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+
+
+
+
+Field Detail
+============
+
+.. _io_realm_objectserver_utils_HttpUtils_TAG:
+
+
+
+``TAG`` 
+--------
+
+
+
+
+Method Detail
+=============
+
+
+
+startSyncServer
+---------------
+
+.. _io_realm_objectserver_utils_HttpUtils_startSyncServer__:
+
+.. _io_realm_objectserver_utils_HttpUtils_startSyncServer__:
+
+.. _io_realm_objectserver_utils_HttpUtils_startSyncServer__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **void** startSyncServer ()
+   
+   * - Start the sync server. If the server has been started before, stop it first.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+stopSyncServer
+--------------
+
+.. _io_realm_objectserver_utils_HttpUtils_stopSyncServer__:
+
+.. _io_realm_objectserver_utils_HttpUtils_stopSyncServer__:
+
+.. _io_realm_objectserver_utils_HttpUtils_stopSyncServer__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **void** stopSyncServer ()
+   
+   * - Stop the sync server if it is alive. :ref:`startSyncServer() <io_realm_objectserver_utils_HttpUtils_startSyncServer__>`  will implicitly stop the server if needed, so normally there is no need to call this.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

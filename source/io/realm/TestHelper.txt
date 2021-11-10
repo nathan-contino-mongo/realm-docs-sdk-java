@@ -1,0 +1,2780 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class TestHelper
+^^^^^^^^^^^^^^^^
+
+.. _io_realm_TestHelper:
+
+
+
+io.realm
+========
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+
+
+
+Constructors
+============
+
+
+
+- ``io.realm.TestHelper()`` 
+
+
+
+
+Nested Class Summary
+====================
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Class and Description
+   
+   * - ``public static`` 
+     - ``io.realm.TestHelper.ExpectedCountCallback`` 
+   
+   * - ``public static interface`` 
+     - ``io.realm.TestHelper.AdditionalTableSetup`` 
+   
+   * - ``public static`` 
+     - ``io.realm.TestHelper.TestLogger`` 
+   
+   * - ``public static`` 
+     - ``io.realm.TestHelper.StubInputStream`` 
+   
+   * - ``public static interface`` 
+     - ``io.realm.TestHelper.LooperTest`` 
+   
+   * - ``public abstract static`` 
+     - ``io.realm.TestHelper.Task`` 
+   
+   
+
+
+Field Summary
+=============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Field and Description
+   
+   * - ``public static final int`` 
+       
+       
+     - ``VERY_SHORT_WAIT_SECS`` 
+       
+       
+   
+   * - ``public static final int`` 
+       
+       
+     - ``SHORT_WAIT_SECS`` 
+       
+       
+   
+   * - ``public static final int`` 
+       
+       
+     - ``STANDARD_WAIT_SECS`` 
+       
+       
+   
+   
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public static :ref:`RealmFieldType <io_realm_RealmFieldType>` 
+     - 
+       :ref:`getColumnType <io_realm_TestHelper_getColumnType_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static **long**
+     - 
+       :ref:`addRowWithValues <io_realm_TestHelper_addRowWithValues_Table__long[]__Object[]_>`  (:ref:`Table <io_realm_internal_Table>`  table,
+                                             **long[]** columnKeys,
+                                             `java.lang.Object[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  values)
+       
+       Appends the specified row to the end of the table.
+       
+       
+       
+   
+   * - 
+       public static :ref:`Table <io_realm_internal_Table>` 
+     - 
+       :ref:`createTableWithAllColumnTypes <io_realm_TestHelper_createTableWithAllColumnTypes_OsSharedRealm_>`  (:ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  sharedRealm)
+       
+       Creates an empty table whose name is "temp" with 1 column of all our supported column types, currently 7 columns.
+       
+       
+       
+   
+   * - 
+       public static :ref:`Table <io_realm_internal_Table>` 
+     - 
+       :ref:`createTableWithAllColumnTypes <io_realm_TestHelper_createTableWithAllColumnTypes_OsSharedRealm__String_>`  (:ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  sharedRealm,
+                                                           `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+       
+       Creates an empty table with 1 column of all our supported column types, currently 7 columns.
+       
+       
+       
+   
+   * - 
+       public static :ref:`Table <io_realm_internal_Table>` 
+     - 
+       :ref:`createTable <io_realm_TestHelper_createTable_OsSharedRealm__String_>`  (:ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  sharedRealm,
+                                         `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static :ref:`Table <io_realm_internal_Table>` 
+     - 
+       :ref:`createTable <io_realm_TestHelper_createTable_OsSharedRealm__String__TestHelper_AdditionalTableSetup_>`  (:ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  sharedRealm,
+                                         `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
+                                         :ref:`TestHelper.AdditionalTableSetup <io_realm_TestHelper_AdditionalTableSetup>`  additionalSetup)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`streamToString <io_realm_TestHelper_streamToString_InputStream_>`  (`InputStream <https://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html>`__  in)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static `InputStream <https://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html>`__ 
+     - 
+       :ref:`stringToStream <io_realm_TestHelper_stringToStream_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  str)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static **byte**
+     - 
+       :ref:`getRandomKey <io_realm_TestHelper_getRandomKey__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public static **int**
+     - 
+       :ref:`getRandomId <io_realm_TestHelper_getRandomId__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public static `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`getRandomEmail <io_realm_TestHelper_getRandomEmail__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public static **byte**
+     - 
+       :ref:`getRandomKey <io_realm_TestHelper_getRandomKey_long_>`  (**long** seed)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static :ref:`RealmLogger <io_realm_log_RealmLogger>` 
+     - 
+       :ref:`getFailureLogger <io_realm_TestHelper_getFailureLogger_int_>`  (**int** failureLevel)
+       
+       Returns a RealmLogger that will fail if it is asked to log a message above a certain level.
+       
+       
+       
+   
+   * - 
+       public static `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`getRandomString <io_realm_TestHelper_getRandomString_int_>`  (**int** length)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static **byte**
+     - 
+       :ref:`allocGarbage <io_realm_TestHelper_allocGarbage_int_>`  (**int** garbageSize)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static **byte**
+     - 
+       :ref:`SHA512 <io_realm_TestHelper_SHA512_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  str)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static :ref:`RealmConfiguration <io_realm_RealmConfiguration>` 
+     - 
+       :ref:`createConfiguration <io_realm_TestHelper_createConfiguration_Context_>`  (**Context (?)** context)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static :ref:`RealmConfiguration <io_realm_RealmConfiguration>` 
+     - 
+       :ref:`createConfiguration <io_realm_TestHelper_createConfiguration_Context__String_>`  (**Context (?)** context,
+                                                              `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static :ref:`RealmConfiguration <io_realm_RealmConfiguration>` 
+     - 
+       :ref:`createConfiguration <io_realm_TestHelper_createConfiguration_File__String_>`  (`File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  folder,
+                                                              `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static :ref:`RealmConfiguration <io_realm_RealmConfiguration>` 
+     - 
+       :ref:`createConfiguration <io_realm_TestHelper_createConfiguration_Context__String__byte[]_>`  (**Context (?)** context,
+                                                              `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
+                                                              **byte[]** key)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static :ref:`RealmConfiguration <io_realm_RealmConfiguration>` 
+     - 
+       :ref:`createConfiguration <io_realm_TestHelper_createConfiguration_File__String__byte[]_>`  (`File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  dir,
+                                                              `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
+                                                              **byte[]** key)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static :ref:`PrimaryKeyAsString <io_realm_entities_PrimaryKeyAsString>` 
+     - 
+       :ref:`addStringPrimaryKeyObjectToTestRealm <io_realm_TestHelper_addStringPrimaryKeyObjectToTestRealm_Realm__String__long_>`  (:ref:`Realm <io_realm_Realm>`  testRealm,
+                                                                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  primaryFieldValue,
+                                                                               **long** secondaryFieldValue)
+       
+       Adds a String type PrimaryKey object to a realm with values for name field (PrimaryKey) and id field
+       
+       
+       
+   
+   * - 
+       public static **void**
+     - 
+       :ref:`populateTestRealmWithStringPrimaryKey <io_realm_TestHelper_populateTestRealmWithStringPrimaryKey_Realm__String__long__int__int_>`  (:ref:`Realm <io_realm_Realm>`  testRealm,
+                                                                  `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  primaryFieldValue,
+                                                                  **long** secondaryFieldValue,
+                                                                  **int** numberOfPopulation,
+                                                                  **int** iteratorBeginValue)
+       
+       Populates a realm with String type Primarykey objects for a number of numberOfPopulation - 1, starting with iteratorBeginValue.
+       
+       
+       
+   
+   * - 
+       public static :ref:`PrimaryKeyAsBoxedByte <io_realm_entities_PrimaryKeyAsBoxedByte>` 
+     - 
+       :ref:`addBytePrimaryKeyObjectToTestRealm <io_realm_TestHelper_addBytePrimaryKeyObjectToTestRealm_Realm__Byte__String_>`  (:ref:`Realm <io_realm_Realm>`  testRealm,
+                                                                                `Byte <https://docs.oracle.com/javase/7/docs/api/java/lang/Byte.html>`__  primaryFieldValue,
+                                                                                `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  secondaryFieldValue)
+       
+       Adds a Byte type PrimaryKey object to a realm with values for id field (PrimaryKey) and name field
+       
+       
+       
+   
+   * - 
+       public static **void**
+     - 
+       :ref:`populateTestRealmWithBytePrimaryKey <io_realm_TestHelper_populateTestRealmWithBytePrimaryKey_Realm__Byte__String__int__int_>`  (:ref:`Realm <io_realm_Realm>`  testRealm,
+                                                                `Byte <https://docs.oracle.com/javase/7/docs/api/java/lang/Byte.html>`__  primaryFieldValue,
+                                                                `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  secondaryFieldValue,
+                                                                **int** numberOfPopulation,
+                                                                **int** iteratorBeginValue)
+       
+       Populates a realm with Byte type Primarykey objects for a number of numberOfPopulation - 1, starting with iteratorBeginValue.
+       
+       
+       
+   
+   * - 
+       public static :ref:`PrimaryKeyAsBoxedShort <io_realm_entities_PrimaryKeyAsBoxedShort>` 
+     - 
+       :ref:`addShortPrimaryKeyObjectToTestRealm <io_realm_TestHelper_addShortPrimaryKeyObjectToTestRealm_Realm__Short__String_>`  (:ref:`Realm <io_realm_Realm>`  testRealm,
+                                                                                  `Short <https://docs.oracle.com/javase/7/docs/api/java/lang/Short.html>`__  primaryFieldValue,
+                                                                                  `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  secondaryFieldValue)
+       
+       Adds a Short type PrimaryKey object to a realm with values for id field (PrimaryKey) and name field
+       
+       
+       
+   
+   * - 
+       public static **void**
+     - 
+       :ref:`populateTestRealmWithShortPrimaryKey <io_realm_TestHelper_populateTestRealmWithShortPrimaryKey_Realm__Short__String__int__int_>`  (:ref:`Realm <io_realm_Realm>`  testRealm,
+                                                                 `Short <https://docs.oracle.com/javase/7/docs/api/java/lang/Short.html>`__  primaryFieldValue,
+                                                                 `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  secondaryFieldValue,
+                                                                 **int** numberOfPopulation,
+                                                                 **int** iteratorBeginValue)
+       
+       Populates a realm with Short type Primarykey objects for a number of numberOfPopulation - 1, starting with iteratorBeginValue.
+       
+       
+       
+   
+   * - 
+       public static :ref:`PrimaryKeyAsBoxedInteger <io_realm_entities_PrimaryKeyAsBoxedInteger>` 
+     - 
+       :ref:`addIntegerPrimaryKeyObjectToTestRealm <io_realm_TestHelper_addIntegerPrimaryKeyObjectToTestRealm_Realm__Integer__String_>`  (:ref:`Realm <io_realm_Realm>`  testRealm,
+                                                                                      `Integer <https://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html>`__  primaryFieldValue,
+                                                                                      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  secondaryFieldValue)
+       
+       Adds a Integer type PrimaryKey object to a realm with values for id field (PrimaryKey) and name field
+       
+       
+       
+   
+   * - 
+       public static **void**
+     - 
+       :ref:`populateTestRealmWithIntegerPrimaryKey <io_realm_TestHelper_populateTestRealmWithIntegerPrimaryKey_Realm__Integer__String__int__int_>`  (:ref:`Realm <io_realm_Realm>`  testRealm,
+                                                                   `Integer <https://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html>`__  primaryFieldValue,
+                                                                   `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  secondaryFieldValue,
+                                                                   **int** numberOfPopulation,
+                                                                   **int** iteratorBeginValue)
+       
+       Populates a realm with Integer type Primarykey objects for a number of numberOfPopulation - 1, starting with iteratorBeginValue.
+       
+       
+       
+   
+   * - 
+       public static :ref:`PrimaryKeyAsBoxedLong <io_realm_entities_PrimaryKeyAsBoxedLong>` 
+     - 
+       :ref:`addLongPrimaryKeyObjectToTestRealm <io_realm_TestHelper_addLongPrimaryKeyObjectToTestRealm_Realm__Long__String_>`  (:ref:`Realm <io_realm_Realm>`  testRealm,
+                                                                                `Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__  primaryFieldValue,
+                                                                                `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  secondaryFieldValue)
+       
+       Adds a Long type PrimaryKey object to a realm with values for id field (PrimaryKey) and name field
+       
+       
+       
+   
+   * - 
+       public static **void**
+     - 
+       :ref:`populateTestRealmWithLongPrimaryKey <io_realm_TestHelper_populateTestRealmWithLongPrimaryKey_Realm__Long__String__long__long_>`  (:ref:`Realm <io_realm_Realm>`  testRealm,
+                                                                `Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__  primaryFieldValue,
+                                                                `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  secondaryFieldValue,
+                                                                **long** numberOfPopulation,
+                                                                **long** iteratorBeginValue)
+       
+       Populates a realm with Long type Primarykey objects for a number of numberOfPopulation - 1, starting with iteratorBeginValue.
+       
+       
+       
+   
+   * - 
+       public static **void**
+     - 
+       :ref:`populateTestRealmForNullTests <io_realm_TestHelper_populateTestRealmForNullTests_Realm_>`  (:ref:`Realm <io_realm_Realm>`  testRealm)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static **void**
+     - 
+       :ref:`populateAllNonNullRowsForNumericTesting <io_realm_TestHelper_populateAllNonNullRowsForNumericTesting_Realm_>`  (:ref:`Realm <io_realm_Realm>`  realm)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static **void**
+     - 
+       :ref:`populatePartialNullRowsForNumericTesting <io_realm_TestHelper_populatePartialNullRowsForNumericTesting_Realm_>`  (:ref:`Realm <io_realm_Realm>`  realm)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static **void**
+     - 
+       :ref:`populateAllNullRowsForNumericTesting <io_realm_TestHelper_populateAllNullRowsForNumericTesting_Realm_>`  (:ref:`Realm <io_realm_Realm>`  realm)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static **void**
+     - 
+       :ref:`initNullTypesTableExcludes <io_realm_TestHelper_initNullTypesTableExcludes_DynamicRealm__String_>`  (:ref:`DynamicRealm <io_realm_DynamicRealm>`  realm,
+                                                       `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  excludingField)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static **void**
+     - 
+       :ref:`populateSimpleAllTypesPrimaryKey <io_realm_TestHelper_populateSimpleAllTypesPrimaryKey_Realm_>`  (:ref:`Realm <io_realm_Realm>`  realm)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static **void**
+     - 
+       :ref:`populateForDistinctFieldsOrder <io_realm_TestHelper_populateForDistinctFieldsOrder_Realm__long_>`  (:ref:`Realm <io_realm_Realm>`  realm,
+                                                           **long** numberOfBlocks)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static **void**
+     - 
+       :ref:`awaitOrFail <io_realm_TestHelper_awaitOrFail_CountDownLatch_>`  (`CountDownLatch <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html>`__  latch)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static **void**
+     - 
+       :ref:`awaitOrFail <io_realm_TestHelper_awaitOrFail_CountDownLatch__int_>`  (`CountDownLatch <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html>`__  latch,
+                                        **int** numberOfSeconds)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static **void**
+     - 
+       :ref:`exitOrThrow <io_realm_TestHelper_exitOrThrow_ExecutorService__CountDownLatch__TestHelper_LooperTest_>`  (`ExecutorService <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ExecutorService.html>`__  executorService,
+                                        `CountDownLatch <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html>`__  testFinishedSignal,
+                                        :ref:`TestHelper.LooperTest <io_realm_TestHelper_LooperTest>`  test)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static `InputStream <https://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html>`__ 
+     - 
+       :ref:`loadJsonFromAssets <io_realm_TestHelper_loadJsonFromAssets_Context__String_>`  (**Context (?)** context,
+                                                      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  file)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static **void**
+     - 
+       :ref:`quitLooperOrFail <io_realm_TestHelper_quitLooperOrFail__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public static :ref:`RealmResults <io_realm_RealmResults>` 
+     - 
+       :ref:`newRealmResults <io_realm_TestHelper_newRealmResults_BaseRealm__OsResults__Class_T__>`  <**T (?)** >(**BaseRealm (?)** realm,
+                                                    :ref:`OsResults <io_realm_internal_OsResults>`  osResults,
+                                                    `java.lang.Class\<T> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  tableClass)
+       
+       Creates a :ref:`RealmResults <io_realm_RealmResults>`  instance.
+       
+       
+       
+       
+       
+   
+   * - 
+       public static **void**
+     - 
+       :ref:`testNoObjectFound <io_realm_TestHelper_testNoObjectFound_Realm__Class___extends_RealmModel___String__Object_>`  (:ref:`Realm <io_realm_Realm>`  realm,
+                                              `java.lang.Class\<? extends io.realm.RealmModel> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  clazz,
+                                              `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                              `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static **void**
+     - 
+       :ref:`testOneObjectFound <io_realm_TestHelper_testOneObjectFound_Realm__Class___extends_RealmModel___String__Object_>`  (:ref:`Realm <io_realm_Realm>`  realm,
+                                               `java.lang.Class\<? extends io.realm.RealmModel> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  clazz,
+                                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                               `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static **void**
+     - 
+       :ref:`testObjectCount <io_realm_TestHelper_testObjectCount_Realm__long__Class___extends_RealmModel___String__Object_>`  (:ref:`Realm <io_realm_Realm>`  realm,
+                                            **long** expectedCount,
+                                            `java.lang.Class\<? extends io.realm.RealmModel> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  clazz,
+                                            `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                            `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static :ref:`RealmThreadPoolExecutor <io_realm_internal_async_RealmThreadPoolExecutor>` 
+     - 
+       :ref:`replaceRealmThreadExecutor <io_realm_TestHelper_replaceRealmThreadExecutor_RealmThreadPoolExecutor_>`  (:ref:`RealmThreadPoolExecutor <io_realm_internal_async_RealmThreadPoolExecutor>`  executor)
+       
+       Replaces the current thread executor with a another one for testing.
+       
+       
+       
+   
+   * - 
+       public static **void**
+     - 
+       :ref:`resetRealmThreadExecutor <io_realm_TestHelper_resetRealmThreadExecutor__>`  ()
+       
+       This will first wait for finishing all tasks in BaseRealm.asyncTaskExecutor, throws if time out.
+       
+       
+       
+   
+   * - 
+       public static **void**
+     - 
+       :ref:`waitRealmThreadExecutorFinish <io_realm_TestHelper_waitRealmThreadExecutorFinish__>`  ()
+       
+       Waits and checks if all tasks in BaseRealm.asyncTaskExecutor can be finished in 5 seconds, otherwise fails the test.
+       
+       
+       
+   
+   * - 
+       public static **void**
+     - 
+       :ref:`emulateRxJavaUnavailable <io_realm_TestHelper_emulateRxJavaUnavailable_RealmConfiguration_>`  (:ref:`RealmConfiguration <io_realm_RealmConfiguration>`  config)
+       
+       Emulates an environment where RxJava is not available.
+       
+       
+       
+   
+   * - 
+       public static **void**
+     - 
+       :ref:`executeOnNonLooperThread <io_realm_TestHelper_executeOnNonLooperThread_TestHelper_Task_>`  (:ref:`TestHelper.Task <io_realm_TestHelper_Task>`  task)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static **void**
+     - 
+       :ref:`deleteRecursively <io_realm_TestHelper_deleteRecursively_File_>`  (`File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  file)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static **boolean**
+     - 
+       :ref:`isSelinuxEnforcing <io_realm_TestHelper_isSelinuxEnforcing__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public static **void**
+     - 
+       :ref:`populateLinkedDataSet <io_realm_TestHelper_populateLinkedDataSet_Realm_>`  (:ref:`Realm <io_realm_Realm>`  realm)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static **void**
+     - 
+       :ref:`waitForNetworkThreadExecutorToFinish <io_realm_TestHelper_waitForNetworkThreadExecutorToFinish__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public static **T (?)**
+     - 
+       :ref:`getNull <io_realm_TestHelper_getNull__>`  <**T (?)** >()
+       
+       
+       
+       
+       
+   
+   * - 
+       public static **T (?)**
+     - 
+       :ref:`allowNull <io_realm_TestHelper_allowNull_T_>`  <**T (?)** >(**T (?)** value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`randomObjectIdHexString <io_realm_TestHelper_randomObjectIdHexString__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public static `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`generateObjectIdHexString <io_realm_TestHelper_generateObjectIdHexString_int_>`  (**int** i)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`generateUUIDString <io_realm_TestHelper_generateUUIDString_int_>`  (**int** i)
+       
+       
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+
+
+
+
+Field Detail
+============
+
+.. _io_realm_TestHelper_VERY_SHORT_WAIT_SECS:
+
+
+
+``VERY_SHORT_WAIT_SECS`` 
+-------------------------
+
+
+.. _io_realm_TestHelper_SHORT_WAIT_SECS:
+
+
+
+``SHORT_WAIT_SECS`` 
+--------------------
+
+
+.. _io_realm_TestHelper_STANDARD_WAIT_SECS:
+
+
+
+``STANDARD_WAIT_SECS`` 
+-----------------------
+
+
+
+
+Method Detail
+=============
+
+
+
+getColumnType
+-------------
+
+.. _io_realm_TestHelper_getColumnType_Object_:
+
+.. _io_realm_TestHelper_getColumnType_Object_:
+
+.. _io_realm_TestHelper_getColumnType_Object_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`RealmFieldType <io_realm_RealmFieldType>`  getColumnType (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+addRowWithValues
+----------------
+
+.. _io_realm_TestHelper_addRowWithValues_Table__long[]__Object[]_:
+
+.. _io_realm_TestHelper_addRowWithValues_Table_long_Object_:
+
+.. _io_realm_TestHelper_addRowWithValues_Table__long__Object_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **long** addRowWithValues (:ref:`Table <io_realm_internal_Table>`  table,
+                                             **long[]** columnKeys,
+                                             `java.lang.Object[] <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  values)
+   
+   * - Appends the specified row to the end of the table. For internal testing usage only.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``table`` - the table where the object to be added.
+          
+          
+          
+       - ``values`` - values.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+createTableWithAllColumnTypes
+-----------------------------
+
+.. _io_realm_TestHelper_createTableWithAllColumnTypes_OsSharedRealm_:
+
+.. _io_realm_TestHelper_createTableWithAllColumnTypes_OsSharedRealm_:
+
+.. _io_realm_TestHelper_createTableWithAllColumnTypes_OsSharedRealm_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`Table <io_realm_internal_Table>`  createTableWithAllColumnTypes (:ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  sharedRealm)
+   
+   * - Creates an empty table whose name is "temp" with 1 column of all our supported column types, currently 7 columns.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``sharedRealm`` - A :ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  where the table is created.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_TestHelper_createTableWithAllColumnTypes_OsSharedRealm__String_:
+
+.. _io_realm_TestHelper_createTableWithAllColumnTypes_OsSharedRealm_String_:
+
+.. _io_realm_TestHelper_createTableWithAllColumnTypes_OsSharedRealm__String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`Table <io_realm_internal_Table>`  createTableWithAllColumnTypes (:ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  sharedRealm,
+                                                           `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+   
+   * - Creates an empty table with 1 column of all our supported column types, currently 7 columns.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``sharedRealm`` - A :ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  where the table is created.
+          
+          
+          
+          
+          
+       - ``name`` - name of the table.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+createTable
+-----------
+
+.. _io_realm_TestHelper_createTable_OsSharedRealm__String_:
+
+.. _io_realm_TestHelper_createTable_OsSharedRealm_String_:
+
+.. _io_realm_TestHelper_createTable_OsSharedRealm__String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`Table <io_realm_internal_Table>`  createTable (:ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  sharedRealm,
+                                         `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_TestHelper_createTable_OsSharedRealm__String__TestHelper_AdditionalTableSetup_:
+
+.. _io_realm_TestHelper_createTable_OsSharedRealm_String_AdditionalTableSetup_:
+
+.. _io_realm_TestHelper_createTable_OsSharedRealm__String__AdditionalTableSetup_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`Table <io_realm_internal_Table>`  createTable (:ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  sharedRealm,
+                                         `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
+                                         :ref:`TestHelper.AdditionalTableSetup <io_realm_TestHelper_AdditionalTableSetup>`  additionalSetup)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+streamToString
+--------------
+
+.. _io_realm_TestHelper_streamToString_InputStream_:
+
+.. _io_realm_TestHelper_streamToString_InputStream_:
+
+.. _io_realm_TestHelper_streamToString_java_io_InputStream_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  streamToString (`InputStream <https://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html>`__  in)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+stringToStream
+--------------
+
+.. _io_realm_TestHelper_stringToStream_String_:
+
+.. _io_realm_TestHelper_stringToStream_String_:
+
+.. _io_realm_TestHelper_stringToStream_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static `InputStream <https://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html>`__  stringToStream (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  str)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getRandomKey
+------------
+
+.. _io_realm_TestHelper_getRandomKey__:
+
+.. _io_realm_TestHelper_getRandomKey__:
+
+.. _io_realm_TestHelper_getRandomKey__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **byte** getRandomKey ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_TestHelper_getRandomKey_long_:
+
+.. _io_realm_TestHelper_getRandomKey_long_:
+
+.. _io_realm_TestHelper_getRandomKey_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **byte** getRandomKey (**long** seed)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getRandomId
+-----------
+
+.. _io_realm_TestHelper_getRandomId__:
+
+.. _io_realm_TestHelper_getRandomId__:
+
+.. _io_realm_TestHelper_getRandomId__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **int** getRandomId ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getRandomEmail
+--------------
+
+.. _io_realm_TestHelper_getRandomEmail__:
+
+.. _io_realm_TestHelper_getRandomEmail__:
+
+.. _io_realm_TestHelper_getRandomEmail__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getRandomEmail ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getFailureLogger
+----------------
+
+.. _io_realm_TestHelper_getFailureLogger_int_:
+
+.. _io_realm_TestHelper_getFailureLogger_int_:
+
+.. _io_realm_TestHelper_getFailureLogger_int_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`RealmLogger <io_realm_log_RealmLogger>`  getFailureLogger (**int** failureLevel)
+   
+   * - Returns a RealmLogger that will fail if it is asked to log a message above a certain level.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``failureLevel`` - level at which the unit test will fail: **Log (?)**.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getRandomString
+---------------
+
+.. _io_realm_TestHelper_getRandomString_int_:
+
+.. _io_realm_TestHelper_getRandomString_int_:
+
+.. _io_realm_TestHelper_getRandomString_int_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getRandomString (**int** length)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+allocGarbage
+------------
+
+.. _io_realm_TestHelper_allocGarbage_int_:
+
+.. _io_realm_TestHelper_allocGarbage_int_:
+
+.. _io_realm_TestHelper_allocGarbage_int_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **byte** allocGarbage (**int** garbageSize)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+SHA512
+------
+
+.. _io_realm_TestHelper_SHA512_String_:
+
+.. _io_realm_TestHelper_SHA512_String_:
+
+.. _io_realm_TestHelper_SHA512_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **byte** SHA512 (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  str)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+createConfiguration
+-------------------
+
+.. _io_realm_TestHelper_createConfiguration_Context_:
+
+.. _io_realm_TestHelper_createConfiguration_Context_:
+
+.. _io_realm_TestHelper_createConfiguration_Context_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`RealmConfiguration <io_realm_RealmConfiguration>`  createConfiguration (**Context (?)** context)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_TestHelper_createConfiguration_Context__String_:
+
+.. _io_realm_TestHelper_createConfiguration_Context_String_:
+
+.. _io_realm_TestHelper_createConfiguration_Context__String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`RealmConfiguration <io_realm_RealmConfiguration>`  createConfiguration (**Context (?)** context,
+                                                              `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_TestHelper_createConfiguration_File__String_:
+
+.. _io_realm_TestHelper_createConfiguration_File_String_:
+
+.. _io_realm_TestHelper_createConfiguration_File__String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`RealmConfiguration <io_realm_RealmConfiguration>`  createConfiguration (`File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  folder,
+                                                              `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_TestHelper_createConfiguration_Context__String__byte[]_:
+
+.. _io_realm_TestHelper_createConfiguration_Context_String_byte_:
+
+.. _io_realm_TestHelper_createConfiguration_Context__String__byte_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`RealmConfiguration <io_realm_RealmConfiguration>`  createConfiguration (**Context (?)** context,
+                                                              `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
+                                                              **byte[]** key)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_TestHelper_createConfiguration_File__String__byte[]_:
+
+.. _io_realm_TestHelper_createConfiguration_File_String_byte_:
+
+.. _io_realm_TestHelper_createConfiguration_File__String__byte_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`RealmConfiguration <io_realm_RealmConfiguration>`  createConfiguration (`File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  dir,
+                                                              `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name,
+                                                              **byte[]** key)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+addStringPrimaryKeyObjectToTestRealm
+------------------------------------
+
+.. _io_realm_TestHelper_addStringPrimaryKeyObjectToTestRealm_Realm__String__long_:
+
+.. _io_realm_TestHelper_addStringPrimaryKeyObjectToTestRealm_Realm_String_long_:
+
+.. _io_realm_TestHelper_addStringPrimaryKeyObjectToTestRealm_Realm__String__long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`PrimaryKeyAsString <io_realm_entities_PrimaryKeyAsString>`  addStringPrimaryKeyObjectToTestRealm (:ref:`Realm <io_realm_Realm>`  testRealm,
+                                                                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  primaryFieldValue,
+                                                                               **long** secondaryFieldValue)
+   
+   * - Adds a String type PrimaryKey object to a realm with values for name field (PrimaryKey) and id field
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+populateTestRealmWithStringPrimaryKey
+-------------------------------------
+
+.. _io_realm_TestHelper_populateTestRealmWithStringPrimaryKey_Realm__String__long__int__int_:
+
+.. _io_realm_TestHelper_populateTestRealmWithStringPrimaryKey_Realm_String_long_int_int_:
+
+.. _io_realm_TestHelper_populateTestRealmWithStringPrimaryKey_Realm__String__long__int__int_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **void** populateTestRealmWithStringPrimaryKey (:ref:`Realm <io_realm_Realm>`  testRealm,
+                                                                  `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  primaryFieldValue,
+                                                                  **long** secondaryFieldValue,
+                                                                  **int** numberOfPopulation,
+                                                                  **int** iteratorBeginValue)
+   
+   * - Populates a realm with String type Primarykey objects for a number of numberOfPopulation - 1, starting with iteratorBeginValue. One object is setup to have given values from parameters.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+addBytePrimaryKeyObjectToTestRealm
+----------------------------------
+
+.. _io_realm_TestHelper_addBytePrimaryKeyObjectToTestRealm_Realm__Byte__String_:
+
+.. _io_realm_TestHelper_addBytePrimaryKeyObjectToTestRealm_Realm_Byte_String_:
+
+.. _io_realm_TestHelper_addBytePrimaryKeyObjectToTestRealm_Realm__Byte__String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`PrimaryKeyAsBoxedByte <io_realm_entities_PrimaryKeyAsBoxedByte>`  addBytePrimaryKeyObjectToTestRealm (:ref:`Realm <io_realm_Realm>`  testRealm,
+                                                                                `Byte <https://docs.oracle.com/javase/7/docs/api/java/lang/Byte.html>`__  primaryFieldValue,
+                                                                                `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  secondaryFieldValue)
+   
+   * - Adds a Byte type PrimaryKey object to a realm with values for id field (PrimaryKey) and name field
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+populateTestRealmWithBytePrimaryKey
+-----------------------------------
+
+.. _io_realm_TestHelper_populateTestRealmWithBytePrimaryKey_Realm__Byte__String__int__int_:
+
+.. _io_realm_TestHelper_populateTestRealmWithBytePrimaryKey_Realm_Byte_String_int_int_:
+
+.. _io_realm_TestHelper_populateTestRealmWithBytePrimaryKey_Realm__Byte__String__int__int_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **void** populateTestRealmWithBytePrimaryKey (:ref:`Realm <io_realm_Realm>`  testRealm,
+                                                                `Byte <https://docs.oracle.com/javase/7/docs/api/java/lang/Byte.html>`__  primaryFieldValue,
+                                                                `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  secondaryFieldValue,
+                                                                **int** numberOfPopulation,
+                                                                **int** iteratorBeginValue)
+   
+   * - Populates a realm with Byte type Primarykey objects for a number of numberOfPopulation - 1, starting with iteratorBeginValue. One object is setup to have given values from parameters.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+addShortPrimaryKeyObjectToTestRealm
+-----------------------------------
+
+.. _io_realm_TestHelper_addShortPrimaryKeyObjectToTestRealm_Realm__Short__String_:
+
+.. _io_realm_TestHelper_addShortPrimaryKeyObjectToTestRealm_Realm_Short_String_:
+
+.. _io_realm_TestHelper_addShortPrimaryKeyObjectToTestRealm_Realm__Short__String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`PrimaryKeyAsBoxedShort <io_realm_entities_PrimaryKeyAsBoxedShort>`  addShortPrimaryKeyObjectToTestRealm (:ref:`Realm <io_realm_Realm>`  testRealm,
+                                                                                  `Short <https://docs.oracle.com/javase/7/docs/api/java/lang/Short.html>`__  primaryFieldValue,
+                                                                                  `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  secondaryFieldValue)
+   
+   * - Adds a Short type PrimaryKey object to a realm with values for id field (PrimaryKey) and name field
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+populateTestRealmWithShortPrimaryKey
+------------------------------------
+
+.. _io_realm_TestHelper_populateTestRealmWithShortPrimaryKey_Realm__Short__String__int__int_:
+
+.. _io_realm_TestHelper_populateTestRealmWithShortPrimaryKey_Realm_Short_String_int_int_:
+
+.. _io_realm_TestHelper_populateTestRealmWithShortPrimaryKey_Realm__Short__String__int__int_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **void** populateTestRealmWithShortPrimaryKey (:ref:`Realm <io_realm_Realm>`  testRealm,
+                                                                 `Short <https://docs.oracle.com/javase/7/docs/api/java/lang/Short.html>`__  primaryFieldValue,
+                                                                 `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  secondaryFieldValue,
+                                                                 **int** numberOfPopulation,
+                                                                 **int** iteratorBeginValue)
+   
+   * - Populates a realm with Short type Primarykey objects for a number of numberOfPopulation - 1, starting with iteratorBeginValue. One object is setup to have given values from parameters.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+addIntegerPrimaryKeyObjectToTestRealm
+-------------------------------------
+
+.. _io_realm_TestHelper_addIntegerPrimaryKeyObjectToTestRealm_Realm__Integer__String_:
+
+.. _io_realm_TestHelper_addIntegerPrimaryKeyObjectToTestRealm_Realm_Integer_String_:
+
+.. _io_realm_TestHelper_addIntegerPrimaryKeyObjectToTestRealm_Realm__Integer__String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`PrimaryKeyAsBoxedInteger <io_realm_entities_PrimaryKeyAsBoxedInteger>`  addIntegerPrimaryKeyObjectToTestRealm (:ref:`Realm <io_realm_Realm>`  testRealm,
+                                                                                      `Integer <https://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html>`__  primaryFieldValue,
+                                                                                      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  secondaryFieldValue)
+   
+   * - Adds a Integer type PrimaryKey object to a realm with values for id field (PrimaryKey) and name field
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+populateTestRealmWithIntegerPrimaryKey
+--------------------------------------
+
+.. _io_realm_TestHelper_populateTestRealmWithIntegerPrimaryKey_Realm__Integer__String__int__int_:
+
+.. _io_realm_TestHelper_populateTestRealmWithIntegerPrimaryKey_Realm_Integer_String_int_int_:
+
+.. _io_realm_TestHelper_populateTestRealmWithIntegerPrimaryKey_Realm__Integer__String__int__int_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **void** populateTestRealmWithIntegerPrimaryKey (:ref:`Realm <io_realm_Realm>`  testRealm,
+                                                                   `Integer <https://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html>`__  primaryFieldValue,
+                                                                   `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  secondaryFieldValue,
+                                                                   **int** numberOfPopulation,
+                                                                   **int** iteratorBeginValue)
+   
+   * - Populates a realm with Integer type Primarykey objects for a number of numberOfPopulation - 1, starting with iteratorBeginValue. One object is setup to have given values from parameters.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+addLongPrimaryKeyObjectToTestRealm
+----------------------------------
+
+.. _io_realm_TestHelper_addLongPrimaryKeyObjectToTestRealm_Realm__Long__String_:
+
+.. _io_realm_TestHelper_addLongPrimaryKeyObjectToTestRealm_Realm_Long_String_:
+
+.. _io_realm_TestHelper_addLongPrimaryKeyObjectToTestRealm_Realm__Long__String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`PrimaryKeyAsBoxedLong <io_realm_entities_PrimaryKeyAsBoxedLong>`  addLongPrimaryKeyObjectToTestRealm (:ref:`Realm <io_realm_Realm>`  testRealm,
+                                                                                `Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__  primaryFieldValue,
+                                                                                `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  secondaryFieldValue)
+   
+   * - Adds a Long type PrimaryKey object to a realm with values for id field (PrimaryKey) and name field
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+populateTestRealmWithLongPrimaryKey
+-----------------------------------
+
+.. _io_realm_TestHelper_populateTestRealmWithLongPrimaryKey_Realm__Long__String__long__long_:
+
+.. _io_realm_TestHelper_populateTestRealmWithLongPrimaryKey_Realm_Long_String_long_long_:
+
+.. _io_realm_TestHelper_populateTestRealmWithLongPrimaryKey_Realm__Long__String__long__long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **void** populateTestRealmWithLongPrimaryKey (:ref:`Realm <io_realm_Realm>`  testRealm,
+                                                                `Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__  primaryFieldValue,
+                                                                `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  secondaryFieldValue,
+                                                                **long** numberOfPopulation,
+                                                                **long** iteratorBeginValue)
+   
+   * - Populates a realm with Long type Primarykey objects for a number of numberOfPopulation - 1, starting with iteratorBeginValue. One object is setup to have given values from parameters.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+populateTestRealmForNullTests
+-----------------------------
+
+.. _io_realm_TestHelper_populateTestRealmForNullTests_Realm_:
+
+.. _io_realm_TestHelper_populateTestRealmForNullTests_Realm_:
+
+.. _io_realm_TestHelper_populateTestRealmForNullTests_Realm_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **void** populateTestRealmForNullTests (:ref:`Realm <io_realm_Realm>`  testRealm)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+populateAllNonNullRowsForNumericTesting
+---------------------------------------
+
+.. _io_realm_TestHelper_populateAllNonNullRowsForNumericTesting_Realm_:
+
+.. _io_realm_TestHelper_populateAllNonNullRowsForNumericTesting_Realm_:
+
+.. _io_realm_TestHelper_populateAllNonNullRowsForNumericTesting_Realm_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **void** populateAllNonNullRowsForNumericTesting (:ref:`Realm <io_realm_Realm>`  realm)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+populatePartialNullRowsForNumericTesting
+----------------------------------------
+
+.. _io_realm_TestHelper_populatePartialNullRowsForNumericTesting_Realm_:
+
+.. _io_realm_TestHelper_populatePartialNullRowsForNumericTesting_Realm_:
+
+.. _io_realm_TestHelper_populatePartialNullRowsForNumericTesting_Realm_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **void** populatePartialNullRowsForNumericTesting (:ref:`Realm <io_realm_Realm>`  realm)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+populateAllNullRowsForNumericTesting
+------------------------------------
+
+.. _io_realm_TestHelper_populateAllNullRowsForNumericTesting_Realm_:
+
+.. _io_realm_TestHelper_populateAllNullRowsForNumericTesting_Realm_:
+
+.. _io_realm_TestHelper_populateAllNullRowsForNumericTesting_Realm_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **void** populateAllNullRowsForNumericTesting (:ref:`Realm <io_realm_Realm>`  realm)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+initNullTypesTableExcludes
+--------------------------
+
+.. _io_realm_TestHelper_initNullTypesTableExcludes_DynamicRealm__String_:
+
+.. _io_realm_TestHelper_initNullTypesTableExcludes_DynamicRealm_String_:
+
+.. _io_realm_TestHelper_initNullTypesTableExcludes_DynamicRealm__String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **void** initNullTypesTableExcludes (:ref:`DynamicRealm <io_realm_DynamicRealm>`  realm,
+                                                       `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  excludingField)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+populateSimpleAllTypesPrimaryKey
+--------------------------------
+
+.. _io_realm_TestHelper_populateSimpleAllTypesPrimaryKey_Realm_:
+
+.. _io_realm_TestHelper_populateSimpleAllTypesPrimaryKey_Realm_:
+
+.. _io_realm_TestHelper_populateSimpleAllTypesPrimaryKey_Realm_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **void** populateSimpleAllTypesPrimaryKey (:ref:`Realm <io_realm_Realm>`  realm)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+populateForDistinctFieldsOrder
+------------------------------
+
+.. _io_realm_TestHelper_populateForDistinctFieldsOrder_Realm__long_:
+
+.. _io_realm_TestHelper_populateForDistinctFieldsOrder_Realm_long_:
+
+.. _io_realm_TestHelper_populateForDistinctFieldsOrder_Realm__long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **void** populateForDistinctFieldsOrder (:ref:`Realm <io_realm_Realm>`  realm,
+                                                           **long** numberOfBlocks)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+awaitOrFail
+-----------
+
+.. _io_realm_TestHelper_awaitOrFail_CountDownLatch_:
+
+.. _io_realm_TestHelper_awaitOrFail_CountDownLatch_:
+
+.. _io_realm_TestHelper_awaitOrFail_CountDownLatch_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **void** awaitOrFail (`CountDownLatch <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html>`__  latch)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_TestHelper_awaitOrFail_CountDownLatch__int_:
+
+.. _io_realm_TestHelper_awaitOrFail_CountDownLatch_int_:
+
+.. _io_realm_TestHelper_awaitOrFail_CountDownLatch__int_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **void** awaitOrFail (`CountDownLatch <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html>`__  latch,
+                                        **int** numberOfSeconds)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+exitOrThrow
+-----------
+
+.. _io_realm_TestHelper_exitOrThrow_ExecutorService__CountDownLatch__TestHelper_LooperTest_:
+
+.. _io_realm_TestHelper_exitOrThrow_ExecutorService_CountDownLatch_LooperTest_:
+
+.. _io_realm_TestHelper_exitOrThrow_ExecutorService__CountDownLatch__LooperTest_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **void** exitOrThrow (`ExecutorService <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ExecutorService.html>`__  executorService,
+                                        `CountDownLatch <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html>`__  testFinishedSignal,
+                                        :ref:`TestHelper.LooperTest <io_realm_TestHelper_LooperTest>`  test)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+loadJsonFromAssets
+------------------
+
+.. _io_realm_TestHelper_loadJsonFromAssets_Context__String_:
+
+.. _io_realm_TestHelper_loadJsonFromAssets_Context_String_:
+
+.. _io_realm_TestHelper_loadJsonFromAssets_Context__String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static `InputStream <https://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html>`__  loadJsonFromAssets (**Context (?)** context,
+                                                      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  file)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+quitLooperOrFail
+----------------
+
+.. _io_realm_TestHelper_quitLooperOrFail__:
+
+.. _io_realm_TestHelper_quitLooperOrFail__:
+
+.. _io_realm_TestHelper_quitLooperOrFail__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **void** quitLooperOrFail ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+newRealmResults
+---------------
+
+.. _io_realm_TestHelper_newRealmResults_BaseRealm__OsResults__Class_T__:
+
+.. _io_realm_TestHelper_newRealmResults_BaseRealm_OsResults_Class_:
+
+.. _io_realm_TestHelper_newRealmResults_BaseRealm__OsResults__Class_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`RealmResults <io_realm_RealmResults>`  newRealmResults <**T (?)** >(**BaseRealm (?)** realm,
+                                                    :ref:`OsResults <io_realm_internal_OsResults>`  osResults,
+                                                    `java.lang.Class\<T> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  tableClass)
+   
+   * - Creates a :ref:`RealmResults <io_realm_RealmResults>`  instance. This helper method is useful to create a mocked :ref:`RealmResults <io_realm_RealmResults>` .
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``realm`` - a :ref:`Realm <io_realm_Realm>`  or a :ref:`DynamicRealm <io_realm_DynamicRealm>`  instance.
+          
+          
+          
+          
+          
+       - ``osResults`` - a :ref:`OsResults <io_realm_internal_OsResults>`  instance.
+          
+          
+          
+          
+          
+       - ``tableClass`` - a Class of Table.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+testNoObjectFound
+-----------------
+
+.. _io_realm_TestHelper_testNoObjectFound_Realm__Class___extends_RealmModel___String__Object_:
+
+.. _io_realm_TestHelper_testNoObjectFound_Realm_Class_String_Object_:
+
+.. _io_realm_TestHelper_testNoObjectFound_Realm__Class__String__Object_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **void** testNoObjectFound (:ref:`Realm <io_realm_Realm>`  realm,
+                                              `java.lang.Class\<? extends io.realm.RealmModel> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  clazz,
+                                              `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                              `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+testOneObjectFound
+------------------
+
+.. _io_realm_TestHelper_testOneObjectFound_Realm__Class___extends_RealmModel___String__Object_:
+
+.. _io_realm_TestHelper_testOneObjectFound_Realm_Class_String_Object_:
+
+.. _io_realm_TestHelper_testOneObjectFound_Realm__Class__String__Object_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **void** testOneObjectFound (:ref:`Realm <io_realm_Realm>`  realm,
+                                               `java.lang.Class\<? extends io.realm.RealmModel> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  clazz,
+                                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                               `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+testObjectCount
+---------------
+
+.. _io_realm_TestHelper_testObjectCount_Realm__long__Class___extends_RealmModel___String__Object_:
+
+.. _io_realm_TestHelper_testObjectCount_Realm_long_Class_String_Object_:
+
+.. _io_realm_TestHelper_testObjectCount_Realm__long__Class__String__Object_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **void** testObjectCount (:ref:`Realm <io_realm_Realm>`  realm,
+                                            **long** expectedCount,
+                                            `java.lang.Class\<? extends io.realm.RealmModel> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  clazz,
+                                            `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                            `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+replaceRealmThreadExecutor
+--------------------------
+
+.. _io_realm_TestHelper_replaceRealmThreadExecutor_RealmThreadPoolExecutor_:
+
+.. _io_realm_TestHelper_replaceRealmThreadExecutor_RealmThreadPoolExecutor_:
+
+.. _io_realm_TestHelper_replaceRealmThreadExecutor_RealmThreadPoolExecutor_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`RealmThreadPoolExecutor <io_realm_internal_async_RealmThreadPoolExecutor>`  replaceRealmThreadExecutor (:ref:`RealmThreadPoolExecutor <io_realm_internal_async_RealmThreadPoolExecutor>`  executor)
+   
+   * - Replaces the current thread executor with a another one for testing. WARNING: This method should only be called before any async tasks have been started. Call :ref:`resetRealmThreadExecutor() <io_realm_TestHelper_resetRealmThreadExecutor__>`  before test return to reset the excutor to default.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``executor`` - :ref:`RealmThreadPoolExecutor <io_realm_internal_async_RealmThreadPoolExecutor>`  that should replace the current one
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+resetRealmThreadExecutor
+------------------------
+
+.. _io_realm_TestHelper_resetRealmThreadExecutor__:
+
+.. _io_realm_TestHelper_resetRealmThreadExecutor__:
+
+.. _io_realm_TestHelper_resetRealmThreadExecutor__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **void** resetRealmThreadExecutor ()
+   
+   * - This will first wait for finishing all tasks in BaseRealm.asyncTaskExecutor, throws if time out. Then reset the BaseRealm.asyncTaskExecutor to the default value.
+       
+       
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `NoSuchFieldException <https://docs.oracle.com/javase/7/docs/api/java/lang/NoSuchFieldException.html>`__  - 
+          
+          
+          
+       - `IllegalAccessException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalAccessException.html>`__  - 
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+
+
+waitRealmThreadExecutorFinish
+-----------------------------
+
+.. _io_realm_TestHelper_waitRealmThreadExecutorFinish__:
+
+.. _io_realm_TestHelper_waitRealmThreadExecutorFinish__:
+
+.. _io_realm_TestHelper_waitRealmThreadExecutorFinish__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **void** waitRealmThreadExecutorFinish ()
+   
+   * - Waits and checks if all tasks in BaseRealm.asyncTaskExecutor can be finished in 5 seconds, otherwise fails the test.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+emulateRxJavaUnavailable
+------------------------
+
+.. _io_realm_TestHelper_emulateRxJavaUnavailable_RealmConfiguration_:
+
+.. _io_realm_TestHelper_emulateRxJavaUnavailable_RealmConfiguration_:
+
+.. _io_realm_TestHelper_emulateRxJavaUnavailable_RealmConfiguration_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **void** emulateRxJavaUnavailable (:ref:`RealmConfiguration <io_realm_RealmConfiguration>`  config)
+   
+   * - Emulates an environment where RxJava is not available.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``config`` - :ref:`RealmConfiguration <io_realm_RealmConfiguration>`  instance to be modified.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+executeOnNonLooperThread
+------------------------
+
+.. _io_realm_TestHelper_executeOnNonLooperThread_TestHelper_Task_:
+
+.. _io_realm_TestHelper_executeOnNonLooperThread_Task_:
+
+.. _io_realm_TestHelper_executeOnNonLooperThread_Task_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **void** executeOnNonLooperThread (:ref:`TestHelper.Task <io_realm_TestHelper_Task>`  task)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+deleteRecursively
+-----------------
+
+.. _io_realm_TestHelper_deleteRecursively_File_:
+
+.. _io_realm_TestHelper_deleteRecursively_File_:
+
+.. _io_realm_TestHelper_deleteRecursively_File_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **void** deleteRecursively (`File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  file)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+isSelinuxEnforcing
+------------------
+
+.. _io_realm_TestHelper_isSelinuxEnforcing__:
+
+.. _io_realm_TestHelper_isSelinuxEnforcing__:
+
+.. _io_realm_TestHelper_isSelinuxEnforcing__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **boolean** isSelinuxEnforcing ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+populateLinkedDataSet
+---------------------
+
+.. _io_realm_TestHelper_populateLinkedDataSet_Realm_:
+
+.. _io_realm_TestHelper_populateLinkedDataSet_Realm_:
+
+.. _io_realm_TestHelper_populateLinkedDataSet_Realm_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **void** populateLinkedDataSet (:ref:`Realm <io_realm_Realm>`  realm)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+waitForNetworkThreadExecutorToFinish
+------------------------------------
+
+.. _io_realm_TestHelper_waitForNetworkThreadExecutorToFinish__:
+
+.. _io_realm_TestHelper_waitForNetworkThreadExecutorToFinish__:
+
+.. _io_realm_TestHelper_waitForNetworkThreadExecutorToFinish__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **void** waitForNetworkThreadExecutorToFinish ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getNull
+-------
+
+.. _io_realm_TestHelper_getNull__:
+
+.. _io_realm_TestHelper_getNull__:
+
+.. _io_realm_TestHelper_getNull__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **T (?)** getNull <**T (?)** >()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+allowNull
+---------
+
+.. _io_realm_TestHelper_allowNull_T_:
+
+.. _io_realm_TestHelper_allowNull_T_:
+
+.. _io_realm_TestHelper_allowNull_T_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **T (?)** allowNull <**T (?)** >(**T (?)** value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+randomObjectIdHexString
+-----------------------
+
+.. _io_realm_TestHelper_randomObjectIdHexString__:
+
+.. _io_realm_TestHelper_randomObjectIdHexString__:
+
+.. _io_realm_TestHelper_randomObjectIdHexString__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  randomObjectIdHexString ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+generateObjectIdHexString
+-------------------------
+
+.. _io_realm_TestHelper_generateObjectIdHexString_int_:
+
+.. _io_realm_TestHelper_generateObjectIdHexString_int_:
+
+.. _io_realm_TestHelper_generateObjectIdHexString_int_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  generateObjectIdHexString (**int** i)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+generateUUIDString
+------------------
+
+.. _io_realm_TestHelper_generateUUIDString_int_:
+
+.. _io_realm_TestHelper_generateUUIDString_int_:
+
+.. _io_realm_TestHelper_generateUUIDString_int_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  generateUUIDString (**int** i)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

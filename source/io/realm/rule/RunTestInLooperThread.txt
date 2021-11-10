@@ -1,0 +1,63 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Annotation Type RunTestInLooperThread
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_rule_RunTestInLooperThread:
+
+
+
+io.realm.rule
+=============
+
+*Implemented interfaces:*
+
+
+
+- `java.lang.annotation.Annotation <https://docs.oracle.com/javase/7/docs/api/java/lang/annotation/Annotation.html>`__ 
+
+
+This annotation should be used along with :ref:`RunInLooperThread <io_realm_rule_RunInLooperThread>`  When the annotation is present, the test method is executed on a worker thread with a looper. This will also uses **org.junit.rules.TemporaryFolder (?)** to create and open a Realm. Annotation param :ref:`io.realm.rule.RunInLooperThread.RunnableBefore <io_realm_rule_RunInLooperThread_RunnableBefore>`  can be supplied which will run before the looper thread.
+
+
+
+
+Optional Element Summary
+========================
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Optional Element and Description
+   
+   * - ``public undefined`` 
+       
+       
+     - ``threadName`` 
+       
+       
+   
+   * - ``public undefined`` 
+       
+       
+     - ``before`` 
+       
+       
+   
+   * - ``public undefined`` 
+       
+       
+     - ``emulateMainThread`` 
+       
+       
+   
+   
+

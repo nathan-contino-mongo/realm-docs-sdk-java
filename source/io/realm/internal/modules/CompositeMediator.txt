@@ -1,0 +1,1026 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class CompositeMediator
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_internal_modules_CompositeMediator:
+
+
+
+io.realm.internal.modules
+=========================
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+ | 		:ref:`io.realm.internal.RealmProxyMediator <io_realm_internal_RealmProxyMediator>` 
+
+This class is able to merge different RealmProxyMediators, so they look like one.
+
+
+Constructors
+============
+
+
+
+- ``io.realm.internal.modules.CompositeMediator(RealmProxyMediator...)`` 
+
+
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public **E (?)**
+     - 
+       :ref:`copyOrUpdate <io_realm_internal_modules_CompositeMediator_copyOrUpdate_Realm__E__boolean__Map_RealmModel__RealmObjectProxy___Set_ImportFlag__>`  <**E (?)** >(:ref:`Realm <io_realm_Realm>`  realm,
+                               **E (?)** object,
+                               **boolean** update,
+                               `java.util.Map\<io.realm.RealmModel, io.realm.internal.RealmObjectProxy> <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  cache,
+                               `java.util.Set\<io.realm.ImportFlag> <https://docs.oracle.com/javase/7/docs/api/java/util/Set.html>`__  flags)
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`ColumnInfo <io_realm_internal_ColumnInfo>` 
+     - 
+       :ref:`createColumnInfo <io_realm_internal_modules_CompositeMediator_createColumnInfo_Class___extends_RealmModel___OsSchemaInfo_>`  (`java.lang.Class\<? extends io.realm.RealmModel> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  clazz,
+                                            :ref:`OsSchemaInfo <io_realm_internal_OsSchemaInfo>`  osSchemaInfo)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **E (?)**
+     - 
+       :ref:`createDetachedCopy <io_realm_internal_modules_CompositeMediator_createDetachedCopy_E__int__Map_RealmModel__RealmObjectProxy_CacheData_RealmModel___>`  <**E (?)** >(**E (?)** realmObject,
+                                     **int** maxDepth,
+                                     `java.util.Map\<io.realm.RealmModel, io.realm.internal.RealmObjectProxy.CacheData\<io.realm.RealmModel>> <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  cache)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **E (?)**
+     - 
+       :ref:`createOrUpdateUsingJsonObject <io_realm_internal_modules_CompositeMediator_createOrUpdateUsingJsonObject_Class_E___Realm__JSONObject__boolean_>`  <**E (?)** >(`java.lang.Class\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  clazz,
+                                                :ref:`Realm <io_realm_Realm>`  realm,
+                                                **JSONObject (?)** json,
+                                                **boolean** update)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **E (?)**
+     - 
+       :ref:`createUsingJsonStream <io_realm_internal_modules_CompositeMediator_createUsingJsonStream_Class_E___Realm__JsonReader_>`  <**E (?)** >(`java.lang.Class\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  clazz,
+                                        :ref:`Realm <io_realm_Realm>`  realm,
+                                        **JsonReader (?)** reader)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected `Class <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__ 
+     - 
+       :ref:`getClazzImpl <io_realm_internal_modules_CompositeMediator_getClazzImpl_String_>`  <**T (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
+       
+       
+       
+       
+       
+   
+   * - 
+       public `Map <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__ 
+     - 
+       :ref:`getExpectedObjectSchemaInfoMap <io_realm_internal_modules_CompositeMediator_getExpectedObjectSchemaInfoMap__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public `Set <https://docs.oracle.com/javase/7/docs/api/java/util/Set.html>`__ 
+     - 
+       :ref:`getModelClasses <io_realm_internal_modules_CompositeMediator_getModelClasses__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       protected `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`getSimpleClassNameImpl <io_realm_internal_modules_CompositeMediator_getSimpleClassNameImpl_Class___extends_RealmModel__>`  (`java.lang.Class\<? extends io.realm.RealmModel> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  clazz)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected **boolean**
+     - 
+       :ref:`hasPrimaryKeyImpl <io_realm_internal_modules_CompositeMediator_hasPrimaryKeyImpl_Class___extends_RealmModel__>`  (`java.lang.Class\<? extends io.realm.RealmModel> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  clazz)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`insert <io_realm_internal_modules_CompositeMediator_insert_Realm__Collection___extends_RealmModel__>`  (:ref:`Realm <io_realm_Realm>`  realm,
+                            `java.util.Collection\<? extends io.realm.RealmModel> <https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html>`__  objects)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`insert <io_realm_internal_modules_CompositeMediator_insert_Realm__RealmModel__Map_RealmModel__Long__>`  (:ref:`Realm <io_realm_Realm>`  realm,
+                            :ref:`RealmModel <io_realm_RealmModel>`  object,
+                            `java.util.Map\<io.realm.RealmModel, java.lang.Long> <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  cache)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`insertOrUpdate <io_realm_internal_modules_CompositeMediator_insertOrUpdate_Realm__Collection___extends_RealmModel__>`  (:ref:`Realm <io_realm_Realm>`  realm,
+                                    `java.util.Collection\<? extends io.realm.RealmModel> <https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html>`__  objects)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`insertOrUpdate <io_realm_internal_modules_CompositeMediator_insertOrUpdate_Realm__RealmModel__Map_RealmModel__Long__>`  (:ref:`Realm <io_realm_Realm>`  realm,
+                                    :ref:`RealmModel <io_realm_RealmModel>`  object,
+                                    `java.util.Map\<io.realm.RealmModel, java.lang.Long> <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  cache)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`isEmbedded <io_realm_internal_modules_CompositeMediator_isEmbedded_Class_E__>`  <**E (?)** >(`java.lang.Class\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  clazz)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **E (?)**
+     - 
+       :ref:`newInstance <io_realm_internal_modules_CompositeMediator_newInstance_Class_E___Object__Row__ColumnInfo__boolean__List_String__>`  <**E (?)** >(`java.lang.Class\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  clazz,
+                              `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  baseRealm,
+                              :ref:`Row <io_realm_internal_Row>`  row,
+                              :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  columnInfo,
+                              **boolean** acceptDefaultValue,
+                              `java.util.List\<java.lang.String> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  excludeFields)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`transformerApplied <io_realm_internal_modules_CompositeMediator_transformerApplied__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`updateEmbeddedObject <io_realm_internal_modules_CompositeMediator_updateEmbeddedObject_Realm__E__E__Map_RealmModel__RealmObjectProxy___Set_ImportFlag__>`  <**E (?)** >(:ref:`Realm <io_realm_Realm>`  realm,
+                                          **E (?)** unmanagedObject,
+                                          **E (?)** managedObject,
+                                          `java.util.Map\<io.realm.RealmModel, io.realm.internal.RealmObjectProxy> <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  cache,
+                                          `java.util.Set\<io.realm.ImportFlag> <https://docs.oracle.com/javase/7/docs/api/java/util/Set.html>`__  flags)
+       
+       
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+- Methods inherited from interface :ref:`io.realm.internal.RealmProxyMediator <io_realm_internal_RealmProxyMediator>` : 
+   
+   ``getExpectedObjectSchemaInfoMap`` , ``createColumnInfo`` , ``getSimpleClassName`` , ``getSimpleClassNameImpl`` , ``getClazz`` , ``getClazzImpl`` , ``hasPrimaryKey`` , ``hasPrimaryKeyImpl`` , ``newInstance`` , ``getModelClasses`` , ``copyOrUpdate`` , ``insert`` , ``insertOrUpdate`` , ``insertOrUpdate`` , ``insert`` , ``createOrUpdateUsingJsonObject`` , ``createUsingJsonStream`` , ``createDetachedCopy`` , ``isEmbedded`` , ``updateEmbeddedObject`` , ``transformerApplied`` , ``equals`` , ``hashCode`` , ``checkClass`` , ``checkClassName`` , ``getMissingProxyClassException`` , ``getMissingProxyClassException`` , ``getNotEmbeddedClassException`` 
+   
+   
+
+
+
+
+Method Detail
+=============
+
+.. _copyOrUpdate:
+
+.. _copyOrUpdate__:
+
+.. _CompositeMediator_copyOrUpdate:
+
+.. _CompositeMediator_copyOrUpdate__:
+
+.. _io_realm_internal_modules_CompositeMediator_copyOrUpdate:
+
+.. _io_realm_internal_modules_CompositeMediator_copyOrUpdate__:
+
+
+
+copyOrUpdate
+------------
+
+.. _io_realm_internal_modules_CompositeMediator_copyOrUpdate_Realm__E__boolean__Map_RealmModel__RealmObjectProxy___Set_ImportFlag__:
+
+.. _io_realm_internal_modules_CompositeMediator_copyOrUpdate_Realm_E_boolean_Map_Set_:
+
+.. _io_realm_internal_modules_CompositeMediator_copyOrUpdate_Realm__RealmModel__boolean__Map__Set_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **E (?)** copyOrUpdate <**E (?)** >(:ref:`Realm <io_realm_Realm>`  realm,
+                               **E (?)** object,
+                               **boolean** update,
+                               `java.util.Map\<io.realm.RealmModel, io.realm.internal.RealmObjectProxy> <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  cache,
+                               `java.util.Set\<io.realm.ImportFlag> <https://docs.oracle.com/javase/7/docs/api/java/util/Set.html>`__  flags)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _createColumnInfo:
+
+.. _createColumnInfo__:
+
+.. _CompositeMediator_createColumnInfo:
+
+.. _CompositeMediator_createColumnInfo__:
+
+.. _io_realm_internal_modules_CompositeMediator_createColumnInfo:
+
+.. _io_realm_internal_modules_CompositeMediator_createColumnInfo__:
+
+
+
+createColumnInfo
+----------------
+
+.. _io_realm_internal_modules_CompositeMediator_createColumnInfo_Class___extends_RealmModel___OsSchemaInfo_:
+
+.. _io_realm_internal_modules_CompositeMediator_createColumnInfo_Class_OsSchemaInfo_:
+
+.. _io_realm_internal_modules_CompositeMediator_createColumnInfo_Class__OsSchemaInfo_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  createColumnInfo (`java.lang.Class\<? extends io.realm.RealmModel> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  clazz,
+                                            :ref:`OsSchemaInfo <io_realm_internal_OsSchemaInfo>`  osSchemaInfo)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _createDetachedCopy:
+
+.. _createDetachedCopy__:
+
+.. _CompositeMediator_createDetachedCopy:
+
+.. _CompositeMediator_createDetachedCopy__:
+
+.. _io_realm_internal_modules_CompositeMediator_createDetachedCopy:
+
+.. _io_realm_internal_modules_CompositeMediator_createDetachedCopy__:
+
+
+
+createDetachedCopy
+------------------
+
+.. _io_realm_internal_modules_CompositeMediator_createDetachedCopy_E__int__Map_RealmModel__RealmObjectProxy_CacheData_RealmModel___:
+
+.. _io_realm_internal_modules_CompositeMediator_createDetachedCopy_E_int_Map_:
+
+.. _io_realm_internal_modules_CompositeMediator_createDetachedCopy_RealmModel__int__Map_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **E (?)** createDetachedCopy <**E (?)** >(**E (?)** realmObject,
+                                     **int** maxDepth,
+                                     `java.util.Map\<io.realm.RealmModel, io.realm.internal.RealmObjectProxy.CacheData\<io.realm.RealmModel>> <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  cache)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _createOrUpdateUsingJsonObject:
+
+.. _createOrUpdateUsingJsonObject__:
+
+.. _CompositeMediator_createOrUpdateUsingJsonObject:
+
+.. _CompositeMediator_createOrUpdateUsingJsonObject__:
+
+.. _io_realm_internal_modules_CompositeMediator_createOrUpdateUsingJsonObject:
+
+.. _io_realm_internal_modules_CompositeMediator_createOrUpdateUsingJsonObject__:
+
+
+
+createOrUpdateUsingJsonObject
+-----------------------------
+
+.. _io_realm_internal_modules_CompositeMediator_createOrUpdateUsingJsonObject_Class_E___Realm__JSONObject__boolean_:
+
+.. _io_realm_internal_modules_CompositeMediator_createOrUpdateUsingJsonObject_Class_Realm_JSONObject_boolean_:
+
+.. _io_realm_internal_modules_CompositeMediator_createOrUpdateUsingJsonObject_Class__Realm__org_json_JSONObject__boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **E (?)** createOrUpdateUsingJsonObject <**E (?)** >(`java.lang.Class\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  clazz,
+                                                :ref:`Realm <io_realm_Realm>`  realm,
+                                                **JSONObject (?)** json,
+                                                **boolean** update)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _createUsingJsonStream:
+
+.. _createUsingJsonStream__:
+
+.. _CompositeMediator_createUsingJsonStream:
+
+.. _CompositeMediator_createUsingJsonStream__:
+
+.. _io_realm_internal_modules_CompositeMediator_createUsingJsonStream:
+
+.. _io_realm_internal_modules_CompositeMediator_createUsingJsonStream__:
+
+
+
+createUsingJsonStream
+---------------------
+
+.. _io_realm_internal_modules_CompositeMediator_createUsingJsonStream_Class_E___Realm__JsonReader_:
+
+.. _io_realm_internal_modules_CompositeMediator_createUsingJsonStream_Class_Realm_JsonReader_:
+
+.. _io_realm_internal_modules_CompositeMediator_createUsingJsonStream_Class__Realm__JsonReader_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **E (?)** createUsingJsonStream <**E (?)** >(`java.lang.Class\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  clazz,
+                                        :ref:`Realm <io_realm_Realm>`  realm,
+                                        **JsonReader (?)** reader)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getClazzImpl:
+
+.. _getClazzImpl__:
+
+.. _CompositeMediator_getClazzImpl:
+
+.. _CompositeMediator_getClazzImpl__:
+
+.. _io_realm_internal_modules_CompositeMediator_getClazzImpl:
+
+.. _io_realm_internal_modules_CompositeMediator_getClazzImpl__:
+
+
+
+getClazzImpl
+------------
+
+.. _io_realm_internal_modules_CompositeMediator_getClazzImpl_String_:
+
+.. _io_realm_internal_modules_CompositeMediator_getClazzImpl_String_:
+
+.. _io_realm_internal_modules_CompositeMediator_getClazzImpl_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected `Class <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  getClazzImpl <**T (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getExpectedObjectSchemaInfoMap:
+
+.. _getExpectedObjectSchemaInfoMap__:
+
+.. _CompositeMediator_getExpectedObjectSchemaInfoMap:
+
+.. _CompositeMediator_getExpectedObjectSchemaInfoMap__:
+
+.. _io_realm_internal_modules_CompositeMediator_getExpectedObjectSchemaInfoMap:
+
+.. _io_realm_internal_modules_CompositeMediator_getExpectedObjectSchemaInfoMap__:
+
+
+
+getExpectedObjectSchemaInfoMap
+------------------------------
+
+.. _io_realm_internal_modules_CompositeMediator_getExpectedObjectSchemaInfoMap__:
+
+.. _io_realm_internal_modules_CompositeMediator_getExpectedObjectSchemaInfoMap__:
+
+.. _io_realm_internal_modules_CompositeMediator_getExpectedObjectSchemaInfoMap__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `Map <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  getExpectedObjectSchemaInfoMap ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getModelClasses:
+
+.. _getModelClasses__:
+
+.. _CompositeMediator_getModelClasses:
+
+.. _CompositeMediator_getModelClasses__:
+
+.. _io_realm_internal_modules_CompositeMediator_getModelClasses:
+
+.. _io_realm_internal_modules_CompositeMediator_getModelClasses__:
+
+
+
+getModelClasses
+---------------
+
+.. _io_realm_internal_modules_CompositeMediator_getModelClasses__:
+
+.. _io_realm_internal_modules_CompositeMediator_getModelClasses__:
+
+.. _io_realm_internal_modules_CompositeMediator_getModelClasses__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `Set <https://docs.oracle.com/javase/7/docs/api/java/util/Set.html>`__  getModelClasses ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getSimpleClassNameImpl:
+
+.. _getSimpleClassNameImpl__:
+
+.. _CompositeMediator_getSimpleClassNameImpl:
+
+.. _CompositeMediator_getSimpleClassNameImpl__:
+
+.. _io_realm_internal_modules_CompositeMediator_getSimpleClassNameImpl:
+
+.. _io_realm_internal_modules_CompositeMediator_getSimpleClassNameImpl__:
+
+
+
+getSimpleClassNameImpl
+----------------------
+
+.. _io_realm_internal_modules_CompositeMediator_getSimpleClassNameImpl_Class___extends_RealmModel__:
+
+.. _io_realm_internal_modules_CompositeMediator_getSimpleClassNameImpl_Class_:
+
+.. _io_realm_internal_modules_CompositeMediator_getSimpleClassNameImpl_Class_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getSimpleClassNameImpl (`java.lang.Class\<? extends io.realm.RealmModel> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  clazz)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _hasPrimaryKeyImpl:
+
+.. _hasPrimaryKeyImpl__:
+
+.. _CompositeMediator_hasPrimaryKeyImpl:
+
+.. _CompositeMediator_hasPrimaryKeyImpl__:
+
+.. _io_realm_internal_modules_CompositeMediator_hasPrimaryKeyImpl:
+
+.. _io_realm_internal_modules_CompositeMediator_hasPrimaryKeyImpl__:
+
+
+
+hasPrimaryKeyImpl
+-----------------
+
+.. _io_realm_internal_modules_CompositeMediator_hasPrimaryKeyImpl_Class___extends_RealmModel__:
+
+.. _io_realm_internal_modules_CompositeMediator_hasPrimaryKeyImpl_Class_:
+
+.. _io_realm_internal_modules_CompositeMediator_hasPrimaryKeyImpl_Class_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected **boolean** hasPrimaryKeyImpl (`java.lang.Class\<? extends io.realm.RealmModel> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  clazz)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _insert:
+
+.. _insert__:
+
+.. _CompositeMediator_insert:
+
+.. _CompositeMediator_insert__:
+
+.. _io_realm_internal_modules_CompositeMediator_insert:
+
+.. _io_realm_internal_modules_CompositeMediator_insert__:
+
+
+
+insert
+------
+
+.. _io_realm_internal_modules_CompositeMediator_insert_Realm__Collection___extends_RealmModel__:
+
+.. _io_realm_internal_modules_CompositeMediator_insert_Realm_Collection_:
+
+.. _io_realm_internal_modules_CompositeMediator_insert_Realm__Collection_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** insert (:ref:`Realm <io_realm_Realm>`  realm,
+                            `java.util.Collection\<? extends io.realm.RealmModel> <https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html>`__  objects)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_internal_modules_CompositeMediator_insert_Realm__RealmModel__Map_RealmModel__Long__:
+
+.. _io_realm_internal_modules_CompositeMediator_insert_Realm_RealmModel_Map_:
+
+.. _io_realm_internal_modules_CompositeMediator_insert_Realm__RealmModel__Map_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** insert (:ref:`Realm <io_realm_Realm>`  realm,
+                            :ref:`RealmModel <io_realm_RealmModel>`  object,
+                            `java.util.Map\<io.realm.RealmModel, java.lang.Long> <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  cache)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _insertOrUpdate:
+
+.. _insertOrUpdate__:
+
+.. _CompositeMediator_insertOrUpdate:
+
+.. _CompositeMediator_insertOrUpdate__:
+
+.. _io_realm_internal_modules_CompositeMediator_insertOrUpdate:
+
+.. _io_realm_internal_modules_CompositeMediator_insertOrUpdate__:
+
+
+
+insertOrUpdate
+--------------
+
+.. _io_realm_internal_modules_CompositeMediator_insertOrUpdate_Realm__Collection___extends_RealmModel__:
+
+.. _io_realm_internal_modules_CompositeMediator_insertOrUpdate_Realm_Collection_:
+
+.. _io_realm_internal_modules_CompositeMediator_insertOrUpdate_Realm__Collection_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** insertOrUpdate (:ref:`Realm <io_realm_Realm>`  realm,
+                                    `java.util.Collection\<? extends io.realm.RealmModel> <https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html>`__  objects)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_internal_modules_CompositeMediator_insertOrUpdate_Realm__RealmModel__Map_RealmModel__Long__:
+
+.. _io_realm_internal_modules_CompositeMediator_insertOrUpdate_Realm_RealmModel_Map_:
+
+.. _io_realm_internal_modules_CompositeMediator_insertOrUpdate_Realm__RealmModel__Map_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** insertOrUpdate (:ref:`Realm <io_realm_Realm>`  realm,
+                                    :ref:`RealmModel <io_realm_RealmModel>`  object,
+                                    `java.util.Map\<io.realm.RealmModel, java.lang.Long> <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  cache)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _isEmbedded:
+
+.. _isEmbedded__:
+
+.. _CompositeMediator_isEmbedded:
+
+.. _CompositeMediator_isEmbedded__:
+
+.. _io_realm_internal_modules_CompositeMediator_isEmbedded:
+
+.. _io_realm_internal_modules_CompositeMediator_isEmbedded__:
+
+
+
+isEmbedded
+----------
+
+.. _io_realm_internal_modules_CompositeMediator_isEmbedded_Class_E__:
+
+.. _io_realm_internal_modules_CompositeMediator_isEmbedded_Class_:
+
+.. _io_realm_internal_modules_CompositeMediator_isEmbedded_Class_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** isEmbedded <**E (?)** >(`java.lang.Class\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  clazz)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _newInstance:
+
+.. _newInstance__:
+
+.. _CompositeMediator_newInstance:
+
+.. _CompositeMediator_newInstance__:
+
+.. _io_realm_internal_modules_CompositeMediator_newInstance:
+
+.. _io_realm_internal_modules_CompositeMediator_newInstance__:
+
+
+
+newInstance
+-----------
+
+.. _io_realm_internal_modules_CompositeMediator_newInstance_Class_E___Object__Row__ColumnInfo__boolean__List_String__:
+
+.. _io_realm_internal_modules_CompositeMediator_newInstance_Class_Object_Row_ColumnInfo_boolean_List_:
+
+.. _io_realm_internal_modules_CompositeMediator_newInstance_Class__Object__Row__ColumnInfo__boolean__List_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **E (?)** newInstance <**E (?)** >(`java.lang.Class\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  clazz,
+                              `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  baseRealm,
+                              :ref:`Row <io_realm_internal_Row>`  row,
+                              :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  columnInfo,
+                              **boolean** acceptDefaultValue,
+                              `java.util.List\<java.lang.String> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  excludeFields)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _transformerApplied:
+
+.. _transformerApplied__:
+
+.. _CompositeMediator_transformerApplied:
+
+.. _CompositeMediator_transformerApplied__:
+
+.. _io_realm_internal_modules_CompositeMediator_transformerApplied:
+
+.. _io_realm_internal_modules_CompositeMediator_transformerApplied__:
+
+
+
+transformerApplied
+------------------
+
+.. _io_realm_internal_modules_CompositeMediator_transformerApplied__:
+
+.. _io_realm_internal_modules_CompositeMediator_transformerApplied__:
+
+.. _io_realm_internal_modules_CompositeMediator_transformerApplied__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** transformerApplied ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _updateEmbeddedObject:
+
+.. _updateEmbeddedObject__:
+
+.. _CompositeMediator_updateEmbeddedObject:
+
+.. _CompositeMediator_updateEmbeddedObject__:
+
+.. _io_realm_internal_modules_CompositeMediator_updateEmbeddedObject:
+
+.. _io_realm_internal_modules_CompositeMediator_updateEmbeddedObject__:
+
+
+
+updateEmbeddedObject
+--------------------
+
+.. _io_realm_internal_modules_CompositeMediator_updateEmbeddedObject_Realm__E__E__Map_RealmModel__RealmObjectProxy___Set_ImportFlag__:
+
+.. _io_realm_internal_modules_CompositeMediator_updateEmbeddedObject_Realm_E_E_Map_Set_:
+
+.. _io_realm_internal_modules_CompositeMediator_updateEmbeddedObject_Realm__RealmModel__RealmModel__Map__Set_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** updateEmbeddedObject <**E (?)** >(:ref:`Realm <io_realm_Realm>`  realm,
+                                          **E (?)** unmanagedObject,
+                                          **E (?)** managedObject,
+                                          `java.util.Map\<io.realm.RealmModel, io.realm.internal.RealmObjectProxy> <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  cache,
+                                          `java.util.Set\<io.realm.ImportFlag> <https://docs.oracle.com/javase/7/docs/api/java/util/Set.html>`__  flags)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

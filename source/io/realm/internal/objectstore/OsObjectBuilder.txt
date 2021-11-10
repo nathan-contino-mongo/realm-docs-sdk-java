@@ -1,0 +1,3820 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class OsObjectBuilder
+^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_internal_objectstore_OsObjectBuilder:
+
+
+
+io.realm.internal.objectstore
+=============================
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+*Implemented interfaces:*
+
+
+
+- `java.io.Closeable <https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html>`__ 
+- `java.lang.AutoCloseable <https://docs.oracle.com/javase/7/docs/api/java/lang/AutoCloseable.html>`__ 
+
+
+This class is a wrapper around building up object data for calling \`Object::create()\`Fill the object data by calling the various \`addX()\` methods, then create a new Object or update an existing one by calling :ref:`createNewObject() <io_realm_internal_objectstore_OsObjectBuilder_createNewObject__>` , :ref:`updateExistingTopLevelObject() <io_realm_internal_objectstore_OsObjectBuilder_updateExistingTopLevelObject__>`  or :ref:`updateExistingEmbeddedObject(RealmObjectProxy) <io_realm_internal_objectstore_OsObjectBuilder_updateExistingEmbeddedObject_RealmObjectProxy_>` .
+
+
+
+This class assumes it is only being used from within a write transaction. Using it outside one will result in undefined behaviour.
+
+The native resources are created in the constructor of this class and destroyed when calling either of the above two methods.
+
+
+
+Design thoughts
+^^^^^^^^^^^^^^^
+
+Ideally we would have sent all properties across in one JNI call, but the only way to do that would have been using two \`Object[]\` arrays which would have resulted in a ton of JNI calls back again for resolving the primitive values of boxed types (since JNI do not know about boxed primitives).
+
+The upside of making a JNI call for each property is that we do minimal allocations on the Java side. Also each method call is fairly lightweight as no checks are performed compared to using Proxy setters and :ref:`io.realm.internal.UncheckedRow <io_realm_internal_UncheckedRow>` . The only downside is the current need for sending the key as well. Hopefully we can change that to schema indices at some point.
+
+
+
+There is quite a few variants we can attempt to optimize this, but at this point we lack data that can guide any architectural design and the only way to really find out is to build out each solution and benchmark it.
+
+
+
+
+Constructors
+============
+
+
+
+- ``io.realm.internal.objectstore.OsObjectBuilder(Table, Set<ImportFlag>)`` 
+
+
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addBinarySet <io_realm_internal_objectstore_OsObjectBuilder_addBinarySet_long__RealmSet_byte[]__>`  (**long** columnKey,
+                                  :ref:`io.realm.RealmSet\<byte[]> <io_realm_RealmSet>`  set)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addBinaryValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addBinaryValueDictionary_long__RealmDictionary_byte[]__>`  (**long** columnKey,
+                                              :ref:`io.realm.RealmDictionary\<byte[]> <io_realm_RealmDictionary>`  dictionary)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addBoolean <io_realm_internal_objectstore_OsObjectBuilder_addBoolean_long__Boolean_>`  (**long** columnKey,
+                                `Boolean <https://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html>`__  val)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addBooleanList <io_realm_internal_objectstore_OsObjectBuilder_addBooleanList_long__RealmList_Boolean__>`  (**long** columnKey,
+                                    :ref:`io.realm.RealmList\<java.lang.Boolean> <io_realm_RealmList>`  list)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addBooleanSet <io_realm_internal_objectstore_OsObjectBuilder_addBooleanSet_long__RealmSet_Boolean__>`  (**long** columnKey,
+                                   :ref:`io.realm.RealmSet\<java.lang.Boolean> <io_realm_RealmSet>`  set)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addBooleanValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addBooleanValueDictionary_long__RealmDictionary_Boolean__>`  (**long** columnKey,
+                                               :ref:`io.realm.RealmDictionary\<java.lang.Boolean> <io_realm_RealmDictionary>`  dictionary)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addByteArray <io_realm_internal_objectstore_OsObjectBuilder_addByteArray_long__byte[]_>`  (**long** columnKey,
+                                  **byte[]** val)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addByteArrayList <io_realm_internal_objectstore_OsObjectBuilder_addByteArrayList_long__RealmList_byte[]__>`  (**long** columnKey,
+                                      :ref:`io.realm.RealmList\<byte[]> <io_realm_RealmList>`  list)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addByteList <io_realm_internal_objectstore_OsObjectBuilder_addByteList_long__RealmList_Byte__>`  (**long** columnKey,
+                                 :ref:`io.realm.RealmList\<java.lang.Byte> <io_realm_RealmList>`  list)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addByteSet <io_realm_internal_objectstore_OsObjectBuilder_addByteSet_long__RealmSet_Byte__>`  (**long** columnKey,
+                                :ref:`io.realm.RealmSet\<java.lang.Byte> <io_realm_RealmSet>`  set)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addByteValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addByteValueDictionary_long__RealmDictionary_Byte__>`  (**long** columnKey,
+                                            :ref:`io.realm.RealmDictionary\<java.lang.Byte> <io_realm_RealmDictionary>`  dictionary)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addDate <io_realm_internal_objectstore_OsObjectBuilder_addDate_long__Date_>`  (**long** columnKey,
+                             `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  val)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addDateList <io_realm_internal_objectstore_OsObjectBuilder_addDateList_long__RealmList_Date__>`  (**long** columnKey,
+                                 :ref:`io.realm.RealmList\<java.util.Date> <io_realm_RealmList>`  list)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addDateSet <io_realm_internal_objectstore_OsObjectBuilder_addDateSet_long__RealmSet_Date__>`  (**long** columnKey,
+                                :ref:`io.realm.RealmSet\<java.util.Date> <io_realm_RealmSet>`  set)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addDateValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addDateValueDictionary_long__RealmDictionary_Date__>`  (**long** columnKey,
+                                            :ref:`io.realm.RealmDictionary\<java.util.Date> <io_realm_RealmDictionary>`  dictionary)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addDecimal128 <io_realm_internal_objectstore_OsObjectBuilder_addDecimal128_long__Decimal128_>`  (**long** columnKey,
+                                   **Decimal128 (?)** val)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addDecimal128List <io_realm_internal_objectstore_OsObjectBuilder_addDecimal128List_long__RealmList_Decimal128__>`  (**long** columnKey,
+                                       :ref:`io.realm.RealmList\<Decimal128> <io_realm_RealmList>`  list)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addDecimal128Set <io_realm_internal_objectstore_OsObjectBuilder_addDecimal128Set_long__RealmSet_Decimal128__>`  (**long** columnKey,
+                                      :ref:`io.realm.RealmSet\<Decimal128> <io_realm_RealmSet>`  set)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addDecimal128ValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addDecimal128ValueDictionary_long__RealmDictionary_Decimal128__>`  (**long** columnKey,
+                                                  :ref:`io.realm.RealmDictionary\<Decimal128> <io_realm_RealmDictionary>`  dictionary)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addDouble <io_realm_internal_objectstore_OsObjectBuilder_addDouble_long__Double_>`  (**long** columnKey,
+                               `Double <https://docs.oracle.com/javase/7/docs/api/java/lang/Double.html>`__  val)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addDoubleList <io_realm_internal_objectstore_OsObjectBuilder_addDoubleList_long__RealmList_Double__>`  (**long** columnKey,
+                                   :ref:`io.realm.RealmList\<java.lang.Double> <io_realm_RealmList>`  list)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addDoubleSet <io_realm_internal_objectstore_OsObjectBuilder_addDoubleSet_long__RealmSet_Double__>`  (**long** columnKey,
+                                  :ref:`io.realm.RealmSet\<java.lang.Double> <io_realm_RealmSet>`  set)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addDoubleValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addDoubleValueDictionary_long__RealmDictionary_Double__>`  (**long** columnKey,
+                                              :ref:`io.realm.RealmDictionary\<java.lang.Double> <io_realm_RealmDictionary>`  dictionary)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addFloat <io_realm_internal_objectstore_OsObjectBuilder_addFloat_long__Float_>`  (**long** columnKey,
+                              `Float <https://docs.oracle.com/javase/7/docs/api/java/lang/Float.html>`__  val)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addFloatList <io_realm_internal_objectstore_OsObjectBuilder_addFloatList_long__RealmList_Float__>`  (**long** columnKey,
+                                  :ref:`io.realm.RealmList\<java.lang.Float> <io_realm_RealmList>`  list)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addFloatSet <io_realm_internal_objectstore_OsObjectBuilder_addFloatSet_long__RealmSet_Float__>`  (**long** columnKey,
+                                 :ref:`io.realm.RealmSet\<java.lang.Float> <io_realm_RealmSet>`  set)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addFloatValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addFloatValueDictionary_long__RealmDictionary_Float__>`  (**long** columnKey,
+                                             :ref:`io.realm.RealmDictionary\<java.lang.Float> <io_realm_RealmDictionary>`  dictionary)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addInteger <io_realm_internal_objectstore_OsObjectBuilder_addInteger_long__Long_>`  (**long** columnKey,
+                                `Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__  val)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addInteger <io_realm_internal_objectstore_OsObjectBuilder_addInteger_long__Integer_>`  (**long** columnKey,
+                                `Integer <https://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html>`__  val)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addInteger <io_realm_internal_objectstore_OsObjectBuilder_addInteger_long__Short_>`  (**long** columnKey,
+                                `Short <https://docs.oracle.com/javase/7/docs/api/java/lang/Short.html>`__  val)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addInteger <io_realm_internal_objectstore_OsObjectBuilder_addInteger_long__Byte_>`  (**long** columnKey,
+                                `Byte <https://docs.oracle.com/javase/7/docs/api/java/lang/Byte.html>`__  val)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addIntegerList <io_realm_internal_objectstore_OsObjectBuilder_addIntegerList_long__RealmList_Integer__>`  (**long** columnKey,
+                                    :ref:`io.realm.RealmList\<java.lang.Integer> <io_realm_RealmList>`  list)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addIntegerSet <io_realm_internal_objectstore_OsObjectBuilder_addIntegerSet_long__RealmSet_Integer__>`  (**long** columnKey,
+                                   :ref:`io.realm.RealmSet\<java.lang.Integer> <io_realm_RealmSet>`  set)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addIntegerValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addIntegerValueDictionary_long__RealmDictionary_Integer__>`  (**long** columnKey,
+                                               :ref:`io.realm.RealmDictionary\<java.lang.Integer> <io_realm_RealmDictionary>`  dictionary)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addLongList <io_realm_internal_objectstore_OsObjectBuilder_addLongList_long__RealmList_Long__>`  (**long** columnKey,
+                                 :ref:`io.realm.RealmList\<java.lang.Long> <io_realm_RealmList>`  list)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addLongSet <io_realm_internal_objectstore_OsObjectBuilder_addLongSet_long__RealmSet_Long__>`  (**long** columnKey,
+                                :ref:`io.realm.RealmSet\<java.lang.Long> <io_realm_RealmSet>`  set)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addLongValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addLongValueDictionary_long__RealmDictionary_Long__>`  (**long** columnKey,
+                                            :ref:`io.realm.RealmDictionary\<java.lang.Long> <io_realm_RealmDictionary>`  dictionary)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addMutableRealmInteger <io_realm_internal_objectstore_OsObjectBuilder_addMutableRealmInteger_long__MutableRealmInteger_>`  (**long** columnKey,
+                                            :ref:`MutableRealmInteger <io_realm_MutableRealmInteger>`  val)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addMutableRealmIntegerList <io_realm_internal_objectstore_OsObjectBuilder_addMutableRealmIntegerList_long__RealmList_MutableRealmInteger__>`  (**long** columnKey,
+                                                :ref:`io.realm.RealmList\<io.realm.MutableRealmInteger> <io_realm_RealmList>`  list)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addNull <io_realm_internal_objectstore_OsObjectBuilder_addNull_long_>`  (**long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addObject <io_realm_internal_objectstore_OsObjectBuilder_addObject_long__RealmModel_>`  (**long** columnKey,
+                               :ref:`RealmModel <io_realm_RealmModel>`  val)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addObjectDictionary <io_realm_internal_objectstore_OsObjectBuilder_addObjectDictionary_long__RealmDictionary_T__>`  <**T (?)** >(**long** columnKey,
+                                         :ref:`io.realm.RealmDictionary\<T> <io_realm_RealmDictionary>`  dictionary)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addObjectId <io_realm_internal_objectstore_OsObjectBuilder_addObjectId_long__ObjectId_>`  (**long** columnKey,
+                                 **ObjectId (?)** val)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addObjectIdList <io_realm_internal_objectstore_OsObjectBuilder_addObjectIdList_long__RealmList_ObjectId__>`  (**long** columnKey,
+                                     :ref:`io.realm.RealmList\<ObjectId> <io_realm_RealmList>`  list)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addObjectIdSet <io_realm_internal_objectstore_OsObjectBuilder_addObjectIdSet_long__RealmSet_ObjectId__>`  (**long** columnKey,
+                                    :ref:`io.realm.RealmSet\<ObjectId> <io_realm_RealmSet>`  set)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addObjectIdValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addObjectIdValueDictionary_long__RealmDictionary_ObjectId__>`  (**long** columnKey,
+                                                :ref:`io.realm.RealmDictionary\<ObjectId> <io_realm_RealmDictionary>`  dictionary)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addObjectList <io_realm_internal_objectstore_OsObjectBuilder_addObjectList_long__RealmList_T__>`  <**T (?)** >(**long** columnKey,
+                                   :ref:`io.realm.RealmList\<T> <io_realm_RealmList>`  list)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addObjectSet <io_realm_internal_objectstore_OsObjectBuilder_addObjectSet_long__RealmSet_T__>`  <**T (?)** >(**long** columnKey,
+                                  :ref:`io.realm.RealmSet\<T> <io_realm_RealmSet>`  set)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addRealmAny <io_realm_internal_objectstore_OsObjectBuilder_addRealmAny_long__long_>`  (**long** columnKey,
+                                 **long** realmAnyPtr)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addRealmAnyList <io_realm_internal_objectstore_OsObjectBuilder_addRealmAnyList_long__RealmList_RealmAny__>`  (**long** columnKey,
+                                     :ref:`io.realm.RealmList\<io.realm.RealmAny> <io_realm_RealmList>`  list)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addRealmAnySet <io_realm_internal_objectstore_OsObjectBuilder_addRealmAnySet_long__RealmSet_RealmAny__>`  (**long** columnKey,
+                                    :ref:`io.realm.RealmSet\<io.realm.RealmAny> <io_realm_RealmSet>`  set)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addRealmAnyValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addRealmAnyValueDictionary_long__RealmDictionary_RealmAny__>`  (**long** columnKey,
+                                                :ref:`io.realm.RealmDictionary\<io.realm.RealmAny> <io_realm_RealmDictionary>`  dictionary)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addShortList <io_realm_internal_objectstore_OsObjectBuilder_addShortList_long__RealmList_Short__>`  (**long** columnKey,
+                                  :ref:`io.realm.RealmList\<java.lang.Short> <io_realm_RealmList>`  list)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addShortSet <io_realm_internal_objectstore_OsObjectBuilder_addShortSet_long__RealmSet_Short__>`  (**long** columnKey,
+                                 :ref:`io.realm.RealmSet\<java.lang.Short> <io_realm_RealmSet>`  set)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addShortValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addShortValueDictionary_long__RealmDictionary_Short__>`  (**long** columnKey,
+                                             :ref:`io.realm.RealmDictionary\<java.lang.Short> <io_realm_RealmDictionary>`  dictionary)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addString <io_realm_internal_objectstore_OsObjectBuilder_addString_long__String_>`  (**long** columnKey,
+                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  val)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addStringList <io_realm_internal_objectstore_OsObjectBuilder_addStringList_long__RealmList_String__>`  (**long** columnKey,
+                                   :ref:`io.realm.RealmList\<java.lang.String> <io_realm_RealmList>`  list)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addStringSet <io_realm_internal_objectstore_OsObjectBuilder_addStringSet_long__RealmSet_String__>`  (**long** columnKey,
+                                  :ref:`io.realm.RealmSet\<java.lang.String> <io_realm_RealmSet>`  set)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addStringValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addStringValueDictionary_long__RealmDictionary_String__>`  (**long** columnKey,
+                                              :ref:`io.realm.RealmDictionary\<java.lang.String> <io_realm_RealmDictionary>`  dictionary)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addUUID <io_realm_internal_objectstore_OsObjectBuilder_addUUID_long__UUID_>`  (**long** columnKey,
+                             `UUID <https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html>`__  val)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addUUIDList <io_realm_internal_objectstore_OsObjectBuilder_addUUIDList_long__RealmList_UUID__>`  (**long** columnKey,
+                                 :ref:`io.realm.RealmList\<java.util.UUID> <io_realm_RealmList>`  list)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addUUIDSet <io_realm_internal_objectstore_OsObjectBuilder_addUUIDSet_long__RealmSet_UUID__>`  (**long** columnKey,
+                                :ref:`io.realm.RealmSet\<java.util.UUID> <io_realm_RealmSet>`  set)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addUUIDValueDictionary <io_realm_internal_objectstore_OsObjectBuilder_addUUIDValueDictionary_long__RealmDictionary_UUID__>`  (**long** columnKey,
+                                            :ref:`io.realm.RealmDictionary\<java.util.UUID> <io_realm_RealmDictionary>`  dictionary)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`close <io_realm_internal_objectstore_OsObjectBuilder_close__>`  ()
+       
+       Manually closes the underlying Builder
+       
+       
+       
+   
+   * - 
+       public :ref:`UncheckedRow <io_realm_internal_UncheckedRow>` 
+     - 
+       :ref:`createNewObject <io_realm_internal_objectstore_OsObjectBuilder_createNewObject__>`  ()
+       
+       Create a new object.
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`getNativePtr <io_realm_internal_objectstore_OsObjectBuilder_getNativePtr__>`  ()
+       
+       Returns the underlying native pointer representing this builder.
+       
+       
+       
+   
+   * - 
+       public static native **void**
+     - 
+       :ref:`nativeAddRealmAnyDictionaryEntry <io_realm_internal_objectstore_OsObjectBuilder_nativeAddRealmAnyDictionaryEntry_long__String__long_>`  (**long** dictionaryPtr,
+                                                                    `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  key,
+                                                                    **long** realmAnyPtr)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static native **void**
+     - 
+       :ref:`nativeAddRealmAnyListItem <io_realm_internal_objectstore_OsObjectBuilder_nativeAddRealmAnyListItem_long__long_>`  (**long** listPtr,
+                                                             **long** realmAnyPtr)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`updateExistingEmbeddedObject <io_realm_internal_objectstore_OsObjectBuilder_updateExistingEmbeddedObject_RealmObjectProxy_>`  (:ref:`RealmObjectProxy <io_realm_internal_RealmObjectProxy>`  embeddedObject)
+       
+       Updates an existing embedded object.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`updateExistingTopLevelObject <io_realm_internal_objectstore_OsObjectBuilder_updateExistingTopLevelObject__>`  ()
+       
+       Updates any existing object if it exists, otherwise creates a new one.
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+
+
+
+
+Method Detail
+=============
+
+.. _addBinarySet:
+
+.. _addBinarySet__:
+
+.. _OsObjectBuilder_addBinarySet:
+
+.. _OsObjectBuilder_addBinarySet__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addBinarySet:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addBinarySet__:
+
+
+
+addBinarySet
+------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addBinarySet_long__RealmSet_byte[]__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addBinarySet_long_RealmSet_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addBinarySet_long__RealmSet_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addBinarySet (**long** columnKey,
+                                  :ref:`io.realm.RealmSet\<byte[]> <io_realm_RealmSet>`  set)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addBinaryValueDictionary:
+
+.. _addBinaryValueDictionary__:
+
+.. _OsObjectBuilder_addBinaryValueDictionary:
+
+.. _OsObjectBuilder_addBinaryValueDictionary__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addBinaryValueDictionary:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addBinaryValueDictionary__:
+
+
+
+addBinaryValueDictionary
+------------------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addBinaryValueDictionary_long__RealmDictionary_byte[]__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addBinaryValueDictionary_long_RealmDictionary_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addBinaryValueDictionary_long__RealmDictionary_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addBinaryValueDictionary (**long** columnKey,
+                                              :ref:`io.realm.RealmDictionary\<byte[]> <io_realm_RealmDictionary>`  dictionary)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addBoolean:
+
+.. _addBoolean__:
+
+.. _OsObjectBuilder_addBoolean:
+
+.. _OsObjectBuilder_addBoolean__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addBoolean:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addBoolean__:
+
+
+
+addBoolean
+----------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addBoolean_long__Boolean_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addBoolean_long_Boolean_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addBoolean_long__Boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addBoolean (**long** columnKey,
+                                `Boolean <https://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html>`__  val)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addBooleanList:
+
+.. _addBooleanList__:
+
+.. _OsObjectBuilder_addBooleanList:
+
+.. _OsObjectBuilder_addBooleanList__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addBooleanList:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addBooleanList__:
+
+
+
+addBooleanList
+--------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addBooleanList_long__RealmList_Boolean__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addBooleanList_long_RealmList_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addBooleanList_long__RealmList_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addBooleanList (**long** columnKey,
+                                    :ref:`io.realm.RealmList\<java.lang.Boolean> <io_realm_RealmList>`  list)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addBooleanSet:
+
+.. _addBooleanSet__:
+
+.. _OsObjectBuilder_addBooleanSet:
+
+.. _OsObjectBuilder_addBooleanSet__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addBooleanSet:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addBooleanSet__:
+
+
+
+addBooleanSet
+-------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addBooleanSet_long__RealmSet_Boolean__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addBooleanSet_long_RealmSet_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addBooleanSet_long__RealmSet_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addBooleanSet (**long** columnKey,
+                                   :ref:`io.realm.RealmSet\<java.lang.Boolean> <io_realm_RealmSet>`  set)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addBooleanValueDictionary:
+
+.. _addBooleanValueDictionary__:
+
+.. _OsObjectBuilder_addBooleanValueDictionary:
+
+.. _OsObjectBuilder_addBooleanValueDictionary__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addBooleanValueDictionary:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addBooleanValueDictionary__:
+
+
+
+addBooleanValueDictionary
+-------------------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addBooleanValueDictionary_long__RealmDictionary_Boolean__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addBooleanValueDictionary_long_RealmDictionary_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addBooleanValueDictionary_long__RealmDictionary_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addBooleanValueDictionary (**long** columnKey,
+                                               :ref:`io.realm.RealmDictionary\<java.lang.Boolean> <io_realm_RealmDictionary>`  dictionary)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addByteArray:
+
+.. _addByteArray__:
+
+.. _OsObjectBuilder_addByteArray:
+
+.. _OsObjectBuilder_addByteArray__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addByteArray:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addByteArray__:
+
+
+
+addByteArray
+------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addByteArray_long__byte[]_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addByteArray_long_byte_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addByteArray_long__byte_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addByteArray (**long** columnKey,
+                                  **byte[]** val)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addByteArrayList:
+
+.. _addByteArrayList__:
+
+.. _OsObjectBuilder_addByteArrayList:
+
+.. _OsObjectBuilder_addByteArrayList__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addByteArrayList:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addByteArrayList__:
+
+
+
+addByteArrayList
+----------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addByteArrayList_long__RealmList_byte[]__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addByteArrayList_long_RealmList_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addByteArrayList_long__RealmList_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addByteArrayList (**long** columnKey,
+                                      :ref:`io.realm.RealmList\<byte[]> <io_realm_RealmList>`  list)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addByteList:
+
+.. _addByteList__:
+
+.. _OsObjectBuilder_addByteList:
+
+.. _OsObjectBuilder_addByteList__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addByteList:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addByteList__:
+
+
+
+addByteList
+-----------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addByteList_long__RealmList_Byte__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addByteList_long_RealmList_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addByteList_long__RealmList_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addByteList (**long** columnKey,
+                                 :ref:`io.realm.RealmList\<java.lang.Byte> <io_realm_RealmList>`  list)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addByteSet:
+
+.. _addByteSet__:
+
+.. _OsObjectBuilder_addByteSet:
+
+.. _OsObjectBuilder_addByteSet__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addByteSet:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addByteSet__:
+
+
+
+addByteSet
+----------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addByteSet_long__RealmSet_Byte__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addByteSet_long_RealmSet_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addByteSet_long__RealmSet_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addByteSet (**long** columnKey,
+                                :ref:`io.realm.RealmSet\<java.lang.Byte> <io_realm_RealmSet>`  set)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addByteValueDictionary:
+
+.. _addByteValueDictionary__:
+
+.. _OsObjectBuilder_addByteValueDictionary:
+
+.. _OsObjectBuilder_addByteValueDictionary__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addByteValueDictionary:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addByteValueDictionary__:
+
+
+
+addByteValueDictionary
+----------------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addByteValueDictionary_long__RealmDictionary_Byte__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addByteValueDictionary_long_RealmDictionary_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addByteValueDictionary_long__RealmDictionary_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addByteValueDictionary (**long** columnKey,
+                                            :ref:`io.realm.RealmDictionary\<java.lang.Byte> <io_realm_RealmDictionary>`  dictionary)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addDate:
+
+.. _addDate__:
+
+.. _OsObjectBuilder_addDate:
+
+.. _OsObjectBuilder_addDate__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDate:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDate__:
+
+
+
+addDate
+-------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDate_long__Date_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDate_long_Date_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDate_long__Date_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addDate (**long** columnKey,
+                             `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  val)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addDateList:
+
+.. _addDateList__:
+
+.. _OsObjectBuilder_addDateList:
+
+.. _OsObjectBuilder_addDateList__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDateList:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDateList__:
+
+
+
+addDateList
+-----------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDateList_long__RealmList_Date__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDateList_long_RealmList_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDateList_long__RealmList_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addDateList (**long** columnKey,
+                                 :ref:`io.realm.RealmList\<java.util.Date> <io_realm_RealmList>`  list)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addDateSet:
+
+.. _addDateSet__:
+
+.. _OsObjectBuilder_addDateSet:
+
+.. _OsObjectBuilder_addDateSet__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDateSet:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDateSet__:
+
+
+
+addDateSet
+----------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDateSet_long__RealmSet_Date__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDateSet_long_RealmSet_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDateSet_long__RealmSet_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addDateSet (**long** columnKey,
+                                :ref:`io.realm.RealmSet\<java.util.Date> <io_realm_RealmSet>`  set)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addDateValueDictionary:
+
+.. _addDateValueDictionary__:
+
+.. _OsObjectBuilder_addDateValueDictionary:
+
+.. _OsObjectBuilder_addDateValueDictionary__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDateValueDictionary:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDateValueDictionary__:
+
+
+
+addDateValueDictionary
+----------------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDateValueDictionary_long__RealmDictionary_Date__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDateValueDictionary_long_RealmDictionary_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDateValueDictionary_long__RealmDictionary_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addDateValueDictionary (**long** columnKey,
+                                            :ref:`io.realm.RealmDictionary\<java.util.Date> <io_realm_RealmDictionary>`  dictionary)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addDecimal128:
+
+.. _addDecimal128__:
+
+.. _OsObjectBuilder_addDecimal128:
+
+.. _OsObjectBuilder_addDecimal128__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDecimal128:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDecimal128__:
+
+
+
+addDecimal128
+-------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDecimal128_long__Decimal128_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDecimal128_long_Decimal128_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDecimal128_long__Decimal128_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addDecimal128 (**long** columnKey,
+                                   **Decimal128 (?)** val)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addDecimal128List:
+
+.. _addDecimal128List__:
+
+.. _OsObjectBuilder_addDecimal128List:
+
+.. _OsObjectBuilder_addDecimal128List__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDecimal128List:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDecimal128List__:
+
+
+
+addDecimal128List
+-----------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDecimal128List_long__RealmList_Decimal128__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDecimal128List_long_RealmList_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDecimal128List_long__RealmList_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addDecimal128List (**long** columnKey,
+                                       :ref:`io.realm.RealmList\<Decimal128> <io_realm_RealmList>`  list)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addDecimal128Set:
+
+.. _addDecimal128Set__:
+
+.. _OsObjectBuilder_addDecimal128Set:
+
+.. _OsObjectBuilder_addDecimal128Set__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDecimal128Set:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDecimal128Set__:
+
+
+
+addDecimal128Set
+----------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDecimal128Set_long__RealmSet_Decimal128__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDecimal128Set_long_RealmSet_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDecimal128Set_long__RealmSet_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addDecimal128Set (**long** columnKey,
+                                      :ref:`io.realm.RealmSet\<Decimal128> <io_realm_RealmSet>`  set)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addDecimal128ValueDictionary:
+
+.. _addDecimal128ValueDictionary__:
+
+.. _OsObjectBuilder_addDecimal128ValueDictionary:
+
+.. _OsObjectBuilder_addDecimal128ValueDictionary__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDecimal128ValueDictionary:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDecimal128ValueDictionary__:
+
+
+
+addDecimal128ValueDictionary
+----------------------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDecimal128ValueDictionary_long__RealmDictionary_Decimal128__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDecimal128ValueDictionary_long_RealmDictionary_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDecimal128ValueDictionary_long__RealmDictionary_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addDecimal128ValueDictionary (**long** columnKey,
+                                                  :ref:`io.realm.RealmDictionary\<Decimal128> <io_realm_RealmDictionary>`  dictionary)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addDouble:
+
+.. _addDouble__:
+
+.. _OsObjectBuilder_addDouble:
+
+.. _OsObjectBuilder_addDouble__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDouble:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDouble__:
+
+
+
+addDouble
+---------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDouble_long__Double_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDouble_long_Double_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDouble_long__Double_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addDouble (**long** columnKey,
+                               `Double <https://docs.oracle.com/javase/7/docs/api/java/lang/Double.html>`__  val)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addDoubleList:
+
+.. _addDoubleList__:
+
+.. _OsObjectBuilder_addDoubleList:
+
+.. _OsObjectBuilder_addDoubleList__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDoubleList:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDoubleList__:
+
+
+
+addDoubleList
+-------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDoubleList_long__RealmList_Double__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDoubleList_long_RealmList_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDoubleList_long__RealmList_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addDoubleList (**long** columnKey,
+                                   :ref:`io.realm.RealmList\<java.lang.Double> <io_realm_RealmList>`  list)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addDoubleSet:
+
+.. _addDoubleSet__:
+
+.. _OsObjectBuilder_addDoubleSet:
+
+.. _OsObjectBuilder_addDoubleSet__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDoubleSet:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDoubleSet__:
+
+
+
+addDoubleSet
+------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDoubleSet_long__RealmSet_Double__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDoubleSet_long_RealmSet_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDoubleSet_long__RealmSet_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addDoubleSet (**long** columnKey,
+                                  :ref:`io.realm.RealmSet\<java.lang.Double> <io_realm_RealmSet>`  set)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addDoubleValueDictionary:
+
+.. _addDoubleValueDictionary__:
+
+.. _OsObjectBuilder_addDoubleValueDictionary:
+
+.. _OsObjectBuilder_addDoubleValueDictionary__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDoubleValueDictionary:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDoubleValueDictionary__:
+
+
+
+addDoubleValueDictionary
+------------------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDoubleValueDictionary_long__RealmDictionary_Double__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDoubleValueDictionary_long_RealmDictionary_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addDoubleValueDictionary_long__RealmDictionary_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addDoubleValueDictionary (**long** columnKey,
+                                              :ref:`io.realm.RealmDictionary\<java.lang.Double> <io_realm_RealmDictionary>`  dictionary)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addFloat:
+
+.. _addFloat__:
+
+.. _OsObjectBuilder_addFloat:
+
+.. _OsObjectBuilder_addFloat__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addFloat:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addFloat__:
+
+
+
+addFloat
+--------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addFloat_long__Float_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addFloat_long_Float_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addFloat_long__Float_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addFloat (**long** columnKey,
+                              `Float <https://docs.oracle.com/javase/7/docs/api/java/lang/Float.html>`__  val)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addFloatList:
+
+.. _addFloatList__:
+
+.. _OsObjectBuilder_addFloatList:
+
+.. _OsObjectBuilder_addFloatList__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addFloatList:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addFloatList__:
+
+
+
+addFloatList
+------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addFloatList_long__RealmList_Float__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addFloatList_long_RealmList_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addFloatList_long__RealmList_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addFloatList (**long** columnKey,
+                                  :ref:`io.realm.RealmList\<java.lang.Float> <io_realm_RealmList>`  list)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addFloatSet:
+
+.. _addFloatSet__:
+
+.. _OsObjectBuilder_addFloatSet:
+
+.. _OsObjectBuilder_addFloatSet__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addFloatSet:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addFloatSet__:
+
+
+
+addFloatSet
+-----------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addFloatSet_long__RealmSet_Float__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addFloatSet_long_RealmSet_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addFloatSet_long__RealmSet_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addFloatSet (**long** columnKey,
+                                 :ref:`io.realm.RealmSet\<java.lang.Float> <io_realm_RealmSet>`  set)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addFloatValueDictionary:
+
+.. _addFloatValueDictionary__:
+
+.. _OsObjectBuilder_addFloatValueDictionary:
+
+.. _OsObjectBuilder_addFloatValueDictionary__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addFloatValueDictionary:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addFloatValueDictionary__:
+
+
+
+addFloatValueDictionary
+-----------------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addFloatValueDictionary_long__RealmDictionary_Float__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addFloatValueDictionary_long_RealmDictionary_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addFloatValueDictionary_long__RealmDictionary_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addFloatValueDictionary (**long** columnKey,
+                                             :ref:`io.realm.RealmDictionary\<java.lang.Float> <io_realm_RealmDictionary>`  dictionary)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addInteger:
+
+.. _addInteger__:
+
+.. _OsObjectBuilder_addInteger:
+
+.. _OsObjectBuilder_addInteger__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addInteger:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addInteger__:
+
+
+
+addInteger
+----------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addInteger_long__Long_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addInteger_long_Long_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addInteger_long__Long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addInteger (**long** columnKey,
+                                `Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__  val)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_internal_objectstore_OsObjectBuilder_addInteger_long__Integer_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addInteger_long_Integer_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addInteger_long__Integer_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addInteger (**long** columnKey,
+                                `Integer <https://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html>`__  val)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_internal_objectstore_OsObjectBuilder_addInteger_long__Short_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addInteger_long_Short_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addInteger_long__Short_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addInteger (**long** columnKey,
+                                `Short <https://docs.oracle.com/javase/7/docs/api/java/lang/Short.html>`__  val)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_internal_objectstore_OsObjectBuilder_addInteger_long__Byte_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addInteger_long_Byte_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addInteger_long__Byte_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addInteger (**long** columnKey,
+                                `Byte <https://docs.oracle.com/javase/7/docs/api/java/lang/Byte.html>`__  val)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addIntegerList:
+
+.. _addIntegerList__:
+
+.. _OsObjectBuilder_addIntegerList:
+
+.. _OsObjectBuilder_addIntegerList__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addIntegerList:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addIntegerList__:
+
+
+
+addIntegerList
+--------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addIntegerList_long__RealmList_Integer__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addIntegerList_long_RealmList_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addIntegerList_long__RealmList_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addIntegerList (**long** columnKey,
+                                    :ref:`io.realm.RealmList\<java.lang.Integer> <io_realm_RealmList>`  list)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addIntegerSet:
+
+.. _addIntegerSet__:
+
+.. _OsObjectBuilder_addIntegerSet:
+
+.. _OsObjectBuilder_addIntegerSet__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addIntegerSet:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addIntegerSet__:
+
+
+
+addIntegerSet
+-------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addIntegerSet_long__RealmSet_Integer__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addIntegerSet_long_RealmSet_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addIntegerSet_long__RealmSet_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addIntegerSet (**long** columnKey,
+                                   :ref:`io.realm.RealmSet\<java.lang.Integer> <io_realm_RealmSet>`  set)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addIntegerValueDictionary:
+
+.. _addIntegerValueDictionary__:
+
+.. _OsObjectBuilder_addIntegerValueDictionary:
+
+.. _OsObjectBuilder_addIntegerValueDictionary__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addIntegerValueDictionary:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addIntegerValueDictionary__:
+
+
+
+addIntegerValueDictionary
+-------------------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addIntegerValueDictionary_long__RealmDictionary_Integer__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addIntegerValueDictionary_long_RealmDictionary_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addIntegerValueDictionary_long__RealmDictionary_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addIntegerValueDictionary (**long** columnKey,
+                                               :ref:`io.realm.RealmDictionary\<java.lang.Integer> <io_realm_RealmDictionary>`  dictionary)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addLongList:
+
+.. _addLongList__:
+
+.. _OsObjectBuilder_addLongList:
+
+.. _OsObjectBuilder_addLongList__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addLongList:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addLongList__:
+
+
+
+addLongList
+-----------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addLongList_long__RealmList_Long__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addLongList_long_RealmList_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addLongList_long__RealmList_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addLongList (**long** columnKey,
+                                 :ref:`io.realm.RealmList\<java.lang.Long> <io_realm_RealmList>`  list)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addLongSet:
+
+.. _addLongSet__:
+
+.. _OsObjectBuilder_addLongSet:
+
+.. _OsObjectBuilder_addLongSet__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addLongSet:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addLongSet__:
+
+
+
+addLongSet
+----------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addLongSet_long__RealmSet_Long__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addLongSet_long_RealmSet_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addLongSet_long__RealmSet_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addLongSet (**long** columnKey,
+                                :ref:`io.realm.RealmSet\<java.lang.Long> <io_realm_RealmSet>`  set)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addLongValueDictionary:
+
+.. _addLongValueDictionary__:
+
+.. _OsObjectBuilder_addLongValueDictionary:
+
+.. _OsObjectBuilder_addLongValueDictionary__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addLongValueDictionary:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addLongValueDictionary__:
+
+
+
+addLongValueDictionary
+----------------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addLongValueDictionary_long__RealmDictionary_Long__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addLongValueDictionary_long_RealmDictionary_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addLongValueDictionary_long__RealmDictionary_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addLongValueDictionary (**long** columnKey,
+                                            :ref:`io.realm.RealmDictionary\<java.lang.Long> <io_realm_RealmDictionary>`  dictionary)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addMutableRealmInteger:
+
+.. _addMutableRealmInteger__:
+
+.. _OsObjectBuilder_addMutableRealmInteger:
+
+.. _OsObjectBuilder_addMutableRealmInteger__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addMutableRealmInteger:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addMutableRealmInteger__:
+
+
+
+addMutableRealmInteger
+----------------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addMutableRealmInteger_long__MutableRealmInteger_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addMutableRealmInteger_long_MutableRealmInteger_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addMutableRealmInteger_long__MutableRealmInteger_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addMutableRealmInteger (**long** columnKey,
+                                            :ref:`MutableRealmInteger <io_realm_MutableRealmInteger>`  val)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addMutableRealmIntegerList:
+
+.. _addMutableRealmIntegerList__:
+
+.. _OsObjectBuilder_addMutableRealmIntegerList:
+
+.. _OsObjectBuilder_addMutableRealmIntegerList__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addMutableRealmIntegerList:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addMutableRealmIntegerList__:
+
+
+
+addMutableRealmIntegerList
+--------------------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addMutableRealmIntegerList_long__RealmList_MutableRealmInteger__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addMutableRealmIntegerList_long_RealmList_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addMutableRealmIntegerList_long__RealmList_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addMutableRealmIntegerList (**long** columnKey,
+                                                :ref:`io.realm.RealmList\<io.realm.MutableRealmInteger> <io_realm_RealmList>`  list)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addNull:
+
+.. _addNull__:
+
+.. _OsObjectBuilder_addNull:
+
+.. _OsObjectBuilder_addNull__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addNull:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addNull__:
+
+
+
+addNull
+-------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addNull_long_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addNull_long_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addNull_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addNull (**long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addObject:
+
+.. _addObject__:
+
+.. _OsObjectBuilder_addObject:
+
+.. _OsObjectBuilder_addObject__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObject:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObject__:
+
+
+
+addObject
+---------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObject_long__RealmModel_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObject_long_RealmModel_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObject_long__RealmModel_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addObject (**long** columnKey,
+                               :ref:`RealmModel <io_realm_RealmModel>`  val)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addObjectDictionary:
+
+.. _addObjectDictionary__:
+
+.. _OsObjectBuilder_addObjectDictionary:
+
+.. _OsObjectBuilder_addObjectDictionary__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectDictionary:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectDictionary__:
+
+
+
+addObjectDictionary
+-------------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectDictionary_long__RealmDictionary_T__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectDictionary_long_RealmDictionary_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectDictionary_long__RealmDictionary_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addObjectDictionary <**T (?)** >(**long** columnKey,
+                                         :ref:`io.realm.RealmDictionary\<T> <io_realm_RealmDictionary>`  dictionary)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addObjectId:
+
+.. _addObjectId__:
+
+.. _OsObjectBuilder_addObjectId:
+
+.. _OsObjectBuilder_addObjectId__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectId:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectId__:
+
+
+
+addObjectId
+-----------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectId_long__ObjectId_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectId_long_ObjectId_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectId_long__ObjectId_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addObjectId (**long** columnKey,
+                                 **ObjectId (?)** val)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addObjectIdList:
+
+.. _addObjectIdList__:
+
+.. _OsObjectBuilder_addObjectIdList:
+
+.. _OsObjectBuilder_addObjectIdList__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectIdList:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectIdList__:
+
+
+
+addObjectIdList
+---------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectIdList_long__RealmList_ObjectId__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectIdList_long_RealmList_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectIdList_long__RealmList_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addObjectIdList (**long** columnKey,
+                                     :ref:`io.realm.RealmList\<ObjectId> <io_realm_RealmList>`  list)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addObjectIdSet:
+
+.. _addObjectIdSet__:
+
+.. _OsObjectBuilder_addObjectIdSet:
+
+.. _OsObjectBuilder_addObjectIdSet__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectIdSet:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectIdSet__:
+
+
+
+addObjectIdSet
+--------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectIdSet_long__RealmSet_ObjectId__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectIdSet_long_RealmSet_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectIdSet_long__RealmSet_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addObjectIdSet (**long** columnKey,
+                                    :ref:`io.realm.RealmSet\<ObjectId> <io_realm_RealmSet>`  set)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addObjectIdValueDictionary:
+
+.. _addObjectIdValueDictionary__:
+
+.. _OsObjectBuilder_addObjectIdValueDictionary:
+
+.. _OsObjectBuilder_addObjectIdValueDictionary__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectIdValueDictionary:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectIdValueDictionary__:
+
+
+
+addObjectIdValueDictionary
+--------------------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectIdValueDictionary_long__RealmDictionary_ObjectId__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectIdValueDictionary_long_RealmDictionary_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectIdValueDictionary_long__RealmDictionary_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addObjectIdValueDictionary (**long** columnKey,
+                                                :ref:`io.realm.RealmDictionary\<ObjectId> <io_realm_RealmDictionary>`  dictionary)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addObjectList:
+
+.. _addObjectList__:
+
+.. _OsObjectBuilder_addObjectList:
+
+.. _OsObjectBuilder_addObjectList__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectList:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectList__:
+
+
+
+addObjectList
+-------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectList_long__RealmList_T__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectList_long_RealmList_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectList_long__RealmList_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addObjectList <**T (?)** >(**long** columnKey,
+                                   :ref:`io.realm.RealmList\<T> <io_realm_RealmList>`  list)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addObjectSet:
+
+.. _addObjectSet__:
+
+.. _OsObjectBuilder_addObjectSet:
+
+.. _OsObjectBuilder_addObjectSet__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectSet:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectSet__:
+
+
+
+addObjectSet
+------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectSet_long__RealmSet_T__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectSet_long_RealmSet_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addObjectSet_long__RealmSet_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addObjectSet <**T (?)** >(**long** columnKey,
+                                  :ref:`io.realm.RealmSet\<T> <io_realm_RealmSet>`  set)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addRealmAny:
+
+.. _addRealmAny__:
+
+.. _OsObjectBuilder_addRealmAny:
+
+.. _OsObjectBuilder_addRealmAny__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addRealmAny:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addRealmAny__:
+
+
+
+addRealmAny
+-----------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addRealmAny_long__long_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addRealmAny_long_long_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addRealmAny_long__long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addRealmAny (**long** columnKey,
+                                 **long** realmAnyPtr)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addRealmAnyList:
+
+.. _addRealmAnyList__:
+
+.. _OsObjectBuilder_addRealmAnyList:
+
+.. _OsObjectBuilder_addRealmAnyList__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addRealmAnyList:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addRealmAnyList__:
+
+
+
+addRealmAnyList
+---------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addRealmAnyList_long__RealmList_RealmAny__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addRealmAnyList_long_RealmList_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addRealmAnyList_long__RealmList_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addRealmAnyList (**long** columnKey,
+                                     :ref:`io.realm.RealmList\<io.realm.RealmAny> <io_realm_RealmList>`  list)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addRealmAnySet:
+
+.. _addRealmAnySet__:
+
+.. _OsObjectBuilder_addRealmAnySet:
+
+.. _OsObjectBuilder_addRealmAnySet__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addRealmAnySet:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addRealmAnySet__:
+
+
+
+addRealmAnySet
+--------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addRealmAnySet_long__RealmSet_RealmAny__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addRealmAnySet_long_RealmSet_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addRealmAnySet_long__RealmSet_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addRealmAnySet (**long** columnKey,
+                                    :ref:`io.realm.RealmSet\<io.realm.RealmAny> <io_realm_RealmSet>`  set)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addRealmAnyValueDictionary:
+
+.. _addRealmAnyValueDictionary__:
+
+.. _OsObjectBuilder_addRealmAnyValueDictionary:
+
+.. _OsObjectBuilder_addRealmAnyValueDictionary__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addRealmAnyValueDictionary:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addRealmAnyValueDictionary__:
+
+
+
+addRealmAnyValueDictionary
+--------------------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addRealmAnyValueDictionary_long__RealmDictionary_RealmAny__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addRealmAnyValueDictionary_long_RealmDictionary_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addRealmAnyValueDictionary_long__RealmDictionary_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addRealmAnyValueDictionary (**long** columnKey,
+                                                :ref:`io.realm.RealmDictionary\<io.realm.RealmAny> <io_realm_RealmDictionary>`  dictionary)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addShortList:
+
+.. _addShortList__:
+
+.. _OsObjectBuilder_addShortList:
+
+.. _OsObjectBuilder_addShortList__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addShortList:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addShortList__:
+
+
+
+addShortList
+------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addShortList_long__RealmList_Short__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addShortList_long_RealmList_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addShortList_long__RealmList_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addShortList (**long** columnKey,
+                                  :ref:`io.realm.RealmList\<java.lang.Short> <io_realm_RealmList>`  list)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addShortSet:
+
+.. _addShortSet__:
+
+.. _OsObjectBuilder_addShortSet:
+
+.. _OsObjectBuilder_addShortSet__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addShortSet:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addShortSet__:
+
+
+
+addShortSet
+-----------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addShortSet_long__RealmSet_Short__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addShortSet_long_RealmSet_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addShortSet_long__RealmSet_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addShortSet (**long** columnKey,
+                                 :ref:`io.realm.RealmSet\<java.lang.Short> <io_realm_RealmSet>`  set)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addShortValueDictionary:
+
+.. _addShortValueDictionary__:
+
+.. _OsObjectBuilder_addShortValueDictionary:
+
+.. _OsObjectBuilder_addShortValueDictionary__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addShortValueDictionary:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addShortValueDictionary__:
+
+
+
+addShortValueDictionary
+-----------------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addShortValueDictionary_long__RealmDictionary_Short__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addShortValueDictionary_long_RealmDictionary_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addShortValueDictionary_long__RealmDictionary_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addShortValueDictionary (**long** columnKey,
+                                             :ref:`io.realm.RealmDictionary\<java.lang.Short> <io_realm_RealmDictionary>`  dictionary)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addString:
+
+.. _addString__:
+
+.. _OsObjectBuilder_addString:
+
+.. _OsObjectBuilder_addString__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addString:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addString__:
+
+
+
+addString
+---------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addString_long__String_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addString_long_String_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addString_long__String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addString (**long** columnKey,
+                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  val)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addStringList:
+
+.. _addStringList__:
+
+.. _OsObjectBuilder_addStringList:
+
+.. _OsObjectBuilder_addStringList__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addStringList:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addStringList__:
+
+
+
+addStringList
+-------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addStringList_long__RealmList_String__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addStringList_long_RealmList_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addStringList_long__RealmList_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addStringList (**long** columnKey,
+                                   :ref:`io.realm.RealmList\<java.lang.String> <io_realm_RealmList>`  list)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addStringSet:
+
+.. _addStringSet__:
+
+.. _OsObjectBuilder_addStringSet:
+
+.. _OsObjectBuilder_addStringSet__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addStringSet:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addStringSet__:
+
+
+
+addStringSet
+------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addStringSet_long__RealmSet_String__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addStringSet_long_RealmSet_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addStringSet_long__RealmSet_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addStringSet (**long** columnKey,
+                                  :ref:`io.realm.RealmSet\<java.lang.String> <io_realm_RealmSet>`  set)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addStringValueDictionary:
+
+.. _addStringValueDictionary__:
+
+.. _OsObjectBuilder_addStringValueDictionary:
+
+.. _OsObjectBuilder_addStringValueDictionary__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addStringValueDictionary:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addStringValueDictionary__:
+
+
+
+addStringValueDictionary
+------------------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addStringValueDictionary_long__RealmDictionary_String__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addStringValueDictionary_long_RealmDictionary_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addStringValueDictionary_long__RealmDictionary_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addStringValueDictionary (**long** columnKey,
+                                              :ref:`io.realm.RealmDictionary\<java.lang.String> <io_realm_RealmDictionary>`  dictionary)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addUUID:
+
+.. _addUUID__:
+
+.. _OsObjectBuilder_addUUID:
+
+.. _OsObjectBuilder_addUUID__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addUUID:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addUUID__:
+
+
+
+addUUID
+-------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addUUID_long__UUID_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addUUID_long_UUID_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addUUID_long__UUID_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addUUID (**long** columnKey,
+                             `UUID <https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html>`__  val)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addUUIDList:
+
+.. _addUUIDList__:
+
+.. _OsObjectBuilder_addUUIDList:
+
+.. _OsObjectBuilder_addUUIDList__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addUUIDList:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addUUIDList__:
+
+
+
+addUUIDList
+-----------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addUUIDList_long__RealmList_UUID__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addUUIDList_long_RealmList_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addUUIDList_long__RealmList_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addUUIDList (**long** columnKey,
+                                 :ref:`io.realm.RealmList\<java.util.UUID> <io_realm_RealmList>`  list)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addUUIDSet:
+
+.. _addUUIDSet__:
+
+.. _OsObjectBuilder_addUUIDSet:
+
+.. _OsObjectBuilder_addUUIDSet__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addUUIDSet:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addUUIDSet__:
+
+
+
+addUUIDSet
+----------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addUUIDSet_long__RealmSet_UUID__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addUUIDSet_long_RealmSet_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addUUIDSet_long__RealmSet_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addUUIDSet (**long** columnKey,
+                                :ref:`io.realm.RealmSet\<java.util.UUID> <io_realm_RealmSet>`  set)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _addUUIDValueDictionary:
+
+.. _addUUIDValueDictionary__:
+
+.. _OsObjectBuilder_addUUIDValueDictionary:
+
+.. _OsObjectBuilder_addUUIDValueDictionary__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addUUIDValueDictionary:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addUUIDValueDictionary__:
+
+
+
+addUUIDValueDictionary
+----------------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addUUIDValueDictionary_long__RealmDictionary_UUID__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addUUIDValueDictionary_long_RealmDictionary_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_addUUIDValueDictionary_long__RealmDictionary_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addUUIDValueDictionary (**long** columnKey,
+                                            :ref:`io.realm.RealmDictionary\<java.util.UUID> <io_realm_RealmDictionary>`  dictionary)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _close:
+
+.. _close__:
+
+.. _OsObjectBuilder_close:
+
+.. _OsObjectBuilder_close__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_close:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_close__:
+
+
+
+close
+-----
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_close__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_close__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_close__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** close ()
+   
+   * - Manually closes the underlying Builder
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _createNewObject:
+
+.. _createNewObject__:
+
+.. _OsObjectBuilder_createNewObject:
+
+.. _OsObjectBuilder_createNewObject__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_createNewObject:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_createNewObject__:
+
+
+
+createNewObject
+---------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_createNewObject__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_createNewObject__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_createNewObject__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`UncheckedRow <io_realm_internal_UncheckedRow>`  createNewObject ()
+   
+   * - Create a new object.The builder is automatically closed after calling this method.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getNativePtr:
+
+.. _getNativePtr__:
+
+.. _OsObjectBuilder_getNativePtr:
+
+.. _OsObjectBuilder_getNativePtr__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_getNativePtr:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_getNativePtr__:
+
+
+
+getNativePtr
+------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_getNativePtr__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_getNativePtr__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_getNativePtr__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** getNativePtr ()
+   
+   * - Returns the underlying native pointer representing this builder.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeAddRealmAnyDictionaryEntry:
+
+.. _nativeAddRealmAnyDictionaryEntry__:
+
+.. _OsObjectBuilder_nativeAddRealmAnyDictionaryEntry:
+
+.. _OsObjectBuilder_nativeAddRealmAnyDictionaryEntry__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_nativeAddRealmAnyDictionaryEntry:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_nativeAddRealmAnyDictionaryEntry__:
+
+
+
+nativeAddRealmAnyDictionaryEntry
+--------------------------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_nativeAddRealmAnyDictionaryEntry_long__String__long_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_nativeAddRealmAnyDictionaryEntry_long_String_long_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_nativeAddRealmAnyDictionaryEntry_long__String__long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static native **void** nativeAddRealmAnyDictionaryEntry (**long** dictionaryPtr,
+                                                                    `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  key,
+                                                                    **long** realmAnyPtr)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeAddRealmAnyListItem:
+
+.. _nativeAddRealmAnyListItem__:
+
+.. _OsObjectBuilder_nativeAddRealmAnyListItem:
+
+.. _OsObjectBuilder_nativeAddRealmAnyListItem__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_nativeAddRealmAnyListItem:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_nativeAddRealmAnyListItem__:
+
+
+
+nativeAddRealmAnyListItem
+-------------------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_nativeAddRealmAnyListItem_long__long_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_nativeAddRealmAnyListItem_long_long_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_nativeAddRealmAnyListItem_long__long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static native **void** nativeAddRealmAnyListItem (**long** listPtr,
+                                                             **long** realmAnyPtr)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _updateExistingEmbeddedObject:
+
+.. _updateExistingEmbeddedObject__:
+
+.. _OsObjectBuilder_updateExistingEmbeddedObject:
+
+.. _OsObjectBuilder_updateExistingEmbeddedObject__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_updateExistingEmbeddedObject:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_updateExistingEmbeddedObject__:
+
+
+
+updateExistingEmbeddedObject
+----------------------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_updateExistingEmbeddedObject_RealmObjectProxy_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_updateExistingEmbeddedObject_RealmObjectProxy_:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_updateExistingEmbeddedObject_RealmObjectProxy_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** updateExistingEmbeddedObject (:ref:`RealmObjectProxy <io_realm_internal_RealmObjectProxy>`  embeddedObject)
+   
+   * - Updates an existing embedded object.The builder is automatically closed after calling this method.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _updateExistingTopLevelObject:
+
+.. _updateExistingTopLevelObject__:
+
+.. _OsObjectBuilder_updateExistingTopLevelObject:
+
+.. _OsObjectBuilder_updateExistingTopLevelObject__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_updateExistingTopLevelObject:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_updateExistingTopLevelObject__:
+
+
+
+updateExistingTopLevelObject
+----------------------------
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_updateExistingTopLevelObject__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_updateExistingTopLevelObject__:
+
+.. _io_realm_internal_objectstore_OsObjectBuilder_updateExistingTopLevelObject__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** updateExistingTopLevelObject ()
+   
+   * - Updates any existing object if it exists, otherwise creates a new one.Updating an existing object requires that the primary key is defined as one of the fields.
+       
+       The builder is automatically closed after calling this method.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

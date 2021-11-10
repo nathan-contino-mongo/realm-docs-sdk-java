@@ -46,9 +46,10 @@ Method Summary
    * - 
        public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>` 
      - 
-       :ref:`encryptionKey <io_realm_mongodb_AppConfiguration_Builder_encryptionKey_byte[]_>`  (**byte[]** key)
+       :ref:`addCustomRequestHeader <io_realm_mongodb_AppConfiguration_Builder_addCustomRequestHeader_String__String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  headerName,
+                                                                `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  headerValue)
        
-       Sets the encryption key used to encrypt user meta data only.
+       Adds an extra HTTP header to append to every request to a Realm Object Server.
        
        
        
@@ -56,9 +57,9 @@ Method Summary
    * - 
        public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>` 
      - 
-       :ref:`baseUrl <io_realm_mongodb_AppConfiguration_Builder_baseUrl_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  baseUrl)
+       :ref:`addCustomRequestHeaders <io_realm_mongodb_AppConfiguration_Builder_addCustomRequestHeaders_Map_String__String__>`  (`java.util.Map\<java.lang.String, java.lang.String> <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  headers)
        
-       Sets the base url for the MongoDB Realm Application.
+       Adds extra HTTP headers to append to every request to a Realm Object Server.
        
        
        
@@ -86,17 +87,6 @@ Method Summary
    * - 
        public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>` 
      - 
-       :ref:`requestTimeout <io_realm_mongodb_AppConfiguration_Builder_requestTimeout_long__TimeUnit_>`  (**long** time,
-                                                        `TimeUnit <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/TimeUnit.html>`__  unit)
-       
-       Sets the default timeout used by network requests against the MongoDB Realm application.
-       
-       
-       
-   
-   * - 
-       public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>` 
-     - 
        :ref:`authorizationHeaderName <io_realm_mongodb_AppConfiguration_Builder_authorizationHeaderName_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  headerName)
        
        Sets the name of the HTTP header used to send authorization data in when making requests to MongoDB Realm.
@@ -107,50 +97,19 @@ Method Summary
    * - 
        public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>` 
      - 
-       :ref:`addCustomRequestHeader <io_realm_mongodb_AppConfiguration_Builder_addCustomRequestHeader_String__String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  headerName,
-                                                                `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  headerValue)
+       :ref:`baseUrl <io_realm_mongodb_AppConfiguration_Builder_baseUrl_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  baseUrl)
        
-       Adds an extra HTTP header to append to every request to a Realm Object Server.
-       
-       
-       
-   
-   * - 
-       public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>` 
-     - 
-       :ref:`addCustomRequestHeaders <io_realm_mongodb_AppConfiguration_Builder_addCustomRequestHeaders_Map_String__String__>`  (`java.util.Map\<java.lang.String, java.lang.String> <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  headers)
-       
-       Adds extra HTTP headers to append to every request to a Realm Object Server.
+       Sets the base url for the MongoDB Realm Application.
        
        
        
    
    * - 
-       public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>` 
+       public :ref:`AppConfiguration <io_realm_mongodb_AppConfiguration>` 
      - 
-       :ref:`defaultSyncErrorHandler <io_realm_mongodb_AppConfiguration_Builder_defaultSyncErrorHandler_SyncSession_ErrorHandler_>`  (:ref:`SyncSession.ErrorHandler <io_realm_mongodb_sync_SyncSession_ErrorHandler>`  errorHandler)
+       :ref:`build <io_realm_mongodb_AppConfiguration_Builder_build__>`  ()
        
-       Sets the default error handler used by Synced Realms when reporting errors with their session.
-       
-       
-       
-   
-   * - 
-       public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>` 
-     - 
-       :ref:`defaultClientResetHandler <io_realm_mongodb_AppConfiguration_Builder_defaultClientResetHandler_SyncSession_ClientResetHandler_>`  (:ref:`SyncSession.ClientResetHandler <io_realm_mongodb_sync_SyncSession_ClientResetHandler>`  handler)
-       
-       Sets the default Client Reset handler used by Synced Realms when they report a Client Reset.
-       
-       
-       
-   
-   * - 
-       public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>` 
-     - 
-       :ref:`syncRootDirectory <io_realm_mongodb_AppConfiguration_Builder_syncRootDirectory_File_>`  (`File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  rootDir)
-       
-       Configures the root folder containing all files and Realms used when synchronizing data between the device and MongoDB Realm.
+       Creates the AppConfiguration.
        
        
        
@@ -170,6 +129,36 @@ Method Summary
    * - 
        public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>` 
      - 
+       :ref:`defaultClientResetHandler <io_realm_mongodb_AppConfiguration_Builder_defaultClientResetHandler_SyncSession_ClientResetHandler_>`  (:ref:`SyncSession.ClientResetHandler <io_realm_mongodb_sync_SyncSession_ClientResetHandler>`  handler)
+       
+       Sets the default Client Reset handler used by Synced Realms when they report a Client Reset.
+       
+       
+       
+   
+   * - 
+       public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>` 
+     - 
+       :ref:`defaultSyncErrorHandler <io_realm_mongodb_AppConfiguration_Builder_defaultSyncErrorHandler_SyncSession_ErrorHandler_>`  (:ref:`SyncSession.ErrorHandler <io_realm_mongodb_sync_SyncSession_ErrorHandler>`  errorHandler)
+       
+       Sets the default error handler used by Synced Realms when reporting errors with their session.
+       
+       
+       
+   
+   * - 
+       public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>` 
+     - 
+       :ref:`encryptionKey <io_realm_mongodb_AppConfiguration_Builder_encryptionKey_byte[]_>`  (**byte[]** key)
+       
+       Sets the encryption key used to encrypt user meta data only.
+       
+       
+       
+   
+   * - 
+       public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>` 
+     - 
        :ref:`httpLogObfuscator <io_realm_mongodb_AppConfiguration_Builder_httpLogObfuscator_HttpLogObfuscator_>`  (:ref:`HttpLogObfuscator <io_realm_mongodb_log_obfuscator_HttpLogObfuscator>`  httpLogObfuscator)
        
        Sets the :ref:`HttpLogObfuscator <io_realm_mongodb_log_obfuscator_HttpLogObfuscator>`  used to keep sensitive information in HTTP requests from being displayed in the logcat.
@@ -180,11 +169,22 @@ Method Summary
        
    
    * - 
-       public :ref:`AppConfiguration <io_realm_mongodb_AppConfiguration>` 
+       public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>` 
      - 
-       :ref:`build <io_realm_mongodb_AppConfiguration_Builder_build__>`  ()
+       :ref:`requestTimeout <io_realm_mongodb_AppConfiguration_Builder_requestTimeout_long__TimeUnit_>`  (**long** time,
+                                                        `TimeUnit <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/TimeUnit.html>`__  unit)
        
-       Creates the AppConfiguration.
+       Sets the default timeout used by network requests against the MongoDB Realm application.
+       
+       
+       
+   
+   * - 
+       public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>` 
+     - 
+       :ref:`syncRootDirectory <io_realm_mongodb_AppConfiguration_Builder_syncRootDirectory_File_>`  (`File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  rootDir)
+       
+       Configures the root folder containing all files and Realms used when synchronizing data between the device and MongoDB Realm.
        
        
        
@@ -209,32 +209,47 @@ Inherited Methods
 Method Detail
 =============
 
+.. _addCustomRequestHeader:
+
+.. _addCustomRequestHeader__:
+
+.. _Builder_addCustomRequestHeader:
+
+.. _Builder_addCustomRequestHeader__:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_addCustomRequestHeader:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_addCustomRequestHeader__:
 
 
-encryptionKey
--------------
 
-.. _io_realm_mongodb_AppConfiguration_Builder_encryptionKey_byte[]_:
+addCustomRequestHeader
+----------------------
 
-.. _io_realm_mongodb_AppConfiguration_Builder_encryptionKey_byte_:
+.. _io_realm_mongodb_AppConfiguration_Builder_addCustomRequestHeader_String__String_:
 
-.. _io_realm_mongodb_AppConfiguration_Builder_encryptionKey_byte_:
+.. _io_realm_mongodb_AppConfiguration_Builder_addCustomRequestHeader_String_String_:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_addCustomRequestHeader_String__String_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>`  encryptionKey (**byte[]** key)
+   * -    public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>`  addCustomRequestHeader (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  headerName,
+                                                                `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  headerValue)
    
-   * - Sets the encryption key used to encrypt user meta data only. Individual Realms needs to use :ref:`io.realm.mongodb.sync.SyncConfiguration.Builder.encryptionKey(byte[]) <io_realm_mongodb_sync_SyncConfiguration_Builder_encryptionKey_byte[]_>`  to make them encrypted.
-       
-       
+   * - Adds an extra HTTP header to append to every request to a Realm Object Server.
        
        
        
        
        **Parameters**
        
-       - ``key`` - a 64 byte encryption key.
+       - ``headerName`` - the name of the header.
+          
+          
+          
+       - ``headerValue`` - the value of header.
           
           
           
@@ -246,7 +261,9 @@ encryptionKey
        
        **Throws**
        
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the key is not 64 bytes long.
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if a non-empty ``headerName``  is provided or a null ``headerValue`` .
+          
+          
           
           
           
@@ -257,32 +274,42 @@ encryptionKey
        
    
    
+.. _addCustomRequestHeaders:
+
+.. _addCustomRequestHeaders__:
+
+.. _Builder_addCustomRequestHeaders:
+
+.. _Builder_addCustomRequestHeaders__:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_addCustomRequestHeaders:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_addCustomRequestHeaders__:
 
 
-baseUrl
--------
 
-.. _io_realm_mongodb_AppConfiguration_Builder_baseUrl_String_:
+addCustomRequestHeaders
+-----------------------
 
-.. _io_realm_mongodb_AppConfiguration_Builder_baseUrl_String_:
+.. _io_realm_mongodb_AppConfiguration_Builder_addCustomRequestHeaders_Map_String__String__:
 
-.. _io_realm_mongodb_AppConfiguration_Builder_baseUrl_String_:
+.. _io_realm_mongodb_AppConfiguration_Builder_addCustomRequestHeaders_Map_:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_addCustomRequestHeaders_Map_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>`  baseUrl (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  baseUrl)
+   * -    public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>`  addCustomRequestHeaders (`java.util.Map\<java.lang.String, java.lang.String> <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  headers)
    
-   * - Sets the base url for the MongoDB Realm Application. The default value is **DEFAULT_BASE_URL (?)**.
-       
-       
+   * - Adds extra HTTP headers to append to every request to a Realm Object Server.
        
        
        
        
        **Parameters**
        
-       - ``baseUrl`` - the base url for the MongoDB Realm application.
+       - ``headers`` - map of (headerName, headerValue) pairs.
           
           
           
@@ -290,6 +317,14 @@ baseUrl
        
        
        
+       
+       
+       **Throws**
+       
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - If any of the headers provided are illegal.
+          
+          
+          
        
        
        
@@ -297,6 +332,18 @@ baseUrl
        
    
    
+.. _appName:
+
+.. _appName__:
+
+.. _Builder_appName:
+
+.. _Builder_appName__:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_appName:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_appName__:
+
 
 
 appName
@@ -335,6 +382,18 @@ appName
        
    
    
+.. _appVersion:
+
+.. _appVersion__:
+
+.. _Builder_appVersion:
+
+.. _Builder_appVersion__:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_appVersion:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_appVersion__:
+
 
 
 appVersion
@@ -373,51 +432,18 @@ appVersion
        
    
    
+.. _authorizationHeaderName:
 
+.. _authorizationHeaderName__:
 
-requestTimeout
---------------
+.. _Builder_authorizationHeaderName:
 
-.. _io_realm_mongodb_AppConfiguration_Builder_requestTimeout_long__TimeUnit_:
+.. _Builder_authorizationHeaderName__:
 
-.. _io_realm_mongodb_AppConfiguration_Builder_requestTimeout_long_TimeUnit_:
+.. _io_realm_mongodb_AppConfiguration_Builder_authorizationHeaderName:
 
-.. _io_realm_mongodb_AppConfiguration_Builder_requestTimeout_long__TimeUnit_:
+.. _io_realm_mongodb_AppConfiguration_Builder_authorizationHeaderName__:
 
-.. list-table::
-   :header-rows: 1
-   
-   * -    public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>`  requestTimeout (**long** time,
-                                                        `TimeUnit <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/TimeUnit.html>`__  unit)
-   
-   * - Sets the default timeout used by network requests against the MongoDB Realm application. Requests will terminate with a failure if they exceed this limit. The default value is :ref:`AppConfiguration.DEFAULT_REQUEST_TIMEOUT <io_realm_mongodb_AppConfiguration_DEFAULT_REQUEST_TIMEOUT>`  seconds.
-       
-       
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``time`` - the timeout value for network requests.
-          
-          
-          
-       - ``unit`` - the unit of time used to define the timeout.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
 
 
 authorizationHeaderName
@@ -483,124 +509,35 @@ authorizationHeaderName
        
    
    
+.. _baseUrl:
+
+.. _baseUrl__:
+
+.. _Builder_baseUrl:
+
+.. _Builder_baseUrl__:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_baseUrl:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_baseUrl__:
 
 
-addCustomRequestHeader
-----------------------
 
-.. _io_realm_mongodb_AppConfiguration_Builder_addCustomRequestHeader_String__String_:
+baseUrl
+-------
 
-.. _io_realm_mongodb_AppConfiguration_Builder_addCustomRequestHeader_String_String_:
+.. _io_realm_mongodb_AppConfiguration_Builder_baseUrl_String_:
 
-.. _io_realm_mongodb_AppConfiguration_Builder_addCustomRequestHeader_String__String_:
+.. _io_realm_mongodb_AppConfiguration_Builder_baseUrl_String_:
 
-.. list-table::
-   :header-rows: 1
-   
-   * -    public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>`  addCustomRequestHeader (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  headerName,
-                                                                `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  headerValue)
-   
-   * - Adds an extra HTTP header to append to every request to a Realm Object Server.
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``headerName`` - the name of the header.
-          
-          
-          
-       - ``headerValue`` - the value of header.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if a non-empty ``headerName``  is provided or a null ``headerValue`` .
-          
-          
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
-
-
-addCustomRequestHeaders
------------------------
-
-.. _io_realm_mongodb_AppConfiguration_Builder_addCustomRequestHeaders_Map_String__String__:
-
-.. _io_realm_mongodb_AppConfiguration_Builder_addCustomRequestHeaders_Map_:
-
-.. _io_realm_mongodb_AppConfiguration_Builder_addCustomRequestHeaders_Map_:
+.. _io_realm_mongodb_AppConfiguration_Builder_baseUrl_String_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>`  addCustomRequestHeaders (`java.util.Map\<java.lang.String, java.lang.String> <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  headers)
+   * -    public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>`  baseUrl (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  baseUrl)
    
-   * - Adds extra HTTP headers to append to every request to a Realm Object Server.
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``headers`` - map of (headerName, headerValue) pairs.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - If any of the headers provided are illegal.
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
-
-
-defaultSyncErrorHandler
------------------------
-
-.. _io_realm_mongodb_AppConfiguration_Builder_defaultSyncErrorHandler_SyncSession_ErrorHandler_:
-
-.. _io_realm_mongodb_AppConfiguration_Builder_defaultSyncErrorHandler_ErrorHandler_:
-
-.. _io_realm_mongodb_AppConfiguration_Builder_defaultSyncErrorHandler_ErrorHandler_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>`  defaultSyncErrorHandler (:ref:`SyncSession.ErrorHandler <io_realm_mongodb_sync_SyncSession_ErrorHandler>`  errorHandler)
-   
-   * - Sets the default error handler used by Synced Realms when reporting errors with their session.This default can be overridden by calling :ref:`io.realm.mongodb.sync.SyncConfiguration.Builder.errorHandler(SyncSession.ErrorHandler) <io_realm_mongodb_sync_SyncConfiguration_Builder_errorHandler_SyncSession_ErrorHandler_>`  when creating the :ref:`io.realm.mongodb.sync.SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>` .
-       
-       
+   * - Sets the base url for the MongoDB Realm Application. The default value is **DEFAULT_BASE_URL (?)**.
        
        
        
@@ -609,7 +546,7 @@ defaultSyncErrorHandler
        
        **Parameters**
        
-       - ``errorHandler`` - the default error handler.
+       - ``baseUrl`` - the base url for the MongoDB Realm application.
           
           
           
@@ -624,37 +561,37 @@ defaultSyncErrorHandler
        
    
    
+.. _build:
+
+.. _build__:
+
+.. _Builder_build:
+
+.. _Builder_build__:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_build:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_build__:
 
 
-defaultClientResetHandler
--------------------------
 
-.. _io_realm_mongodb_AppConfiguration_Builder_defaultClientResetHandler_SyncSession_ClientResetHandler_:
+build
+-----
 
-.. _io_realm_mongodb_AppConfiguration_Builder_defaultClientResetHandler_ClientResetHandler_:
+.. _io_realm_mongodb_AppConfiguration_Builder_build__:
 
-.. _io_realm_mongodb_AppConfiguration_Builder_defaultClientResetHandler_ClientResetHandler_:
+.. _io_realm_mongodb_AppConfiguration_Builder_build__:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_build__:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>`  defaultClientResetHandler (:ref:`SyncSession.ClientResetHandler <io_realm_mongodb_sync_SyncSession_ClientResetHandler>`  handler)
+   * -    public :ref:`AppConfiguration <io_realm_mongodb_AppConfiguration>`  build ()
    
-   * - Sets the default Client Reset handler used by Synced Realms when they report a Client Reset. session.This default can be overridden by calling :ref:`io.realm.mongodb.sync.SyncConfiguration.Builder.clientResetHandler(SyncSession.ClientResetHandler) <io_realm_mongodb_sync_SyncConfiguration_Builder_clientResetHandler_SyncSession_ClientResetHandler_>`  when creating the :ref:`io.realm.mongodb.sync.SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>` .
+   * - Creates the AppConfiguration.
        
        
-       
-       
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``handler`` - the default Client Reset handler.
-          
-          
-          
        
        
        
@@ -666,48 +603,18 @@ defaultClientResetHandler
        
    
    
+.. _codecRegistry:
 
+.. _codecRegistry__:
 
-syncRootDirectory
------------------
+.. _Builder_codecRegistry:
 
-.. _io_realm_mongodb_AppConfiguration_Builder_syncRootDirectory_File_:
+.. _Builder_codecRegistry__:
 
-.. _io_realm_mongodb_AppConfiguration_Builder_syncRootDirectory_File_:
+.. _io_realm_mongodb_AppConfiguration_Builder_codecRegistry:
 
-.. _io_realm_mongodb_AppConfiguration_Builder_syncRootDirectory_File_:
+.. _io_realm_mongodb_AppConfiguration_Builder_codecRegistry__:
 
-.. list-table::
-   :header-rows: 1
-   
-   * -    public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>`  syncRootDirectory (`File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  rootDir)
-   
-   * - Configures the root folder containing all files and Realms used when synchronizing data between the device and MongoDB Realm.The default root dir is ``Context.getFilesDir()/mongodb-realm`` .
-       
-       
-       
-       
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``rootDir`` - where to store sync related files.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
 
 
 codecRegistry
@@ -770,6 +677,186 @@ codecRegistry
        
    
    
+.. _defaultClientResetHandler:
+
+.. _defaultClientResetHandler__:
+
+.. _Builder_defaultClientResetHandler:
+
+.. _Builder_defaultClientResetHandler__:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_defaultClientResetHandler:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_defaultClientResetHandler__:
+
+
+
+defaultClientResetHandler
+-------------------------
+
+.. _io_realm_mongodb_AppConfiguration_Builder_defaultClientResetHandler_SyncSession_ClientResetHandler_:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_defaultClientResetHandler_ClientResetHandler_:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_defaultClientResetHandler_ClientResetHandler_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>`  defaultClientResetHandler (:ref:`SyncSession.ClientResetHandler <io_realm_mongodb_sync_SyncSession_ClientResetHandler>`  handler)
+   
+   * - Sets the default Client Reset handler used by Synced Realms when they report a Client Reset. session.This default can be overridden by calling :ref:`io.realm.mongodb.sync.SyncConfiguration.Builder.clientResetHandler(SyncSession.ClientResetHandler) <io_realm_mongodb_sync_SyncConfiguration_Builder_clientResetHandler_SyncSession_ClientResetHandler_>`  when creating the :ref:`io.realm.mongodb.sync.SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>` .
+       
+       
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``handler`` - the default Client Reset handler.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _defaultSyncErrorHandler:
+
+.. _defaultSyncErrorHandler__:
+
+.. _Builder_defaultSyncErrorHandler:
+
+.. _Builder_defaultSyncErrorHandler__:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_defaultSyncErrorHandler:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_defaultSyncErrorHandler__:
+
+
+
+defaultSyncErrorHandler
+-----------------------
+
+.. _io_realm_mongodb_AppConfiguration_Builder_defaultSyncErrorHandler_SyncSession_ErrorHandler_:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_defaultSyncErrorHandler_ErrorHandler_:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_defaultSyncErrorHandler_ErrorHandler_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>`  defaultSyncErrorHandler (:ref:`SyncSession.ErrorHandler <io_realm_mongodb_sync_SyncSession_ErrorHandler>`  errorHandler)
+   
+   * - Sets the default error handler used by Synced Realms when reporting errors with their session.This default can be overridden by calling :ref:`io.realm.mongodb.sync.SyncConfiguration.Builder.errorHandler(SyncSession.ErrorHandler) <io_realm_mongodb_sync_SyncConfiguration_Builder_errorHandler_SyncSession_ErrorHandler_>`  when creating the :ref:`io.realm.mongodb.sync.SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>` .
+       
+       
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``errorHandler`` - the default error handler.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _encryptionKey:
+
+.. _encryptionKey__:
+
+.. _Builder_encryptionKey:
+
+.. _Builder_encryptionKey__:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_encryptionKey:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_encryptionKey__:
+
+
+
+encryptionKey
+-------------
+
+.. _io_realm_mongodb_AppConfiguration_Builder_encryptionKey_byte[]_:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_encryptionKey_byte_:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_encryptionKey_byte_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>`  encryptionKey (**byte[]** key)
+   
+   * - Sets the encryption key used to encrypt user meta data only. Individual Realms needs to use :ref:`io.realm.mongodb.sync.SyncConfiguration.Builder.encryptionKey(byte[]) <io_realm_mongodb_sync_SyncConfiguration_Builder_encryptionKey_byte[]_>`  to make them encrypted.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``key`` - a 64 byte encryption key.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the key is not 64 bytes long.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _httpLogObfuscator:
+
+.. _httpLogObfuscator__:
+
+.. _Builder_httpLogObfuscator:
+
+.. _Builder_httpLogObfuscator__:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_httpLogObfuscator:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_httpLogObfuscator__:
+
 
 
 httpLogObfuscator
@@ -812,25 +899,106 @@ httpLogObfuscator
        
    
    
+.. _requestTimeout:
+
+.. _requestTimeout__:
+
+.. _Builder_requestTimeout:
+
+.. _Builder_requestTimeout__:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_requestTimeout:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_requestTimeout__:
 
 
-build
------
 
-.. _io_realm_mongodb_AppConfiguration_Builder_build__:
+requestTimeout
+--------------
 
-.. _io_realm_mongodb_AppConfiguration_Builder_build__:
+.. _io_realm_mongodb_AppConfiguration_Builder_requestTimeout_long__TimeUnit_:
 
-.. _io_realm_mongodb_AppConfiguration_Builder_build__:
+.. _io_realm_mongodb_AppConfiguration_Builder_requestTimeout_long_TimeUnit_:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_requestTimeout_long__TimeUnit_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public :ref:`AppConfiguration <io_realm_mongodb_AppConfiguration>`  build ()
+   * -    public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>`  requestTimeout (**long** time,
+                                                        `TimeUnit <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/TimeUnit.html>`__  unit)
    
-   * - Creates the AppConfiguration.
+   * - Sets the default timeout used by network requests against the MongoDB Realm application. Requests will terminate with a failure if they exceed this limit. The default value is :ref:`AppConfiguration.DEFAULT_REQUEST_TIMEOUT <io_realm_mongodb_AppConfiguration_DEFAULT_REQUEST_TIMEOUT>`  seconds.
        
        
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``time`` - the timeout value for network requests.
+          
+          
+          
+       - ``unit`` - the unit of time used to define the timeout.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _syncRootDirectory:
+
+.. _syncRootDirectory__:
+
+.. _Builder_syncRootDirectory:
+
+.. _Builder_syncRootDirectory__:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_syncRootDirectory:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_syncRootDirectory__:
+
+
+
+syncRootDirectory
+-----------------
+
+.. _io_realm_mongodb_AppConfiguration_Builder_syncRootDirectory_File_:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_syncRootDirectory_File_:
+
+.. _io_realm_mongodb_AppConfiguration_Builder_syncRootDirectory_File_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`AppConfiguration.Builder <io_realm_mongodb_AppConfiguration_Builder>`  syncRootDirectory (`File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  rootDir)
+   
+   * - Configures the root folder containing all files and Realms used when synchronizing data between the device and MongoDB Realm.The default root dir is ``Context.getFilesDir()/mongodb-realm`` .
+       
+       
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``rootDir`` - where to store sync related files.
+          
+          
+          
        
        
        

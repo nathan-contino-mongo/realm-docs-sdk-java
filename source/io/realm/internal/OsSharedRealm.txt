@@ -1,0 +1,2402 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class OsSharedRealm
+^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_internal_OsSharedRealm:
+
+
+
+io.realm.internal
+=================
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+*Implemented interfaces:*
+
+
+
+- `java.io.Closeable <https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html>`__ 
+- :ref:`io.realm.internal.NativeObject <io_realm_internal_NativeObject>` 
+- `java.lang.AutoCloseable <https://docs.oracle.com/javase/7/docs/api/java/lang/AutoCloseable.html>`__ 
+
+
+
+
+
+Nested Class Summary
+====================
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Class and Description
+   
+   * - ``public static`` 
+     - ``io.realm.internal.OsSharedRealm.VersionID`` 
+   
+   * - ``public static interface`` 
+     - ``io.realm.internal.OsSharedRealm.MigrationCallback`` 
+   
+   * - ``public static interface`` 
+     - ``io.realm.internal.OsSharedRealm.InitializationCallback`` 
+   
+   * - ``public static interface`` 
+     - ``io.realm.internal.OsSharedRealm.SchemaChangedCallback`` 
+   
+   
+
+
+Field Summary
+=============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Field and Description
+   
+   * - ``public static final byte`` 
+       
+       
+     - ``FILE_EXCEPTION_KIND_ACCESS_ERROR`` 
+       
+       
+   
+   * - ``public static final byte`` 
+       
+       
+     - ``FILE_EXCEPTION_KIND_BAD_HISTORY`` 
+       
+       
+   
+   * - ``public static final byte`` 
+       
+       
+     - ``FILE_EXCEPTION_KIND_PERMISSION_DENIED`` 
+       
+       
+   
+   * - ``public static final byte`` 
+       
+       
+     - ``FILE_EXCEPTION_KIND_EXISTS`` 
+       
+       
+   
+   * - ``public static final byte`` 
+       
+       
+     - ``FILE_EXCEPTION_KIND_NOT_FOUND`` 
+       
+       
+   
+   * - ``public static final byte`` 
+       
+       
+     - ``FILE_EXCEPTION_KIND_INCOMPATIBLE_LOCK_FILE`` 
+       
+       
+   
+   * - ``public static final byte`` 
+       
+       
+     - ``FILE_EXCEPTION_KIND_FORMAT_UPGRADE_REQUIRED`` 
+       
+       
+   
+   * - ``public static final byte`` 
+       
+       
+     - ``FILE_EXCEPTION_INCOMPATIBLE_SYNC_FILE`` 
+       
+       
+   
+   * - ``public final io.realm.internal.NativeContext`` 
+       
+       
+     - ``context`` 
+       
+       
+   
+   * - ``public final io.realm.internal.RealmNotifier`` 
+       
+       
+     - ``realmNotifier`` 
+       
+       
+   
+   * - ``public final io.realm.internal.Capabilities`` 
+       
+       
+     - ``capabilities`` 
+       
+       
+   
+   
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public **void**
+     - 
+       :ref:`beginTransaction <io_realm_internal_OsSharedRealm_beginTransaction__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`cancelTransaction <io_realm_internal_OsSharedRealm_cancelTransaction__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`close <io_realm_internal_OsSharedRealm_close__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`commitTransaction <io_realm_internal_OsSharedRealm_commitTransaction__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`compact <io_realm_internal_OsSharedRealm_compact__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`Table <io_realm_internal_Table>` 
+     - 
+       :ref:`createTable <io_realm_internal_OsSharedRealm_createTable_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+       
+       Creates a :ref:`Table <io_realm_internal_Table>`  with then given name.
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`Table <io_realm_internal_Table>` 
+     - 
+       :ref:`createTableWithPrimaryKey <io_realm_internal_OsSharedRealm_createTableWithPrimaryKey_String__String__RealmFieldType__boolean_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  tableName,
+                                                `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  primaryKeyFieldName,
+                                                :ref:`RealmFieldType <io_realm_RealmFieldType>`  primaryKeyFieldType,
+                                                **boolean** isNullable)
+       
+       Creates a :ref:`Table <io_realm_internal_Table>`  and adds a primary key field to it.
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>` 
+     - 
+       :ref:`freeze <io_realm_internal_OsSharedRealm_freeze__>`  ()
+       
+       Returns a frozen copy of this Realm.
+       
+       
+       
+   
+   * - 
+       public **int**
+     - 
+       :ref:`getClassPrivileges <io_realm_internal_OsSharedRealm_getClassPrivileges_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`RealmConfiguration <io_realm_RealmConfiguration>` 
+     - 
+       :ref:`getConfiguration <io_realm_internal_OsSharedRealm_getConfiguration__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public static :ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>` 
+     - 
+       :ref:`getInstance <io_realm_internal_OsSharedRealm_getInstance_OsRealmConfig_Builder__OsSharedRealm_VersionID_>`  (:ref:`OsRealmConfig.Builder <io_realm_internal_OsRealmConfig_Builder>`  configBuilder,
+                                                 :ref:`OsSharedRealm.VersionID <io_realm_internal_OsSharedRealm_VersionID>`  version)
+       
+       Creates a ``ShareRealm``  instance from the given :ref:`OsRealmConfig.Builder <io_realm_internal_OsRealmConfig_Builder>` .
+       
+       
+       
+       
+       
+   
+   * - 
+       public static :ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>` 
+     - 
+       :ref:`getInstance <io_realm_internal_OsSharedRealm_getInstance_RealmConfiguration__OsSharedRealm_VersionID_>`  (:ref:`RealmConfiguration <io_realm_RealmConfiguration>`  config,
+                                                 :ref:`OsSharedRealm.VersionID <io_realm_internal_OsSharedRealm_VersionID>`  version)
+       
+       Creates a ``OsSharedRealm``  instance in dynamic schema mode.
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`getNativeFinalizerPtr <io_realm_internal_OsSharedRealm_getNativeFinalizerPtr__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`getNativePtr <io_realm_internal_OsSharedRealm_getNativePtr__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`getNumberOfVersions <io_realm_internal_OsSharedRealm_getNumberOfVersions__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **int**
+     - 
+       :ref:`getObjectPrivileges <io_realm_internal_OsSharedRealm_getObjectPrivileges_UncheckedRow_>`  (:ref:`UncheckedRow <io_realm_internal_UncheckedRow>`  row)
+       
+       
+       
+       
+       
+   
+   * - 
+       public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`getPath <io_realm_internal_OsSharedRealm_getPath__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **int**
+     - 
+       :ref:`getPrivileges <io_realm_internal_OsSharedRealm_getPrivileges__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`OsSchemaInfo <io_realm_internal_OsSchemaInfo>` 
+     - 
+       :ref:`getSchemaInfo <io_realm_internal_OsSharedRealm_getSchemaInfo__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`Table <io_realm_internal_Table>` 
+     - 
+       :ref:`getTable <io_realm_internal_OsSharedRealm_getTable_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+       
+       Gets an existing :ref:`Table <io_realm_internal_Table>`  with the given name.
+       
+       
+       
+       
+       
+   
+   * - 
+       public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`getTablesNames <io_realm_internal_OsSharedRealm_getTablesNames__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public static `File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__ 
+     - 
+       :ref:`getTemporaryDirectory <io_realm_internal_OsSharedRealm_getTemporaryDirectory__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`OsSharedRealm.VersionID <io_realm_internal_OsSharedRealm_VersionID>` 
+     - 
+       :ref:`getVersionID <io_realm_internal_OsSharedRealm_getVersionID__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`hasTable <io_realm_internal_OsSharedRealm_hasTable_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static **void**
+     - 
+       :ref:`initialize <io_realm_internal_OsSharedRealm_initialize_File_>`  (`File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  tempDirectory)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`isAutoRefresh <io_realm_internal_OsSharedRealm_isAutoRefresh__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`isClosed <io_realm_internal_OsSharedRealm_isClosed__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`isEmpty <io_realm_internal_OsSharedRealm_isEmpty__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`isFrozen <io_realm_internal_OsSharedRealm_isFrozen__>`  ()
+       
+       Returns whether or not this Realm is frozen.
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`isInTransaction <io_realm_internal_OsSharedRealm_isInTransaction__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`isSyncRealm <io_realm_internal_OsSharedRealm_isSyncRealm__>`  ()
+       
+       Returns ``true``  if this Realm is a synchronized Realm.
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`refresh <io_realm_internal_OsSharedRealm_refresh__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`registerSchemaChangedCallback <io_realm_internal_OsSharedRealm_registerSchemaChangedCallback_OsSharedRealm_SchemaChangedCallback_>`  (:ref:`OsSharedRealm.SchemaChangedCallback <io_realm_internal_OsSharedRealm_SchemaChangedCallback>`  callback)
+       
+       Registers a :ref:`SchemaChangedCallback <io_realm_internal_OsSharedRealm_SchemaChangedCallback>`  with JNI ``BindingContext`` .
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`renameTable <io_realm_internal_OsSharedRealm_renameTable_String__String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  oldName,
+                                 `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  newName)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setAutoRefresh <io_realm_internal_OsSharedRealm_setAutoRefresh_boolean_>`  (**boolean** enabled)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`size <io_realm_internal_OsSharedRealm_size__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`stopWaitForChange <io_realm_internal_OsSharedRealm_stopWaitForChange__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`waitForChange <io_realm_internal_OsSharedRealm_waitForChange__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`writeCopy <io_realm_internal_OsSharedRealm_writeCopy_File__byte[]_>`  (`File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  file,
+                               **byte[]** key)
+       
+       
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+
+
+
+
+Field Detail
+============
+
+.. _io_realm_internal_OsSharedRealm_FILE_EXCEPTION_KIND_ACCESS_ERROR:
+
+
+
+``FILE_EXCEPTION_KIND_ACCESS_ERROR`` 
+-------------------------------------
+
+
+.. _io_realm_internal_OsSharedRealm_FILE_EXCEPTION_KIND_BAD_HISTORY:
+
+
+
+``FILE_EXCEPTION_KIND_BAD_HISTORY`` 
+------------------------------------
+
+
+.. _io_realm_internal_OsSharedRealm_FILE_EXCEPTION_KIND_PERMISSION_DENIED:
+
+
+
+``FILE_EXCEPTION_KIND_PERMISSION_DENIED`` 
+------------------------------------------
+
+
+.. _io_realm_internal_OsSharedRealm_FILE_EXCEPTION_KIND_EXISTS:
+
+
+
+``FILE_EXCEPTION_KIND_EXISTS`` 
+-------------------------------
+
+
+.. _io_realm_internal_OsSharedRealm_FILE_EXCEPTION_KIND_NOT_FOUND:
+
+
+
+``FILE_EXCEPTION_KIND_NOT_FOUND`` 
+----------------------------------
+
+
+.. _io_realm_internal_OsSharedRealm_FILE_EXCEPTION_KIND_INCOMPATIBLE_LOCK_FILE:
+
+
+
+``FILE_EXCEPTION_KIND_INCOMPATIBLE_LOCK_FILE`` 
+-----------------------------------------------
+
+
+.. _io_realm_internal_OsSharedRealm_FILE_EXCEPTION_KIND_FORMAT_UPGRADE_REQUIRED:
+
+
+
+``FILE_EXCEPTION_KIND_FORMAT_UPGRADE_REQUIRED`` 
+------------------------------------------------
+
+
+.. _io_realm_internal_OsSharedRealm_FILE_EXCEPTION_INCOMPATIBLE_SYNC_FILE:
+
+
+
+``FILE_EXCEPTION_INCOMPATIBLE_SYNC_FILE`` 
+------------------------------------------
+
+
+.. _io_realm_internal_OsSharedRealm_context:
+
+
+
+``context`` 
+------------
+
+
+.. _io_realm_internal_OsSharedRealm_realmNotifier:
+
+
+
+``realmNotifier`` 
+------------------
+
+
+.. _io_realm_internal_OsSharedRealm_capabilities:
+
+
+
+``capabilities`` 
+-----------------
+
+
+
+
+Method Detail
+=============
+
+.. _beginTransaction:
+
+.. _beginTransaction__:
+
+.. _OsSharedRealm_beginTransaction:
+
+.. _OsSharedRealm_beginTransaction__:
+
+.. _io_realm_internal_OsSharedRealm_beginTransaction:
+
+.. _io_realm_internal_OsSharedRealm_beginTransaction__:
+
+
+
+beginTransaction
+----------------
+
+.. _io_realm_internal_OsSharedRealm_beginTransaction__:
+
+.. _io_realm_internal_OsSharedRealm_beginTransaction__:
+
+.. _io_realm_internal_OsSharedRealm_beginTransaction__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** beginTransaction ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _cancelTransaction:
+
+.. _cancelTransaction__:
+
+.. _OsSharedRealm_cancelTransaction:
+
+.. _OsSharedRealm_cancelTransaction__:
+
+.. _io_realm_internal_OsSharedRealm_cancelTransaction:
+
+.. _io_realm_internal_OsSharedRealm_cancelTransaction__:
+
+
+
+cancelTransaction
+-----------------
+
+.. _io_realm_internal_OsSharedRealm_cancelTransaction__:
+
+.. _io_realm_internal_OsSharedRealm_cancelTransaction__:
+
+.. _io_realm_internal_OsSharedRealm_cancelTransaction__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** cancelTransaction ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _close:
+
+.. _close__:
+
+.. _OsSharedRealm_close:
+
+.. _OsSharedRealm_close__:
+
+.. _io_realm_internal_OsSharedRealm_close:
+
+.. _io_realm_internal_OsSharedRealm_close__:
+
+
+
+close
+-----
+
+.. _io_realm_internal_OsSharedRealm_close__:
+
+.. _io_realm_internal_OsSharedRealm_close__:
+
+.. _io_realm_internal_OsSharedRealm_close__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** close ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _commitTransaction:
+
+.. _commitTransaction__:
+
+.. _OsSharedRealm_commitTransaction:
+
+.. _OsSharedRealm_commitTransaction__:
+
+.. _io_realm_internal_OsSharedRealm_commitTransaction:
+
+.. _io_realm_internal_OsSharedRealm_commitTransaction__:
+
+
+
+commitTransaction
+-----------------
+
+.. _io_realm_internal_OsSharedRealm_commitTransaction__:
+
+.. _io_realm_internal_OsSharedRealm_commitTransaction__:
+
+.. _io_realm_internal_OsSharedRealm_commitTransaction__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** commitTransaction ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _compact:
+
+.. _compact__:
+
+.. _OsSharedRealm_compact:
+
+.. _OsSharedRealm_compact__:
+
+.. _io_realm_internal_OsSharedRealm_compact:
+
+.. _io_realm_internal_OsSharedRealm_compact__:
+
+
+
+compact
+-------
+
+.. _io_realm_internal_OsSharedRealm_compact__:
+
+.. _io_realm_internal_OsSharedRealm_compact__:
+
+.. _io_realm_internal_OsSharedRealm_compact__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** compact ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _createTable:
+
+.. _createTable__:
+
+.. _OsSharedRealm_createTable:
+
+.. _OsSharedRealm_createTable__:
+
+.. _io_realm_internal_OsSharedRealm_createTable:
+
+.. _io_realm_internal_OsSharedRealm_createTable__:
+
+
+
+createTable
+-----------
+
+.. _io_realm_internal_OsSharedRealm_createTable_String_:
+
+.. _io_realm_internal_OsSharedRealm_createTable_String_:
+
+.. _io_realm_internal_OsSharedRealm_createTable_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`Table <io_realm_internal_Table>`  createTable (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+   
+   * - Creates a :ref:`Table <io_realm_internal_Table>`  with then given name. Native assertion will happen if the table with the same name exists.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``name`` - the name of table.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _createTableWithPrimaryKey:
+
+.. _createTableWithPrimaryKey__:
+
+.. _OsSharedRealm_createTableWithPrimaryKey:
+
+.. _OsSharedRealm_createTableWithPrimaryKey__:
+
+.. _io_realm_internal_OsSharedRealm_createTableWithPrimaryKey:
+
+.. _io_realm_internal_OsSharedRealm_createTableWithPrimaryKey__:
+
+
+
+createTableWithPrimaryKey
+-------------------------
+
+.. _io_realm_internal_OsSharedRealm_createTableWithPrimaryKey_String__String__RealmFieldType__boolean_:
+
+.. _io_realm_internal_OsSharedRealm_createTableWithPrimaryKey_String_String_RealmFieldType_boolean_:
+
+.. _io_realm_internal_OsSharedRealm_createTableWithPrimaryKey_String__String__RealmFieldType__boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`Table <io_realm_internal_Table>`  createTableWithPrimaryKey (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  tableName,
+                                                `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  primaryKeyFieldName,
+                                                :ref:`RealmFieldType <io_realm_RealmFieldType>`  primaryKeyFieldType,
+                                                **boolean** isNullable)
+   
+   * - Creates a :ref:`Table <io_realm_internal_Table>`  and adds a primary key field to it. Native assertion will happen if the table with the same name exists.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``tableName`` - the name of table.
+          
+          
+          
+       - ``primaryKeyFieldName`` - the name of primary key field.
+          
+          
+          
+       - ``isStringType`` - if this is true, the primary key field will be create as a string field. Otherwise it will be created as an integer field.
+          
+          
+          
+       - ``isNullable`` - if the primary key field is nullable or not.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _freeze:
+
+.. _freeze__:
+
+.. _OsSharedRealm_freeze:
+
+.. _OsSharedRealm_freeze__:
+
+.. _io_realm_internal_OsSharedRealm_freeze:
+
+.. _io_realm_internal_OsSharedRealm_freeze__:
+
+
+
+freeze
+------
+
+.. _io_realm_internal_OsSharedRealm_freeze__:
+
+.. _io_realm_internal_OsSharedRealm_freeze__:
+
+.. _io_realm_internal_OsSharedRealm_freeze__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  freeze ()
+   
+   * - Returns a frozen copy of this Realm.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getClassPrivileges:
+
+.. _getClassPrivileges__:
+
+.. _OsSharedRealm_getClassPrivileges:
+
+.. _OsSharedRealm_getClassPrivileges__:
+
+.. _io_realm_internal_OsSharedRealm_getClassPrivileges:
+
+.. _io_realm_internal_OsSharedRealm_getClassPrivileges__:
+
+
+
+getClassPrivileges
+------------------
+
+.. _io_realm_internal_OsSharedRealm_getClassPrivileges_String_:
+
+.. _io_realm_internal_OsSharedRealm_getClassPrivileges_String_:
+
+.. _io_realm_internal_OsSharedRealm_getClassPrivileges_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **int** getClassPrivileges (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getConfiguration:
+
+.. _getConfiguration__:
+
+.. _OsSharedRealm_getConfiguration:
+
+.. _OsSharedRealm_getConfiguration__:
+
+.. _io_realm_internal_OsSharedRealm_getConfiguration:
+
+.. _io_realm_internal_OsSharedRealm_getConfiguration__:
+
+
+
+getConfiguration
+----------------
+
+.. _io_realm_internal_OsSharedRealm_getConfiguration__:
+
+.. _io_realm_internal_OsSharedRealm_getConfiguration__:
+
+.. _io_realm_internal_OsSharedRealm_getConfiguration__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`RealmConfiguration <io_realm_RealmConfiguration>`  getConfiguration ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getInstance:
+
+.. _getInstance__:
+
+.. _OsSharedRealm_getInstance:
+
+.. _OsSharedRealm_getInstance__:
+
+.. _io_realm_internal_OsSharedRealm_getInstance:
+
+.. _io_realm_internal_OsSharedRealm_getInstance__:
+
+
+
+getInstance
+-----------
+
+.. _io_realm_internal_OsSharedRealm_getInstance_OsRealmConfig_Builder__OsSharedRealm_VersionID_:
+
+.. _io_realm_internal_OsSharedRealm_getInstance_Builder_VersionID_:
+
+.. _io_realm_internal_OsSharedRealm_getInstance_Builder__VersionID_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  getInstance (:ref:`OsRealmConfig.Builder <io_realm_internal_OsRealmConfig_Builder>`  configBuilder,
+                                                 :ref:`OsSharedRealm.VersionID <io_realm_internal_OsSharedRealm_VersionID>`  version)
+   
+   * - Creates a ``ShareRealm``  instance from the given :ref:`OsRealmConfig.Builder <io_realm_internal_OsRealmConfig_Builder>` .
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``configBuilder`` - configuration to use
+          
+          
+          
+       - ``version`` - which version to use for a frozen instance or :ref:`VersionID.LIVE <io_realm_internal_OsSharedRealm_VersionID_LIVE>`  for a live Realm.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_internal_OsSharedRealm_getInstance_RealmConfiguration__OsSharedRealm_VersionID_:
+
+.. _io_realm_internal_OsSharedRealm_getInstance_RealmConfiguration_VersionID_:
+
+.. _io_realm_internal_OsSharedRealm_getInstance_RealmConfiguration__VersionID_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  getInstance (:ref:`RealmConfiguration <io_realm_RealmConfiguration>`  config,
+                                                 :ref:`OsSharedRealm.VersionID <io_realm_internal_OsSharedRealm_VersionID>`  version)
+   
+   * - Creates a ``OsSharedRealm``  instance in dynamic schema mode.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``config`` - configuration to use
+          
+          
+          
+       - ``version`` - which version to use for a frozen instance or :ref:`VersionID.LIVE <io_realm_internal_OsSharedRealm_VersionID_LIVE>`  for a live Realm.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getNativeFinalizerPtr:
+
+.. _getNativeFinalizerPtr__:
+
+.. _OsSharedRealm_getNativeFinalizerPtr:
+
+.. _OsSharedRealm_getNativeFinalizerPtr__:
+
+.. _io_realm_internal_OsSharedRealm_getNativeFinalizerPtr:
+
+.. _io_realm_internal_OsSharedRealm_getNativeFinalizerPtr__:
+
+
+
+getNativeFinalizerPtr
+---------------------
+
+.. _io_realm_internal_OsSharedRealm_getNativeFinalizerPtr__:
+
+.. _io_realm_internal_OsSharedRealm_getNativeFinalizerPtr__:
+
+.. _io_realm_internal_OsSharedRealm_getNativeFinalizerPtr__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** getNativeFinalizerPtr ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getNativePtr:
+
+.. _getNativePtr__:
+
+.. _OsSharedRealm_getNativePtr:
+
+.. _OsSharedRealm_getNativePtr__:
+
+.. _io_realm_internal_OsSharedRealm_getNativePtr:
+
+.. _io_realm_internal_OsSharedRealm_getNativePtr__:
+
+
+
+getNativePtr
+------------
+
+.. _io_realm_internal_OsSharedRealm_getNativePtr__:
+
+.. _io_realm_internal_OsSharedRealm_getNativePtr__:
+
+.. _io_realm_internal_OsSharedRealm_getNativePtr__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** getNativePtr ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getNumberOfVersions:
+
+.. _getNumberOfVersions__:
+
+.. _OsSharedRealm_getNumberOfVersions:
+
+.. _OsSharedRealm_getNumberOfVersions__:
+
+.. _io_realm_internal_OsSharedRealm_getNumberOfVersions:
+
+.. _io_realm_internal_OsSharedRealm_getNumberOfVersions__:
+
+
+
+getNumberOfVersions
+-------------------
+
+.. _io_realm_internal_OsSharedRealm_getNumberOfVersions__:
+
+.. _io_realm_internal_OsSharedRealm_getNumberOfVersions__:
+
+.. _io_realm_internal_OsSharedRealm_getNumberOfVersions__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** getNumberOfVersions ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getObjectPrivileges:
+
+.. _getObjectPrivileges__:
+
+.. _OsSharedRealm_getObjectPrivileges:
+
+.. _OsSharedRealm_getObjectPrivileges__:
+
+.. _io_realm_internal_OsSharedRealm_getObjectPrivileges:
+
+.. _io_realm_internal_OsSharedRealm_getObjectPrivileges__:
+
+
+
+getObjectPrivileges
+-------------------
+
+.. _io_realm_internal_OsSharedRealm_getObjectPrivileges_UncheckedRow_:
+
+.. _io_realm_internal_OsSharedRealm_getObjectPrivileges_UncheckedRow_:
+
+.. _io_realm_internal_OsSharedRealm_getObjectPrivileges_UncheckedRow_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **int** getObjectPrivileges (:ref:`UncheckedRow <io_realm_internal_UncheckedRow>`  row)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getPath:
+
+.. _getPath__:
+
+.. _OsSharedRealm_getPath:
+
+.. _OsSharedRealm_getPath__:
+
+.. _io_realm_internal_OsSharedRealm_getPath:
+
+.. _io_realm_internal_OsSharedRealm_getPath__:
+
+
+
+getPath
+-------
+
+.. _io_realm_internal_OsSharedRealm_getPath__:
+
+.. _io_realm_internal_OsSharedRealm_getPath__:
+
+.. _io_realm_internal_OsSharedRealm_getPath__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getPath ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getPrivileges:
+
+.. _getPrivileges__:
+
+.. _OsSharedRealm_getPrivileges:
+
+.. _OsSharedRealm_getPrivileges__:
+
+.. _io_realm_internal_OsSharedRealm_getPrivileges:
+
+.. _io_realm_internal_OsSharedRealm_getPrivileges__:
+
+
+
+getPrivileges
+-------------
+
+.. _io_realm_internal_OsSharedRealm_getPrivileges__:
+
+.. _io_realm_internal_OsSharedRealm_getPrivileges__:
+
+.. _io_realm_internal_OsSharedRealm_getPrivileges__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **int** getPrivileges ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getSchemaInfo:
+
+.. _getSchemaInfo__:
+
+.. _OsSharedRealm_getSchemaInfo:
+
+.. _OsSharedRealm_getSchemaInfo__:
+
+.. _io_realm_internal_OsSharedRealm_getSchemaInfo:
+
+.. _io_realm_internal_OsSharedRealm_getSchemaInfo__:
+
+
+
+getSchemaInfo
+-------------
+
+.. _io_realm_internal_OsSharedRealm_getSchemaInfo__:
+
+.. _io_realm_internal_OsSharedRealm_getSchemaInfo__:
+
+.. _io_realm_internal_OsSharedRealm_getSchemaInfo__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`OsSchemaInfo <io_realm_internal_OsSchemaInfo>`  getSchemaInfo ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getTable:
+
+.. _getTable__:
+
+.. _OsSharedRealm_getTable:
+
+.. _OsSharedRealm_getTable__:
+
+.. _io_realm_internal_OsSharedRealm_getTable:
+
+.. _io_realm_internal_OsSharedRealm_getTable__:
+
+
+
+getTable
+--------
+
+.. _io_realm_internal_OsSharedRealm_getTable_String_:
+
+.. _io_realm_internal_OsSharedRealm_getTable_String_:
+
+.. _io_realm_internal_OsSharedRealm_getTable_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`Table <io_realm_internal_Table>`  getTable (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+   
+   * - Gets an existing :ref:`Table <io_realm_internal_Table>`  with the given name.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``name`` - the name of table.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the table doesn't exist.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _getTablesNames:
+
+.. _getTablesNames__:
+
+.. _OsSharedRealm_getTablesNames:
+
+.. _OsSharedRealm_getTablesNames__:
+
+.. _io_realm_internal_OsSharedRealm_getTablesNames:
+
+.. _io_realm_internal_OsSharedRealm_getTablesNames__:
+
+
+
+getTablesNames
+--------------
+
+.. _io_realm_internal_OsSharedRealm_getTablesNames__:
+
+.. _io_realm_internal_OsSharedRealm_getTablesNames__:
+
+.. _io_realm_internal_OsSharedRealm_getTablesNames__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getTablesNames ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getTemporaryDirectory:
+
+.. _getTemporaryDirectory__:
+
+.. _OsSharedRealm_getTemporaryDirectory:
+
+.. _OsSharedRealm_getTemporaryDirectory__:
+
+.. _io_realm_internal_OsSharedRealm_getTemporaryDirectory:
+
+.. _io_realm_internal_OsSharedRealm_getTemporaryDirectory__:
+
+
+
+getTemporaryDirectory
+---------------------
+
+.. _io_realm_internal_OsSharedRealm_getTemporaryDirectory__:
+
+.. _io_realm_internal_OsSharedRealm_getTemporaryDirectory__:
+
+.. _io_realm_internal_OsSharedRealm_getTemporaryDirectory__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static `File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  getTemporaryDirectory ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getVersionID:
+
+.. _getVersionID__:
+
+.. _OsSharedRealm_getVersionID:
+
+.. _OsSharedRealm_getVersionID__:
+
+.. _io_realm_internal_OsSharedRealm_getVersionID:
+
+.. _io_realm_internal_OsSharedRealm_getVersionID__:
+
+
+
+getVersionID
+------------
+
+.. _io_realm_internal_OsSharedRealm_getVersionID__:
+
+.. _io_realm_internal_OsSharedRealm_getVersionID__:
+
+.. _io_realm_internal_OsSharedRealm_getVersionID__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`OsSharedRealm.VersionID <io_realm_internal_OsSharedRealm_VersionID>`  getVersionID ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _hasTable:
+
+.. _hasTable__:
+
+.. _OsSharedRealm_hasTable:
+
+.. _OsSharedRealm_hasTable__:
+
+.. _io_realm_internal_OsSharedRealm_hasTable:
+
+.. _io_realm_internal_OsSharedRealm_hasTable__:
+
+
+
+hasTable
+--------
+
+.. _io_realm_internal_OsSharedRealm_hasTable_String_:
+
+.. _io_realm_internal_OsSharedRealm_hasTable_String_:
+
+.. _io_realm_internal_OsSharedRealm_hasTable_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** hasTable (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _initialize:
+
+.. _initialize__:
+
+.. _OsSharedRealm_initialize:
+
+.. _OsSharedRealm_initialize__:
+
+.. _io_realm_internal_OsSharedRealm_initialize:
+
+.. _io_realm_internal_OsSharedRealm_initialize__:
+
+
+
+initialize
+----------
+
+.. _io_realm_internal_OsSharedRealm_initialize_File_:
+
+.. _io_realm_internal_OsSharedRealm_initialize_File_:
+
+.. _io_realm_internal_OsSharedRealm_initialize_File_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **void** initialize (`File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  tempDirectory)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _isAutoRefresh:
+
+.. _isAutoRefresh__:
+
+.. _OsSharedRealm_isAutoRefresh:
+
+.. _OsSharedRealm_isAutoRefresh__:
+
+.. _io_realm_internal_OsSharedRealm_isAutoRefresh:
+
+.. _io_realm_internal_OsSharedRealm_isAutoRefresh__:
+
+
+
+isAutoRefresh
+-------------
+
+.. _io_realm_internal_OsSharedRealm_isAutoRefresh__:
+
+.. _io_realm_internal_OsSharedRealm_isAutoRefresh__:
+
+.. _io_realm_internal_OsSharedRealm_isAutoRefresh__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** isAutoRefresh ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _isClosed:
+
+.. _isClosed__:
+
+.. _OsSharedRealm_isClosed:
+
+.. _OsSharedRealm_isClosed__:
+
+.. _io_realm_internal_OsSharedRealm_isClosed:
+
+.. _io_realm_internal_OsSharedRealm_isClosed__:
+
+
+
+isClosed
+--------
+
+.. _io_realm_internal_OsSharedRealm_isClosed__:
+
+.. _io_realm_internal_OsSharedRealm_isClosed__:
+
+.. _io_realm_internal_OsSharedRealm_isClosed__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** isClosed ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _isEmpty:
+
+.. _isEmpty__:
+
+.. _OsSharedRealm_isEmpty:
+
+.. _OsSharedRealm_isEmpty__:
+
+.. _io_realm_internal_OsSharedRealm_isEmpty:
+
+.. _io_realm_internal_OsSharedRealm_isEmpty__:
+
+
+
+isEmpty
+-------
+
+.. _io_realm_internal_OsSharedRealm_isEmpty__:
+
+.. _io_realm_internal_OsSharedRealm_isEmpty__:
+
+.. _io_realm_internal_OsSharedRealm_isEmpty__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** isEmpty ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _isFrozen:
+
+.. _isFrozen__:
+
+.. _OsSharedRealm_isFrozen:
+
+.. _OsSharedRealm_isFrozen__:
+
+.. _io_realm_internal_OsSharedRealm_isFrozen:
+
+.. _io_realm_internal_OsSharedRealm_isFrozen__:
+
+
+
+isFrozen
+--------
+
+.. _io_realm_internal_OsSharedRealm_isFrozen__:
+
+.. _io_realm_internal_OsSharedRealm_isFrozen__:
+
+.. _io_realm_internal_OsSharedRealm_isFrozen__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** isFrozen ()
+   
+   * - Returns whether or not this Realm is frozen.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _isInTransaction:
+
+.. _isInTransaction__:
+
+.. _OsSharedRealm_isInTransaction:
+
+.. _OsSharedRealm_isInTransaction__:
+
+.. _io_realm_internal_OsSharedRealm_isInTransaction:
+
+.. _io_realm_internal_OsSharedRealm_isInTransaction__:
+
+
+
+isInTransaction
+---------------
+
+.. _io_realm_internal_OsSharedRealm_isInTransaction__:
+
+.. _io_realm_internal_OsSharedRealm_isInTransaction__:
+
+.. _io_realm_internal_OsSharedRealm_isInTransaction__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** isInTransaction ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _isSyncRealm:
+
+.. _isSyncRealm__:
+
+.. _OsSharedRealm_isSyncRealm:
+
+.. _OsSharedRealm_isSyncRealm__:
+
+.. _io_realm_internal_OsSharedRealm_isSyncRealm:
+
+.. _io_realm_internal_OsSharedRealm_isSyncRealm__:
+
+
+
+isSyncRealm
+-----------
+
+.. _io_realm_internal_OsSharedRealm_isSyncRealm__:
+
+.. _io_realm_internal_OsSharedRealm_isSyncRealm__:
+
+.. _io_realm_internal_OsSharedRealm_isSyncRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** isSyncRealm ()
+   
+   * - Returns ``true``  if this Realm is a synchronized Realm.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _refresh:
+
+.. _refresh__:
+
+.. _OsSharedRealm_refresh:
+
+.. _OsSharedRealm_refresh__:
+
+.. _io_realm_internal_OsSharedRealm_refresh:
+
+.. _io_realm_internal_OsSharedRealm_refresh__:
+
+
+
+refresh
+-------
+
+.. _io_realm_internal_OsSharedRealm_refresh__:
+
+.. _io_realm_internal_OsSharedRealm_refresh__:
+
+.. _io_realm_internal_OsSharedRealm_refresh__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** refresh ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _registerSchemaChangedCallback:
+
+.. _registerSchemaChangedCallback__:
+
+.. _OsSharedRealm_registerSchemaChangedCallback:
+
+.. _OsSharedRealm_registerSchemaChangedCallback__:
+
+.. _io_realm_internal_OsSharedRealm_registerSchemaChangedCallback:
+
+.. _io_realm_internal_OsSharedRealm_registerSchemaChangedCallback__:
+
+
+
+registerSchemaChangedCallback
+-----------------------------
+
+.. _io_realm_internal_OsSharedRealm_registerSchemaChangedCallback_OsSharedRealm_SchemaChangedCallback_:
+
+.. _io_realm_internal_OsSharedRealm_registerSchemaChangedCallback_SchemaChangedCallback_:
+
+.. _io_realm_internal_OsSharedRealm_registerSchemaChangedCallback_SchemaChangedCallback_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** registerSchemaChangedCallback (:ref:`OsSharedRealm.SchemaChangedCallback <io_realm_internal_OsSharedRealm_SchemaChangedCallback>`  callback)
+   
+   * - Registers a :ref:`SchemaChangedCallback <io_realm_internal_OsSharedRealm_SchemaChangedCallback>`  with JNI ``BindingContext`` .
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``callback`` - to be registered. It will be held as a weak ref in the JNI. The caller needs to hold a strong ref to the callback to ensure it won't be GCed before calling.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _renameTable:
+
+.. _renameTable__:
+
+.. _OsSharedRealm_renameTable:
+
+.. _OsSharedRealm_renameTable__:
+
+.. _io_realm_internal_OsSharedRealm_renameTable:
+
+.. _io_realm_internal_OsSharedRealm_renameTable__:
+
+
+
+renameTable
+-----------
+
+.. _io_realm_internal_OsSharedRealm_renameTable_String__String_:
+
+.. _io_realm_internal_OsSharedRealm_renameTable_String_String_:
+
+.. _io_realm_internal_OsSharedRealm_renameTable_String__String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** renameTable (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  oldName,
+                                 `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  newName)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setAutoRefresh:
+
+.. _setAutoRefresh__:
+
+.. _OsSharedRealm_setAutoRefresh:
+
+.. _OsSharedRealm_setAutoRefresh__:
+
+.. _io_realm_internal_OsSharedRealm_setAutoRefresh:
+
+.. _io_realm_internal_OsSharedRealm_setAutoRefresh__:
+
+
+
+setAutoRefresh
+--------------
+
+.. _io_realm_internal_OsSharedRealm_setAutoRefresh_boolean_:
+
+.. _io_realm_internal_OsSharedRealm_setAutoRefresh_boolean_:
+
+.. _io_realm_internal_OsSharedRealm_setAutoRefresh_boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setAutoRefresh (**boolean** enabled)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _size:
+
+.. _size__:
+
+.. _OsSharedRealm_size:
+
+.. _OsSharedRealm_size__:
+
+.. _io_realm_internal_OsSharedRealm_size:
+
+.. _io_realm_internal_OsSharedRealm_size__:
+
+
+
+size
+----
+
+.. _io_realm_internal_OsSharedRealm_size__:
+
+.. _io_realm_internal_OsSharedRealm_size__:
+
+.. _io_realm_internal_OsSharedRealm_size__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** size ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _stopWaitForChange:
+
+.. _stopWaitForChange__:
+
+.. _OsSharedRealm_stopWaitForChange:
+
+.. _OsSharedRealm_stopWaitForChange__:
+
+.. _io_realm_internal_OsSharedRealm_stopWaitForChange:
+
+.. _io_realm_internal_OsSharedRealm_stopWaitForChange__:
+
+
+
+stopWaitForChange
+-----------------
+
+.. _io_realm_internal_OsSharedRealm_stopWaitForChange__:
+
+.. _io_realm_internal_OsSharedRealm_stopWaitForChange__:
+
+.. _io_realm_internal_OsSharedRealm_stopWaitForChange__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** stopWaitForChange ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _waitForChange:
+
+.. _waitForChange__:
+
+.. _OsSharedRealm_waitForChange:
+
+.. _OsSharedRealm_waitForChange__:
+
+.. _io_realm_internal_OsSharedRealm_waitForChange:
+
+.. _io_realm_internal_OsSharedRealm_waitForChange__:
+
+
+
+waitForChange
+-------------
+
+.. _io_realm_internal_OsSharedRealm_waitForChange__:
+
+.. _io_realm_internal_OsSharedRealm_waitForChange__:
+
+.. _io_realm_internal_OsSharedRealm_waitForChange__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** waitForChange ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _writeCopy:
+
+.. _writeCopy__:
+
+.. _OsSharedRealm_writeCopy:
+
+.. _OsSharedRealm_writeCopy__:
+
+.. _io_realm_internal_OsSharedRealm_writeCopy:
+
+.. _io_realm_internal_OsSharedRealm_writeCopy__:
+
+
+
+writeCopy
+---------
+
+.. _io_realm_internal_OsSharedRealm_writeCopy_File__byte[]_:
+
+.. _io_realm_internal_OsSharedRealm_writeCopy_File_byte_:
+
+.. _io_realm_internal_OsSharedRealm_writeCopy_File__byte_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** writeCopy (`File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  file,
+                               **byte[]** key)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

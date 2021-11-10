@@ -1,0 +1,240 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class BaseIntegrationTest
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_BaseIntegrationTest:
+
+
+
+io.realm
+========
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+Base class used by Integration Tests. This class should not be used directly. Instead :ref:`StandardIntegrationTest <io_realm_StandardIntegrationTest>`  or :ref:`IsolatedIntegrationTests  <io_realm_IsolatedIntegrationTests>`  should be used instead.
+
+
+
+
+Constructors
+============
+
+
+
+- ``io.realm.BaseIntegrationTest()`` 
+
+
+
+
+Nested Class Summary
+====================
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Class and Description
+   
+   * - ``protected static`` 
+     - ``io.realm.BaseIntegrationTest.ConfigurationWrapper`` 
+   
+   
+
+
+Field Summary
+=============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Field and Description
+   
+   * - ``public io.realm.rule.RunInLooperThread`` 
+       
+       
+     - ``looperThread`` 
+       
+       
+   
+   * - ``public final UiThreadTestRule`` 
+       
+       
+     - ``uiThreadTestRule`` 
+       
+       
+   
+   * - ``public final ExpectedException`` 
+       
+       
+     - ``thrown`` 
+       
+       
+   
+   * - ``protected io.realm.BaseIntegrationTest.ConfigurationWrapper`` 
+       
+       
+     - ``configurationFactory`` 
+       
+       
+   
+   
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       protected static **void**
+     - 
+       :ref:`startSyncServer <io_realm_BaseIntegrationTest_startSyncServer__>`  ()
+       
+       Starts a new ROS instance that can be used for testing.
+       
+       
+       
+   
+   * - 
+       protected static **void**
+     - 
+       :ref:`stopSyncServer <io_realm_BaseIntegrationTest_stopSyncServer__>`  ()
+       
+       Stops the ROS instance used for the test.
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+
+
+
+
+Field Detail
+============
+
+.. _io_realm_BaseIntegrationTest_looperThread:
+
+
+
+``looperThread`` 
+-----------------
+
+
+.. _io_realm_BaseIntegrationTest_uiThreadTestRule:
+
+
+
+``uiThreadTestRule`` 
+---------------------
+
+
+.. _io_realm_BaseIntegrationTest_thrown:
+
+
+
+``thrown`` 
+-----------
+
+
+.. _io_realm_BaseIntegrationTest_configurationFactory:
+
+
+
+``configurationFactory`` 
+-------------------------
+
+
+
+
+Method Detail
+=============
+
+
+
+startSyncServer
+---------------
+
+.. _io_realm_BaseIntegrationTest_startSyncServer__:
+
+.. _io_realm_BaseIntegrationTest_startSyncServer__:
+
+.. _io_realm_BaseIntegrationTest_startSyncServer__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected static **void** startSyncServer ()
+   
+   * - Starts a new ROS instance that can be used for testing.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+stopSyncServer
+--------------
+
+.. _io_realm_BaseIntegrationTest_stopSyncServer__:
+
+.. _io_realm_BaseIntegrationTest_stopSyncServer__:
+
+.. _io_realm_BaseIntegrationTest_stopSyncServer__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected static **void** stopSyncServer ()
+   
+   * - Stops the ROS instance used for the test. The :ref:`startSyncServer() <io_realm_BaseIntegrationTest_startSyncServer__>`  will stop the sync server if needed, so normally there is no need to call this.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

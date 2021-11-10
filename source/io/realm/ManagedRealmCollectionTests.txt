@@ -1,0 +1,1959 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class ManagedRealmCollectionTests
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_ManagedRealmCollectionTests:
+
+
+
+io.realm
+========
+
+:ref:`io.realm.CollectionTests <io_realm_CollectionTests>` 
+ | 		`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+Test class for all methods part of the the :ref:`RealmCollection <io_realm_RealmCollection>`  interface. This class only tests collections that are managed by Realm. See :ref:`UnManagedRealmCollectionTests <io_realm_UnManagedRealmCollectionTests>`  for all tests targeting unmanaged collections. Methods tested in this class: # RealmCollection + RealmQuery where(); + Number min(String fieldName); + Number max(String fieldName); + Number sum(String fieldName); + double average(String fieldName); + Date maxDate(String fieldName); + Date minDate(String fieldName); + void deleteAllFromRealm(); + boolean isLoaded(); + boolean load(); + boolean isValid(); + BaseRealm getRealm(); # Collection - public boolean add(E object); - public boolean addAll(Collection
+
+ collection); - public void deleteAll(); - public boolean contains(Object object); - public boolean containsAll(Collection collection); - public boolean equals(Object object); - public int hashCode(); - public boolean isEmpty(); - public Iterator iterator(); - public boolean remove(Object object); - public boolean removeAll(Collection collection); - public boolean retainAll(Collection collection); - public int size(); - public Object[] toArray(); - public T[] toArray(T[] array);
+
+
+Constructors
+============
+
+
+
+- ``io.realm.ManagedRealmCollectionTests(CollectionTests.ManagedCollection)`` 
+
+
+
+
+Field Summary
+=============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Field and Description
+   
+   * - ``public final io.realm.TestRealmConfigurationFactory`` 
+       
+       
+     - ``configFactory`` 
+       
+       
+   
+   * - ``public final ExpectedException`` 
+       
+       
+     - ``thrown`` 
+       
+       
+   
+   
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public static `List <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__ 
+     - 
+       :ref:`data <io_realm_ManagedRealmCollectionTests_data__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setup <io_realm_ManagedRealmCollectionTests_setup__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`tearDown <io_realm_ManagedRealmCollectionTests_tearDown__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`where <io_realm_ManagedRealmCollectionTests_where__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`where_contains <io_realm_ManagedRealmCollectionTests_where_contains__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`where_contains_null <io_realm_ManagedRealmCollectionTests_where_contains_null__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`where_shouldNotContainRemovedItem <io_realm_ManagedRealmCollectionTests_where_shouldNotContainRemovedItem__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`where_lessThanGreaterThan <io_realm_ManagedRealmCollectionTests_where_lessThanGreaterThan__>`  ()
+       
+       Tests to see if a particular item that does exist in the same Realm does not exist in the result set of another query.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`where_equalTo_manyConditions <io_realm_ManagedRealmCollectionTests_where_equalTo_manyConditions__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`where_findAll_size <io_realm_ManagedRealmCollectionTests_where_findAll_size__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`where_sort <io_realm_ManagedRealmCollectionTests_where_sort__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`where_queryDateField <io_realm_ManagedRealmCollectionTests_where_queryDateField__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`min <io_realm_ManagedRealmCollectionTests_min__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`min_emptyNonNullFields <io_realm_ManagedRealmCollectionTests_min_emptyNonNullFields__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`min_emptyNullFields <io_realm_ManagedRealmCollectionTests_min_emptyNullFields__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`min_partialNullRows <io_realm_ManagedRealmCollectionTests_min_partialNullRows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`max <io_realm_ManagedRealmCollectionTests_max__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`max_emptyNonNullFields <io_realm_ManagedRealmCollectionTests_max_emptyNonNullFields__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`max_emptyNullFields <io_realm_ManagedRealmCollectionTests_max_emptyNullFields__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`max_partialNullRows <io_realm_ManagedRealmCollectionTests_max_partialNullRows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`sum <io_realm_ManagedRealmCollectionTests_sum__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`sum_nullRows <io_realm_ManagedRealmCollectionTests_sum_nullRows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`sum_partialNullRows <io_realm_ManagedRealmCollectionTests_sum_partialNullRows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`sum_nonLatinColumnNames <io_realm_ManagedRealmCollectionTests_sum_nonLatinColumnNames__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`avg <io_realm_ManagedRealmCollectionTests_avg__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`avg_emptyNonNullFields <io_realm_ManagedRealmCollectionTests_avg_emptyNonNullFields__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`avg_emptyNullFields <io_realm_ManagedRealmCollectionTests_avg_emptyNullFields__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`avg_partialNullRows <io_realm_ManagedRealmCollectionTests_avg_partialNullRows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`maxDate <io_realm_ManagedRealmCollectionTests_maxDate__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`minDate <io_realm_ManagedRealmCollectionTests_minDate__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`aggregates_deleteLastRow <io_realm_ManagedRealmCollectionTests_aggregates_deleteLastRow__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`realmMethods_invalidFieldNames <io_realm_ManagedRealmCollectionTests_realmMethods_invalidFieldNames__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`realmMethods_invalidFieldType <io_realm_ManagedRealmCollectionTests_realmMethods_invalidFieldType__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`deleteAllFromRealm <io_realm_ManagedRealmCollectionTests_deleteAllFromRealm__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`deleteAllFromRealm_outsideTransaction <io_realm_ManagedRealmCollectionTests_deleteAllFromRealm_outsideTransaction__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`deleteAllFromRealm_emptyList <io_realm_ManagedRealmCollectionTests_deleteAllFromRealm_emptyList__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`deleteAllFromRealm_invalidList <io_realm_ManagedRealmCollectionTests_deleteAllFromRealm_invalidList__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`isLoaded <io_realm_ManagedRealmCollectionTests_isLoaded__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`load <io_realm_ManagedRealmCollectionTests_load__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`isValid <io_realm_ManagedRealmCollectionTests_isValid__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`isValid_realmClosed <io_realm_ManagedRealmCollectionTests_isValid_realmClosed__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`isManaged <io_realm_ManagedRealmCollectionTests_isManaged__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`contains_deletedRealmObject <io_realm_ManagedRealmCollectionTests_contains_deletedRealmObject__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`equals_sameRealmObjectsDifferentCollection <io_realm_ManagedRealmCollectionTests_equals_sameRealmObjectsDifferentCollection__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`mutableMethodsOutsideTransactions <io_realm_ManagedRealmCollectionTests_mutableMethodsOutsideTransactions__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`methodsThrowOnWrongThread <io_realm_ManagedRealmCollectionTests_methodsThrowOnWrongThread__>`  ()
+       
+       
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface :ref:`io.realm.CollectionTests <io_realm_CollectionTests>` : 
+   
+   ``populateRealm`` , ``populateInMemoryList`` , ``populateCollectionOnDeletedLinkView`` , ``populatePartialNullRowsForNumericTesting`` , ``createStringCollection`` 
+   
+   
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+
+
+
+
+Field Detail
+============
+
+.. _io_realm_ManagedRealmCollectionTests_configFactory:
+
+
+
+``configFactory`` 
+------------------
+
+
+.. _io_realm_ManagedRealmCollectionTests_thrown:
+
+
+
+``thrown`` 
+-----------
+
+
+
+
+Method Detail
+=============
+
+
+
+data
+----
+
+.. _io_realm_ManagedRealmCollectionTests_data__:
+
+.. _io_realm_ManagedRealmCollectionTests_data__:
+
+.. _io_realm_ManagedRealmCollectionTests_data__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static `List <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  data ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+setup
+-----
+
+.. _io_realm_ManagedRealmCollectionTests_setup__:
+
+.. _io_realm_ManagedRealmCollectionTests_setup__:
+
+.. _io_realm_ManagedRealmCollectionTests_setup__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setup ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+tearDown
+--------
+
+.. _io_realm_ManagedRealmCollectionTests_tearDown__:
+
+.. _io_realm_ManagedRealmCollectionTests_tearDown__:
+
+.. _io_realm_ManagedRealmCollectionTests_tearDown__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** tearDown ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+where
+-----
+
+.. _io_realm_ManagedRealmCollectionTests_where__:
+
+.. _io_realm_ManagedRealmCollectionTests_where__:
+
+.. _io_realm_ManagedRealmCollectionTests_where__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** where ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+where_contains
+--------------
+
+.. _io_realm_ManagedRealmCollectionTests_where_contains__:
+
+.. _io_realm_ManagedRealmCollectionTests_where_contains__:
+
+.. _io_realm_ManagedRealmCollectionTests_where_contains__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** where_contains ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+where_contains_null
+-------------------
+
+.. _io_realm_ManagedRealmCollectionTests_where_contains_null__:
+
+.. _io_realm_ManagedRealmCollectionTests_where_contains_null__:
+
+.. _io_realm_ManagedRealmCollectionTests_where_contains_null__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** where_contains_null ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+where_shouldNotContainRemovedItem
+---------------------------------
+
+.. _io_realm_ManagedRealmCollectionTests_where_shouldNotContainRemovedItem__:
+
+.. _io_realm_ManagedRealmCollectionTests_where_shouldNotContainRemovedItem__:
+
+.. _io_realm_ManagedRealmCollectionTests_where_shouldNotContainRemovedItem__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** where_shouldNotContainRemovedItem ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+where_lessThanGreaterThan
+-------------------------
+
+.. _io_realm_ManagedRealmCollectionTests_where_lessThanGreaterThan__:
+
+.. _io_realm_ManagedRealmCollectionTests_where_lessThanGreaterThan__:
+
+.. _io_realm_ManagedRealmCollectionTests_where_lessThanGreaterThan__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** where_lessThanGreaterThan ()
+   
+   * - Tests to see if a particular item that does exist in the same Realm does not exist in the result set of another query.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+where_equalTo_manyConditions
+----------------------------
+
+.. _io_realm_ManagedRealmCollectionTests_where_equalTo_manyConditions__:
+
+.. _io_realm_ManagedRealmCollectionTests_where_equalTo_manyConditions__:
+
+.. _io_realm_ManagedRealmCollectionTests_where_equalTo_manyConditions__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** where_equalTo_manyConditions ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+where_findAll_size
+------------------
+
+.. _io_realm_ManagedRealmCollectionTests_where_findAll_size__:
+
+.. _io_realm_ManagedRealmCollectionTests_where_findAll_size__:
+
+.. _io_realm_ManagedRealmCollectionTests_where_findAll_size__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** where_findAll_size ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+where_sort
+----------
+
+.. _io_realm_ManagedRealmCollectionTests_where_sort__:
+
+.. _io_realm_ManagedRealmCollectionTests_where_sort__:
+
+.. _io_realm_ManagedRealmCollectionTests_where_sort__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** where_sort ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+where_queryDateField
+--------------------
+
+.. _io_realm_ManagedRealmCollectionTests_where_queryDateField__:
+
+.. _io_realm_ManagedRealmCollectionTests_where_queryDateField__:
+
+.. _io_realm_ManagedRealmCollectionTests_where_queryDateField__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** where_queryDateField ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+min
+----
+
+.. _io_realm_ManagedRealmCollectionTests_min__:
+
+.. _io_realm_ManagedRealmCollectionTests_min__:
+
+.. _io_realm_ManagedRealmCollectionTests_min__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** min ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+min_emptyNonNullFields
+----------------------
+
+.. _io_realm_ManagedRealmCollectionTests_min_emptyNonNullFields__:
+
+.. _io_realm_ManagedRealmCollectionTests_min_emptyNonNullFields__:
+
+.. _io_realm_ManagedRealmCollectionTests_min_emptyNonNullFields__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** min_emptyNonNullFields ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+min_emptyNullFields
+-------------------
+
+.. _io_realm_ManagedRealmCollectionTests_min_emptyNullFields__:
+
+.. _io_realm_ManagedRealmCollectionTests_min_emptyNullFields__:
+
+.. _io_realm_ManagedRealmCollectionTests_min_emptyNullFields__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** min_emptyNullFields ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+min_partialNullRows
+-------------------
+
+.. _io_realm_ManagedRealmCollectionTests_min_partialNullRows__:
+
+.. _io_realm_ManagedRealmCollectionTests_min_partialNullRows__:
+
+.. _io_realm_ManagedRealmCollectionTests_min_partialNullRows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** min_partialNullRows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+max
+----
+
+.. _io_realm_ManagedRealmCollectionTests_max__:
+
+.. _io_realm_ManagedRealmCollectionTests_max__:
+
+.. _io_realm_ManagedRealmCollectionTests_max__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** max ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+max_emptyNonNullFields
+----------------------
+
+.. _io_realm_ManagedRealmCollectionTests_max_emptyNonNullFields__:
+
+.. _io_realm_ManagedRealmCollectionTests_max_emptyNonNullFields__:
+
+.. _io_realm_ManagedRealmCollectionTests_max_emptyNonNullFields__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** max_emptyNonNullFields ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+max_emptyNullFields
+-------------------
+
+.. _io_realm_ManagedRealmCollectionTests_max_emptyNullFields__:
+
+.. _io_realm_ManagedRealmCollectionTests_max_emptyNullFields__:
+
+.. _io_realm_ManagedRealmCollectionTests_max_emptyNullFields__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** max_emptyNullFields ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+max_partialNullRows
+-------------------
+
+.. _io_realm_ManagedRealmCollectionTests_max_partialNullRows__:
+
+.. _io_realm_ManagedRealmCollectionTests_max_partialNullRows__:
+
+.. _io_realm_ManagedRealmCollectionTests_max_partialNullRows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** max_partialNullRows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+sum
+----
+
+.. _io_realm_ManagedRealmCollectionTests_sum__:
+
+.. _io_realm_ManagedRealmCollectionTests_sum__:
+
+.. _io_realm_ManagedRealmCollectionTests_sum__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** sum ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+sum_nullRows
+------------
+
+.. _io_realm_ManagedRealmCollectionTests_sum_nullRows__:
+
+.. _io_realm_ManagedRealmCollectionTests_sum_nullRows__:
+
+.. _io_realm_ManagedRealmCollectionTests_sum_nullRows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** sum_nullRows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+sum_partialNullRows
+-------------------
+
+.. _io_realm_ManagedRealmCollectionTests_sum_partialNullRows__:
+
+.. _io_realm_ManagedRealmCollectionTests_sum_partialNullRows__:
+
+.. _io_realm_ManagedRealmCollectionTests_sum_partialNullRows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** sum_partialNullRows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+sum_nonLatinColumnNames
+-----------------------
+
+.. _io_realm_ManagedRealmCollectionTests_sum_nonLatinColumnNames__:
+
+.. _io_realm_ManagedRealmCollectionTests_sum_nonLatinColumnNames__:
+
+.. _io_realm_ManagedRealmCollectionTests_sum_nonLatinColumnNames__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** sum_nonLatinColumnNames ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+avg
+----
+
+.. _io_realm_ManagedRealmCollectionTests_avg__:
+
+.. _io_realm_ManagedRealmCollectionTests_avg__:
+
+.. _io_realm_ManagedRealmCollectionTests_avg__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** avg ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+avg_emptyNonNullFields
+----------------------
+
+.. _io_realm_ManagedRealmCollectionTests_avg_emptyNonNullFields__:
+
+.. _io_realm_ManagedRealmCollectionTests_avg_emptyNonNullFields__:
+
+.. _io_realm_ManagedRealmCollectionTests_avg_emptyNonNullFields__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** avg_emptyNonNullFields ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+avg_emptyNullFields
+-------------------
+
+.. _io_realm_ManagedRealmCollectionTests_avg_emptyNullFields__:
+
+.. _io_realm_ManagedRealmCollectionTests_avg_emptyNullFields__:
+
+.. _io_realm_ManagedRealmCollectionTests_avg_emptyNullFields__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** avg_emptyNullFields ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+avg_partialNullRows
+-------------------
+
+.. _io_realm_ManagedRealmCollectionTests_avg_partialNullRows__:
+
+.. _io_realm_ManagedRealmCollectionTests_avg_partialNullRows__:
+
+.. _io_realm_ManagedRealmCollectionTests_avg_partialNullRows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** avg_partialNullRows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+maxDate
+-------
+
+.. _io_realm_ManagedRealmCollectionTests_maxDate__:
+
+.. _io_realm_ManagedRealmCollectionTests_maxDate__:
+
+.. _io_realm_ManagedRealmCollectionTests_maxDate__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** maxDate ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+minDate
+-------
+
+.. _io_realm_ManagedRealmCollectionTests_minDate__:
+
+.. _io_realm_ManagedRealmCollectionTests_minDate__:
+
+.. _io_realm_ManagedRealmCollectionTests_minDate__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** minDate ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+aggregates_deleteLastRow
+------------------------
+
+.. _io_realm_ManagedRealmCollectionTests_aggregates_deleteLastRow__:
+
+.. _io_realm_ManagedRealmCollectionTests_aggregates_deleteLastRow__:
+
+.. _io_realm_ManagedRealmCollectionTests_aggregates_deleteLastRow__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** aggregates_deleteLastRow ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+realmMethods_invalidFieldNames
+------------------------------
+
+.. _io_realm_ManagedRealmCollectionTests_realmMethods_invalidFieldNames__:
+
+.. _io_realm_ManagedRealmCollectionTests_realmMethods_invalidFieldNames__:
+
+.. _io_realm_ManagedRealmCollectionTests_realmMethods_invalidFieldNames__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** realmMethods_invalidFieldNames ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+realmMethods_invalidFieldType
+-----------------------------
+
+.. _io_realm_ManagedRealmCollectionTests_realmMethods_invalidFieldType__:
+
+.. _io_realm_ManagedRealmCollectionTests_realmMethods_invalidFieldType__:
+
+.. _io_realm_ManagedRealmCollectionTests_realmMethods_invalidFieldType__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** realmMethods_invalidFieldType ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+deleteAllFromRealm
+------------------
+
+.. _io_realm_ManagedRealmCollectionTests_deleteAllFromRealm__:
+
+.. _io_realm_ManagedRealmCollectionTests_deleteAllFromRealm__:
+
+.. _io_realm_ManagedRealmCollectionTests_deleteAllFromRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** deleteAllFromRealm ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+deleteAllFromRealm_outsideTransaction
+-------------------------------------
+
+.. _io_realm_ManagedRealmCollectionTests_deleteAllFromRealm_outsideTransaction__:
+
+.. _io_realm_ManagedRealmCollectionTests_deleteAllFromRealm_outsideTransaction__:
+
+.. _io_realm_ManagedRealmCollectionTests_deleteAllFromRealm_outsideTransaction__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** deleteAllFromRealm_outsideTransaction ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+deleteAllFromRealm_emptyList
+----------------------------
+
+.. _io_realm_ManagedRealmCollectionTests_deleteAllFromRealm_emptyList__:
+
+.. _io_realm_ManagedRealmCollectionTests_deleteAllFromRealm_emptyList__:
+
+.. _io_realm_ManagedRealmCollectionTests_deleteAllFromRealm_emptyList__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** deleteAllFromRealm_emptyList ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+deleteAllFromRealm_invalidList
+------------------------------
+
+.. _io_realm_ManagedRealmCollectionTests_deleteAllFromRealm_invalidList__:
+
+.. _io_realm_ManagedRealmCollectionTests_deleteAllFromRealm_invalidList__:
+
+.. _io_realm_ManagedRealmCollectionTests_deleteAllFromRealm_invalidList__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** deleteAllFromRealm_invalidList ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+isLoaded
+--------
+
+.. _io_realm_ManagedRealmCollectionTests_isLoaded__:
+
+.. _io_realm_ManagedRealmCollectionTests_isLoaded__:
+
+.. _io_realm_ManagedRealmCollectionTests_isLoaded__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** isLoaded ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+load
+----
+
+.. _io_realm_ManagedRealmCollectionTests_load__:
+
+.. _io_realm_ManagedRealmCollectionTests_load__:
+
+.. _io_realm_ManagedRealmCollectionTests_load__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** load ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+isValid
+-------
+
+.. _io_realm_ManagedRealmCollectionTests_isValid__:
+
+.. _io_realm_ManagedRealmCollectionTests_isValid__:
+
+.. _io_realm_ManagedRealmCollectionTests_isValid__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** isValid ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+isValid_realmClosed
+-------------------
+
+.. _io_realm_ManagedRealmCollectionTests_isValid_realmClosed__:
+
+.. _io_realm_ManagedRealmCollectionTests_isValid_realmClosed__:
+
+.. _io_realm_ManagedRealmCollectionTests_isValid_realmClosed__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** isValid_realmClosed ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+isManaged
+---------
+
+.. _io_realm_ManagedRealmCollectionTests_isManaged__:
+
+.. _io_realm_ManagedRealmCollectionTests_isManaged__:
+
+.. _io_realm_ManagedRealmCollectionTests_isManaged__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** isManaged ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+contains_deletedRealmObject
+---------------------------
+
+.. _io_realm_ManagedRealmCollectionTests_contains_deletedRealmObject__:
+
+.. _io_realm_ManagedRealmCollectionTests_contains_deletedRealmObject__:
+
+.. _io_realm_ManagedRealmCollectionTests_contains_deletedRealmObject__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** contains_deletedRealmObject ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+equals_sameRealmObjectsDifferentCollection
+------------------------------------------
+
+.. _io_realm_ManagedRealmCollectionTests_equals_sameRealmObjectsDifferentCollection__:
+
+.. _io_realm_ManagedRealmCollectionTests_equals_sameRealmObjectsDifferentCollection__:
+
+.. _io_realm_ManagedRealmCollectionTests_equals_sameRealmObjectsDifferentCollection__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** equals_sameRealmObjectsDifferentCollection ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+mutableMethodsOutsideTransactions
+---------------------------------
+
+.. _io_realm_ManagedRealmCollectionTests_mutableMethodsOutsideTransactions__:
+
+.. _io_realm_ManagedRealmCollectionTests_mutableMethodsOutsideTransactions__:
+
+.. _io_realm_ManagedRealmCollectionTests_mutableMethodsOutsideTransactions__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** mutableMethodsOutsideTransactions ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+methodsThrowOnWrongThread
+-------------------------
+
+.. _io_realm_ManagedRealmCollectionTests_methodsThrowOnWrongThread__:
+
+.. _io_realm_ManagedRealmCollectionTests_methodsThrowOnWrongThread__:
+
+.. _io_realm_ManagedRealmCollectionTests_methodsThrowOnWrongThread__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** methodsThrowOnWrongThread ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

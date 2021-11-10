@@ -1,0 +1,1019 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class OrderedRealmCollectionTests
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_OrderedRealmCollectionTests:
+
+
+
+io.realm
+========
+
+:ref:`io.realm.CollectionTests <io_realm_CollectionTests>` 
+ | 		`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+Test class for all methods specific to OrderedRealmCollections no matter if they are managed or unmanaged. Methods tested in this class: # RealmOrderedCollection + E first(); + E last(); - void sort(String field); - void sort(String field, Sort sortOrder); - void sort(String field1, Sort sortOrder1, String field2, Sort sortOrder2); - void sort(String[] fields, Sort[] sortOrders); - void deleteFromRealm(int location); - void deleteFirstFromRealm(); - void deleteLastFromRealm(); - OrderedRealmCollectionSnapshot createSnapshot(); # List - void add(int location, E object); - boolean addAll(int location, Collection collection); + E get(int location); + int indexOf(Object object); + int lastIndexOf(Object object); - ListIterator listIterator(); - ListIterator listIterator(int location); - E remove(int location); - E set(int location, E object); + List subList(int start, int end); # RealmCollection - RealmQuery where(); - Number min(String fieldName); - Number max(String fieldName); - Number sum(String fieldName); - double average(String fieldName); - Date maxDate(String fieldName); - Date minDate(String fieldName); - void deleteAllFromRealm(); - boolean isLoaded(); - boolean load(); - boolean isValid(); - BaseRealm getRealm(); # Collection - public boolean add(E object); - public boolean addAll(Collection collection); - public void deleteAll(); - public boolean contains(Object object); - public boolean containsAll(Collection collection); - public boolean equals(Object object); - public int hashCode(); - public boolean isEmpty(); - public Iterator iterator(); - public boolean remove(Object object); - public boolean removeAll(Collection collection); - public boolean retainAll(Collection collection); - public int size(); - public Object[] toArray(); - public T[] toArray(T[] array);
+
+
+.. seealso::
+
+
+   
+   - :ref:`RealmCollectionTests <io_realm_RealmCollectionTests>` 
+      
+      
+      
+   - :ref:`ManagedRealmCollectionTests <io_realm_ManagedRealmCollectionTests>` 
+      
+      
+      
+   - :ref:`UnManagedRealmCollectionTests <io_realm_UnManagedRealmCollectionTests>` 
+      
+      
+      
+   
+   
+   
+
+
+
+Constructors
+============
+
+
+
+- ``io.realm.OrderedRealmCollectionTests(CollectionTests.CollectionClass)`` 
+
+
+
+
+Field Summary
+=============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Field and Description
+   
+   * - ``public final io.realm.TestRealmConfigurationFactory`` 
+       
+       
+     - ``configFactory`` 
+       
+       
+   
+   * - ``public final ExpectedException`` 
+       
+       
+     - ``thrown`` 
+       
+       
+   
+   
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public static `List <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__ 
+     - 
+       :ref:`data <io_realm_OrderedRealmCollectionTests_data__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setup <io_realm_OrderedRealmCollectionTests_setup__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`tearDown <io_realm_OrderedRealmCollectionTests_tearDown__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`first <io_realm_OrderedRealmCollectionTests_first__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`first_emptyCollection <io_realm_OrderedRealmCollectionTests_first_emptyCollection__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`first_withDefault <io_realm_OrderedRealmCollectionTests_first_withDefault__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`last <io_realm_OrderedRealmCollectionTests_last__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`last_emptyCollection <io_realm_OrderedRealmCollectionTests_last_emptyCollection__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`last_withDefault <io_realm_OrderedRealmCollectionTests_last_withDefault__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`get_validIndex <io_realm_OrderedRealmCollectionTests_get_validIndex__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`get_indexOutOfBounds <io_realm_OrderedRealmCollectionTests_get_indexOutOfBounds__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`indexOf <io_realm_OrderedRealmCollectionTests_indexOf__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`indexOf_null <io_realm_OrderedRealmCollectionTests_indexOf_null__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`indexOf_objectNotInRealm <io_realm_OrderedRealmCollectionTests_indexOf_objectNotInRealm__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`lastIndexOf <io_realm_OrderedRealmCollectionTests_lastIndexOf__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`lastIndexOf_null <io_realm_OrderedRealmCollectionTests_lastIndexOf_null__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`lastIndexOf_objectNotInRealm <io_realm_OrderedRealmCollectionTests_lastIndexOf_objectNotInRealm__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`subList <io_realm_OrderedRealmCollectionTests_subList__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`subList_invalidStartIndex <io_realm_OrderedRealmCollectionTests_subList_invalidStartIndex__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`subList_invalidEnd <io_realm_OrderedRealmCollectionTests_subList_invalidEnd__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`methods_indexOutOfBounds <io_realm_OrderedRealmCollectionTests_methods_indexOutOfBounds__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`createSnapshot <io_realm_OrderedRealmCollectionTests_createSnapshot__>`  ()
+       
+       
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface :ref:`io.realm.CollectionTests <io_realm_CollectionTests>` : 
+   
+   ``populateRealm`` , ``populateInMemoryList`` , ``populateCollectionOnDeletedLinkView`` , ``populatePartialNullRowsForNumericTesting`` , ``createStringCollection`` 
+   
+   
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+
+
+
+
+Field Detail
+============
+
+.. _io_realm_OrderedRealmCollectionTests_configFactory:
+
+
+
+``configFactory`` 
+------------------
+
+
+.. _io_realm_OrderedRealmCollectionTests_thrown:
+
+
+
+``thrown`` 
+-----------
+
+
+
+
+Method Detail
+=============
+
+
+
+data
+----
+
+.. _io_realm_OrderedRealmCollectionTests_data__:
+
+.. _io_realm_OrderedRealmCollectionTests_data__:
+
+.. _io_realm_OrderedRealmCollectionTests_data__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static `List <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  data ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+setup
+-----
+
+.. _io_realm_OrderedRealmCollectionTests_setup__:
+
+.. _io_realm_OrderedRealmCollectionTests_setup__:
+
+.. _io_realm_OrderedRealmCollectionTests_setup__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setup ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+tearDown
+--------
+
+.. _io_realm_OrderedRealmCollectionTests_tearDown__:
+
+.. _io_realm_OrderedRealmCollectionTests_tearDown__:
+
+.. _io_realm_OrderedRealmCollectionTests_tearDown__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** tearDown ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+first
+-----
+
+.. _io_realm_OrderedRealmCollectionTests_first__:
+
+.. _io_realm_OrderedRealmCollectionTests_first__:
+
+.. _io_realm_OrderedRealmCollectionTests_first__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** first ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+first_emptyCollection
+---------------------
+
+.. _io_realm_OrderedRealmCollectionTests_first_emptyCollection__:
+
+.. _io_realm_OrderedRealmCollectionTests_first_emptyCollection__:
+
+.. _io_realm_OrderedRealmCollectionTests_first_emptyCollection__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** first_emptyCollection ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+first_withDefault
+-----------------
+
+.. _io_realm_OrderedRealmCollectionTests_first_withDefault__:
+
+.. _io_realm_OrderedRealmCollectionTests_first_withDefault__:
+
+.. _io_realm_OrderedRealmCollectionTests_first_withDefault__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** first_withDefault ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+last
+----
+
+.. _io_realm_OrderedRealmCollectionTests_last__:
+
+.. _io_realm_OrderedRealmCollectionTests_last__:
+
+.. _io_realm_OrderedRealmCollectionTests_last__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** last ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+last_emptyCollection
+--------------------
+
+.. _io_realm_OrderedRealmCollectionTests_last_emptyCollection__:
+
+.. _io_realm_OrderedRealmCollectionTests_last_emptyCollection__:
+
+.. _io_realm_OrderedRealmCollectionTests_last_emptyCollection__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** last_emptyCollection ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+last_withDefault
+----------------
+
+.. _io_realm_OrderedRealmCollectionTests_last_withDefault__:
+
+.. _io_realm_OrderedRealmCollectionTests_last_withDefault__:
+
+.. _io_realm_OrderedRealmCollectionTests_last_withDefault__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** last_withDefault ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+get_validIndex
+--------------
+
+.. _io_realm_OrderedRealmCollectionTests_get_validIndex__:
+
+.. _io_realm_OrderedRealmCollectionTests_get_validIndex__:
+
+.. _io_realm_OrderedRealmCollectionTests_get_validIndex__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** get_validIndex ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+get_indexOutOfBounds
+--------------------
+
+.. _io_realm_OrderedRealmCollectionTests_get_indexOutOfBounds__:
+
+.. _io_realm_OrderedRealmCollectionTests_get_indexOutOfBounds__:
+
+.. _io_realm_OrderedRealmCollectionTests_get_indexOutOfBounds__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** get_indexOutOfBounds ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+indexOf
+-------
+
+.. _io_realm_OrderedRealmCollectionTests_indexOf__:
+
+.. _io_realm_OrderedRealmCollectionTests_indexOf__:
+
+.. _io_realm_OrderedRealmCollectionTests_indexOf__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** indexOf ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+indexOf_null
+------------
+
+.. _io_realm_OrderedRealmCollectionTests_indexOf_null__:
+
+.. _io_realm_OrderedRealmCollectionTests_indexOf_null__:
+
+.. _io_realm_OrderedRealmCollectionTests_indexOf_null__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** indexOf_null ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+indexOf_objectNotInRealm
+------------------------
+
+.. _io_realm_OrderedRealmCollectionTests_indexOf_objectNotInRealm__:
+
+.. _io_realm_OrderedRealmCollectionTests_indexOf_objectNotInRealm__:
+
+.. _io_realm_OrderedRealmCollectionTests_indexOf_objectNotInRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** indexOf_objectNotInRealm ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+lastIndexOf
+-----------
+
+.. _io_realm_OrderedRealmCollectionTests_lastIndexOf__:
+
+.. _io_realm_OrderedRealmCollectionTests_lastIndexOf__:
+
+.. _io_realm_OrderedRealmCollectionTests_lastIndexOf__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** lastIndexOf ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+lastIndexOf_null
+----------------
+
+.. _io_realm_OrderedRealmCollectionTests_lastIndexOf_null__:
+
+.. _io_realm_OrderedRealmCollectionTests_lastIndexOf_null__:
+
+.. _io_realm_OrderedRealmCollectionTests_lastIndexOf_null__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** lastIndexOf_null ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+lastIndexOf_objectNotInRealm
+----------------------------
+
+.. _io_realm_OrderedRealmCollectionTests_lastIndexOf_objectNotInRealm__:
+
+.. _io_realm_OrderedRealmCollectionTests_lastIndexOf_objectNotInRealm__:
+
+.. _io_realm_OrderedRealmCollectionTests_lastIndexOf_objectNotInRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** lastIndexOf_objectNotInRealm ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+subList
+-------
+
+.. _io_realm_OrderedRealmCollectionTests_subList__:
+
+.. _io_realm_OrderedRealmCollectionTests_subList__:
+
+.. _io_realm_OrderedRealmCollectionTests_subList__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** subList ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+subList_invalidStartIndex
+-------------------------
+
+.. _io_realm_OrderedRealmCollectionTests_subList_invalidStartIndex__:
+
+.. _io_realm_OrderedRealmCollectionTests_subList_invalidStartIndex__:
+
+.. _io_realm_OrderedRealmCollectionTests_subList_invalidStartIndex__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** subList_invalidStartIndex ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+subList_invalidEnd
+------------------
+
+.. _io_realm_OrderedRealmCollectionTests_subList_invalidEnd__:
+
+.. _io_realm_OrderedRealmCollectionTests_subList_invalidEnd__:
+
+.. _io_realm_OrderedRealmCollectionTests_subList_invalidEnd__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** subList_invalidEnd ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+methods_indexOutOfBounds
+------------------------
+
+.. _io_realm_OrderedRealmCollectionTests_methods_indexOutOfBounds__:
+
+.. _io_realm_OrderedRealmCollectionTests_methods_indexOutOfBounds__:
+
+.. _io_realm_OrderedRealmCollectionTests_methods_indexOutOfBounds__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** methods_indexOutOfBounds ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+createSnapshot
+--------------
+
+.. _io_realm_OrderedRealmCollectionTests_createSnapshot__:
+
+.. _io_realm_OrderedRealmCollectionTests_createSnapshot__:
+
+.. _io_realm_OrderedRealmCollectionTests_createSnapshot__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** createSnapshot ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

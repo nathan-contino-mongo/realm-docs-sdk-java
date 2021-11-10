@@ -97,18 +97,6 @@ Method Summary
      - Method and Description
    
    * - 
-       public synchronized :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>` 
-     - 
-       :ref:`getSession <io_realm_mongodb_sync_Sync_getSession_SyncConfiguration_>`  (:ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>`  syncConfiguration)
-       
-       Gets a cached :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>`  for the given :ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>`  or throw if no one exists yet.
-       
-       
-       
-       
-       
-   
-   * - 
        public synchronized `Collection <https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html>`__ 
      - 
        :ref:`getAllSessions <io_realm_mongodb_sync_Sync_getAllSessions__>`  ()
@@ -126,6 +114,18 @@ Method Summary
        :ref:`getOrCreateSession <io_realm_mongodb_sync_Sync_getOrCreateSession_SyncConfiguration_>`  (:ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>`  syncConfiguration)
        
        Gets any cached :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>`  for the given :ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>`  or create a new one if no one exists.
+       
+       
+       
+       
+       
+   
+   * - 
+       public synchronized :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>` 
+     - 
+       :ref:`getSession <io_realm_mongodb_sync_Sync_getSession_SyncConfiguration_>`  (:ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>`  syncConfiguration)
+       
+       Gets a cached :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>`  for the given :ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>`  or throw if no one exists yet.
        
        
        
@@ -161,6 +161,124 @@ Inherited Methods
 
 Method Detail
 =============
+
+.. _getAllSessions:
+
+.. _getAllSessions__:
+
+.. _Sync_getAllSessions:
+
+.. _Sync_getAllSessions__:
+
+.. _io_realm_mongodb_sync_Sync_getAllSessions:
+
+.. _io_realm_mongodb_sync_Sync_getAllSessions__:
+
+
+
+getAllSessions
+--------------
+
+.. _io_realm_mongodb_sync_Sync_getAllSessions__:
+
+.. _io_realm_mongodb_sync_Sync_getAllSessions__:
+
+.. _io_realm_mongodb_sync_Sync_getAllSessions__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public synchronized `Collection <https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html>`__  getAllSessions ()
+   
+   * - Gets a collection of all the cached :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>` .
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getOrCreateSession:
+
+.. _getOrCreateSession__:
+
+.. _Sync_getOrCreateSession:
+
+.. _Sync_getOrCreateSession__:
+
+.. _io_realm_mongodb_sync_Sync_getOrCreateSession:
+
+.. _io_realm_mongodb_sync_Sync_getOrCreateSession__:
+
+
+
+getOrCreateSession
+------------------
+
+.. _io_realm_mongodb_sync_Sync_getOrCreateSession_SyncConfiguration_:
+
+.. _io_realm_mongodb_sync_Sync_getOrCreateSession_SyncConfiguration_:
+
+.. _io_realm_mongodb_sync_Sync_getOrCreateSession_SyncConfiguration_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public synchronized :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>`  getOrCreateSession (:ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>`  syncConfiguration)
+   
+   * - Gets any cached :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>`  for the given :ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>`  or create a new one if no one exists. Note: This is mainly for internal usage, consider using :ref:`getSession(SyncConfiguration) <io_realm_mongodb_sync_Sync_getSession_SyncConfiguration_>`  instead.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``syncConfiguration`` - configuration object for the synchronized Realm.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if syncConfiguration is ``null`` .
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _getSession:
+
+.. _getSession__:
+
+.. _Sync_getSession:
+
+.. _Sync_getSession__:
+
+.. _io_realm_mongodb_sync_Sync_getSession:
+
+.. _io_realm_mongodb_sync_Sync_getSession__:
 
 
 
@@ -218,88 +336,18 @@ getSession
        
    
    
+.. _reconnect:
 
+.. _reconnect__:
 
-getAllSessions
---------------
+.. _Sync_reconnect:
 
-.. _io_realm_mongodb_sync_Sync_getAllSessions__:
+.. _Sync_reconnect__:
 
-.. _io_realm_mongodb_sync_Sync_getAllSessions__:
+.. _io_realm_mongodb_sync_Sync_reconnect:
 
-.. _io_realm_mongodb_sync_Sync_getAllSessions__:
+.. _io_realm_mongodb_sync_Sync_reconnect__:
 
-.. list-table::
-   :header-rows: 1
-   
-   * -    public synchronized `Collection <https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html>`__  getAllSessions ()
-   
-   * - Gets a collection of all the cached :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>` .
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-
-
-getOrCreateSession
-------------------
-
-.. _io_realm_mongodb_sync_Sync_getOrCreateSession_SyncConfiguration_:
-
-.. _io_realm_mongodb_sync_Sync_getOrCreateSession_SyncConfiguration_:
-
-.. _io_realm_mongodb_sync_Sync_getOrCreateSession_SyncConfiguration_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public synchronized :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>`  getOrCreateSession (:ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>`  syncConfiguration)
-   
-   * - Gets any cached :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>`  for the given :ref:`SyncConfiguration <io_realm_mongodb_sync_SyncConfiguration>`  or create a new one if no one exists. Note: This is mainly for internal usage, consider using :ref:`getSession(SyncConfiguration) <io_realm_mongodb_sync_Sync_getSession_SyncConfiguration_>`  instead.
-       
-       
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``syncConfiguration`` - configuration object for the synchronized Realm.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if syncConfiguration is ``null`` .
-          
-          
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
 
 
 reconnect

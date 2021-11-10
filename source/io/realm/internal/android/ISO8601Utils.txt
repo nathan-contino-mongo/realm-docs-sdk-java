@@ -1,0 +1,160 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class ISO8601Utils
+^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_internal_android_ISO8601Utils:
+
+
+
+io.realm.internal.android
+=========================
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+Utilities methods for manipulating dates in iso8601 format. This is much much faster and GC friendly than using SimpleDateFormat so highly suitable if you (un)serialize lots of date objects.Supported parse format: [yyyy-MM-dd|yyyyMMdd][T(hh:mm[:ss[.sss]]|hhmm[ss[.sss]])]?[Z|[+-]hh[:]mm]]
+
+
+
+
+.. seealso::
+
+
+   
+   - `this specification <http://www.w3.org/TR/NOTE-datetime>`__ 
+      
+      
+      
+      
+   - `Original Source <https://github.com/FasterXML/jackson-databind/blob/master/src/main/java/com/fasterxml/jackson/databind/util/ISO8601Utils.java>`__ 
+      
+      
+      
+      
+   
+   
+   
+
+
+
+Constructors
+============
+
+
+
+- ``io.realm.internal.android.ISO8601Utils()`` 
+
+
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public static `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__ 
+     - 
+       :ref:`parse <io_realm_internal_android_ISO8601Utils_parse_String__ParsePosition_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  date,
+                                  `ParsePosition <https://docs.oracle.com/javase/7/docs/api/java/text/ParsePosition.html>`__  pos)
+       
+       Parses a date from ISO-8601 formatted string.
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+
+
+
+
+Method Detail
+=============
+
+.. _parse:
+
+.. _parse__:
+
+.. _ISO8601Utils_parse:
+
+.. _ISO8601Utils_parse__:
+
+.. _io_realm_internal_android_ISO8601Utils_parse:
+
+.. _io_realm_internal_android_ISO8601Utils_parse__:
+
+
+
+parse
+-----
+
+.. _io_realm_internal_android_ISO8601Utils_parse_String__ParsePosition_:
+
+.. _io_realm_internal_android_ISO8601Utils_parse_String_ParsePosition_:
+
+.. _io_realm_internal_android_ISO8601Utils_parse_String__ParsePosition_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  parse (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  date,
+                                  `ParsePosition <https://docs.oracle.com/javase/7/docs/api/java/text/ParsePosition.html>`__  pos)
+   
+   * - Parses a date from ISO-8601 formatted string. It expects a format [yyyy-MM-dd|yyyyMMdd][T(hh:mm[:ss[.sss]]|hhmm[ss[.sss]])]?[Z|[+-]hh:mm]]
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``date`` - ISO string to parse in the appropriate format.
+          
+          
+          
+       - ``pos`` - The position to start parsing from, updated to where parsing stopped.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `ParseException <https://docs.oracle.com/javase/7/docs/api/java/text/ParseException.html>`__  - if the date is not in the appropriate format
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+

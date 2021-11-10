@@ -1,0 +1,457 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class RemoteTestService
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_services_RemoteTestService:
+
+
+
+io.realm.services
+=================
+
+**android.app.Service (?)**
+ | 		**android.content.ContextWrapper (?)**
+ | 					**android.content.Context (?)**
+ | 								`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+Helper class for multi-processes support testing.
+
+
+.. seealso::
+
+
+   
+   - :ref:`io.realm.rule.RunWithRemoteService <io_realm_rule_RunWithRemoteService>` 
+      
+      
+      
+   
+   
+   
+
+
+
+Constructors
+============
+
+
+
+- ``io.realm.services.RemoteTestService()`` 
+
+
+
+
+Nested Class Summary
+====================
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Class and Description
+   
+   * - ``public abstract static`` 
+     - ``io.realm.services.RemoteTestService.Step`` 
+   
+   
+
+
+Field Summary
+=============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Field and Description
+   
+   * - ``protected static final int`` 
+       
+       
+     - ``BASE_SIMPLE_COMMIT`` 
+       
+       
+   
+   * - ``protected static final int`` 
+       
+       
+     - ``BASE_A_LOT_COMMITS`` 
+       
+       
+   
+   * - ``public static final java.lang.String`` 
+       
+       
+     - ``BUNDLE_KEY_ERROR`` 
+       
+       
+   
+   
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public **void**
+     - 
+       :ref:`onCreate <io_realm_services_RemoteTestService_onCreate__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public `File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__ 
+     - 
+       :ref:`getRoot <io_realm_services_RemoteTestService_getRoot__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **IBinder (?)**
+     - 
+       :ref:`onBind <io_realm_services_RemoteTestService_onBind_Intent_>`  (**Intent (?)** intent)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`onUnbind <io_realm_services_RemoteTestService_onUnbind_Intent_>`  (**Intent (?)** intent)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **int**
+     - 
+       :ref:`onStartCommand <io_realm_services_RemoteTestService_onStartCommand_Intent__int__int_>`  (**Intent (?)** intent,
+                                   **int** flags,
+                                   **int** startId)
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`Realm <io_realm_Realm>` 
+     - 
+       :ref:`getRealm <io_realm_services_RemoteTestService_getRealm__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setRealm <io_realm_services_RemoteTestService_setRealm_Realm_>`  (:ref:`Realm <io_realm_Realm>`  realm)
+       
+       
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface **android.app.Service (?)**: 
+   
+   ``getApplication`` , ``onCreate`` , ``onStart`` , ``onStartCommand`` , ``onDestroy`` , ``onConfigurationChanged`` , ``onLowMemory`` , ``onTrimMemory`` , ``onBind`` , ``onUnbind`` , ``onRebind`` , ``onTaskRemoved`` , ``stopSelf`` , ``stopSelf`` , ``stopSelfResult`` , ``startForeground`` , ``startForeground`` , ``stopForeground`` , ``stopForeground`` , ``getForegroundServiceType`` , ``dump`` 
+   
+   
+- Methods inherited from interface **android.content.ContextWrapper (?)**: 
+   
+   ``attachBaseContext`` , ``getBaseContext`` , ``getAssets`` , ``getResources`` , ``getPackageManager`` , ``getContentResolver`` , ``getMainLooper`` , ``getMainExecutor`` , ``getApplicationContext`` , ``setTheme`` , ``getTheme`` , ``getClassLoader`` , ``getPackageName`` , ``getOpPackageName`` , ``getApplicationInfo`` , ``getPackageResourcePath`` , ``getPackageCodePath`` , ``getSharedPreferences`` , ``moveSharedPreferencesFrom`` , ``deleteSharedPreferences`` , ``openFileInput`` , ``openFileOutput`` , ``deleteFile`` , ``getFileStreamPath`` , ``fileList`` , ``getDataDir`` , ``getFilesDir`` , ``getNoBackupFilesDir`` , ``getExternalFilesDir`` , ``getExternalFilesDirs`` , ``getObbDir`` , ``getObbDirs`` , ``getCacheDir`` , ``getCodeCacheDir`` , ``getExternalCacheDir`` , ``getExternalCacheDirs`` , ``getExternalMediaDirs`` , ``getDir`` , ``openOrCreateDatabase`` , ``openOrCreateDatabase`` , ``moveDatabaseFrom`` , ``deleteDatabase`` , ``getDatabasePath`` , ``databaseList`` , ``getWallpaper`` , ``peekWallpaper`` , ``getWallpaperDesiredMinimumWidth`` , ``getWallpaperDesiredMinimumHeight`` , ``setWallpaper`` , ``setWallpaper`` , ``clearWallpaper`` , ``startActivity`` , ``startActivity`` , ``startActivities`` , ``startActivities`` , ``startIntentSender`` , ``startIntentSender`` , ``sendBroadcast`` , ``sendBroadcast`` , ``sendOrderedBroadcast`` , ``sendOrderedBroadcast`` , ``sendBroadcastAsUser`` , ``sendBroadcastAsUser`` , ``sendOrderedBroadcastAsUser`` , ``sendStickyBroadcast`` , ``sendStickyOrderedBroadcast`` , ``removeStickyBroadcast`` , ``sendStickyBroadcastAsUser`` , ``sendStickyOrderedBroadcastAsUser`` , ``removeStickyBroadcastAsUser`` , ``registerReceiver`` , ``registerReceiver`` , ``registerReceiver`` , ``registerReceiver`` , ``unregisterReceiver`` , ``startService`` , ``startForegroundService`` , ``stopService`` , ``bindService`` , ``bindService`` , ``bindIsolatedService`` , ``updateServiceGroup`` , ``unbindService`` , ``startInstrumentation`` , ``getSystemService`` , ``getSystemServiceName`` , ``checkPermission`` , ``checkCallingPermission`` , ``checkCallingOrSelfPermission`` , ``checkSelfPermission`` , ``enforcePermission`` , ``enforceCallingPermission`` , ``enforceCallingOrSelfPermission`` , ``grantUriPermission`` , ``revokeUriPermission`` , ``revokeUriPermission`` , ``checkUriPermission`` , ``checkCallingUriPermission`` , ``checkCallingOrSelfUriPermission`` , ``checkUriPermission`` , ``enforceUriPermission`` , ``enforceCallingUriPermission`` , ``enforceCallingOrSelfUriPermission`` , ``enforceUriPermission`` , ``createPackageContext`` , ``createContextForSplit`` , ``createConfigurationContext`` , ``createDisplayContext`` , ``isRestricted`` , ``createDeviceProtectedStorageContext`` , ``isDeviceProtectedStorage`` 
+   
+   
+- Methods inherited from interface **android.content.Context (?)**: 
+   
+   ``getAssets`` , ``getResources`` , ``getPackageManager`` , ``getContentResolver`` , ``getMainLooper`` , ``getMainExecutor`` , ``getApplicationContext`` , ``registerComponentCallbacks`` , ``unregisterComponentCallbacks`` , ``getText`` , ``getString`` , ``getString`` , ``getColor`` , ``getDrawable`` , ``getColorStateList`` , ``setTheme`` , ``getTheme`` , ``obtainStyledAttributes`` , ``obtainStyledAttributes`` , ``obtainStyledAttributes`` , ``obtainStyledAttributes`` , ``getClassLoader`` , ``getPackageName`` , ``getOpPackageName`` , ``getApplicationInfo`` , ``getPackageResourcePath`` , ``getPackageCodePath`` , ``getSharedPreferences`` , ``moveSharedPreferencesFrom`` , ``deleteSharedPreferences`` , ``openFileInput`` , ``openFileOutput`` , ``deleteFile`` , ``getFileStreamPath`` , ``getDataDir`` , ``getFilesDir`` , ``getNoBackupFilesDir`` , ``getExternalFilesDir`` , ``getExternalFilesDirs`` , ``getObbDir`` , ``getObbDirs`` , ``getCacheDir`` , ``getCodeCacheDir`` , ``getExternalCacheDir`` , ``getExternalCacheDirs`` , ``getExternalMediaDirs`` , ``fileList`` , ``getDir`` , ``openOrCreateDatabase`` , ``openOrCreateDatabase`` , ``moveDatabaseFrom`` , ``deleteDatabase`` , ``getDatabasePath`` , ``databaseList`` , ``getWallpaper`` , ``peekWallpaper`` , ``getWallpaperDesiredMinimumWidth`` , ``getWallpaperDesiredMinimumHeight`` , ``setWallpaper`` , ``setWallpaper`` , ``clearWallpaper`` , ``startActivity`` , ``startActivity`` , ``startActivities`` , ``startActivities`` , ``startIntentSender`` , ``startIntentSender`` , ``sendBroadcast`` , ``sendBroadcast`` , ``sendOrderedBroadcast`` , ``sendOrderedBroadcast`` , ``sendBroadcastAsUser`` , ``sendBroadcastAsUser`` , ``sendOrderedBroadcastAsUser`` , ``sendStickyBroadcast`` , ``sendStickyOrderedBroadcast`` , ``removeStickyBroadcast`` , ``sendStickyBroadcastAsUser`` , ``sendStickyOrderedBroadcastAsUser`` , ``removeStickyBroadcastAsUser`` , ``registerReceiver`` , ``registerReceiver`` , ``registerReceiver`` , ``registerReceiver`` , ``unregisterReceiver`` , ``startService`` , ``startForegroundService`` , ``stopService`` , ``bindService`` , ``bindService`` , ``bindIsolatedService`` , ``updateServiceGroup`` , ``unbindService`` , ``startInstrumentation`` , ``getSystemService`` , ``getSystemService`` , ``getSystemServiceName`` , ``checkPermission`` , ``checkCallingPermission`` , ``checkCallingOrSelfPermission`` , ``checkSelfPermission`` , ``enforcePermission`` , ``enforceCallingPermission`` , ``enforceCallingOrSelfPermission`` , ``grantUriPermission`` , ``revokeUriPermission`` , ``revokeUriPermission`` , ``checkUriPermission`` , ``checkCallingUriPermission`` , ``checkCallingOrSelfUriPermission`` , ``checkUriPermission`` , ``enforceUriPermission`` , ``enforceCallingUriPermission`` , ``enforceCallingOrSelfUriPermission`` , ``enforceUriPermission`` , ``createPackageContext`` , ``createContextForSplit`` , ``createConfigurationContext`` , ``createDisplayContext`` , ``createDeviceProtectedStorageContext`` , ``isRestricted`` , ``isDeviceProtectedStorage`` 
+   
+   
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+
+
+
+
+Field Detail
+============
+
+.. _io_realm_services_RemoteTestService_BASE_SIMPLE_COMMIT:
+
+
+
+``BASE_SIMPLE_COMMIT`` 
+-----------------------
+
+
+.. _io_realm_services_RemoteTestService_BASE_A_LOT_COMMITS:
+
+
+
+``BASE_A_LOT_COMMITS`` 
+-----------------------
+
+
+.. _io_realm_services_RemoteTestService_BUNDLE_KEY_ERROR:
+
+
+
+``BUNDLE_KEY_ERROR`` 
+---------------------
+
+
+
+
+Method Detail
+=============
+
+
+
+onCreate
+--------
+
+.. _io_realm_services_RemoteTestService_onCreate__:
+
+.. _io_realm_services_RemoteTestService_onCreate__:
+
+.. _io_realm_services_RemoteTestService_onCreate__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** onCreate ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getRoot
+-------
+
+.. _io_realm_services_RemoteTestService_getRoot__:
+
+.. _io_realm_services_RemoteTestService_getRoot__:
+
+.. _io_realm_services_RemoteTestService_getRoot__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  getRoot ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+onBind
+------
+
+.. _io_realm_services_RemoteTestService_onBind_Intent_:
+
+.. _io_realm_services_RemoteTestService_onBind_Intent_:
+
+.. _io_realm_services_RemoteTestService_onBind_Intent_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **IBinder (?)** onBind (**Intent (?)** intent)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+onUnbind
+--------
+
+.. _io_realm_services_RemoteTestService_onUnbind_Intent_:
+
+.. _io_realm_services_RemoteTestService_onUnbind_Intent_:
+
+.. _io_realm_services_RemoteTestService_onUnbind_Intent_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** onUnbind (**Intent (?)** intent)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+onStartCommand
+--------------
+
+.. _io_realm_services_RemoteTestService_onStartCommand_Intent__int__int_:
+
+.. _io_realm_services_RemoteTestService_onStartCommand_Intent_int_int_:
+
+.. _io_realm_services_RemoteTestService_onStartCommand_Intent__int__int_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **int** onStartCommand (**Intent (?)** intent,
+                                   **int** flags,
+                                   **int** startId)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getRealm
+--------
+
+.. _io_realm_services_RemoteTestService_getRealm__:
+
+.. _io_realm_services_RemoteTestService_getRealm__:
+
+.. _io_realm_services_RemoteTestService_getRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`Realm <io_realm_Realm>`  getRealm ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+setRealm
+--------
+
+.. _io_realm_services_RemoteTestService_setRealm_Realm_:
+
+.. _io_realm_services_RemoteTestService_setRealm_Realm_:
+
+.. _io_realm_services_RemoteTestService_setRealm_Realm_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setRealm (:ref:`Realm <io_realm_Realm>`  realm)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

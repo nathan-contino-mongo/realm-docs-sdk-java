@@ -1,0 +1,1871 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class FrozenObjectsTests
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_FrozenObjectsTests:
+
+
+
+io.realm
+========
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+Class testing that the frozen objects feature works correctly.
+
+
+Constructors
+============
+
+
+
+- ``io.realm.FrozenObjectsTests()`` 
+
+
+
+
+Field Summary
+=============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Field and Description
+   
+   * - ``public final io.realm.TestRealmConfigurationFactory`` 
+       
+       
+     - ``configFactory`` 
+       
+       
+   
+   * - ``public final io.realm.rule.RunInLooperThread`` 
+       
+       
+     - ``looperThread`` 
+       
+       
+   
+   
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setUp <io_realm_FrozenObjectsTests_setUp__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`tearDown <io_realm_FrozenObjectsTests_tearDown__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`deleteFrozenRealm <io_realm_FrozenObjectsTests_deleteFrozenRealm__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`freezeRealm <io_realm_FrozenObjectsTests_freezeRealm__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`freezeDynamicRealm <io_realm_FrozenObjectsTests_freezeDynamicRealm__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`frozenRealmsCannotStartTransactions <io_realm_FrozenObjectsTests_frozenRealmsCannotStartTransactions__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addingRealmChangeListenerThrows <io_realm_FrozenObjectsTests_addingRealmChangeListenerThrows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addingResultsChangeListenerThrows <io_realm_FrozenObjectsTests_addingResultsChangeListenerThrows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addingListChangeListenerThrows <io_realm_FrozenObjectsTests_addingListChangeListenerThrows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addingObjectChangeListenerThrows <io_realm_FrozenObjectsTests_addingObjectChangeListenerThrows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`removingChangeListeners <io_realm_FrozenObjectsTests_removingChangeListeners__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`refreshThrows <io_realm_FrozenObjectsTests_refreshThrows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`writeToFrozenObjectThrows <io_realm_FrozenObjectsTests_writeToFrozenObjectThrows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`freezingPinsRealmVersion <io_realm_FrozenObjectsTests_freezingPinsRealmVersion__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`readFrozenRealmAcrossThreads <io_realm_FrozenObjectsTests_readFrozenRealmAcrossThreads__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`queryFrozenRealmAcrossThreads <io_realm_FrozenObjectsTests_queryFrozenRealmAcrossThreads__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`canReadFrozenResultsAcrossThreads <io_realm_FrozenObjectsTests_canReadFrozenResultsAcrossThreads__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`canReadFrozenListsAcrossThreads <io_realm_FrozenObjectsTests_canReadFrozenListsAcrossThreads__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`canReadFrozenObjectsAcrossThreads <io_realm_FrozenObjectsTests_canReadFrozenObjectsAcrossThreads__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`frozenObjectsReturnsFrozenRealms <io_realm_FrozenObjectsTests_frozenObjectsReturnsFrozenRealms__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`freezeResults <io_realm_FrozenObjectsTests_freezeResults__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`freezeDynamicResults <io_realm_FrozenObjectsTests_freezeDynamicResults__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`freezeSnapshot <io_realm_FrozenObjectsTests_freezeSnapshot__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`freezeDynamicSnapshot <io_realm_FrozenObjectsTests_freezeDynamicSnapshot__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`freezeLists <io_realm_FrozenObjectsTests_freezeLists__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`freezeDynamicList <io_realm_FrozenObjectsTests_freezeDynamicList__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`freezeObject <io_realm_FrozenObjectsTests_freezeObject__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`freezeDynamicObject <io_realm_FrozenObjectsTests_freezeDynamicObject__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`freezeDeletedObject <io_realm_FrozenObjectsTests_freezeDeletedObject__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`freezePendingObject <io_realm_FrozenObjectsTests_freezePendingObject__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`frozenRealms_notEqualToLiveRealm <io_realm_FrozenObjectsTests_frozenRealms_notEqualToLiveRealm__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`frozenRealm_notEqualToFrozenRealmAtOtherVersion <io_realm_FrozenObjectsTests_frozenRealm_notEqualToFrozenRealmAtOtherVersion__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`frozenRealm_equalToFrozenRealmAtSameVersion <io_realm_FrozenObjectsTests_frozenRealm_equalToFrozenRealmAtSameVersion__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`frozenRealm_closeFromOtherThread <io_realm_FrozenObjectsTests_frozenRealm_closeFromOtherThread__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealm <io_realm_FrozenObjectsTests_copyToRealm__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`copyToRealmOrUpdate <io_realm_FrozenObjectsTests_copyToRealmOrUpdate__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`insert <io_realm_FrozenObjectsTests_insert__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`insertList <io_realm_FrozenObjectsTests_insertList__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`insertOrUpdate <io_realm_FrozenObjectsTests_insertOrUpdate__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`insertOrUpdateList <io_realm_FrozenObjectsTests_insertOrUpdateList__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`realmObject_equals <io_realm_FrozenObjectsTests_realmObject_equals__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`realmObject_returnsFrozenRealm <io_realm_FrozenObjectsTests_realmObject_returnsFrozenRealm__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`realmList_returnsFrozenRealm <io_realm_FrozenObjectsTests_realmList_returnsFrozenRealm__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`realmResults_returnsFrozenRealm <io_realm_FrozenObjectsTests_realmResults_returnsFrozenRealm__>`  ()
+       
+       
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+
+
+
+
+Field Detail
+============
+
+.. _io_realm_FrozenObjectsTests_configFactory:
+
+
+
+``configFactory`` 
+------------------
+
+
+.. _io_realm_FrozenObjectsTests_looperThread:
+
+
+
+``looperThread`` 
+-----------------
+
+
+
+
+Method Detail
+=============
+
+
+
+setUp
+-----
+
+.. _io_realm_FrozenObjectsTests_setUp__:
+
+.. _io_realm_FrozenObjectsTests_setUp__:
+
+.. _io_realm_FrozenObjectsTests_setUp__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setUp ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+tearDown
+--------
+
+.. _io_realm_FrozenObjectsTests_tearDown__:
+
+.. _io_realm_FrozenObjectsTests_tearDown__:
+
+.. _io_realm_FrozenObjectsTests_tearDown__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** tearDown ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+deleteFrozenRealm
+-----------------
+
+.. _io_realm_FrozenObjectsTests_deleteFrozenRealm__:
+
+.. _io_realm_FrozenObjectsTests_deleteFrozenRealm__:
+
+.. _io_realm_FrozenObjectsTests_deleteFrozenRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** deleteFrozenRealm ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+freezeRealm
+-----------
+
+.. _io_realm_FrozenObjectsTests_freezeRealm__:
+
+.. _io_realm_FrozenObjectsTests_freezeRealm__:
+
+.. _io_realm_FrozenObjectsTests_freezeRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** freezeRealm ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+freezeDynamicRealm
+------------------
+
+.. _io_realm_FrozenObjectsTests_freezeDynamicRealm__:
+
+.. _io_realm_FrozenObjectsTests_freezeDynamicRealm__:
+
+.. _io_realm_FrozenObjectsTests_freezeDynamicRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** freezeDynamicRealm ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+frozenRealmsCannotStartTransactions
+-----------------------------------
+
+.. _io_realm_FrozenObjectsTests_frozenRealmsCannotStartTransactions__:
+
+.. _io_realm_FrozenObjectsTests_frozenRealmsCannotStartTransactions__:
+
+.. _io_realm_FrozenObjectsTests_frozenRealmsCannotStartTransactions__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** frozenRealmsCannotStartTransactions ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+addingRealmChangeListenerThrows
+-------------------------------
+
+.. _io_realm_FrozenObjectsTests_addingRealmChangeListenerThrows__:
+
+.. _io_realm_FrozenObjectsTests_addingRealmChangeListenerThrows__:
+
+.. _io_realm_FrozenObjectsTests_addingRealmChangeListenerThrows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addingRealmChangeListenerThrows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+addingResultsChangeListenerThrows
+---------------------------------
+
+.. _io_realm_FrozenObjectsTests_addingResultsChangeListenerThrows__:
+
+.. _io_realm_FrozenObjectsTests_addingResultsChangeListenerThrows__:
+
+.. _io_realm_FrozenObjectsTests_addingResultsChangeListenerThrows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addingResultsChangeListenerThrows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+addingListChangeListenerThrows
+------------------------------
+
+.. _io_realm_FrozenObjectsTests_addingListChangeListenerThrows__:
+
+.. _io_realm_FrozenObjectsTests_addingListChangeListenerThrows__:
+
+.. _io_realm_FrozenObjectsTests_addingListChangeListenerThrows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addingListChangeListenerThrows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+addingObjectChangeListenerThrows
+--------------------------------
+
+.. _io_realm_FrozenObjectsTests_addingObjectChangeListenerThrows__:
+
+.. _io_realm_FrozenObjectsTests_addingObjectChangeListenerThrows__:
+
+.. _io_realm_FrozenObjectsTests_addingObjectChangeListenerThrows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addingObjectChangeListenerThrows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+removingChangeListeners
+-----------------------
+
+.. _io_realm_FrozenObjectsTests_removingChangeListeners__:
+
+.. _io_realm_FrozenObjectsTests_removingChangeListeners__:
+
+.. _io_realm_FrozenObjectsTests_removingChangeListeners__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** removingChangeListeners ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+refreshThrows
+-------------
+
+.. _io_realm_FrozenObjectsTests_refreshThrows__:
+
+.. _io_realm_FrozenObjectsTests_refreshThrows__:
+
+.. _io_realm_FrozenObjectsTests_refreshThrows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** refreshThrows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+writeToFrozenObjectThrows
+-------------------------
+
+.. _io_realm_FrozenObjectsTests_writeToFrozenObjectThrows__:
+
+.. _io_realm_FrozenObjectsTests_writeToFrozenObjectThrows__:
+
+.. _io_realm_FrozenObjectsTests_writeToFrozenObjectThrows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** writeToFrozenObjectThrows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+freezingPinsRealmVersion
+------------------------
+
+.. _io_realm_FrozenObjectsTests_freezingPinsRealmVersion__:
+
+.. _io_realm_FrozenObjectsTests_freezingPinsRealmVersion__:
+
+.. _io_realm_FrozenObjectsTests_freezingPinsRealmVersion__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** freezingPinsRealmVersion ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+readFrozenRealmAcrossThreads
+----------------------------
+
+.. _io_realm_FrozenObjectsTests_readFrozenRealmAcrossThreads__:
+
+.. _io_realm_FrozenObjectsTests_readFrozenRealmAcrossThreads__:
+
+.. _io_realm_FrozenObjectsTests_readFrozenRealmAcrossThreads__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** readFrozenRealmAcrossThreads ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+queryFrozenRealmAcrossThreads
+-----------------------------
+
+.. _io_realm_FrozenObjectsTests_queryFrozenRealmAcrossThreads__:
+
+.. _io_realm_FrozenObjectsTests_queryFrozenRealmAcrossThreads__:
+
+.. _io_realm_FrozenObjectsTests_queryFrozenRealmAcrossThreads__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** queryFrozenRealmAcrossThreads ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+canReadFrozenResultsAcrossThreads
+---------------------------------
+
+.. _io_realm_FrozenObjectsTests_canReadFrozenResultsAcrossThreads__:
+
+.. _io_realm_FrozenObjectsTests_canReadFrozenResultsAcrossThreads__:
+
+.. _io_realm_FrozenObjectsTests_canReadFrozenResultsAcrossThreads__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** canReadFrozenResultsAcrossThreads ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+canReadFrozenListsAcrossThreads
+-------------------------------
+
+.. _io_realm_FrozenObjectsTests_canReadFrozenListsAcrossThreads__:
+
+.. _io_realm_FrozenObjectsTests_canReadFrozenListsAcrossThreads__:
+
+.. _io_realm_FrozenObjectsTests_canReadFrozenListsAcrossThreads__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** canReadFrozenListsAcrossThreads ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+canReadFrozenObjectsAcrossThreads
+---------------------------------
+
+.. _io_realm_FrozenObjectsTests_canReadFrozenObjectsAcrossThreads__:
+
+.. _io_realm_FrozenObjectsTests_canReadFrozenObjectsAcrossThreads__:
+
+.. _io_realm_FrozenObjectsTests_canReadFrozenObjectsAcrossThreads__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** canReadFrozenObjectsAcrossThreads ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+frozenObjectsReturnsFrozenRealms
+--------------------------------
+
+.. _io_realm_FrozenObjectsTests_frozenObjectsReturnsFrozenRealms__:
+
+.. _io_realm_FrozenObjectsTests_frozenObjectsReturnsFrozenRealms__:
+
+.. _io_realm_FrozenObjectsTests_frozenObjectsReturnsFrozenRealms__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** frozenObjectsReturnsFrozenRealms ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+freezeResults
+-------------
+
+.. _io_realm_FrozenObjectsTests_freezeResults__:
+
+.. _io_realm_FrozenObjectsTests_freezeResults__:
+
+.. _io_realm_FrozenObjectsTests_freezeResults__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** freezeResults ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+freezeDynamicResults
+--------------------
+
+.. _io_realm_FrozenObjectsTests_freezeDynamicResults__:
+
+.. _io_realm_FrozenObjectsTests_freezeDynamicResults__:
+
+.. _io_realm_FrozenObjectsTests_freezeDynamicResults__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** freezeDynamicResults ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+freezeSnapshot
+--------------
+
+.. _io_realm_FrozenObjectsTests_freezeSnapshot__:
+
+.. _io_realm_FrozenObjectsTests_freezeSnapshot__:
+
+.. _io_realm_FrozenObjectsTests_freezeSnapshot__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** freezeSnapshot ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+freezeDynamicSnapshot
+---------------------
+
+.. _io_realm_FrozenObjectsTests_freezeDynamicSnapshot__:
+
+.. _io_realm_FrozenObjectsTests_freezeDynamicSnapshot__:
+
+.. _io_realm_FrozenObjectsTests_freezeDynamicSnapshot__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** freezeDynamicSnapshot ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+freezeLists
+-----------
+
+.. _io_realm_FrozenObjectsTests_freezeLists__:
+
+.. _io_realm_FrozenObjectsTests_freezeLists__:
+
+.. _io_realm_FrozenObjectsTests_freezeLists__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** freezeLists ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+freezeDynamicList
+-----------------
+
+.. _io_realm_FrozenObjectsTests_freezeDynamicList__:
+
+.. _io_realm_FrozenObjectsTests_freezeDynamicList__:
+
+.. _io_realm_FrozenObjectsTests_freezeDynamicList__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** freezeDynamicList ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+freezeObject
+------------
+
+.. _io_realm_FrozenObjectsTests_freezeObject__:
+
+.. _io_realm_FrozenObjectsTests_freezeObject__:
+
+.. _io_realm_FrozenObjectsTests_freezeObject__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** freezeObject ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+freezeDynamicObject
+-------------------
+
+.. _io_realm_FrozenObjectsTests_freezeDynamicObject__:
+
+.. _io_realm_FrozenObjectsTests_freezeDynamicObject__:
+
+.. _io_realm_FrozenObjectsTests_freezeDynamicObject__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** freezeDynamicObject ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+freezeDeletedObject
+-------------------
+
+.. _io_realm_FrozenObjectsTests_freezeDeletedObject__:
+
+.. _io_realm_FrozenObjectsTests_freezeDeletedObject__:
+
+.. _io_realm_FrozenObjectsTests_freezeDeletedObject__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** freezeDeletedObject ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+freezePendingObject
+-------------------
+
+.. _io_realm_FrozenObjectsTests_freezePendingObject__:
+
+.. _io_realm_FrozenObjectsTests_freezePendingObject__:
+
+.. _io_realm_FrozenObjectsTests_freezePendingObject__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** freezePendingObject ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+frozenRealms_notEqualToLiveRealm
+--------------------------------
+
+.. _io_realm_FrozenObjectsTests_frozenRealms_notEqualToLiveRealm__:
+
+.. _io_realm_FrozenObjectsTests_frozenRealms_notEqualToLiveRealm__:
+
+.. _io_realm_FrozenObjectsTests_frozenRealms_notEqualToLiveRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** frozenRealms_notEqualToLiveRealm ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+frozenRealm_notEqualToFrozenRealmAtOtherVersion
+-----------------------------------------------
+
+.. _io_realm_FrozenObjectsTests_frozenRealm_notEqualToFrozenRealmAtOtherVersion__:
+
+.. _io_realm_FrozenObjectsTests_frozenRealm_notEqualToFrozenRealmAtOtherVersion__:
+
+.. _io_realm_FrozenObjectsTests_frozenRealm_notEqualToFrozenRealmAtOtherVersion__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** frozenRealm_notEqualToFrozenRealmAtOtherVersion ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+frozenRealm_equalToFrozenRealmAtSameVersion
+-------------------------------------------
+
+.. _io_realm_FrozenObjectsTests_frozenRealm_equalToFrozenRealmAtSameVersion__:
+
+.. _io_realm_FrozenObjectsTests_frozenRealm_equalToFrozenRealmAtSameVersion__:
+
+.. _io_realm_FrozenObjectsTests_frozenRealm_equalToFrozenRealmAtSameVersion__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** frozenRealm_equalToFrozenRealmAtSameVersion ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+frozenRealm_closeFromOtherThread
+--------------------------------
+
+.. _io_realm_FrozenObjectsTests_frozenRealm_closeFromOtherThread__:
+
+.. _io_realm_FrozenObjectsTests_frozenRealm_closeFromOtherThread__:
+
+.. _io_realm_FrozenObjectsTests_frozenRealm_closeFromOtherThread__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** frozenRealm_closeFromOtherThread ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealm
+-----------
+
+.. _io_realm_FrozenObjectsTests_copyToRealm__:
+
+.. _io_realm_FrozenObjectsTests_copyToRealm__:
+
+.. _io_realm_FrozenObjectsTests_copyToRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealm ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+copyToRealmOrUpdate
+-------------------
+
+.. _io_realm_FrozenObjectsTests_copyToRealmOrUpdate__:
+
+.. _io_realm_FrozenObjectsTests_copyToRealmOrUpdate__:
+
+.. _io_realm_FrozenObjectsTests_copyToRealmOrUpdate__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** copyToRealmOrUpdate ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+insert
+------
+
+.. _io_realm_FrozenObjectsTests_insert__:
+
+.. _io_realm_FrozenObjectsTests_insert__:
+
+.. _io_realm_FrozenObjectsTests_insert__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** insert ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+insertList
+----------
+
+.. _io_realm_FrozenObjectsTests_insertList__:
+
+.. _io_realm_FrozenObjectsTests_insertList__:
+
+.. _io_realm_FrozenObjectsTests_insertList__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** insertList ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+insertOrUpdate
+--------------
+
+.. _io_realm_FrozenObjectsTests_insertOrUpdate__:
+
+.. _io_realm_FrozenObjectsTests_insertOrUpdate__:
+
+.. _io_realm_FrozenObjectsTests_insertOrUpdate__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** insertOrUpdate ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+insertOrUpdateList
+------------------
+
+.. _io_realm_FrozenObjectsTests_insertOrUpdateList__:
+
+.. _io_realm_FrozenObjectsTests_insertOrUpdateList__:
+
+.. _io_realm_FrozenObjectsTests_insertOrUpdateList__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** insertOrUpdateList ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+realmObject_equals
+------------------
+
+.. _io_realm_FrozenObjectsTests_realmObject_equals__:
+
+.. _io_realm_FrozenObjectsTests_realmObject_equals__:
+
+.. _io_realm_FrozenObjectsTests_realmObject_equals__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** realmObject_equals ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+realmObject_returnsFrozenRealm
+------------------------------
+
+.. _io_realm_FrozenObjectsTests_realmObject_returnsFrozenRealm__:
+
+.. _io_realm_FrozenObjectsTests_realmObject_returnsFrozenRealm__:
+
+.. _io_realm_FrozenObjectsTests_realmObject_returnsFrozenRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** realmObject_returnsFrozenRealm ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+realmList_returnsFrozenRealm
+----------------------------
+
+.. _io_realm_FrozenObjectsTests_realmList_returnsFrozenRealm__:
+
+.. _io_realm_FrozenObjectsTests_realmList_returnsFrozenRealm__:
+
+.. _io_realm_FrozenObjectsTests_realmList_returnsFrozenRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** realmList_returnsFrozenRealm ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+realmResults_returnsFrozenRealm
+-------------------------------
+
+.. _io_realm_FrozenObjectsTests_realmResults_returnsFrozenRealm__:
+
+.. _io_realm_FrozenObjectsTests_realmResults_returnsFrozenRealm__:
+
+.. _io_realm_FrozenObjectsTests_realmResults_returnsFrozenRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** realmResults_returnsFrozenRealm ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

@@ -1,0 +1,1299 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class ManagedOrderedRealmCollectionTests
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_ManagedOrderedRealmCollectionTests:
+
+
+
+io.realm
+========
+
+:ref:`io.realm.CollectionTests <io_realm_CollectionTests>` 
+ | 		`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+Test class for all methods specific to OrderedRealmCollections that are not implementation specific. Methods tested in this class: # OrderedRealmCollection - E first() - E last() + void sort(String field) + void sort(String field, Sort sortOrder) + void sort(String field1, Sort sortOrder1, String field2, Sort sortOrder2) + void sort(String[] fields, Sort[] sortOrders) + void deleteFromRealm(int location) + void deleteFirstFromRealm() + void deleteLastFromRealm(); # List - void add(int location, E object); - boolean addAll(int location, Collection collection); - E get(int location); - int indexOf(Object object); - int lastIndexOf(Object object); - ListIterator listIterator(); - ListIterator listIterator(int location); - E remove(int location); - E set(int location, E object); - List subList(int start, int end); # RealmCollection - RealmQuery where(); - Number min(String fieldName); - Number max(String fieldName); - Number sum(String fieldName); - double average(String fieldName); - Date maxDate(String fieldName); - Date minDate(String fieldName); - void deleteAllFromRealm(); - boolean isLoaded(); - boolean load(); - boolean isValid(); - BaseRealm getRealm(); # Collection - public boolean add(E object); - public boolean addAll(Collection collection); - public void deleteAll(); - public boolean contains(Object object); - public boolean containsAll(Collection collection); - public boolean equals(Object object); - public int hashCode(); - public boolean isEmpty(); - public Iterator iterator(); - public boolean remove(Object object); - public boolean removeAll(Collection collection); - public boolean retainAll(Collection collection); - public int size(); - public Object[] toArray(); - public T[] toArray(T[] array);
+
+
+.. seealso::
+
+
+   
+   - :ref:`RealmCollectionTests <io_realm_RealmCollectionTests>` 
+      
+      
+      
+   - :ref:`ManagedRealmCollectionTests <io_realm_ManagedRealmCollectionTests>` 
+      
+      
+      
+   - :ref:`UnManagedRealmCollectionTests <io_realm_UnManagedRealmCollectionTests>` 
+      
+      
+      
+   
+   
+   
+
+
+
+Constructors
+============
+
+
+
+- ``io.realm.ManagedOrderedRealmCollectionTests(CollectionTests.ManagedCollection)`` 
+
+
+
+
+Field Summary
+=============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Field and Description
+   
+   * - ``public final io.realm.TestRealmConfigurationFactory`` 
+       
+       
+     - ``configFactory`` 
+       
+       
+   
+   * - ``public final ExpectedException`` 
+       
+       
+     - ``thrown`` 
+       
+       
+   
+   
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public static `List <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__ 
+     - 
+       :ref:`data <io_realm_ManagedOrderedRealmCollectionTests_data__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setup <io_realm_ManagedOrderedRealmCollectionTests_setup__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`tearDown <io_realm_ManagedOrderedRealmCollectionTests_tearDown__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`sort_twoFields <io_realm_ManagedOrderedRealmCollectionTests_sort_twoFields__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`sort_boolean <io_realm_ManagedOrderedRealmCollectionTests_sort_boolean__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`sort_string <io_realm_ManagedOrderedRealmCollectionTests_sort_string__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`sort_double <io_realm_ManagedOrderedRealmCollectionTests_sort_double__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`sort_float <io_realm_ManagedOrderedRealmCollectionTests_sort_float__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`sort_rowsWithPartialNullValues <io_realm_ManagedOrderedRealmCollectionTests_sort_rowsWithPartialNullValues__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`sort_nonExistingColumn <io_realm_ManagedOrderedRealmCollectionTests_sort_nonExistingColumn__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`sort_danishCharacters <io_realm_ManagedOrderedRealmCollectionTests_sort_danishCharacters__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`sort_russianCharacters <io_realm_ManagedOrderedRealmCollectionTests_sort_russianCharacters__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`sort_greekCharacters <io_realm_ManagedOrderedRealmCollectionTests_sort_greekCharacters__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`sort_manyDifferentCharacters <io_realm_ManagedOrderedRealmCollectionTests_sort_manyDifferentCharacters__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`sort_twoLanguages <io_realm_ManagedOrderedRealmCollectionTests_sort_twoLanguages__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`sort_usingChildObject <io_realm_ManagedOrderedRealmCollectionTests_sort_usingChildObject__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`sort_nullArguments <io_realm_ManagedOrderedRealmCollectionTests_sort_nullArguments__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`sort_emptyResults <io_realm_ManagedOrderedRealmCollectionTests_sort_emptyResults__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`sort_singleField <io_realm_ManagedOrderedRealmCollectionTests_sort_singleField__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`sort_date <io_realm_ManagedOrderedRealmCollectionTests_sort_date__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`sort_long <io_realm_ManagedOrderedRealmCollectionTests_sort_long__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`deleteFromRealm <io_realm_ManagedOrderedRealmCollectionTests_deleteFromRealm__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`deleteFromRealm_invalidIndex <io_realm_ManagedOrderedRealmCollectionTests_deleteFromRealm_invalidIndex__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`deleteFirstFromRealm <io_realm_ManagedOrderedRealmCollectionTests_deleteFirstFromRealm__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`deleteFirstFromRealm_emptyCollection <io_realm_ManagedOrderedRealmCollectionTests_deleteFirstFromRealm_emptyCollection__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`deleteLastFromRealm <io_realm_ManagedOrderedRealmCollectionTests_deleteLastFromRealm__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`deleteLastFromRealm_emptyCollection <io_realm_ManagedOrderedRealmCollectionTests_deleteLastFromRealm_emptyCollection__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`mutableMethodsOutsideTransactions <io_realm_ManagedOrderedRealmCollectionTests_mutableMethodsOutsideTransactions__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`methodsThrowOnWrongThread <io_realm_ManagedOrderedRealmCollectionTests_methodsThrowOnWrongThread__>`  ()
+       
+       
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface :ref:`io.realm.CollectionTests <io_realm_CollectionTests>` : 
+   
+   ``populateRealm`` , ``populateInMemoryList`` , ``populateCollectionOnDeletedLinkView`` , ``populatePartialNullRowsForNumericTesting`` , ``createStringCollection`` 
+   
+   
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+
+
+
+
+Field Detail
+============
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_configFactory:
+
+
+
+``configFactory`` 
+------------------
+
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_thrown:
+
+
+
+``thrown`` 
+-----------
+
+
+
+
+Method Detail
+=============
+
+
+
+data
+----
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_data__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_data__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_data__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static `List <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  data ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+setup
+-----
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_setup__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_setup__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_setup__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setup ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+tearDown
+--------
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_tearDown__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_tearDown__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_tearDown__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** tearDown ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+sort_twoFields
+--------------
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_twoFields__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_twoFields__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_twoFields__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** sort_twoFields ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+sort_boolean
+------------
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_boolean__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_boolean__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_boolean__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** sort_boolean ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+sort_string
+-----------
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_string__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_string__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_string__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** sort_string ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+sort_double
+-----------
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_double__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_double__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_double__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** sort_double ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+sort_float
+----------
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_float__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_float__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_float__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** sort_float ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+sort_rowsWithPartialNullValues
+------------------------------
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_rowsWithPartialNullValues__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_rowsWithPartialNullValues__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_rowsWithPartialNullValues__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** sort_rowsWithPartialNullValues ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+sort_nonExistingColumn
+----------------------
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_nonExistingColumn__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_nonExistingColumn__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_nonExistingColumn__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** sort_nonExistingColumn ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+sort_danishCharacters
+---------------------
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_danishCharacters__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_danishCharacters__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_danishCharacters__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** sort_danishCharacters ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+sort_russianCharacters
+----------------------
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_russianCharacters__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_russianCharacters__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_russianCharacters__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** sort_russianCharacters ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+sort_greekCharacters
+--------------------
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_greekCharacters__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_greekCharacters__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_greekCharacters__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** sort_greekCharacters ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+sort_manyDifferentCharacters
+----------------------------
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_manyDifferentCharacters__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_manyDifferentCharacters__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_manyDifferentCharacters__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** sort_manyDifferentCharacters ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+sort_twoLanguages
+-----------------
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_twoLanguages__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_twoLanguages__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_twoLanguages__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** sort_twoLanguages ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+sort_usingChildObject
+---------------------
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_usingChildObject__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_usingChildObject__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_usingChildObject__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** sort_usingChildObject ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+sort_nullArguments
+------------------
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_nullArguments__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_nullArguments__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_nullArguments__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** sort_nullArguments ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+sort_emptyResults
+-----------------
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_emptyResults__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_emptyResults__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_emptyResults__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** sort_emptyResults ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+sort_singleField
+----------------
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_singleField__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_singleField__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_singleField__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** sort_singleField ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+sort_date
+---------
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_date__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_date__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_date__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** sort_date ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+sort_long
+---------
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_long__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_long__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_sort_long__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** sort_long ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+deleteFromRealm
+---------------
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_deleteFromRealm__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_deleteFromRealm__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_deleteFromRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** deleteFromRealm ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+deleteFromRealm_invalidIndex
+----------------------------
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_deleteFromRealm_invalidIndex__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_deleteFromRealm_invalidIndex__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_deleteFromRealm_invalidIndex__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** deleteFromRealm_invalidIndex ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+deleteFirstFromRealm
+--------------------
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_deleteFirstFromRealm__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_deleteFirstFromRealm__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_deleteFirstFromRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** deleteFirstFromRealm ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+deleteFirstFromRealm_emptyCollection
+------------------------------------
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_deleteFirstFromRealm_emptyCollection__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_deleteFirstFromRealm_emptyCollection__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_deleteFirstFromRealm_emptyCollection__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** deleteFirstFromRealm_emptyCollection ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+deleteLastFromRealm
+-------------------
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_deleteLastFromRealm__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_deleteLastFromRealm__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_deleteLastFromRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** deleteLastFromRealm ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+deleteLastFromRealm_emptyCollection
+-----------------------------------
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_deleteLastFromRealm_emptyCollection__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_deleteLastFromRealm_emptyCollection__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_deleteLastFromRealm_emptyCollection__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** deleteLastFromRealm_emptyCollection ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+mutableMethodsOutsideTransactions
+---------------------------------
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_mutableMethodsOutsideTransactions__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_mutableMethodsOutsideTransactions__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_mutableMethodsOutsideTransactions__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** mutableMethodsOutsideTransactions ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+methodsThrowOnWrongThread
+-------------------------
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_methodsThrowOnWrongThread__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_methodsThrowOnWrongThread__:
+
+.. _io_realm_ManagedOrderedRealmCollectionTests_methodsThrowOnWrongThread__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** methodsThrowOnWrongThread ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

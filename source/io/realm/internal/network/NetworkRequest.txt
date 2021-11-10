@@ -1,0 +1,336 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class NetworkRequest
+^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_internal_network_NetworkRequest:
+
+
+
+io.realm.internal.network
+=========================
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+ | 		:ref:`io.realm.internal.objectstore.OsJavaNetworkTransport.NetworkTransportJNIResultCallback <io_realm_internal_objectstore_OsJavaNetworkTransport_NetworkTransportJNIResultCallback>` 
+
+Class wrapping the back-and-forth required by the Network Transport layer in ObjectStore. This class wraps the request itself as well as handles the completion block triggered by ObjectStore. That API exposed by this class is synchronous, but the callbacks from ObjectStore will happen on a thread determined by the :ref:`OsJavaNetworkTransport <io_realm_internal_objectstore_OsJavaNetworkTransport>`  implementation. In release builds, this is :ref:`OkHttpNetworkTransport <io_realm_internal_network_OkHttpNetworkTransport>`  which run on a special Looper thread.
+
+
+
+
+Constructors
+============
+
+
+
+- ``io.realm.internal.network.NetworkRequest()`` 
+
+
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       protected abstract **void**
+     - 
+       :ref:`execute <io_realm_internal_network_NetworkRequest_execute_NetworkRequest_T__>`  (:ref:`io.realm.internal.network.NetworkRequest\<T> <io_realm_internal_network_NetworkRequest>`  callback)
+       
+       Responsible for doing the network request by calling the relevant ObjectStore method.
+       
+       
+       
+   
+   * - 
+       protected abstract **T (?)**
+     - 
+       :ref:`mapSuccess <io_realm_internal_network_NetworkRequest_mapSuccess_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  result)
+       
+       In the case of a successful request.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`onError <io_realm_internal_network_NetworkRequest_onError_String__int__String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  nativeErrorCategory,
+                             **int** nativeErrorCode,
+                             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  errorMessage)
+       
+       Request failed.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`onSuccess <io_realm_internal_network_NetworkRequest_onSuccess_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  result)
+       
+       Request was successful.
+       
+       
+       
+   
+   * - 
+       public **T (?)**
+     - 
+       :ref:`resultOrThrow <io_realm_internal_network_NetworkRequest_resultOrThrow__>`  ()
+       
+       Run the network request and wait for the result.
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+- Methods inherited from interface :ref:`io.realm.internal.objectstore.OsJavaNetworkTransport.NetworkTransportJNIResultCallback <io_realm_internal_objectstore_OsJavaNetworkTransport_NetworkTransportJNIResultCallback>` : 
+   
+   ``onSuccess`` , ``onError`` 
+   
+   
+
+
+
+
+Method Detail
+=============
+
+.. _execute:
+
+.. _execute__:
+
+.. _NetworkRequest_execute:
+
+.. _NetworkRequest_execute__:
+
+.. _io_realm_internal_network_NetworkRequest_execute:
+
+.. _io_realm_internal_network_NetworkRequest_execute__:
+
+
+
+execute
+-------
+
+.. _io_realm_internal_network_NetworkRequest_execute_NetworkRequest_T__:
+
+.. _io_realm_internal_network_NetworkRequest_execute_NetworkRequest_:
+
+.. _io_realm_internal_network_NetworkRequest_execute_NetworkRequest_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected abstract **void** execute (:ref:`io.realm.internal.network.NetworkRequest\<T> <io_realm_internal_network_NetworkRequest>`  callback)
+   
+   * - Responsible for doing the network request by calling the relevant ObjectStore method.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _mapSuccess:
+
+.. _mapSuccess__:
+
+.. _NetworkRequest_mapSuccess:
+
+.. _NetworkRequest_mapSuccess__:
+
+.. _io_realm_internal_network_NetworkRequest_mapSuccess:
+
+.. _io_realm_internal_network_NetworkRequest_mapSuccess__:
+
+
+
+mapSuccess
+----------
+
+.. _io_realm_internal_network_NetworkRequest_mapSuccess_Object_:
+
+.. _io_realm_internal_network_NetworkRequest_mapSuccess_Object_:
+
+.. _io_realm_internal_network_NetworkRequest_mapSuccess_Object_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected abstract **T (?)** mapSuccess (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  result)
+   
+   * - In the case of a successful request. Map the return value back to the type expected by top-level consumers.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _onError:
+
+.. _onError__:
+
+.. _NetworkRequest_onError:
+
+.. _NetworkRequest_onError__:
+
+.. _io_realm_internal_network_NetworkRequest_onError:
+
+.. _io_realm_internal_network_NetworkRequest_onError__:
+
+
+
+onError
+-------
+
+.. _io_realm_internal_network_NetworkRequest_onError_String__int__String_:
+
+.. _io_realm_internal_network_NetworkRequest_onError_String_int_String_:
+
+.. _io_realm_internal_network_NetworkRequest_onError_String__int__String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** onError (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  nativeErrorCategory,
+                             **int** nativeErrorCode,
+                             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  errorMessage)
+   
+   * - Request failed. Will be called by the ObjectStore completion handler.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _onSuccess:
+
+.. _onSuccess__:
+
+.. _NetworkRequest_onSuccess:
+
+.. _NetworkRequest_onSuccess__:
+
+.. _io_realm_internal_network_NetworkRequest_onSuccess:
+
+.. _io_realm_internal_network_NetworkRequest_onSuccess__:
+
+
+
+onSuccess
+---------
+
+.. _io_realm_internal_network_NetworkRequest_onSuccess_Object_:
+
+.. _io_realm_internal_network_NetworkRequest_onSuccess_Object_:
+
+.. _io_realm_internal_network_NetworkRequest_onSuccess_Object_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** onSuccess (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  result)
+   
+   * - Request was successful. Will be called by the ObjectStore completion handler.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _resultOrThrow:
+
+.. _resultOrThrow__:
+
+.. _NetworkRequest_resultOrThrow:
+
+.. _NetworkRequest_resultOrThrow__:
+
+.. _io_realm_internal_network_NetworkRequest_resultOrThrow:
+
+.. _io_realm_internal_network_NetworkRequest_resultOrThrow__:
+
+
+
+resultOrThrow
+-------------
+
+.. _io_realm_internal_network_NetworkRequest_resultOrThrow__:
+
+.. _io_realm_internal_network_NetworkRequest_resultOrThrow__:
+
+.. _io_realm_internal_network_NetworkRequest_resultOrThrow__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **T (?)** resultOrThrow ()
+   
+   * - Run the network request and wait for the result. If the request was a success, the result is returned. If not, an error occurred and it will be thrown as an AppException.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

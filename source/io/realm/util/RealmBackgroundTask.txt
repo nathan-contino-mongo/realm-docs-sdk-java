@@ -1,0 +1,156 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class RealmBackgroundTask
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_util_RealmBackgroundTask:
+
+
+
+io.realm.util
+=============
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+Utility class for running a task on a non-looper background thread. This class ensures that the background Realm is automatically closed no matter the outcome of the test. Failures can be asserted using ``task.checkFailure()`` 
+
+
+
+
+Constructors
+============
+
+
+
+- ``io.realm.util.RealmBackgroundTask(RealmConfiguration)`` 
+
+
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public **void**
+     - 
+       :ref:`awaitOrFail <io_realm_util_RealmBackgroundTask_awaitOrFail__>`  ()
+       
+       Runs the task on a background thread.
+       
+       
+       
+   
+   * - 
+       protected abstract **void**
+     - 
+       :ref:`doInBackground <io_realm_util_RealmBackgroundTask_doInBackground_Realm_>`  (:ref:`Realm <io_realm_Realm>`  realm)
+       
+       Executes the task.
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+
+
+
+
+Method Detail
+=============
+
+
+
+awaitOrFail
+-----------
+
+.. _io_realm_util_RealmBackgroundTask_awaitOrFail__:
+
+.. _io_realm_util_RealmBackgroundTask_awaitOrFail__:
+
+.. _io_realm_util_RealmBackgroundTask_awaitOrFail__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** awaitOrFail ()
+   
+   * - Runs the task on a background thread. It will either return when it completes successfully or throw an **junit.framework.AssertionFailedError (?)** if it failed or timed out. The background task is limited to 10 seconds after which it will time out.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+doInBackground
+--------------
+
+.. _io_realm_util_RealmBackgroundTask_doInBackground_Realm_:
+
+.. _io_realm_util_RealmBackgroundTask_doInBackground_Realm_:
+
+.. _io_realm_util_RealmBackgroundTask_doInBackground_Realm_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected abstract **void** doInBackground (:ref:`Realm <io_realm_Realm>`  realm)
+   
+   * - Executes the task. This method is called on a background thread.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``realm`` - Realm instance created by the provided configuration.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

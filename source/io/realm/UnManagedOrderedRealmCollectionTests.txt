@@ -1,0 +1,386 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class UnManagedOrderedRealmCollectionTests
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_UnManagedOrderedRealmCollectionTests:
+
+
+
+io.realm
+========
+
+:ref:`io.realm.CollectionTests <io_realm_CollectionTests>` 
+ | 		`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+Test class for all methods part of the the :ref:`OrderedRealmCollection <io_realm_OrderedRealmCollection>`  interface, that have a different behavior than managed RealmCollection classes. Methods tested in this class: # OrderedRealmCollection - E first() - E last() - void sort(String field) - void sort(String field, Sort sortOrder) - void sort(String field1, Sort sortOrder1, String field2, Sort sortOrder2) - void sort(String[] fields, Sort[] sortOrders) - void deleteFromRealm(int location) - void deleteFirstFromRealm() - void deleteLastFromRealm(); # List - void add(int location, E object); - boolean addAll(int location, Collection
+
+ collection); - E get(int location); - int indexOf(Object object); - int lastIndexOf(Object object); - ListIterator listIterator(); - ListIterator listIterator(int location); - E remove(int location); - E set(int location, E object); - List subList(int start, int end); # RealmCollection - RealmQuery where(); - Number min(String fieldName); - Number max(String fieldName); - Number sum(String fieldName); - double average(String fieldName); - Date maxDate(String fieldName); - Date minDate(String fieldName); - void deleteAllFromRealm(); + boolean isLoaded(); + boolean load(); + boolean isValid(); + BaseRealm getRealm(); # Collection - public boolean add(E object); - public boolean addAll(Collection collection); - public void deleteAll(); - public boolean contains(Object object); - public boolean containsAll(Collection collection); - public boolean equals(Object object); - public int hashCode(); - public boolean isEmpty(); - public Iterator iterator(); - public boolean remove(Object object); - public boolean removeAll(Collection collection); - public boolean retainAll(Collection collection); - public int size(); - public Object[] toArray(); - public T[] toArray(T[] array); See :ref:`ManagedOrderedRealmCollectionTests <io_realm_ManagedOrderedRealmCollectionTests>`  for similar tests for the managed behavior.
+
+
+
+
+Constructors
+============
+
+
+
+- ``io.realm.UnManagedOrderedRealmCollectionTests(CollectionTests.UnManagedCollection)`` 
+
+
+
+
+Field Summary
+=============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Field and Description
+   
+   * - ``public final io.realm.TestRealmConfigurationFactory`` 
+       
+       
+     - ``configFactory`` 
+       
+       
+   
+   
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public static `List <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__ 
+     - 
+       :ref:`data <io_realm_UnManagedOrderedRealmCollectionTests_data__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setup <io_realm_UnManagedOrderedRealmCollectionTests_setup__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`tearDown <io_realm_UnManagedOrderedRealmCollectionTests_tearDown__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`unsupportedMethods_unManagedCollections <io_realm_UnManagedOrderedRealmCollectionTests_unsupportedMethods_unManagedCollections__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`isLoaded <io_realm_UnManagedOrderedRealmCollectionTests_isLoaded__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`load <io_realm_UnManagedOrderedRealmCollectionTests_load__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`isValid <io_realm_UnManagedOrderedRealmCollectionTests_isValid__>`  ()
+       
+       
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface :ref:`io.realm.CollectionTests <io_realm_CollectionTests>` : 
+   
+   ``populateRealm`` , ``populateInMemoryList`` , ``populateCollectionOnDeletedLinkView`` , ``populatePartialNullRowsForNumericTesting`` , ``createStringCollection`` 
+   
+   
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+
+
+
+
+Field Detail
+============
+
+.. _io_realm_UnManagedOrderedRealmCollectionTests_configFactory:
+
+
+
+``configFactory`` 
+------------------
+
+
+
+
+Method Detail
+=============
+
+
+
+data
+----
+
+.. _io_realm_UnManagedOrderedRealmCollectionTests_data__:
+
+.. _io_realm_UnManagedOrderedRealmCollectionTests_data__:
+
+.. _io_realm_UnManagedOrderedRealmCollectionTests_data__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static `List <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  data ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+setup
+-----
+
+.. _io_realm_UnManagedOrderedRealmCollectionTests_setup__:
+
+.. _io_realm_UnManagedOrderedRealmCollectionTests_setup__:
+
+.. _io_realm_UnManagedOrderedRealmCollectionTests_setup__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setup ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+tearDown
+--------
+
+.. _io_realm_UnManagedOrderedRealmCollectionTests_tearDown__:
+
+.. _io_realm_UnManagedOrderedRealmCollectionTests_tearDown__:
+
+.. _io_realm_UnManagedOrderedRealmCollectionTests_tearDown__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** tearDown ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+unsupportedMethods_unManagedCollections
+---------------------------------------
+
+.. _io_realm_UnManagedOrderedRealmCollectionTests_unsupportedMethods_unManagedCollections__:
+
+.. _io_realm_UnManagedOrderedRealmCollectionTests_unsupportedMethods_unManagedCollections__:
+
+.. _io_realm_UnManagedOrderedRealmCollectionTests_unsupportedMethods_unManagedCollections__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** unsupportedMethods_unManagedCollections ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+isLoaded
+--------
+
+.. _io_realm_UnManagedOrderedRealmCollectionTests_isLoaded__:
+
+.. _io_realm_UnManagedOrderedRealmCollectionTests_isLoaded__:
+
+.. _io_realm_UnManagedOrderedRealmCollectionTests_isLoaded__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** isLoaded ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+load
+----
+
+.. _io_realm_UnManagedOrderedRealmCollectionTests_load__:
+
+.. _io_realm_UnManagedOrderedRealmCollectionTests_load__:
+
+.. _io_realm_UnManagedOrderedRealmCollectionTests_load__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** load ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+isValid
+-------
+
+.. _io_realm_UnManagedOrderedRealmCollectionTests_isValid__:
+
+.. _io_realm_UnManagedOrderedRealmCollectionTests_isValid__:
+
+.. _io_realm_UnManagedOrderedRealmCollectionTests_isValid__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** isValid ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

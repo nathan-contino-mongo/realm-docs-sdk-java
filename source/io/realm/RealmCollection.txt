@@ -22,6 +22,8 @@ io.realm
 
 
 - `java.util.Collection <https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html>`__ 
+- :ref:`io.realm.internal.ManageableObject <io_realm_internal_ManageableObject>` 
+- :ref:`io.realm.internal.Freezable <io_realm_internal_Freezable>` 
 - `java.lang.Iterable <https://docs.oracle.com/javase/7/docs/api/java/lang/Iterable.html>`__ 
 
 
@@ -44,48 +46,6 @@ Method Summary
      - Method and Description
    
    * - 
-       public :ref:`RealmQuery <io_realm_RealmQuery>` 
-     - 
-       :ref:`where <io_realm_RealmCollection_where__>`  ()
-       
-       Returns a :ref:`RealmQuery <io_realm_RealmQuery>` , which can be used to query for specific objects from this collection.
-       
-       
-       
-       
-       
-   
-   * - 
-       public `Number <https://docs.oracle.com/javase/7/docs/api/java/lang/Number.html>`__ 
-     - 
-       :ref:`min <io_realm_RealmCollection_min_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-       
-       Finds the minimum value of a field.
-       
-       
-       
-   
-   * - 
-       public `Number <https://docs.oracle.com/javase/7/docs/api/java/lang/Number.html>`__ 
-     - 
-       :ref:`max <io_realm_RealmCollection_max_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-       
-       Finds the maximum value of a field.
-       
-       
-       
-   
-   * - 
-       public `Number <https://docs.oracle.com/javase/7/docs/api/java/lang/Number.html>`__ 
-     - 
-       :ref:`sum <io_realm_RealmCollection_sum_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-       
-       Calculates the sum of a given field.
-       
-       
-       
-   
-   * - 
        public **double**
      - 
        :ref:`average <io_realm_RealmCollection_average_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
@@ -96,21 +56,13 @@ Method Summary
        
    
    * - 
-       public `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__ 
+       public **boolean**
      - 
-       :ref:`maxDate <io_realm_RealmCollection_maxDate_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       :ref:`contains <io_realm_RealmCollection_contains_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  object)
        
-       Finds the maximum date.
+       Tests whether this ``Collection``  contains the specified object.
        
        
-       
-   
-   * - 
-       public `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__ 
-     - 
-       :ref:`minDate <io_realm_RealmCollection_minDate_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-       
-       Finds the minimum date.
        
        
        
@@ -138,9 +90,9 @@ Method Summary
    * - 
        public **boolean**
      - 
-       :ref:`load <io_realm_RealmCollection_load__>`  ()
+       :ref:`isManaged <io_realm_RealmCollection_isManaged__>`  ()
        
-       Blocks the collection until all data are available.
+       Checks if the collection is managed by Realm.
        
        
        
@@ -160,19 +112,69 @@ Method Summary
    * - 
        public **boolean**
      - 
-       :ref:`isManaged <io_realm_RealmCollection_isManaged__>`  ()
+       :ref:`load <io_realm_RealmCollection_load__>`  ()
        
-       Checks if the collection is managed by Realm.
+       Blocks the collection until all data are available.
        
        
        
    
    * - 
-       public **boolean**
+       public `Number <https://docs.oracle.com/javase/7/docs/api/java/lang/Number.html>`__ 
      - 
-       :ref:`contains <io_realm_RealmCollection_contains_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  object)
+       :ref:`max <io_realm_RealmCollection_max_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
        
-       Tests whether this ``Collection``  contains the specified object.
+       Finds the maximum value of a field.
+       
+       
+       
+   
+   * - 
+       public `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__ 
+     - 
+       :ref:`maxDate <io_realm_RealmCollection_maxDate_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       
+       Finds the maximum date.
+       
+       
+       
+   
+   * - 
+       public `Number <https://docs.oracle.com/javase/7/docs/api/java/lang/Number.html>`__ 
+     - 
+       :ref:`min <io_realm_RealmCollection_min_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       
+       Finds the minimum value of a field.
+       
+       
+       
+   
+   * - 
+       public `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__ 
+     - 
+       :ref:`minDate <io_realm_RealmCollection_minDate_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       
+       Finds the minimum date.
+       
+       
+       
+   
+   * - 
+       public `Number <https://docs.oracle.com/javase/7/docs/api/java/lang/Number.html>`__ 
+     - 
+       :ref:`sum <io_realm_RealmCollection_sum_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       
+       Calculates the sum of a given field.
+       
+       
+       
+   
+   * - 
+       public :ref:`RealmQuery <io_realm_RealmQuery>` 
+     - 
+       :ref:`where <io_realm_RealmCollection_where__>`  ()
+       
+       Returns a :ref:`RealmQuery <io_realm_RealmQuery>` , which can be used to query for specific objects from this collection.
        
        
        
@@ -189,6 +191,680 @@ Inherited Methods
 
 Method Detail
 =============
+
+.. _average:
+
+.. _average__:
+
+.. _RealmCollection_average:
+
+.. _RealmCollection_average__:
+
+.. _io_realm_RealmCollection_average:
+
+.. _io_realm_RealmCollection_average__:
+
+
+
+average
+-------
+
+.. _io_realm_RealmCollection_average_String_:
+
+.. _io_realm_RealmCollection_average_String_:
+
+.. _io_realm_RealmCollection_average_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **double** average (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   
+   * - Returns the average of a given field.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - the field to calculate average on. Only number fields are supported.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `java.lang.IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the field is not a number type.
+          
+          
+          
+       - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm has been closed or called from an incorrect thread.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _contains:
+
+.. _contains__:
+
+.. _RealmCollection_contains:
+
+.. _RealmCollection_contains__:
+
+.. _io_realm_RealmCollection_contains:
+
+.. _io_realm_RealmCollection_contains__:
+
+
+
+contains
+--------
+
+.. _io_realm_RealmCollection_contains_Object_:
+
+.. _io_realm_RealmCollection_contains_Object_:
+
+.. _io_realm_RealmCollection_contains_Object_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** contains (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  object)
+   
+   * - Tests whether this ``Collection``  contains the specified object. Returns ``true``  if and only if at least one element ``elem``  in this ``Collection``  meets following requirement: ``(object==null ? elem==null : object.equals(elem))`` .
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``object`` - the object to search for.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `NullPointerException <https://docs.oracle.com/javase/7/docs/api/java/lang/NullPointerException.html>`__  - if the object to look for is ``null``  and this ``Collection``  doesn't support ``null``  elements.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _deleteAllFromRealm:
+
+.. _deleteAllFromRealm__:
+
+.. _RealmCollection_deleteAllFromRealm:
+
+.. _RealmCollection_deleteAllFromRealm__:
+
+.. _io_realm_RealmCollection_deleteAllFromRealm:
+
+.. _io_realm_RealmCollection_deleteAllFromRealm__:
+
+
+
+deleteAllFromRealm
+------------------
+
+.. _io_realm_RealmCollection_deleteAllFromRealm__:
+
+.. _io_realm_RealmCollection_deleteAllFromRealm__:
+
+.. _io_realm_RealmCollection_deleteAllFromRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** deleteAllFromRealm ()
+   
+   * - This deletes all objects in the collection from the underlying Realm as well as from the collection.
+       
+       
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the corresponding Realm is closed or in an incorrect thread.
+          
+          
+          
+       - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm has been closed or called from an incorrect thread.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _isLoaded:
+
+.. _isLoaded__:
+
+.. _RealmCollection_isLoaded:
+
+.. _RealmCollection_isLoaded__:
+
+.. _io_realm_RealmCollection_isLoaded:
+
+.. _io_realm_RealmCollection_isLoaded__:
+
+
+
+isLoaded
+--------
+
+.. _io_realm_RealmCollection_isLoaded__:
+
+.. _io_realm_RealmCollection_isLoaded__:
+
+.. _io_realm_RealmCollection_isLoaded__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** isLoaded ()
+   
+   * - Checks if a collection has finished loading its data yet.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _isManaged:
+
+.. _isManaged__:
+
+.. _RealmCollection_isManaged:
+
+.. _RealmCollection_isManaged__:
+
+.. _io_realm_RealmCollection_isManaged:
+
+.. _io_realm_RealmCollection_isManaged__:
+
+
+
+isManaged
+---------
+
+.. _io_realm_RealmCollection_isManaged__:
+
+.. _io_realm_RealmCollection_isManaged__:
+
+.. _io_realm_RealmCollection_isManaged__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** isManaged ()
+   
+   * - Checks if the collection is managed by Realm. A managed collection is just a wrapper around the data in the underlying Realm file. On Looper threads, a managed collection will be live-updated so it always points to the latest data. Managed collections are thread confined so that they cannot be accessed from other threads than the one that created them.If this method returns ``false`` , the collection is unmanaged. An unmanaged collection is just a normal java collection, so it will not be live updated.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _isValid:
+
+.. _isValid__:
+
+.. _RealmCollection_isValid:
+
+.. _RealmCollection_isValid__:
+
+.. _io_realm_RealmCollection_isValid:
+
+.. _io_realm_RealmCollection_isValid__:
+
+
+
+isValid
+-------
+
+.. _io_realm_RealmCollection_isValid__:
+
+.. _io_realm_RealmCollection_isValid__:
+
+.. _io_realm_RealmCollection_isValid__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** isValid ()
+   
+   * - Checks if the collection is still valid to use, i.e., the :ref:`io.realm.Realm <io_realm_Realm>`  instance hasn't been closed. It will always return ``true``  for an unmanaged collection.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _load:
+
+.. _load__:
+
+.. _RealmCollection_load:
+
+.. _RealmCollection_load__:
+
+.. _io_realm_RealmCollection_load:
+
+.. _io_realm_RealmCollection_load__:
+
+
+
+load
+----
+
+.. _io_realm_RealmCollection_load__:
+
+.. _io_realm_RealmCollection_load__:
+
+.. _io_realm_RealmCollection_load__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** load ()
+   
+   * - Blocks the collection until all data are available.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _max:
+
+.. _max__:
+
+.. _RealmCollection_max:
+
+.. _RealmCollection_max__:
+
+.. _io_realm_RealmCollection_max:
+
+.. _io_realm_RealmCollection_max__:
+
+
+
+max
+----
+
+.. _io_realm_RealmCollection_max_String_:
+
+.. _io_realm_RealmCollection_max_String_:
+
+.. _io_realm_RealmCollection_max_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `Number <https://docs.oracle.com/javase/7/docs/api/java/lang/Number.html>`__  max (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   
+   * - Finds the maximum value of a field.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - the field to look for a maximum on. Only number fields are supported.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `java.lang.IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the field is not a number type.
+          
+          
+          
+       - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm has been closed or called from an incorrect thread.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _maxDate:
+
+.. _maxDate__:
+
+.. _RealmCollection_maxDate:
+
+.. _RealmCollection_maxDate__:
+
+.. _io_realm_RealmCollection_maxDate:
+
+.. _io_realm_RealmCollection_maxDate__:
+
+
+
+maxDate
+-------
+
+.. _io_realm_RealmCollection_maxDate_String_:
+
+.. _io_realm_RealmCollection_maxDate_String_:
+
+.. _io_realm_RealmCollection_maxDate_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  maxDate (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   
+   * - Finds the maximum date.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - the field to look for the maximum date. If fieldName is not of Date type, an exception is thrown.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `java.lang.IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if fieldName is not a Date field.
+          
+          
+          
+       - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm has been closed or called from an incorrect thread.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _min:
+
+.. _min__:
+
+.. _RealmCollection_min:
+
+.. _RealmCollection_min__:
+
+.. _io_realm_RealmCollection_min:
+
+.. _io_realm_RealmCollection_min__:
+
+
+
+min
+----
+
+.. _io_realm_RealmCollection_min_String_:
+
+.. _io_realm_RealmCollection_min_String_:
+
+.. _io_realm_RealmCollection_min_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `Number <https://docs.oracle.com/javase/7/docs/api/java/lang/Number.html>`__  min (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   
+   * - Finds the minimum value of a field.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - the field to look for a minimum on. Only number fields are supported.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `java.lang.IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the field is not a number type.
+          
+          
+          
+       - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm has been closed or called from an incorrect thread.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _minDate:
+
+.. _minDate__:
+
+.. _RealmCollection_minDate:
+
+.. _RealmCollection_minDate__:
+
+.. _io_realm_RealmCollection_minDate:
+
+.. _io_realm_RealmCollection_minDate__:
+
+
+
+minDate
+-------
+
+.. _io_realm_RealmCollection_minDate_String_:
+
+.. _io_realm_RealmCollection_minDate_String_:
+
+.. _io_realm_RealmCollection_minDate_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  minDate (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   
+   * - Finds the minimum date.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - the field to look for the minimum date. If fieldName is not of Date type, an exception is thrown.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `java.lang.IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if fieldName is not a Date field.
+          
+          
+          
+       - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm has been closed or called from an incorrect thread.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _sum:
+
+.. _sum__:
+
+.. _RealmCollection_sum:
+
+.. _RealmCollection_sum__:
+
+.. _io_realm_RealmCollection_sum:
+
+.. _io_realm_RealmCollection_sum__:
+
+
+
+sum
+----
+
+.. _io_realm_RealmCollection_sum_String_:
+
+.. _io_realm_RealmCollection_sum_String_:
+
+.. _io_realm_RealmCollection_sum_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `Number <https://docs.oracle.com/javase/7/docs/api/java/lang/Number.html>`__  sum (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   
+   * - Calculates the sum of a given field.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - the field to sum. Only number fields are supported.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `java.lang.IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the field is not a number type.
+          
+          
+          
+       - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm has been closed or called from an incorrect thread.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _where:
+
+.. _where__:
+
+.. _RealmCollection_where:
+
+.. _RealmCollection_where__:
+
+.. _io_realm_RealmCollection_where:
+
+.. _io_realm_RealmCollection_where__:
 
 
 
@@ -240,524 +916,6 @@ where
           
           
           
-       
-       
-   
-   
-
-
-min
-----
-
-.. _io_realm_RealmCollection_min_String_:
-
-.. _io_realm_RealmCollection_min_String_:
-
-.. _io_realm_RealmCollection_min_String_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public `Number <https://docs.oracle.com/javase/7/docs/api/java/lang/Number.html>`__  min (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-   
-   * - Finds the minimum value of a field.
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``fieldName`` - the field to look for a minimum on. Only number fields are supported.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `java.lang.IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the field is not a number type.
-          
-          
-          
-       - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm has been closed or called from an incorrect thread.
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
-
-
-max
-----
-
-.. _io_realm_RealmCollection_max_String_:
-
-.. _io_realm_RealmCollection_max_String_:
-
-.. _io_realm_RealmCollection_max_String_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public `Number <https://docs.oracle.com/javase/7/docs/api/java/lang/Number.html>`__  max (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-   
-   * - Finds the maximum value of a field.
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``fieldName`` - the field to look for a maximum on. Only number fields are supported.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `java.lang.IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the field is not a number type.
-          
-          
-          
-       - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm has been closed or called from an incorrect thread.
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
-
-
-sum
-----
-
-.. _io_realm_RealmCollection_sum_String_:
-
-.. _io_realm_RealmCollection_sum_String_:
-
-.. _io_realm_RealmCollection_sum_String_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public `Number <https://docs.oracle.com/javase/7/docs/api/java/lang/Number.html>`__  sum (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-   
-   * - Calculates the sum of a given field.
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``fieldName`` - the field to sum. Only number fields are supported.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `java.lang.IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the field is not a number type.
-          
-          
-          
-       - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm has been closed or called from an incorrect thread.
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
-
-
-average
--------
-
-.. _io_realm_RealmCollection_average_String_:
-
-.. _io_realm_RealmCollection_average_String_:
-
-.. _io_realm_RealmCollection_average_String_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **double** average (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-   
-   * - Returns the average of a given field.
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``fieldName`` - the field to calculate average on. Only number fields are supported.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `java.lang.IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the field is not a number type.
-          
-          
-          
-       - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm has been closed or called from an incorrect thread.
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
-
-
-maxDate
--------
-
-.. _io_realm_RealmCollection_maxDate_String_:
-
-.. _io_realm_RealmCollection_maxDate_String_:
-
-.. _io_realm_RealmCollection_maxDate_String_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  maxDate (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-   
-   * - Finds the maximum date.
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``fieldName`` - the field to look for the maximum date. If fieldName is not of Date type, an exception is thrown.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `java.lang.IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if fieldName is not a Date field.
-          
-          
-          
-       - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm has been closed or called from an incorrect thread.
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
-
-
-minDate
--------
-
-.. _io_realm_RealmCollection_minDate_String_:
-
-.. _io_realm_RealmCollection_minDate_String_:
-
-.. _io_realm_RealmCollection_minDate_String_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  minDate (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-   
-   * - Finds the minimum date.
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``fieldName`` - the field to look for the minimum date. If fieldName is not of Date type, an exception is thrown.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `java.lang.IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if fieldName is not a Date field.
-          
-          
-          
-       - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm has been closed or called from an incorrect thread.
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
-
-
-deleteAllFromRealm
-------------------
-
-.. _io_realm_RealmCollection_deleteAllFromRealm__:
-
-.. _io_realm_RealmCollection_deleteAllFromRealm__:
-
-.. _io_realm_RealmCollection_deleteAllFromRealm__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **boolean** deleteAllFromRealm ()
-   
-   * - This deletes all objects in the collection from the underlying Realm as well as from the collection.
-       
-       
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the corresponding Realm is closed or in an incorrect thread.
-          
-          
-          
-       - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm has been closed or called from an incorrect thread.
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
-
-
-isLoaded
---------
-
-.. _io_realm_RealmCollection_isLoaded__:
-
-.. _io_realm_RealmCollection_isLoaded__:
-
-.. _io_realm_RealmCollection_isLoaded__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **boolean** isLoaded ()
-   
-   * - Checks if a collection has finished loading its data yet.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-
-
-load
-----
-
-.. _io_realm_RealmCollection_load__:
-
-.. _io_realm_RealmCollection_load__:
-
-.. _io_realm_RealmCollection_load__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **boolean** load ()
-   
-   * - Blocks the collection until all data are available.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-
-
-isValid
--------
-
-.. _io_realm_RealmCollection_isValid__:
-
-.. _io_realm_RealmCollection_isValid__:
-
-.. _io_realm_RealmCollection_isValid__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **boolean** isValid ()
-   
-   * - Checks if the collection is still valid to use, i.e., the :ref:`io.realm.Realm <io_realm_Realm>`  instance hasn't been closed. It will always return ``true``  for an unmanaged collection.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-
-
-isManaged
----------
-
-.. _io_realm_RealmCollection_isManaged__:
-
-.. _io_realm_RealmCollection_isManaged__:
-
-.. _io_realm_RealmCollection_isManaged__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **boolean** isManaged ()
-   
-   * - Checks if the collection is managed by Realm. A managed collection is just a wrapper around the data in the underlying Realm file. On Looper threads, a managed collection will be live-updated so it always points to the latest data. Managed collections are thread confined so that they cannot be accessed from other threads than the one that created them.If this method returns ``false`` , the collection is unmanaged. An unmanaged collection is just a normal java collection, so it will not be live updated.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-
-
-contains
---------
-
-.. _io_realm_RealmCollection_contains_Object_:
-
-.. _io_realm_RealmCollection_contains_Object_:
-
-.. _io_realm_RealmCollection_contains_Object_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **boolean** contains (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  object)
-   
-   * - Tests whether this ``Collection``  contains the specified object. Returns ``true``  if and only if at least one element ``elem``  in this ``Collection``  meets following requirement: ``(object==null ? elem==null : object.equals(elem))`` .
-       
-       
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``object`` - the object to search for.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `NullPointerException <https://docs.oracle.com/javase/7/docs/api/java/lang/NullPointerException.html>`__  - if the object to look for is ``null``  and this ``Collection``  doesn't support ``null``  elements.
-          
-          
-          
-          
-          
-       
-       
-       
        
        
    

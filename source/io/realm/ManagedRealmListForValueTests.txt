@@ -1,0 +1,2442 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class ManagedRealmListForValueTests
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_ManagedRealmListForValueTests:
+
+
+
+io.realm
+========
+
+:ref:`io.realm.CollectionTests <io_realm_CollectionTests>` 
+ | 		`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+Unit tests specific for RealmList with value elements.
+
+
+Constructors
+============
+
+
+
+- ``io.realm.ManagedRealmListForValueTests()`` 
+
+
+
+
+Field Summary
+=============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Field and Description
+   
+   * - ``public final io.realm.TestRealmConfigurationFactory`` 
+       
+       
+     - ``configFactory`` 
+       
+       
+   
+   * - ``public ExpectedException`` 
+       
+       
+     - ``thrown`` 
+       
+       
+   
+   * - ``public final io.realm.rule.RunInLooperThread`` 
+       
+       
+     - ``looperThread`` 
+       
+       
+   
+   * - ``public io.realm.ManagedRealmListForValueTests.ListType`` 
+       
+       
+     - ``listType`` 
+       
+       
+   
+   * - ``public java.lang.Boolean`` 
+       
+       
+     - ``isTypeNullable`` 
+       
+       
+   
+   
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public static `Collection <https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html>`__ 
+     - 
+       :ref:`parameters <io_realm_ManagedRealmListForValueTests_parameters__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setUp <io_realm_ManagedRealmListForValueTests_setUp__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`tearDown <io_realm_ManagedRealmListForValueTests_tearDown__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`readValues <io_realm_ManagedRealmListForValueTests_readValues__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`isValid <io_realm_ManagedRealmListForValueTests_isValid__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`isValid_whenParentRemoved <io_realm_ManagedRealmListForValueTests_isValid_whenParentRemoved__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`add_exceedingSizeLimitValueThrows <io_realm_ManagedRealmListForValueTests_add_exceedingSizeLimitValueThrows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`move_outOfBoundsLowerThrows <io_realm_ManagedRealmListForValueTests_move_outOfBoundsLowerThrows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`move_outOfBoundsHigherThrows <io_realm_ManagedRealmListForValueTests_move_outOfBoundsHigherThrows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`clear_then_add <io_realm_ManagedRealmListForValueTests_clear_then_add__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`size <io_realm_ManagedRealmListForValueTests_size__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`remove_nonNullByIndex <io_realm_ManagedRealmListForValueTests_remove_nonNullByIndex__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`remove_nullByIndex <io_realm_ManagedRealmListForValueTests_remove_nullByIndex__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`remove_first <io_realm_ManagedRealmListForValueTests_remove_first__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`remove_last <io_realm_ManagedRealmListForValueTests_remove_last__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`remove_fromEmptyListThrows <io_realm_ManagedRealmListForValueTests_remove_fromEmptyListThrows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`remove_byObject <io_realm_ManagedRealmListForValueTests_remove_byObject__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`remove_byNull <io_realm_ManagedRealmListForValueTests_remove_byNull__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`deleteFirst <io_realm_ManagedRealmListForValueTests_deleteFirst__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`deleteLast <io_realm_ManagedRealmListForValueTests_deleteLast__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addAt_afterContainerObjectRemoved <io_realm_ManagedRealmListForValueTests_addAt_afterContainerObjectRemoved__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addAt_invalidIndex <io_realm_ManagedRealmListForValueTests_addAt_invalidIndex__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`set_afterContainerObjectRemoved <io_realm_ManagedRealmListForValueTests_set_afterContainerObjectRemoved__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`set_invalidIndex <io_realm_ManagedRealmListForValueTests_set_invalidIndex__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`move_afterContainerObjectRemoved <io_realm_ManagedRealmListForValueTests_move_afterContainerObjectRemoved__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`clear_afterContainerObjectRemoved <io_realm_ManagedRealmListForValueTests_clear_afterContainerObjectRemoved__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`remove_atAfterContainerObjectRemoved <io_realm_ManagedRealmListForValueTests_remove_atAfterContainerObjectRemoved__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`remove_objectAfterContainerObjectRemoved <io_realm_ManagedRealmListForValueTests_remove_objectAfterContainerObjectRemoved__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`remove_unsupportedTypeIgnored <io_realm_ManagedRealmListForValueTests_remove_unsupportedTypeIgnored__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`removeAll <io_realm_ManagedRealmListForValueTests_removeAll__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`removeAll_unsupportedTypeIgnored <io_realm_ManagedRealmListForValueTests_removeAll_unsupportedTypeIgnored__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`removeAll_afterContainerObjectRemoved <io_realm_ManagedRealmListForValueTests_removeAll_afterContainerObjectRemoved__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`get_afterContainerObjectRemoved <io_realm_ManagedRealmListForValueTests_get_afterContainerObjectRemoved__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`first_afterContainerObjectRemoved <io_realm_ManagedRealmListForValueTests_first_afterContainerObjectRemoved__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`last_afterContainerObjectRemoved <io_realm_ManagedRealmListForValueTests_last_afterContainerObjectRemoved__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`size_afterContainerObjectRemoved <io_realm_ManagedRealmListForValueTests_size_afterContainerObjectRemoved__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`where <io_realm_ManagedRealmListForValueTests_where__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`toString_ <io_realm_ManagedRealmListForValueTests_toString___>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`toString_AfterContainerObjectRemoved <io_realm_ManagedRealmListForValueTests_toString_AfterContainerObjectRemoved__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`deleteAllFromRealm <io_realm_ManagedRealmListForValueTests_deleteAllFromRealm__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`deleteAllFromRealm_outsideTransaction <io_realm_ManagedRealmListForValueTests_deleteAllFromRealm_outsideTransaction__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`deleteAllFromRealm_emptyList <io_realm_ManagedRealmListForValueTests_deleteAllFromRealm_emptyList__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`deleteAllFromRealm_invalidListShouldThrow <io_realm_ManagedRealmListForValueTests_deleteAllFromRealm_invalidListShouldThrow__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`add_null_nonNullableListThrows <io_realm_ManagedRealmListForValueTests_add_null_nonNullableListThrows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addAt_null_nonNullableListThrows <io_realm_ManagedRealmListForValueTests_addAt_null_nonNullableListThrows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`set_null_nonNullableListThrows <io_realm_ManagedRealmListForValueTests_set_null_nonNullableListThrows__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`changeListener_forAddObject <io_realm_ManagedRealmListForValueTests_changeListener_forAddObject__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`changeListener_forAddAt <io_realm_ManagedRealmListForValueTests_changeListener_forAddAt__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`changeListener_forSet <io_realm_ManagedRealmListForValueTests_changeListener_forSet__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`changeListener_forRemoveAt <io_realm_ManagedRealmListForValueTests_changeListener_forRemoveAt__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`changeListener_forRemoveObject <io_realm_ManagedRealmListForValueTests_changeListener_forRemoveObject__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`changeListener_forRemoveAll <io_realm_ManagedRealmListForValueTests_changeListener_forRemoveAll__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`changeListener_forDeleteAt <io_realm_ManagedRealmListForValueTests_changeListener_forDeleteAt__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`changeListener_forDeleteAll <io_realm_ManagedRealmListForValueTests_changeListener_forDeleteAll__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`removeAllChangeListeners <io_realm_ManagedRealmListForValueTests_removeAllChangeListeners__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`removeChangeListener <io_realm_ManagedRealmListForValueTests_removeChangeListener__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`createSnapshot <io_realm_ManagedRealmListForValueTests_createSnapshot__>`  ()
+       
+       
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface :ref:`io.realm.CollectionTests <io_realm_CollectionTests>` : 
+   
+   ``populateRealm`` , ``populateInMemoryList`` , ``populateCollectionOnDeletedLinkView`` , ``populatePartialNullRowsForNumericTesting`` , ``createStringCollection`` 
+   
+   
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+
+
+
+
+Field Detail
+============
+
+.. _io_realm_ManagedRealmListForValueTests_configFactory:
+
+
+
+``configFactory`` 
+------------------
+
+
+.. _io_realm_ManagedRealmListForValueTests_thrown:
+
+
+
+``thrown`` 
+-----------
+
+
+.. _io_realm_ManagedRealmListForValueTests_looperThread:
+
+
+
+``looperThread`` 
+-----------------
+
+
+.. _io_realm_ManagedRealmListForValueTests_listType:
+
+
+
+``listType`` 
+-------------
+
+
+.. _io_realm_ManagedRealmListForValueTests_isTypeNullable:
+
+
+
+``isTypeNullable`` 
+-------------------
+
+
+
+
+Method Detail
+=============
+
+
+
+parameters
+----------
+
+.. _io_realm_ManagedRealmListForValueTests_parameters__:
+
+.. _io_realm_ManagedRealmListForValueTests_parameters__:
+
+.. _io_realm_ManagedRealmListForValueTests_parameters__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static `Collection <https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html>`__  parameters ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+setUp
+-----
+
+.. _io_realm_ManagedRealmListForValueTests_setUp__:
+
+.. _io_realm_ManagedRealmListForValueTests_setUp__:
+
+.. _io_realm_ManagedRealmListForValueTests_setUp__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setUp ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+tearDown
+--------
+
+.. _io_realm_ManagedRealmListForValueTests_tearDown__:
+
+.. _io_realm_ManagedRealmListForValueTests_tearDown__:
+
+.. _io_realm_ManagedRealmListForValueTests_tearDown__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** tearDown ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+readValues
+----------
+
+.. _io_realm_ManagedRealmListForValueTests_readValues__:
+
+.. _io_realm_ManagedRealmListForValueTests_readValues__:
+
+.. _io_realm_ManagedRealmListForValueTests_readValues__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** readValues ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+isValid
+-------
+
+.. _io_realm_ManagedRealmListForValueTests_isValid__:
+
+.. _io_realm_ManagedRealmListForValueTests_isValid__:
+
+.. _io_realm_ManagedRealmListForValueTests_isValid__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** isValid ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+isValid_whenParentRemoved
+-------------------------
+
+.. _io_realm_ManagedRealmListForValueTests_isValid_whenParentRemoved__:
+
+.. _io_realm_ManagedRealmListForValueTests_isValid_whenParentRemoved__:
+
+.. _io_realm_ManagedRealmListForValueTests_isValid_whenParentRemoved__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** isValid_whenParentRemoved ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+add_exceedingSizeLimitValueThrows
+---------------------------------
+
+.. _io_realm_ManagedRealmListForValueTests_add_exceedingSizeLimitValueThrows__:
+
+.. _io_realm_ManagedRealmListForValueTests_add_exceedingSizeLimitValueThrows__:
+
+.. _io_realm_ManagedRealmListForValueTests_add_exceedingSizeLimitValueThrows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** add_exceedingSizeLimitValueThrows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+move_outOfBoundsLowerThrows
+---------------------------
+
+.. _io_realm_ManagedRealmListForValueTests_move_outOfBoundsLowerThrows__:
+
+.. _io_realm_ManagedRealmListForValueTests_move_outOfBoundsLowerThrows__:
+
+.. _io_realm_ManagedRealmListForValueTests_move_outOfBoundsLowerThrows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** move_outOfBoundsLowerThrows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+move_outOfBoundsHigherThrows
+----------------------------
+
+.. _io_realm_ManagedRealmListForValueTests_move_outOfBoundsHigherThrows__:
+
+.. _io_realm_ManagedRealmListForValueTests_move_outOfBoundsHigherThrows__:
+
+.. _io_realm_ManagedRealmListForValueTests_move_outOfBoundsHigherThrows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** move_outOfBoundsHigherThrows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+clear_then_add
+--------------
+
+.. _io_realm_ManagedRealmListForValueTests_clear_then_add__:
+
+.. _io_realm_ManagedRealmListForValueTests_clear_then_add__:
+
+.. _io_realm_ManagedRealmListForValueTests_clear_then_add__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** clear_then_add ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+size
+----
+
+.. _io_realm_ManagedRealmListForValueTests_size__:
+
+.. _io_realm_ManagedRealmListForValueTests_size__:
+
+.. _io_realm_ManagedRealmListForValueTests_size__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** size ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+remove_nonNullByIndex
+---------------------
+
+.. _io_realm_ManagedRealmListForValueTests_remove_nonNullByIndex__:
+
+.. _io_realm_ManagedRealmListForValueTests_remove_nonNullByIndex__:
+
+.. _io_realm_ManagedRealmListForValueTests_remove_nonNullByIndex__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** remove_nonNullByIndex ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+remove_nullByIndex
+------------------
+
+.. _io_realm_ManagedRealmListForValueTests_remove_nullByIndex__:
+
+.. _io_realm_ManagedRealmListForValueTests_remove_nullByIndex__:
+
+.. _io_realm_ManagedRealmListForValueTests_remove_nullByIndex__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** remove_nullByIndex ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+remove_first
+------------
+
+.. _io_realm_ManagedRealmListForValueTests_remove_first__:
+
+.. _io_realm_ManagedRealmListForValueTests_remove_first__:
+
+.. _io_realm_ManagedRealmListForValueTests_remove_first__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** remove_first ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+remove_last
+-----------
+
+.. _io_realm_ManagedRealmListForValueTests_remove_last__:
+
+.. _io_realm_ManagedRealmListForValueTests_remove_last__:
+
+.. _io_realm_ManagedRealmListForValueTests_remove_last__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** remove_last ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+remove_fromEmptyListThrows
+--------------------------
+
+.. _io_realm_ManagedRealmListForValueTests_remove_fromEmptyListThrows__:
+
+.. _io_realm_ManagedRealmListForValueTests_remove_fromEmptyListThrows__:
+
+.. _io_realm_ManagedRealmListForValueTests_remove_fromEmptyListThrows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** remove_fromEmptyListThrows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+remove_byObject
+---------------
+
+.. _io_realm_ManagedRealmListForValueTests_remove_byObject__:
+
+.. _io_realm_ManagedRealmListForValueTests_remove_byObject__:
+
+.. _io_realm_ManagedRealmListForValueTests_remove_byObject__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** remove_byObject ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+remove_byNull
+-------------
+
+.. _io_realm_ManagedRealmListForValueTests_remove_byNull__:
+
+.. _io_realm_ManagedRealmListForValueTests_remove_byNull__:
+
+.. _io_realm_ManagedRealmListForValueTests_remove_byNull__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** remove_byNull ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+deleteFirst
+-----------
+
+.. _io_realm_ManagedRealmListForValueTests_deleteFirst__:
+
+.. _io_realm_ManagedRealmListForValueTests_deleteFirst__:
+
+.. _io_realm_ManagedRealmListForValueTests_deleteFirst__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** deleteFirst ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+deleteLast
+----------
+
+.. _io_realm_ManagedRealmListForValueTests_deleteLast__:
+
+.. _io_realm_ManagedRealmListForValueTests_deleteLast__:
+
+.. _io_realm_ManagedRealmListForValueTests_deleteLast__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** deleteLast ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+addAt_afterContainerObjectRemoved
+---------------------------------
+
+.. _io_realm_ManagedRealmListForValueTests_addAt_afterContainerObjectRemoved__:
+
+.. _io_realm_ManagedRealmListForValueTests_addAt_afterContainerObjectRemoved__:
+
+.. _io_realm_ManagedRealmListForValueTests_addAt_afterContainerObjectRemoved__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addAt_afterContainerObjectRemoved ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+addAt_invalidIndex
+------------------
+
+.. _io_realm_ManagedRealmListForValueTests_addAt_invalidIndex__:
+
+.. _io_realm_ManagedRealmListForValueTests_addAt_invalidIndex__:
+
+.. _io_realm_ManagedRealmListForValueTests_addAt_invalidIndex__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addAt_invalidIndex ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+set_afterContainerObjectRemoved
+-------------------------------
+
+.. _io_realm_ManagedRealmListForValueTests_set_afterContainerObjectRemoved__:
+
+.. _io_realm_ManagedRealmListForValueTests_set_afterContainerObjectRemoved__:
+
+.. _io_realm_ManagedRealmListForValueTests_set_afterContainerObjectRemoved__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** set_afterContainerObjectRemoved ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+set_invalidIndex
+----------------
+
+.. _io_realm_ManagedRealmListForValueTests_set_invalidIndex__:
+
+.. _io_realm_ManagedRealmListForValueTests_set_invalidIndex__:
+
+.. _io_realm_ManagedRealmListForValueTests_set_invalidIndex__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** set_invalidIndex ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+move_afterContainerObjectRemoved
+--------------------------------
+
+.. _io_realm_ManagedRealmListForValueTests_move_afterContainerObjectRemoved__:
+
+.. _io_realm_ManagedRealmListForValueTests_move_afterContainerObjectRemoved__:
+
+.. _io_realm_ManagedRealmListForValueTests_move_afterContainerObjectRemoved__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** move_afterContainerObjectRemoved ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+clear_afterContainerObjectRemoved
+---------------------------------
+
+.. _io_realm_ManagedRealmListForValueTests_clear_afterContainerObjectRemoved__:
+
+.. _io_realm_ManagedRealmListForValueTests_clear_afterContainerObjectRemoved__:
+
+.. _io_realm_ManagedRealmListForValueTests_clear_afterContainerObjectRemoved__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** clear_afterContainerObjectRemoved ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+remove_atAfterContainerObjectRemoved
+------------------------------------
+
+.. _io_realm_ManagedRealmListForValueTests_remove_atAfterContainerObjectRemoved__:
+
+.. _io_realm_ManagedRealmListForValueTests_remove_atAfterContainerObjectRemoved__:
+
+.. _io_realm_ManagedRealmListForValueTests_remove_atAfterContainerObjectRemoved__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** remove_atAfterContainerObjectRemoved ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+remove_objectAfterContainerObjectRemoved
+----------------------------------------
+
+.. _io_realm_ManagedRealmListForValueTests_remove_objectAfterContainerObjectRemoved__:
+
+.. _io_realm_ManagedRealmListForValueTests_remove_objectAfterContainerObjectRemoved__:
+
+.. _io_realm_ManagedRealmListForValueTests_remove_objectAfterContainerObjectRemoved__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** remove_objectAfterContainerObjectRemoved ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+remove_unsupportedTypeIgnored
+-----------------------------
+
+.. _io_realm_ManagedRealmListForValueTests_remove_unsupportedTypeIgnored__:
+
+.. _io_realm_ManagedRealmListForValueTests_remove_unsupportedTypeIgnored__:
+
+.. _io_realm_ManagedRealmListForValueTests_remove_unsupportedTypeIgnored__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** remove_unsupportedTypeIgnored ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+removeAll
+---------
+
+.. _io_realm_ManagedRealmListForValueTests_removeAll__:
+
+.. _io_realm_ManagedRealmListForValueTests_removeAll__:
+
+.. _io_realm_ManagedRealmListForValueTests_removeAll__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** removeAll ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+removeAll_unsupportedTypeIgnored
+--------------------------------
+
+.. _io_realm_ManagedRealmListForValueTests_removeAll_unsupportedTypeIgnored__:
+
+.. _io_realm_ManagedRealmListForValueTests_removeAll_unsupportedTypeIgnored__:
+
+.. _io_realm_ManagedRealmListForValueTests_removeAll_unsupportedTypeIgnored__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** removeAll_unsupportedTypeIgnored ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+removeAll_afterContainerObjectRemoved
+-------------------------------------
+
+.. _io_realm_ManagedRealmListForValueTests_removeAll_afterContainerObjectRemoved__:
+
+.. _io_realm_ManagedRealmListForValueTests_removeAll_afterContainerObjectRemoved__:
+
+.. _io_realm_ManagedRealmListForValueTests_removeAll_afterContainerObjectRemoved__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** removeAll_afterContainerObjectRemoved ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+get_afterContainerObjectRemoved
+-------------------------------
+
+.. _io_realm_ManagedRealmListForValueTests_get_afterContainerObjectRemoved__:
+
+.. _io_realm_ManagedRealmListForValueTests_get_afterContainerObjectRemoved__:
+
+.. _io_realm_ManagedRealmListForValueTests_get_afterContainerObjectRemoved__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** get_afterContainerObjectRemoved ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+first_afterContainerObjectRemoved
+---------------------------------
+
+.. _io_realm_ManagedRealmListForValueTests_first_afterContainerObjectRemoved__:
+
+.. _io_realm_ManagedRealmListForValueTests_first_afterContainerObjectRemoved__:
+
+.. _io_realm_ManagedRealmListForValueTests_first_afterContainerObjectRemoved__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** first_afterContainerObjectRemoved ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+last_afterContainerObjectRemoved
+--------------------------------
+
+.. _io_realm_ManagedRealmListForValueTests_last_afterContainerObjectRemoved__:
+
+.. _io_realm_ManagedRealmListForValueTests_last_afterContainerObjectRemoved__:
+
+.. _io_realm_ManagedRealmListForValueTests_last_afterContainerObjectRemoved__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** last_afterContainerObjectRemoved ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+size_afterContainerObjectRemoved
+--------------------------------
+
+.. _io_realm_ManagedRealmListForValueTests_size_afterContainerObjectRemoved__:
+
+.. _io_realm_ManagedRealmListForValueTests_size_afterContainerObjectRemoved__:
+
+.. _io_realm_ManagedRealmListForValueTests_size_afterContainerObjectRemoved__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** size_afterContainerObjectRemoved ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+where
+-----
+
+.. _io_realm_ManagedRealmListForValueTests_where__:
+
+.. _io_realm_ManagedRealmListForValueTests_where__:
+
+.. _io_realm_ManagedRealmListForValueTests_where__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** where ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+toString_
+---------
+
+.. _io_realm_ManagedRealmListForValueTests_toString___:
+
+.. _io_realm_ManagedRealmListForValueTests_toString___:
+
+.. _io_realm_ManagedRealmListForValueTests_toString___:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** toString_ ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+toString_AfterContainerObjectRemoved
+------------------------------------
+
+.. _io_realm_ManagedRealmListForValueTests_toString_AfterContainerObjectRemoved__:
+
+.. _io_realm_ManagedRealmListForValueTests_toString_AfterContainerObjectRemoved__:
+
+.. _io_realm_ManagedRealmListForValueTests_toString_AfterContainerObjectRemoved__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** toString_AfterContainerObjectRemoved ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+deleteAllFromRealm
+------------------
+
+.. _io_realm_ManagedRealmListForValueTests_deleteAllFromRealm__:
+
+.. _io_realm_ManagedRealmListForValueTests_deleteAllFromRealm__:
+
+.. _io_realm_ManagedRealmListForValueTests_deleteAllFromRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** deleteAllFromRealm ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+deleteAllFromRealm_outsideTransaction
+-------------------------------------
+
+.. _io_realm_ManagedRealmListForValueTests_deleteAllFromRealm_outsideTransaction__:
+
+.. _io_realm_ManagedRealmListForValueTests_deleteAllFromRealm_outsideTransaction__:
+
+.. _io_realm_ManagedRealmListForValueTests_deleteAllFromRealm_outsideTransaction__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** deleteAllFromRealm_outsideTransaction ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+deleteAllFromRealm_emptyList
+----------------------------
+
+.. _io_realm_ManagedRealmListForValueTests_deleteAllFromRealm_emptyList__:
+
+.. _io_realm_ManagedRealmListForValueTests_deleteAllFromRealm_emptyList__:
+
+.. _io_realm_ManagedRealmListForValueTests_deleteAllFromRealm_emptyList__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** deleteAllFromRealm_emptyList ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+deleteAllFromRealm_invalidListShouldThrow
+-----------------------------------------
+
+.. _io_realm_ManagedRealmListForValueTests_deleteAllFromRealm_invalidListShouldThrow__:
+
+.. _io_realm_ManagedRealmListForValueTests_deleteAllFromRealm_invalidListShouldThrow__:
+
+.. _io_realm_ManagedRealmListForValueTests_deleteAllFromRealm_invalidListShouldThrow__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** deleteAllFromRealm_invalidListShouldThrow ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+add_null_nonNullableListThrows
+------------------------------
+
+.. _io_realm_ManagedRealmListForValueTests_add_null_nonNullableListThrows__:
+
+.. _io_realm_ManagedRealmListForValueTests_add_null_nonNullableListThrows__:
+
+.. _io_realm_ManagedRealmListForValueTests_add_null_nonNullableListThrows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** add_null_nonNullableListThrows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+addAt_null_nonNullableListThrows
+--------------------------------
+
+.. _io_realm_ManagedRealmListForValueTests_addAt_null_nonNullableListThrows__:
+
+.. _io_realm_ManagedRealmListForValueTests_addAt_null_nonNullableListThrows__:
+
+.. _io_realm_ManagedRealmListForValueTests_addAt_null_nonNullableListThrows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addAt_null_nonNullableListThrows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+set_null_nonNullableListThrows
+------------------------------
+
+.. _io_realm_ManagedRealmListForValueTests_set_null_nonNullableListThrows__:
+
+.. _io_realm_ManagedRealmListForValueTests_set_null_nonNullableListThrows__:
+
+.. _io_realm_ManagedRealmListForValueTests_set_null_nonNullableListThrows__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** set_null_nonNullableListThrows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+changeListener_forAddObject
+---------------------------
+
+.. _io_realm_ManagedRealmListForValueTests_changeListener_forAddObject__:
+
+.. _io_realm_ManagedRealmListForValueTests_changeListener_forAddObject__:
+
+.. _io_realm_ManagedRealmListForValueTests_changeListener_forAddObject__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** changeListener_forAddObject ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+changeListener_forAddAt
+-----------------------
+
+.. _io_realm_ManagedRealmListForValueTests_changeListener_forAddAt__:
+
+.. _io_realm_ManagedRealmListForValueTests_changeListener_forAddAt__:
+
+.. _io_realm_ManagedRealmListForValueTests_changeListener_forAddAt__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** changeListener_forAddAt ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+changeListener_forSet
+---------------------
+
+.. _io_realm_ManagedRealmListForValueTests_changeListener_forSet__:
+
+.. _io_realm_ManagedRealmListForValueTests_changeListener_forSet__:
+
+.. _io_realm_ManagedRealmListForValueTests_changeListener_forSet__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** changeListener_forSet ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+changeListener_forRemoveAt
+--------------------------
+
+.. _io_realm_ManagedRealmListForValueTests_changeListener_forRemoveAt__:
+
+.. _io_realm_ManagedRealmListForValueTests_changeListener_forRemoveAt__:
+
+.. _io_realm_ManagedRealmListForValueTests_changeListener_forRemoveAt__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** changeListener_forRemoveAt ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+changeListener_forRemoveObject
+------------------------------
+
+.. _io_realm_ManagedRealmListForValueTests_changeListener_forRemoveObject__:
+
+.. _io_realm_ManagedRealmListForValueTests_changeListener_forRemoveObject__:
+
+.. _io_realm_ManagedRealmListForValueTests_changeListener_forRemoveObject__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** changeListener_forRemoveObject ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+changeListener_forRemoveAll
+---------------------------
+
+.. _io_realm_ManagedRealmListForValueTests_changeListener_forRemoveAll__:
+
+.. _io_realm_ManagedRealmListForValueTests_changeListener_forRemoveAll__:
+
+.. _io_realm_ManagedRealmListForValueTests_changeListener_forRemoveAll__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** changeListener_forRemoveAll ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+changeListener_forDeleteAt
+--------------------------
+
+.. _io_realm_ManagedRealmListForValueTests_changeListener_forDeleteAt__:
+
+.. _io_realm_ManagedRealmListForValueTests_changeListener_forDeleteAt__:
+
+.. _io_realm_ManagedRealmListForValueTests_changeListener_forDeleteAt__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** changeListener_forDeleteAt ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+changeListener_forDeleteAll
+---------------------------
+
+.. _io_realm_ManagedRealmListForValueTests_changeListener_forDeleteAll__:
+
+.. _io_realm_ManagedRealmListForValueTests_changeListener_forDeleteAll__:
+
+.. _io_realm_ManagedRealmListForValueTests_changeListener_forDeleteAll__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** changeListener_forDeleteAll ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+removeAllChangeListeners
+------------------------
+
+.. _io_realm_ManagedRealmListForValueTests_removeAllChangeListeners__:
+
+.. _io_realm_ManagedRealmListForValueTests_removeAllChangeListeners__:
+
+.. _io_realm_ManagedRealmListForValueTests_removeAllChangeListeners__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** removeAllChangeListeners ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+removeChangeListener
+--------------------
+
+.. _io_realm_ManagedRealmListForValueTests_removeChangeListener__:
+
+.. _io_realm_ManagedRealmListForValueTests_removeChangeListener__:
+
+.. _io_realm_ManagedRealmListForValueTests_removeChangeListener__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** removeChangeListener ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+createSnapshot
+--------------
+
+.. _io_realm_ManagedRealmListForValueTests_createSnapshot__:
+
+.. _io_realm_ManagedRealmListForValueTests_createSnapshot__:
+
+.. _io_realm_ManagedRealmListForValueTests_createSnapshot__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** createSnapshot ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

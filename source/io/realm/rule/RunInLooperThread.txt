@@ -1,0 +1,826 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class RunInLooperThread
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_rule_RunInLooperThread:
+
+
+
+io.realm.rule
+=============
+
+:ref:`io.realm.TestRealmConfigurationFactory <io_realm_TestRealmConfigurationFactory>` 
+ | 		**TemporaryFolder (?)**
+ | 					`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+Rule that runs the test inside a worker looper thread. This rule is responsible of creating a temp directory containing a Realm instance then deleting it, once the test finishes.All Realms used in a method method annotated with ``@RunTestInLooperThread``  should use **RunInLooperThread.createConfiguration() (?)** and friends to create their configurations. Failing to do so can result in the test failing because the Realm could not be deleted (this class and :ref:`TestRealmConfigurationFactory <io_realm_TestRealmConfigurationFactory>`  do not agree in which order to delete the open Realms).
+
+
+
+
+
+
+Constructors
+============
+
+
+
+- ``io.realm.rule.RunInLooperThread()`` 
+
+
+
+
+Nested Class Summary
+====================
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Class and Description
+   
+   * - ``public static interface`` 
+     - ``io.realm.rule.RunInLooperThread.RunnableBefore`` 
+   
+   
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public :ref:`RealmConfiguration <io_realm_RealmConfiguration>` 
+     - 
+       :ref:`getConfiguration <io_realm_rule_RunInLooperThread_getConfiguration__>`  ()
+       
+       Get the configuration for the test realm.
+       
+       
+       
+   
+   * - 
+       public :ref:`Realm <io_realm_Realm>` 
+     - 
+       :ref:`getRealm <io_realm_rule_RunInLooperThread_getRealm__>`  ()
+       
+       Get the test realm.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`keepStrongReference <io_realm_rule_RunInLooperThread_keepStrongReference_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  obj)
+       
+       Hold a reference to an object, to prevent it from being GCed, until after the test completes.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`closeAfterTest <io_realm_rule_RunInLooperThread_closeAfterTest_Closeable_>`  (`Closeable <https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html>`__  closeable)
+       
+       Add a closable resource which this test will guarantee to call `Closeable.close() <https://docs.oracle.com/javase/7/docs/api/java/io/Closeable/close().html>`__  on when the tests is done.
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`runAfterTest <io_realm_rule_RunInLooperThread_runAfterTest_Runnable_>`  (`Runnable <https://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html>`__  task)
+       
+       Run this task after the unit test either failed or succeeded.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addTestRealm <io_realm_rule_RunInLooperThread_addTestRealm_Realm_>`  (:ref:`Realm <io_realm_Realm>`  realm)
+       
+       Add a Realm to be closed when test is complete.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`closeTestRealms <io_realm_rule_RunInLooperThread_closeTestRealms__>`  ()
+       
+       Explicitly close all held realms.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`postRunnable <io_realm_rule_RunInLooperThread_postRunnable_Runnable_>`  (`Runnable <https://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html>`__  runnable)
+       
+       Posts a runnable to the currently running looper.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`postRunnableDelayed <io_realm_rule_RunInLooperThread_postRunnableDelayed_Runnable__long_>`  (`Runnable <https://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html>`__  runnable,
+                                         **long** delayMillis)
+       
+       Posts a runnable to this worker threads looper with a delay in milli second.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`testComplete <io_realm_rule_RunInLooperThread_testComplete__>`  ()
+       
+       Signal that the test has completed.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`testComplete <io_realm_rule_RunInLooperThread_testComplete_CountDownLatch____>`  (`java.util.concurrent.CountDownLatch[] <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html>`__  latches)
+       
+       Signal that the test has completed, after waiting for any additional latches.
+       
+       
+       
+   
+   * - 
+       protected **void**
+     - 
+       :ref:`before <io_realm_rule_RunInLooperThread_before__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       protected **void**
+     - 
+       :ref:`after <io_realm_rule_RunInLooperThread_after__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **Statement (?)**
+     - 
+       :ref:`apply <io_realm_rule_RunInLooperThread_apply_Statement__Description_>`  (**Statement (?)** base,
+                                **Description (?)** description)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`looperTearDown <io_realm_rule_RunInLooperThread_looperTearDown__>`  ()
+       
+       Tears down logic which is guaranteed to run after the looper test has either completed or failed.
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`isTestComplete <io_realm_rule_RunInLooperThread_isTestComplete__>`  ()
+       
+       Checks if the current test is considered completed or not.
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`isRuleUsed <io_realm_rule_RunInLooperThread_isRuleUsed__>`  ()
+       
+       Returns true if the current test being run is using this rule.
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface :ref:`io.realm.TestRealmConfigurationFactory <io_realm_TestRealmConfigurationFactory>` : 
+   
+   ``apply`` , ``before`` , ``after`` , ``create`` , ``getRoot`` , ``setTestName`` , ``setUnitTestFailed`` , ``createConfigurationBuilder`` , ``createSchemaConfiguration`` , ``createConfiguration`` , ``createConfiguration`` , ``createConfiguration`` , ``createConfiguration`` , ``createConfiguration`` , ``createConfiguration`` , ``copyRealmFromAssets`` , ``copyRealmFromAssets`` , ``copyFileFromAssets`` 
+   
+   
+- Methods inherited from interface **TemporaryFolder (?)**: 
+   
+   
+   
+   
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+
+
+
+
+Method Detail
+=============
+
+
+
+getConfiguration
+----------------
+
+.. _io_realm_rule_RunInLooperThread_getConfiguration__:
+
+.. _io_realm_rule_RunInLooperThread_getConfiguration__:
+
+.. _io_realm_rule_RunInLooperThread_getConfiguration__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`RealmConfiguration <io_realm_RealmConfiguration>`  getConfiguration ()
+   
+   * - Get the configuration for the test realm.Set on main thread, accessed from test thread. Valid after ``before`` .
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getRealm
+--------
+
+.. _io_realm_rule_RunInLooperThread_getRealm__:
+
+.. _io_realm_rule_RunInLooperThread_getRealm__:
+
+.. _io_realm_rule_RunInLooperThread_getRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`Realm <io_realm_Realm>`  getRealm ()
+   
+   * - Get the test realm.Set on test thread, accessed from main thread. Valid only after the test thread has started.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+keepStrongReference
+-------------------
+
+.. _io_realm_rule_RunInLooperThread_keepStrongReference_Object_:
+
+.. _io_realm_rule_RunInLooperThread_keepStrongReference_Object_:
+
+.. _io_realm_rule_RunInLooperThread_keepStrongReference_Object_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** keepStrongReference (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  obj)
+   
+   * - Hold a reference to an object, to prevent it from being GCed, until after the test completes.Accessed only from the main thread, here, but synchronized in case it is called from within a test. Valid after ``before`` .
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+closeAfterTest
+--------------
+
+.. _io_realm_rule_RunInLooperThread_closeAfterTest_Closeable_:
+
+.. _io_realm_rule_RunInLooperThread_closeAfterTest_Closeable_:
+
+.. _io_realm_rule_RunInLooperThread_closeAfterTest_Closeable_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** closeAfterTest (`Closeable <https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html>`__  closeable)
+   
+   * - Add a closable resource which this test will guarantee to call `Closeable.close() <https://docs.oracle.com/javase/7/docs/api/java/io/Closeable/close().html>`__  on when the tests is done.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``closeable`` - `Closeable <https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html>`__  to close.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+runAfterTest
+------------
+
+.. _io_realm_rule_RunInLooperThread_runAfterTest_Runnable_:
+
+.. _io_realm_rule_RunInLooperThread_runAfterTest_Runnable_:
+
+.. _io_realm_rule_RunInLooperThread_runAfterTest_Runnable_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** runAfterTest (`Runnable <https://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html>`__  task)
+   
+   * - Run this task after the unit test either failed or succeeded. This is a work-around for the the current @After being triggered right after the unit test method exits, but before the @RunTestInLooperThread has determined the test is done TODO: Consider replacing this pattern with \`@AfterLooperTest\` annotation.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``task`` - task to run. Only one task can be provided
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+addTestRealm
+------------
+
+.. _io_realm_rule_RunInLooperThread_addTestRealm_Realm_:
+
+.. _io_realm_rule_RunInLooperThread_addTestRealm_Realm_:
+
+.. _io_realm_rule_RunInLooperThread_addTestRealm_Realm_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addTestRealm (:ref:`Realm <io_realm_Realm>`  realm)
+   
+   * - Add a Realm to be closed when test is complete.Accessed from both test and main threads. Valid after ``before`` .
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+closeTestRealms
+---------------
+
+.. _io_realm_rule_RunInLooperThread_closeTestRealms__:
+
+.. _io_realm_rule_RunInLooperThread_closeTestRealms__:
+
+.. _io_realm_rule_RunInLooperThread_closeTestRealms__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** closeTestRealms ()
+   
+   * - Explicitly close all held realms.'testRealms' is accessed from both test and main threads. 'testRealms' is valid after ``before`` .
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+postRunnable
+------------
+
+.. _io_realm_rule_RunInLooperThread_postRunnable_Runnable_:
+
+.. _io_realm_rule_RunInLooperThread_postRunnable_Runnable_:
+
+.. _io_realm_rule_RunInLooperThread_postRunnable_Runnable_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** postRunnable (`Runnable <https://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html>`__  runnable)
+   
+   * - Posts a runnable to the currently running looper.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+postRunnableDelayed
+-------------------
+
+.. _io_realm_rule_RunInLooperThread_postRunnableDelayed_Runnable__long_:
+
+.. _io_realm_rule_RunInLooperThread_postRunnableDelayed_Runnable_long_:
+
+.. _io_realm_rule_RunInLooperThread_postRunnableDelayed_Runnable__long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** postRunnableDelayed (`Runnable <https://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html>`__  runnable,
+                                         **long** delayMillis)
+   
+   * - Posts a runnable to this worker threads looper with a delay in milli second.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+testComplete
+------------
+
+.. _io_realm_rule_RunInLooperThread_testComplete__:
+
+.. _io_realm_rule_RunInLooperThread_testComplete__:
+
+.. _io_realm_rule_RunInLooperThread_testComplete__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** testComplete ()
+   
+   * - Signal that the test has completed.Can be used on both the main and test threads.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_rule_RunInLooperThread_testComplete_CountDownLatch____:
+
+.. _io_realm_rule_RunInLooperThread_testComplete_CountDownLatch_:
+
+.. _io_realm_rule_RunInLooperThread_testComplete_CountDownLatch_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** testComplete (`java.util.concurrent.CountDownLatch[] <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html>`__  latches)
+   
+   * - Signal that the test has completed, after waiting for any additional latches.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``latches`` - additional latches to wait on, before setting the test completed flag.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+before
+------
+
+.. _io_realm_rule_RunInLooperThread_before__:
+
+.. _io_realm_rule_RunInLooperThread_before__:
+
+.. _io_realm_rule_RunInLooperThread_before__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected **void** before ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+after
+-----
+
+.. _io_realm_rule_RunInLooperThread_after__:
+
+.. _io_realm_rule_RunInLooperThread_after__:
+
+.. _io_realm_rule_RunInLooperThread_after__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected **void** after ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+apply
+-----
+
+.. _io_realm_rule_RunInLooperThread_apply_Statement__Description_:
+
+.. _io_realm_rule_RunInLooperThread_apply_Statement_Description_:
+
+.. _io_realm_rule_RunInLooperThread_apply_Statement__Description_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **Statement (?)** apply (**Statement (?)** base,
+                                **Description (?)** description)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+looperTearDown
+--------------
+
+.. _io_realm_rule_RunInLooperThread_looperTearDown__:
+
+.. _io_realm_rule_RunInLooperThread_looperTearDown__:
+
+.. _io_realm_rule_RunInLooperThread_looperTearDown__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** looperTearDown ()
+   
+   * - Tears down logic which is guaranteed to run after the looper test has either completed or failed. This will run on the same thread as the looper test.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+isTestComplete
+--------------
+
+.. _io_realm_rule_RunInLooperThread_isTestComplete__:
+
+.. _io_realm_rule_RunInLooperThread_isTestComplete__:
+
+.. _io_realm_rule_RunInLooperThread_isTestComplete__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** isTestComplete ()
+   
+   * - Checks if the current test is considered completed or not. It is completed if either :ref:`testComplete() <io_realm_rule_RunInLooperThread_testComplete__>`  was called or an uncaught exception was thrown.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+isRuleUsed
+----------
+
+.. _io_realm_rule_RunInLooperThread_isRuleUsed__:
+
+.. _io_realm_rule_RunInLooperThread_isRuleUsed__:
+
+.. _io_realm_rule_RunInLooperThread_isRuleUsed__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** isRuleUsed ()
+   
+   * - Returns true if the current test being run is using this rule.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

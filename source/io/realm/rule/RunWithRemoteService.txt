@@ -1,0 +1,220 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class RunWithRemoteService
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_rule_RunWithRemoteService:
+
+
+
+io.realm.rule
+=============
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+This is a helper **TestRule (?)** to do test which needs interaction with a remote process. To use this: 1. Define a subclass of :ref:`RemoteTestService <io_realm_services_RemoteTestService>`  and create steps as static member of it. Those steps should be named as "stepA_doXXX", "stepB_doYYY", etc. to indicate the order of them. 2. Add a base message id in :ref:`RemoteTestService <io_realm_services_RemoteTestService>` . 3. Add the service into the AndroidManifest.xml. And the android:process property must be ":remote". 4. Annotate your test case by :ref:`RunTestWithRemoteService <io_realm_rule_RunTestWithRemoteService>`  with your remote service class. 5. To run the tests on the looper thread: a) Add :ref:`RunTestInLooperThread <io_realm_rule_RunTestInLooperThread>`  to the tests. b) Add ``@RunTestWithRemoteService(remoteService = SimpleCommitRemoteService.class, onLooperThread = true)``  Please notice that ``onLooperThread``  needs to be set to true to avoid the remote service getting killed before looper thread finished c) Call ``looperThread.runAfterTest(remoteService.afterRunnable)``  to kill the remote service after test. 6. When your looper thread starts, register the service messenger by calling :ref:`RunWithRemoteService.createHandler(Looper) <io_realm_rule_RunWithRemoteService_createHandler_Looper_>` . 7. Trigger your first step in the remote service process by calling :ref:`RunWithRemoteService.triggerServiceStep(RemoteTestService.Step) <io_realm_rule_RunWithRemoteService_triggerServiceStep_RemoteTestService_Step_>` . 8. Name steps in the foreground process with step1, step2 ... stepN. Name steps in the remote process with stepA, stepB ... stepZ. See the existing test cases for examples.
+
+
+
+
+Constructors
+============
+
+
+
+- ``io.realm.rule.RunWithRemoteService()`` 
+
+
+
+
+Field Summary
+=============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Field and Description
+   
+   * - ``public java.lang.Runnable`` 
+       
+       
+     - ``afterRunnable`` 
+       
+       
+   
+   
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public **Statement (?)**
+     - 
+       :ref:`apply <io_realm_rule_RunWithRemoteService_apply_Statement__Description_>`  (**Statement (?)** base,
+                                **Description (?)** description)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`createHandler <io_realm_rule_RunWithRemoteService_createHandler_Looper_>`  (**Looper (?)** looper)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`triggerServiceStep <io_realm_rule_RunWithRemoteService_triggerServiceStep_RemoteTestService_Step_>`  (:ref:`RemoteTestService.Step <io_realm_services_RemoteTestService_Step>`  step)
+       
+       
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+
+
+
+
+Field Detail
+============
+
+.. _io_realm_rule_RunWithRemoteService_afterRunnable:
+
+
+
+``afterRunnable`` 
+------------------
+
+
+
+
+Method Detail
+=============
+
+
+
+apply
+-----
+
+.. _io_realm_rule_RunWithRemoteService_apply_Statement__Description_:
+
+.. _io_realm_rule_RunWithRemoteService_apply_Statement_Description_:
+
+.. _io_realm_rule_RunWithRemoteService_apply_Statement__Description_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **Statement (?)** apply (**Statement (?)** base,
+                                **Description (?)** description)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+createHandler
+-------------
+
+.. _io_realm_rule_RunWithRemoteService_createHandler_Looper_:
+
+.. _io_realm_rule_RunWithRemoteService_createHandler_Looper_:
+
+.. _io_realm_rule_RunWithRemoteService_createHandler_Looper_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** createHandler (**Looper (?)** looper)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+triggerServiceStep
+------------------
+
+.. _io_realm_rule_RunWithRemoteService_triggerServiceStep_RemoteTestService_Step_:
+
+.. _io_realm_rule_RunWithRemoteService_triggerServiceStep_Step_:
+
+.. _io_realm_rule_RunWithRemoteService_triggerServiceStep_Step_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** triggerServiceStep (:ref:`RemoteTestService.Step <io_realm_services_RemoteTestService_Step>`  step)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
