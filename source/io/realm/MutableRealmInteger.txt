@@ -36,24 +36,24 @@ A ``MutableRealmInteger``  is a mutable, `Long <https://docs.oracle.com/javase/7
    
    
    
-- The :ref:`equals <io_realm_MutableRealmInteger_equals>`  operator compares the contained `Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__  values. ``null`` -valued ``MutableRealmInteger``  are ``.equals`` 
+- The **equals (?)** operator compares the contained `Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__  values. ``null`` -valued ``MutableRealmInteger``  are ``.equals`` 
    
    
    
    
-- The :ref:`compareTo <io_realm_MutableRealmInteger_compareTo>`  operator compares the contained `Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__  values. It considers ``null``  < any non-``null``  value.
+- The **compareTo (?)** operator compares the contained `Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__  values. It considers ``null``  < any non-``null``  value.
    
    
    
    
-- The :ref:`increment <io_realm_MutableRealmInteger_increment>`  and :ref:`decrement <io_realm_MutableRealmInteger_decrement>`  operators throw `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  when applied to a ``null`` -valued ``MutableRealmInteger`` .
+- The **increment (?)** and **decrement (?)** operators throw `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  when applied to a ``null`` -valued ``MutableRealmInteger`` .
    
    
    
    
 
 
-``MutableRealmInteger`` s are most interesting as members of a managed :ref:`RealmModel <io_realm_RealmModel>`  object. When managed, the :ref:`increment <io_realm_MutableRealmInteger_increment>`  and :ref:`decrement <io_realm_MutableRealmInteger_decrement>`  operators implement a 
+``MutableRealmInteger`` s are most interesting as members of a managed :ref:`RealmModel <io_realm_RealmModel>`  object. When managed, the **increment (?)** and **decrement (?)** operators implement a 
 
 `conflict free replicated data type <https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type>`__ : Simultaneous increments and decrements from multiple distributed clients will be aggregated correctly. For instance, if the value of ``counter``  field for the object representing user "Fred" is currently 0, then the following code, executed on two different devices, simultaneously, even if connected by only a slow, unreliable network, will 
 
@@ -306,10 +306,6 @@ Method Detail
 
 .. _MutableRealmInteger_compareTo__:
 
-.. _io_realm_MutableRealmInteger_compareTo:
-
-.. _io_realm_MutableRealmInteger_compareTo__:
-
 
 
 compareTo
@@ -353,10 +349,6 @@ compareTo
 .. _MutableRealmInteger_decrement:
 
 .. _MutableRealmInteger_decrement__:
-
-.. _io_realm_MutableRealmInteger_decrement:
-
-.. _io_realm_MutableRealmInteger_decrement__:
 
 
 
@@ -404,10 +396,6 @@ decrement
 
 .. _MutableRealmInteger_equals__:
 
-.. _io_realm_MutableRealmInteger_equals:
-
-.. _io_realm_MutableRealmInteger_equals__:
-
 
 
 equals
@@ -452,6 +440,10 @@ equals
 
 .. _MutableRealmInteger_get__:
 
+.. _io_realm_MutableRealmInteger_get:
+
+.. _io_realm_MutableRealmInteger_get__:
+
 
 
 get
@@ -488,6 +480,10 @@ get
 
 .. _MutableRealmInteger_hashCode__:
 
+.. _io_realm_MutableRealmInteger_hashCode:
+
+.. _io_realm_MutableRealmInteger_hashCode__:
+
 
 
 hashCode
@@ -523,10 +519,6 @@ hashCode
 .. _MutableRealmInteger_increment:
 
 .. _MutableRealmInteger_increment__:
-
-.. _io_realm_MutableRealmInteger_increment:
-
-.. _io_realm_MutableRealmInteger_increment__:
 
 
 
@@ -574,6 +566,10 @@ increment
 
 .. _MutableRealmInteger_isNull__:
 
+.. _io_realm_MutableRealmInteger_isNull:
+
+.. _io_realm_MutableRealmInteger_isNull__:
+
 
 
 isNull
@@ -607,6 +603,10 @@ isNull
 .. _MutableRealmInteger_ofNull:
 
 .. _MutableRealmInteger_ofNull__:
+
+.. _io_realm_MutableRealmInteger_ofNull:
+
+.. _io_realm_MutableRealmInteger_ofNull__:
 
 
 
@@ -644,10 +644,6 @@ ofNull
 
 .. _MutableRealmInteger_set__:
 
-.. _io_realm_MutableRealmInteger_set:
-
-.. _io_realm_MutableRealmInteger_set__:
-
 
 
 set
@@ -660,7 +656,7 @@ set
    
    * -    public final **void** set (**long** newValue)
    
-   * - Sets the ``MutableRealmInteger``  value. Calling :ref:`set <io_realm_MutableRealmInteger_set>`  forcibly sets the ``MutableRealmInteger``  to the provided value. Doing this obliterates the effects of any calls to :ref:`increment <io_realm_MutableRealmInteger_increment>`  and :ref:`decrement <io_realm_MutableRealmInteger_decrement>`  perceived before the call to :ref:`set <io_realm_MutableRealmInteger_set>` .
+   * - Sets the ``MutableRealmInteger``  value. Calling **set (?)** forcibly sets the ``MutableRealmInteger``  to the provided value. Doing this obliterates the effects of any calls to **increment (?)** and **decrement (?)** perceived before the call to **set (?)**.
        
        
        
@@ -691,7 +687,7 @@ set
    
    * -    public abstract **void** set (`Long <https://docs.oracle.com/javase/7/docs/api/java/lang/Long.html>`__  newValue)
    
-   * - Sets the ``MutableRealmInteger``  value. Calling ``set``  forcibly sets the ``MutableRealmInteger``  to the provided value. Doing this obliterates the effects of any calls to :ref:`increment <io_realm_MutableRealmInteger_increment>`  and :ref:`decrement <io_realm_MutableRealmInteger_decrement>`  perceived before the call to ``set`` .
+   * - Sets the ``MutableRealmInteger``  value. Calling ``set``  forcibly sets the ``MutableRealmInteger``  to the provided value. Doing this obliterates the effects of any calls to **increment (?)** and **decrement (?)** perceived before the call to ``set`` .
        
        
        
@@ -722,10 +718,6 @@ set
 .. _MutableRealmInteger_valueOf:
 
 .. _MutableRealmInteger_valueOf__:
-
-.. _io_realm_MutableRealmInteger_valueOf:
-
-.. _io_realm_MutableRealmInteger_valueOf__:
 
 
 
