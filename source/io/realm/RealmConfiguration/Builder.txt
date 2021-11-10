@@ -22,6 +22,8 @@ io.realm
 RealmConfiguration.Builder used to construct instances of a RealmConfiguration in a fluent manner.
 
 
+
+
 Constructors
 ============
 
@@ -50,6 +52,8 @@ Method Summary
        
        
        
+       
+       
    
    * - 
        public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` 
@@ -57,6 +61,8 @@ Method Summary
        :ref:`directory <io_realm_RealmConfiguration_Builder_directory_File_>`  (`File <https://docs.oracle.com/javase/7/docs/api/java/io/File.html>`__  directory)
        
        Specifies the directory where the Realm file will be saved.
+       
+       
        
        
        
@@ -70,6 +76,8 @@ Method Summary
        
        
        
+       
+       
    
    * - 
        public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` 
@@ -77,6 +85,8 @@ Method Summary
        :ref:`schemaVersion <io_realm_RealmConfiguration_Builder_schemaVersion_long_>`  (**long** schemaVersion)
        
        Sets the schema version of the Realm.
+       
+       
        
        
        
@@ -102,6 +112,8 @@ Method Summary
        
        
        
+       
+       
    
    * - 
        public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` 
@@ -109,6 +121,8 @@ Method Summary
        :ref:`inMemory <io_realm_RealmConfiguration_Builder_inMemory__>`  ()
        
        Setting this will create an in-memory Realm instead of saving it to disk.
+       
+       
        
        
        
@@ -132,6 +146,8 @@ Method Summary
        :ref:`addModule <io_realm_RealmConfiguration_Builder_addModule_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  module)
        
        FIXME: Temporary visible DEBUG method.
+       
+       
        
        
        
@@ -181,6 +197,8 @@ Method Summary
        
        
        
+       
+       
    
    * - 
        public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` 
@@ -203,6 +221,8 @@ Method Summary
        
        
        
+       
+       
    
    * - 
        public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>` 
@@ -210,6 +230,8 @@ Method Summary
        :ref:`compactOnLaunch <io_realm_RealmConfiguration_Builder_compactOnLaunch_CompactOnLaunchCallback_>`  (:ref:`CompactOnLaunchCallback <io_realm_CompactOnLaunchCallback>`  compactOnLaunch)
        
        Sets this to determine if the Realm file should be compacted before returned to the user.
+       
+       
        
        
        
@@ -256,6 +278,8 @@ Method Summary
        :ref:`build <io_realm_RealmConfiguration_Builder_build__>`  ()
        
        Creates the RealmConfiguration based on the builder parameters.
+       
+       
        
        
        
@@ -308,6 +332,8 @@ name
        
        
        
+       
+       
    
    
 
@@ -336,6 +362,8 @@ directory
        **Parameters**
        
        - ``directory`` - the directory to save the Realm file in. Directory must be writable.
+          
+          
           
           
           
@@ -408,7 +436,9 @@ schemaVersion
    
    * -    public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>`  schemaVersion (**long** schemaVersion)
    
-   * - Sets the schema version of the Realm. This must be equal to or higher than the schema version of the existing Realm file, if any. If the schema version is higher than the already existing Realm, a migration is needed.If no migration code is provided, Realm will throw a :ref:`io.realm.exceptions.RealmMigrationNeededException <io_realm_exceptions_RealmMigrationNeededException>` .
+   * - Sets the schema version of the Realm. This must be equal to or higher than the schema version of the existing Realm file, if any. If the schema version is higher than the already existing Realm, a migration is needed.
+       
+       If no migration code is provided, Realm will throw a :ref:`io.realm.exceptions.RealmMigrationNeededException <io_realm_exceptions_RealmMigrationNeededException>` .
        
        
        
@@ -505,6 +535,8 @@ deleteRealmIfMigrationNeeded
        
        
        
+       
+       
        **Throws**
        
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if configured to use an asset file by calling :ref:`assetFile(String) <io_realm_RealmConfiguration_Builder_assetFile_String_>`  previously.
@@ -536,7 +568,11 @@ inMemory
    
    * -    public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>`  inMemory ()
    
-   * - Setting this will create an in-memory Realm instead of saving it to disk. In-memory Realms might still use disk space if memory is running low, but all files created by an in-memory Realm will be deleted when the Realm is closed.Note that because in-memory Realms are not persisted, you must be sure to hold on to at least one non-closed reference to the in-memory Realm object with the specific name as long as you want the data to last.
+   * - Setting this will create an in-memory Realm instead of saving it to disk. In-memory Realms might still use disk space if memory is running low, but all files created by an in-memory Realm will be deleted when the Realm is closed.
+       
+       Note that because in-memory Realms are not persisted, you must be sure to hold on to at least one non-closed reference to the in-memory Realm object with the specific name as long as you want the data to last.
+       
+       
        
        
        
@@ -584,13 +620,21 @@ modules
        
        
        
+       
+       
+       
+       
        **Parameters**
        
        - ``baseModule`` - the first Realm module (required).
           
           
           
+          
+          
        - ``additionalModules`` - the additional Realm modules
+          
+          
           
           
           
@@ -657,6 +701,8 @@ addModule
        
        
        
+       
+       
    
    
 
@@ -685,6 +731,8 @@ rxFactory
        **Parameters**
        
        - ``factory`` - factory to use.
+          
+          
           
           
           
@@ -728,6 +776,8 @@ flowFactory
           
           
           
+          
+          
        
        
        
@@ -768,6 +818,8 @@ initialData
           
           
           
+          
+          
        
        
        
@@ -795,7 +847,9 @@ assetFile
    
    * -    public :ref:`RealmConfiguration.Builder <io_realm_RealmConfiguration_Builder>`  assetFile (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  assetFile)
    
-   * - Copies the Realm file from the given asset file path.When opening the Realm for the first time, instead of creating an empty file, the Realm file will be copied from the provided asset file and used instead.
+   * - Copies the Realm file from the given asset file path.
+       
+       When opening the Realm for the first time, instead of creating an empty file, the Realm file will be copied from the provided asset file and used instead.
        
        This cannot be combined with :ref:`deleteRealmIfMigrationNeeded() <io_realm_RealmConfiguration_Builder_deleteRealmIfMigrationNeeded__>`  as doing so would just result in the copied file being deleted.
        
@@ -808,9 +862,13 @@ assetFile
        
        
        
+       
+       
        **Parameters**
        
        - ``assetFile`` - path to the asset database file.
+          
+          
           
           
           
@@ -858,6 +916,8 @@ readOnly
        
        
        Marking a Realm as read only only applies to the Realm in this process. Other processes can still write to the Realm.
+       
+       
        
        
        
@@ -919,9 +979,13 @@ compactOnLaunch
        
        
        
+       
+       
        **Parameters**
        
        - ``compactOnLaunch`` - a callback called when opening a Realm for the first time during the life of a process to determine if it should be compacted before being returned to the user. It is passed the total file size (data + free space) and the bytes used by data in the file.
+          
+          
           
           
           
@@ -963,9 +1027,13 @@ maxNumberOfActiveVersions
        
        
        
+       
+       
        **Parameters**
        
        - ``number`` - the maximum number of active versions before an exception is thrown.
+          
+          
           
           
           
@@ -1084,6 +1152,8 @@ build
    * -    public :ref:`RealmConfiguration <io_realm_RealmConfiguration>`  build ()
    
    * - Creates the RealmConfiguration based on the builder parameters.
+       
+       
        
        
        

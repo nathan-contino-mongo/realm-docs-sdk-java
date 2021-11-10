@@ -17,7 +17,9 @@ Interface OrderedCollectionChangeSet
 io.realm
 ========
 
-This interface describes the changes made to a collection during the last update.:ref:`OrderedCollectionChangeSet <io_realm_OrderedCollectionChangeSet>`  is passed to the :ref:`OrderedRealmCollectionChangeListener <io_realm_OrderedRealmCollectionChangeListener>`  which is registered by :ref:`RealmResults.addChangeListener(OrderedRealmCollectionChangeListener) <io_realm_RealmResults_addChangeListener_OrderedRealmCollectionChangeListener_>` .
+This interface describes the changes made to a collection during the last update.
+
+:ref:`OrderedCollectionChangeSet <io_realm_OrderedCollectionChangeSet>`  is passed to the :ref:`OrderedRealmCollectionChangeListener <io_realm_OrderedRealmCollectionChangeListener>`  which is registered by :ref:`RealmResults.addChangeListener(OrderedRealmCollectionChangeListener) <io_realm_RealmResults_addChangeListener_OrderedRealmCollectionChangeListener_>` .
 
 
 
@@ -64,6 +66,8 @@ Method Summary
        
        
        
+       
+       
    
    * - 
        public **int**
@@ -71,6 +75,8 @@ Method Summary
        :ref:`getDeletions <io_realm_OrderedCollectionChangeSet_getDeletions__>`  ()
        
        The deleted indices in the previous version of the collection.
+       
+       
        
        
        
@@ -84,6 +90,8 @@ Method Summary
        
        
        
+       
+       
    
    * - 
        public **int**
@@ -91,6 +99,8 @@ Method Summary
        :ref:`getChanges <io_realm_OrderedCollectionChangeSet_getChanges__>`  ()
        
        The modified indices in the new version of the collection.
+       
+       
        
        
        
@@ -104,6 +114,8 @@ Method Summary
        
        
        
+       
+       
    
    * - 
        public :ref:`OrderedCollectionChangeSet.Range <io_realm_OrderedCollectionChangeSet_Range>` 
@@ -111,6 +123,8 @@ Method Summary
        :ref:`getInsertionRanges <io_realm_OrderedCollectionChangeSet_getInsertionRanges__>`  ()
        
        The inserted ranges of objects in the new version of the collection.
+       
+       
        
        
        
@@ -124,6 +138,8 @@ Method Summary
        
        
        
+       
+       
    
    * - 
        public `Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__ 
@@ -131,6 +147,8 @@ Method Summary
        :ref:`getError <io_realm_OrderedCollectionChangeSet_getError__>`  ()
        
        Returns any error that happened.
+       
+       
        
        
        
@@ -215,6 +233,8 @@ getDeletions
        
        
        
+       
+       
    
    
 
@@ -245,6 +265,8 @@ getInsertions
        
        
        
+       
+       
    
    
 
@@ -263,7 +285,9 @@ getChanges
    
    * -    public **int** getChanges ()
    
-   * - The modified indices in the new version of the collection.For :ref:`RealmResults <io_realm_RealmResults>` , this means that one or more of the properties of the object at the given index were modified (or an object linked to by that object was modified).
+   * - The modified indices in the new version of the collection.
+       
+       For :ref:`RealmResults <io_realm_RealmResults>` , this means that one or more of the properties of the object at the given index were modified (or an object linked to by that object was modified).
        
        
        
@@ -309,6 +333,8 @@ getDeletionRanges
        
        
        
+       
+       
    
    
 
@@ -328,6 +354,8 @@ getInsertionRanges
    * -    public :ref:`OrderedCollectionChangeSet.Range <io_realm_OrderedCollectionChangeSet_Range>`  getInsertionRanges ()
    
    * - The inserted ranges of objects in the new version of the collection.
+       
+       
        
        
        
@@ -369,6 +397,8 @@ getChangeRanges
        
        
        
+       
+       
    
    
 
@@ -388,6 +418,8 @@ getError
    * -    public `Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__  getError ()
    
    * - Returns any error that happened. If an error has happened, the state of the collection and other changeset information is undefined. It is possible for a collection to go into an error state after being created and starting to send updates.
+       
+       
        
        
        

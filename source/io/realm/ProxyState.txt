@@ -19,6 +19,13 @@ io.realm
 
 `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
 
+*Implemented interfaces:*
+
+
+
+- :ref:`io.realm.internal.PendingRow.FrontEnd <io_realm_internal_PendingRow_FrontEnd>` 
+
+
 This implements ``RealmObjectProxy``  interface, to eliminate copying logic between :ref:`RealmObject <io_realm_RealmObject>`  and :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>` .
 
 
@@ -53,6 +60,8 @@ Method Summary
        
        
        
+       
+       
    
    * - 
        public **void**
@@ -63,11 +72,15 @@ Method Summary
        
        
        
+       
+       
    
    * - 
-       public **Row (?)**
+       public :ref:`Row <io_realm_internal_Row>` 
      - 
        :ref:`getRow$realm <io_realm_ProxyState_getRow_realm__>`  ()
+       
+       
        
        
        
@@ -77,7 +90,9 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`setRow$realm <io_realm_ProxyState_setRow_realm_Row_>`  (**Row (?)** row)
+       :ref:`setRow$realm <io_realm_ProxyState_setRow_realm_Row_>`  (:ref:`Row <io_realm_internal_Row>`  row)
+       
+       
        
        
        
@@ -93,11 +108,15 @@ Method Summary
        
        
        
+       
+       
    
    * - 
        public **void**
      - 
        :ref:`setAcceptDefaultValue$realm <io_realm_ProxyState_setAcceptDefaultValue_realm_boolean_>`  (**boolean** acceptDefaultValue)
+       
+       
        
        
        
@@ -113,11 +132,15 @@ Method Summary
        
        
        
+       
+       
    
    * - 
        public **void**
      - 
        :ref:`setExcludeFields$realm <io_realm_ProxyState_setExcludeFields_realm_List_String__>`  (`java.util.List\<java.lang.String> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  excludeFields)
+       
+       
        
        
        
@@ -133,11 +156,15 @@ Method Summary
        
        
        
+       
+       
    
    * - 
        public **void**
      - 
        :ref:`removeChangeListener <io_realm_ProxyState_removeChangeListener_RealmObjectChangeListener_E__>`  (:ref:`io.realm.RealmObjectChangeListener\<E> <io_realm_RealmObjectChangeListener>`  listener)
+       
+       
        
        
        
@@ -153,11 +180,15 @@ Method Summary
        
        
        
+       
+       
    
    * - 
        public **boolean**
      - 
        :ref:`isUnderConstruction <io_realm_ProxyState_isUnderConstruction__>`  ()
+       
+       
        
        
        
@@ -173,11 +204,15 @@ Method Summary
        
        
        
+       
+       
    
    * - 
        public **boolean**
      - 
        :ref:`isLoaded <io_realm_ProxyState_isLoaded__>`  ()
+       
+       
        
        
        
@@ -193,11 +228,15 @@ Method Summary
        
        
        
+       
+       
    
    * - 
        public **void**
      - 
-       :ref:`onQueryFinished <io_realm_ProxyState_onQueryFinished_Row_>`  (**Row (?)** row)
+       :ref:`onQueryFinished <io_realm_ProxyState_onQueryFinished_Row_>`  (:ref:`Row <io_realm_internal_Row>`  row)
+       
+       
        
        
        
@@ -210,6 +249,8 @@ Method Summary
        :ref:`checkValidObject <io_realm_ProxyState_checkValidObject_RealmModel_>`  (:ref:`RealmModel <io_realm_RealmModel>`  value)
        
        Check that object is a valid and managed object by this Realm.
+       
+       
        
        
        
@@ -262,6 +303,8 @@ getRealm$realm
        
        
        
+       
+       
    
    
 
@@ -292,6 +335,8 @@ setRealm$realm
        
        
        
+       
+       
    
    
 
@@ -308,9 +353,11 @@ getRow$realm
 .. list-table::
    :header-rows: 1
    
-   * -    public **Row (?)** getRow$realm ()
+   * -    public :ref:`Row <io_realm_internal_Row>`  getRow$realm ()
    
    * - 
+       
+       
        
        
        
@@ -338,9 +385,11 @@ setRow$realm
 .. list-table::
    :header-rows: 1
    
-   * -    public **void** setRow$realm (**Row (?)** row)
+   * -    public **void** setRow$realm (:ref:`Row <io_realm_internal_Row>`  row)
    
    * - 
+       
+       
        
        
        
@@ -382,6 +431,8 @@ getAcceptDefaultValue$realm
        
        
        
+       
+       
    
    
 
@@ -401,6 +452,8 @@ setAcceptDefaultValue$realm
    * -    public **void** setAcceptDefaultValue$realm (**boolean** acceptDefaultValue)
    
    * - 
+       
+       
        
        
        
@@ -442,6 +495,8 @@ getExcludeFields$realm
        
        
        
+       
+       
    
    
 
@@ -461,6 +516,8 @@ setExcludeFields$realm
    * -    public **void** setExcludeFields$realm (`java.util.List\<java.lang.String> <https://docs.oracle.com/javase/7/docs/api/java/util/List.html>`__  excludeFields)
    
    * - 
+       
+       
        
        
        
@@ -502,6 +559,8 @@ addChangeListener
        
        
        
+       
+       
    
    
 
@@ -521,6 +580,8 @@ removeChangeListener
    * -    public **void** removeChangeListener (:ref:`io.realm.RealmObjectChangeListener\<E> <io_realm_RealmObjectChangeListener>`  listener)
    
    * - 
+       
+       
        
        
        
@@ -562,6 +623,8 @@ removeAllChangeListeners
        
        
        
+       
+       
    
    
 
@@ -581,6 +644,8 @@ isUnderConstruction
    * -    public **boolean** isUnderConstruction ()
    
    * - 
+       
+       
        
        
        
@@ -622,6 +687,8 @@ setConstructionFinished
        
        
        
+       
+       
    
    
 
@@ -641,6 +708,8 @@ isLoaded
    * -    public **boolean** isLoaded ()
    
    * - 
+       
+       
        
        
        
@@ -682,6 +751,8 @@ load
        
        
        
+       
+       
    
    
 
@@ -698,9 +769,11 @@ onQueryFinished
 .. list-table::
    :header-rows: 1
    
-   * -    public **void** onQueryFinished (**Row (?)** row)
+   * -    public **void** onQueryFinished (:ref:`Row <io_realm_internal_Row>`  row)
    
    * - 
+       
+       
        
        
        
@@ -735,9 +808,13 @@ checkValidObject
        
        
        
+       
+       
        **Parameters**
        
        - ``value`` - model object
+          
+          
           
           
           

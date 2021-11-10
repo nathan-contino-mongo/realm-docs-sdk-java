@@ -22,6 +22,8 @@ io.realm
 
 
 - `java.util.Collection <https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html>`__ 
+- :ref:`io.realm.internal.ManageableObject <io_realm_internal_ManageableObject>` 
+- :ref:`io.realm.internal.Freezable <io_realm_internal_Freezable>` 
 - `java.lang.Iterable <https://docs.oracle.com/javase/7/docs/api/java/lang/Iterable.html>`__ 
 
 
@@ -64,6 +66,8 @@ Method Summary
        
        
        
+       
+       
    
    * - 
        public `Number <https://docs.oracle.com/javase/7/docs/api/java/lang/Number.html>`__ 
@@ -71,6 +75,8 @@ Method Summary
        :ref:`max <io_realm_RealmCollection_max_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
        
        Finds the maximum value of a field.
+       
+       
        
        
        
@@ -84,6 +90,8 @@ Method Summary
        
        
        
+       
+       
    
    * - 
        public **double**
@@ -91,6 +99,8 @@ Method Summary
        :ref:`average <io_realm_RealmCollection_average_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
        
        Returns the average of a given field.
+       
+       
        
        
        
@@ -104,6 +114,8 @@ Method Summary
        
        
        
+       
+       
    
    * - 
        public `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__ 
@@ -111,6 +123,8 @@ Method Summary
        :ref:`minDate <io_realm_RealmCollection_minDate_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
        
        Finds the minimum date.
+       
+       
        
        
        
@@ -124,6 +138,8 @@ Method Summary
        
        
        
+       
+       
    
    * - 
        public **boolean**
@@ -134,6 +150,8 @@ Method Summary
        
        
        
+       
+       
    
    * - 
        public **boolean**
@@ -141,6 +159,8 @@ Method Summary
        :ref:`load <io_realm_RealmCollection_load__>`  ()
        
        Blocks the collection until all data are available.
+       
+       
        
        
        
@@ -163,6 +183,8 @@ Method Summary
        :ref:`isManaged <io_realm_RealmCollection_isManaged__>`  ()
        
        Checks if the collection is managed by Realm.
+       
+       
        
        
        
@@ -223,6 +245,8 @@ where
           
           
           
+          
+          
        
        
        
@@ -265,9 +289,13 @@ min
        
        
        
+       
+       
        **Parameters**
        
        - ``fieldName`` - the field to look for a minimum on. Only number fields are supported.
+          
+          
           
           
           
@@ -283,7 +311,11 @@ min
           
           
           
+          
+          
        - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm has been closed or called from an incorrect thread.
+          
+          
           
           
           
@@ -315,9 +347,13 @@ max
        
        
        
+       
+       
        **Parameters**
        
        - ``fieldName`` - the field to look for a maximum on. Only number fields are supported.
+          
+          
           
           
           
@@ -333,7 +369,11 @@ max
           
           
           
+          
+          
        - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm has been closed or called from an incorrect thread.
+          
+          
           
           
           
@@ -365,9 +405,13 @@ sum
        
        
        
+       
+       
        **Parameters**
        
        - ``fieldName`` - the field to sum. Only number fields are supported.
+          
+          
           
           
           
@@ -383,7 +427,11 @@ sum
           
           
           
+          
+          
        - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm has been closed or called from an incorrect thread.
+          
+          
           
           
           
@@ -415,9 +463,13 @@ average
        
        
        
+       
+       
        **Parameters**
        
        - ``fieldName`` - the field to calculate average on. Only number fields are supported.
+          
+          
           
           
           
@@ -433,7 +485,11 @@ average
           
           
           
+          
+          
        - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm has been closed or called from an incorrect thread.
+          
+          
           
           
           
@@ -465,9 +521,13 @@ maxDate
        
        
        
+       
+       
        **Parameters**
        
        - ``fieldName`` - the field to look for the maximum date. If fieldName is not of Date type, an exception is thrown.
+          
+          
           
           
           
@@ -483,7 +543,11 @@ maxDate
           
           
           
+          
+          
        - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm has been closed or called from an incorrect thread.
+          
+          
           
           
           
@@ -515,9 +579,13 @@ minDate
        
        
        
+       
+       
        **Parameters**
        
        - ``fieldName`` - the field to look for the minimum date. If fieldName is not of Date type, an exception is thrown.
+          
+          
           
           
           
@@ -533,7 +601,11 @@ minDate
           
           
           
+          
+          
        - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm has been closed or called from an incorrect thread.
+          
+          
           
           
           
@@ -569,13 +641,19 @@ deleteAllFromRealm
        
        
        
+       
+       
        **Throws**
        
        - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the corresponding Realm is closed or in an incorrect thread.
           
           
           
+          
+          
        - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm has been closed or called from an incorrect thread.
+          
+          
           
           
           
@@ -614,6 +692,8 @@ isLoaded
        
        
        
+       
+       
    
    
 
@@ -633,6 +713,8 @@ load
    * -    public **boolean** load ()
    
    * - Blocks the collection until all data are available.
+       
+       
        
        
        
@@ -694,7 +776,13 @@ isManaged
    
    * -    public **boolean** isManaged ()
    
-   * - Checks if the collection is managed by Realm. A managed collection is just a wrapper around the data in the underlying Realm file. On Looper threads, a managed collection will be live-updated so it always points to the latest data. Managed collections are thread confined so that they cannot be accessed from other threads than the one that created them.If this method returns ``false`` , the collection is unmanaged. An unmanaged collection is just a normal java collection, so it will not be live updated.
+   * - Checks if the collection is managed by Realm. A managed collection is just a wrapper around the data in the underlying Realm file. On Looper threads, a managed collection will be live-updated so it always points to the latest data. Managed collections are thread confined so that they cannot be accessed from other threads than the one that created them.
+       
+       If this method returns ``false`` , the collection is unmanaged. An unmanaged collection is just a normal java collection, so it will not be live updated.
+       
+       
+       
+       
        
        
        
@@ -738,6 +826,8 @@ contains
        **Parameters**
        
        - ``object`` - the object to search for.
+          
+          
           
           
           

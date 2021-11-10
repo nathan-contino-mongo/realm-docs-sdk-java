@@ -7,8 +7,8 @@
 
 
 
-Class RealmModule
-^^^^^^^^^^^^^^^^^
+Annotation Type RealmModule
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. _io_realm_annotations_RealmModule:
 
@@ -24,7 +24,9 @@ io.realm.annotations
 - `java.lang.annotation.Annotation <https://docs.oracle.com/javase/7/docs/api/java/lang/annotation/Annotation.html>`__ 
 
 
-By default a Realm can store all classes extending RealmObject in a project. However, if you want to restrict a Realm to only contain a subset of classes or want to share them between a library project and an app project, you must use a RealmModule.A RealmModule is a collection of classes extending RealmObject that can be combined with other RealmModules to create the schema for a Realm. This makes it easier to control versioning and migration of those Realms.
+By default a Realm can store all classes extending RealmObject in a project. However, if you want to restrict a Realm to only contain a subset of classes or want to share them between a library project and an app project, you must use a RealmModule.
+
+A RealmModule is a collection of classes extending RealmObject that can be combined with other RealmModules to create the schema for a Realm. This makes it easier to control versioning and migration of those Realms.
 
 A RealmModule can either be a library module or an app module. The distinction is made by setting ``library = true`` . Setting ``library = true``  is normally only relevant for library authors. See below for further details.
 
@@ -69,7 +71,207 @@ App developers are not required to specify any modules, as they implicitly use t
 
 
 
-Inherited Methods
-=================
+Optional Element Summary
+========================
 
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Optional Element and Description
+   
+   * - public **boolean**
+       
+       
+     - Instead of adding all Realm classes manually to a module, set this boolean to true to automatically include all Realm classes in this project.
+       
+       
+       
+       
+       
+   
+   * - public :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` 
+       
+       
+     - The naming policy applied to all classes part of this module.
+       
+       
+       
+       
+       
+   
+   * - public `Class <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__ 
+       
+       
+     - Specifies the classes extending RealmObject that should be part of this module.
+       
+       
+       
+       
+       
+   
+   * - public :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` 
+       
+       
+     - The naming policy applied to all field names in all classes part of this module.
+       
+       
+       
+       
+       
+   
+   * - public **boolean**
+       
+       
+     - Setting this to true will mark this module as a library module.
+       
+       
+       
+       
+       
+   
+   
+
+
+Element Detail
+==============
+
+.. _allClasses:
+
+.. list-table::
+   :header-rows: 1
+   
+   * - allClasses
+   
+   * - ``public boolean allClasses`` 
+       
+       Instead of adding all Realm classes manually to a module, set this boolean to true to automatically include all Realm classes in this project. This does not include classes from other libraries which must be exposed using their own module. Setting both {@code allClasses = true} and {@code classes()} will result in the annotation processor throwing an exception.
+       
+       
+       
+       
+       **Default:**
+       ``false`` 
+       
+       
+   
+   
+.. _classNamingPolicy:
+
+.. list-table::
+   :header-rows: 1
+   
+   * - classNamingPolicy
+   
+   * - ``public RealmNamingPolicy classNamingPolicy`` 
+       
+       The naming policy applied to all classes part of this module. The default policy is {@link RealmNamingPolicy#NO_POLICY}. To define a naming policy for all fields in the classes, use {@link #fieldNamingPolicy()}.
+       
+       It is possible to override the naming policy specified in the module in each class using the {@link RealmClass} annotation.
+       
+       If a class is part of multiple modules, the same naming policy must be applied to both modules, otherwise an error will be thrown.
+       
+       
+       
+       
+       
+       
+       **Default:**
+       ``io.realm.annotations.RealmNamingPolicy.NO_POLICY`` 
+       
+       
+       
+       .. seealso::
+       
+       
+          
+          - :ref:`io.realm.annotations.RealmNamingPolicy for more information about what setting this policy means. <io_realm_annotations_RealmNamingPolicy>` 
+             
+             
+             
+          
+          
+          
+       
+       
+   
+   
+.. _classes:
+
+.. list-table::
+   :header-rows: 1
+   
+   * - classes
+   
+   * - ``public Class classes`` 
+       
+       Specifies the classes extending RealmObject that should be part of this module. Only classes in this project can be included. Classes from other libraries must be exposed using their own module. Setting both {@code allClasses = true} and {@code classes()} will result in the annotation processor throwing an exception.
+       
+       
+       
+       
+       **Default:**
+       ``{}`` 
+       
+       
+   
+   
+.. _fieldNamingPolicy:
+
+.. list-table::
+   :header-rows: 1
+   
+   * - fieldNamingPolicy
+   
+   * - ``public RealmNamingPolicy fieldNamingPolicy`` 
+       
+       The naming policy applied to all field names in all classes part of this module. The default policy is {@link RealmNamingPolicy#NO_POLICY}. To define a naming policy for class names, use {@link #classNamingPolicy()}.
+       
+       It is possible to override this naming policy using either {@link RealmClass#fieldNamingPolicy()} or {@link RealmField#name()}.
+       
+       
+       
+       
+       
+       
+       **Default:**
+       ``io.realm.annotations.RealmNamingPolicy.NO_POLICY`` 
+       
+       
+       
+       .. seealso::
+       
+       
+          
+          - :ref:`io.realm.annotations.RealmNamingPolicy for more information about what setting this policy means. <io_realm_annotations_RealmNamingPolicy>` 
+             
+             
+             
+          
+          
+          
+       
+       
+   
+   
+.. _library:
+
+.. list-table::
+   :header-rows: 1
+   
+   * - library
+   
+   * - ``public boolean library`` 
+       
+       Setting this to true will mark this module as a library module. This will prevent Realm from generating the {@code DefaultRealmModule} containing all classes. This is required by libraries so they do not interfere with Realms running in app code, but it also means that all libraries using Realm must explicitly use a module and cannot rely on the default module being present. Creating library modules and normal modules in the same project is not allowed and will result in the annotation processor throwing an exception.
+       
+       
+       
+       
+       **Default:**
+       ``false`` 
+       
+       
+   
+   
 

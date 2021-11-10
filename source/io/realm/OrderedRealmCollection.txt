@@ -26,6 +26,8 @@ io.realm
 - `java.util.Collection <https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html>`__ 
 - `java.lang.Iterable <https://docs.oracle.com/javase/7/docs/api/java/lang/Iterable.html>`__ 
 - `java.util.Collection <https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html>`__ 
+- :ref:`io.realm.internal.ManageableObject <io_realm_internal_ManageableObject>` 
+- :ref:`io.realm.internal.Freezable <io_realm_internal_Freezable>` 
 - `java.lang.Iterable <https://docs.oracle.com/javase/7/docs/api/java/lang/Iterable.html>`__ 
 
 
@@ -108,6 +110,8 @@ As you can see, after deletion, the size and elements order of snapshot stay the
 
 
 
+
+
 Method Summary
 ==============
 
@@ -126,6 +130,8 @@ Method Summary
        
        
        
+       
+       
    
    * - 
        public **E (?)**
@@ -133,6 +139,8 @@ Method Summary
        :ref:`first <io_realm_OrderedRealmCollection_first_E_>`  (**E (?)** defaultValue)
        
        Gets the first object from the collection.
+       
+       
        
        
        
@@ -146,6 +154,8 @@ Method Summary
        
        
        
+       
+       
    
    * - 
        public **E (?)**
@@ -153,6 +163,8 @@ Method Summary
        :ref:`last <io_realm_OrderedRealmCollection_last_E_>`  (**E (?)** defaultValue)
        
        Gets the last object from the collection.
+       
+       
        
        
        
@@ -166,6 +178,8 @@ Method Summary
        
        
        
+       
+       
    
    * - 
        public :ref:`RealmResults <io_realm_RealmResults>` 
@@ -174,6 +188,8 @@ Method Summary
                                   :ref:`Sort <io_realm_Sort>`  sortOrder)
        
        Sorts a collection based on the provided field and sort order.
+       
+       
        
        
        
@@ -190,6 +206,8 @@ Method Summary
        
        
        
+       
+       
    
    * - 
        public :ref:`RealmResults <io_realm_RealmResults>` 
@@ -198,6 +216,8 @@ Method Summary
                                   :ref:`io.realm.Sort[] <io_realm_Sort>`  sortOrders)
        
        Sorts a collection based on the provided fields and sort orders.
+       
+       
        
        
        
@@ -211,6 +231,8 @@ Method Summary
        
        
        
+       
+       
    
    * - 
        public **boolean**
@@ -221,6 +243,8 @@ Method Summary
        
        
        
+       
+       
    
    * - 
        public **boolean**
@@ -228,6 +252,8 @@ Method Summary
        :ref:`deleteLastFromRealm <io_realm_OrderedRealmCollection_deleteLastFromRealm__>`  ()
        
        Deletes the last object from the Realm.
+       
+       
        
        
        
@@ -280,9 +306,13 @@ first
        
        
        
+       
+       
        **Throws**
        
        - `IndexOutOfBoundsException <https://docs.oracle.com/javase/7/docs/api/java/lang/IndexOutOfBoundsException.html>`__  - if the collection is empty.
+          
+          
           
           
           
@@ -305,6 +335,8 @@ first
    * -    public **E (?)** first (**E (?)** defaultValue)
    
    * - Gets the first object from the collection. If the collection is empty, the provided default will be used instead.
+       
+       
        
        
        
@@ -343,9 +375,13 @@ last
        
        
        
+       
+       
        **Throws**
        
        - `IndexOutOfBoundsException <https://docs.oracle.com/javase/7/docs/api/java/lang/IndexOutOfBoundsException.html>`__  - if the collection is empty.
+          
+          
           
           
           
@@ -368,6 +404,8 @@ last
    * -    public **E (?)** last (**E (?)** defaultValue)
    
    * - Gets the last object from the collection. If the collection is empty, the provided default will be used instead.
+       
+       
        
        
        
@@ -402,9 +440,13 @@ sort
        
        
        
+       
+       
        **Parameters**
        
        - ``fieldName`` - the field name to sort by. Only fields of type boolean, short, int, long, float, double, Date, and String are supported.
+          
+          
           
           
           
@@ -420,7 +462,11 @@ sort
           
           
           
+          
+          
        - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm is closed, called on the wrong thread or the collection is an unmanaged collection.
+          
+          
           
           
           
@@ -448,13 +494,19 @@ sort
        
        
        
+       
+       
        **Parameters**
        
        - ``fieldName`` - the field name to sort by. Only fields of type boolean, short, int, long, float, double, Date, and String are supported.
           
           
           
+          
+          
        - ``sortOrder`` - the direction to sort by.
+          
+          
           
           
           
@@ -470,7 +522,11 @@ sort
           
           
           
+          
+          
        - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm is closed, called on the wrong thread or the collection is an unmanaged collection.
+          
+          
           
           
           
@@ -500,9 +556,13 @@ sort
        
        
        
+       
+       
        **Parameters**
        
        - ``fieldName1`` - first field name. Only fields of type boolean, short, int, long, float, double, Date, and String are supported.
+          
+          
           
           
           
@@ -510,11 +570,17 @@ sort
           
           
           
+          
+          
        - ``fieldName2`` - second field name. Only fields of type boolean, short, int, long, float, double, Date, and String are supported.
           
           
           
+          
+          
        - ``sortOrder2`` - sort order for second field.
+          
+          
           
           
           
@@ -530,7 +596,11 @@ sort
           
           
           
+          
+          
        - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm is closed, called on the wrong thread or the collection is an unmanaged collection.
+          
+          
           
           
           
@@ -558,13 +628,19 @@ sort
        
        
        
+       
+       
        **Parameters**
        
        - ``fieldNames`` - an array of field names to sort by. Only fields of type boolean, short, int, long, float, double, Date, and String are supported.
           
           
           
+          
+          
        - ``sortOrders`` - the directions to sort by.
+          
+          
           
           
           
@@ -580,7 +656,11 @@ sort
           
           
           
+          
+          
        - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm is closed, called on the wrong thread or the collection is an unmanaged collection.
+          
+          
           
           
           
@@ -612,9 +692,13 @@ deleteFromRealm
        
        
        
+       
+       
        **Parameters**
        
        - ``location`` - the array index identifying the object to be removed.
+          
+          
           
           
           
@@ -636,7 +720,11 @@ deleteFromRealm
           
           
           
+          
+          
        - `UnsupportedOperationException <https://docs.oracle.com/javase/7/docs/api/java/lang/UnsupportedOperationException.html>`__  - if the collection is unmanaged.
+          
+          
           
           
           
@@ -672,13 +760,19 @@ deleteFirstFromRealm
        
        
        
+       
+       
        **Throws**
        
        - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm is closed or the method is called on the wrong thread.
           
           
           
+          
+          
        - `UnsupportedOperationException <https://docs.oracle.com/javase/7/docs/api/java/lang/UnsupportedOperationException.html>`__  - if the collection is unmanaged.
+          
+          
           
           
           
@@ -714,13 +808,19 @@ deleteLastFromRealm
        
        
        
+       
+       
        **Throws**
        
        - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm is closed or the method is called from the wrong thread.
           
           
           
+          
+          
        - `UnsupportedOperationException <https://docs.oracle.com/javase/7/docs/api/java/lang/UnsupportedOperationException.html>`__  - if the collection is unmanaged.
+          
+          
           
           
           
@@ -764,7 +864,11 @@ createSnapshot
           
           
           
+          
+          
        - `UnsupportedOperationException <https://docs.oracle.com/javase/7/docs/api/java/lang/UnsupportedOperationException.html>`__  - if the collection is unmanaged.
+          
+          
           
           
           

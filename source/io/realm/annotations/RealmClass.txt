@@ -7,8 +7,8 @@
 
 
 
-Class RealmClass
-^^^^^^^^^^^^^^^^
+Annotation Type RealmClass
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. _io_realm_annotations_RealmClass:
 
@@ -27,7 +27,219 @@ io.realm.annotations
 Interface used to mark a class that can be persisted by Realm.
 
 
-Inherited Methods
-=================
 
+
+Optional Element Summary
+========================
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Optional Element and Description
+   
+   * - public **boolean**
+       
+       
+     - Define objects of this type as "Embedded".
+       
+       
+       
+       
+       
+   
+   * - public :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` 
+       
+       
+     - The naming policy applied to all fields in this class.
+       
+       
+       
+       
+       
+   
+   * - public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+       
+       
+     - Manually set the internal name used by Realm for this class.
+       
+       
+       
+       
+       
+   
+   * - public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+       
+       
+     - Manually set the internal name used by Realm for this class.
+       
+       
+       
+       
+       
+   
+   
+
+
+Element Detail
+==============
+
+.. _embedded:
+
+.. list-table::
+   :header-rows: 1
+   
+   * - embedded
+   
+   * - ``public boolean embedded`` 
+       
+       Define objects of this type as "Embedded". Embedded objects have a slightly different behavior than normal objects:
+       
+       
+       
+       - They must have exactly 1 parent linking to them when the embedded object is added to the Realm. Embedded objects can be the parent of other embedded objects. The parent cannot be changed later, except by copying the object.
+          
+          
+       - They cannot have fields annotated with {@code \@PrimaryKey}.
+          
+          
+       - When a parent object is deleted, all embedded objects are also deleted.
+          
+          
+       - It is possible to define an easy reference to the parent object using the {@code \@LinkingObjects} annotation:
+          
+          
+          
+          .. code-block:: java
+          
+                      {@code
+                           @LinkingObjects
+                           public Parent parent;
+                      }
+                      
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       **Default:**
+       ``false`` 
+       
+       
+   
+   
+.. _fieldNamingPolicy:
+
+.. list-table::
+   :header-rows: 1
+   
+   * - fieldNamingPolicy
+   
+   * - ``public RealmNamingPolicy fieldNamingPolicy`` 
+       
+       The naming policy applied to all fields in this class. The default policy is {@link RealmNamingPolicy#NO_POLICY}.
+       
+       It is possible to override the naming policy for each field by using the {@link RealmField} annotation.
+       
+       
+       
+       
+       
+       
+       **Default:**
+       ``io.realm.annotations.RealmNamingPolicy.NO_POLICY`` 
+       
+       
+       
+       .. seealso::
+       
+       
+          
+          - :ref:`io.realm.annotations.RealmNamingPolicy for more information about what setting this policy means. <io_realm_annotations_RealmNamingPolicy>` 
+             
+             
+             
+          
+          
+          
+       
+       
+   
+   
+.. _name:
+
+.. list-table::
+   :header-rows: 1
+   
+   * - name
+   
+   * - ``public String name`` 
+       
+       Manually set the internal name used by Realm for this class. If this class is part of any modules, this will also override any name policy set using {@link RealmModule#classNamingPolicy()}.
+       
+       
+       
+       
+       **Default:**
+       ``""`` 
+       
+       
+       
+       .. seealso::
+       
+       
+          
+          - :ref:`io.realm.annotations.RealmNamingPolicy for more information about what setting the name means. <io_realm_annotations_RealmNamingPolicy>` 
+             
+             
+             
+          
+          
+          
+       
+       
+   
+   
+.. _value:
+
+.. list-table::
+   :header-rows: 1
+   
+   * - value
+   
+   * - ``public String value`` 
+       
+       Manually set the internal name used by Realm for this class. If this class is part of any modules, this will also override any name policy set using {@link RealmModule#classNamingPolicy()}.
+       
+       
+       
+       
+       **Default:**
+       ``""`` 
+       
+       
+       
+       .. seealso::
+       
+       
+          
+          - :ref:`io.realm.annotations.RealmNamingPolicy for more information about what setting the name means. <io_realm_annotations_RealmNamingPolicy>` 
+             
+             
+             
+          - **name() (?)**
+             
+             
+             
+          
+          
+          
+       
+       
+   
+   
 
