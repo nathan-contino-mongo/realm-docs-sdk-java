@@ -17,8 +17,8 @@ Enum RealmFieldType
 io.realm
 ========
 
-`java.lang.Enum <https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html>`__ 
- | 		`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+ | 		`java.lang.Enum <https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html>`__ 
 
 List of the types used by Realm's underlying storage engine.Normally there is no reason to interact with the underlying Realm types as Realm will automatically convert between normal Java types and the Realm types. However it is possible to access these types through a :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>` .
 
@@ -351,19 +351,9 @@ Method Summary
    * - 
        public static :ref:`RealmFieldType <io_realm_RealmFieldType>` 
      - 
-       :ref:`values <io_realm_RealmFieldType_values__>`  ()
+       :ref:`fromNativeValue <io_realm_RealmFieldType_fromNativeValue_int_>`  (**int** value)
        
-       
-       
-       
-       
-   
-   * - 
-       public static :ref:`RealmFieldType <io_realm_RealmFieldType>` 
-     - 
-       :ref:`valueOf <io_realm_RealmFieldType_valueOf_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
-       
-       
+       Converts the underlying value used by the storage engine to the proper Realm type.
        
        
        
@@ -391,9 +381,19 @@ Method Summary
    * - 
        public static :ref:`RealmFieldType <io_realm_RealmFieldType>` 
      - 
-       :ref:`fromNativeValue <io_realm_RealmFieldType_fromNativeValue_int_>`  (**int** value)
+       :ref:`valueOf <io_realm_RealmFieldType_valueOf_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
        
-       Converts the underlying value used by the storage engine to the proper Realm type.
+       
+       
+       
+       
+   
+   * - 
+       public static :ref:`RealmFieldType <io_realm_RealmFieldType>` 
+     - 
+       :ref:`values <io_realm_RealmFieldType_values__>`  ()
+       
+       
        
        
        
@@ -406,16 +406,8 @@ Inherited Methods
 
 
 
-- Methods inherited from interface `java.lang.Enum <https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html>`__ : 
-   
-   ``name`` , ``ordinal`` , ``toString`` , ``equals`` , ``hashCode`` , ``clone`` , ``compareTo`` , ``getDeclaringClass`` , ``valueOf`` , ``finalize`` 
-   
-   
-- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
-   
-   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
-   
-   
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+- Methods inherited from interface `java.lang.Enum <https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html>`__ : ``name`` , ``ordinal`` , ``toString`` , ``equals`` , ``hashCode`` , ``clone`` , ``compareTo`` , ``getDeclaringClass`` , ``valueOf`` , ``finalize`` 
 
 
 
@@ -1078,142 +1070,18 @@ public static final :ref:`RealmFieldType <io_realm_RealmFieldType>`
 Method Detail
 =============
 
+.. _fromNativeValue:
 
+.. _fromNativeValue__:
 
-values
-------
+.. _RealmFieldType_fromNativeValue:
 
-.. _io_realm_RealmFieldType_values__:
+.. _RealmFieldType_fromNativeValue__:
 
-.. _io_realm_RealmFieldType_values__:
-
-.. _io_realm_RealmFieldType_values__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public static :ref:`RealmFieldType <io_realm_RealmFieldType>`  values ()
-   
-   * - 
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-
-
-valueOf
--------
-
-.. _io_realm_RealmFieldType_valueOf_String_:
-
-.. _io_realm_RealmFieldType_valueOf_String_:
-
-.. _io_realm_RealmFieldType_valueOf_String_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public static :ref:`RealmFieldType <io_realm_RealmFieldType>`  valueOf (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
-   
-   * - 
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-
-
-getNativeValue
---------------
-
-.. _io_realm_RealmFieldType_getNativeValue__:
-
-.. _io_realm_RealmFieldType_getNativeValue__:
-
-.. _io_realm_RealmFieldType_getNativeValue__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **int** getNativeValue ()
-   
-   * - Returns the native value representing this type.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-
-
-isValid
--------
-
-.. _io_realm_RealmFieldType_isValid_Object_:
-
-.. _io_realm_RealmFieldType_isValid_Object_:
-
-.. _io_realm_RealmFieldType_isValid_Object_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **boolean** isValid (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  obj)
-   
-   * - Checks if the given Java object can be converted to the underlying Realm type.
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``obj`` - object to test compatibility on.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
 
 
 fromNativeValue
 ---------------
-
-.. _io_realm_RealmFieldType_fromNativeValue_int_:
-
-.. _io_realm_RealmFieldType_fromNativeValue_int_:
 
 .. _io_realm_RealmFieldType_fromNativeValue_int_:
 
@@ -1245,6 +1113,158 @@ fromNativeValue
           
           
           
+       
+       
+       
+       
+       
+   
+   
+.. _getNativeValue:
+
+.. _getNativeValue__:
+
+.. _RealmFieldType_getNativeValue:
+
+.. _RealmFieldType_getNativeValue__:
+
+.. _io_realm_RealmFieldType_getNativeValue:
+
+.. _io_realm_RealmFieldType_getNativeValue__:
+
+
+
+getNativeValue
+--------------
+
+.. _io_realm_RealmFieldType_getNativeValue__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **int** getNativeValue ()
+   
+   * - Returns the native value representing this type.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _isValid:
+
+.. _isValid__:
+
+.. _RealmFieldType_isValid:
+
+.. _RealmFieldType_isValid__:
+
+
+
+isValid
+-------
+
+.. _io_realm_RealmFieldType_isValid_Object_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** isValid (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  obj)
+   
+   * - Checks if the given Java object can be converted to the underlying Realm type.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``obj`` - object to test compatibility on.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _valueOf:
+
+.. _valueOf__:
+
+.. _RealmFieldType_valueOf:
+
+.. _RealmFieldType_valueOf__:
+
+
+
+valueOf
+-------
+
+.. _io_realm_RealmFieldType_valueOf_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`RealmFieldType <io_realm_RealmFieldType>`  valueOf (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _values:
+
+.. _values__:
+
+.. _RealmFieldType_values:
+
+.. _RealmFieldType_values__:
+
+.. _io_realm_RealmFieldType_values:
+
+.. _io_realm_RealmFieldType_values__:
+
+
+
+values
+------
+
+.. _io_realm_RealmFieldType_values__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`RealmFieldType <io_realm_RealmFieldType>`  values ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
        
        
        

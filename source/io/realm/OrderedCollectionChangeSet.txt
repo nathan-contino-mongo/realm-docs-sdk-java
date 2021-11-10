@@ -56,31 +56,11 @@ Method Summary
      - Method and Description
    
    * - 
-       public :ref:`OrderedCollectionChangeSet.State <io_realm_OrderedCollectionChangeSet_State>` 
+       public :ref:`OrderedCollectionChangeSet.Range <io_realm_OrderedCollectionChangeSet_Range>` 
      - 
-       :ref:`getState <io_realm_OrderedCollectionChangeSet_getState__>`  ()
+       :ref:`getChangeRanges <io_realm_OrderedCollectionChangeSet_getChangeRanges__>`  ()
        
-       Returns the state represented by this change.
-       
-       
-       
-   
-   * - 
-       public **int**
-     - 
-       :ref:`getDeletions <io_realm_OrderedCollectionChangeSet_getDeletions__>`  ()
-       
-       The deleted indices in the previous version of the collection.
-       
-       
-       
-   
-   * - 
-       public **int**
-     - 
-       :ref:`getInsertions <io_realm_OrderedCollectionChangeSet_getInsertions__>`  ()
-       
-       The inserted indices in the new version of the collection.
+       The modified ranges of objects in the new version of the collection.
        
        
        
@@ -106,21 +86,11 @@ Method Summary
        
    
    * - 
-       public :ref:`OrderedCollectionChangeSet.Range <io_realm_OrderedCollectionChangeSet_Range>` 
+       public **int**
      - 
-       :ref:`getInsertionRanges <io_realm_OrderedCollectionChangeSet_getInsertionRanges__>`  ()
+       :ref:`getDeletions <io_realm_OrderedCollectionChangeSet_getDeletions__>`  ()
        
-       The inserted ranges of objects in the new version of the collection.
-       
-       
-       
-   
-   * - 
-       public :ref:`OrderedCollectionChangeSet.Range <io_realm_OrderedCollectionChangeSet_Range>` 
-     - 
-       :ref:`getChangeRanges <io_realm_OrderedCollectionChangeSet_getChangeRanges__>`  ()
-       
-       The modified ranges of objects in the new version of the collection.
+       The deleted indices in the previous version of the collection.
        
        
        
@@ -135,20 +105,328 @@ Method Summary
        
        
    
+   * - 
+       public :ref:`OrderedCollectionChangeSet.Range <io_realm_OrderedCollectionChangeSet_Range>` 
+     - 
+       :ref:`getInsertionRanges <io_realm_OrderedCollectionChangeSet_getInsertionRanges__>`  ()
+       
+       The inserted ranges of objects in the new version of the collection.
+       
+       
+       
+   
+   * - 
+       public **int**
+     - 
+       :ref:`getInsertions <io_realm_OrderedCollectionChangeSet_getInsertions__>`  ()
+       
+       The inserted indices in the new version of the collection.
+       
+       
+       
+   
+   * - 
+       public :ref:`OrderedCollectionChangeSet.State <io_realm_OrderedCollectionChangeSet_State>` 
+     - 
+       :ref:`getState <io_realm_OrderedCollectionChangeSet_getState__>`  ()
+       
+       Returns the state represented by this change.
+       
+       
+       
+   
    
 
 
 Method Detail
 =============
 
+.. _getChangeRanges:
+
+.. _getChangeRanges__:
+
+.. _OrderedCollectionChangeSet_getChangeRanges:
+
+.. _OrderedCollectionChangeSet_getChangeRanges__:
+
+.. _io_realm_OrderedCollectionChangeSet_getChangeRanges:
+
+.. _io_realm_OrderedCollectionChangeSet_getChangeRanges__:
+
+
+
+getChangeRanges
+---------------
+
+.. _io_realm_OrderedCollectionChangeSet_getChangeRanges__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`OrderedCollectionChangeSet.Range <io_realm_OrderedCollectionChangeSet_Range>`  getChangeRanges ()
+   
+   * - The modified ranges of objects in the new version of the collection.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getChanges:
+
+.. _getChanges__:
+
+.. _OrderedCollectionChangeSet_getChanges:
+
+.. _OrderedCollectionChangeSet_getChanges__:
+
+.. _io_realm_OrderedCollectionChangeSet_getChanges:
+
+.. _io_realm_OrderedCollectionChangeSet_getChanges__:
+
+
+
+getChanges
+----------
+
+.. _io_realm_OrderedCollectionChangeSet_getChanges__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **int** getChanges ()
+   
+   * - The modified indices in the new version of the collection.For :ref:`RealmResults <io_realm_RealmResults>` , this means that one or more of the properties of the object at the given index were modified (or an object linked to by that object was modified).
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getDeletionRanges:
+
+.. _getDeletionRanges__:
+
+.. _OrderedCollectionChangeSet_getDeletionRanges:
+
+.. _OrderedCollectionChangeSet_getDeletionRanges__:
+
+.. _io_realm_OrderedCollectionChangeSet_getDeletionRanges:
+
+.. _io_realm_OrderedCollectionChangeSet_getDeletionRanges__:
+
+
+
+getDeletionRanges
+-----------------
+
+.. _io_realm_OrderedCollectionChangeSet_getDeletionRanges__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`OrderedCollectionChangeSet.Range <io_realm_OrderedCollectionChangeSet_Range>`  getDeletionRanges ()
+   
+   * - The deleted ranges of objects in the previous version of the collection.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getDeletions:
+
+.. _getDeletions__:
+
+.. _OrderedCollectionChangeSet_getDeletions:
+
+.. _OrderedCollectionChangeSet_getDeletions__:
+
+.. _io_realm_OrderedCollectionChangeSet_getDeletions:
+
+.. _io_realm_OrderedCollectionChangeSet_getDeletions__:
+
+
+
+getDeletions
+------------
+
+.. _io_realm_OrderedCollectionChangeSet_getDeletions__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **int** getDeletions ()
+   
+   * - The deleted indices in the previous version of the collection.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getError:
+
+.. _getError__:
+
+.. _OrderedCollectionChangeSet_getError:
+
+.. _OrderedCollectionChangeSet_getError__:
+
+.. _io_realm_OrderedCollectionChangeSet_getError:
+
+.. _io_realm_OrderedCollectionChangeSet_getError__:
+
+
+
+getError
+--------
+
+.. _io_realm_OrderedCollectionChangeSet_getError__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__  getError ()
+   
+   * - Returns any error that happened. If an error has happened, the state of the collection and other changeset information is undefined. It is possible for a collection to go into an error state after being created and starting to send updates.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getInsertionRanges:
+
+.. _getInsertionRanges__:
+
+.. _OrderedCollectionChangeSet_getInsertionRanges:
+
+.. _OrderedCollectionChangeSet_getInsertionRanges__:
+
+.. _io_realm_OrderedCollectionChangeSet_getInsertionRanges:
+
+.. _io_realm_OrderedCollectionChangeSet_getInsertionRanges__:
+
+
+
+getInsertionRanges
+------------------
+
+.. _io_realm_OrderedCollectionChangeSet_getInsertionRanges__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`OrderedCollectionChangeSet.Range <io_realm_OrderedCollectionChangeSet_Range>`  getInsertionRanges ()
+   
+   * - The inserted ranges of objects in the new version of the collection.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getInsertions:
+
+.. _getInsertions__:
+
+.. _OrderedCollectionChangeSet_getInsertions:
+
+.. _OrderedCollectionChangeSet_getInsertions__:
+
+.. _io_realm_OrderedCollectionChangeSet_getInsertions:
+
+.. _io_realm_OrderedCollectionChangeSet_getInsertions__:
+
+
+
+getInsertions
+-------------
+
+.. _io_realm_OrderedCollectionChangeSet_getInsertions__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **int** getInsertions ()
+   
+   * - The inserted indices in the new version of the collection.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getState:
+
+.. _getState__:
+
+.. _OrderedCollectionChangeSet_getState:
+
+.. _OrderedCollectionChangeSet_getState__:
+
+.. _io_realm_OrderedCollectionChangeSet_getState:
+
+.. _io_realm_OrderedCollectionChangeSet_getState__:
+
 
 
 getState
 --------
-
-.. _io_realm_OrderedCollectionChangeSet_getState__:
-
-.. _io_realm_OrderedCollectionChangeSet_getState__:
 
 .. _io_realm_OrderedCollectionChangeSet_getState__:
 
@@ -183,220 +461,6 @@ getState
           
           
           
-       
-       
-   
-   
-
-
-getDeletions
-------------
-
-.. _io_realm_OrderedCollectionChangeSet_getDeletions__:
-
-.. _io_realm_OrderedCollectionChangeSet_getDeletions__:
-
-.. _io_realm_OrderedCollectionChangeSet_getDeletions__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **int** getDeletions ()
-   
-   * - The deleted indices in the previous version of the collection.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-
-
-getInsertions
--------------
-
-.. _io_realm_OrderedCollectionChangeSet_getInsertions__:
-
-.. _io_realm_OrderedCollectionChangeSet_getInsertions__:
-
-.. _io_realm_OrderedCollectionChangeSet_getInsertions__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **int** getInsertions ()
-   
-   * - The inserted indices in the new version of the collection.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-
-
-getChanges
-----------
-
-.. _io_realm_OrderedCollectionChangeSet_getChanges__:
-
-.. _io_realm_OrderedCollectionChangeSet_getChanges__:
-
-.. _io_realm_OrderedCollectionChangeSet_getChanges__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **int** getChanges ()
-   
-   * - The modified indices in the new version of the collection.For :ref:`RealmResults <io_realm_RealmResults>` , this means that one or more of the properties of the object at the given index were modified (or an object linked to by that object was modified).
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-
-
-getDeletionRanges
------------------
-
-.. _io_realm_OrderedCollectionChangeSet_getDeletionRanges__:
-
-.. _io_realm_OrderedCollectionChangeSet_getDeletionRanges__:
-
-.. _io_realm_OrderedCollectionChangeSet_getDeletionRanges__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public :ref:`OrderedCollectionChangeSet.Range <io_realm_OrderedCollectionChangeSet_Range>`  getDeletionRanges ()
-   
-   * - The deleted ranges of objects in the previous version of the collection.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-
-
-getInsertionRanges
-------------------
-
-.. _io_realm_OrderedCollectionChangeSet_getInsertionRanges__:
-
-.. _io_realm_OrderedCollectionChangeSet_getInsertionRanges__:
-
-.. _io_realm_OrderedCollectionChangeSet_getInsertionRanges__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public :ref:`OrderedCollectionChangeSet.Range <io_realm_OrderedCollectionChangeSet_Range>`  getInsertionRanges ()
-   
-   * - The inserted ranges of objects in the new version of the collection.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-
-
-getChangeRanges
----------------
-
-.. _io_realm_OrderedCollectionChangeSet_getChangeRanges__:
-
-.. _io_realm_OrderedCollectionChangeSet_getChangeRanges__:
-
-.. _io_realm_OrderedCollectionChangeSet_getChangeRanges__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public :ref:`OrderedCollectionChangeSet.Range <io_realm_OrderedCollectionChangeSet_Range>`  getChangeRanges ()
-   
-   * - The modified ranges of objects in the new version of the collection.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-
-
-getError
---------
-
-.. _io_realm_OrderedCollectionChangeSet_getError__:
-
-.. _io_realm_OrderedCollectionChangeSet_getError__:
-
-.. _io_realm_OrderedCollectionChangeSet_getError__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public `Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__  getError ()
-   
-   * - Returns any error that happened. If an error has happened, the state of the collection and other changeset information is undefined. It is possible for a collection to go into an error state after being created and starting to send updates.
-       
-       
-       
-       
-       
-       
-       
-       
-       
        
        
    

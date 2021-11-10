@@ -17,8 +17,8 @@ Enum RealmNamingPolicy
 io.realm.annotations
 ====================
 
-`java.lang.Enum <https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html>`__ 
- | 		`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+ | 		`java.lang.Enum <https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html>`__ 
 
 This enum defines the possible ways class and field names can be mapped from what is used in Java to the name used internally in the Realm file.Examples where this is useful:
 
@@ -40,17 +40,17 @@ This enum defines the possible ways class and field names can be mapped from wha
 
 Depending on where the policy is applied, it will have slightly different semantics:
 
-- If applied to **RealmModule.classNamingPolicy (?)** all classes part of that module will be affected. If a class is part of multiple modules, the same naming policy must be applied to both modules, otherwise an error will be thrown.
+- If applied to :ref:`RealmModule.classNamingPolicy <io_realm_annotations_RealmModule_classNamingPolicy>`  all classes part of that module will be affected. If a class is part of multiple modules, the same naming policy must be applied to both modules, otherwise an error will be thrown.
    
    
    
    
-- If applied to **RealmModule.fieldNamingPolicy (?)** all persistable fields in all classes part of this module will be affected.
+- If applied to :ref:`RealmModule.fieldNamingPolicy <io_realm_annotations_RealmModule_fieldNamingPolicy>`  all persistable fields in all classes part of this module will be affected.
    
    
    
    
-- If applied to **RealmClass.fieldNamingPolicy (?)** all fields in that class will be affected. This will override any field naming policy specified on a module.
+- If applied to :ref:`RealmClass.fieldNamingPolicy <io_realm_annotations_RealmClass_fieldNamingPolicy>`  all fields in that class will be affected. This will override any field naming policy specified on a module.
    
    
    
@@ -221,7 +221,7 @@ Method Summary
    * - 
        public static :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` 
      - 
-       :ref:`values <io_realm_annotations_RealmNamingPolicy_values__>`  ()
+       :ref:`valueOf <io_realm_annotations_RealmNamingPolicy_valueOf_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
        
        
        
@@ -231,7 +231,7 @@ Method Summary
    * - 
        public static :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` 
      - 
-       :ref:`valueOf <io_realm_annotations_RealmNamingPolicy_valueOf_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+       :ref:`values <io_realm_annotations_RealmNamingPolicy_values__>`  ()
        
        
        
@@ -246,16 +246,8 @@ Inherited Methods
 
 
 
-- Methods inherited from interface `java.lang.Enum <https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html>`__ : 
-   
-   ``name`` , ``ordinal`` , ``toString`` , ``equals`` , ``hashCode`` , ``clone`` , ``compareTo`` , ``getDeclaringClass`` , ``valueOf`` , ``finalize`` 
-   
-   
-- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
-   
-   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
-   
-   
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+- Methods inherited from interface `java.lang.Enum <https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html>`__ : ``name`` , ``ordinal`` , ``toString`` , ``equals`` , ``hashCode`` , ``clone`` , ``compareTo`` , ``getDeclaringClass`` , ``valueOf`` , ``finalize`` 
 
 
 
@@ -355,21 +347,25 @@ The name in the Java model class is converted lowercase with each word separated
 Method Detail
 =============
 
+.. _valueOf:
+
+.. _valueOf__:
+
+.. _RealmNamingPolicy_valueOf:
+
+.. _RealmNamingPolicy_valueOf__:
 
 
-values
-------
 
-.. _io_realm_annotations_RealmNamingPolicy_values__:
+valueOf
+-------
 
-.. _io_realm_annotations_RealmNamingPolicy_values__:
-
-.. _io_realm_annotations_RealmNamingPolicy_values__:
+.. _io_realm_annotations_RealmNamingPolicy_valueOf_String_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public static :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>`  values ()
+   * -    public static :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>`  valueOf (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
    
    * - 
        
@@ -385,21 +381,29 @@ values
        
    
    
+.. _values:
+
+.. _values__:
+
+.. _RealmNamingPolicy_values:
+
+.. _RealmNamingPolicy_values__:
+
+.. _io_realm_annotations_RealmNamingPolicy_values:
+
+.. _io_realm_annotations_RealmNamingPolicy_values__:
 
 
-valueOf
--------
 
-.. _io_realm_annotations_RealmNamingPolicy_valueOf_String_:
+values
+------
 
-.. _io_realm_annotations_RealmNamingPolicy_valueOf_String_:
-
-.. _io_realm_annotations_RealmNamingPolicy_valueOf_String_:
+.. _io_realm_annotations_RealmNamingPolicy_values__:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public static :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>`  valueOf (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+   * -    public static :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>`  values ()
    
    * - 
        

@@ -17,10 +17,10 @@ Class OrderedRealmCollectionSnapshot
 io.realm
 ========
 
-**io.realm.OrderedRealmCollectionImpl (?)**
- | 		`java.util.AbstractList <https://docs.oracle.com/javase/7/docs/api/java/util/AbstractList.html>`__ 
- | 					`java.util.AbstractCollection <https://docs.oracle.com/javase/7/docs/api/java/util/AbstractCollection.html>`__ 
- | 								`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+ | 		`java.util.AbstractCollection <https://docs.oracle.com/javase/7/docs/api/java/util/AbstractCollection.html>`__ 
+ | 					`java.util.AbstractList <https://docs.oracle.com/javase/7/docs/api/java/util/AbstractList.html>`__ 
+ | 								**io.realm.OrderedRealmCollectionImpl (?)**
 
 An :ref:`OrderedRealmCollectionSnapshot <io_realm_OrderedRealmCollectionSnapshot>`  is a special type of :ref:`OrderedRealmCollection <io_realm_OrderedRealmCollection>` . It can be created by calling :ref:`OrderedRealmCollection.createSnapshot() <io_realm_OrderedRealmCollection_createSnapshot__>` . Unlike :ref:`RealmResults <io_realm_RealmResults>`  and :ref:`RealmList <io_realm_RealmList>` , its size and order of elements will never be changed after creation.
 
@@ -65,9 +65,9 @@ Method Summary
      - Method and Description
    
    * - 
-       public **int**
+       public :ref:`OrderedRealmCollectionSnapshot <io_realm_OrderedRealmCollectionSnapshot>` 
      - 
-       :ref:`size <io_realm_OrderedRealmCollectionSnapshot_size__>`  ()
+       :ref:`createSnapshot <io_realm_OrderedRealmCollectionSnapshot_createSnapshot__>`  ()
        
        
        
@@ -77,11 +77,49 @@ Method Summary
        
    
    * - 
-       public :ref:`RealmResults <io_realm_RealmResults>` 
+       public **boolean**
      - 
-       :ref:`sort <io_realm_OrderedRealmCollectionSnapshot_sort_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       :ref:`deleteAllFromRealm <io_realm_OrderedRealmCollectionSnapshot_deleteAllFromRealm__>`  ()
        
-       Not supported by :ref:`OrderedRealmCollectionSnapshot <io_realm_OrderedRealmCollectionSnapshot>` .
+       This deletes all objects in the collection from the underlying Realm.
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`deleteFirstFromRealm <io_realm_OrderedRealmCollectionSnapshot_deleteFirstFromRealm__>`  ()
+       
+       Deletes the first object from the Realm.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`deleteFromRealm <io_realm_OrderedRealmCollectionSnapshot_deleteFromRealm_int_>`  (**int** location)
+       
+       Deletes the object at the given index from the Realm.
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`deleteLastFromRealm <io_realm_OrderedRealmCollectionSnapshot_deleteLastFromRealm__>`  ()
+       
+       Deletes the last object from the Realm.
+       
+       
+       
+   
+   * - 
+       public :ref:`OrderedRealmCollection <io_realm_OrderedRealmCollection>` 
+     - 
+       :ref:`freeze <io_realm_OrderedRealmCollectionSnapshot_freeze__>`  ()
        
        
        
@@ -89,52 +127,9 @@ Method Summary
        
    
    * - 
-       public :ref:`RealmResults <io_realm_RealmResults>` 
+       public **boolean**
      - 
-       :ref:`sort <io_realm_OrderedRealmCollectionSnapshot_sort_String__Sort_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                                  :ref:`Sort <io_realm_Sort>`  sortOrder)
-       
-       Not supported by :ref:`OrderedRealmCollectionSnapshot <io_realm_OrderedRealmCollectionSnapshot>` .
-       
-       
-       
-       
-       
-   
-   * - 
-       public :ref:`RealmResults <io_realm_RealmResults>` 
-     - 
-       :ref:`sort <io_realm_OrderedRealmCollectionSnapshot_sort_String__Sort__String__Sort_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName1,
-                                  :ref:`Sort <io_realm_Sort>`  sortOrder1,
-                                  `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName2,
-                                  :ref:`Sort <io_realm_Sort>`  sortOrder2)
-       
-       Not supported by :ref:`OrderedRealmCollectionSnapshot <io_realm_OrderedRealmCollectionSnapshot>` .
-       
-       
-       
-       
-       
-   
-   * - 
-       public :ref:`RealmResults <io_realm_RealmResults>` 
-     - 
-       :ref:`sort <io_realm_OrderedRealmCollectionSnapshot_sort_String[]__Sort[]_>`  (`java.lang.String[] <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldNames,
-                                  :ref:`io.realm.Sort[] <io_realm_Sort>`  sortOrders)
-       
-       Not supported by :ref:`OrderedRealmCollectionSnapshot <io_realm_OrderedRealmCollectionSnapshot>` .
-       
-       
-       
-       
-       
-   
-   * - 
-       public :ref:`RealmQuery <io_realm_RealmQuery>` 
-     - 
-       :ref:`where <io_realm_OrderedRealmCollectionSnapshot_where__>`  ()
-       
-       Not supported by :ref:`OrderedRealmCollectionSnapshot <io_realm_OrderedRealmCollectionSnapshot>` .
+       :ref:`isFrozen <io_realm_OrderedRealmCollectionSnapshot_isFrozen__>`  ()
        
        
        
@@ -166,9 +161,9 @@ Method Summary
        
    
    * - 
-       public :ref:`OrderedRealmCollectionSnapshot <io_realm_OrderedRealmCollectionSnapshot>` 
+       public **int**
      - 
-       :ref:`createSnapshot <io_realm_OrderedRealmCollectionSnapshot_createSnapshot__>`  ()
+       :ref:`size <io_realm_OrderedRealmCollectionSnapshot_size__>`  ()
        
        
        
@@ -178,9 +173,12 @@ Method Summary
        
    
    * - 
-       public :ref:`OrderedRealmCollection <io_realm_OrderedRealmCollection>` 
+       public :ref:`RealmResults <io_realm_RealmResults>` 
      - 
-       :ref:`freeze <io_realm_OrderedRealmCollectionSnapshot_freeze__>`  ()
+       :ref:`sort <io_realm_OrderedRealmCollectionSnapshot_sort_String[]__Sort[]_>`  (`java.lang.String[] <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldNames,
+                                  :ref:`io.realm.Sort[] <io_realm_Sort>`  sortOrders)
+       
+       Not supported by :ref:`OrderedRealmCollectionSnapshot <io_realm_OrderedRealmCollectionSnapshot>` .
        
        
        
@@ -188,49 +186,51 @@ Method Summary
        
    
    * - 
-       public **void**
+       public :ref:`RealmResults <io_realm_RealmResults>` 
      - 
-       :ref:`deleteFromRealm <io_realm_OrderedRealmCollectionSnapshot_deleteFromRealm_int_>`  (**int** location)
+       :ref:`sort <io_realm_OrderedRealmCollectionSnapshot_sort_String__Sort__String__Sort_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName1,
+                                  :ref:`Sort <io_realm_Sort>`  sortOrder1,
+                                  `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName2,
+                                  :ref:`Sort <io_realm_Sort>`  sortOrder2)
        
-       Deletes the object at the given index from the Realm.
+       Not supported by :ref:`OrderedRealmCollectionSnapshot <io_realm_OrderedRealmCollectionSnapshot>` .
+       
+       
        
        
        
    
    * - 
-       public **boolean**
+       public :ref:`RealmResults <io_realm_RealmResults>` 
      - 
-       :ref:`deleteFirstFromRealm <io_realm_OrderedRealmCollectionSnapshot_deleteFirstFromRealm__>`  ()
+       :ref:`sort <io_realm_OrderedRealmCollectionSnapshot_sort_String__Sort_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                  :ref:`Sort <io_realm_Sort>`  sortOrder)
        
-       Deletes the first object from the Realm.
+       Not supported by :ref:`OrderedRealmCollectionSnapshot <io_realm_OrderedRealmCollectionSnapshot>` .
+       
+       
        
        
        
    
    * - 
-       public **boolean**
+       public :ref:`RealmResults <io_realm_RealmResults>` 
      - 
-       :ref:`deleteLastFromRealm <io_realm_OrderedRealmCollectionSnapshot_deleteLastFromRealm__>`  ()
+       :ref:`sort <io_realm_OrderedRealmCollectionSnapshot_sort_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
        
-       Deletes the last object from the Realm.
+       Not supported by :ref:`OrderedRealmCollectionSnapshot <io_realm_OrderedRealmCollectionSnapshot>` .
+       
+       
        
        
        
    
    * - 
-       public **boolean**
+       public :ref:`RealmQuery <io_realm_RealmQuery>` 
      - 
-       :ref:`deleteAllFromRealm <io_realm_OrderedRealmCollectionSnapshot_deleteAllFromRealm__>`  ()
+       :ref:`where <io_realm_OrderedRealmCollectionSnapshot_where__>`  ()
        
-       This deletes all objects in the collection from the underlying Realm.
-       
-       
-       
-   
-   * - 
-       public **boolean**
-     - 
-       :ref:`isFrozen <io_realm_OrderedRealmCollectionSnapshot_isFrozen__>`  ()
+       Not supported by :ref:`OrderedRealmCollectionSnapshot <io_realm_OrderedRealmCollectionSnapshot>` .
        
        
        
@@ -245,26 +245,10 @@ Inherited Methods
 
 
 
-- Methods inherited from interface **io.realm.OrderedRealmCollectionImpl (?)**: 
-   
-   ``isValid`` , ``isManaged`` , ``contains`` , ``get`` , ``first`` , ``first`` , ``last`` , ``last`` , ``deleteFromRealm`` , ``deleteAllFromRealm`` , ``iterator`` , ``listIterator`` , ``listIterator`` , ``sort`` , ``sort`` , ``sort`` , ``sort`` , ``size`` , ``min`` , ``minDate`` , ``max`` , ``maxDate`` , ``sum`` , ``average`` , ``remove`` , ``remove`` , ``removeAll`` , ``set`` , ``retainAll`` , ``deleteLastFromRealm`` , ``deleteFirstFromRealm`` , ``clear`` , ``add`` , ``add`` , ``addAll`` , ``addAll`` , ``createSnapshot`` , ``getRealm`` , ``getCollectionOperator`` 
-   
-   
-- Methods inherited from interface `java.util.AbstractList <https://docs.oracle.com/javase/7/docs/api/java/util/AbstractList.html>`__ : 
-   
-   ``add`` , ``get`` , ``set`` , ``add`` , ``remove`` , ``indexOf`` , ``lastIndexOf`` , ``clear`` , ``addAll`` , ``iterator`` , ``listIterator`` , ``listIterator`` , ``subList`` , ``equals`` , ``hashCode`` , ``removeRange`` 
-   
-   
-- Methods inherited from interface `java.util.AbstractCollection <https://docs.oracle.com/javase/7/docs/api/java/util/AbstractCollection.html>`__ : 
-   
-   ``iterator`` , ``size`` , ``isEmpty`` , ``contains`` , ``toArray`` , ``toArray`` , ``add`` , ``remove`` , ``containsAll`` , ``addAll`` , ``removeAll`` , ``retainAll`` , ``clear`` , ``toString`` 
-   
-   
-- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
-   
-   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
-   
-   
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+- Methods inherited from interface `java.util.AbstractCollection <https://docs.oracle.com/javase/7/docs/api/java/util/AbstractCollection.html>`__ : ``iterator`` , ``size`` , ``isEmpty`` , ``contains`` , ``toArray`` , ``toArray`` , ``add`` , ``remove`` , ``containsAll`` , ``addAll`` , ``removeAll`` , ``retainAll`` , ``clear`` , ``toString`` 
+- Methods inherited from interface `java.util.AbstractList <https://docs.oracle.com/javase/7/docs/api/java/util/AbstractList.html>`__ : ``add`` , ``get`` , ``set`` , ``add`` , ``remove`` , ``indexOf`` , ``lastIndexOf`` , ``clear`` , ``addAll`` , ``iterator`` , ``listIterator`` , ``listIterator`` , ``subList`` , ``equals`` , ``hashCode`` , ``removeRange`` 
+- Methods inherited from interface **io.realm.OrderedRealmCollectionImpl (?)**: ``isValid`` , ``isManaged`` , ``contains`` , ``get`` , ``first`` , ``first`` , ``last`` , ``last`` , ``deleteFromRealm`` , ``deleteAllFromRealm`` , ``iterator`` , ``listIterator`` , ``listIterator`` , ``sort`` , ``sort`` , ``sort`` , ``sort`` , ``size`` , ``min`` , ``minDate`` , ``max`` , ``maxDate`` , ``sum`` , ``average`` , ``remove`` , ``remove`` , ``removeAll`` , ``set`` , ``retainAll`` , ``deleteLastFromRealm`` , ``deleteFirstFromRealm`` , ``clear`` , ``add`` , ``add`` , ``addAll`` , ``addAll`` , ``createSnapshot`` , ``getRealm`` , ``getCollectionOperator`` 
 
 
 
@@ -272,300 +256,22 @@ Inherited Methods
 Method Detail
 =============
 
+.. _createSnapshot:
 
+.. _createSnapshot__:
 
-size
-----
+.. _OrderedRealmCollectionSnapshot_createSnapshot:
 
-.. _io_realm_OrderedRealmCollectionSnapshot_size__:
+.. _OrderedRealmCollectionSnapshot_createSnapshot__:
 
-.. _io_realm_OrderedRealmCollectionSnapshot_size__:
+.. _io_realm_OrderedRealmCollectionSnapshot_createSnapshot:
 
-.. _io_realm_OrderedRealmCollectionSnapshot_size__:
+.. _io_realm_OrderedRealmCollectionSnapshot_createSnapshot__:
 
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **int** size ()
-   
-   * - 
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-
-
-sort
-----
-
-.. _io_realm_OrderedRealmCollectionSnapshot_sort_String_:
-
-.. _io_realm_OrderedRealmCollectionSnapshot_sort_String_:
-
-.. _io_realm_OrderedRealmCollectionSnapshot_sort_String_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public :ref:`RealmResults <io_realm_RealmResults>`  sort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-   
-   * - Not supported by :ref:`OrderedRealmCollectionSnapshot <io_realm_OrderedRealmCollectionSnapshot>` . Use 'sort()' on the original :ref:`OrderedRealmCollection <io_realm_OrderedRealmCollection>`  instead.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `UnsupportedOperationException <https://docs.oracle.com/javase/7/docs/api/java/lang/UnsupportedOperationException.html>`__  - 
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
-.. _io_realm_OrderedRealmCollectionSnapshot_sort_String__Sort_:
-
-.. _io_realm_OrderedRealmCollectionSnapshot_sort_String_Sort_:
-
-.. _io_realm_OrderedRealmCollectionSnapshot_sort_String__Sort_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public :ref:`RealmResults <io_realm_RealmResults>`  sort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                                  :ref:`Sort <io_realm_Sort>`  sortOrder)
-   
-   * - Not supported by :ref:`OrderedRealmCollectionSnapshot <io_realm_OrderedRealmCollectionSnapshot>` . Use 'sort()' on the original :ref:`OrderedRealmCollection <io_realm_OrderedRealmCollection>`  instead.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `UnsupportedOperationException <https://docs.oracle.com/javase/7/docs/api/java/lang/UnsupportedOperationException.html>`__  - 
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
-.. _io_realm_OrderedRealmCollectionSnapshot_sort_String__Sort__String__Sort_:
-
-.. _io_realm_OrderedRealmCollectionSnapshot_sort_String_Sort_String_Sort_:
-
-.. _io_realm_OrderedRealmCollectionSnapshot_sort_String__Sort__String__Sort_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public :ref:`RealmResults <io_realm_RealmResults>`  sort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName1,
-                                  :ref:`Sort <io_realm_Sort>`  sortOrder1,
-                                  `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName2,
-                                  :ref:`Sort <io_realm_Sort>`  sortOrder2)
-   
-   * - Not supported by :ref:`OrderedRealmCollectionSnapshot <io_realm_OrderedRealmCollectionSnapshot>` . Use 'sort()' on the original :ref:`OrderedRealmCollection <io_realm_OrderedRealmCollection>`  instead.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `UnsupportedOperationException <https://docs.oracle.com/javase/7/docs/api/java/lang/UnsupportedOperationException.html>`__  - 
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
-.. _io_realm_OrderedRealmCollectionSnapshot_sort_String[]__Sort[]_:
-
-.. _io_realm_OrderedRealmCollectionSnapshot_sort_String_Sort_:
-
-.. _io_realm_OrderedRealmCollectionSnapshot_sort_String__Sort_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public :ref:`RealmResults <io_realm_RealmResults>`  sort (`java.lang.String[] <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldNames,
-                                  :ref:`io.realm.Sort[] <io_realm_Sort>`  sortOrders)
-   
-   * - Not supported by :ref:`OrderedRealmCollectionSnapshot <io_realm_OrderedRealmCollectionSnapshot>` . Use 'sort()' on the original :ref:`OrderedRealmCollection <io_realm_OrderedRealmCollection>`  instead.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `UnsupportedOperationException <https://docs.oracle.com/javase/7/docs/api/java/lang/UnsupportedOperationException.html>`__  - 
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
-
-
-where
------
-
-.. _io_realm_OrderedRealmCollectionSnapshot_where__:
-
-.. _io_realm_OrderedRealmCollectionSnapshot_where__:
-
-.. _io_realm_OrderedRealmCollectionSnapshot_where__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public :ref:`RealmQuery <io_realm_RealmQuery>`  where ()
-   
-   * - Not supported by :ref:`OrderedRealmCollectionSnapshot <io_realm_OrderedRealmCollectionSnapshot>` . Use 'where()' on the original :ref:`OrderedRealmCollection <io_realm_OrderedRealmCollection>`  instead.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `UnsupportedOperationException <https://docs.oracle.com/javase/7/docs/api/java/lang/UnsupportedOperationException.html>`__  - 
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
-
-
-isLoaded
---------
-
-.. _io_realm_OrderedRealmCollectionSnapshot_isLoaded__:
-
-.. _io_realm_OrderedRealmCollectionSnapshot_isLoaded__:
-
-.. _io_realm_OrderedRealmCollectionSnapshot_isLoaded__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **boolean** isLoaded ()
-   
-   * - 
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-
-
-load
-----
-
-.. _io_realm_OrderedRealmCollectionSnapshot_load__:
-
-.. _io_realm_OrderedRealmCollectionSnapshot_load__:
-
-.. _io_realm_OrderedRealmCollectionSnapshot_load__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **boolean** load ()
-   
-   * - 
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
 
 
 createSnapshot
 --------------
-
-.. _io_realm_OrderedRealmCollectionSnapshot_createSnapshot__:
-
-.. _io_realm_OrderedRealmCollectionSnapshot_createSnapshot__:
 
 .. _io_realm_OrderedRealmCollectionSnapshot_createSnapshot__:
 
@@ -590,29 +296,49 @@ createSnapshot
        
    
    
+.. _deleteAllFromRealm:
+
+.. _deleteAllFromRealm__:
+
+.. _OrderedRealmCollectionSnapshot_deleteAllFromRealm:
+
+.. _OrderedRealmCollectionSnapshot_deleteAllFromRealm__:
+
+.. _io_realm_OrderedRealmCollectionSnapshot_deleteAllFromRealm:
+
+.. _io_realm_OrderedRealmCollectionSnapshot_deleteAllFromRealm__:
 
 
-freeze
-------
 
-.. _io_realm_OrderedRealmCollectionSnapshot_freeze__:
+deleteAllFromRealm
+------------------
 
-.. _io_realm_OrderedRealmCollectionSnapshot_freeze__:
-
-.. _io_realm_OrderedRealmCollectionSnapshot_freeze__:
+.. _io_realm_OrderedRealmCollectionSnapshot_deleteAllFromRealm__:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public :ref:`OrderedRealmCollection <io_realm_OrderedRealmCollection>`  freeze ()
+   * -    public **boolean** deleteAllFromRealm ()
    
-   * - 
+   * - This deletes all objects in the collection from the underlying Realm. All objects in the collection snapshot will become invalid.
        
        
        
        
        
        
+       
+       
+       **Throws**
+       
+       - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the corresponding Realm is closed or in an incorrect thread.
+          
+          
+          
+       - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm has been closed or called from an incorrect thread.
+          
+          
+          
        
        
        
@@ -620,14 +346,64 @@ freeze
        
    
    
+.. _deleteFirstFromRealm:
+
+.. _deleteFirstFromRealm__:
+
+.. _OrderedRealmCollectionSnapshot_deleteFirstFromRealm:
+
+.. _OrderedRealmCollectionSnapshot_deleteFirstFromRealm__:
+
+.. _io_realm_OrderedRealmCollectionSnapshot_deleteFirstFromRealm:
+
+.. _io_realm_OrderedRealmCollectionSnapshot_deleteFirstFromRealm__:
+
+
+
+deleteFirstFromRealm
+--------------------
+
+.. _io_realm_OrderedRealmCollectionSnapshot_deleteFirstFromRealm__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** deleteFirstFromRealm ()
+   
+   * - Deletes the first object from the Realm. The first object will become invalid.
+       
+       
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm is closed or the method is called on the wrong thread.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _deleteFromRealm:
+
+.. _deleteFromRealm__:
+
+.. _OrderedRealmCollectionSnapshot_deleteFromRealm:
+
+.. _OrderedRealmCollectionSnapshot_deleteFromRealm__:
+
 
 
 deleteFromRealm
 ---------------
-
-.. _io_realm_OrderedRealmCollectionSnapshot_deleteFromRealm_int_:
-
-.. _io_realm_OrderedRealmCollectionSnapshot_deleteFromRealm_int_:
 
 .. _io_realm_OrderedRealmCollectionSnapshot_deleteFromRealm_int_:
 
@@ -672,52 +448,22 @@ deleteFromRealm
        
    
    
+.. _deleteLastFromRealm:
 
+.. _deleteLastFromRealm__:
 
-deleteFirstFromRealm
---------------------
+.. _OrderedRealmCollectionSnapshot_deleteLastFromRealm:
 
-.. _io_realm_OrderedRealmCollectionSnapshot_deleteFirstFromRealm__:
+.. _OrderedRealmCollectionSnapshot_deleteLastFromRealm__:
 
-.. _io_realm_OrderedRealmCollectionSnapshot_deleteFirstFromRealm__:
+.. _io_realm_OrderedRealmCollectionSnapshot_deleteLastFromRealm:
 
-.. _io_realm_OrderedRealmCollectionSnapshot_deleteFirstFromRealm__:
+.. _io_realm_OrderedRealmCollectionSnapshot_deleteLastFromRealm__:
 
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **boolean** deleteFirstFromRealm ()
-   
-   * - Deletes the first object from the Realm. The first object will become invalid.
-       
-       
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm is closed or the method is called on the wrong thread.
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
 
 
 deleteLastFromRealm
 -------------------
-
-.. _io_realm_OrderedRealmCollectionSnapshot_deleteLastFromRealm__:
-
-.. _io_realm_OrderedRealmCollectionSnapshot_deleteLastFromRealm__:
 
 .. _io_realm_OrderedRealmCollectionSnapshot_deleteLastFromRealm__:
 
@@ -748,41 +494,37 @@ deleteLastFromRealm
        
    
    
+.. _freeze:
+
+.. _freeze__:
+
+.. _OrderedRealmCollectionSnapshot_freeze:
+
+.. _OrderedRealmCollectionSnapshot_freeze__:
+
+.. _io_realm_OrderedRealmCollectionSnapshot_freeze:
+
+.. _io_realm_OrderedRealmCollectionSnapshot_freeze__:
 
 
-deleteAllFromRealm
-------------------
 
-.. _io_realm_OrderedRealmCollectionSnapshot_deleteAllFromRealm__:
+freeze
+------
 
-.. _io_realm_OrderedRealmCollectionSnapshot_deleteAllFromRealm__:
-
-.. _io_realm_OrderedRealmCollectionSnapshot_deleteAllFromRealm__:
+.. _io_realm_OrderedRealmCollectionSnapshot_freeze__:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public **boolean** deleteAllFromRealm ()
+   * -    public :ref:`OrderedRealmCollection <io_realm_OrderedRealmCollection>`  freeze ()
    
-   * - This deletes all objects in the collection from the underlying Realm. All objects in the collection snapshot will become invalid.
+   * - 
        
        
        
        
        
        
-       
-       
-       **Throws**
-       
-       - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the corresponding Realm is closed or in an incorrect thread.
-          
-          
-          
-       - `java.lang.IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the Realm has been closed or called from an incorrect thread.
-          
-          
-          
        
        
        
@@ -790,14 +532,22 @@ deleteAllFromRealm
        
    
    
+.. _isFrozen:
+
+.. _isFrozen__:
+
+.. _OrderedRealmCollectionSnapshot_isFrozen:
+
+.. _OrderedRealmCollectionSnapshot_isFrozen__:
+
+.. _io_realm_OrderedRealmCollectionSnapshot_isFrozen:
+
+.. _io_realm_OrderedRealmCollectionSnapshot_isFrozen__:
+
 
 
 isFrozen
 --------
-
-.. _io_realm_OrderedRealmCollectionSnapshot_isFrozen__:
-
-.. _io_realm_OrderedRealmCollectionSnapshot_isFrozen__:
 
 .. _io_realm_OrderedRealmCollectionSnapshot_isFrozen__:
 
@@ -813,6 +563,324 @@ isFrozen
        
        
        
+       
+       
+       
+       
+       
+   
+   
+.. _isLoaded:
+
+.. _isLoaded__:
+
+.. _OrderedRealmCollectionSnapshot_isLoaded:
+
+.. _OrderedRealmCollectionSnapshot_isLoaded__:
+
+.. _io_realm_OrderedRealmCollectionSnapshot_isLoaded:
+
+.. _io_realm_OrderedRealmCollectionSnapshot_isLoaded__:
+
+
+
+isLoaded
+--------
+
+.. _io_realm_OrderedRealmCollectionSnapshot_isLoaded__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** isLoaded ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _load:
+
+.. _load__:
+
+.. _OrderedRealmCollectionSnapshot_load:
+
+.. _OrderedRealmCollectionSnapshot_load__:
+
+.. _io_realm_OrderedRealmCollectionSnapshot_load:
+
+.. _io_realm_OrderedRealmCollectionSnapshot_load__:
+
+
+
+load
+----
+
+.. _io_realm_OrderedRealmCollectionSnapshot_load__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** load ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _size:
+
+.. _size__:
+
+.. _OrderedRealmCollectionSnapshot_size:
+
+.. _OrderedRealmCollectionSnapshot_size__:
+
+.. _io_realm_OrderedRealmCollectionSnapshot_size:
+
+.. _io_realm_OrderedRealmCollectionSnapshot_size__:
+
+
+
+size
+----
+
+.. _io_realm_OrderedRealmCollectionSnapshot_size__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **int** size ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _sort:
+
+.. _sort__:
+
+.. _OrderedRealmCollectionSnapshot_sort:
+
+.. _OrderedRealmCollectionSnapshot_sort__:
+
+
+
+sort
+----
+
+.. _io_realm_OrderedRealmCollectionSnapshot_sort_String[]__Sort[]_:
+
+.. _io_realm_OrderedRealmCollectionSnapshot_sort_String_Sort_:
+
+.. _io_realm_OrderedRealmCollectionSnapshot_sort_String__Sort_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`RealmResults <io_realm_RealmResults>`  sort (`java.lang.String[] <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldNames,
+                                  :ref:`io.realm.Sort[] <io_realm_Sort>`  sortOrders)
+   
+   * - Not supported by :ref:`OrderedRealmCollectionSnapshot <io_realm_OrderedRealmCollectionSnapshot>` . Use 'sort()' on the original :ref:`OrderedRealmCollection <io_realm_OrderedRealmCollection>`  instead.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `UnsupportedOperationException <https://docs.oracle.com/javase/7/docs/api/java/lang/UnsupportedOperationException.html>`__  - 
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_OrderedRealmCollectionSnapshot_sort_String__Sort__String__Sort_:
+
+.. _io_realm_OrderedRealmCollectionSnapshot_sort_String_Sort_String_Sort_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`RealmResults <io_realm_RealmResults>`  sort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName1,
+                                  :ref:`Sort <io_realm_Sort>`  sortOrder1,
+                                  `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName2,
+                                  :ref:`Sort <io_realm_Sort>`  sortOrder2)
+   
+   * - Not supported by :ref:`OrderedRealmCollectionSnapshot <io_realm_OrderedRealmCollectionSnapshot>` . Use 'sort()' on the original :ref:`OrderedRealmCollection <io_realm_OrderedRealmCollection>`  instead.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `UnsupportedOperationException <https://docs.oracle.com/javase/7/docs/api/java/lang/UnsupportedOperationException.html>`__  - 
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_OrderedRealmCollectionSnapshot_sort_String__Sort_:
+
+.. _io_realm_OrderedRealmCollectionSnapshot_sort_String_Sort_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`RealmResults <io_realm_RealmResults>`  sort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                  :ref:`Sort <io_realm_Sort>`  sortOrder)
+   
+   * - Not supported by :ref:`OrderedRealmCollectionSnapshot <io_realm_OrderedRealmCollectionSnapshot>` . Use 'sort()' on the original :ref:`OrderedRealmCollection <io_realm_OrderedRealmCollection>`  instead.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `UnsupportedOperationException <https://docs.oracle.com/javase/7/docs/api/java/lang/UnsupportedOperationException.html>`__  - 
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_OrderedRealmCollectionSnapshot_sort_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`RealmResults <io_realm_RealmResults>`  sort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   
+   * - Not supported by :ref:`OrderedRealmCollectionSnapshot <io_realm_OrderedRealmCollectionSnapshot>` . Use 'sort()' on the original :ref:`OrderedRealmCollection <io_realm_OrderedRealmCollection>`  instead.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `UnsupportedOperationException <https://docs.oracle.com/javase/7/docs/api/java/lang/UnsupportedOperationException.html>`__  - 
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _where:
+
+.. _where__:
+
+.. _OrderedRealmCollectionSnapshot_where:
+
+.. _OrderedRealmCollectionSnapshot_where__:
+
+.. _io_realm_OrderedRealmCollectionSnapshot_where:
+
+.. _io_realm_OrderedRealmCollectionSnapshot_where__:
+
+
+
+where
+-----
+
+.. _io_realm_OrderedRealmCollectionSnapshot_where__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`RealmQuery <io_realm_RealmQuery>`  where ()
+   
+   * - Not supported by :ref:`OrderedRealmCollectionSnapshot <io_realm_OrderedRealmCollectionSnapshot>` . Use 'where()' on the original :ref:`OrderedRealmCollection <io_realm_OrderedRealmCollection>`  instead.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `UnsupportedOperationException <https://docs.oracle.com/javase/7/docs/api/java/lang/UnsupportedOperationException.html>`__  - 
+          
+          
+          
        
        
        

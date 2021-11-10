@@ -17,8 +17,8 @@ Class DynamicRealm
 io.realm
 ========
 
-**io.realm.BaseRealm (?)**
- | 		`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+ | 		**io.realm.BaseRealm (?)**
 
 DynamicRealm is a dynamic variant of :ref:`io.realm.Realm <io_realm_Realm>` . This means that all access to data and/or queries are done using string based class names instead of class type references.
 
@@ -83,24 +83,21 @@ Method Summary
      - Method and Description
    
    * - 
-       public static :ref:`DynamicRealm <io_realm_DynamicRealm>` 
+       public **void**
      - 
-       :ref:`getInstance <io_realm_DynamicRealm_getInstance_RealmConfiguration_>`  (:ref:`RealmConfiguration <io_realm_RealmConfiguration>`  configuration)
+       :ref:`addChangeListener <io_realm_DynamicRealm_addChangeListener_RealmChangeListener_DynamicRealm__>`  (:ref:`io.realm.RealmChangeListener\<io.realm.DynamicRealm> <io_realm_RealmChangeListener>`  listener)
        
-       Realm static constructor that returns a dynamic variant of the Realm instance defined by provided :ref:`io.realm.RealmConfiguration <io_realm_RealmConfiguration>` .
-       
-       
+       Adds a change listener to the Realm.
        
        
        
    
    * - 
-       public static :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` 
+       public **<any> (?)**
      - 
-       :ref:`getInstanceAsync <io_realm_DynamicRealm_getInstanceAsync_RealmConfiguration__DynamicRealm_Callback_>`  (:ref:`RealmConfiguration <io_realm_RealmConfiguration>`  configuration,
-                                                       :ref:`DynamicRealm.Callback <io_realm_DynamicRealm_Callback>`  callback)
+       :ref:`asFlowable <io_realm_DynamicRealm_asFlowable__>`  ()
        
-       The creation of the first Realm instance per :ref:`RealmConfiguration <io_realm_RealmConfiguration>`  in a process can take some time as all initialization code need to run at that point (Setting up the Realm, validating schemas and creating initial data).
+       
        
        
        
@@ -110,9 +107,11 @@ Method Summary
    * - 
        public :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>` 
      - 
-       :ref:`createObject <io_realm_DynamicRealm_createObject_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
+       :ref:`createEmbeddedObject <io_realm_DynamicRealm_createEmbeddedObject_String__DynamicRealmObject__String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className,
+                                                        :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>`  parentObject,
+                                                        `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  parentProperty)
        
-       Instantiates and adds a new object to the Realm.
+       Instantiates and adds a new embedded object to the Realm.
        
        
        
@@ -131,51 +130,9 @@ Method Summary
    * - 
        public :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>` 
      - 
-       :ref:`createEmbeddedObject <io_realm_DynamicRealm_createEmbeddedObject_String__DynamicRealmObject__String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className,
-                                                        :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>`  parentObject,
-                                                        `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  parentProperty)
+       :ref:`createObject <io_realm_DynamicRealm_createObject_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
        
-       Instantiates and adds a new embedded object to the Realm.
-       
-       
-       
-   
-   * - 
-       public :ref:`RealmQuery <io_realm_RealmQuery>` 
-     - 
-       :ref:`where <io_realm_DynamicRealm_where_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
-       
-       Returns a RealmQuery, which can be used to query the provided class.
-       
-       
-       
-   
-   * - 
-       public **void**
-     - 
-       :ref:`addChangeListener <io_realm_DynamicRealm_addChangeListener_RealmChangeListener_DynamicRealm__>`  (:ref:`io.realm.RealmChangeListener\<io.realm.DynamicRealm> <io_realm_RealmChangeListener>`  listener)
-       
-       Adds a change listener to the Realm.
-       
-       
-       
-   
-   * - 
-       public **void**
-     - 
-       :ref:`removeChangeListener <io_realm_DynamicRealm_removeChangeListener_RealmChangeListener_DynamicRealm__>`  (:ref:`io.realm.RealmChangeListener\<io.realm.DynamicRealm> <io_realm_RealmChangeListener>`  listener)
-       
-       Removes the specified change listener.
-       
-       
-       
-   
-   * - 
-       public **void**
-     - 
-       :ref:`removeAllChangeListeners <io_realm_DynamicRealm_removeAllChangeListeners__>`  ()
-       
-       Removes all user-defined change listeners.
+       Instantiates and adds a new object to the Realm.
        
        
        
@@ -203,22 +160,11 @@ Method Summary
    * - 
        public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` 
      - 
-       :ref:`executeTransactionAsync <io_realm_DynamicRealm_executeTransactionAsync_DynamicRealm_Transaction_>`  (:ref:`DynamicRealm.Transaction <io_realm_DynamicRealm_Transaction>`  transaction)
+       :ref:`executeTransactionAsync <io_realm_DynamicRealm_executeTransactionAsync_DynamicRealm_Transaction__DynamicRealm_Transaction_OnSuccess__DynamicRealm_Transaction_OnError_>`  (:ref:`DynamicRealm.Transaction <io_realm_DynamicRealm_Transaction>`  transaction,
+                                                       :ref:`DynamicRealm.Transaction.OnSuccess <io_realm_DynamicRealm_Transaction_OnSuccess>`  onSuccess,
+                                                       :ref:`DynamicRealm.Transaction.OnError <io_realm_DynamicRealm_Transaction_OnError>`  onError)
        
-       Similar to :ref:`executeTransaction(Transaction) <io_realm_DynamicRealm_executeTransaction_Transaction_>`  but runs asynchronously on a worker thread.
-       
-       
-       
-       
-       
-   
-   * - 
-       public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` 
-     - 
-       :ref:`executeTransactionAsync <io_realm_DynamicRealm_executeTransactionAsync_DynamicRealm_Transaction__DynamicRealm_Transaction_OnSuccess_>`  (:ref:`DynamicRealm.Transaction <io_realm_DynamicRealm_Transaction>`  transaction,
-                                                       :ref:`DynamicRealm.Transaction.OnSuccess <io_realm_DynamicRealm_Transaction_OnSuccess>`  onSuccess)
-       
-       Similar to :ref:`executeTransactionAsync(Transaction) <io_realm_DynamicRealm_executeTransactionAsync_Transaction_>` , but also accepts an OnSuccess callback.
+       Similar to :ref:`executeTransactionAsync(Transaction) <io_realm_DynamicRealm_executeTransactionAsync_Transaction_>` , but also accepts an OnSuccess and OnError callbacks.
        
        
        
@@ -241,23 +187,10 @@ Method Summary
    * - 
        public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` 
      - 
-       :ref:`executeTransactionAsync <io_realm_DynamicRealm_executeTransactionAsync_DynamicRealm_Transaction__DynamicRealm_Transaction_OnSuccess__DynamicRealm_Transaction_OnError_>`  (:ref:`DynamicRealm.Transaction <io_realm_DynamicRealm_Transaction>`  transaction,
-                                                       :ref:`DynamicRealm.Transaction.OnSuccess <io_realm_DynamicRealm_Transaction_OnSuccess>`  onSuccess,
-                                                       :ref:`DynamicRealm.Transaction.OnError <io_realm_DynamicRealm_Transaction_OnError>`  onError)
+       :ref:`executeTransactionAsync <io_realm_DynamicRealm_executeTransactionAsync_DynamicRealm_Transaction__DynamicRealm_Transaction_OnSuccess_>`  (:ref:`DynamicRealm.Transaction <io_realm_DynamicRealm_Transaction>`  transaction,
+                                                       :ref:`DynamicRealm.Transaction.OnSuccess <io_realm_DynamicRealm_Transaction_OnSuccess>`  onSuccess)
        
-       Similar to :ref:`executeTransactionAsync(Transaction) <io_realm_DynamicRealm_executeTransactionAsync_Transaction_>` , but also accepts an OnSuccess and OnError callbacks.
-       
-       
-       
-       
-       
-   
-   * - 
-       public **<any> (?)**
-     - 
-       :ref:`asFlowable <io_realm_DynamicRealm_asFlowable__>`  ()
-       
-       
+       Similar to :ref:`executeTransactionAsync(Transaction) <io_realm_DynamicRealm_executeTransactionAsync_Transaction_>` , but also accepts an OnSuccess callback.
        
        
        
@@ -265,11 +198,48 @@ Method Summary
        
    
    * - 
-       public **boolean**
+       public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` 
      - 
-       :ref:`isEmpty <io_realm_DynamicRealm_isEmpty__>`  ()
+       :ref:`executeTransactionAsync <io_realm_DynamicRealm_executeTransactionAsync_DynamicRealm_Transaction_>`  (:ref:`DynamicRealm.Transaction <io_realm_DynamicRealm_Transaction>`  transaction)
+       
+       Similar to :ref:`executeTransaction(Transaction) <io_realm_DynamicRealm_executeTransaction_Transaction_>`  but runs asynchronously on a worker thread.
        
        
+       
+       
+       
+   
+   * - 
+       public :ref:`DynamicRealm <io_realm_DynamicRealm>` 
+     - 
+       :ref:`freeze <io_realm_DynamicRealm_freeze__>`  ()
+       
+       
+       
+       
+       
+       
+       
+   
+   * - 
+       public static :ref:`DynamicRealm <io_realm_DynamicRealm>` 
+     - 
+       :ref:`getInstance <io_realm_DynamicRealm_getInstance_RealmConfiguration_>`  (:ref:`RealmConfiguration <io_realm_RealmConfiguration>`  configuration)
+       
+       Realm static constructor that returns a dynamic variant of the Realm instance defined by provided :ref:`io.realm.RealmConfiguration <io_realm_RealmConfiguration>` .
+       
+       
+       
+       
+       
+   
+   * - 
+       public static :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` 
+     - 
+       :ref:`getInstanceAsync <io_realm_DynamicRealm_getInstanceAsync_RealmConfiguration__DynamicRealm_Callback_>`  (:ref:`RealmConfiguration <io_realm_RealmConfiguration>`  configuration,
+                                                       :ref:`DynamicRealm.Callback <io_realm_DynamicRealm_Callback>`  callback)
+       
+       The creation of the first Realm instance per :ref:`RealmConfiguration <io_realm_RealmConfiguration>`  in a process can take some time as all initialization code need to run at that point (Setting up the Realm, validating schemas and creating initial data).
        
        
        
@@ -287,13 +257,43 @@ Method Summary
        
    
    * - 
-       public :ref:`DynamicRealm <io_realm_DynamicRealm>` 
+       public **boolean**
      - 
-       :ref:`freeze <io_realm_DynamicRealm_freeze__>`  ()
+       :ref:`isEmpty <io_realm_DynamicRealm_isEmpty__>`  ()
        
        
        
        
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`removeAllChangeListeners <io_realm_DynamicRealm_removeAllChangeListeners__>`  ()
+       
+       Removes all user-defined change listeners.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`removeChangeListener <io_realm_DynamicRealm_removeChangeListener_RealmChangeListener_DynamicRealm__>`  (:ref:`io.realm.RealmChangeListener\<io.realm.DynamicRealm> <io_realm_RealmChangeListener>`  listener)
+       
+       Removes the specified change listener.
+       
+       
+       
+   
+   * - 
+       public :ref:`RealmQuery <io_realm_RealmQuery>` 
+     - 
+       :ref:`where <io_realm_DynamicRealm_where_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
+       
+       Returns a RealmQuery, which can be used to query the provided class.
        
        
        
@@ -306,16 +306,8 @@ Inherited Methods
 
 
 
-- Methods inherited from interface **io.realm.BaseRealm (?)**: 
-   
-   ``setAutoRefresh`` , ``isAutoRefresh`` , ``refresh`` , ``isInTransaction`` , ``addListener`` , ``removeListener`` , ``asFlowable`` , ``removeAllListeners`` , ``writeCopyTo`` , ``writeEncryptedCopyTo`` , ``waitForChange`` , ``stopWaitForChange`` , ``beginTransaction`` , ``commitTransaction`` , ``cancelTransaction`` , ``freeze`` , ``isFrozen`` , ``getNumberOfActiveVersions`` , ``checkIfValid`` , ``checkAllowQueriesOnUiThread`` , ``checkAllowWritesOnUiThread`` , ``checkIfInTransaction`` , ``checkIfValidAndInTransaction`` , ``getPath`` , ``getConfiguration`` , ``getVersion`` , ``close`` , ``isClosed`` , ``isEmpty`` , ``getSchema`` , ``deleteAll`` , ``migrateRealm`` , ``finalize`` 
-   
-   
-- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
-   
-   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
-   
-   
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+- Methods inherited from interface **io.realm.BaseRealm (?)**: ``setAutoRefresh`` , ``isAutoRefresh`` , ``refresh`` , ``isInTransaction`` , ``addListener`` , ``removeListener`` , ``asFlowable`` , ``removeAllListeners`` , ``writeCopyTo`` , ``writeEncryptedCopyTo`` , ``waitForChange`` , ``stopWaitForChange`` , ``beginTransaction`` , ``commitTransaction`` , ``cancelTransaction`` , ``freeze`` , ``isFrozen`` , ``getNumberOfActiveVersions`` , ``checkIfValid`` , ``checkAllowQueriesOnUiThread`` , ``checkAllowWritesOnUiThread`` , ``checkIfInTransaction`` , ``checkIfValidAndInTransaction`` , ``getPath`` , ``getConfiguration`` , ``getVersion`` , ``close`` , ``isClosed`` , ``isEmpty`` , ``getSchema`` , ``deleteAll`` , ``migrateRealm`` , ``finalize`` 
 
 
 
@@ -323,377 +315,20 @@ Inherited Methods
 Method Detail
 =============
 
+.. _addChangeListener:
 
+.. _addChangeListener__:
 
-getInstance
------------
+.. _DynamicRealm_addChangeListener:
 
-.. _io_realm_DynamicRealm_getInstance_RealmConfiguration_:
+.. _DynamicRealm_addChangeListener__:
 
-.. _io_realm_DynamicRealm_getInstance_RealmConfiguration_:
-
-.. _io_realm_DynamicRealm_getInstance_RealmConfiguration_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public static :ref:`DynamicRealm <io_realm_DynamicRealm>`  getInstance (:ref:`RealmConfiguration <io_realm_RealmConfiguration>`  configuration)
-   
-   * - Realm static constructor that returns a dynamic variant of the Realm instance defined by provided :ref:`io.realm.RealmConfiguration <io_realm_RealmConfiguration>` . Dynamic Realms do not care about schemaVersion and schemas, so opening a DynamicRealm will never trigger a migration.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - :ref:`RealmFileException <io_realm_exceptions_RealmFileException>`  - if an error happened when accessing the underlying Realm file.
-          
-          
-          
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if ``configuration``  argument is ``null`` .
-          
-          
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       .. seealso::
-       
-       
-          
-          - :ref:`RealmConfiguration for details on how to configure a Realm. <io_realm_RealmConfiguration>` 
-             
-             
-             
-          
-          
-          
-       
-       
-   
-   
-
-
-getInstanceAsync
-----------------
-
-.. _io_realm_DynamicRealm_getInstanceAsync_RealmConfiguration__DynamicRealm_Callback_:
-
-.. _io_realm_DynamicRealm_getInstanceAsync_RealmConfiguration_Callback_:
-
-.. _io_realm_DynamicRealm_getInstanceAsync_RealmConfiguration__App_Callback_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public static :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`  getInstanceAsync (:ref:`RealmConfiguration <io_realm_RealmConfiguration>`  configuration,
-                                                       :ref:`DynamicRealm.Callback <io_realm_DynamicRealm_Callback>`  callback)
-   
-   * - The creation of the first Realm instance per :ref:`RealmConfiguration <io_realm_RealmConfiguration>`  in a process can take some time as all initialization code need to run at that point (Setting up the Realm, validating schemas and creating initial data). This method places the initialization work in a background thread and deliver the Realm instance to the caller thread asynchronously after the initialization is finished.
-       
-       
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``configuration`` - :ref:`RealmConfiguration <io_realm_RealmConfiguration>`  used to open the Realm.
-          
-          
-          
-          
-          
-       - ``callback`` - invoked to return the results.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if a null :ref:`RealmConfiguration <io_realm_RealmConfiguration>`  or a null :ref:`Callback <io_realm_DynamicRealm_Transaction_Callback>`  is provided.
-          
-          
-          
-          
-          
-       - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if it is called from a non-Looper or **android.app.IntentService (?)** thread.
-          
-          
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       .. seealso::
-       
-       
-          
-          - :ref:`Callback for more details. <io_realm_DynamicRealm_Transaction_Callback>` 
-             
-             
-             
-          
-          
-          
-       
-       
-   
-   
-
-
-createObject
-------------
-
-.. _io_realm_DynamicRealm_createObject_String_:
-
-.. _io_realm_DynamicRealm_createObject_String_:
-
-.. _io_realm_DynamicRealm_createObject_String_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>`  createObject (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
-   
-   * - Instantiates and adds a new object to the Realm.
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``className`` - the class name of the object to create.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - :ref:`RealmException <io_realm_exceptions_RealmException>`  - if the object could not be created.
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
-.. _io_realm_DynamicRealm_createObject_String__Object_:
-
-.. _io_realm_DynamicRealm_createObject_String_Object_:
-
-.. _io_realm_DynamicRealm_createObject_String__Object_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>`  createObject (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className,
-                                                `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  primaryKeyValue)
-   
-   * - Creates an object with a given primary key. Classes without a primary key defined must use :ref:`createObject(String) <io_realm_DynamicRealm_createObject_String_>` } instead.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - :ref:`RealmException <io_realm_exceptions_RealmException>`  - if object could not be created due to the primary key being invalid.
-          
-          
-          
-       - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the model clazz does not have an primary key defined.
-          
-          
-          
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the ``primaryKeyValue``  doesn't have a value that can be converted to the expected value.
-          
-          
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
-
-
-createEmbeddedObject
---------------------
-
-.. _io_realm_DynamicRealm_createEmbeddedObject_String__DynamicRealmObject__String_:
-
-.. _io_realm_DynamicRealm_createEmbeddedObject_String_DynamicRealmObject_String_:
-
-.. _io_realm_DynamicRealm_createEmbeddedObject_String__DynamicRealmObject__String_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>`  createEmbeddedObject (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className,
-                                                        :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>`  parentObject,
-                                                        `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  parentProperty)
-   
-   * - Instantiates and adds a new embedded object to the Realm.This method should only be used to create objects of types marked as embedded.
-       
-       
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``className`` - the class name of the object to create.
-          
-          
-          
-       - ``parentObject`` - The parent object which should hold a reference to the embedded object. If the parent property is a list the embedded object will be added to the end of that list.
-          
-          
-          
-       - ``parentProperty`` - the property in the parent class which holds the reference.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if ``clazz``  is not an embedded class or if the property in the parent class cannot hold objects of the appropriate type.
-          
-          
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       .. seealso::
-       
-       
-          
-          - **RealmClass.embedded() (?)**
-             
-             
-             
-          
-          
-          
-       
-       
-   
-   
-
-
-where
------
-
-.. _io_realm_DynamicRealm_where_String_:
-
-.. _io_realm_DynamicRealm_where_String_:
-
-.. _io_realm_DynamicRealm_where_String_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public :ref:`RealmQuery <io_realm_RealmQuery>`  where (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
-   
-   * - Returns a RealmQuery, which can be used to query the provided class.
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``className`` - the class of the object which is to be queried.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the class doesn't exist.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       .. seealso::
-       
-       
-          
-          - :ref:`io.realm.RealmQuery <io_realm_RealmQuery>` 
-             
-             
-             
-          
-          
-          
-       
-       
-   
-   
 
 
 addChangeListener
 -----------------
 
 .. _io_realm_DynamicRealm_addChangeListener_RealmChangeListener_DynamicRealm__:
-
-.. _io_realm_DynamicRealm_addChangeListener_RealmChangeListener_:
 
 .. _io_realm_DynamicRealm_addChangeListener_RealmChangeListener_:
 
@@ -766,30 +401,88 @@ addChangeListener
        
    
    
+.. _asFlowable:
+
+.. _asFlowable__:
+
+.. _DynamicRealm_asFlowable:
+
+.. _DynamicRealm_asFlowable__:
+
+.. _io_realm_DynamicRealm_asFlowable:
+
+.. _io_realm_DynamicRealm_asFlowable__:
 
 
-removeChangeListener
---------------------
 
-.. _io_realm_DynamicRealm_removeChangeListener_RealmChangeListener_DynamicRealm__:
+asFlowable
+----------
 
-.. _io_realm_DynamicRealm_removeChangeListener_RealmChangeListener_:
-
-.. _io_realm_DynamicRealm_removeChangeListener_RealmChangeListener_:
+.. _io_realm_DynamicRealm_asFlowable__:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public **void** removeChangeListener (:ref:`io.realm.RealmChangeListener\<io.realm.DynamicRealm> <io_realm_RealmChangeListener>`  listener)
+   * -    public **<any> (?)** asFlowable ()
    
-   * - Removes the specified change listener.
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _createEmbeddedObject:
+
+.. _createEmbeddedObject__:
+
+.. _DynamicRealm_createEmbeddedObject:
+
+.. _DynamicRealm_createEmbeddedObject__:
+
+
+
+createEmbeddedObject
+--------------------
+
+.. _io_realm_DynamicRealm_createEmbeddedObject_String__DynamicRealmObject__String_:
+
+.. _io_realm_DynamicRealm_createEmbeddedObject_String_DynamicRealmObject_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>`  createEmbeddedObject (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className,
+                                                        :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>`  parentObject,
+                                                        `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  parentProperty)
+   
+   * - Instantiates and adds a new embedded object to the Realm.This method should only be used to create objects of types marked as embedded.
+       
+       
        
        
        
        
        **Parameters**
        
-       - ``listener`` - the change listener to be removed.
+       - ``className`` - the class name of the object to create.
+          
+          
+          
+       - ``parentObject`` - The parent object which should hold a reference to the embedded object. If the parent property is a list the embedded object will be added to the end of that list.
+          
+          
+          
+       - ``parentProperty`` - the property in the parent class which holds the reference.
           
           
           
@@ -801,13 +494,9 @@ removeChangeListener
        
        **Throws**
        
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the change listener is ``null`` .
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if ``clazz``  is not an embedded class or if the property in the parent class cannot hold objects of the appropriate type.
           
           
-          
-          
-          
-       - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if you try to remove a listener from a non-Looper Thread.
           
           
           
@@ -821,7 +510,7 @@ removeChangeListener
        
        
           
-          - :ref:`io.realm.RealmChangeListener <io_realm_RealmChangeListener>` 
+          - :ref:`RealmClass.embedded() <io_realm_annotations_RealmClass_embedded__>` 
              
              
              
@@ -832,23 +521,32 @@ removeChangeListener
        
    
    
+.. _createObject:
+
+.. _createObject__:
+
+.. _DynamicRealm_createObject:
+
+.. _DynamicRealm_createObject__:
 
 
-removeAllChangeListeners
-------------------------
 
-.. _io_realm_DynamicRealm_removeAllChangeListeners__:
+createObject
+------------
 
-.. _io_realm_DynamicRealm_removeAllChangeListeners__:
+.. _io_realm_DynamicRealm_createObject_String__Object_:
 
-.. _io_realm_DynamicRealm_removeAllChangeListeners__:
+.. _io_realm_DynamicRealm_createObject_String_Object_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public **void** removeAllChangeListeners ()
+   * -    public :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>`  createObject (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className,
+                                                `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  primaryKeyValue)
    
-   * - Removes all user-defined change listeners.
+   * - Creates an object with a given primary key. Classes without a primary key defined must use :ref:`createObject(String) <io_realm_DynamicRealm_createObject_String_>` } instead.
+       
+       
        
        
        
@@ -859,39 +557,76 @@ removeAllChangeListeners
        
        **Throws**
        
-       - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if you try to remove listeners from a non-Looper Thread.
+       - :ref:`RealmException <io_realm_exceptions_RealmException>`  - if object could not be created due to the primary key being invalid.
           
           
           
-       
-       
-       
-       
-       
-       
-       .. seealso::
-       
-       
-          
-          - :ref:`io.realm.RealmChangeListener <io_realm_RealmChangeListener>` 
-             
-             
-             
+       - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if the model clazz does not have an primary key defined.
           
           
           
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the ``primaryKeyValue``  doesn't have a value that can be converted to the expected value.
+          
+          
+          
+          
+          
+       
+       
+       
        
        
    
    
+.. _io_realm_DynamicRealm_createObject_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>`  createObject (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
+   
+   * - Instantiates and adds a new object to the Realm.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``className`` - the class name of the object to create.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - :ref:`RealmException <io_realm_exceptions_RealmException>`  - if the object could not be created.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _delete:
+
+.. _delete__:
+
+.. _DynamicRealm_delete:
+
+.. _DynamicRealm_delete__:
+
 
 
 delete
 ------
-
-.. _io_realm_DynamicRealm_delete_String_:
-
-.. _io_realm_DynamicRealm_delete_String_:
 
 .. _io_realm_DynamicRealm_delete_String_:
 
@@ -930,14 +665,20 @@ delete
        
    
    
+.. _executeTransaction:
+
+.. _executeTransaction__:
+
+.. _DynamicRealm_executeTransaction:
+
+.. _DynamicRealm_executeTransaction__:
+
 
 
 executeTransaction
 ------------------
 
 .. _io_realm_DynamicRealm_executeTransaction_DynamicRealm_Transaction_:
-
-.. _io_realm_DynamicRealm_executeTransaction_Transaction_:
 
 .. _io_realm_DynamicRealm_executeTransaction_Transaction_:
 
@@ -992,71 +733,33 @@ executeTransaction
        
    
    
+.. _executeTransactionAsync:
+
+.. _executeTransactionAsync__:
+
+.. _DynamicRealm_executeTransactionAsync:
+
+.. _DynamicRealm_executeTransactionAsync__:
+
 
 
 executeTransactionAsync
 -----------------------
 
-.. _io_realm_DynamicRealm_executeTransactionAsync_DynamicRealm_Transaction_:
+.. _io_realm_DynamicRealm_executeTransactionAsync_DynamicRealm_Transaction__DynamicRealm_Transaction_OnSuccess__DynamicRealm_Transaction_OnError_:
 
-.. _io_realm_DynamicRealm_executeTransactionAsync_Transaction_:
+.. _io_realm_DynamicRealm_executeTransactionAsync_Transaction_OnSuccess_OnError_:
 
-.. _io_realm_DynamicRealm_executeTransactionAsync_Transaction_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`  executeTransactionAsync (:ref:`DynamicRealm.Transaction <io_realm_DynamicRealm_Transaction>`  transaction)
-   
-   * - Similar to :ref:`executeTransaction(Transaction) <io_realm_DynamicRealm_executeTransaction_Transaction_>`  but runs asynchronously on a worker thread.
-       
-       
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``transaction`` - :ref:`Transaction <io_realm_DynamicRealm_Transaction>`  to execute.
-          
-          
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the ``transaction``  is ``null`` , or if the Realm is opened from another thread.
-          
-          
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
-.. _io_realm_DynamicRealm_executeTransactionAsync_DynamicRealm_Transaction__DynamicRealm_Transaction_OnSuccess_:
-
-.. _io_realm_DynamicRealm_executeTransactionAsync_Transaction_OnSuccess_:
-
-.. _io_realm_DynamicRealm_executeTransactionAsync_Transaction__OnSuccess_:
+.. _io_realm_DynamicRealm_executeTransactionAsync_Transaction__OnSuccess__OnError_:
 
 .. list-table::
    :header-rows: 1
    
    * -    public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`  executeTransactionAsync (:ref:`DynamicRealm.Transaction <io_realm_DynamicRealm_Transaction>`  transaction,
-                                                       :ref:`DynamicRealm.Transaction.OnSuccess <io_realm_DynamicRealm_Transaction_OnSuccess>`  onSuccess)
+                                                       :ref:`DynamicRealm.Transaction.OnSuccess <io_realm_DynamicRealm_Transaction_OnSuccess>`  onSuccess,
+                                                       :ref:`DynamicRealm.Transaction.OnError <io_realm_DynamicRealm_Transaction_OnError>`  onError)
    
-   * - Similar to :ref:`executeTransactionAsync(Transaction) <io_realm_DynamicRealm_executeTransactionAsync_Transaction_>` , but also accepts an OnSuccess callback.
+   * - Similar to :ref:`executeTransactionAsync(Transaction) <io_realm_DynamicRealm_executeTransactionAsync_Transaction_>` , but also accepts an OnSuccess and OnError callbacks.
        
        
        
@@ -1072,6 +775,10 @@ executeTransactionAsync
           
           
        - ``onSuccess`` - callback invoked when the transaction succeeds.
+          
+          
+          
+       - ``onError`` - callback invoked when the transaction fails.
           
           
           
@@ -1148,20 +855,19 @@ executeTransactionAsync
        
    
    
-.. _io_realm_DynamicRealm_executeTransactionAsync_DynamicRealm_Transaction__DynamicRealm_Transaction_OnSuccess__DynamicRealm_Transaction_OnError_:
+.. _io_realm_DynamicRealm_executeTransactionAsync_DynamicRealm_Transaction__DynamicRealm_Transaction_OnSuccess_:
 
-.. _io_realm_DynamicRealm_executeTransactionAsync_Transaction_OnSuccess_OnError_:
+.. _io_realm_DynamicRealm_executeTransactionAsync_Transaction_OnSuccess_:
 
-.. _io_realm_DynamicRealm_executeTransactionAsync_Transaction__OnSuccess__OnError_:
+.. _io_realm_DynamicRealm_executeTransactionAsync_Transaction__OnSuccess_:
 
 .. list-table::
    :header-rows: 1
    
    * -    public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`  executeTransactionAsync (:ref:`DynamicRealm.Transaction <io_realm_DynamicRealm_Transaction>`  transaction,
-                                                       :ref:`DynamicRealm.Transaction.OnSuccess <io_realm_DynamicRealm_Transaction_OnSuccess>`  onSuccess,
-                                                       :ref:`DynamicRealm.Transaction.OnError <io_realm_DynamicRealm_Transaction_OnError>`  onError)
+                                                       :ref:`DynamicRealm.Transaction.OnSuccess <io_realm_DynamicRealm_Transaction_OnSuccess>`  onSuccess)
    
-   * - Similar to :ref:`executeTransactionAsync(Transaction) <io_realm_DynamicRealm_executeTransactionAsync_Transaction_>` , but also accepts an OnSuccess and OnError callbacks.
+   * - Similar to :ref:`executeTransactionAsync(Transaction) <io_realm_DynamicRealm_executeTransactionAsync_Transaction_>` , but also accepts an OnSuccess callback.
        
        
        
@@ -1177,10 +883,6 @@ executeTransactionAsync
           
           
        - ``onSuccess`` - callback invoked when the transaction succeeds.
-          
-          
-          
-       - ``onError`` - callback invoked when the transaction fails.
           
           
           
@@ -1205,21 +907,74 @@ executeTransactionAsync
        
    
    
+.. _io_realm_DynamicRealm_executeTransactionAsync_DynamicRealm_Transaction_:
 
-
-asFlowable
-----------
-
-.. _io_realm_DynamicRealm_asFlowable__:
-
-.. _io_realm_DynamicRealm_asFlowable__:
-
-.. _io_realm_DynamicRealm_asFlowable__:
+.. _io_realm_DynamicRealm_executeTransactionAsync_Transaction_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public **<any> (?)** asFlowable ()
+   * -    public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`  executeTransactionAsync (:ref:`DynamicRealm.Transaction <io_realm_DynamicRealm_Transaction>`  transaction)
+   
+   * - Similar to :ref:`executeTransaction(Transaction) <io_realm_DynamicRealm_executeTransaction_Transaction_>`  but runs asynchronously on a worker thread.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``transaction`` - :ref:`Transaction <io_realm_DynamicRealm_Transaction>`  to execute.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the ``transaction``  is ``null`` , or if the Realm is opened from another thread.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _freeze:
+
+.. _freeze__:
+
+.. _DynamicRealm_freeze:
+
+.. _DynamicRealm_freeze__:
+
+.. _io_realm_DynamicRealm_freeze:
+
+.. _io_realm_DynamicRealm_freeze__:
+
+
+
+freeze
+------
+
+.. _io_realm_DynamicRealm_freeze__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`DynamicRealm <io_realm_DynamicRealm>`  freeze ()
    
    * - 
        
@@ -1237,14 +992,209 @@ asFlowable
        
    
    
+.. _getInstance:
+
+.. _getInstance__:
+
+.. _DynamicRealm_getInstance:
+
+.. _DynamicRealm_getInstance__:
+
+
+
+getInstance
+-----------
+
+.. _io_realm_DynamicRealm_getInstance_RealmConfiguration_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`DynamicRealm <io_realm_DynamicRealm>`  getInstance (:ref:`RealmConfiguration <io_realm_RealmConfiguration>`  configuration)
+   
+   * - Realm static constructor that returns a dynamic variant of the Realm instance defined by provided :ref:`io.realm.RealmConfiguration <io_realm_RealmConfiguration>` . Dynamic Realms do not care about schemaVersion and schemas, so opening a DynamicRealm will never trigger a migration.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - :ref:`RealmFileException <io_realm_exceptions_RealmFileException>`  - if an error happened when accessing the underlying Realm file.
+          
+          
+          
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if ``configuration``  argument is ``null`` .
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       .. seealso::
+       
+       
+          
+          - :ref:`RealmConfiguration for details on how to configure a Realm. <io_realm_RealmConfiguration>` 
+             
+             
+             
+          
+          
+          
+       
+       
+   
+   
+.. _getInstanceAsync:
+
+.. _getInstanceAsync__:
+
+.. _DynamicRealm_getInstanceAsync:
+
+.. _DynamicRealm_getInstanceAsync__:
+
+
+
+getInstanceAsync
+----------------
+
+.. _io_realm_DynamicRealm_getInstanceAsync_RealmConfiguration__DynamicRealm_Callback_:
+
+.. _io_realm_DynamicRealm_getInstanceAsync_RealmConfiguration_Callback_:
+
+.. _io_realm_DynamicRealm_getInstanceAsync_RealmConfiguration__Callback_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`  getInstanceAsync (:ref:`RealmConfiguration <io_realm_RealmConfiguration>`  configuration,
+                                                       :ref:`DynamicRealm.Callback <io_realm_DynamicRealm_Callback>`  callback)
+   
+   * - The creation of the first Realm instance per :ref:`RealmConfiguration <io_realm_RealmConfiguration>`  in a process can take some time as all initialization code need to run at that point (Setting up the Realm, validating schemas and creating initial data). This method places the initialization work in a background thread and deliver the Realm instance to the caller thread asynchronously after the initialization is finished.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``configuration`` - :ref:`RealmConfiguration <io_realm_RealmConfiguration>`  used to open the Realm.
+          
+          
+          
+          
+          
+       - ``callback`` - invoked to return the results.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if a null :ref:`RealmConfiguration <io_realm_RealmConfiguration>`  or a null :ref:`Callback <io_realm_DynamicRealm_Transaction_Callback>`  is provided.
+          
+          
+          
+          
+          
+       - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if it is called from a non-Looper or **android.app.IntentService (?)** thread.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       .. seealso::
+       
+       
+          
+          - :ref:`Callback for more details. <io_realm_DynamicRealm_Transaction_Callback>` 
+             
+             
+             
+          
+          
+          
+       
+       
+   
+   
+.. _getSchema:
+
+.. _getSchema__:
+
+.. _DynamicRealm_getSchema:
+
+.. _DynamicRealm_getSchema__:
+
+.. _io_realm_DynamicRealm_getSchema:
+
+.. _io_realm_DynamicRealm_getSchema__:
+
+
+
+getSchema
+---------
+
+.. _io_realm_DynamicRealm_getSchema__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`RealmSchema <io_realm_RealmSchema>`  getSchema ()
+   
+   * - Returns the mutable schema for this Realm.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _isEmpty:
+
+.. _isEmpty__:
+
+.. _DynamicRealm_isEmpty:
+
+.. _DynamicRealm_isEmpty__:
+
+.. _io_realm_DynamicRealm_isEmpty:
+
+.. _io_realm_DynamicRealm_isEmpty__:
+
 
 
 isEmpty
 -------
-
-.. _io_realm_DynamicRealm_isEmpty__:
-
-.. _io_realm_DynamicRealm_isEmpty__:
 
 .. _io_realm_DynamicRealm_isEmpty__:
 
@@ -1269,53 +1219,31 @@ isEmpty
        
    
    
+.. _removeAllChangeListeners:
+
+.. _removeAllChangeListeners__:
+
+.. _DynamicRealm_removeAllChangeListeners:
+
+.. _DynamicRealm_removeAllChangeListeners__:
+
+.. _io_realm_DynamicRealm_removeAllChangeListeners:
+
+.. _io_realm_DynamicRealm_removeAllChangeListeners__:
 
 
-getSchema
----------
 
-.. _io_realm_DynamicRealm_getSchema__:
+removeAllChangeListeners
+------------------------
 
-.. _io_realm_DynamicRealm_getSchema__:
-
-.. _io_realm_DynamicRealm_getSchema__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public :ref:`RealmSchema <io_realm_RealmSchema>`  getSchema ()
-   
-   * - Returns the mutable schema for this Realm.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-
-
-freeze
-------
-
-.. _io_realm_DynamicRealm_freeze__:
-
-.. _io_realm_DynamicRealm_freeze__:
-
-.. _io_realm_DynamicRealm_freeze__:
+.. _io_realm_DynamicRealm_removeAllChangeListeners__:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public :ref:`DynamicRealm <io_realm_DynamicRealm>`  freeze ()
+   * -    public **void** removeAllChangeListeners ()
    
-   * - 
+   * - Removes all user-defined change listeners.
        
        
        
@@ -1324,9 +1252,165 @@ freeze
        
        
        
+       **Throws**
+       
+       - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if you try to remove listeners from a non-Looper Thread.
+          
+          
+          
        
        
        
+       
+       
+       
+       .. seealso::
+       
+       
+          
+          - :ref:`io.realm.RealmChangeListener <io_realm_RealmChangeListener>` 
+             
+             
+             
+          
+          
+          
+       
+       
+   
+   
+.. _removeChangeListener:
+
+.. _removeChangeListener__:
+
+.. _DynamicRealm_removeChangeListener:
+
+.. _DynamicRealm_removeChangeListener__:
+
+
+
+removeChangeListener
+--------------------
+
+.. _io_realm_DynamicRealm_removeChangeListener_RealmChangeListener_DynamicRealm__:
+
+.. _io_realm_DynamicRealm_removeChangeListener_RealmChangeListener_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** removeChangeListener (:ref:`io.realm.RealmChangeListener\<io.realm.DynamicRealm> <io_realm_RealmChangeListener>`  listener)
+   
+   * - Removes the specified change listener.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``listener`` - the change listener to be removed.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the change listener is ``null`` .
+          
+          
+          
+          
+          
+       - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if you try to remove a listener from a non-Looper Thread.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       .. seealso::
+       
+       
+          
+          - :ref:`io.realm.RealmChangeListener <io_realm_RealmChangeListener>` 
+             
+             
+             
+          
+          
+          
+       
+       
+   
+   
+.. _where:
+
+.. _where__:
+
+.. _DynamicRealm_where:
+
+.. _DynamicRealm_where__:
+
+
+
+where
+-----
+
+.. _io_realm_DynamicRealm_where_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`RealmQuery <io_realm_RealmQuery>`  where (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
+   
+   * - Returns a RealmQuery, which can be used to query the provided class.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``className`` - the class of the object which is to be queried.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the class doesn't exist.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       .. seealso::
+       
+       
+          
+          - :ref:`io.realm.RealmQuery <io_realm_RealmQuery>` 
+             
+             
+             
+          
+          
+          
        
        
    

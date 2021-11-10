@@ -17,8 +17,8 @@ Enum ErrorCode
 io.realm.mongodb
 ================
 
-`java.lang.Enum <https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html>`__ 
- | 		`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+ | 		`java.lang.Enum <https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html>`__ 
 
 This class enumerate all potential errors related to using the Object Server or synchronizing data.
 
@@ -1175,39 +1175,10 @@ Method Summary
    * - 
        public static :ref:`ErrorCode <io_realm_mongodb_ErrorCode>` 
      - 
-       :ref:`values <io_realm_mongodb_ErrorCode_values__>`  ()
+       :ref:`fromNativeError <io_realm_mongodb_ErrorCode_fromNativeError_String__int_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  type,
+                                                 **int** errorCode)
        
-       
-       
-       
-       
-   
-   * - 
-       public static :ref:`ErrorCode <io_realm_mongodb_ErrorCode>` 
-     - 
-       :ref:`valueOf <io_realm_mongodb_ErrorCode_valueOf_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
-       
-       
-       
-       
-       
-   
-   * - 
-       public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
-     - 
-       :ref:`toString <io_realm_mongodb_ErrorCode_toString__>`  ()
-       
-       
-       
-       
-       
-   
-   * - 
-       public **int**
-     - 
-       :ref:`intValue <io_realm_mongodb_ErrorCode_intValue__>`  ()
-       
-       Returns the numerical value for this error code.
+       Converts a native error to the appropriate Java equivalent
        
        
        
@@ -1233,12 +1204,41 @@ Method Summary
        
    
    * - 
+       public **int**
+     - 
+       :ref:`intValue <io_realm_mongodb_ErrorCode_intValue__>`  ()
+       
+       Returns the numerical value for this error code.
+       
+       
+       
+   
+   * - 
+       public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`toString <io_realm_mongodb_ErrorCode_toString__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
        public static :ref:`ErrorCode <io_realm_mongodb_ErrorCode>` 
      - 
-       :ref:`fromNativeError <io_realm_mongodb_ErrorCode_fromNativeError_String__int_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  type,
-                                                 **int** errorCode)
+       :ref:`valueOf <io_realm_mongodb_ErrorCode_valueOf_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
        
-       Converts a native error to the appropriate Java equivalent
+       
+       
+       
+       
+   
+   * - 
+       public static :ref:`ErrorCode <io_realm_mongodb_ErrorCode>` 
+     - 
+       :ref:`values <io_realm_mongodb_ErrorCode_values__>`  ()
+       
+       
        
        
        
@@ -1251,16 +1251,8 @@ Inherited Methods
 
 
 
-- Methods inherited from interface `java.lang.Enum <https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html>`__ : 
-   
-   ``name`` , ``ordinal`` , ``toString`` , ``equals`` , ``hashCode`` , ``clone`` , ``compareTo`` , ``getDeclaringClass`` , ``valueOf`` , ``finalize`` 
-   
-   
-- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
-   
-   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
-   
-   
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+- Methods inherited from interface `java.lang.Enum <https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html>`__ : ``name`` , ``ordinal`` , ``toString`` , ``equals`` , ``hashCode`` , ``clone`` , ``compareTo`` , ``getDeclaringClass`` , ``valueOf`` , ``finalize`` 
 
 
 
@@ -3678,85 +3670,44 @@ public static final :ref:`ErrorCode <io_realm_mongodb_ErrorCode>`
 Method Detail
 =============
 
+.. _fromNativeError:
+
+.. _fromNativeError__:
+
+.. _ErrorCode_fromNativeError:
+
+.. _ErrorCode_fromNativeError__:
 
 
-values
-------
 
-.. _io_realm_mongodb_ErrorCode_values__:
+fromNativeError
+---------------
 
-.. _io_realm_mongodb_ErrorCode_values__:
+.. _io_realm_mongodb_ErrorCode_fromNativeError_String__int_:
 
-.. _io_realm_mongodb_ErrorCode_values__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public static :ref:`ErrorCode <io_realm_mongodb_ErrorCode>`  values ()
-   
-   * - 
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-
-
-valueOf
--------
-
-.. _io_realm_mongodb_ErrorCode_valueOf_String_:
-
-.. _io_realm_mongodb_ErrorCode_valueOf_String_:
-
-.. _io_realm_mongodb_ErrorCode_valueOf_String_:
+.. _io_realm_mongodb_ErrorCode_fromNativeError_String_int_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public static :ref:`ErrorCode <io_realm_mongodb_ErrorCode>`  valueOf (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+   * -    public static :ref:`ErrorCode <io_realm_mongodb_ErrorCode>`  fromNativeError (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  type,
+                                                 **int** errorCode)
    
-   * - 
+   * - Converts a native error to the appropriate Java equivalent
        
        
        
        
+       **Parameters**
        
-       
-       
-       
-       
-       
-       
-   
-   
-
-
-toString
---------
-
-.. _io_realm_mongodb_ErrorCode_toString__:
-
-.. _io_realm_mongodb_ErrorCode_toString__:
-
-.. _io_realm_mongodb_ErrorCode_toString__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  toString ()
-   
-   * - 
-       
-       
+       - ``type`` - type of error. This is normally the C++ category.
+          
+          
+          
+       - ``errorCode`` - specific code within the type
+          
+          
+          
        
        
        
@@ -3768,46 +3719,22 @@ toString
        
    
    
+.. _getCategory:
 
+.. _getCategory__:
 
-intValue
---------
+.. _ErrorCode_getCategory:
 
-.. _io_realm_mongodb_ErrorCode_intValue__:
+.. _ErrorCode_getCategory__:
 
-.. _io_realm_mongodb_ErrorCode_intValue__:
+.. _io_realm_mongodb_ErrorCode_getCategory:
 
-.. _io_realm_mongodb_ErrorCode_intValue__:
+.. _io_realm_mongodb_ErrorCode_getCategory__:
 
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **int** intValue ()
-   
-   * - Returns the numerical value for this error code. Note that an error is only uniquely identified by the ``(type:value)``  pair.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
 
 
 getCategory
 -----------
-
-.. _io_realm_mongodb_ErrorCode_getCategory__:
-
-.. _io_realm_mongodb_ErrorCode_getCategory__:
 
 .. _io_realm_mongodb_ErrorCode_getCategory__:
 
@@ -3838,14 +3765,22 @@ getCategory
        
    
    
+.. _getType:
+
+.. _getType__:
+
+.. _ErrorCode_getType:
+
+.. _ErrorCode_getType__:
+
+.. _io_realm_mongodb_ErrorCode_getType:
+
+.. _io_realm_mongodb_ErrorCode_getType__:
+
 
 
 getType
 -------
-
-.. _io_realm_mongodb_ErrorCode_getType__:
-
-.. _io_realm_mongodb_ErrorCode_getType__:
 
 .. _io_realm_mongodb_ErrorCode_getType__:
 
@@ -3870,38 +3805,145 @@ getType
        
    
    
+.. _intValue:
+
+.. _intValue__:
+
+.. _ErrorCode_intValue:
+
+.. _ErrorCode_intValue__:
+
+.. _io_realm_mongodb_ErrorCode_intValue:
+
+.. _io_realm_mongodb_ErrorCode_intValue__:
 
 
-fromNativeError
----------------
 
-.. _io_realm_mongodb_ErrorCode_fromNativeError_String__int_:
+intValue
+--------
 
-.. _io_realm_mongodb_ErrorCode_fromNativeError_String_int_:
-
-.. _io_realm_mongodb_ErrorCode_fromNativeError_String__int_:
+.. _io_realm_mongodb_ErrorCode_intValue__:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public static :ref:`ErrorCode <io_realm_mongodb_ErrorCode>`  fromNativeError (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  type,
-                                                 **int** errorCode)
+   * -    public **int** intValue ()
    
-   * - Converts a native error to the appropriate Java equivalent
+   * - Returns the numerical value for this error code. Note that an error is only uniquely identified by the ``(type:value)``  pair.
        
        
        
        
-       **Parameters**
        
-       - ``type`` - type of error. This is normally the C++ category.
-          
-          
-          
-       - ``errorCode`` - specific code within the type
-          
-          
-          
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _toString:
+
+.. _toString__:
+
+.. _ErrorCode_toString:
+
+.. _ErrorCode_toString__:
+
+.. _io_realm_mongodb_ErrorCode_toString:
+
+.. _io_realm_mongodb_ErrorCode_toString__:
+
+
+
+toString
+--------
+
+.. _io_realm_mongodb_ErrorCode_toString__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  toString ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _valueOf:
+
+.. _valueOf__:
+
+.. _ErrorCode_valueOf:
+
+.. _ErrorCode_valueOf__:
+
+
+
+valueOf
+-------
+
+.. _io_realm_mongodb_ErrorCode_valueOf_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`ErrorCode <io_realm_mongodb_ErrorCode>`  valueOf (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _values:
+
+.. _values__:
+
+.. _ErrorCode_values:
+
+.. _ErrorCode_values__:
+
+.. _io_realm_mongodb_ErrorCode_values:
+
+.. _io_realm_mongodb_ErrorCode_values__:
+
+
+
+values
+------
+
+.. _io_realm_mongodb_ErrorCode_values__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`ErrorCode <io_realm_mongodb_ErrorCode>`  values ()
+   
+   * - 
+       
+       
        
        
        
