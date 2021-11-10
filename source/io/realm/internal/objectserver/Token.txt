@@ -1,0 +1,580 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class Token
+^^^^^^^^^^^
+
+.. _io_realm_internal_objectserver_Token:
+
+
+
+io.realm.internal.objectserver
+==============================
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+This class represents a value from the Realm Authentication Server.
+
+
+Constructors
+============
+
+
+
+- ``io.realm.internal.objectserver.Token(String, String, String, long, Token.Permission[])`` 
+- ``io.realm.internal.objectserver.Token(String, String, String, long, Token.Permission[], boolean)`` 
+
+
+
+
+Nested Class Summary
+====================
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Class and Description
+   
+   * - ``public static final`` 
+     - ``io.realm.internal.objectserver.Token.Permission`` 
+   
+   
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`equals <io_realm_internal_objectserver_Token_equals_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`expiresMs <io_realm_internal_objectserver_Token_expiresMs__>`  ()
+       
+       Returns when this token expires.
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`expiresSec <io_realm_internal_objectserver_Token_expiresSec__>`  ()
+       
+       Returns when this token expires.
+       
+       
+       
+   
+   * - 
+       public static :ref:`Token <io_realm_internal_objectserver_Token>` 
+     - 
+       :ref:`from <io_realm_internal_objectserver_Token_from_JSONObject_>`  (**JSONObject (?)** token)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **int**
+     - 
+       :ref:`hashCode <io_realm_internal_objectserver_Token_hashCode__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`identity <io_realm_internal_objectserver_Token_identity__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`isAdmin <io_realm_internal_objectserver_Token_isAdmin__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`path <io_realm_internal_objectserver_Token_path__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`Token.Permission <io_realm_internal_objectserver_Token_Permission>` 
+     - 
+       :ref:`permissions <io_realm_internal_objectserver_Token_permissions__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **JSONObject (?)**
+     - 
+       :ref:`toJson <io_realm_internal_objectserver_Token_toJson__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`value <io_realm_internal_objectserver_Token_value__>`  ()
+       
+       
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+
+
+
+
+Method Detail
+=============
+
+.. _equals:
+
+.. _equals__:
+
+.. _Token_equals:
+
+.. _Token_equals__:
+
+
+
+equals
+------
+
+.. _io_realm_internal_objectserver_Token_equals_Object_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _expiresMs:
+
+.. _expiresMs__:
+
+.. _Token_expiresMs:
+
+.. _Token_expiresMs__:
+
+.. _io_realm_internal_objectserver_Token_expiresMs:
+
+.. _io_realm_internal_objectserver_Token_expiresMs__:
+
+
+
+expiresMs
+---------
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** expiresMs ()
+   
+   * - Returns when this token expires. Timestamp is in UTC milliseconds.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _expiresSec:
+
+.. _expiresSec__:
+
+.. _Token_expiresSec:
+
+.. _Token_expiresSec__:
+
+.. _io_realm_internal_objectserver_Token_expiresSec:
+
+.. _io_realm_internal_objectserver_Token_expiresSec__:
+
+
+
+expiresSec
+----------
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** expiresSec ()
+   
+   * - Returns when this token expires. Timestamp is in UTC seconds.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _from:
+
+.. _from__:
+
+.. _Token_from:
+
+.. _Token_from__:
+
+
+
+from
+----
+
+.. _io_realm_internal_objectserver_Token_from_JSONObject_:
+
+.. _io_realm_internal_objectserver_Token_from_org_json_JSONObject_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`Token <io_realm_internal_objectserver_Token>`  from (**JSONObject (?)** token)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _hashCode:
+
+.. _hashCode__:
+
+.. _Token_hashCode:
+
+.. _Token_hashCode__:
+
+.. _io_realm_internal_objectserver_Token_hashCode:
+
+.. _io_realm_internal_objectserver_Token_hashCode__:
+
+
+
+hashCode
+--------
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **int** hashCode ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _identity:
+
+.. _identity__:
+
+.. _Token_identity:
+
+.. _Token_identity__:
+
+.. _io_realm_internal_objectserver_Token_identity:
+
+.. _io_realm_internal_objectserver_Token_identity__:
+
+
+
+identity
+--------
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  identity ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _isAdmin:
+
+.. _isAdmin__:
+
+.. _Token_isAdmin:
+
+.. _Token_isAdmin__:
+
+.. _io_realm_internal_objectserver_Token_isAdmin:
+
+.. _io_realm_internal_objectserver_Token_isAdmin__:
+
+
+
+isAdmin
+-------
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** isAdmin ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _path:
+
+.. _path__:
+
+.. _Token_path:
+
+.. _Token_path__:
+
+.. _io_realm_internal_objectserver_Token_path:
+
+.. _io_realm_internal_objectserver_Token_path__:
+
+
+
+path
+----
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  path ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _permissions:
+
+.. _permissions__:
+
+.. _Token_permissions:
+
+.. _Token_permissions__:
+
+.. _io_realm_internal_objectserver_Token_permissions:
+
+.. _io_realm_internal_objectserver_Token_permissions__:
+
+
+
+permissions
+-----------
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`Token.Permission <io_realm_internal_objectserver_Token_Permission>`  permissions ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _toJson:
+
+.. _toJson__:
+
+.. _Token_toJson:
+
+.. _Token_toJson__:
+
+.. _io_realm_internal_objectserver_Token_toJson:
+
+.. _io_realm_internal_objectserver_Token_toJson__:
+
+
+
+toJson
+------
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **JSONObject (?)** toJson ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _value:
+
+.. _value__:
+
+.. _Token_value:
+
+.. _Token_value__:
+
+.. _io_realm_internal_objectserver_Token_value:
+
+.. _io_realm_internal_objectserver_Token_value__:
+
+
+
+value
+-----
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

@@ -1,0 +1,289 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class NetworkStateReceiver
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_internal_network_NetworkStateReceiver:
+
+
+
+io.realm.internal.network
+=========================
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+ | 		**android.content.BroadcastReceiver (?)**
+
+This class is responsible for keeping track of system events related to the network so it can delegate them to interested parties.
+
+
+Constructors
+============
+
+
+
+- ``io.realm.internal.network.NetworkStateReceiver()`` 
+
+
+
+
+Nested Class Summary
+====================
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Class and Description
+   
+   * - ``public static interface`` 
+     - ``io.realm.internal.network.NetworkStateReceiver.ConnectionListener`` 
+   
+   
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public static **void**
+     - 
+       :ref:`addListener <io_realm_internal_network_NetworkStateReceiver_addListener_NetworkStateReceiver_ConnectionListener_>`  (:ref:`NetworkStateReceiver.ConnectionListener <io_realm_internal_network_NetworkStateReceiver_ConnectionListener>`  listener)
+       
+       Add a listener to be notified about any network changes.
+       
+       
+       
+   
+   * - 
+       public static **boolean**
+     - 
+       :ref:`isOnline <io_realm_internal_network_NetworkStateReceiver_isOnline_Context_>`  (**Context (?)** context)
+       
+       Attempt to detect if a device is online and can transmit or receive data.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`onReceive <io_realm_internal_network_NetworkStateReceiver_onReceive_Context__Intent_>`  (**Context (?)** context,
+                               **Intent (?)** intent)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static synchronized **void**
+     - 
+       :ref:`removeListener <io_realm_internal_network_NetworkStateReceiver_removeListener_NetworkStateReceiver_ConnectionListener_>`  (:ref:`NetworkStateReceiver.ConnectionListener <io_realm_internal_network_NetworkStateReceiver_ConnectionListener>`  listener)
+       
+       Removes a network listener.
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+- Methods inherited from interface **android.content.BroadcastReceiver (?)**: ``onReceive`` , ``goAsync`` , ``peekService`` , ``setResultCode`` , ``getResultCode`` , ``setResultData`` , ``getResultData`` , ``setResultExtras`` , ``getResultExtras`` , ``setResult`` , ``getAbortBroadcast`` , ``abortBroadcast`` , ``clearAbortBroadcast`` , ``isOrderedBroadcast`` , ``isInitialStickyBroadcast`` , ``setOrderedHint`` , ``setDebugUnregister`` , ``getDebugUnregister`` 
+
+
+
+
+Method Detail
+=============
+
+.. _addListener:
+
+.. _addListener__:
+
+.. _NetworkStateReceiver_addListener:
+
+.. _NetworkStateReceiver_addListener__:
+
+
+
+addListener
+-----------
+
+.. _io_realm_internal_network_NetworkStateReceiver_addListener_NetworkStateReceiver_ConnectionListener_:
+
+.. _io_realm_internal_network_NetworkStateReceiver_addListener_ConnectionListener_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **void** addListener (:ref:`NetworkStateReceiver.ConnectionListener <io_realm_internal_network_NetworkStateReceiver_ConnectionListener>`  listener)
+   
+   * - Add a listener to be notified about any network changes. This method is thread safe.IMPORTANT: Not removing it again will result in major leaks.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``listener`` - the listener.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _isOnline:
+
+.. _isOnline__:
+
+.. _NetworkStateReceiver_isOnline:
+
+.. _NetworkStateReceiver_isOnline__:
+
+
+
+isOnline
+--------
+
+.. _io_realm_internal_network_NetworkStateReceiver_isOnline_Context_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **boolean** isOnline (**Context (?)** context)
+   
+   * - Attempt to detect if a device is online and can transmit or receive data. This method is thread safe.An emulator is always considered online, as \`getActiveNetworkInfo()\` does not report the correct value.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``context`` - an Android context.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _onReceive:
+
+.. _onReceive__:
+
+.. _NetworkStateReceiver_onReceive:
+
+.. _NetworkStateReceiver_onReceive__:
+
+
+
+onReceive
+---------
+
+.. _io_realm_internal_network_NetworkStateReceiver_onReceive_Context__Intent_:
+
+.. _io_realm_internal_network_NetworkStateReceiver_onReceive_Context_Intent_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** onReceive (**Context (?)** context,
+                               **Intent (?)** intent)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _removeListener:
+
+.. _removeListener__:
+
+.. _NetworkStateReceiver_removeListener:
+
+.. _NetworkStateReceiver_removeListener__:
+
+
+
+removeListener
+--------------
+
+.. _io_realm_internal_network_NetworkStateReceiver_removeListener_NetworkStateReceiver_ConnectionListener_:
+
+.. _io_realm_internal_network_NetworkStateReceiver_removeListener_ConnectionListener_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static synchronized **void** removeListener (:ref:`NetworkStateReceiver.ConnectionListener <io_realm_internal_network_NetworkStateReceiver_ConnectionListener>`  listener)
+   
+   * - Removes a network listener. This method is thread safe.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``listener`` - the listener.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

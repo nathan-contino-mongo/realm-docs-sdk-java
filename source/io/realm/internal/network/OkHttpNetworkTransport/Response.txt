@@ -1,0 +1,428 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class OkHttpNetworkTransport.Response
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_Response:
+
+
+
+io.realm.internal.network
+=========================
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+ | 		:ref:`io.realm.internal.objectstore.OsJavaNetworkTransport.Response <io_realm_internal_objectstore_OsJavaNetworkTransport_Response>` 
+
+
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public **void**
+     - 
+       :ref:`close <io_realm_internal_network_OkHttpNetworkTransport_Response_close__>`  ()
+       
+       Closes the current stream.
+       
+       
+       
+   
+   * - 
+       public static :ref:`OsJavaNetworkTransport.Response <io_realm_internal_objectstore_OsJavaNetworkTransport_Response>` 
+     - 
+       :ref:`httpResponse <io_realm_internal_network_OkHttpNetworkTransport_Response_httpResponse_int__Map_String__String___BufferedSource_>`  (**int** httpResponseCode,
+                                                                    `java.util.Map\<java.lang.String, java.lang.String> <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  headers,
+                                                                    **BufferedSource (?)** originalResponse)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static :ref:`OsJavaNetworkTransport.Response <io_realm_internal_objectstore_OsJavaNetworkTransport_Response>` 
+     - 
+       :ref:`httpResponse <io_realm_internal_network_OkHttpNetworkTransport_Response_httpResponse_int__Map_String__String___String_>`  (**int** statusCode,
+                                                                    `java.util.Map\<java.lang.String, java.lang.String> <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  responseHeaders,
+                                                                    `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  body)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static :ref:`OsJavaNetworkTransport.Response <io_realm_internal_objectstore_OsJavaNetworkTransport_Response>` 
+     - 
+       :ref:`interruptedError <io_realm_internal_network_OkHttpNetworkTransport_Response_interruptedError_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  stackTrace)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static :ref:`OsJavaNetworkTransport.Response <io_realm_internal_objectstore_OsJavaNetworkTransport_Response>` 
+     - 
+       :ref:`ioError <io_realm_internal_network_OkHttpNetworkTransport_Response_ioError_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  stackTrace)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`isOpen <io_realm_internal_network_OkHttpNetworkTransport_Response_isOpen__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`readBodyLine <io_realm_internal_network_OkHttpNetworkTransport_Response_readBodyLine__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public static :ref:`OsJavaNetworkTransport.Response <io_realm_internal_objectstore_OsJavaNetworkTransport_Response>` 
+     - 
+       :ref:`unknownError <io_realm_internal_network_OkHttpNetworkTransport_Response_unknownError_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  stacktrace)
+       
+       
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+- Methods inherited from interface :ref:`io.realm.internal.objectstore.OsJavaNetworkTransport.Response <io_realm_internal_objectstore_OsJavaNetworkTransport_Response>` : ``getHttpResponseCode`` , ``getCustomResponseCode`` , ``getHeaders`` , ``getJNIFriendlyHeaders`` , ``getBody`` , ``readBodyLine`` , ``isOpen`` , ``toString`` , ``close`` 
+
+
+
+
+Method Detail
+=============
+
+.. _close:
+
+.. _close__:
+
+.. _Response_close:
+
+.. _Response_close__:
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_Response_close:
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_Response_close__:
+
+
+
+close
+-----
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** close ()
+   
+   * - Closes the current stream. Note: we use a close flag because okio buffers are not thread safe:
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       .. seealso::
+       
+       
+          
+          - `https://github.com/square/okio/issues/163.issuecomment-127052956 <http://google.com>`__ 
+             
+             
+             
+             
+          
+          
+          
+       
+       
+   
+   
+.. _httpResponse:
+
+.. _httpResponse__:
+
+.. _Response_httpResponse:
+
+.. _Response_httpResponse__:
+
+
+
+httpResponse
+------------
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_Response_httpResponse_int__Map_String__String___BufferedSource_:
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_Response_httpResponse_int_Map_BufferedSource_:
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_Response_httpResponse_int__Map__BufferedSource_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`OsJavaNetworkTransport.Response <io_realm_internal_objectstore_OsJavaNetworkTransport_Response>`  httpResponse (**int** httpResponseCode,
+                                                                    `java.util.Map\<java.lang.String, java.lang.String> <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  headers,
+                                                                    **BufferedSource (?)** originalResponse)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_internal_network_OkHttpNetworkTransport_Response_httpResponse_int__Map_String__String___String_:
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_Response_httpResponse_int_Map_String_:
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_Response_httpResponse_int__Map__String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`OsJavaNetworkTransport.Response <io_realm_internal_objectstore_OsJavaNetworkTransport_Response>`  httpResponse (**int** statusCode,
+                                                                    `java.util.Map\<java.lang.String, java.lang.String> <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  responseHeaders,
+                                                                    `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  body)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _interruptedError:
+
+.. _interruptedError__:
+
+.. _Response_interruptedError:
+
+.. _Response_interruptedError__:
+
+
+
+interruptedError
+----------------
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_Response_interruptedError_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`OsJavaNetworkTransport.Response <io_realm_internal_objectstore_OsJavaNetworkTransport_Response>`  interruptedError (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  stackTrace)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _ioError:
+
+.. _ioError__:
+
+.. _Response_ioError:
+
+.. _Response_ioError__:
+
+
+
+ioError
+-------
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_Response_ioError_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`OsJavaNetworkTransport.Response <io_realm_internal_objectstore_OsJavaNetworkTransport_Response>`  ioError (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  stackTrace)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _isOpen:
+
+.. _isOpen__:
+
+.. _Response_isOpen:
+
+.. _Response_isOpen__:
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_Response_isOpen:
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_Response_isOpen__:
+
+
+
+isOpen
+------
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** isOpen ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _readBodyLine:
+
+.. _readBodyLine__:
+
+.. _Response_readBodyLine:
+
+.. _Response_readBodyLine__:
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_Response_readBodyLine:
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_Response_readBodyLine__:
+
+
+
+readBodyLine
+------------
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  readBodyLine ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _unknownError:
+
+.. _unknownError__:
+
+.. _Response_unknownError:
+
+.. _Response_unknownError__:
+
+
+
+unknownError
+------------
+
+.. _io_realm_internal_network_OkHttpNetworkTransport_Response_unknownError_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`OsJavaNetworkTransport.Response <io_realm_internal_objectstore_OsJavaNetworkTransport_Response>`  unknownError (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  stacktrace)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

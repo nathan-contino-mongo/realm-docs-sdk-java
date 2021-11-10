@@ -52,16 +52,6 @@ Method Summary
        
    
    * - 
-       public :ref:`FindOptions <io_realm_mongodb_mongo_options_FindOptions>` 
-     - 
-       :ref:`limit <io_realm_mongodb_mongo_options_FindOptions_limit_int_>`  (**int** limit)
-       
-       Sets the limit to apply.
-       
-       
-       
-   
-   * - 
        public **Bson (?)**
      - 
        :ref:`getProjection <io_realm_mongodb_mongo_options_FindOptions_getProjection__>`  ()
@@ -72,21 +62,31 @@ Method Summary
        
    
    * - 
-       public :ref:`FindOptions <io_realm_mongodb_mongo_options_FindOptions>` 
-     - 
-       :ref:`projection <io_realm_mongodb_mongo_options_FindOptions_projection_Bson_>`  (**Bson (?)** projection)
-       
-       Sets a document describing the fields to return for all matching documents.
-       
-       
-       
-   
-   * - 
        public **Bson (?)**
      - 
        :ref:`getSort <io_realm_mongodb_mongo_options_FindOptions_getSort__>`  ()
        
        Gets the sort criteria to apply to the query.
+       
+       
+       
+   
+   * - 
+       public :ref:`FindOptions <io_realm_mongodb_mongo_options_FindOptions>` 
+     - 
+       :ref:`limit <io_realm_mongodb_mongo_options_FindOptions_limit_int_>`  (**int** limit)
+       
+       Sets the limit to apply.
+       
+       
+       
+   
+   * - 
+       public :ref:`FindOptions <io_realm_mongodb_mongo_options_FindOptions>` 
+     - 
+       :ref:`projection <io_realm_mongodb_mongo_options_FindOptions_projection_Bson_>`  (**Bson (?)** projection)
+       
+       Sets a document describing the fields to return for all matching documents.
        
        
        
@@ -119,11 +119,7 @@ Inherited Methods
 
 
 
-- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
-   
-   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
-   
-   
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
 
 
 
@@ -131,16 +127,22 @@ Inherited Methods
 Method Detail
 =============
 
+.. _getLimit:
+
+.. _getLimit__:
+
+.. _FindOptions_getLimit:
+
+.. _FindOptions_getLimit__:
+
+.. _io_realm_mongodb_mongo_options_FindOptions_getLimit:
+
+.. _io_realm_mongodb_mongo_options_FindOptions_getLimit__:
+
 
 
 getLimit
 --------
-
-.. _io_realm_mongodb_mongo_options_FindOptions_getLimit__:
-
-.. _io_realm_mongodb_mongo_options_FindOptions_getLimit__:
-
-.. _io_realm_mongodb_mongo_options_FindOptions_getLimit__:
 
 .. list-table::
    :header-rows: 1
@@ -161,14 +163,90 @@ getLimit
        
    
    
+.. _getProjection:
+
+.. _getProjection__:
+
+.. _FindOptions_getProjection:
+
+.. _FindOptions_getProjection__:
+
+.. _io_realm_mongodb_mongo_options_FindOptions_getProjection:
+
+.. _io_realm_mongodb_mongo_options_FindOptions_getProjection__:
+
+
+
+getProjection
+-------------
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **Bson (?)** getProjection ()
+   
+   * - Gets a document describing the fields to return for all matching documents.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getSort:
+
+.. _getSort__:
+
+.. _FindOptions_getSort:
+
+.. _FindOptions_getSort__:
+
+.. _io_realm_mongodb_mongo_options_FindOptions_getSort:
+
+.. _io_realm_mongodb_mongo_options_FindOptions_getSort__:
+
+
+
+getSort
+-------
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **Bson (?)** getSort ()
+   
+   * - Gets the sort criteria to apply to the query. The default is null, which means that the documents will be returned in an undefined order.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _limit:
+
+.. _limit__:
+
+.. _FindOptions_limit:
+
+.. _FindOptions_limit__:
+
 
 
 limit
 -----
-
-.. _io_realm_mongodb_mongo_options_FindOptions_limit_int_:
-
-.. _io_realm_mongodb_mongo_options_FindOptions_limit_int_:
 
 .. _io_realm_mongodb_mongo_options_FindOptions_limit_int_:
 
@@ -199,44 +277,18 @@ limit
        
    
    
+.. _projection:
 
+.. _projection__:
 
-getProjection
--------------
+.. _FindOptions_projection:
 
-.. _io_realm_mongodb_mongo_options_FindOptions_getProjection__:
+.. _FindOptions_projection__:
 
-.. _io_realm_mongodb_mongo_options_FindOptions_getProjection__:
-
-.. _io_realm_mongodb_mongo_options_FindOptions_getProjection__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **Bson (?)** getProjection ()
-   
-   * - Gets a document describing the fields to return for all matching documents.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
 
 
 projection
 ----------
-
-.. _io_realm_mongodb_mongo_options_FindOptions_projection_Bson_:
-
-.. _io_realm_mongodb_mongo_options_FindOptions_projection_Bson_:
 
 .. _io_realm_mongodb_mongo_options_FindOptions_projection_Bson_:
 
@@ -267,44 +319,18 @@ projection
        
    
    
+.. _sort:
 
+.. _sort__:
 
-getSort
--------
+.. _FindOptions_sort:
 
-.. _io_realm_mongodb_mongo_options_FindOptions_getSort__:
+.. _FindOptions_sort__:
 
-.. _io_realm_mongodb_mongo_options_FindOptions_getSort__:
-
-.. _io_realm_mongodb_mongo_options_FindOptions_getSort__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **Bson (?)** getSort ()
-   
-   * - Gets the sort criteria to apply to the query. The default is null, which means that the documents will be returned in an undefined order.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
 
 
 sort
 ----
-
-.. _io_realm_mongodb_mongo_options_FindOptions_sort_Bson_:
-
-.. _io_realm_mongodb_mongo_options_FindOptions_sort_Bson_:
 
 .. _io_realm_mongodb_mongo_options_FindOptions_sort_Bson_:
 
@@ -335,16 +361,22 @@ sort
        
    
    
+.. _toString:
+
+.. _toString__:
+
+.. _FindOptions_toString:
+
+.. _FindOptions_toString__:
+
+.. _io_realm_mongodb_mongo_options_FindOptions_toString:
+
+.. _io_realm_mongodb_mongo_options_FindOptions_toString__:
+
 
 
 toString
 --------
-
-.. _io_realm_mongodb_mongo_options_FindOptions_toString__:
-
-.. _io_realm_mongodb_mongo_options_FindOptions_toString__:
-
-.. _io_realm_mongodb_mongo_options_FindOptions_toString__:
 
 .. list-table::
    :header-rows: 1

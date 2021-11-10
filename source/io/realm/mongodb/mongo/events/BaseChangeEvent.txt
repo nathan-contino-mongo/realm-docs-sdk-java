@@ -57,11 +57,11 @@ Method Summary
      - Method and Description
    
    * - 
-       public :ref:`BaseChangeEvent.OperationType <io_realm_mongodb_mongo_events_BaseChangeEvent_OperationType>` 
+       public **BsonDocument (?)**
      - 
-       :ref:`getOperationType <io_realm_mongodb_mongo_events_BaseChangeEvent_getOperationType__>`  ()
+       :ref:`getDocumentKey <io_realm_mongodb_mongo_events_BaseChangeEvent_getDocumentKey__>`  ()
        
-       Returns the operation type of the change that triggered the change event.
+       The unique identifier for the document that was actually changed.
        
        
        
@@ -77,11 +77,11 @@ Method Summary
        
    
    * - 
-       public **BsonDocument (?)**
+       public :ref:`BaseChangeEvent.OperationType <io_realm_mongodb_mongo_events_BaseChangeEvent_OperationType>` 
      - 
-       :ref:`getDocumentKey <io_realm_mongodb_mongo_events_BaseChangeEvent_getDocumentKey__>`  ()
+       :ref:`getOperationType <io_realm_mongodb_mongo_events_BaseChangeEvent_getOperationType__>`  ()
        
-       The unique identifier for the document that was actually changed.
+       Returns the operation type of the change that triggered the change event.
        
        
        
@@ -124,11 +124,7 @@ Inherited Methods
 
 
 
-- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
-   
-   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
-   
-   
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
 
 
 
@@ -136,76 +132,22 @@ Inherited Methods
 Method Detail
 =============
 
+.. _getDocumentKey:
 
+.. _getDocumentKey__:
 
-getOperationType
-----------------
+.. _BaseChangeEvent_getDocumentKey:
 
-.. _io_realm_mongodb_mongo_events_BaseChangeEvent_getOperationType__:
+.. _BaseChangeEvent_getDocumentKey__:
 
-.. _io_realm_mongodb_mongo_events_BaseChangeEvent_getOperationType__:
+.. _io_realm_mongodb_mongo_events_BaseChangeEvent_getDocumentKey:
 
-.. _io_realm_mongodb_mongo_events_BaseChangeEvent_getOperationType__:
+.. _io_realm_mongodb_mongo_events_BaseChangeEvent_getDocumentKey__:
 
-.. list-table::
-   :header-rows: 1
-   
-   * -    public :ref:`BaseChangeEvent.OperationType <io_realm_mongodb_mongo_events_BaseChangeEvent_OperationType>`  getOperationType ()
-   
-   * - Returns the operation type of the change that triggered the change event.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-
-
-getFullDocument
----------------
-
-.. _io_realm_mongodb_mongo_events_BaseChangeEvent_getFullDocument__:
-
-.. _io_realm_mongodb_mongo_events_BaseChangeEvent_getFullDocument__:
-
-.. _io_realm_mongodb_mongo_events_BaseChangeEvent_getFullDocument__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **DocumentT (?)** getFullDocument ()
-   
-   * - The full document at some point after the change has been applied.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
 
 
 getDocumentKey
 --------------
-
-.. _io_realm_mongodb_mongo_events_BaseChangeEvent_getDocumentKey__:
-
-.. _io_realm_mongodb_mongo_events_BaseChangeEvent_getDocumentKey__:
-
-.. _io_realm_mongodb_mongo_events_BaseChangeEvent_getDocumentKey__:
 
 .. list-table::
    :header-rows: 1
@@ -226,16 +168,94 @@ getDocumentKey
        
    
    
+.. _getFullDocument:
+
+.. _getFullDocument__:
+
+.. _BaseChangeEvent_getFullDocument:
+
+.. _BaseChangeEvent_getFullDocument__:
+
+.. _io_realm_mongodb_mongo_events_BaseChangeEvent_getFullDocument:
+
+.. _io_realm_mongodb_mongo_events_BaseChangeEvent_getFullDocument__:
+
+
+
+getFullDocument
+---------------
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **DocumentT (?)** getFullDocument ()
+   
+   * - The full document at some point after the change has been applied.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getOperationType:
+
+.. _getOperationType__:
+
+.. _BaseChangeEvent_getOperationType:
+
+.. _BaseChangeEvent_getOperationType__:
+
+.. _io_realm_mongodb_mongo_events_BaseChangeEvent_getOperationType:
+
+.. _io_realm_mongodb_mongo_events_BaseChangeEvent_getOperationType__:
+
+
+
+getOperationType
+----------------
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`BaseChangeEvent.OperationType <io_realm_mongodb_mongo_events_BaseChangeEvent_OperationType>`  getOperationType ()
+   
+   * - Returns the operation type of the change that triggered the change event.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getUpdateDescription:
+
+.. _getUpdateDescription__:
+
+.. _BaseChangeEvent_getUpdateDescription:
+
+.. _BaseChangeEvent_getUpdateDescription__:
+
+.. _io_realm_mongodb_mongo_events_BaseChangeEvent_getUpdateDescription:
+
+.. _io_realm_mongodb_mongo_events_BaseChangeEvent_getUpdateDescription__:
+
 
 
 getUpdateDescription
 --------------------
-
-.. _io_realm_mongodb_mongo_events_BaseChangeEvent_getUpdateDescription__:
-
-.. _io_realm_mongodb_mongo_events_BaseChangeEvent_getUpdateDescription__:
-
-.. _io_realm_mongodb_mongo_events_BaseChangeEvent_getUpdateDescription__:
 
 .. list-table::
    :header-rows: 1
@@ -256,16 +276,22 @@ getUpdateDescription
        
    
    
+.. _hasUncommittedWrites:
+
+.. _hasUncommittedWrites__:
+
+.. _BaseChangeEvent_hasUncommittedWrites:
+
+.. _BaseChangeEvent_hasUncommittedWrites__:
+
+.. _io_realm_mongodb_mongo_events_BaseChangeEvent_hasUncommittedWrites:
+
+.. _io_realm_mongodb_mongo_events_BaseChangeEvent_hasUncommittedWrites__:
+
 
 
 hasUncommittedWrites
 --------------------
-
-.. _io_realm_mongodb_mongo_events_BaseChangeEvent_hasUncommittedWrites__:
-
-.. _io_realm_mongodb_mongo_events_BaseChangeEvent_hasUncommittedWrites__:
-
-.. _io_realm_mongodb_mongo_events_BaseChangeEvent_hasUncommittedWrites__:
 
 .. list-table::
    :header-rows: 1
@@ -286,16 +312,22 @@ hasUncommittedWrites
        
    
    
+.. _toBsonDocument:
+
+.. _toBsonDocument__:
+
+.. _BaseChangeEvent_toBsonDocument:
+
+.. _BaseChangeEvent_toBsonDocument__:
+
+.. _io_realm_mongodb_mongo_events_BaseChangeEvent_toBsonDocument:
+
+.. _io_realm_mongodb_mongo_events_BaseChangeEvent_toBsonDocument__:
+
 
 
 toBsonDocument
 --------------
-
-.. _io_realm_mongodb_mongo_events_BaseChangeEvent_toBsonDocument__:
-
-.. _io_realm_mongodb_mongo_events_BaseChangeEvent_toBsonDocument__:
-
-.. _io_realm_mongodb_mongo_events_BaseChangeEvent_toBsonDocument__:
 
 .. list-table::
    :header-rows: 1

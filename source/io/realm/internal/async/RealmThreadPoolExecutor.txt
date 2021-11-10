@@ -1,0 +1,350 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class RealmThreadPoolExecutor
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_internal_async_RealmThreadPoolExecutor:
+
+
+
+io.realm.internal.async
+=======================
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+ | 		`java.util.concurrent.AbstractExecutorService <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/AbstractExecutorService.html>`__ 
+ | 					`java.util.concurrent.ThreadPoolExecutor <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ThreadPoolExecutor.html>`__ 
+
+Custom thread pool settings, instances of this executor can be paused, and resumed, this will also set appropriate number of Threads & wrap submitted tasks to set the thread priority according to `Androids recommendation <https://developer.android.com/training/multiple-threads/define-runnable.html>`__ .
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       protected **void**
+     - 
+       :ref:`beforeExecute <io_realm_internal_async_RealmThreadPoolExecutor_beforeExecute_Thread__Runnable_>`  (`Thread <https://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html>`__  t,
+                                      `Runnable <https://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html>`__  r)
+       
+       Method invoked prior to executing the given Runnable to pause execution of the thread.
+       
+       
+       
+   
+   * - 
+       public static :ref:`RealmThreadPoolExecutor <io_realm_internal_async_RealmThreadPoolExecutor>` 
+     - 
+       :ref:`newDefaultExecutor <io_realm_internal_async_RealmThreadPoolExecutor_newDefaultExecutor__>`  ()
+       
+       Creates a default RealmThreadPool that is bounded by the number of available cores.
+       
+       
+       
+   
+   * - 
+       public static :ref:`RealmThreadPoolExecutor <io_realm_internal_async_RealmThreadPoolExecutor>` 
+     - 
+       :ref:`newSingleThreadExecutor <io_realm_internal_async_RealmThreadPoolExecutor_newSingleThreadExecutor__>`  ()
+       
+       Creates a RealmThreadPool with only 1 thread.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`pause <io_realm_internal_async_RealmThreadPoolExecutor_pause__>`  ()
+       
+       Pauses the executor.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`resume <io_realm_internal_async_RealmThreadPoolExecutor_resume__>`  ()
+       
+       Resumes executing any scheduled tasks.
+       
+       
+       
+   
+   * - 
+       public `Future <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Future.html>`__ 
+     - 
+       :ref:`submitTransaction <io_realm_internal_async_RealmThreadPoolExecutor_submitTransaction_Runnable_>`  (`Runnable <https://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html>`__  task)
+       
+       Submits a runnable for executing a transaction.
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+- Methods inherited from interface `java.util.concurrent.AbstractExecutorService <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/AbstractExecutorService.html>`__ : ``newTaskFor`` , ``newTaskFor`` , ``submit`` , ``submit`` , ``submit`` , ``invokeAny`` , ``invokeAny`` , ``invokeAll`` , ``invokeAll`` 
+- Methods inherited from interface `java.util.concurrent.ThreadPoolExecutor <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ThreadPoolExecutor.html>`__ : ``execute`` , ``shutdown`` , ``shutdownNow`` , ``isShutdown`` , ``isTerminating`` , ``isTerminated`` , ``awaitTermination`` , ``finalize`` , ``setThreadFactory`` , ``getThreadFactory`` , ``setRejectedExecutionHandler`` , ``getRejectedExecutionHandler`` , ``setCorePoolSize`` , ``getCorePoolSize`` , ``prestartCoreThread`` , ``prestartAllCoreThreads`` , ``allowsCoreThreadTimeOut`` , ``allowCoreThreadTimeOut`` , ``setMaximumPoolSize`` , ``getMaximumPoolSize`` , ``setKeepAliveTime`` , ``getKeepAliveTime`` , ``getQueue`` , ``remove`` , ``purge`` , ``getPoolSize`` , ``getActiveCount`` , ``getLargestPoolSize`` , ``getTaskCount`` , ``getCompletedTaskCount`` , ``toString`` , ``beforeExecute`` , ``afterExecute`` , ``terminated`` 
+
+
+
+
+Method Detail
+=============
+
+.. _beforeExecute:
+
+.. _beforeExecute__:
+
+.. _RealmThreadPoolExecutor_beforeExecute:
+
+.. _RealmThreadPoolExecutor_beforeExecute__:
+
+
+
+beforeExecute
+-------------
+
+.. _io_realm_internal_async_RealmThreadPoolExecutor_beforeExecute_Thread__Runnable_:
+
+.. _io_realm_internal_async_RealmThreadPoolExecutor_beforeExecute_Thread_Runnable_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected **void** beforeExecute (`Thread <https://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html>`__  t,
+                                      `Runnable <https://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html>`__  r)
+   
+   * - Method invoked prior to executing the given Runnable to pause execution of the thread.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``t`` - the thread that will run task r
+          
+          
+          
+       - ``r`` - the task that will be executed
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _newDefaultExecutor:
+
+.. _newDefaultExecutor__:
+
+.. _RealmThreadPoolExecutor_newDefaultExecutor:
+
+.. _RealmThreadPoolExecutor_newDefaultExecutor__:
+
+.. _io_realm_internal_async_RealmThreadPoolExecutor_newDefaultExecutor:
+
+.. _io_realm_internal_async_RealmThreadPoolExecutor_newDefaultExecutor__:
+
+
+
+newDefaultExecutor
+------------------
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`RealmThreadPoolExecutor <io_realm_internal_async_RealmThreadPoolExecutor>`  newDefaultExecutor ()
+   
+   * - Creates a default RealmThreadPool that is bounded by the number of available cores.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _newSingleThreadExecutor:
+
+.. _newSingleThreadExecutor__:
+
+.. _RealmThreadPoolExecutor_newSingleThreadExecutor:
+
+.. _RealmThreadPoolExecutor_newSingleThreadExecutor__:
+
+.. _io_realm_internal_async_RealmThreadPoolExecutor_newSingleThreadExecutor:
+
+.. _io_realm_internal_async_RealmThreadPoolExecutor_newSingleThreadExecutor__:
+
+
+
+newSingleThreadExecutor
+-----------------------
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`RealmThreadPoolExecutor <io_realm_internal_async_RealmThreadPoolExecutor>`  newSingleThreadExecutor ()
+   
+   * - Creates a RealmThreadPool with only 1 thread. This is primarily useful for testing.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _pause:
+
+.. _pause__:
+
+.. _RealmThreadPoolExecutor_pause:
+
+.. _RealmThreadPoolExecutor_pause__:
+
+.. _io_realm_internal_async_RealmThreadPoolExecutor_pause:
+
+.. _io_realm_internal_async_RealmThreadPoolExecutor_pause__:
+
+
+
+pause
+-----
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** pause ()
+   
+   * - Pauses the executor. Pausing means the executor will stop starting new tasks (but complete current ones).
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _resume:
+
+.. _resume__:
+
+.. _RealmThreadPoolExecutor_resume:
+
+.. _RealmThreadPoolExecutor_resume__:
+
+.. _io_realm_internal_async_RealmThreadPoolExecutor_resume:
+
+.. _io_realm_internal_async_RealmThreadPoolExecutor_resume__:
+
+
+
+resume
+------
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** resume ()
+   
+   * - Resumes executing any scheduled tasks.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _submitTransaction:
+
+.. _submitTransaction__:
+
+.. _RealmThreadPoolExecutor_submitTransaction:
+
+.. _RealmThreadPoolExecutor_submitTransaction__:
+
+
+
+submitTransaction
+-----------------
+
+.. _io_realm_internal_async_RealmThreadPoolExecutor_submitTransaction_Runnable_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `Future <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Future.html>`__  submitTransaction (`Runnable <https://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html>`__  task)
+   
+   * - Submits a runnable for executing a transaction.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``task`` - the task to submit
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

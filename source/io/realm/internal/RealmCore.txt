@@ -1,0 +1,198 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class RealmCore
+^^^^^^^^^^^^^^^
+
+.. _io_realm_internal_RealmCore:
+
+
+
+io.realm.internal
+=================
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+Utility methods for Realm Core.
+
+
+Constructors
+============
+
+
+
+- ``io.realm.internal.RealmCore()`` 
+
+
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public static **void**
+     - 
+       :ref:`addNativeLibraryPath <io_realm_internal_RealmCore_addNativeLibraryPath_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  path)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static synchronized **void**
+     - 
+       :ref:`loadLibrary <io_realm_internal_RealmCore_loadLibrary_Context_>`  (**Context (?)** context)
+       
+       Loads the .so file.
+       
+       
+       
+   
+   * - 
+       public static **boolean**
+     - 
+       :ref:`osIsWindows <io_realm_internal_RealmCore_osIsWindows__>`  ()
+       
+       
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+
+
+
+
+Method Detail
+=============
+
+.. _addNativeLibraryPath:
+
+.. _addNativeLibraryPath__:
+
+.. _RealmCore_addNativeLibraryPath:
+
+.. _RealmCore_addNativeLibraryPath__:
+
+
+
+addNativeLibraryPath
+--------------------
+
+.. _io_realm_internal_RealmCore_addNativeLibraryPath_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **void** addNativeLibraryPath (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  path)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _loadLibrary:
+
+.. _loadLibrary__:
+
+.. _RealmCore_loadLibrary:
+
+.. _RealmCore_loadLibrary__:
+
+
+
+loadLibrary
+-----------
+
+.. _io_realm_internal_RealmCore_loadLibrary_Context_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static synchronized **void** loadLibrary (**Context (?)** context)
+   
+   * - Loads the .so file. Typically, the .so file is installed and can be found by System.loadLibrary() but can be damaged or missing. This happens for the Android installer, especially when apps are installed through other means than the official Play store. In this case, the .so file can be found in the .apk. In other to access the .apk, an **android.content.Context (?)** must be provided.
+       
+       Although loadLibrary is synchronized internally from AOSP 4.3, for compatibility reasons, KEEP synchronized here for old devices!
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _osIsWindows:
+
+.. _osIsWindows__:
+
+.. _RealmCore_osIsWindows:
+
+.. _RealmCore_osIsWindows__:
+
+.. _io_realm_internal_RealmCore_osIsWindows:
+
+.. _io_realm_internal_RealmCore_osIsWindows__:
+
+
+
+osIsWindows
+-----------
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **boolean** osIsWindows ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

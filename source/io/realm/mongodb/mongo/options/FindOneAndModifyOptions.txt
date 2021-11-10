@@ -52,16 +52,6 @@ Method Summary
        
    
    * - 
-       public :ref:`FindOneAndModifyOptions <io_realm_mongodb_mongo_options_FindOneAndModifyOptions>` 
-     - 
-       :ref:`projection <io_realm_mongodb_mongo_options_FindOneAndModifyOptions_projection_Bson_>`  (**Bson (?)** projection)
-       
-       Sets a document describing the fields to return for all matching documents.
-       
-       
-       
-   
-   * - 
        public **Bson (?)**
      - 
        :ref:`getSort <io_realm_mongodb_mongo_options_FindOneAndModifyOptions_getSort__>`  ()
@@ -72,11 +62,11 @@ Method Summary
        
    
    * - 
-       public :ref:`FindOneAndModifyOptions <io_realm_mongodb_mongo_options_FindOneAndModifyOptions>` 
+       public **boolean**
      - 
-       :ref:`sort <io_realm_mongodb_mongo_options_FindOneAndModifyOptions_sort_Bson_>`  (**Bson (?)** sort)
+       :ref:`isReturnNewDocument <io_realm_mongodb_mongo_options_FindOneAndModifyOptions_isReturnNewDocument__>`  ()
        
-       Sets the sort criteria to apply to the query.
+       Returns true if the findOneAndModify operation should return the new document.
        
        
        
@@ -94,19 +84,9 @@ Method Summary
    * - 
        public :ref:`FindOneAndModifyOptions <io_realm_mongodb_mongo_options_FindOneAndModifyOptions>` 
      - 
-       :ref:`upsert <io_realm_mongodb_mongo_options_FindOneAndModifyOptions_upsert_boolean_>`  (**boolean** upsert)
+       :ref:`projection <io_realm_mongodb_mongo_options_FindOneAndModifyOptions_projection_Bson_>`  (**Bson (?)** projection)
        
-       Set to true if a new document should be inserted if there are no matches to the query filter.
-       
-       
-       
-   
-   * - 
-       public **boolean**
-     - 
-       :ref:`isReturnNewDocument <io_realm_mongodb_mongo_options_FindOneAndModifyOptions_isReturnNewDocument__>`  ()
-       
-       Returns true if the findOneAndModify operation should return the new document.
+       Sets a document describing the fields to return for all matching documents.
        
        
        
@@ -122,11 +102,31 @@ Method Summary
        
    
    * - 
+       public :ref:`FindOneAndModifyOptions <io_realm_mongodb_mongo_options_FindOneAndModifyOptions>` 
+     - 
+       :ref:`sort <io_realm_mongodb_mongo_options_FindOneAndModifyOptions_sort_Bson_>`  (**Bson (?)** sort)
+       
+       Sets the sort criteria to apply to the query.
+       
+       
+       
+   
+   * - 
        public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
      - 
        :ref:`toString <io_realm_mongodb_mongo_options_FindOneAndModifyOptions_toString__>`  ()
        
        
+       
+       
+       
+   
+   * - 
+       public :ref:`FindOneAndModifyOptions <io_realm_mongodb_mongo_options_FindOneAndModifyOptions>` 
+     - 
+       :ref:`upsert <io_realm_mongodb_mongo_options_FindOneAndModifyOptions_upsert_boolean_>`  (**boolean** upsert)
+       
+       Set to true if a new document should be inserted if there are no matches to the query filter.
        
        
        
@@ -139,11 +139,7 @@ Inherited Methods
 
 
 
-- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
-   
-   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
-   
-   
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
 
 
 
@@ -151,16 +147,22 @@ Inherited Methods
 Method Detail
 =============
 
+.. _getProjection:
+
+.. _getProjection__:
+
+.. _FindOneAndModifyOptions_getProjection:
+
+.. _FindOneAndModifyOptions_getProjection__:
+
+.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_getProjection:
+
+.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_getProjection__:
+
 
 
 getProjection
 -------------
-
-.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_getProjection__:
-
-.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_getProjection__:
-
-.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_getProjection__:
 
 .. list-table::
    :header-rows: 1
@@ -181,14 +183,126 @@ getProjection
        
    
    
+.. _getSort:
+
+.. _getSort__:
+
+.. _FindOneAndModifyOptions_getSort:
+
+.. _FindOneAndModifyOptions_getSort__:
+
+.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_getSort:
+
+.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_getSort__:
+
+
+
+getSort
+-------
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **Bson (?)** getSort ()
+   
+   * - Gets the sort criteria to apply to the query. The default is null, which means that the documents will be returned in an undefined order.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _isReturnNewDocument:
+
+.. _isReturnNewDocument__:
+
+.. _FindOneAndModifyOptions_isReturnNewDocument:
+
+.. _FindOneAndModifyOptions_isReturnNewDocument__:
+
+.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_isReturnNewDocument:
+
+.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_isReturnNewDocument__:
+
+
+
+isReturnNewDocument
+-------------------
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** isReturnNewDocument ()
+   
+   * - Returns true if the findOneAndModify operation should return the new document. The default is false Note: Only findOneAndUpdate and findOneAndReplace take this options findOneAndDelete will always return the old document
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _isUpsert:
+
+.. _isUpsert__:
+
+.. _FindOneAndModifyOptions_isUpsert:
+
+.. _FindOneAndModifyOptions_isUpsert__:
+
+.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_isUpsert:
+
+.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_isUpsert__:
+
+
+
+isUpsert
+--------
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** isUpsert ()
+   
+   * - Returns true if a new document should be inserted if there are no matches to the query filter. The default is false. Note: Only findOneAndUpdate and findOneAndReplace take this option
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _projection:
+
+.. _projection__:
+
+.. _FindOneAndModifyOptions_projection:
+
+.. _FindOneAndModifyOptions_projection__:
+
 
 
 projection
 ----------
-
-.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_projection_Bson_:
-
-.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_projection_Bson_:
 
 .. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_projection_Bson_:
 
@@ -219,180 +333,18 @@ projection
        
    
    
+.. _returnNewDocument:
 
+.. _returnNewDocument__:
 
-getSort
--------
+.. _FindOneAndModifyOptions_returnNewDocument:
 
-.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_getSort__:
+.. _FindOneAndModifyOptions_returnNewDocument__:
 
-.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_getSort__:
-
-.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_getSort__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **Bson (?)** getSort ()
-   
-   * - Gets the sort criteria to apply to the query. The default is null, which means that the documents will be returned in an undefined order.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-
-
-sort
-----
-
-.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_sort_Bson_:
-
-.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_sort_Bson_:
-
-.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_sort_Bson_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public :ref:`FindOneAndModifyOptions <io_realm_mongodb_mongo_options_FindOneAndModifyOptions>`  sort (**Bson (?)** sort)
-   
-   * - Sets the sort criteria to apply to the query.
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``sort`` - the sort criteria, which may be null.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-
-
-isUpsert
---------
-
-.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_isUpsert__:
-
-.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_isUpsert__:
-
-.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_isUpsert__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **boolean** isUpsert ()
-   
-   * - Returns true if a new document should be inserted if there are no matches to the query filter. The default is false. Note: Only findOneAndUpdate and findOneAndReplace take this option
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-
-
-upsert
-------
-
-.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_upsert_boolean_:
-
-.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_upsert_boolean_:
-
-.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_upsert_boolean_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public :ref:`FindOneAndModifyOptions <io_realm_mongodb_mongo_options_FindOneAndModifyOptions>`  upsert (**boolean** upsert)
-   
-   * - Set to true if a new document should be inserted if there are no matches to the query filter.
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``upsert`` - true if a new document should be inserted if there are no matches to the query filter.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-
-
-isReturnNewDocument
--------------------
-
-.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_isReturnNewDocument__:
-
-.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_isReturnNewDocument__:
-
-.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_isReturnNewDocument__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **boolean** isReturnNewDocument ()
-   
-   * - Returns true if the findOneAndModify operation should return the new document. The default is false Note: Only findOneAndUpdate and findOneAndReplace take this options findOneAndDelete will always return the old document
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
 
 
 returnNewDocument
 -----------------
-
-.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_returnNewDocument_boolean_:
-
-.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_returnNewDocument_boolean_:
 
 .. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_returnNewDocument_boolean_:
 
@@ -423,16 +375,64 @@ returnNewDocument
        
    
    
+.. _sort:
+
+.. _sort__:
+
+.. _FindOneAndModifyOptions_sort:
+
+.. _FindOneAndModifyOptions_sort__:
+
+
+
+sort
+----
+
+.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_sort_Bson_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`FindOneAndModifyOptions <io_realm_mongodb_mongo_options_FindOneAndModifyOptions>`  sort (**Bson (?)** sort)
+   
+   * - Sets the sort criteria to apply to the query.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``sort`` - the sort criteria, which may be null.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _toString:
+
+.. _toString__:
+
+.. _FindOneAndModifyOptions_toString:
+
+.. _FindOneAndModifyOptions_toString__:
+
+.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_toString:
+
+.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_toString__:
+
 
 
 toString
 --------
-
-.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_toString__:
-
-.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_toString__:
-
-.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_toString__:
 
 .. list-table::
    :header-rows: 1
@@ -442,6 +442,48 @@ toString
    * - 
        
        
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _upsert:
+
+.. _upsert__:
+
+.. _FindOneAndModifyOptions_upsert:
+
+.. _FindOneAndModifyOptions_upsert__:
+
+
+
+upsert
+------
+
+.. _io_realm_mongodb_mongo_options_FindOneAndModifyOptions_upsert_boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`FindOneAndModifyOptions <io_realm_mongodb_mongo_options_FindOneAndModifyOptions>`  upsert (**boolean** upsert)
+   
+   * - Set to true if a new document should be inserted if there are no matches to the query filter.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``upsert`` - true if a new document should be inserted if there are no matches to the query filter.
+          
+          
+          
        
        
        

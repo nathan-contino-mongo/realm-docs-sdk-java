@@ -42,21 +42,21 @@ Method Summary
      - Method and Description
    
    * - 
-       public **ObjectId (?)**
+       public **boolean**
      - 
-       :ref:`getId <io_realm_mongodb_auth_ApiKey_getId__>`  ()
+       :ref:`equals <io_realm_mongodb_auth_ApiKey_equals_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
        
-       Returns the unique identifier for this key.
+       
        
        
        
    
    * - 
-       public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+       public **ObjectId (?)**
      - 
-       :ref:`getValue <io_realm_mongodb_auth_ApiKey_getValue__>`  ()
+       :ref:`getId <io_realm_mongodb_auth_ApiKey_getId__>`  ()
        
-       Returns this keys value.
+       Returns the unique identifier for this key.
        
        
        
@@ -72,21 +72,11 @@ Method Summary
        
    
    * - 
-       public **boolean**
+       public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
      - 
-       :ref:`isEnabled <io_realm_mongodb_auth_ApiKey_isEnabled__>`  ()
+       :ref:`getValue <io_realm_mongodb_auth_ApiKey_getValue__>`  ()
        
-       Returns whether or not this key is currently enabled.
-       
-       
-       
-   
-   * - 
-       public **boolean**
-     - 
-       :ref:`equals <io_realm_mongodb_auth_ApiKey_equals_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
-       
-       
+       Returns this keys value.
        
        
        
@@ -97,6 +87,16 @@ Method Summary
        :ref:`hashCode <io_realm_mongodb_auth_ApiKey_hashCode__>`  ()
        
        
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`isEnabled <io_realm_mongodb_auth_ApiKey_isEnabled__>`  ()
+       
+       Returns whether or not this key is currently enabled.
        
        
        
@@ -119,11 +119,7 @@ Inherited Methods
 
 
 
-- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
-   
-   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
-   
-   
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
 
 
 
@@ -131,134 +127,18 @@ Inherited Methods
 Method Detail
 =============
 
+.. _equals:
 
+.. _equals__:
 
-getId
------
+.. _ApiKey_equals:
 
-.. _io_realm_mongodb_auth_ApiKey_getId__:
+.. _ApiKey_equals__:
 
-.. _io_realm_mongodb_auth_ApiKey_getId__:
-
-.. _io_realm_mongodb_auth_ApiKey_getId__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **ObjectId (?)** getId ()
-   
-   * - Returns the unique identifier for this key.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-
-
-getValue
---------
-
-.. _io_realm_mongodb_auth_ApiKey_getValue__:
-
-.. _io_realm_mongodb_auth_ApiKey_getValue__:
-
-.. _io_realm_mongodb_auth_ApiKey_getValue__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getValue ()
-   
-   * - Returns this keys value. This value is only returned when the key is created. After that the value is no longer visible.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-
-
-getName
--------
-
-.. _io_realm_mongodb_auth_ApiKey_getName__:
-
-.. _io_realm_mongodb_auth_ApiKey_getName__:
-
-.. _io_realm_mongodb_auth_ApiKey_getName__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getName ()
-   
-   * - Returns the name of this key.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-
-
-isEnabled
----------
-
-.. _io_realm_mongodb_auth_ApiKey_isEnabled__:
-
-.. _io_realm_mongodb_auth_ApiKey_isEnabled__:
-
-.. _io_realm_mongodb_auth_ApiKey_isEnabled__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **boolean** isEnabled ()
-   
-   * - Returns whether or not this key is currently enabled.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
 
 
 equals
 ------
-
-.. _io_realm_mongodb_auth_ApiKey_equals_Object_:
-
-.. _io_realm_mongodb_auth_ApiKey_equals_Object_:
 
 .. _io_realm_mongodb_auth_ApiKey_equals_Object_:
 
@@ -281,16 +161,130 @@ equals
        
    
    
+.. _getId:
+
+.. _getId__:
+
+.. _ApiKey_getId:
+
+.. _ApiKey_getId__:
+
+.. _io_realm_mongodb_auth_ApiKey_getId:
+
+.. _io_realm_mongodb_auth_ApiKey_getId__:
+
+
+
+getId
+-----
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **ObjectId (?)** getId ()
+   
+   * - Returns the unique identifier for this key.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getName:
+
+.. _getName__:
+
+.. _ApiKey_getName:
+
+.. _ApiKey_getName__:
+
+.. _io_realm_mongodb_auth_ApiKey_getName:
+
+.. _io_realm_mongodb_auth_ApiKey_getName__:
+
+
+
+getName
+-------
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getName ()
+   
+   * - Returns the name of this key.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getValue:
+
+.. _getValue__:
+
+.. _ApiKey_getValue:
+
+.. _ApiKey_getValue__:
+
+.. _io_realm_mongodb_auth_ApiKey_getValue:
+
+.. _io_realm_mongodb_auth_ApiKey_getValue__:
+
+
+
+getValue
+--------
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getValue ()
+   
+   * - Returns this keys value. This value is only returned when the key is created. After that the value is no longer visible.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _hashCode:
+
+.. _hashCode__:
+
+.. _ApiKey_hashCode:
+
+.. _ApiKey_hashCode__:
+
+.. _io_realm_mongodb_auth_ApiKey_hashCode:
+
+.. _io_realm_mongodb_auth_ApiKey_hashCode__:
+
 
 
 hashCode
 --------
-
-.. _io_realm_mongodb_auth_ApiKey_hashCode__:
-
-.. _io_realm_mongodb_auth_ApiKey_hashCode__:
-
-.. _io_realm_mongodb_auth_ApiKey_hashCode__:
 
 .. list-table::
    :header-rows: 1
@@ -311,16 +305,58 @@ hashCode
        
    
    
+.. _isEnabled:
+
+.. _isEnabled__:
+
+.. _ApiKey_isEnabled:
+
+.. _ApiKey_isEnabled__:
+
+.. _io_realm_mongodb_auth_ApiKey_isEnabled:
+
+.. _io_realm_mongodb_auth_ApiKey_isEnabled__:
+
+
+
+isEnabled
+---------
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** isEnabled ()
+   
+   * - Returns whether or not this key is currently enabled.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _toString:
+
+.. _toString__:
+
+.. _ApiKey_toString:
+
+.. _ApiKey_toString__:
+
+.. _io_realm_mongodb_auth_ApiKey_toString:
+
+.. _io_realm_mongodb_auth_ApiKey_toString__:
+
 
 
 toString
 --------
-
-.. _io_realm_mongodb_auth_ApiKey_toString__:
-
-.. _io_realm_mongodb_auth_ApiKey_toString__:
-
-.. _io_realm_mongodb_auth_ApiKey_toString__:
 
 .. list-table::
    :header-rows: 1

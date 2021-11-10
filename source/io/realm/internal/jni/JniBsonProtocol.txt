@@ -1,0 +1,286 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class JniBsonProtocol
+^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_internal_jni_JniBsonProtocol:
+
+
+
+io.realm.internal.jni
+=====================
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+Protocol for passing **BsonValue (?)**s to JNI.
+
+For now this just encapsulated the BSON value in a document with key VALUE. This overcomes the shortcoming of ``org.bson.JsonWrite``  not being able to serialize single values.
+
+
+
+
+
+
+Constructors
+============
+
+
+
+- ``io.realm.internal.jni.JniBsonProtocol()`` 
+
+
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public static **T (?)**
+     - 
+       :ref:`decode <io_realm_internal_jni_JniBsonProtocol_decode_String___any__>`  <**T (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  string,
+                                **<any> (?)** decoder)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static **T (?)**
+     - 
+       :ref:`decode <io_realm_internal_jni_JniBsonProtocol_decode_String__Class_T___CodecRegistry_>`  <**T (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  string,
+                                `java.lang.Class\<T> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  clz,
+                                **CodecRegistry (?)** registry)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`encode <io_realm_internal_jni_JniBsonProtocol_encode_T___any__>`  <**T (?)** >(**T (?)** value,
+                                     **<any> (?)** encoder)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`encode <io_realm_internal_jni_JniBsonProtocol_encode_T__CodecRegistry_>`  <**T (?)** >(**T (?)** value,
+                                     **CodecRegistry (?)** registry)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static **<any> (?)**
+     - 
+       :ref:`getCodec <io_realm_internal_jni_JniBsonProtocol_getCodec_Class_T___CodecRegistry_>`  <**T (?)** >(`java.lang.Class\<T> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  clz,
+                                      **CodecRegistry (?)** registry)
+       
+       
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+
+
+
+
+Method Detail
+=============
+
+.. _decode:
+
+.. _decode__:
+
+.. _JniBsonProtocol_decode:
+
+.. _JniBsonProtocol_decode__:
+
+
+
+decode
+------
+
+.. _io_realm_internal_jni_JniBsonProtocol_decode_String___any__:
+
+.. _io_realm_internal_jni_JniBsonProtocol_decode_String__any__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **T (?)** decode <**T (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  string,
+                                **<any> (?)** decoder)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_internal_jni_JniBsonProtocol_decode_String__Class_T___CodecRegistry_:
+
+.. _io_realm_internal_jni_JniBsonProtocol_decode_String_Class_CodecRegistry_:
+
+.. _io_realm_internal_jni_JniBsonProtocol_decode_String__Class__CodecRegistry_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **T (?)** decode <**T (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  string,
+                                `java.lang.Class\<T> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  clz,
+                                **CodecRegistry (?)** registry)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _encode:
+
+.. _encode__:
+
+.. _JniBsonProtocol_encode:
+
+.. _JniBsonProtocol_encode__:
+
+
+
+encode
+------
+
+.. _io_realm_internal_jni_JniBsonProtocol_encode_T___any__:
+
+.. _io_realm_internal_jni_JniBsonProtocol_encode_T__any__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  encode <**T (?)** >(**T (?)** value,
+                                     **<any> (?)** encoder)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_internal_jni_JniBsonProtocol_encode_T__CodecRegistry_:
+
+.. _io_realm_internal_jni_JniBsonProtocol_encode_T_CodecRegistry_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  encode <**T (?)** >(**T (?)** value,
+                                     **CodecRegistry (?)** registry)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getCodec:
+
+.. _getCodec__:
+
+.. _JniBsonProtocol_getCodec:
+
+.. _JniBsonProtocol_getCodec__:
+
+
+
+getCodec
+--------
+
+.. _io_realm_internal_jni_JniBsonProtocol_getCodec_Class_T___CodecRegistry_:
+
+.. _io_realm_internal_jni_JniBsonProtocol_getCodec_Class_CodecRegistry_:
+
+.. _io_realm_internal_jni_JniBsonProtocol_getCodec_Class__CodecRegistry_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **<any> (?)** getCodec <**T (?)** >(`java.lang.Class\<T> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  clz,
+                                      **CodecRegistry (?)** registry)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

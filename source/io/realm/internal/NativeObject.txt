@@ -1,0 +1,164 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Interface NativeObject
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_internal_NativeObject:
+
+
+
+io.realm.internal
+=================
+
+This abstract class represents a native object from core. It specifies the operations common to all such objects. All Java classes wrapping a core class should implement NativeObject.
+
+
+Field Summary
+=============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Field and Description
+   
+   * - ``public static final long`` 
+       
+       
+     - ``NULLPTR`` 
+       
+       
+   
+   
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public **long**
+     - 
+       :ref:`getNativeFinalizerPtr <io_realm_internal_NativeObject_getNativeFinalizerPtr__>`  ()
+       
+       Gets the function pointer which points to the function to free the native object.
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`getNativePtr <io_realm_internal_NativeObject_getNativePtr__>`  ()
+       
+       Gets the pointer of a native object.
+       
+       
+       
+   
+   
+
+
+Field Detail
+============
+
+.. _io_realm_internal_NativeObject_NULLPTR:
+
+
+
+``NULLPTR`` 
+------------
+
+
+
+
+Method Detail
+=============
+
+.. _getNativeFinalizerPtr:
+
+.. _getNativeFinalizerPtr__:
+
+.. _NativeObject_getNativeFinalizerPtr:
+
+.. _NativeObject_getNativeFinalizerPtr__:
+
+.. _io_realm_internal_NativeObject_getNativeFinalizerPtr:
+
+.. _io_realm_internal_NativeObject_getNativeFinalizerPtr__:
+
+
+
+getNativeFinalizerPtr
+---------------------
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** getNativeFinalizerPtr ()
+   
+   * - Gets the function pointer which points to the function to free the native object. The function should be defined like: ``typedef void (*FinalizeFunc)(jlong ptr)`` .
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getNativePtr:
+
+.. _getNativePtr__:
+
+.. _NativeObject_getNativePtr:
+
+.. _NativeObject_getNativePtr__:
+
+.. _io_realm_internal_NativeObject_getNativePtr:
+
+.. _io_realm_internal_NativeObject_getNativePtr__:
+
+
+
+getNativePtr
+------------
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** getNativePtr ()
+   
+   * - Gets the pointer of a native object.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

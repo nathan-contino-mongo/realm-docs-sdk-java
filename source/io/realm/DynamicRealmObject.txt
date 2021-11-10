@@ -17,8 +17,16 @@ Class DynamicRealmObject
 io.realm
 ========
 
-:ref:`io.realm.RealmObject <io_realm_RealmObject>` 
- | 		`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+ | 		:ref:`io.realm.RealmObject <io_realm_RealmObject>` 
+
+*Implemented interfaces:*
+
+
+
+- :ref:`io.realm.internal.RealmObjectProxy <io_realm_internal_RealmObjectProxy>` 
+- :ref:`io.realm.RealmModel <io_realm_RealmModel>` 
+
 
 Class that wraps a normal RealmObject in order to allow dynamic access instead of a typed interface. Using a DynamicRealmObject is slower than using the regular RealmObject class.
 
@@ -43,95 +51,21 @@ Method Summary
      - Method and Description
    
    * - 
+       public **boolean**
+     - 
+       :ref:`equals <io_realm_DynamicRealmObject_equals_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
+       
+       
+       
+       
+       
+   
+   * - 
        public **E (?)**
      - 
        :ref:`get <io_realm_DynamicRealmObject_get_String_>`  <**E (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
        
        Returns the value for the given field.
-       
-       
-       
-   
-   * - 
-       public **boolean**
-     - 
-       :ref:`getBoolean <io_realm_DynamicRealmObject_getBoolean_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-       
-       Returns the ``boolean``  value for a given field.
-       
-       
-       
-       
-       
-   
-   * - 
-       public **int**
-     - 
-       :ref:`getInt <io_realm_DynamicRealmObject_getInt_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-       
-       Returns the ``int``  value for a given field.
-       
-       
-       
-       
-       
-   
-   * - 
-       public **short**
-     - 
-       :ref:`getShort <io_realm_DynamicRealmObject_getShort_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-       
-       Returns the ``short``  value for a given field.
-       
-       
-       
-       
-       
-   
-   * - 
-       public **long**
-     - 
-       :ref:`getLong <io_realm_DynamicRealmObject_getLong_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-       
-       Returns the ``long``  value for a given field.
-       
-       
-       
-       
-       
-   
-   * - 
-       public **byte**
-     - 
-       :ref:`getByte <io_realm_DynamicRealmObject_getByte_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-       
-       Returns the ``byte``  value for a given field.
-       
-       
-       
-       
-       
-   
-   * - 
-       public **float**
-     - 
-       :ref:`getFloat <io_realm_DynamicRealmObject_getFloat_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-       
-       Returns the ``float``  value for a given field.
-       
-       
-       
-       
-       
-   
-   * - 
-       public **double**
-     - 
-       :ref:`getDouble <io_realm_DynamicRealmObject_getDouble_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-       
-       Returns the ``double``  value for a given field.
-       
-       
        
        
        
@@ -149,11 +83,23 @@ Method Summary
        
    
    * - 
-       public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+       public **boolean**
      - 
-       :ref:`getString <io_realm_DynamicRealmObject_getString_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       :ref:`getBoolean <io_realm_DynamicRealmObject_getBoolean_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
        
-       Returns the ``String``  value for a given field.
+       Returns the ``boolean``  value for a given field.
+       
+       
+       
+       
+       
+   
+   * - 
+       public **byte**
+     - 
+       :ref:`getByte <io_realm_DynamicRealmObject_getByte_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       
+       Returns the ``byte``  value for a given field.
        
        
        
@@ -185,11 +131,12 @@ Method Summary
        
    
    * - 
-       public **ObjectId (?)**
+       public :ref:`RealmDictionary <io_realm_RealmDictionary>` 
      - 
-       :ref:`getObjectId <io_realm_DynamicRealmObject_getObjectId_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       :ref:`getDictionary <io_realm_DynamicRealmObject_getDictionary_String__Class_E__>`  <**E (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                              `java.lang.Class\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  primitiveType)
        
-       Returns the ``ObjectId``  value for a given field.
+       Returns the :ref:`RealmDictionary <io_realm_RealmDictionary>`  containing only primitive values.
        
        
        
@@ -197,11 +144,11 @@ Method Summary
        
    
    * - 
-       public **RealmAny (?)**
+       public :ref:`RealmDictionary <io_realm_RealmDictionary>` 
      - 
-       :ref:`getRealmAny <io_realm_DynamicRealmObject_getRealmAny_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       :ref:`getDictionary <io_realm_DynamicRealmObject_getDictionary_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
        
-       Returns the ``RealmAny``  value for a given field.
+       Returns the :ref:`RealmDictionary <io_realm_RealmDictionary>`  of :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>` s being linked from the given field.
        
        
        
@@ -209,11 +156,11 @@ Method Summary
        
    
    * - 
-       public `UUID <https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html>`__ 
+       public **double**
      - 
-       :ref:`getUUID <io_realm_DynamicRealmObject_getUUID_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       :ref:`getDouble <io_realm_DynamicRealmObject_getDouble_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
        
-       Returns the ``UUID``  value for a given field.
+       Returns the ``double``  value for a given field.
        
        
        
@@ -221,21 +168,55 @@ Method Summary
        
    
    * - 
-       public :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>` 
+       public :ref:`DynamicRealm <io_realm_DynamicRealm>` 
      - 
-       :ref:`getObject <io_realm_DynamicRealmObject_getObject_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       :ref:`getDynamicRealm <io_realm_DynamicRealmObject_getDynamicRealm__>`  ()
        
-       Returns the object being linked to from this field.
+       Returns :ref:`DynamicRealm <io_realm_DynamicRealm>`  instance where this :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>`  belongs.
+       
+       
        
        
        
    
    * - 
-       public :ref:`RealmList <io_realm_RealmList>` 
+       public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
      - 
-       :ref:`getList <io_realm_DynamicRealmObject_getList_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       :ref:`getFieldNames <io_realm_DynamicRealmObject_getFieldNames__>`  ()
        
-       Returns the :ref:`RealmList <io_realm_RealmList>`  of :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>` s being linked from the given field.
+       Returns the list of field names on this object.
+       
+       
+       
+   
+   * - 
+       public :ref:`RealmFieldType <io_realm_RealmFieldType>` 
+     - 
+       :ref:`getFieldType <io_realm_DynamicRealmObject_getFieldType_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       
+       Returns the type used by the underlying storage engine to represent this field.
+       
+       
+       
+   
+   * - 
+       public **float**
+     - 
+       :ref:`getFloat <io_realm_DynamicRealmObject_getFloat_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       
+       Returns the ``float``  value for a given field.
+       
+       
+       
+       
+       
+   
+   * - 
+       public **int**
+     - 
+       :ref:`getInt <io_realm_DynamicRealmObject_getInt_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       
+       Returns the ``int``  value for a given field.
        
        
        
@@ -256,11 +237,11 @@ Method Summary
        
    
    * - 
-       public **<any> (?)**
+       public :ref:`RealmList <io_realm_RealmList>` 
      - 
-       :ref:`getDictionary <io_realm_DynamicRealmObject_getDictionary_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       :ref:`getList <io_realm_DynamicRealmObject_getList_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
        
-       Returns the **RealmDictionary (?)** of :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>` s being linked from the given field.
+       Returns the :ref:`RealmList <io_realm_RealmList>`  of :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>` s being linked from the given field.
        
        
        
@@ -268,12 +249,11 @@ Method Summary
        
    
    * - 
-       public **<any> (?)**
+       public **long**
      - 
-       :ref:`getDictionary <io_realm_DynamicRealmObject_getDictionary_String__Class_E__>`  <**E (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                                    `java.lang.Class\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  primitiveType)
+       :ref:`getLong <io_realm_DynamicRealmObject_getLong_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
        
-       Returns the **RealmDictionary (?)** containing only primitive values.
+       Returns the ``long``  value for a given field.
        
        
        
@@ -281,11 +261,58 @@ Method Summary
        
    
    * - 
-       public **<any> (?)**
+       public :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>` 
+     - 
+       :ref:`getObject <io_realm_DynamicRealmObject_getObject_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       
+       Returns the object being linked to from this field.
+       
+       
+       
+   
+   * - 
+       public **ObjectId (?)**
+     - 
+       :ref:`getObjectId <io_realm_DynamicRealmObject_getObjectId_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       
+       Returns the ``ObjectId``  value for a given field.
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`RealmAny <io_realm_RealmAny>` 
+     - 
+       :ref:`getRealmAny <io_realm_DynamicRealmObject_getRealmAny_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       
+       Returns the ``RealmAny``  value for a given field.
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`RealmSet <io_realm_RealmSet>` 
+     - 
+       :ref:`getRealmSet <io_realm_DynamicRealmObject_getRealmSet_String__Class_E__>`  <**E (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                     `java.lang.Class\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  primitiveType)
+       
+       Returns the :ref:`RealmSet <io_realm_RealmSet>`  containing only primitive values.
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`RealmSet <io_realm_RealmSet>` 
      - 
        :ref:`getRealmSet <io_realm_DynamicRealmObject_getRealmSet_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
        
-       Returns the **RealmSet (?)** of :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>` s being linked from the given field.
+       Returns the :ref:`RealmSet <io_realm_RealmSet>`  of :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>` s being linked from the given field.
        
        
        
@@ -293,12 +320,67 @@ Method Summary
        
    
    * - 
-       public **<any> (?)**
+       public **short**
      - 
-       :ref:`getRealmSet <io_realm_DynamicRealmObject_getRealmSet_String__Class_E__>`  <**E (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                                  `java.lang.Class\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  primitiveType)
+       :ref:`getShort <io_realm_DynamicRealmObject_getShort_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
        
-       Returns the **RealmSet (?)** containing only primitive values.
+       Returns the ``short``  value for a given field.
+       
+       
+       
+       
+       
+   
+   * - 
+       public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`getString <io_realm_DynamicRealmObject_getString_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       
+       Returns the ``String``  value for a given field.
+       
+       
+       
+       
+       
+   
+   * - 
+       public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`getType <io_realm_DynamicRealmObject_getType__>`  ()
+       
+       Returns the type of object.
+       
+       
+       
+   
+   * - 
+       public `UUID <https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html>`__ 
+     - 
+       :ref:`getUUID <io_realm_DynamicRealmObject_getUUID_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       
+       Returns the ``UUID``  value for a given field.
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`hasField <io_realm_DynamicRealmObject_hasField_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       
+       Checks whether an object has the given field or not.
+       
+       
+       
+   
+   * - 
+       public **int**
+     - 
+       :ref:`hashCode <io_realm_DynamicRealmObject_hashCode__>`  ()
+       
+       Returns a hash code value for the :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>`  object.
        
        
        
@@ -318,21 +400,34 @@ Method Summary
        
    
    * - 
-       public **boolean**
+       public :ref:`RealmResults <io_realm_RealmResults>` 
      - 
-       :ref:`hasField <io_realm_DynamicRealmObject_hasField_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       :ref:`linkingObjects <io_realm_DynamicRealmObject_linkingObjects_String__String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  srcClassName,
+                                            `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  srcFieldName)
        
-       Checks whether an object has the given field or not.
+       Returns :ref:`RealmResults <io_realm_RealmResults>`  containing all ``srcClassName``  class objects that have a relationship to this object from ``srcFieldName``  field.
+       
+       
        
        
        
    
    * - 
-       public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+       public **void**
      - 
-       :ref:`getFieldNames <io_realm_DynamicRealmObject_getFieldNames__>`  ()
+       :ref:`realm$injectObjectContext <io_realm_DynamicRealmObject_realm_injectObjectContext__>`  ()
        
-       Returns the list of field names on this object.
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`ProxyState <io_realm_ProxyState>` 
+     - 
+       :ref:`realmGet$proxyState <io_realm_DynamicRealmObject_realmGet_proxyState__>`  ()
+       
+       
        
        
        
@@ -344,6 +439,17 @@ Method Summary
                          `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  value)
        
        Sets the value for the given field.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setBlob <io_realm_DynamicRealmObject_setBlob_String__byte[]_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                             **byte[]** value)
+       
+       Sets the binary value of the given field.
        
        
        
@@ -364,101 +470,12 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`setShort <io_realm_DynamicRealmObject_setShort_String__short_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                              **short** value)
-       
-       Sets the ``short``  value of the given field.
-       
-       
-       
-       
-       
-   
-   * - 
-       public **void**
-     - 
-       :ref:`setInt <io_realm_DynamicRealmObject_setInt_String__int_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                            **int** value)
-       
-       Sets the ``int``  value of the given field.
-       
-       
-       
-       
-       
-   
-   * - 
-       public **void**
-     - 
-       :ref:`setLong <io_realm_DynamicRealmObject_setLong_String__long_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                             **long** value)
-       
-       Sets the ``long``  value of the given field.
-       
-       
-       
-       
-       
-   
-   * - 
-       public **void**
-     - 
        :ref:`setByte <io_realm_DynamicRealmObject_setByte_String__byte_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
                              **byte** value)
        
        Sets the ``byte``  value of the given field.
        
        
-       
-       
-       
-   
-   * - 
-       public **void**
-     - 
-       :ref:`setFloat <io_realm_DynamicRealmObject_setFloat_String__float_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                              **float** value)
-       
-       Sets the ``float``  value of the given field.
-       
-       
-       
-       
-       
-   
-   * - 
-       public **void**
-     - 
-       :ref:`setDouble <io_realm_DynamicRealmObject_setDouble_String__double_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                               **double** value)
-       
-       Sets the ``double``  value of the given field.
-       
-       
-       
-       
-       
-   
-   * - 
-       public **void**
-     - 
-       :ref:`setString <io_realm_DynamicRealmObject_setString_String__String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
-       
-       Sets the ``String``  value of the given field.
-       
-       
-       
-       
-       
-   
-   * - 
-       public **void**
-     - 
-       :ref:`setBlob <io_realm_DynamicRealmObject_setBlob_String__byte[]_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                             **byte[]** value)
-       
-       Sets the binary value of the given field.
        
        
        
@@ -492,23 +509,10 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`setObjectId <io_realm_DynamicRealmObject_setObjectId_String__ObjectId_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                                 **ObjectId (?)** value)
+       :ref:`setDictionary <io_realm_DynamicRealmObject_setDictionary_String__RealmDictionary_E__>`  <**E (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                   :ref:`io.realm.RealmDictionary\<E> <io_realm_RealmDictionary>`  dictionary)
        
-       Sets the ``ObjectId``  value of the given field.
-       
-       
-       
-       
-       
-   
-   * - 
-       public **void**
-     - 
-       :ref:`setRealmAny <io_realm_DynamicRealmObject_setRealmAny_String__RealmAny_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                                 **RealmAny (?)** value)
-       
-       Sets the ``RealmAny``  value of the given field.
+       Sets the reference to a :ref:`RealmDictionary <io_realm_RealmDictionary>`  on the given field.
        
        
        
@@ -518,10 +522,10 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`setUUID <io_realm_DynamicRealmObject_setUUID_String__UUID_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                             `UUID <https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html>`__  value)
+       :ref:`setDouble <io_realm_DynamicRealmObject_setDouble_String__double_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                               **double** value)
        
-       Sets the ``UUID``  value of the given field.
+       Sets the ``double``  value of the given field.
        
        
        
@@ -531,10 +535,25 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`setObject <io_realm_DynamicRealmObject_setObject_String__DynamicRealmObject_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                               :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>`  value)
+       :ref:`setFloat <io_realm_DynamicRealmObject_setFloat_String__float_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                              **float** value)
        
-       Sets a reference to another object on the given field.
+       Sets the ``float``  value of the given field.
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setInt <io_realm_DynamicRealmObject_setInt_String__int_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                            **int** value)
+       
+       Sets the ``int``  value of the given field.
+       
+       
        
        
        
@@ -555,23 +574,10 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`setDictionary <io_realm_DynamicRealmObject_setDictionary_String___any__>`  <**E (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                                   **<any> (?)** dictionary)
+       :ref:`setLong <io_realm_DynamicRealmObject_setLong_String__long_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                             **long** value)
        
-       Sets the reference to a **RealmDictionary (?)** on the given field.
-       
-       
-       
-       
-       
-   
-   * - 
-       public **void**
-     - 
-       :ref:`setRealmSet <io_realm_DynamicRealmObject_setRealmSet_String___any__>`  <**E (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                                 **<any> (?)** set)
-       
-       Sets the reference to a **RealmSet (?)** on the given field.
+       Sets the ``long``  value of the given field.
        
        
        
@@ -591,31 +597,23 @@ Method Summary
        
    
    * - 
-       public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+       public **void**
      - 
-       :ref:`getType <io_realm_DynamicRealmObject_getType__>`  ()
+       :ref:`setObject <io_realm_DynamicRealmObject_setObject_String__DynamicRealmObject_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                               :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>`  value)
        
-       Returns the type of object.
+       Sets a reference to another object on the given field.
        
        
        
    
    * - 
-       public :ref:`RealmFieldType <io_realm_RealmFieldType>` 
+       public **void**
      - 
-       :ref:`getFieldType <io_realm_DynamicRealmObject_getFieldType_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       :ref:`setObjectId <io_realm_DynamicRealmObject_setObjectId_String__ObjectId_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                 **ObjectId (?)** value)
        
-       Returns the type used by the underlying storage engine to represent this field.
-       
-       
-       
-   
-   * - 
-       public **int**
-     - 
-       :ref:`hashCode <io_realm_DynamicRealmObject_hashCode__>`  ()
-       
-       Returns a hash code value for the :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>`  object.
+       Sets the ``ObjectId``  value of the given field.
        
        
        
@@ -623,9 +621,64 @@ Method Summary
        
    
    * - 
-       public **boolean**
+       public **void**
      - 
-       :ref:`equals <io_realm_DynamicRealmObject_equals_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
+       :ref:`setRealmAny <io_realm_DynamicRealmObject_setRealmAny_String__RealmAny_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                 :ref:`RealmAny <io_realm_RealmAny>`  value)
+       
+       Sets the ``RealmAny``  value of the given field.
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setRealmSet <io_realm_DynamicRealmObject_setRealmSet_String__RealmSet_E__>`  <**E (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                 :ref:`io.realm.RealmSet\<E> <io_realm_RealmSet>`  set)
+       
+       Sets the reference to a :ref:`RealmSet <io_realm_RealmSet>`  on the given field.
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setShort <io_realm_DynamicRealmObject_setShort_String__short_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                              **short** value)
+       
+       Sets the ``short``  value of the given field.
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setString <io_realm_DynamicRealmObject_setString_String__String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
+       
+       Sets the ``String``  value of the given field.
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setUUID <io_realm_DynamicRealmObject_setUUID_String__UUID_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                             `UUID <https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html>`__  value)
+       
+       Sets the ``UUID``  value of the given field.
        
        
        
@@ -642,51 +695,6 @@ Method Summary
        
        
    
-   * - 
-       public :ref:`RealmResults <io_realm_RealmResults>` 
-     - 
-       :ref:`linkingObjects <io_realm_DynamicRealmObject_linkingObjects_String__String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  srcClassName,
-                                            `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  srcFieldName)
-       
-       Returns :ref:`RealmResults <io_realm_RealmResults>`  containing all ``srcClassName``  class objects that have a relationship to this object from ``srcFieldName``  field.
-       
-       
-       
-       
-       
-   
-   * - 
-       public :ref:`DynamicRealm <io_realm_DynamicRealm>` 
-     - 
-       :ref:`getDynamicRealm <io_realm_DynamicRealmObject_getDynamicRealm__>`  ()
-       
-       Returns :ref:`DynamicRealm <io_realm_DynamicRealm>`  instance where this :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>`  belongs.
-       
-       
-       
-       
-       
-   
-   * - 
-       public **void**
-     - 
-       :ref:`realm$injectObjectContext <io_realm_DynamicRealmObject_realm_injectObjectContext__>`  ()
-       
-       
-       
-       
-       
-   
-   * - 
-       public :ref:`ProxyState <io_realm_ProxyState>` 
-     - 
-       :ref:`realmGet$proxyState <io_realm_DynamicRealmObject_realmGet_proxyState__>`  ()
-       
-       
-       
-       
-       
-   
    
 
 
@@ -695,16 +703,8 @@ Inherited Methods
 
 
 
-- Methods inherited from interface :ref:`io.realm.RealmObject <io_realm_RealmObject>` : 
-   
-   ``deleteFromRealm`` , ``deleteFromRealm`` , ``isValid`` , ``isValid`` , ``isFrozen`` , ``freeze`` , ``isFrozen`` , ``freeze`` , ``isLoaded`` , ``isLoaded`` , ``isManaged`` , ``isManaged`` , ``getRealm`` , ``getRealm`` , ``load`` , ``load`` , ``addChangeListener`` , ``addChangeListener`` , ``addChangeListener`` , ``addChangeListener`` , ``removeChangeListener`` , ``removeChangeListener`` , ``removeChangeListener`` , ``removeChangeListener`` , ``removeAllChangeListeners`` , ``removeAllChangeListeners`` , ``asFlowable`` , ``asChangesetObservable`` , ``asFlowable`` , ``asChangesetObservable`` 
-   
-   
-- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
-   
-   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
-   
-   
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+- Methods inherited from interface :ref:`io.realm.RealmObject <io_realm_RealmObject>` : ``deleteFromRealm`` , ``deleteFromRealm`` , ``isValid`` , ``isValid`` , ``isFrozen`` , ``freeze`` , ``isFrozen`` , ``freeze`` , ``isLoaded`` , ``isLoaded`` , ``isManaged`` , ``isManaged`` , ``getRealm`` , ``getRealm`` , ``load`` , ``load`` , ``addChangeListener`` , ``addChangeListener`` , ``addChangeListener`` , ``addChangeListener`` , ``removeChangeListener`` , ``removeChangeListener`` , ``removeChangeListener`` , ``removeChangeListener`` , ``removeAllChangeListeners`` , ``removeAllChangeListeners`` , ``asFlowable`` , ``asChangesetObservable`` , ``asFlowable`` , ``asChangesetObservable`` 
 
 
 
@@ -712,14 +712,52 @@ Inherited Methods
 Method Detail
 =============
 
+.. _equals:
+
+.. _equals__:
+
+.. _DynamicRealmObject_equals:
+
+.. _DynamicRealmObject_equals__:
+
+
+
+equals
+------
+
+.. _io_realm_DynamicRealmObject_equals_Object_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _get:
+
+.. _get__:
+
+.. _DynamicRealmObject_get:
+
+.. _DynamicRealmObject_get__:
+
 
 
 get
 ----
-
-.. _io_realm_DynamicRealmObject_get_String_:
-
-.. _io_realm_DynamicRealmObject_get_String_:
 
 .. _io_realm_DynamicRealmObject_get_String_:
 
@@ -758,14 +796,70 @@ get
        
    
    
+.. _getBlob:
+
+.. _getBlob__:
+
+.. _DynamicRealmObject_getBlob:
+
+.. _DynamicRealmObject_getBlob__:
+
+
+
+getBlob
+-------
+
+.. _io_realm_DynamicRealmObject_getBlob_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **byte** getBlob (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   
+   * - Returns the ``byte[]``  value for a given field.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - the name of the field.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or it doesn't contain binary data.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _getBoolean:
+
+.. _getBoolean__:
+
+.. _DynamicRealmObject_getBoolean:
+
+.. _DynamicRealmObject_getBoolean__:
+
 
 
 getBoolean
 ----------
-
-.. _io_realm_DynamicRealmObject_getBoolean_String_:
-
-.. _io_realm_DynamicRealmObject_getBoolean_String_:
 
 .. _io_realm_DynamicRealmObject_getBoolean_String_:
 
@@ -816,188 +910,18 @@ getBoolean
        
    
    
+.. _getByte:
 
+.. _getByte__:
 
-getInt
-------
+.. _DynamicRealmObject_getByte:
 
-.. _io_realm_DynamicRealmObject_getInt_String_:
+.. _DynamicRealmObject_getByte__:
 
-.. _io_realm_DynamicRealmObject_getInt_String_:
-
-.. _io_realm_DynamicRealmObject_getInt_String_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **int** getInt (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-   
-   * - Returns the ``int``  value for a given field.
-       
-       If the field is nullable, use :ref:`isNull(String) <io_realm_DynamicRealmObject_isNull_String_>`  to check for ``null``  instead of using this method.
-       
-       
-       
-       
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``fieldName`` - the name of the field.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or it doesn't contain integers.
-          
-          
-          
-       - :ref:`io.realm.exceptions.RealmException <io_realm_exceptions_RealmException>`  - if the return value would be ``null`` .
-          
-          
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
-
-
-getShort
---------
-
-.. _io_realm_DynamicRealmObject_getShort_String_:
-
-.. _io_realm_DynamicRealmObject_getShort_String_:
-
-.. _io_realm_DynamicRealmObject_getShort_String_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **short** getShort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-   
-   * - Returns the ``short``  value for a given field.
-       
-       If the field is nullable, use :ref:`isNull(String) <io_realm_DynamicRealmObject_isNull_String_>`  to check for ``null``  instead of using this method.
-       
-       
-       
-       
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``fieldName`` - the name of the field.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or it doesn't contain integers.
-          
-          
-          
-       - :ref:`io.realm.exceptions.RealmException <io_realm_exceptions_RealmException>`  - if the return value would be ``null`` .
-          
-          
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
-
-
-getLong
--------
-
-.. _io_realm_DynamicRealmObject_getLong_String_:
-
-.. _io_realm_DynamicRealmObject_getLong_String_:
-
-.. _io_realm_DynamicRealmObject_getLong_String_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **long** getLong (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-   
-   * - Returns the ``long``  value for a given field.
-       
-       If the field is nullable, use :ref:`isNull(String) <io_realm_DynamicRealmObject_isNull_String_>`  to check for ``null``  instead of using this method.
-       
-       
-       
-       
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``fieldName`` - the name of the field.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or it doesn't contain integers.
-          
-          
-          
-       - :ref:`io.realm.exceptions.RealmException <io_realm_exceptions_RealmException>`  - if the return value would be ``null`` .
-          
-          
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
 
 
 getByte
 -------
-
-.. _io_realm_DynamicRealmObject_getByte_String_:
-
-.. _io_realm_DynamicRealmObject_getByte_String_:
 
 .. _io_realm_DynamicRealmObject_getByte_String_:
 
@@ -1048,25 +972,185 @@ getByte
        
    
    
+.. _getDate:
+
+.. _getDate__:
+
+.. _DynamicRealmObject_getDate:
+
+.. _DynamicRealmObject_getDate__:
 
 
-getFloat
---------
 
-.. _io_realm_DynamicRealmObject_getFloat_String_:
+getDate
+-------
 
-.. _io_realm_DynamicRealmObject_getFloat_String_:
-
-.. _io_realm_DynamicRealmObject_getFloat_String_:
+.. _io_realm_DynamicRealmObject_getDate_String_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public **float** getFloat (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   * -    public `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  getDate (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
    
-   * - Returns the ``float``  value for a given field.
+   * - Returns the ``Date``  value for a given field.
        
-       If the field is nullable, use :ref:`isNull(String) <io_realm_DynamicRealmObject_isNull_String_>`  to check for ``null``  instead of using this method.
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - the name of the field.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or it doesn't contain Dates.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _getDecimal128:
+
+.. _getDecimal128__:
+
+.. _DynamicRealmObject_getDecimal128:
+
+.. _DynamicRealmObject_getDecimal128__:
+
+
+
+getDecimal128
+-------------
+
+.. _io_realm_DynamicRealmObject_getDecimal128_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **Decimal128 (?)** getDecimal128 (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   
+   * - Returns the ``Decimal128``  value for a given field.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - the name of the field.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or it doesn't contain Decimal128.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _getDictionary:
+
+.. _getDictionary__:
+
+.. _DynamicRealmObject_getDictionary:
+
+.. _DynamicRealmObject_getDictionary__:
+
+
+
+getDictionary
+-------------
+
+.. _io_realm_DynamicRealmObject_getDictionary_String__Class_E__:
+
+.. _io_realm_DynamicRealmObject_getDictionary_String_Class_:
+
+.. _io_realm_DynamicRealmObject_getDictionary_String__Class_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`RealmDictionary <io_realm_RealmDictionary>`  getDictionary <**E (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                              `java.lang.Class\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  primitiveType)
+   
+   * - Returns the :ref:`RealmDictionary <io_realm_RealmDictionary>`  containing only primitive values.
+       
+       If the dictionary contains references to other Realm objects, use :ref:`getDictionary(String) <io_realm_DynamicRealmObject_getDictionary_String_>`  instead.
+       
+       
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - the name of the field.
+          
+          
+          
+       - ``primitiveType`` - the type of elements in the dictionary. Only primitive types are supported.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or it doesn't contain a dictionary of primitive objects.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_DynamicRealmObject_getDictionary_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`RealmDictionary <io_realm_RealmDictionary>`  getDictionary (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   
+   * - Returns the :ref:`RealmDictionary <io_realm_RealmDictionary>`  of :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>` s being linked from the given field.
+       
+       If the dictionary contains primitive types, use :ref:`getDictionary(String, Class) <io_realm_DynamicRealmObject_getDictionary_String__Class_>`  instead.
        
        
        
@@ -1089,13 +1173,7 @@ getFloat
        
        **Throws**
        
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or it doesn't contain floats.
-          
-          
-          
-       - :ref:`io.realm.exceptions.RealmException <io_realm_exceptions_RealmException>`  - if the return value would be ``null`` .
-          
-          
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or it doesn't contain a dictionary of objects.
           
           
           
@@ -1106,14 +1184,18 @@ getFloat
        
    
    
+.. _getDouble:
+
+.. _getDouble__:
+
+.. _DynamicRealmObject_getDouble:
+
+.. _DynamicRealmObject_getDouble__:
+
 
 
 getDouble
 ---------
-
-.. _io_realm_DynamicRealmObject_getDouble_String_:
-
-.. _io_realm_DynamicRealmObject_getDouble_String_:
 
 .. _io_realm_DynamicRealmObject_getDouble_String_:
 
@@ -1164,35 +1246,37 @@ getDouble
        
    
    
+.. _getDynamicRealm:
+
+.. _getDynamicRealm__:
+
+.. _DynamicRealmObject_getDynamicRealm:
+
+.. _DynamicRealmObject_getDynamicRealm__:
+
+.. _io_realm_DynamicRealmObject_getDynamicRealm:
+
+.. _io_realm_DynamicRealmObject_getDynamicRealm__:
 
 
-getBlob
--------
 
-.. _io_realm_DynamicRealmObject_getBlob_String_:
-
-.. _io_realm_DynamicRealmObject_getBlob_String_:
-
-.. _io_realm_DynamicRealmObject_getBlob_String_:
+getDynamicRealm
+---------------
 
 .. list-table::
    :header-rows: 1
    
-   * -    public **byte** getBlob (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   * -    public :ref:`DynamicRealm <io_realm_DynamicRealm>`  getDynamicRealm ()
    
-   * - Returns the ``byte[]``  value for a given field.
+   * - Returns :ref:`DynamicRealm <io_realm_DynamicRealm>`  instance where this :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>`  belongs.
+       
+       You **must not** call **DynamicRealm.close() (?)** against returned instance.
        
        
        
        
        
        
-       **Parameters**
-       
-       - ``fieldName`` - the name of the field.
-          
-          
-          
        
        
        
@@ -1201,55 +1285,9 @@ getBlob
        
        **Throws**
        
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or it doesn't contain binary data.
+       - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if this object was deleted or the corresponding :ref:`DynamicRealm <io_realm_DynamicRealm>`  was already closed.
           
           
-          
-       
-       
-       
-       
-       
-   
-   
-
-
-getString
----------
-
-.. _io_realm_DynamicRealmObject_getString_String_:
-
-.. _io_realm_DynamicRealmObject_getString_String_:
-
-.. _io_realm_DynamicRealmObject_getString_String_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getString (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-   
-   * - Returns the ``String``  value for a given field.
-       
-       
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``fieldName`` - the name of the field.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or it doesn't contain Strings.
           
           
           
@@ -1260,71 +1298,101 @@ getString
        
    
    
+.. _getFieldNames:
+
+.. _getFieldNames__:
+
+.. _DynamicRealmObject_getFieldNames:
+
+.. _DynamicRealmObject_getFieldNames__:
+
+.. _io_realm_DynamicRealmObject_getFieldNames:
+
+.. _io_realm_DynamicRealmObject_getFieldNames__:
 
 
-getDate
--------
 
-.. _io_realm_DynamicRealmObject_getDate_String_:
-
-.. _io_realm_DynamicRealmObject_getDate_String_:
-
-.. _io_realm_DynamicRealmObject_getDate_String_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  getDate (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-   
-   * - Returns the ``Date``  value for a given field.
-       
-       
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``fieldName`` - the name of the field.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or it doesn't contain Dates.
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
-
-
-getDecimal128
+getFieldNames
 -------------
 
-.. _io_realm_DynamicRealmObject_getDecimal128_String_:
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getFieldNames ()
+   
+   * - Returns the list of field names on this object.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getFieldType:
 
-.. _io_realm_DynamicRealmObject_getDecimal128_String_:
+.. _getFieldType__:
 
-.. _io_realm_DynamicRealmObject_getDecimal128_String_:
+.. _DynamicRealmObject_getFieldType:
+
+.. _DynamicRealmObject_getFieldType__:
+
+
+
+getFieldType
+------------
+
+.. _io_realm_DynamicRealmObject_getFieldType_String_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public **Decimal128 (?)** getDecimal128 (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   * -    public :ref:`RealmFieldType <io_realm_RealmFieldType>`  getFieldType (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
    
-   * - Returns the ``Decimal128``  value for a given field.
+   * - Returns the type used by the underlying storage engine to represent this field.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getFloat:
+
+.. _getFloat__:
+
+.. _DynamicRealmObject_getFloat:
+
+.. _DynamicRealmObject_getFloat__:
+
+
+
+getFloat
+--------
+
+.. _io_realm_DynamicRealmObject_getFloat_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **float** getFloat (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   
+   * - Returns the ``float``  value for a given field.
+       
+       If the field is nullable, use :ref:`isNull(String) <io_realm_DynamicRealmObject_isNull_String_>`  to check for ``null``  instead of using this method.
+       
+       
        
        
        
@@ -1345,7 +1413,13 @@ getDecimal128
        
        **Throws**
        
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or it doesn't contain Decimal128.
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or it doesn't contain floats.
+          
+          
+          
+       - :ref:`io.realm.exceptions.RealmException <io_realm_exceptions_RealmException>`  - if the return value would be ``null`` .
+          
+          
           
           
           
@@ -1356,23 +1430,31 @@ getDecimal128
        
    
    
+.. _getInt:
+
+.. _getInt__:
+
+.. _DynamicRealmObject_getInt:
+
+.. _DynamicRealmObject_getInt__:
 
 
-getObjectId
------------
 
-.. _io_realm_DynamicRealmObject_getObjectId_String_:
+getInt
+------
 
-.. _io_realm_DynamicRealmObject_getObjectId_String_:
-
-.. _io_realm_DynamicRealmObject_getObjectId_String_:
+.. _io_realm_DynamicRealmObject_getInt_String_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public **ObjectId (?)** getObjectId (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   * -    public **int** getInt (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
    
-   * - Returns the ``ObjectId``  value for a given field.
+   * - Returns the ``int``  value for a given field.
+       
+       If the field is nullable, use :ref:`isNull(String) <io_realm_DynamicRealmObject_isNull_String_>`  to check for ``null``  instead of using this method.
+       
+       
        
        
        
@@ -1393,55 +1475,13 @@ getObjectId
        
        **Throws**
        
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or it doesn't contain ObjectId.
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or it doesn't contain integers.
           
           
           
-       
-       
-       
-       
-       
-   
-   
-
-
-getRealmAny
------------
-
-.. _io_realm_DynamicRealmObject_getRealmAny_String_:
-
-.. _io_realm_DynamicRealmObject_getRealmAny_String_:
-
-.. _io_realm_DynamicRealmObject_getRealmAny_String_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **RealmAny (?)** getRealmAny (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-   
-   * - Returns the ``RealmAny``  value for a given field.
-       
-       
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``fieldName`` - the name of the field.
+       - :ref:`io.realm.exceptions.RealmException <io_realm_exceptions_RealmException>`  - if the return value would be ``null`` .
           
           
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or it doesn't contain RealmAny.
           
           
           
@@ -1452,152 +1492,19 @@ getRealmAny
        
    
    
+.. _getList:
 
+.. _getList__:
 
-getUUID
--------
+.. _DynamicRealmObject_getList:
 
-.. _io_realm_DynamicRealmObject_getUUID_String_:
+.. _DynamicRealmObject_getList__:
 
-.. _io_realm_DynamicRealmObject_getUUID_String_:
-
-.. _io_realm_DynamicRealmObject_getUUID_String_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public `UUID <https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html>`__  getUUID (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-   
-   * - Returns the ``UUID``  value for a given field.
-       
-       
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``fieldName`` - the name of the field.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or it doesn't contain UUID.
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
-
-
-getObject
----------
-
-.. _io_realm_DynamicRealmObject_getObject_String_:
-
-.. _io_realm_DynamicRealmObject_getObject_String_:
-
-.. _io_realm_DynamicRealmObject_getObject_String_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>`  getObject (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-   
-   * - Returns the object being linked to from this field.
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``fieldName`` - the name of the field.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or it doesn't contain links to other objects.
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
 
 
 getList
 -------
 
-.. _io_realm_DynamicRealmObject_getList_String_:
-
-.. _io_realm_DynamicRealmObject_getList_String_:
-
-.. _io_realm_DynamicRealmObject_getList_String_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public :ref:`RealmList <io_realm_RealmList>`  getList (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-   
-   * - Returns the :ref:`RealmList <io_realm_RealmList>`  of :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>` s being linked from the given field.
-       
-       If the list contains primitive types, use :ref:`getList(String, Class) <io_realm_DynamicRealmObject_getList_String__Class_>`  instead.
-       
-       
-       
-       
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``fieldName`` - the name of the field.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or it doesn't contain a list of objects.
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
 .. _io_realm_DynamicRealmObject_getList_String__Class_E__:
 
 .. _io_realm_DynamicRealmObject_getList_String_Class_:
@@ -1650,25 +1557,16 @@ getList
        
    
    
-
-
-getDictionary
--------------
-
-.. _io_realm_DynamicRealmObject_getDictionary_String_:
-
-.. _io_realm_DynamicRealmObject_getDictionary_String_:
-
-.. _io_realm_DynamicRealmObject_getDictionary_String_:
+.. _io_realm_DynamicRealmObject_getList_String_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public **<any> (?)** getDictionary (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   * -    public :ref:`RealmList <io_realm_RealmList>`  getList (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
    
-   * - Returns the **RealmDictionary (?)** of :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>` s being linked from the given field.
+   * - Returns the :ref:`RealmList <io_realm_RealmList>`  of :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>` s being linked from the given field.
        
-       If the dictionary contains primitive types, use :ref:`getDictionary(String, Class) <io_realm_DynamicRealmObject_getDictionary_String__Class_>`  instead.
+       If the list contains primitive types, use :ref:`getList(String, Class) <io_realm_DynamicRealmObject_getList_String__Class_>`  instead.
        
        
        
@@ -1691,7 +1589,7 @@ getDictionary
        
        **Throws**
        
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or it doesn't contain a dictionary of objects.
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or it doesn't contain a list of objects.
           
           
           
@@ -1702,21 +1600,29 @@ getDictionary
        
    
    
-.. _io_realm_DynamicRealmObject_getDictionary_String__Class_E__:
+.. _getLong:
 
-.. _io_realm_DynamicRealmObject_getDictionary_String_Class_:
+.. _getLong__:
 
-.. _io_realm_DynamicRealmObject_getDictionary_String__Class_:
+.. _DynamicRealmObject_getLong:
+
+.. _DynamicRealmObject_getLong__:
+
+
+
+getLong
+-------
+
+.. _io_realm_DynamicRealmObject_getLong_String_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public **<any> (?)** getDictionary <**E (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                                    `java.lang.Class\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  primitiveType)
+   * -    public **long** getLong (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
    
-   * - Returns the **RealmDictionary (?)** containing only primitive values.
+   * - Returns the ``long``  value for a given field.
        
-       If the dictionary contains references to other Realm objects, use :ref:`getDictionary(String) <io_realm_DynamicRealmObject_getDictionary_String_>`  instead.
+       If the field is nullable, use :ref:`isNull(String) <io_realm_DynamicRealmObject_isNull_String_>`  to check for ``null``  instead of using this method.
        
        
        
@@ -1731,7 +1637,59 @@ getDictionary
           
           
           
-       - ``primitiveType`` - the type of elements in the dictionary. Only primitive types are supported.
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or it doesn't contain integers.
+          
+          
+          
+       - :ref:`io.realm.exceptions.RealmException <io_realm_exceptions_RealmException>`  - if the return value would be ``null`` .
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _getObject:
+
+.. _getObject__:
+
+.. _DynamicRealmObject_getObject:
+
+.. _DynamicRealmObject_getObject__:
+
+
+
+getObject
+---------
+
+.. _io_realm_DynamicRealmObject_getObject_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>`  getObject (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   
+   * - Returns the object being linked to from this field.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - the name of the field.
           
           
           
@@ -1743,7 +1701,7 @@ getDictionary
        
        **Throws**
        
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or it doesn't contain a dictionary of primitive objects.
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or it doesn't contain links to other objects.
           
           
           
@@ -1754,58 +1712,123 @@ getDictionary
        
    
    
+.. _getObjectId:
+
+.. _getObjectId__:
+
+.. _DynamicRealmObject_getObjectId:
+
+.. _DynamicRealmObject_getObjectId__:
+
+
+
+getObjectId
+-----------
+
+.. _io_realm_DynamicRealmObject_getObjectId_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **ObjectId (?)** getObjectId (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   
+   * - Returns the ``ObjectId``  value for a given field.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - the name of the field.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or it doesn't contain ObjectId.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _getRealmAny:
+
+.. _getRealmAny__:
+
+.. _DynamicRealmObject_getRealmAny:
+
+.. _DynamicRealmObject_getRealmAny__:
+
+
+
+getRealmAny
+-----------
+
+.. _io_realm_DynamicRealmObject_getRealmAny_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`RealmAny <io_realm_RealmAny>`  getRealmAny (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   
+   * - Returns the ``RealmAny``  value for a given field.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - the name of the field.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or it doesn't contain RealmAny.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _getRealmSet:
+
+.. _getRealmSet__:
+
+.. _DynamicRealmObject_getRealmSet:
+
+.. _DynamicRealmObject_getRealmSet__:
+
 
 
 getRealmSet
 -----------
 
-.. _io_realm_DynamicRealmObject_getRealmSet_String_:
-
-.. _io_realm_DynamicRealmObject_getRealmSet_String_:
-
-.. _io_realm_DynamicRealmObject_getRealmSet_String_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **<any> (?)** getRealmSet (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
-   
-   * - Returns the **RealmSet (?)** of :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>` s being linked from the given field.
-       
-       If the set contains primitive types, use :ref:`getRealmSet(String, Class) <io_realm_DynamicRealmObject_getRealmSet_String__Class_>`  instead.
-       
-       
-       
-       
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``fieldName`` - the name of the field.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or it doesn't contain a set of objects.
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
 .. _io_realm_DynamicRealmObject_getRealmSet_String__Class_E__:
 
 .. _io_realm_DynamicRealmObject_getRealmSet_String_Class_:
@@ -1815,10 +1838,10 @@ getRealmSet
 .. list-table::
    :header-rows: 1
    
-   * -    public **<any> (?)** getRealmSet <**E (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                                  `java.lang.Class\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  primitiveType)
+   * -    public :ref:`RealmSet <io_realm_RealmSet>`  getRealmSet <**E (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                     `java.lang.Class\<E> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  primitiveType)
    
-   * - Returns the **RealmSet (?)** containing only primitive values.
+   * - Returns the :ref:`RealmSet <io_realm_RealmSet>`  containing only primitive values.
        
        If the set contains references to other Realm objects, use :ref:`getRealmSet(String) <io_realm_DynamicRealmObject_getRealmSet_String_>`  instead.
        
@@ -1858,14 +1881,367 @@ getRealmSet
        
    
    
+.. _io_realm_DynamicRealmObject_getRealmSet_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`RealmSet <io_realm_RealmSet>`  getRealmSet (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   
+   * - Returns the :ref:`RealmSet <io_realm_RealmSet>`  of :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>` s being linked from the given field.
+       
+       If the set contains primitive types, use :ref:`getRealmSet(String, Class) <io_realm_DynamicRealmObject_getRealmSet_String__Class_>`  instead.
+       
+       
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - the name of the field.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or it doesn't contain a set of objects.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _getShort:
+
+.. _getShort__:
+
+.. _DynamicRealmObject_getShort:
+
+.. _DynamicRealmObject_getShort__:
+
+
+
+getShort
+--------
+
+.. _io_realm_DynamicRealmObject_getShort_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **short** getShort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   
+   * - Returns the ``short``  value for a given field.
+       
+       If the field is nullable, use :ref:`isNull(String) <io_realm_DynamicRealmObject_isNull_String_>`  to check for ``null``  instead of using this method.
+       
+       
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - the name of the field.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or it doesn't contain integers.
+          
+          
+          
+       - :ref:`io.realm.exceptions.RealmException <io_realm_exceptions_RealmException>`  - if the return value would be ``null`` .
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _getString:
+
+.. _getString__:
+
+.. _DynamicRealmObject_getString:
+
+.. _DynamicRealmObject_getString__:
+
+
+
+getString
+---------
+
+.. _io_realm_DynamicRealmObject_getString_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getString (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   
+   * - Returns the ``String``  value for a given field.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - the name of the field.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or it doesn't contain Strings.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _getType:
+
+.. _getType__:
+
+.. _DynamicRealmObject_getType:
+
+.. _DynamicRealmObject_getType__:
+
+.. _io_realm_DynamicRealmObject_getType:
+
+.. _io_realm_DynamicRealmObject_getType__:
+
+
+
+getType
+-------
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getType ()
+   
+   * - Returns the type of object. This will normally correspond to the name of a class that is extending :ref:`RealmObject <io_realm_RealmObject>` .
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getUUID:
+
+.. _getUUID__:
+
+.. _DynamicRealmObject_getUUID:
+
+.. _DynamicRealmObject_getUUID__:
+
+
+
+getUUID
+-------
+
+.. _io_realm_DynamicRealmObject_getUUID_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `UUID <https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html>`__  getUUID (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   
+   * - Returns the ``UUID``  value for a given field.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - the name of the field.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or it doesn't contain UUID.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _hasField:
+
+.. _hasField__:
+
+.. _DynamicRealmObject_hasField:
+
+.. _DynamicRealmObject_hasField__:
+
+
+
+hasField
+--------
+
+.. _io_realm_DynamicRealmObject_hasField_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** hasField (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   
+   * - Checks whether an object has the given field or not.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - field name to check.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _hashCode:
+
+.. _hashCode__:
+
+.. _DynamicRealmObject_hashCode:
+
+.. _DynamicRealmObject_hashCode__:
+
+.. _io_realm_DynamicRealmObject_hashCode:
+
+.. _io_realm_DynamicRealmObject_hashCode__:
+
+
+
+hashCode
+--------
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **int** hashCode ()
+   
+   * - Returns a hash code value for the :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>`  object.
+       
+       By the general contract of `Object.hashCode() <https://docs.oracle.com/javase/7/docs/api/java/lang/Object/hashCode().html>`__ , any two objects for which **equals (?)** returns ``true``  must return the same hash code value.
+       
+       
+       
+       Note that a :ref:`RealmObject <io_realm_RealmObject>`  is a live object, and it might be updated by changes from other threads. This means that a hash code value of the object is not stable, and the value should be neither used as a key in HashMap nor saved in HashSet.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       .. seealso::
+       
+       
+          
+          - **equals (?)**
+             
+             
+             
+          
+          
+          
+       
+       
+   
+   
+.. _isNull:
+
+.. _isNull__:
+
+.. _DynamicRealmObject_isNull:
+
+.. _DynamicRealmObject_isNull__:
+
 
 
 isNull
 ------
-
-.. _io_realm_DynamicRealmObject_isNull_String_:
-
-.. _io_realm_DynamicRealmObject_isNull_String_:
 
 .. _io_realm_DynamicRealmObject_isNull_String_:
 
@@ -1906,37 +2282,64 @@ isNull
        
    
    
+.. _linkingObjects:
+
+.. _linkingObjects__:
+
+.. _DynamicRealmObject_linkingObjects:
+
+.. _DynamicRealmObject_linkingObjects__:
 
 
-hasField
---------
 
-.. _io_realm_DynamicRealmObject_hasField_String_:
+linkingObjects
+--------------
 
-.. _io_realm_DynamicRealmObject_hasField_String_:
+.. _io_realm_DynamicRealmObject_linkingObjects_String__String_:
 
-.. _io_realm_DynamicRealmObject_hasField_String_:
+.. _io_realm_DynamicRealmObject_linkingObjects_String_String_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public **boolean** hasField (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   * -    public :ref:`RealmResults <io_realm_RealmResults>`  linkingObjects (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  srcClassName,
+                                            `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  srcFieldName)
    
-   * - Checks whether an object has the given field or not.
+   * - Returns :ref:`RealmResults <io_realm_RealmResults>`  containing all ``srcClassName``  class objects that have a relationship to this object from ``srcFieldName``  field.
+       
+       An entry is added for each reference, e.g. if the same reference is in a list multiple times, the src object will show up here multiple times.
+       
+       
        
        
        
        
        **Parameters**
        
-       - ``fieldName`` - field name to check.
+       - ``srcClassName`` - name of the class returned objects belong to.
           
           
           
+       - ``srcFieldName`` - name of the field in the source class that holds a reference to this object. Field type must be either ``io.realm.RealmFieldType.OBJECT``  or ``io.realm.RealmFieldType.LIST`` .
+          
+          
+          
+          
+          
        
        
        
        
+       
+       
+       **Throws**
+       
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the ``srcClassName``  is ``null``  or does not exist, the ``srcFieldName``  is ``null``  or does not exist, type of the source field is not supported.
+          
+          
+          
+          
+          
        
        
        
@@ -1944,23 +2347,29 @@ hasField
        
    
    
+.. _realm_injectObjectContext:
+
+.. _realm_injectObjectContext__:
+
+.. _DynamicRealmObject_realm_injectObjectContext:
+
+.. _DynamicRealmObject_realm_injectObjectContext__:
+
+.. _io_realm_DynamicRealmObject_realm_injectObjectContext:
+
+.. _io_realm_DynamicRealmObject_realm_injectObjectContext__:
 
 
-getFieldNames
--------------
 
-.. _io_realm_DynamicRealmObject_getFieldNames__:
-
-.. _io_realm_DynamicRealmObject_getFieldNames__:
-
-.. _io_realm_DynamicRealmObject_getFieldNames__:
+realm$injectObjectContext
+-------------------------
 
 .. list-table::
    :header-rows: 1
    
-   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getFieldNames ()
+   * -    public **void** realm$injectObjectContext ()
    
-   * - Returns the list of field names on this object.
+   * - 
        
        
        
@@ -1974,6 +2383,50 @@ getFieldNames
        
    
    
+.. _realmGet_proxyState:
+
+.. _realmGet_proxyState__:
+
+.. _DynamicRealmObject_realmGet_proxyState:
+
+.. _DynamicRealmObject_realmGet_proxyState__:
+
+.. _io_realm_DynamicRealmObject_realmGet_proxyState:
+
+.. _io_realm_DynamicRealmObject_realmGet_proxyState__:
+
+
+
+realmGet$proxyState
+-------------------
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`ProxyState <io_realm_ProxyState>`  realmGet$proxyState ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _set:
+
+.. _set__:
+
+.. _DynamicRealmObject_set:
+
+.. _DynamicRealmObject_set__:
+
 
 
 set
@@ -1982,8 +2435,6 @@ set
 .. _io_realm_DynamicRealmObject_set_String__Object_:
 
 .. _io_realm_DynamicRealmObject_set_String_Object_:
-
-.. _io_realm_DynamicRealmObject_set_String__Object_:
 
 .. list-table::
    :header-rows: 1
@@ -2027,460 +2478,14 @@ set
        
    
    
+.. _setBlob:
 
+.. _setBlob__:
 
-setBoolean
-----------
+.. _DynamicRealmObject_setBlob:
 
-.. _io_realm_DynamicRealmObject_setBoolean_String__boolean_:
+.. _DynamicRealmObject_setBlob__:
 
-.. _io_realm_DynamicRealmObject_setBoolean_String_boolean_:
-
-.. _io_realm_DynamicRealmObject_setBoolean_String__boolean_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **void** setBoolean (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                                **boolean** value)
-   
-   * - Sets the ``boolean``  value of the given field.
-       
-       
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``fieldName`` - field name to update.
-          
-          
-          
-       - ``value`` - value to insert.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or field isn't a boolean field.
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
-
-
-setShort
---------
-
-.. _io_realm_DynamicRealmObject_setShort_String__short_:
-
-.. _io_realm_DynamicRealmObject_setShort_String_short_:
-
-.. _io_realm_DynamicRealmObject_setShort_String__short_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **void** setShort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                              **short** value)
-   
-   * - Sets the ``short``  value of the given field.
-       
-       
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``fieldName`` - field name.
-          
-          
-          
-       - ``value`` - value to insert.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or field isn't an integer field.
-          
-          
-          
-       - :ref:`RealmException <io_realm_exceptions_RealmException>`  - if the field is a :ref:`io.realm.annotations.PrimaryKey <io_realm_annotations_PrimaryKey>`  field.
-          
-          
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
-
-
-setInt
-------
-
-.. _io_realm_DynamicRealmObject_setInt_String__int_:
-
-.. _io_realm_DynamicRealmObject_setInt_String_int_:
-
-.. _io_realm_DynamicRealmObject_setInt_String__int_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **void** setInt (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                            **int** value)
-   
-   * - Sets the ``int``  value of the given field.
-       
-       
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``fieldName`` - field name to update.
-          
-          
-          
-       - ``value`` - value to insert.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or field isn't an integer field.
-          
-          
-          
-       - :ref:`RealmException <io_realm_exceptions_RealmException>`  - if the field is a :ref:`io.realm.annotations.PrimaryKey <io_realm_annotations_PrimaryKey>`  field.
-          
-          
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
-
-
-setLong
--------
-
-.. _io_realm_DynamicRealmObject_setLong_String__long_:
-
-.. _io_realm_DynamicRealmObject_setLong_String_long_:
-
-.. _io_realm_DynamicRealmObject_setLong_String__long_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **void** setLong (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                             **long** value)
-   
-   * - Sets the ``long``  value of the given field.
-       
-       
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``fieldName`` - field name.
-          
-          
-          
-       - ``value`` - value to insert.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or field isn't an integer field.
-          
-          
-          
-       - :ref:`RealmException <io_realm_exceptions_RealmException>`  - if the field is a :ref:`io.realm.annotations.PrimaryKey <io_realm_annotations_PrimaryKey>`  field.
-          
-          
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
-
-
-setByte
--------
-
-.. _io_realm_DynamicRealmObject_setByte_String__byte_:
-
-.. _io_realm_DynamicRealmObject_setByte_String_byte_:
-
-.. _io_realm_DynamicRealmObject_setByte_String__byte_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **void** setByte (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                             **byte** value)
-   
-   * - Sets the ``byte``  value of the given field.
-       
-       
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``fieldName`` - field name.
-          
-          
-          
-       - ``value`` - value to insert.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or field isn't an integer field.
-          
-          
-          
-       - :ref:`RealmException <io_realm_exceptions_RealmException>`  - if the field is a :ref:`io.realm.annotations.PrimaryKey <io_realm_annotations_PrimaryKey>`  field.
-          
-          
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
-
-
-setFloat
---------
-
-.. _io_realm_DynamicRealmObject_setFloat_String__float_:
-
-.. _io_realm_DynamicRealmObject_setFloat_String_float_:
-
-.. _io_realm_DynamicRealmObject_setFloat_String__float_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **void** setFloat (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                              **float** value)
-   
-   * - Sets the ``float``  value of the given field.
-       
-       
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``fieldName`` - field name.
-          
-          
-          
-       - ``value`` - value to insert.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or field isn't a float field.
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
-
-
-setDouble
----------
-
-.. _io_realm_DynamicRealmObject_setDouble_String__double_:
-
-.. _io_realm_DynamicRealmObject_setDouble_String_double_:
-
-.. _io_realm_DynamicRealmObject_setDouble_String__double_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **void** setDouble (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                               **double** value)
-   
-   * - Sets the ``double``  value of the given field.
-       
-       
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``fieldName`` - field name.
-          
-          
-          
-       - ``value`` - value to insert.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or field isn't a double field.
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
-
-
-setString
----------
-
-.. _io_realm_DynamicRealmObject_setString_String__String_:
-
-.. _io_realm_DynamicRealmObject_setString_String_String_:
-
-.. _io_realm_DynamicRealmObject_setString_String__String_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **void** setString (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
-   
-   * - Sets the ``String``  value of the given field.
-       
-       
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``fieldName`` - field name.
-          
-          
-          
-       - ``value`` - value to insert.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or field isn't a String field.
-          
-          
-          
-       - :ref:`RealmException <io_realm_exceptions_RealmException>`  - if the field is a :ref:`io.realm.annotations.PrimaryKey <io_realm_annotations_PrimaryKey>`  field.
-          
-          
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
 
 
 setBlob
@@ -2532,6 +2537,138 @@ setBlob
        
    
    
+.. _setBoolean:
+
+.. _setBoolean__:
+
+.. _DynamicRealmObject_setBoolean:
+
+.. _DynamicRealmObject_setBoolean__:
+
+
+
+setBoolean
+----------
+
+.. _io_realm_DynamicRealmObject_setBoolean_String__boolean_:
+
+.. _io_realm_DynamicRealmObject_setBoolean_String_boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setBoolean (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                **boolean** value)
+   
+   * - Sets the ``boolean``  value of the given field.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - field name to update.
+          
+          
+          
+       - ``value`` - value to insert.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or field isn't a boolean field.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _setByte:
+
+.. _setByte__:
+
+.. _DynamicRealmObject_setByte:
+
+.. _DynamicRealmObject_setByte__:
+
+
+
+setByte
+-------
+
+.. _io_realm_DynamicRealmObject_setByte_String__byte_:
+
+.. _io_realm_DynamicRealmObject_setByte_String_byte_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setByte (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                             **byte** value)
+   
+   * - Sets the ``byte``  value of the given field.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - field name.
+          
+          
+          
+       - ``value`` - value to insert.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or field isn't an integer field.
+          
+          
+          
+       - :ref:`RealmException <io_realm_exceptions_RealmException>`  - if the field is a :ref:`io.realm.annotations.PrimaryKey <io_realm_annotations_PrimaryKey>`  field.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _setDate:
+
+.. _setDate__:
+
+.. _DynamicRealmObject_setDate:
+
+.. _DynamicRealmObject_setDate__:
+
 
 
 setDate
@@ -2540,8 +2677,6 @@ setDate
 .. _io_realm_DynamicRealmObject_setDate_String__Date_:
 
 .. _io_realm_DynamicRealmObject_setDate_String_Date_:
-
-.. _io_realm_DynamicRealmObject_setDate_String__Date_:
 
 .. list-table::
    :header-rows: 1
@@ -2585,6 +2720,14 @@ setDate
        
    
    
+.. _setDecimal128:
+
+.. _setDecimal128__:
+
+.. _DynamicRealmObject_setDecimal128:
+
+.. _DynamicRealmObject_setDecimal128__:
+
 
 
 setDecimal128
@@ -2593,8 +2736,6 @@ setDecimal128
 .. _io_realm_DynamicRealmObject_setDecimal128_String__Decimal128_:
 
 .. _io_realm_DynamicRealmObject_setDecimal128_String_Decimal128_:
-
-.. _io_realm_DynamicRealmObject_setDecimal128_String__Decimal128_:
 
 .. list-table::
    :header-rows: 1
@@ -2638,24 +2779,36 @@ setDecimal128
        
    
    
+.. _setDictionary:
+
+.. _setDictionary__:
+
+.. _DynamicRealmObject_setDictionary:
+
+.. _DynamicRealmObject_setDictionary__:
 
 
-setObjectId
------------
 
-.. _io_realm_DynamicRealmObject_setObjectId_String__ObjectId_:
+setDictionary
+-------------
 
-.. _io_realm_DynamicRealmObject_setObjectId_String_ObjectId_:
+.. _io_realm_DynamicRealmObject_setDictionary_String__RealmDictionary_E__:
 
-.. _io_realm_DynamicRealmObject_setObjectId_String__ObjectId_:
+.. _io_realm_DynamicRealmObject_setDictionary_String_RealmDictionary_:
+
+.. _io_realm_DynamicRealmObject_setDictionary_String__RealmDictionary_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public **void** setObjectId (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                                 **ObjectId (?)** value)
+   * -    public **void** setDictionary <**E (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                   :ref:`io.realm.RealmDictionary\<E> <io_realm_RealmDictionary>`  dictionary)
    
-   * - Sets the ``ObjectId``  value of the given field.
+   * - Sets the reference to a :ref:`RealmDictionary <io_realm_RealmDictionary>`  on the given field.
+       
+       This will copy all the elements in the dictionary into Realm, but any further changes to the dictionary will not be reflected in the Realm. Use :ref:`getDictionary(String) <io_realm_DynamicRealmObject_getDictionary_String_>`  in order to get a reference to the managed dictionary.
+       
+       
        
        
        
@@ -2668,60 +2821,9 @@ setObjectId
           
           
           
-       - ``value`` - value to insert.
+       - ``dictionary`` - dictionary of objects. Must either be primitive types or :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>` s.
           
           
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or field isn't a ObjectId field.
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
-
-
-setRealmAny
------------
-
-.. _io_realm_DynamicRealmObject_setRealmAny_String__RealmAny_:
-
-.. _io_realm_DynamicRealmObject_setRealmAny_String_RealmAny_:
-
-.. _io_realm_DynamicRealmObject_setRealmAny_String__RealmAny_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **void** setRealmAny (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                                 **RealmAny (?)** value)
-   
-   * - Sets the ``RealmAny``  value of the given field.
-       
-       
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``fieldName`` - field name.
-          
-          
-          
-       - ``value`` - value to insert.
           
           
           
@@ -2733,7 +2835,7 @@ setRealmAny
        
        **Throws**
        
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or field isn't a RealmAny field.
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist, it is not a dictionary field, the objects in the dictionary doesn't match the expected type or any Realm object in the dictionary belongs to a different Realm.
           
           
           
@@ -2744,77 +2846,32 @@ setRealmAny
        
    
    
+.. _setDouble:
+
+.. _setDouble__:
+
+.. _DynamicRealmObject_setDouble:
+
+.. _DynamicRealmObject_setDouble__:
 
 
-setUUID
--------
 
-.. _io_realm_DynamicRealmObject_setUUID_String__UUID_:
-
-.. _io_realm_DynamicRealmObject_setUUID_String_UUID_:
-
-.. _io_realm_DynamicRealmObject_setUUID_String__UUID_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **void** setUUID (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                             `UUID <https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html>`__  value)
-   
-   * - Sets the ``UUID``  value of the given field.
-       
-       
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``fieldName`` - field name.
-          
-          
-          
-       - ``value`` - value to insert.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or field isn't a UUID field.
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
-
-
-setObject
+setDouble
 ---------
 
-.. _io_realm_DynamicRealmObject_setObject_String__DynamicRealmObject_:
+.. _io_realm_DynamicRealmObject_setDouble_String__double_:
 
-.. _io_realm_DynamicRealmObject_setObject_String_DynamicRealmObject_:
-
-.. _io_realm_DynamicRealmObject_setObject_String__DynamicRealmObject_:
+.. _io_realm_DynamicRealmObject_setDouble_String_double_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public **void** setObject (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                               :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>`  value)
+   * -    public **void** setDouble (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                               **double** value)
    
-   * - Sets a reference to another object on the given field.
+   * - Sets the ``double``  value of the given field.
+       
+       
        
        
        
@@ -2825,7 +2882,7 @@ setObject
           
           
           
-       - ``value`` - object to link to.
+       - ``value`` - value to insert.
           
           
           
@@ -2837,7 +2894,7 @@ setObject
        
        **Throws**
        
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist, it doesn't link to other Realm objects, the type of DynamicRealmObject doesn't match or it belongs to a different Realm.
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or field isn't a double field.
           
           
           
@@ -2848,6 +2905,138 @@ setObject
        
    
    
+.. _setFloat:
+
+.. _setFloat__:
+
+.. _DynamicRealmObject_setFloat:
+
+.. _DynamicRealmObject_setFloat__:
+
+
+
+setFloat
+--------
+
+.. _io_realm_DynamicRealmObject_setFloat_String__float_:
+
+.. _io_realm_DynamicRealmObject_setFloat_String_float_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setFloat (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                              **float** value)
+   
+   * - Sets the ``float``  value of the given field.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - field name.
+          
+          
+          
+       - ``value`` - value to insert.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or field isn't a float field.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _setInt:
+
+.. _setInt__:
+
+.. _DynamicRealmObject_setInt:
+
+.. _DynamicRealmObject_setInt__:
+
+
+
+setInt
+------
+
+.. _io_realm_DynamicRealmObject_setInt_String__int_:
+
+.. _io_realm_DynamicRealmObject_setInt_String_int_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setInt (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                            **int** value)
+   
+   * - Sets the ``int``  value of the given field.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - field name to update.
+          
+          
+          
+       - ``value`` - value to insert.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or field isn't an integer field.
+          
+          
+          
+       - :ref:`RealmException <io_realm_exceptions_RealmException>`  - if the field is a :ref:`io.realm.annotations.PrimaryKey <io_realm_annotations_PrimaryKey>`  field.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _setList:
+
+.. _setList__:
+
+.. _DynamicRealmObject_setList:
+
+.. _DynamicRealmObject_setList__:
+
 
 
 setList
@@ -2907,28 +3096,30 @@ setList
        
    
    
+.. _setLong:
+
+.. _setLong__:
+
+.. _DynamicRealmObject_setLong:
+
+.. _DynamicRealmObject_setLong__:
 
 
-setDictionary
--------------
 
-.. _io_realm_DynamicRealmObject_setDictionary_String___any__:
+setLong
+-------
 
-.. _io_realm_DynamicRealmObject_setDictionary_String__any__:
+.. _io_realm_DynamicRealmObject_setLong_String__long_:
 
-.. _io_realm_DynamicRealmObject_setDictionary_String___any__:
+.. _io_realm_DynamicRealmObject_setLong_String_long_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public **void** setDictionary <**E (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                                   **<any> (?)** dictionary)
+   * -    public **void** setLong (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                             **long** value)
    
-   * - Sets the reference to a **RealmDictionary (?)** on the given field.
-       
-       This will copy all the elements in the dictionary into Realm, but any further changes to the dictionary will not be reflected in the Realm. Use :ref:`getDictionary(String) <io_realm_DynamicRealmObject_getDictionary_String_>`  in order to get a reference to the managed dictionary.
-       
-       
+   * - Sets the ``long``  value of the given field.
        
        
        
@@ -2941,68 +3132,7 @@ setDictionary
           
           
           
-       - ``dictionary`` - dictionary of objects. Must either be primitive types or :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>` s.
-          
-          
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       **Throws**
-       
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist, it is not a dictionary field, the objects in the dictionary doesn't match the expected type or any Realm object in the dictionary belongs to a different Realm.
-          
-          
-          
-       
-       
-       
-       
-       
-   
-   
-
-
-setRealmSet
------------
-
-.. _io_realm_DynamicRealmObject_setRealmSet_String___any__:
-
-.. _io_realm_DynamicRealmObject_setRealmSet_String__any__:
-
-.. _io_realm_DynamicRealmObject_setRealmSet_String___any__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **void** setRealmSet <**E (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
-                                 **<any> (?)** set)
-   
-   * - Sets the reference to a **RealmSet (?)** on the given field.
-       
-       This will copy all the elements in the set into Realm, but any further changes to the set will not be reflected in the Realm. Use :ref:`getRealmSet(String) <io_realm_DynamicRealmObject_getRealmSet_String_>`  in order to get a reference to the managed set.
-       
-       
-       
-       
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``fieldName`` - field name.
-          
-          
-          
-       - ``set`` - set of objects. Must either be primitive types or :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>` s.
-          
-          
+       - ``value`` - value to insert.
           
           
           
@@ -3014,7 +3144,13 @@ setRealmSet
        
        **Throws**
        
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist, it is not a set field, the objects in the set doesn't match the expected type or any Realm object in the set belongs to a different Realm.
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or field isn't an integer field.
+          
+          
+          
+       - :ref:`RealmException <io_realm_exceptions_RealmException>`  - if the field is a :ref:`io.realm.annotations.PrimaryKey <io_realm_annotations_PrimaryKey>`  field.
+          
+          
           
           
           
@@ -3025,14 +3161,18 @@ setRealmSet
        
    
    
+.. _setNull:
+
+.. _setNull__:
+
+.. _DynamicRealmObject_setNull:
+
+.. _DynamicRealmObject_setNull__:
+
 
 
 setNull
 -------
-
-.. _io_realm_DynamicRealmObject_setNull_String_:
-
-.. _io_realm_DynamicRealmObject_setNull_String_:
 
 .. _io_realm_DynamicRealmObject_setNull_String_:
 
@@ -3079,202 +3219,87 @@ setNull
        
    
    
+.. _setObject:
+
+.. _setObject__:
+
+.. _DynamicRealmObject_setObject:
+
+.. _DynamicRealmObject_setObject__:
 
 
-getType
--------
 
-.. _io_realm_DynamicRealmObject_getType__:
+setObject
+---------
 
-.. _io_realm_DynamicRealmObject_getType__:
+.. _io_realm_DynamicRealmObject_setObject_String__DynamicRealmObject_:
 
-.. _io_realm_DynamicRealmObject_getType__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getType ()
-   
-   * - Returns the type of object. This will normally correspond to the name of a class that is extending :ref:`RealmObject <io_realm_RealmObject>` .
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-
-
-getFieldType
-------------
-
-.. _io_realm_DynamicRealmObject_getFieldType_String_:
-
-.. _io_realm_DynamicRealmObject_getFieldType_String_:
-
-.. _io_realm_DynamicRealmObject_getFieldType_String_:
+.. _io_realm_DynamicRealmObject_setObject_String_DynamicRealmObject_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public :ref:`RealmFieldType <io_realm_RealmFieldType>`  getFieldType (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   * -    public **void** setObject (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                               :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>`  value)
    
-   * - Returns the type used by the underlying storage engine to represent this field.
+   * - Sets a reference to another object on the given field.
        
        
        
        
+       **Parameters**
        
-       
-       
-       
-       
-       
-       
-   
-   
-
-
-hashCode
---------
-
-.. _io_realm_DynamicRealmObject_hashCode__:
-
-.. _io_realm_DynamicRealmObject_hashCode__:
-
-.. _io_realm_DynamicRealmObject_hashCode__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **int** hashCode ()
-   
-   * - Returns a hash code value for the :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>`  object.
-       
-       By the general contract of `Object.hashCode() <https://docs.oracle.com/javase/7/docs/api/java/lang/Object/hashCode().html>`__ , any two objects for which **equals (?)** returns ``true``  must return the same hash code value.
-       
-       
-       
-       Note that a :ref:`RealmObject <io_realm_RealmObject>`  is a live object, and it might be updated by changes from other threads. This means that a hash code value of the object is not stable, and the value should be neither used as a key in HashMap nor saved in HashSet.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       .. seealso::
-       
-       
+       - ``fieldName`` - field name.
           
-          - **equals (?)**
-             
-             
-             
+          
+          
+       - ``value`` - object to link to.
           
           
           
        
        
+       
+       
+       
+       
+       **Throws**
+       
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist, it doesn't link to other Realm objects, the type of DynamicRealmObject doesn't match or it belongs to a different Realm.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
+.. _setObjectId:
+
+.. _setObjectId__:
+
+.. _DynamicRealmObject_setObjectId:
+
+.. _DynamicRealmObject_setObjectId__:
 
 
-equals
-------
 
-.. _io_realm_DynamicRealmObject_equals_Object_:
+setObjectId
+-----------
 
-.. _io_realm_DynamicRealmObject_equals_Object_:
+.. _io_realm_DynamicRealmObject_setObjectId_String__ObjectId_:
 
-.. _io_realm_DynamicRealmObject_equals_Object_:
+.. _io_realm_DynamicRealmObject_setObjectId_String_ObjectId_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
+   * -    public **void** setObjectId (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                 **ObjectId (?)** value)
    
-   * - 
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-
-
-toString
---------
-
-.. _io_realm_DynamicRealmObject_toString__:
-
-.. _io_realm_DynamicRealmObject_toString__:
-
-.. _io_realm_DynamicRealmObject_toString__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  toString ()
-   
-   * - 
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-
-
-linkingObjects
---------------
-
-.. _io_realm_DynamicRealmObject_linkingObjects_String__String_:
-
-.. _io_realm_DynamicRealmObject_linkingObjects_String_String_:
-
-.. _io_realm_DynamicRealmObject_linkingObjects_String__String_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public :ref:`RealmResults <io_realm_RealmResults>`  linkingObjects (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  srcClassName,
-                                            `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  srcFieldName)
-   
-   * - Returns :ref:`RealmResults <io_realm_RealmResults>`  containing all ``srcClassName``  class objects that have a relationship to this object from ``srcFieldName``  field.
-       
-       An entry is added for each reference, e.g. if the same reference is in a list multiple times, the src object will show up here multiple times.
+   * - Sets the ``ObjectId``  value of the given field.
        
        
        
@@ -3283,11 +3308,135 @@ linkingObjects
        
        **Parameters**
        
-       - ``srcClassName`` - name of the class returned objects belong to.
+       - ``fieldName`` - field name.
           
           
           
-       - ``srcFieldName`` - name of the field in the source class that holds a reference to this object. Field type must be either ``io.realm.RealmFieldType.OBJECT``  or ``io.realm.RealmFieldType.LIST`` .
+       - ``value`` - value to insert.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or field isn't a ObjectId field.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _setRealmAny:
+
+.. _setRealmAny__:
+
+.. _DynamicRealmObject_setRealmAny:
+
+.. _DynamicRealmObject_setRealmAny__:
+
+
+
+setRealmAny
+-----------
+
+.. _io_realm_DynamicRealmObject_setRealmAny_String__RealmAny_:
+
+.. _io_realm_DynamicRealmObject_setRealmAny_String_RealmAny_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setRealmAny (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                 :ref:`RealmAny <io_realm_RealmAny>`  value)
+   
+   * - Sets the ``RealmAny``  value of the given field.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - field name.
+          
+          
+          
+       - ``value`` - value to insert.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or field isn't a RealmAny field.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _setRealmSet:
+
+.. _setRealmSet__:
+
+.. _DynamicRealmObject_setRealmSet:
+
+.. _DynamicRealmObject_setRealmSet__:
+
+
+
+setRealmSet
+-----------
+
+.. _io_realm_DynamicRealmObject_setRealmSet_String__RealmSet_E__:
+
+.. _io_realm_DynamicRealmObject_setRealmSet_String_RealmSet_:
+
+.. _io_realm_DynamicRealmObject_setRealmSet_String__RealmSet_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setRealmSet <**E (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                 :ref:`io.realm.RealmSet\<E> <io_realm_RealmSet>`  set)
+   
+   * - Sets the reference to a :ref:`RealmSet <io_realm_RealmSet>`  on the given field.
+       
+       This will copy all the elements in the set into Realm, but any further changes to the set will not be reflected in the Realm. Use :ref:`getRealmSet(String) <io_realm_DynamicRealmObject_getRealmSet_String_>`  in order to get a reference to the managed set.
+       
+       
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - field name.
+          
+          
+          
+       - ``set`` - set of objects. Must either be primitive types or :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>` s.
           
           
           
@@ -3301,9 +3450,7 @@ linkingObjects
        
        **Throws**
        
-       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if the ``srcClassName``  is ``null``  or does not exist, the ``srcFieldName``  is ``null``  or does not exist, type of the source field is not supported.
-          
-          
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist, it is not a set field, the objects in the set doesn't match the expected type or any Realm object in the set belongs to a different Realm.
           
           
           
@@ -3314,31 +3461,46 @@ linkingObjects
        
    
    
+.. _setShort:
+
+.. _setShort__:
+
+.. _DynamicRealmObject_setShort:
+
+.. _DynamicRealmObject_setShort__:
 
 
-getDynamicRealm
----------------
 
-.. _io_realm_DynamicRealmObject_getDynamicRealm__:
+setShort
+--------
 
-.. _io_realm_DynamicRealmObject_getDynamicRealm__:
+.. _io_realm_DynamicRealmObject_setShort_String__short_:
 
-.. _io_realm_DynamicRealmObject_getDynamicRealm__:
+.. _io_realm_DynamicRealmObject_setShort_String_short_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public :ref:`DynamicRealm <io_realm_DynamicRealm>`  getDynamicRealm ()
+   * -    public **void** setShort (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                              **short** value)
    
-   * - Returns :ref:`DynamicRealm <io_realm_DynamicRealm>`  instance where this :ref:`DynamicRealmObject <io_realm_DynamicRealmObject>`  belongs.
-       
-       You **must not** call **DynamicRealm.close() (?)** against returned instance.
+   * - Sets the ``short``  value of the given field.
        
        
        
        
        
        
+       **Parameters**
+       
+       - ``fieldName`` - field name.
+          
+          
+          
+       - ``value`` - value to insert.
+          
+          
+          
        
        
        
@@ -3347,7 +3509,11 @@ getDynamicRealm
        
        **Throws**
        
-       - `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__  - if this object was deleted or the corresponding :ref:`DynamicRealm <io_realm_DynamicRealm>`  was already closed.
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or field isn't an integer field.
+          
+          
+          
+       - :ref:`RealmException <io_realm_exceptions_RealmException>`  - if the field is a :ref:`io.realm.annotations.PrimaryKey <io_realm_annotations_PrimaryKey>`  field.
           
           
           
@@ -3360,29 +3526,64 @@ getDynamicRealm
        
    
    
+.. _setString:
+
+.. _setString__:
+
+.. _DynamicRealmObject_setString:
+
+.. _DynamicRealmObject_setString__:
 
 
-realm$injectObjectContext
--------------------------
 
-.. _io_realm_DynamicRealmObject_realm_injectObjectContext__:
+setString
+---------
 
-.. _io_realm_DynamicRealmObject_realm_injectObjectContext__:
+.. _io_realm_DynamicRealmObject_setString_String__String_:
 
-.. _io_realm_DynamicRealmObject_realm_injectObjectContext__:
+.. _io_realm_DynamicRealmObject_setString_String_String_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public **void** realm$injectObjectContext ()
+   * -    public **void** setString (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
    
-   * - 
+   * - Sets the ``String``  value of the given field.
        
        
        
        
        
        
+       **Parameters**
+       
+       - ``fieldName`` - field name.
+          
+          
+          
+       - ``value`` - value to insert.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or field isn't a String field.
+          
+          
+          
+       - :ref:`RealmException <io_realm_exceptions_RealmException>`  - if the field is a :ref:`io.realm.annotations.PrimaryKey <io_realm_annotations_PrimaryKey>`  field.
+          
+          
+          
+          
+          
        
        
        
@@ -3390,21 +3591,86 @@ realm$injectObjectContext
        
    
    
+.. _setUUID:
+
+.. _setUUID__:
+
+.. _DynamicRealmObject_setUUID:
+
+.. _DynamicRealmObject_setUUID__:
 
 
-realmGet$proxyState
--------------------
 
-.. _io_realm_DynamicRealmObject_realmGet_proxyState__:
+setUUID
+-------
 
-.. _io_realm_DynamicRealmObject_realmGet_proxyState__:
+.. _io_realm_DynamicRealmObject_setUUID_String__UUID_:
 
-.. _io_realm_DynamicRealmObject_realmGet_proxyState__:
+.. _io_realm_DynamicRealmObject_setUUID_String_UUID_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public :ref:`ProxyState <io_realm_ProxyState>`  realmGet$proxyState ()
+   * -    public **void** setUUID (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                             `UUID <https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html>`__  value)
+   
+   * - Sets the ``UUID``  value of the given field.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``fieldName`` - field name.
+          
+          
+          
+       - ``value`` - value to insert.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `IllegalArgumentException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html>`__  - if field name doesn't exist or field isn't a UUID field.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+.. _toString:
+
+.. _toString__:
+
+.. _DynamicRealmObject_toString:
+
+.. _DynamicRealmObject_toString__:
+
+.. _io_realm_DynamicRealmObject_toString:
+
+.. _io_realm_DynamicRealmObject_toString__:
+
+
+
+toString
+--------
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  toString ()
    
    * - 
        

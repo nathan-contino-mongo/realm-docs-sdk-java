@@ -1,0 +1,172 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class JsonUtils
+^^^^^^^^^^^^^^^
+
+.. _io_realm_internal_android_JsonUtils:
+
+
+
+io.realm.internal.android
+=========================
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+
+
+
+Constructors
+============
+
+
+
+- ``io.realm.internal.android.JsonUtils()`` 
+
+
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public static **byte**
+     - 
+       :ref:`stringToBytes <io_realm_internal_android_JsonUtils_stringToBytes_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  str)
+       
+       Converts a Json string to byte[].
+       
+       
+       
+   
+   * - 
+       public static `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__ 
+     - 
+       :ref:`stringToDate <io_realm_internal_android_JsonUtils_stringToDate_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  date)
+       
+       Converts a Json string to a Java Date object.
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+
+
+
+
+Method Detail
+=============
+
+.. _stringToBytes:
+
+.. _stringToBytes__:
+
+.. _JsonUtils_stringToBytes:
+
+.. _JsonUtils_stringToBytes__:
+
+
+
+stringToBytes
+-------------
+
+.. _io_realm_internal_android_JsonUtils_stringToBytes_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static **byte** stringToBytes (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  str)
+   
+   * - Converts a Json string to byte[]. String must be Base64 encoded.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``str`` - the base 64 encoded bytes.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _stringToDate:
+
+.. _stringToDate__:
+
+.. _JsonUtils_stringToDate:
+
+.. _JsonUtils_stringToDate__:
+
+
+
+stringToDate
+------------
+
+.. _io_realm_internal_android_JsonUtils_stringToDate_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  stringToDate (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  date)
+   
+   * - Converts a Json string to a Java Date object. Currently supports 2 types: - "" - "/Date([+-Zone])/"
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``date`` - the String input of date of the the supported types.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - `NumberFormatException <https://docs.oracle.com/javase/7/docs/api/java/lang/NumberFormatException.html>`__  - if date is not a proper long or has an illegal format.
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+

@@ -1,0 +1,322 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class Pair
+^^^^^^^^^^
+
+.. _io_realm_internal_util_Pair:
+
+
+
+io.realm.internal.util
+======================
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+Container to ease passing around a tuple of two objects. This object provides a sensible implementation of equals(), returning true if equals() is true on each of the contained objects.
+
+
+Constructors
+============
+
+
+
+- ``io.realm.internal.util.Pair(F, S)`` 
+
+
+
+
+Field Summary
+=============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Field and Description
+   
+   * - ``public F`` 
+       
+       
+     - ``first`` 
+       
+       Implementation notes:
+       
+        Copy from the Android framework to avoid the dependency on Android classes + slight adjustment
+        to support older versions of Android.
+       
+        Original source: https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/util/Pair.java
+   
+   * - ``public S`` 
+       
+       
+     - ``second`` 
+       
+       
+   
+   
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public static :ref:`Pair <io_realm_internal_util_Pair>` 
+     - 
+       :ref:`create <io_realm_internal_util_Pair_create_A__B_>`  <**A (?)** , **B (?)** >(**A (?)** a,
+                                   **B (?)** b)
+       
+       Convenience method for creating an appropriately typed pair.
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`equals <io_realm_internal_util_Pair_equals_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
+       
+       Checks the two objects for equality by delegating to their respective `Object.equals(Object) <https://docs.oracle.com/javase/7/docs/api/java/lang/Object/equals(Object).html>`__  methods.
+       
+       
+       
+       
+       
+   
+   * - 
+       public **int**
+     - 
+       :ref:`hashCode <io_realm_internal_util_Pair_hashCode__>`  ()
+       
+       Compute a hash code using the hash codes of the underlying objects.
+       
+       
+       
+   
+   * - 
+       public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`toString <io_realm_internal_util_Pair_toString__>`  ()
+       
+       
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+
+
+
+
+Field Detail
+============
+
+.. _io_realm_internal_util_Pair_first:
+
+
+
+``first`` 
+----------
+
+Implementation notes: Copy from the Android framework to avoid the dependency on Android classes + slight adjustment to support older versions of Android. Original source: https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/util/Pair.java
+.. _io_realm_internal_util_Pair_second:
+
+
+
+``second`` 
+-----------
+
+
+
+
+Method Detail
+=============
+
+.. _create:
+
+.. _create__:
+
+.. _Pair_create:
+
+.. _Pair_create__:
+
+
+
+create
+------
+
+.. _io_realm_internal_util_Pair_create_A__B_:
+
+.. _io_realm_internal_util_Pair_create_A_B_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`Pair <io_realm_internal_util_Pair>`  create <**A (?)** , **B (?)** >(**A (?)** a,
+                                   **B (?)** b)
+   
+   * - Convenience method for creating an appropriately typed pair.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``a`` - the first object in the Pair.
+          
+          
+          
+       - ``b`` - the second object in the pair.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _equals:
+
+.. _equals__:
+
+.. _Pair_equals:
+
+.. _Pair_equals__:
+
+
+
+equals
+------
+
+.. _io_realm_internal_util_Pair_equals_Object_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
+   
+   * - Checks the two objects for equality by delegating to their respective `Object.equals(Object) <https://docs.oracle.com/javase/7/docs/api/java/lang/Object/equals(Object).html>`__  methods.
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``o`` - the :ref:`Pair <io_realm_internal_util_Pair>`  to which this one is to be checked for equality.
+          
+          
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _hashCode:
+
+.. _hashCode__:
+
+.. _Pair_hashCode:
+
+.. _Pair_hashCode__:
+
+.. _io_realm_internal_util_Pair_hashCode:
+
+.. _io_realm_internal_util_Pair_hashCode__:
+
+
+
+hashCode
+--------
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **int** hashCode ()
+   
+   * - Compute a hash code using the hash codes of the underlying objects.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _toString:
+
+.. _toString__:
+
+.. _Pair_toString:
+
+.. _Pair_toString__:
+
+.. _io_realm_internal_util_Pair_toString:
+
+.. _io_realm_internal_util_Pair_toString__:
+
+
+
+toString
+--------
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  toString ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
