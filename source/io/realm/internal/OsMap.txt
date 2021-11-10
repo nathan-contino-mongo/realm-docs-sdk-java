@@ -1,0 +1,1331 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class OsMap
+^^^^^^^^^^^
+
+.. _io_realm_internal_OsMap:
+
+
+
+io.realm.internal
+=================
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+*Implemented interfaces:*
+
+
+
+- :ref:`io.realm.internal.NativeObject <io_realm_internal_NativeObject>` 
+
+
+Java wrapper of Object Store Dictionary class. This backs managed versions of RealmMaps.
+
+
+Constructors
+============
+
+
+
+- ``io.realm.internal.OsMap(UncheckedRow, long)`` 
+
+
+
+
+Field Summary
+=============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Field and Description
+   
+   * - ``public static final int`` 
+       
+       
+     - ``NOT_FOUND`` 
+       
+       
+   
+   
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public **void**
+     - 
+       :ref:`clear <io_realm_internal_OsMap_clear__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`containsKey <io_realm_internal_OsMap_containsKey_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  key)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`containsPrimitiveValue <io_realm_internal_OsMap_containsPrimitiveValue_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`containsRealmAnyValue <io_realm_internal_OsMap_containsRealmAnyValue_long_>`  (**long** realmAnyPtr)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`containsRealmModel <io_realm_internal_OsMap_containsRealmModel_long__long_>`  (**long** objKey,
+                                           **long** tablePtr)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`createAndPutEmbeddedObject <io_realm_internal_OsMap_createAndPutEmbeddedObject_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  key)
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`OsMap <io_realm_internal_OsMap>` 
+     - 
+       :ref:`freeze <io_realm_internal_OsMap_freeze_OsSharedRealm_>`  (:ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  osSharedRealm)
+       
+       
+       
+       
+       
+   
+   * - 
+       public `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+     - 
+       :ref:`get <io_realm_internal_OsMap_get_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  key)
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`Pair <io_realm_internal_util_Pair>` 
+     - 
+       :ref:`getEntryForPrimitive <io_realm_internal_OsMap_getEntryForPrimitive_int_>`  <**K (?)** >(**int** position)
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`Pair <io_realm_internal_util_Pair>` 
+     - 
+       :ref:`getKeyObjRowPair <io_realm_internal_OsMap_getKeyObjRowPair_int_>`  <**K (?)** >(**int** position)
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`Pair <io_realm_internal_util_Pair>` 
+     - 
+       :ref:`getKeyRealmAnyPair <io_realm_internal_OsMap_getKeyRealmAnyPair_int_>`  <**K (?)** >(**int** position)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`getModelRowKey <io_realm_internal_OsMap_getModelRowKey_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  key)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`getNativeFinalizerPtr <io_realm_internal_OsMap_getNativeFinalizerPtr__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`getNativePtr <io_realm_internal_OsMap_getNativePtr__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`getRealmAnyPtr <io_realm_internal_OsMap_getRealmAnyPtr_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  key)
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`Table <io_realm_internal_Table>` 
+     - 
+       :ref:`getTargetTable <io_realm_internal_OsMap_getTargetTable__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`isValid <io_realm_internal_OsMap_isValid__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`put <io_realm_internal_OsMap_put_Object__Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  key,
+                         `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`putRealmAny <io_realm_internal_OsMap_putRealmAny_Object__long_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  key,
+                                 **long** nativeRealmAnyPtr)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`putRow <io_realm_internal_OsMap_putRow_Object__long_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  key,
+                            **long** objKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`remove <io_realm_internal_OsMap_remove_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  key)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`size <io_realm_internal_OsMap_size__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`startListening <io_realm_internal_OsMap_startListening_ObservableMap_>`  (:ref:`ObservableMap <io_realm_internal_ObservableMap>`  observableMap)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`stopListening <io_realm_internal_OsMap_stopListening__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`Pair <io_realm_internal_util_Pair>` 
+     - 
+       :ref:`tableAndKeyPtrs <io_realm_internal_OsMap_tableAndKeyPtrs__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`Pair <io_realm_internal_util_Pair>` 
+     - 
+       :ref:`tableAndValuePtrs <io_realm_internal_OsMap_tableAndValuePtrs__>`  ()
+       
+       
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+
+
+
+
+Field Detail
+============
+
+.. _io_realm_internal_OsMap_NOT_FOUND:
+
+
+
+``NOT_FOUND`` 
+--------------
+
+
+
+
+Method Detail
+=============
+
+.. _clear:
+
+.. _clear__:
+
+.. _OsMap_clear:
+
+.. _OsMap_clear__:
+
+
+
+clear
+-----
+
+.. _io_realm_internal_OsMap_clear__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** clear ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _containsKey:
+
+.. _containsKey__:
+
+.. _OsMap_containsKey:
+
+.. _OsMap_containsKey__:
+
+.. _io_realm_internal_OsMap_containsKey:
+
+.. _io_realm_internal_OsMap_containsKey__:
+
+
+
+containsKey
+-----------
+
+.. _io_realm_internal_OsMap_containsKey_Object_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** containsKey (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  key)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _containsPrimitiveValue:
+
+.. _containsPrimitiveValue__:
+
+.. _OsMap_containsPrimitiveValue:
+
+.. _OsMap_containsPrimitiveValue__:
+
+.. _io_realm_internal_OsMap_containsPrimitiveValue:
+
+.. _io_realm_internal_OsMap_containsPrimitiveValue__:
+
+
+
+containsPrimitiveValue
+----------------------
+
+.. _io_realm_internal_OsMap_containsPrimitiveValue_Object_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** containsPrimitiveValue (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _containsRealmAnyValue:
+
+.. _containsRealmAnyValue__:
+
+.. _OsMap_containsRealmAnyValue:
+
+.. _OsMap_containsRealmAnyValue__:
+
+.. _io_realm_internal_OsMap_containsRealmAnyValue:
+
+.. _io_realm_internal_OsMap_containsRealmAnyValue__:
+
+
+
+containsRealmAnyValue
+---------------------
+
+.. _io_realm_internal_OsMap_containsRealmAnyValue_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** containsRealmAnyValue (**long** realmAnyPtr)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _containsRealmModel:
+
+.. _containsRealmModel__:
+
+.. _OsMap_containsRealmModel:
+
+.. _OsMap_containsRealmModel__:
+
+.. _io_realm_internal_OsMap_containsRealmModel:
+
+.. _io_realm_internal_OsMap_containsRealmModel__:
+
+
+
+containsRealmModel
+------------------
+
+.. _io_realm_internal_OsMap_containsRealmModel_long__long_:
+
+.. _io_realm_internal_OsMap_containsRealmModel_long_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** containsRealmModel (**long** objKey,
+                                           **long** tablePtr)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _createAndPutEmbeddedObject:
+
+.. _createAndPutEmbeddedObject__:
+
+.. _OsMap_createAndPutEmbeddedObject:
+
+.. _OsMap_createAndPutEmbeddedObject__:
+
+.. _io_realm_internal_OsMap_createAndPutEmbeddedObject:
+
+.. _io_realm_internal_OsMap_createAndPutEmbeddedObject__:
+
+
+
+createAndPutEmbeddedObject
+--------------------------
+
+.. _io_realm_internal_OsMap_createAndPutEmbeddedObject_Object_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** createAndPutEmbeddedObject (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  key)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _freeze:
+
+.. _freeze__:
+
+.. _OsMap_freeze:
+
+.. _OsMap_freeze__:
+
+.. _io_realm_internal_OsMap_freeze:
+
+.. _io_realm_internal_OsMap_freeze__:
+
+
+
+freeze
+------
+
+.. _io_realm_internal_OsMap_freeze_OsSharedRealm_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`OsMap <io_realm_internal_OsMap>`  freeze (:ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  osSharedRealm)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _get:
+
+.. _get__:
+
+.. _OsMap_get:
+
+.. _OsMap_get__:
+
+.. _io_realm_internal_OsMap_get:
+
+.. _io_realm_internal_OsMap_get__:
+
+
+
+get
+----
+
+.. _io_realm_internal_OsMap_get_Object_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  get (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  key)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getEntryForPrimitive:
+
+.. _getEntryForPrimitive__:
+
+.. _OsMap_getEntryForPrimitive:
+
+.. _OsMap_getEntryForPrimitive__:
+
+.. _io_realm_internal_OsMap_getEntryForPrimitive:
+
+.. _io_realm_internal_OsMap_getEntryForPrimitive__:
+
+
+
+getEntryForPrimitive
+--------------------
+
+.. _io_realm_internal_OsMap_getEntryForPrimitive_int_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`Pair <io_realm_internal_util_Pair>`  getEntryForPrimitive <**K (?)** >(**int** position)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getKeyObjRowPair:
+
+.. _getKeyObjRowPair__:
+
+.. _OsMap_getKeyObjRowPair:
+
+.. _OsMap_getKeyObjRowPair__:
+
+.. _io_realm_internal_OsMap_getKeyObjRowPair:
+
+.. _io_realm_internal_OsMap_getKeyObjRowPair__:
+
+
+
+getKeyObjRowPair
+----------------
+
+.. _io_realm_internal_OsMap_getKeyObjRowPair_int_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`Pair <io_realm_internal_util_Pair>`  getKeyObjRowPair <**K (?)** >(**int** position)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getKeyRealmAnyPair:
+
+.. _getKeyRealmAnyPair__:
+
+.. _OsMap_getKeyRealmAnyPair:
+
+.. _OsMap_getKeyRealmAnyPair__:
+
+.. _io_realm_internal_OsMap_getKeyRealmAnyPair:
+
+.. _io_realm_internal_OsMap_getKeyRealmAnyPair__:
+
+
+
+getKeyRealmAnyPair
+------------------
+
+.. _io_realm_internal_OsMap_getKeyRealmAnyPair_int_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`Pair <io_realm_internal_util_Pair>`  getKeyRealmAnyPair <**K (?)** >(**int** position)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getModelRowKey:
+
+.. _getModelRowKey__:
+
+.. _OsMap_getModelRowKey:
+
+.. _OsMap_getModelRowKey__:
+
+.. _io_realm_internal_OsMap_getModelRowKey:
+
+.. _io_realm_internal_OsMap_getModelRowKey__:
+
+
+
+getModelRowKey
+--------------
+
+.. _io_realm_internal_OsMap_getModelRowKey_Object_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** getModelRowKey (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  key)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getNativeFinalizerPtr:
+
+.. _getNativeFinalizerPtr__:
+
+.. _OsMap_getNativeFinalizerPtr:
+
+.. _OsMap_getNativeFinalizerPtr__:
+
+
+
+getNativeFinalizerPtr
+---------------------
+
+.. _io_realm_internal_OsMap_getNativeFinalizerPtr__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** getNativeFinalizerPtr ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getNativePtr:
+
+.. _getNativePtr__:
+
+.. _OsMap_getNativePtr:
+
+.. _OsMap_getNativePtr__:
+
+
+
+getNativePtr
+------------
+
+.. _io_realm_internal_OsMap_getNativePtr__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** getNativePtr ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getRealmAnyPtr:
+
+.. _getRealmAnyPtr__:
+
+.. _OsMap_getRealmAnyPtr:
+
+.. _OsMap_getRealmAnyPtr__:
+
+.. _io_realm_internal_OsMap_getRealmAnyPtr:
+
+.. _io_realm_internal_OsMap_getRealmAnyPtr__:
+
+
+
+getRealmAnyPtr
+--------------
+
+.. _io_realm_internal_OsMap_getRealmAnyPtr_Object_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** getRealmAnyPtr (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  key)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getTargetTable:
+
+.. _getTargetTable__:
+
+.. _OsMap_getTargetTable:
+
+.. _OsMap_getTargetTable__:
+
+
+
+getTargetTable
+--------------
+
+.. _io_realm_internal_OsMap_getTargetTable__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`Table <io_realm_internal_Table>`  getTargetTable ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _isValid:
+
+.. _isValid__:
+
+.. _OsMap_isValid:
+
+.. _OsMap_isValid__:
+
+
+
+isValid
+-------
+
+.. _io_realm_internal_OsMap_isValid__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** isValid ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _put:
+
+.. _put__:
+
+.. _OsMap_put:
+
+.. _OsMap_put__:
+
+.. _io_realm_internal_OsMap_put:
+
+.. _io_realm_internal_OsMap_put__:
+
+
+
+put
+----
+
+.. _io_realm_internal_OsMap_put_Object__Object_:
+
+.. _io_realm_internal_OsMap_put_Object_Object_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** put (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  key,
+                         `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _putRealmAny:
+
+.. _putRealmAny__:
+
+.. _OsMap_putRealmAny:
+
+.. _OsMap_putRealmAny__:
+
+.. _io_realm_internal_OsMap_putRealmAny:
+
+.. _io_realm_internal_OsMap_putRealmAny__:
+
+
+
+putRealmAny
+-----------
+
+.. _io_realm_internal_OsMap_putRealmAny_Object__long_:
+
+.. _io_realm_internal_OsMap_putRealmAny_Object_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** putRealmAny (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  key,
+                                 **long** nativeRealmAnyPtr)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _putRow:
+
+.. _putRow__:
+
+.. _OsMap_putRow:
+
+.. _OsMap_putRow__:
+
+.. _io_realm_internal_OsMap_putRow:
+
+.. _io_realm_internal_OsMap_putRow__:
+
+
+
+putRow
+------
+
+.. _io_realm_internal_OsMap_putRow_Object__long_:
+
+.. _io_realm_internal_OsMap_putRow_Object_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** putRow (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  key,
+                            **long** objKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _remove:
+
+.. _remove__:
+
+.. _OsMap_remove:
+
+.. _OsMap_remove__:
+
+.. _io_realm_internal_OsMap_remove:
+
+.. _io_realm_internal_OsMap_remove__:
+
+
+
+remove
+------
+
+.. _io_realm_internal_OsMap_remove_Object_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** remove (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  key)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _size:
+
+.. _size__:
+
+.. _OsMap_size:
+
+.. _OsMap_size__:
+
+
+
+size
+----
+
+.. _io_realm_internal_OsMap_size__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** size ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _startListening:
+
+.. _startListening__:
+
+.. _OsMap_startListening:
+
+.. _OsMap_startListening__:
+
+.. _io_realm_internal_OsMap_startListening:
+
+.. _io_realm_internal_OsMap_startListening__:
+
+
+
+startListening
+--------------
+
+.. _io_realm_internal_OsMap_startListening_ObservableMap_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** startListening (:ref:`ObservableMap <io_realm_internal_ObservableMap>`  observableMap)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _stopListening:
+
+.. _stopListening__:
+
+.. _OsMap_stopListening:
+
+.. _OsMap_stopListening__:
+
+
+
+stopListening
+-------------
+
+.. _io_realm_internal_OsMap_stopListening__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** stopListening ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _tableAndKeyPtrs:
+
+.. _tableAndKeyPtrs__:
+
+.. _OsMap_tableAndKeyPtrs:
+
+.. _OsMap_tableAndKeyPtrs__:
+
+
+
+tableAndKeyPtrs
+---------------
+
+.. _io_realm_internal_OsMap_tableAndKeyPtrs__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`Pair <io_realm_internal_util_Pair>`  tableAndKeyPtrs ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _tableAndValuePtrs:
+
+.. _tableAndValuePtrs__:
+
+.. _OsMap_tableAndValuePtrs:
+
+.. _OsMap_tableAndValuePtrs__:
+
+
+
+tableAndValuePtrs
+-----------------
+
+.. _io_realm_internal_OsMap_tableAndValuePtrs__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`Pair <io_realm_internal_util_Pair>`  tableAndValuePtrs ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

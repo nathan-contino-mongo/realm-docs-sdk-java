@@ -1,0 +1,4555 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class UncheckedRow
+^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_internal_UncheckedRow:
+
+
+
+io.realm.internal
+=================
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+*Implemented interfaces:*
+
+
+
+- :ref:`io.realm.internal.NativeObject <io_realm_internal_NativeObject>` 
+- :ref:`io.realm.internal.Row <io_realm_internal_Row>` 
+
+
+Wrapper around a Row in Realm Core.IMPORTANT: All access to methods using this class are non-checking. Safety guarantees are given by the annotation processor and Object Store's typed Realm schema validation which is called before the typed API can be used.
+
+For low-level access to Row data where error checking is required, use :ref:`CheckedRow <io_realm_internal_CheckedRow>` .
+
+
+
+
+
+
+Constructors
+============
+
+
+
+- ``io.realm.internal.UncheckedRow(NativeContext, Table, long)`` 
+
+
+
+
+Field Summary
+=============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Field and Description
+   
+   * - ``protected final io.realm.internal.NativeContext`` 
+       
+       
+     - ``context`` 
+       
+       
+   
+   * - ``protected final io.realm.internal.Table`` 
+       
+       
+     - ``parent`` 
+       
+       
+   
+   
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public **void**
+     - 
+       :ref:`checkIfAttached <io_realm_internal_UncheckedRow_checkIfAttached__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`CheckedRow <io_realm_internal_CheckedRow>` 
+     - 
+       :ref:`convertToChecked <io_realm_internal_UncheckedRow_convertToChecked__>`  ()
+       
+       Converts the unchecked Row to a checked variant.
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`createEmbeddedObject <io_realm_internal_UncheckedRow_createEmbeddedObject_long__RealmFieldType_>`  (**long** columnKey,
+                                          :ref:`RealmFieldType <io_realm_RealmFieldType>`  parentPropertyType)
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`Row <io_realm_internal_Row>` 
+     - 
+       :ref:`freeze <io_realm_internal_UncheckedRow_freeze_OsSharedRealm_>`  (:ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  frozenRealm)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **byte**
+     - 
+       :ref:`getBinaryByteArray <io_realm_internal_UncheckedRow_getBinaryByteArray_long_>`  (**long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`getBoolean <io_realm_internal_UncheckedRow_getBoolean_long_>`  (**long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`getColumnCount <io_realm_internal_UncheckedRow_getColumnCount__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`getColumnKey <io_realm_internal_UncheckedRow_getColumnKey_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  columnName)
+       
+       
+       
+       
+       
+   
+   * - 
+       public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`getColumnNames <io_realm_internal_UncheckedRow_getColumnNames__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`RealmFieldType <io_realm_RealmFieldType>` 
+     - 
+       :ref:`getColumnType <io_realm_internal_UncheckedRow_getColumnType_long_>`  (**long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__ 
+     - 
+       :ref:`getDate <io_realm_internal_UncheckedRow_getDate_long_>`  (**long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **Decimal128 (?)**
+     - 
+       :ref:`getDecimal128 <io_realm_internal_UncheckedRow_getDecimal128_long_>`  (**long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **double**
+     - 
+       :ref:`getDouble <io_realm_internal_UncheckedRow_getDouble_long_>`  (**long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **float**
+     - 
+       :ref:`getFloat <io_realm_internal_UncheckedRow_getFloat_long_>`  (**long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`getLink <io_realm_internal_UncheckedRow_getLink_long_>`  (**long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`getLong <io_realm_internal_UncheckedRow_getLong_long_>`  (**long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`OsList <io_realm_internal_OsList>` 
+     - 
+       :ref:`getModelList <io_realm_internal_UncheckedRow_getModelList_long_>`  (**long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`OsMap <io_realm_internal_OsMap>` 
+     - 
+       :ref:`getModelMap <io_realm_internal_UncheckedRow_getModelMap_long_>`  (**long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`OsSet <io_realm_internal_OsSet>` 
+     - 
+       :ref:`getModelSet <io_realm_internal_UncheckedRow_getModelSet_long_>`  (**long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`getNativeFinalizerPtr <io_realm_internal_UncheckedRow_getNativeFinalizerPtr__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`getNativePtr <io_realm_internal_UncheckedRow_getNativePtr__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`NativeRealmAny <io_realm_internal_core_NativeRealmAny>` 
+     - 
+       :ref:`getNativeRealmAny <io_realm_internal_UncheckedRow_getNativeRealmAny_long_>`  (**long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **ObjectId (?)**
+     - 
+       :ref:`getObjectId <io_realm_internal_UncheckedRow_getObjectId_long_>`  (**long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`getObjectKey <io_realm_internal_UncheckedRow_getObjectKey__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`OsMap <io_realm_internal_OsMap>` 
+     - 
+       :ref:`getRealmAnyMap <io_realm_internal_UncheckedRow_getRealmAnyMap_long_>`  (**long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`OsSet <io_realm_internal_OsSet>` 
+     - 
+       :ref:`getRealmAnySet <io_realm_internal_UncheckedRow_getRealmAnySet_long_>`  (**long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`getString <io_realm_internal_UncheckedRow_getString_long_>`  (**long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`Table <io_realm_internal_Table>` 
+     - 
+       :ref:`getTable <io_realm_internal_UncheckedRow_getTable__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public `UUID <https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html>`__ 
+     - 
+       :ref:`getUUID <io_realm_internal_UncheckedRow_getUUID_long_>`  (**long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`OsList <io_realm_internal_OsList>` 
+     - 
+       :ref:`getValueList <io_realm_internal_UncheckedRow_getValueList_long__RealmFieldType_>`  (**long** columnKey,
+                                    :ref:`RealmFieldType <io_realm_RealmFieldType>`  fieldType)
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`OsMap <io_realm_internal_OsMap>` 
+     - 
+       :ref:`getValueMap <io_realm_internal_UncheckedRow_getValueMap_long__RealmFieldType_>`  (**long** columnKey,
+                                  :ref:`RealmFieldType <io_realm_RealmFieldType>`  fieldType)
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`OsSet <io_realm_internal_OsSet>` 
+     - 
+       :ref:`getValueSet <io_realm_internal_UncheckedRow_getValueSet_long__RealmFieldType_>`  (**long** columnKey,
+                                  :ref:`RealmFieldType <io_realm_RealmFieldType>`  fieldType)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`hasColumn <io_realm_internal_UncheckedRow_hasColumn_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`isLoaded <io_realm_internal_UncheckedRow_isLoaded__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`isNull <io_realm_internal_UncheckedRow_isNull_long_>`  (**long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`isNullLink <io_realm_internal_UncheckedRow_isNullLink_long_>`  (**long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`isValid <io_realm_internal_UncheckedRow_isValid__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native **long**
+     - 
+       :ref:`nativeCreateEmbeddedObject <io_realm_internal_UncheckedRow_nativeCreateEmbeddedObject_long__long_>`  (**long** nativeRowPtr,
+                                                          **long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native **long**
+     - 
+       :ref:`nativeFreeze <io_realm_internal_UncheckedRow_nativeFreeze_long__long_>`  (**long** nativeRowPtr,
+                                            **long** frozenRealmNativePtr)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native **boolean**
+     - 
+       :ref:`nativeGetBoolean <io_realm_internal_UncheckedRow_nativeGetBoolean_long__long_>`  (**long** nativeRowPtr,
+                                                   **long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native **byte**
+     - 
+       :ref:`nativeGetByteArray <io_realm_internal_UncheckedRow_nativeGetByteArray_long__long_>`  (**long** nativePtr,
+                                                  **long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native **long**
+     - 
+       :ref:`nativeGetColumnCount <io_realm_internal_UncheckedRow_nativeGetColumnCount_long_>`  (**long** nativeTablePtr)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native **long**
+     - 
+       :ref:`nativeGetColumnKey <io_realm_internal_UncheckedRow_nativeGetColumnKey_long__String_>`  (**long** nativeTablePtr,
+                                                  `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  columnName)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`nativeGetColumnNames <io_realm_internal_UncheckedRow_nativeGetColumnNames_long_>`  (**long** nativeTablePtr)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native **int**
+     - 
+       :ref:`nativeGetColumnType <io_realm_internal_UncheckedRow_nativeGetColumnType_long__long_>`  (**long** nativeTablePtr,
+                                                  **long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native **long**
+     - 
+       :ref:`nativeGetDecimal128 <io_realm_internal_UncheckedRow_nativeGetDecimal128_long__long_>`  (**long** nativePtr,
+                                                   **long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native **double**
+     - 
+       :ref:`nativeGetDouble <io_realm_internal_UncheckedRow_nativeGetDouble_long__long_>`  (**long** nativeRowPtr,
+                                                 **long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native **float**
+     - 
+       :ref:`nativeGetFloat <io_realm_internal_UncheckedRow_nativeGetFloat_long__long_>`  (**long** nativeRowPtr,
+                                               **long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native **long**
+     - 
+       :ref:`nativeGetLink <io_realm_internal_UncheckedRow_nativeGetLink_long__long_>`  (**long** nativeRowPtr,
+                                             **long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native **long**
+     - 
+       :ref:`nativeGetLong <io_realm_internal_UncheckedRow_nativeGetLong_long__long_>`  (**long** nativeRowPtr,
+                                             **long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`nativeGetObjectId <io_realm_internal_UncheckedRow_nativeGetObjectId_long__long_>`  (**long** nativePtr,
+                                                   **long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native **long**
+     - 
+       :ref:`nativeGetObjectKey <io_realm_internal_UncheckedRow_nativeGetObjectKey_long_>`  (**long** nativeRowPtr)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native **long**
+     - 
+       :ref:`nativeGetRealmAny <io_realm_internal_UncheckedRow_nativeGetRealmAny_long__long_>`  (**long** nativePtr,
+                                                 **long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`nativeGetString <io_realm_internal_UncheckedRow_nativeGetString_long__long_>`  (**long** nativePtr,
+                                                 **long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native **long**
+     - 
+       :ref:`nativeGetTimestamp <io_realm_internal_UncheckedRow_nativeGetTimestamp_long__long_>`  (**long** nativeRowPtr,
+                                                  **long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`nativeGetUUID <io_realm_internal_UncheckedRow_nativeGetUUID_long__long_>`  (**long** nativePtr,
+                                               **long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native **boolean**
+     - 
+       :ref:`nativeHasColumn <io_realm_internal_UncheckedRow_nativeHasColumn_long__String_>`  (**long** nativeRowPtr,
+                                                  `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  columnName)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native **boolean**
+     - 
+       :ref:`nativeIsNull <io_realm_internal_UncheckedRow_nativeIsNull_long__long_>`  (**long** nativeRowPtr,
+                                               **long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native **boolean**
+     - 
+       :ref:`nativeIsNullLink <io_realm_internal_UncheckedRow_nativeIsNullLink_long__long_>`  (**long** nativeRowPtr,
+                                                   **long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native **boolean**
+     - 
+       :ref:`nativeIsValid <io_realm_internal_UncheckedRow_nativeIsValid_long_>`  (**long** nativeRowPtr)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native **void**
+     - 
+       :ref:`nativeNullifyLink <io_realm_internal_UncheckedRow_nativeNullifyLink_long__long_>`  (**long** nativeRowPtr,
+                                                 **long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native **void**
+     - 
+       :ref:`nativeSetBoolean <io_realm_internal_UncheckedRow_nativeSetBoolean_long__long__boolean_>`  (**long** nativeRowPtr,
+                                                **long** columnKey,
+                                                **boolean** value)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native **void**
+     - 
+       :ref:`nativeSetByteArray <io_realm_internal_UncheckedRow_nativeSetByteArray_long__long__byte[]_>`  (**long** nativePtr,
+                                                  **long** columnKey,
+                                                  **byte[]** data)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native **void**
+     - 
+       :ref:`nativeSetDecimal128 <io_realm_internal_UncheckedRow_nativeSetDecimal128_long__long__long__long_>`  (**long** nativePtr,
+                                                   **long** columnKey,
+                                                   **long** low,
+                                                   **long** high)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native **void**
+     - 
+       :ref:`nativeSetDouble <io_realm_internal_UncheckedRow_nativeSetDouble_long__long__double_>`  (**long** nativeRowPtr,
+                                               **long** columnKey,
+                                               **double** value)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native **void**
+     - 
+       :ref:`nativeSetFloat <io_realm_internal_UncheckedRow_nativeSetFloat_long__long__float_>`  (**long** nativeRowPtr,
+                                              **long** columnKey,
+                                              **float** value)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native **void**
+     - 
+       :ref:`nativeSetLink <io_realm_internal_UncheckedRow_nativeSetLink_long__long__long_>`  (**long** nativeRowPtr,
+                                             **long** columnKey,
+                                             **long** value)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native **void**
+     - 
+       :ref:`nativeSetLong <io_realm_internal_UncheckedRow_nativeSetLong_long__long__long_>`  (**long** nativeRowPtr,
+                                             **long** columnKey,
+                                             **long** value)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native **void**
+     - 
+       :ref:`nativeSetNull <io_realm_internal_UncheckedRow_nativeSetNull_long__long_>`  (**long** nativeRowPtr,
+                                             **long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native **void**
+     - 
+       :ref:`nativeSetObjectId <io_realm_internal_UncheckedRow_nativeSetObjectId_long__long__String_>`  (**long** nativePtr,
+                                                 **long** columnKey,
+                                                 `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native **void**
+     - 
+       :ref:`nativeSetRealmAny <io_realm_internal_UncheckedRow_nativeSetRealmAny_long__long__long_>`  (**long** nativeRowPtr,
+                                                 **long** columnKey,
+                                                 **long** nativePtr)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native **void**
+     - 
+       :ref:`nativeSetString <io_realm_internal_UncheckedRow_nativeSetString_long__long__String_>`  (**long** nativeRowPtr,
+                                               **long** columnKey,
+                                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native **void**
+     - 
+       :ref:`nativeSetTimestamp <io_realm_internal_UncheckedRow_nativeSetTimestamp_long__long__long_>`  (**long** nativeRowPtr,
+                                                  **long** columnKey,
+                                                  **long** dateTimeValue)
+       
+       
+       
+       
+       
+   
+   * - 
+       protected native **void**
+     - 
+       :ref:`nativeSetUUID <io_realm_internal_UncheckedRow_nativeSetUUID_long__long__String_>`  (**long** nativePtr,
+                                             **long** columnKey,
+                                             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`nullifyLink <io_realm_internal_UncheckedRow_nullifyLink_long_>`  (**long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setBinaryByteArray <io_realm_internal_UncheckedRow_setBinaryByteArray_long__byte[]_>`  (**long** columnKey,
+                                        **byte[]** data)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setBoolean <io_realm_internal_UncheckedRow_setBoolean_long__boolean_>`  (**long** columnKey,
+                                **boolean** value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setDate <io_realm_internal_UncheckedRow_setDate_long__Date_>`  (**long** columnKey,
+                             `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  date)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setDecimal128 <io_realm_internal_UncheckedRow_setDecimal128_long__Decimal128_>`  (**long** columnKey,
+                                   **Decimal128 (?)** value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setDouble <io_realm_internal_UncheckedRow_setDouble_long__double_>`  (**long** columnKey,
+                               **double** value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setFloat <io_realm_internal_UncheckedRow_setFloat_long__float_>`  (**long** columnKey,
+                              **float** value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setLink <io_realm_internal_UncheckedRow_setLink_long__long_>`  (**long** columnKey,
+                             **long** value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setLong <io_realm_internal_UncheckedRow_setLong_long__long_>`  (**long** columnKey,
+                             **long** value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setNull <io_realm_internal_UncheckedRow_setNull_long_>`  (**long** columnKey)
+       
+       Sets null to a row pointer.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setObjectId <io_realm_internal_UncheckedRow_setObjectId_long__ObjectId_>`  (**long** columnKey,
+                                 **ObjectId (?)** value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setRealmAny <io_realm_internal_UncheckedRow_setRealmAny_long__long_>`  (**long** columnKey,
+                                 **long** realmAnyNativePtr)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setString <io_realm_internal_UncheckedRow_setString_long__String_>`  (**long** columnKey,
+                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
+       
+       Sets a string value to a row pointer.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setUUID <io_realm_internal_UncheckedRow_setUUID_long__UUID_>`  (**long** columnKey,
+                             `UUID <https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html>`__  value)
+       
+       
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+
+
+
+
+Field Detail
+============
+
+.. _io_realm_internal_UncheckedRow_context:
+
+
+
+``context`` 
+------------
+
+
+.. _io_realm_internal_UncheckedRow_parent:
+
+
+
+``parent`` 
+-----------
+
+
+
+
+Method Detail
+=============
+
+.. _checkIfAttached:
+
+.. _checkIfAttached__:
+
+.. _UncheckedRow_checkIfAttached:
+
+.. _UncheckedRow_checkIfAttached__:
+
+
+
+checkIfAttached
+---------------
+
+.. _io_realm_internal_UncheckedRow_checkIfAttached__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** checkIfAttached ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _convertToChecked:
+
+.. _convertToChecked__:
+
+.. _UncheckedRow_convertToChecked:
+
+.. _UncheckedRow_convertToChecked__:
+
+
+
+convertToChecked
+----------------
+
+.. _io_realm_internal_UncheckedRow_convertToChecked__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`CheckedRow <io_realm_internal_CheckedRow>`  convertToChecked ()
+   
+   * - Converts the unchecked Row to a checked variant.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _createEmbeddedObject:
+
+.. _createEmbeddedObject__:
+
+.. _UncheckedRow_createEmbeddedObject:
+
+.. _UncheckedRow_createEmbeddedObject__:
+
+.. _io_realm_internal_UncheckedRow_createEmbeddedObject:
+
+.. _io_realm_internal_UncheckedRow_createEmbeddedObject__:
+
+
+
+createEmbeddedObject
+--------------------
+
+.. _io_realm_internal_UncheckedRow_createEmbeddedObject_long__RealmFieldType_:
+
+.. _io_realm_internal_UncheckedRow_createEmbeddedObject_long_RealmFieldType_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** createEmbeddedObject (**long** columnKey,
+                                          :ref:`RealmFieldType <io_realm_RealmFieldType>`  parentPropertyType)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _freeze:
+
+.. _freeze__:
+
+.. _UncheckedRow_freeze:
+
+.. _UncheckedRow_freeze__:
+
+.. _io_realm_internal_UncheckedRow_freeze:
+
+.. _io_realm_internal_UncheckedRow_freeze__:
+
+
+
+freeze
+------
+
+.. _io_realm_internal_UncheckedRow_freeze_OsSharedRealm_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`Row <io_realm_internal_Row>`  freeze (:ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  frozenRealm)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getBinaryByteArray:
+
+.. _getBinaryByteArray__:
+
+.. _UncheckedRow_getBinaryByteArray:
+
+.. _UncheckedRow_getBinaryByteArray__:
+
+.. _io_realm_internal_UncheckedRow_getBinaryByteArray:
+
+.. _io_realm_internal_UncheckedRow_getBinaryByteArray__:
+
+
+
+getBinaryByteArray
+------------------
+
+.. _io_realm_internal_UncheckedRow_getBinaryByteArray_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **byte** getBinaryByteArray (**long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getBoolean:
+
+.. _getBoolean__:
+
+.. _UncheckedRow_getBoolean:
+
+.. _UncheckedRow_getBoolean__:
+
+.. _io_realm_internal_UncheckedRow_getBoolean:
+
+.. _io_realm_internal_UncheckedRow_getBoolean__:
+
+
+
+getBoolean
+----------
+
+.. _io_realm_internal_UncheckedRow_getBoolean_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** getBoolean (**long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getColumnCount:
+
+.. _getColumnCount__:
+
+.. _UncheckedRow_getColumnCount:
+
+.. _UncheckedRow_getColumnCount__:
+
+
+
+getColumnCount
+--------------
+
+.. _io_realm_internal_UncheckedRow_getColumnCount__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** getColumnCount ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getColumnKey:
+
+.. _getColumnKey__:
+
+.. _UncheckedRow_getColumnKey:
+
+.. _UncheckedRow_getColumnKey__:
+
+.. _io_realm_internal_UncheckedRow_getColumnKey:
+
+.. _io_realm_internal_UncheckedRow_getColumnKey__:
+
+
+
+getColumnKey
+------------
+
+.. _io_realm_internal_UncheckedRow_getColumnKey_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** getColumnKey (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  columnName)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getColumnNames:
+
+.. _getColumnNames__:
+
+.. _UncheckedRow_getColumnNames:
+
+.. _UncheckedRow_getColumnNames__:
+
+
+
+getColumnNames
+--------------
+
+.. _io_realm_internal_UncheckedRow_getColumnNames__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getColumnNames ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getColumnType:
+
+.. _getColumnType__:
+
+.. _UncheckedRow_getColumnType:
+
+.. _UncheckedRow_getColumnType__:
+
+.. _io_realm_internal_UncheckedRow_getColumnType:
+
+.. _io_realm_internal_UncheckedRow_getColumnType__:
+
+
+
+getColumnType
+-------------
+
+.. _io_realm_internal_UncheckedRow_getColumnType_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`RealmFieldType <io_realm_RealmFieldType>`  getColumnType (**long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getDate:
+
+.. _getDate__:
+
+.. _UncheckedRow_getDate:
+
+.. _UncheckedRow_getDate__:
+
+.. _io_realm_internal_UncheckedRow_getDate:
+
+.. _io_realm_internal_UncheckedRow_getDate__:
+
+
+
+getDate
+-------
+
+.. _io_realm_internal_UncheckedRow_getDate_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  getDate (**long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getDecimal128:
+
+.. _getDecimal128__:
+
+.. _UncheckedRow_getDecimal128:
+
+.. _UncheckedRow_getDecimal128__:
+
+.. _io_realm_internal_UncheckedRow_getDecimal128:
+
+.. _io_realm_internal_UncheckedRow_getDecimal128__:
+
+
+
+getDecimal128
+-------------
+
+.. _io_realm_internal_UncheckedRow_getDecimal128_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **Decimal128 (?)** getDecimal128 (**long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getDouble:
+
+.. _getDouble__:
+
+.. _UncheckedRow_getDouble:
+
+.. _UncheckedRow_getDouble__:
+
+.. _io_realm_internal_UncheckedRow_getDouble:
+
+.. _io_realm_internal_UncheckedRow_getDouble__:
+
+
+
+getDouble
+---------
+
+.. _io_realm_internal_UncheckedRow_getDouble_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **double** getDouble (**long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getFloat:
+
+.. _getFloat__:
+
+.. _UncheckedRow_getFloat:
+
+.. _UncheckedRow_getFloat__:
+
+.. _io_realm_internal_UncheckedRow_getFloat:
+
+.. _io_realm_internal_UncheckedRow_getFloat__:
+
+
+
+getFloat
+--------
+
+.. _io_realm_internal_UncheckedRow_getFloat_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **float** getFloat (**long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getLink:
+
+.. _getLink__:
+
+.. _UncheckedRow_getLink:
+
+.. _UncheckedRow_getLink__:
+
+.. _io_realm_internal_UncheckedRow_getLink:
+
+.. _io_realm_internal_UncheckedRow_getLink__:
+
+
+
+getLink
+-------
+
+.. _io_realm_internal_UncheckedRow_getLink_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** getLink (**long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getLong:
+
+.. _getLong__:
+
+.. _UncheckedRow_getLong:
+
+.. _UncheckedRow_getLong__:
+
+.. _io_realm_internal_UncheckedRow_getLong:
+
+.. _io_realm_internal_UncheckedRow_getLong__:
+
+
+
+getLong
+-------
+
+.. _io_realm_internal_UncheckedRow_getLong_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** getLong (**long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getModelList:
+
+.. _getModelList__:
+
+.. _UncheckedRow_getModelList:
+
+.. _UncheckedRow_getModelList__:
+
+.. _io_realm_internal_UncheckedRow_getModelList:
+
+.. _io_realm_internal_UncheckedRow_getModelList__:
+
+
+
+getModelList
+------------
+
+.. _io_realm_internal_UncheckedRow_getModelList_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`OsList <io_realm_internal_OsList>`  getModelList (**long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getModelMap:
+
+.. _getModelMap__:
+
+.. _UncheckedRow_getModelMap:
+
+.. _UncheckedRow_getModelMap__:
+
+.. _io_realm_internal_UncheckedRow_getModelMap:
+
+.. _io_realm_internal_UncheckedRow_getModelMap__:
+
+
+
+getModelMap
+-----------
+
+.. _io_realm_internal_UncheckedRow_getModelMap_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`OsMap <io_realm_internal_OsMap>`  getModelMap (**long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getModelSet:
+
+.. _getModelSet__:
+
+.. _UncheckedRow_getModelSet:
+
+.. _UncheckedRow_getModelSet__:
+
+.. _io_realm_internal_UncheckedRow_getModelSet:
+
+.. _io_realm_internal_UncheckedRow_getModelSet__:
+
+
+
+getModelSet
+-----------
+
+.. _io_realm_internal_UncheckedRow_getModelSet_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`OsSet <io_realm_internal_OsSet>`  getModelSet (**long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getNativeFinalizerPtr:
+
+.. _getNativeFinalizerPtr__:
+
+.. _UncheckedRow_getNativeFinalizerPtr:
+
+.. _UncheckedRow_getNativeFinalizerPtr__:
+
+
+
+getNativeFinalizerPtr
+---------------------
+
+.. _io_realm_internal_UncheckedRow_getNativeFinalizerPtr__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** getNativeFinalizerPtr ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getNativePtr:
+
+.. _getNativePtr__:
+
+.. _UncheckedRow_getNativePtr:
+
+.. _UncheckedRow_getNativePtr__:
+
+
+
+getNativePtr
+------------
+
+.. _io_realm_internal_UncheckedRow_getNativePtr__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** getNativePtr ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getNativeRealmAny:
+
+.. _getNativeRealmAny__:
+
+.. _UncheckedRow_getNativeRealmAny:
+
+.. _UncheckedRow_getNativeRealmAny__:
+
+.. _io_realm_internal_UncheckedRow_getNativeRealmAny:
+
+.. _io_realm_internal_UncheckedRow_getNativeRealmAny__:
+
+
+
+getNativeRealmAny
+-----------------
+
+.. _io_realm_internal_UncheckedRow_getNativeRealmAny_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`NativeRealmAny <io_realm_internal_core_NativeRealmAny>`  getNativeRealmAny (**long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getObjectId:
+
+.. _getObjectId__:
+
+.. _UncheckedRow_getObjectId:
+
+.. _UncheckedRow_getObjectId__:
+
+.. _io_realm_internal_UncheckedRow_getObjectId:
+
+.. _io_realm_internal_UncheckedRow_getObjectId__:
+
+
+
+getObjectId
+-----------
+
+.. _io_realm_internal_UncheckedRow_getObjectId_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **ObjectId (?)** getObjectId (**long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getObjectKey:
+
+.. _getObjectKey__:
+
+.. _UncheckedRow_getObjectKey:
+
+.. _UncheckedRow_getObjectKey__:
+
+
+
+getObjectKey
+------------
+
+.. _io_realm_internal_UncheckedRow_getObjectKey__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** getObjectKey ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getRealmAnyMap:
+
+.. _getRealmAnyMap__:
+
+.. _UncheckedRow_getRealmAnyMap:
+
+.. _UncheckedRow_getRealmAnyMap__:
+
+.. _io_realm_internal_UncheckedRow_getRealmAnyMap:
+
+.. _io_realm_internal_UncheckedRow_getRealmAnyMap__:
+
+
+
+getRealmAnyMap
+--------------
+
+.. _io_realm_internal_UncheckedRow_getRealmAnyMap_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`OsMap <io_realm_internal_OsMap>`  getRealmAnyMap (**long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getRealmAnySet:
+
+.. _getRealmAnySet__:
+
+.. _UncheckedRow_getRealmAnySet:
+
+.. _UncheckedRow_getRealmAnySet__:
+
+.. _io_realm_internal_UncheckedRow_getRealmAnySet:
+
+.. _io_realm_internal_UncheckedRow_getRealmAnySet__:
+
+
+
+getRealmAnySet
+--------------
+
+.. _io_realm_internal_UncheckedRow_getRealmAnySet_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`OsSet <io_realm_internal_OsSet>`  getRealmAnySet (**long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getString:
+
+.. _getString__:
+
+.. _UncheckedRow_getString:
+
+.. _UncheckedRow_getString__:
+
+.. _io_realm_internal_UncheckedRow_getString:
+
+.. _io_realm_internal_UncheckedRow_getString__:
+
+
+
+getString
+---------
+
+.. _io_realm_internal_UncheckedRow_getString_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getString (**long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getTable:
+
+.. _getTable__:
+
+.. _UncheckedRow_getTable:
+
+.. _UncheckedRow_getTable__:
+
+
+
+getTable
+--------
+
+.. _io_realm_internal_UncheckedRow_getTable__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`Table <io_realm_internal_Table>`  getTable ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getUUID:
+
+.. _getUUID__:
+
+.. _UncheckedRow_getUUID:
+
+.. _UncheckedRow_getUUID__:
+
+.. _io_realm_internal_UncheckedRow_getUUID:
+
+.. _io_realm_internal_UncheckedRow_getUUID__:
+
+
+
+getUUID
+-------
+
+.. _io_realm_internal_UncheckedRow_getUUID_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `UUID <https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html>`__  getUUID (**long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getValueList:
+
+.. _getValueList__:
+
+.. _UncheckedRow_getValueList:
+
+.. _UncheckedRow_getValueList__:
+
+.. _io_realm_internal_UncheckedRow_getValueList:
+
+.. _io_realm_internal_UncheckedRow_getValueList__:
+
+
+
+getValueList
+------------
+
+.. _io_realm_internal_UncheckedRow_getValueList_long__RealmFieldType_:
+
+.. _io_realm_internal_UncheckedRow_getValueList_long_RealmFieldType_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`OsList <io_realm_internal_OsList>`  getValueList (**long** columnKey,
+                                    :ref:`RealmFieldType <io_realm_RealmFieldType>`  fieldType)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getValueMap:
+
+.. _getValueMap__:
+
+.. _UncheckedRow_getValueMap:
+
+.. _UncheckedRow_getValueMap__:
+
+.. _io_realm_internal_UncheckedRow_getValueMap:
+
+.. _io_realm_internal_UncheckedRow_getValueMap__:
+
+
+
+getValueMap
+-----------
+
+.. _io_realm_internal_UncheckedRow_getValueMap_long__RealmFieldType_:
+
+.. _io_realm_internal_UncheckedRow_getValueMap_long_RealmFieldType_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`OsMap <io_realm_internal_OsMap>`  getValueMap (**long** columnKey,
+                                  :ref:`RealmFieldType <io_realm_RealmFieldType>`  fieldType)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getValueSet:
+
+.. _getValueSet__:
+
+.. _UncheckedRow_getValueSet:
+
+.. _UncheckedRow_getValueSet__:
+
+.. _io_realm_internal_UncheckedRow_getValueSet:
+
+.. _io_realm_internal_UncheckedRow_getValueSet__:
+
+
+
+getValueSet
+-----------
+
+.. _io_realm_internal_UncheckedRow_getValueSet_long__RealmFieldType_:
+
+.. _io_realm_internal_UncheckedRow_getValueSet_long_RealmFieldType_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`OsSet <io_realm_internal_OsSet>`  getValueSet (**long** columnKey,
+                                  :ref:`RealmFieldType <io_realm_RealmFieldType>`  fieldType)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _hasColumn:
+
+.. _hasColumn__:
+
+.. _UncheckedRow_hasColumn:
+
+.. _UncheckedRow_hasColumn__:
+
+.. _io_realm_internal_UncheckedRow_hasColumn:
+
+.. _io_realm_internal_UncheckedRow_hasColumn__:
+
+
+
+hasColumn
+---------
+
+.. _io_realm_internal_UncheckedRow_hasColumn_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** hasColumn (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _isLoaded:
+
+.. _isLoaded__:
+
+.. _UncheckedRow_isLoaded:
+
+.. _UncheckedRow_isLoaded__:
+
+
+
+isLoaded
+--------
+
+.. _io_realm_internal_UncheckedRow_isLoaded__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** isLoaded ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _isNull:
+
+.. _isNull__:
+
+.. _UncheckedRow_isNull:
+
+.. _UncheckedRow_isNull__:
+
+.. _io_realm_internal_UncheckedRow_isNull:
+
+.. _io_realm_internal_UncheckedRow_isNull__:
+
+
+
+isNull
+------
+
+.. _io_realm_internal_UncheckedRow_isNull_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** isNull (**long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _isNullLink:
+
+.. _isNullLink__:
+
+.. _UncheckedRow_isNullLink:
+
+.. _UncheckedRow_isNullLink__:
+
+.. _io_realm_internal_UncheckedRow_isNullLink:
+
+.. _io_realm_internal_UncheckedRow_isNullLink__:
+
+
+
+isNullLink
+----------
+
+.. _io_realm_internal_UncheckedRow_isNullLink_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** isNullLink (**long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _isValid:
+
+.. _isValid__:
+
+.. _UncheckedRow_isValid:
+
+.. _UncheckedRow_isValid__:
+
+
+
+isValid
+-------
+
+.. _io_realm_internal_UncheckedRow_isValid__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** isValid ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeCreateEmbeddedObject:
+
+.. _nativeCreateEmbeddedObject__:
+
+.. _UncheckedRow_nativeCreateEmbeddedObject:
+
+.. _UncheckedRow_nativeCreateEmbeddedObject__:
+
+.. _io_realm_internal_UncheckedRow_nativeCreateEmbeddedObject:
+
+.. _io_realm_internal_UncheckedRow_nativeCreateEmbeddedObject__:
+
+
+
+nativeCreateEmbeddedObject
+--------------------------
+
+.. _io_realm_internal_UncheckedRow_nativeCreateEmbeddedObject_long__long_:
+
+.. _io_realm_internal_UncheckedRow_nativeCreateEmbeddedObject_long_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native **long** nativeCreateEmbeddedObject (**long** nativeRowPtr,
+                                                          **long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeFreeze:
+
+.. _nativeFreeze__:
+
+.. _UncheckedRow_nativeFreeze:
+
+.. _UncheckedRow_nativeFreeze__:
+
+.. _io_realm_internal_UncheckedRow_nativeFreeze:
+
+.. _io_realm_internal_UncheckedRow_nativeFreeze__:
+
+
+
+nativeFreeze
+------------
+
+.. _io_realm_internal_UncheckedRow_nativeFreeze_long__long_:
+
+.. _io_realm_internal_UncheckedRow_nativeFreeze_long_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native **long** nativeFreeze (**long** nativeRowPtr,
+                                            **long** frozenRealmNativePtr)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeGetBoolean:
+
+.. _nativeGetBoolean__:
+
+.. _UncheckedRow_nativeGetBoolean:
+
+.. _UncheckedRow_nativeGetBoolean__:
+
+.. _io_realm_internal_UncheckedRow_nativeGetBoolean:
+
+.. _io_realm_internal_UncheckedRow_nativeGetBoolean__:
+
+
+
+nativeGetBoolean
+----------------
+
+.. _io_realm_internal_UncheckedRow_nativeGetBoolean_long__long_:
+
+.. _io_realm_internal_UncheckedRow_nativeGetBoolean_long_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native **boolean** nativeGetBoolean (**long** nativeRowPtr,
+                                                   **long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeGetByteArray:
+
+.. _nativeGetByteArray__:
+
+.. _UncheckedRow_nativeGetByteArray:
+
+.. _UncheckedRow_nativeGetByteArray__:
+
+.. _io_realm_internal_UncheckedRow_nativeGetByteArray:
+
+.. _io_realm_internal_UncheckedRow_nativeGetByteArray__:
+
+
+
+nativeGetByteArray
+------------------
+
+.. _io_realm_internal_UncheckedRow_nativeGetByteArray_long__long_:
+
+.. _io_realm_internal_UncheckedRow_nativeGetByteArray_long_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native **byte** nativeGetByteArray (**long** nativePtr,
+                                                  **long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeGetColumnCount:
+
+.. _nativeGetColumnCount__:
+
+.. _UncheckedRow_nativeGetColumnCount:
+
+.. _UncheckedRow_nativeGetColumnCount__:
+
+.. _io_realm_internal_UncheckedRow_nativeGetColumnCount:
+
+.. _io_realm_internal_UncheckedRow_nativeGetColumnCount__:
+
+
+
+nativeGetColumnCount
+--------------------
+
+.. _io_realm_internal_UncheckedRow_nativeGetColumnCount_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native **long** nativeGetColumnCount (**long** nativeTablePtr)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeGetColumnKey:
+
+.. _nativeGetColumnKey__:
+
+.. _UncheckedRow_nativeGetColumnKey:
+
+.. _UncheckedRow_nativeGetColumnKey__:
+
+.. _io_realm_internal_UncheckedRow_nativeGetColumnKey:
+
+.. _io_realm_internal_UncheckedRow_nativeGetColumnKey__:
+
+
+
+nativeGetColumnKey
+------------------
+
+.. _io_realm_internal_UncheckedRow_nativeGetColumnKey_long__String_:
+
+.. _io_realm_internal_UncheckedRow_nativeGetColumnKey_long_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native **long** nativeGetColumnKey (**long** nativeTablePtr,
+                                                  `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  columnName)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeGetColumnNames:
+
+.. _nativeGetColumnNames__:
+
+.. _UncheckedRow_nativeGetColumnNames:
+
+.. _UncheckedRow_nativeGetColumnNames__:
+
+.. _io_realm_internal_UncheckedRow_nativeGetColumnNames:
+
+.. _io_realm_internal_UncheckedRow_nativeGetColumnNames__:
+
+
+
+nativeGetColumnNames
+--------------------
+
+.. _io_realm_internal_UncheckedRow_nativeGetColumnNames_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  nativeGetColumnNames (**long** nativeTablePtr)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeGetColumnType:
+
+.. _nativeGetColumnType__:
+
+.. _UncheckedRow_nativeGetColumnType:
+
+.. _UncheckedRow_nativeGetColumnType__:
+
+.. _io_realm_internal_UncheckedRow_nativeGetColumnType:
+
+.. _io_realm_internal_UncheckedRow_nativeGetColumnType__:
+
+
+
+nativeGetColumnType
+-------------------
+
+.. _io_realm_internal_UncheckedRow_nativeGetColumnType_long__long_:
+
+.. _io_realm_internal_UncheckedRow_nativeGetColumnType_long_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native **int** nativeGetColumnType (**long** nativeTablePtr,
+                                                  **long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeGetDecimal128:
+
+.. _nativeGetDecimal128__:
+
+.. _UncheckedRow_nativeGetDecimal128:
+
+.. _UncheckedRow_nativeGetDecimal128__:
+
+.. _io_realm_internal_UncheckedRow_nativeGetDecimal128:
+
+.. _io_realm_internal_UncheckedRow_nativeGetDecimal128__:
+
+
+
+nativeGetDecimal128
+-------------------
+
+.. _io_realm_internal_UncheckedRow_nativeGetDecimal128_long__long_:
+
+.. _io_realm_internal_UncheckedRow_nativeGetDecimal128_long_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native **long** nativeGetDecimal128 (**long** nativePtr,
+                                                   **long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeGetDouble:
+
+.. _nativeGetDouble__:
+
+.. _UncheckedRow_nativeGetDouble:
+
+.. _UncheckedRow_nativeGetDouble__:
+
+.. _io_realm_internal_UncheckedRow_nativeGetDouble:
+
+.. _io_realm_internal_UncheckedRow_nativeGetDouble__:
+
+
+
+nativeGetDouble
+---------------
+
+.. _io_realm_internal_UncheckedRow_nativeGetDouble_long__long_:
+
+.. _io_realm_internal_UncheckedRow_nativeGetDouble_long_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native **double** nativeGetDouble (**long** nativeRowPtr,
+                                                 **long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeGetFloat:
+
+.. _nativeGetFloat__:
+
+.. _UncheckedRow_nativeGetFloat:
+
+.. _UncheckedRow_nativeGetFloat__:
+
+.. _io_realm_internal_UncheckedRow_nativeGetFloat:
+
+.. _io_realm_internal_UncheckedRow_nativeGetFloat__:
+
+
+
+nativeGetFloat
+--------------
+
+.. _io_realm_internal_UncheckedRow_nativeGetFloat_long__long_:
+
+.. _io_realm_internal_UncheckedRow_nativeGetFloat_long_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native **float** nativeGetFloat (**long** nativeRowPtr,
+                                               **long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeGetLink:
+
+.. _nativeGetLink__:
+
+.. _UncheckedRow_nativeGetLink:
+
+.. _UncheckedRow_nativeGetLink__:
+
+.. _io_realm_internal_UncheckedRow_nativeGetLink:
+
+.. _io_realm_internal_UncheckedRow_nativeGetLink__:
+
+
+
+nativeGetLink
+-------------
+
+.. _io_realm_internal_UncheckedRow_nativeGetLink_long__long_:
+
+.. _io_realm_internal_UncheckedRow_nativeGetLink_long_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native **long** nativeGetLink (**long** nativeRowPtr,
+                                             **long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeGetLong:
+
+.. _nativeGetLong__:
+
+.. _UncheckedRow_nativeGetLong:
+
+.. _UncheckedRow_nativeGetLong__:
+
+.. _io_realm_internal_UncheckedRow_nativeGetLong:
+
+.. _io_realm_internal_UncheckedRow_nativeGetLong__:
+
+
+
+nativeGetLong
+-------------
+
+.. _io_realm_internal_UncheckedRow_nativeGetLong_long__long_:
+
+.. _io_realm_internal_UncheckedRow_nativeGetLong_long_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native **long** nativeGetLong (**long** nativeRowPtr,
+                                             **long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeGetObjectId:
+
+.. _nativeGetObjectId__:
+
+.. _UncheckedRow_nativeGetObjectId:
+
+.. _UncheckedRow_nativeGetObjectId__:
+
+.. _io_realm_internal_UncheckedRow_nativeGetObjectId:
+
+.. _io_realm_internal_UncheckedRow_nativeGetObjectId__:
+
+
+
+nativeGetObjectId
+-----------------
+
+.. _io_realm_internal_UncheckedRow_nativeGetObjectId_long__long_:
+
+.. _io_realm_internal_UncheckedRow_nativeGetObjectId_long_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  nativeGetObjectId (**long** nativePtr,
+                                                   **long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeGetObjectKey:
+
+.. _nativeGetObjectKey__:
+
+.. _UncheckedRow_nativeGetObjectKey:
+
+.. _UncheckedRow_nativeGetObjectKey__:
+
+.. _io_realm_internal_UncheckedRow_nativeGetObjectKey:
+
+.. _io_realm_internal_UncheckedRow_nativeGetObjectKey__:
+
+
+
+nativeGetObjectKey
+------------------
+
+.. _io_realm_internal_UncheckedRow_nativeGetObjectKey_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native **long** nativeGetObjectKey (**long** nativeRowPtr)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeGetRealmAny:
+
+.. _nativeGetRealmAny__:
+
+.. _UncheckedRow_nativeGetRealmAny:
+
+.. _UncheckedRow_nativeGetRealmAny__:
+
+.. _io_realm_internal_UncheckedRow_nativeGetRealmAny:
+
+.. _io_realm_internal_UncheckedRow_nativeGetRealmAny__:
+
+
+
+nativeGetRealmAny
+-----------------
+
+.. _io_realm_internal_UncheckedRow_nativeGetRealmAny_long__long_:
+
+.. _io_realm_internal_UncheckedRow_nativeGetRealmAny_long_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native **long** nativeGetRealmAny (**long** nativePtr,
+                                                 **long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeGetString:
+
+.. _nativeGetString__:
+
+.. _UncheckedRow_nativeGetString:
+
+.. _UncheckedRow_nativeGetString__:
+
+.. _io_realm_internal_UncheckedRow_nativeGetString:
+
+.. _io_realm_internal_UncheckedRow_nativeGetString__:
+
+
+
+nativeGetString
+---------------
+
+.. _io_realm_internal_UncheckedRow_nativeGetString_long__long_:
+
+.. _io_realm_internal_UncheckedRow_nativeGetString_long_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  nativeGetString (**long** nativePtr,
+                                                 **long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeGetTimestamp:
+
+.. _nativeGetTimestamp__:
+
+.. _UncheckedRow_nativeGetTimestamp:
+
+.. _UncheckedRow_nativeGetTimestamp__:
+
+.. _io_realm_internal_UncheckedRow_nativeGetTimestamp:
+
+.. _io_realm_internal_UncheckedRow_nativeGetTimestamp__:
+
+
+
+nativeGetTimestamp
+------------------
+
+.. _io_realm_internal_UncheckedRow_nativeGetTimestamp_long__long_:
+
+.. _io_realm_internal_UncheckedRow_nativeGetTimestamp_long_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native **long** nativeGetTimestamp (**long** nativeRowPtr,
+                                                  **long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeGetUUID:
+
+.. _nativeGetUUID__:
+
+.. _UncheckedRow_nativeGetUUID:
+
+.. _UncheckedRow_nativeGetUUID__:
+
+.. _io_realm_internal_UncheckedRow_nativeGetUUID:
+
+.. _io_realm_internal_UncheckedRow_nativeGetUUID__:
+
+
+
+nativeGetUUID
+-------------
+
+.. _io_realm_internal_UncheckedRow_nativeGetUUID_long__long_:
+
+.. _io_realm_internal_UncheckedRow_nativeGetUUID_long_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  nativeGetUUID (**long** nativePtr,
+                                               **long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeHasColumn:
+
+.. _nativeHasColumn__:
+
+.. _UncheckedRow_nativeHasColumn:
+
+.. _UncheckedRow_nativeHasColumn__:
+
+.. _io_realm_internal_UncheckedRow_nativeHasColumn:
+
+.. _io_realm_internal_UncheckedRow_nativeHasColumn__:
+
+
+
+nativeHasColumn
+---------------
+
+.. _io_realm_internal_UncheckedRow_nativeHasColumn_long__String_:
+
+.. _io_realm_internal_UncheckedRow_nativeHasColumn_long_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native **boolean** nativeHasColumn (**long** nativeRowPtr,
+                                                  `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  columnName)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeIsNull:
+
+.. _nativeIsNull__:
+
+.. _UncheckedRow_nativeIsNull:
+
+.. _UncheckedRow_nativeIsNull__:
+
+.. _io_realm_internal_UncheckedRow_nativeIsNull:
+
+.. _io_realm_internal_UncheckedRow_nativeIsNull__:
+
+
+
+nativeIsNull
+------------
+
+.. _io_realm_internal_UncheckedRow_nativeIsNull_long__long_:
+
+.. _io_realm_internal_UncheckedRow_nativeIsNull_long_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native **boolean** nativeIsNull (**long** nativeRowPtr,
+                                               **long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeIsNullLink:
+
+.. _nativeIsNullLink__:
+
+.. _UncheckedRow_nativeIsNullLink:
+
+.. _UncheckedRow_nativeIsNullLink__:
+
+.. _io_realm_internal_UncheckedRow_nativeIsNullLink:
+
+.. _io_realm_internal_UncheckedRow_nativeIsNullLink__:
+
+
+
+nativeIsNullLink
+----------------
+
+.. _io_realm_internal_UncheckedRow_nativeIsNullLink_long__long_:
+
+.. _io_realm_internal_UncheckedRow_nativeIsNullLink_long_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native **boolean** nativeIsNullLink (**long** nativeRowPtr,
+                                                   **long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeIsValid:
+
+.. _nativeIsValid__:
+
+.. _UncheckedRow_nativeIsValid:
+
+.. _UncheckedRow_nativeIsValid__:
+
+.. _io_realm_internal_UncheckedRow_nativeIsValid:
+
+.. _io_realm_internal_UncheckedRow_nativeIsValid__:
+
+
+
+nativeIsValid
+-------------
+
+.. _io_realm_internal_UncheckedRow_nativeIsValid_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native **boolean** nativeIsValid (**long** nativeRowPtr)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeNullifyLink:
+
+.. _nativeNullifyLink__:
+
+.. _UncheckedRow_nativeNullifyLink:
+
+.. _UncheckedRow_nativeNullifyLink__:
+
+.. _io_realm_internal_UncheckedRow_nativeNullifyLink:
+
+.. _io_realm_internal_UncheckedRow_nativeNullifyLink__:
+
+
+
+nativeNullifyLink
+-----------------
+
+.. _io_realm_internal_UncheckedRow_nativeNullifyLink_long__long_:
+
+.. _io_realm_internal_UncheckedRow_nativeNullifyLink_long_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native **void** nativeNullifyLink (**long** nativeRowPtr,
+                                                 **long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeSetBoolean:
+
+.. _nativeSetBoolean__:
+
+.. _UncheckedRow_nativeSetBoolean:
+
+.. _UncheckedRow_nativeSetBoolean__:
+
+.. _io_realm_internal_UncheckedRow_nativeSetBoolean:
+
+.. _io_realm_internal_UncheckedRow_nativeSetBoolean__:
+
+
+
+nativeSetBoolean
+----------------
+
+.. _io_realm_internal_UncheckedRow_nativeSetBoolean_long__long__boolean_:
+
+.. _io_realm_internal_UncheckedRow_nativeSetBoolean_long_long_boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native **void** nativeSetBoolean (**long** nativeRowPtr,
+                                                **long** columnKey,
+                                                **boolean** value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeSetByteArray:
+
+.. _nativeSetByteArray__:
+
+.. _UncheckedRow_nativeSetByteArray:
+
+.. _UncheckedRow_nativeSetByteArray__:
+
+.. _io_realm_internal_UncheckedRow_nativeSetByteArray:
+
+.. _io_realm_internal_UncheckedRow_nativeSetByteArray__:
+
+
+
+nativeSetByteArray
+------------------
+
+.. _io_realm_internal_UncheckedRow_nativeSetByteArray_long__long__byte[]_:
+
+.. _io_realm_internal_UncheckedRow_nativeSetByteArray_long_long_byte_:
+
+.. _io_realm_internal_UncheckedRow_nativeSetByteArray_long__long__byte_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native **void** nativeSetByteArray (**long** nativePtr,
+                                                  **long** columnKey,
+                                                  **byte[]** data)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeSetDecimal128:
+
+.. _nativeSetDecimal128__:
+
+.. _UncheckedRow_nativeSetDecimal128:
+
+.. _UncheckedRow_nativeSetDecimal128__:
+
+.. _io_realm_internal_UncheckedRow_nativeSetDecimal128:
+
+.. _io_realm_internal_UncheckedRow_nativeSetDecimal128__:
+
+
+
+nativeSetDecimal128
+-------------------
+
+.. _io_realm_internal_UncheckedRow_nativeSetDecimal128_long__long__long__long_:
+
+.. _io_realm_internal_UncheckedRow_nativeSetDecimal128_long_long_long_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native **void** nativeSetDecimal128 (**long** nativePtr,
+                                                   **long** columnKey,
+                                                   **long** low,
+                                                   **long** high)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeSetDouble:
+
+.. _nativeSetDouble__:
+
+.. _UncheckedRow_nativeSetDouble:
+
+.. _UncheckedRow_nativeSetDouble__:
+
+.. _io_realm_internal_UncheckedRow_nativeSetDouble:
+
+.. _io_realm_internal_UncheckedRow_nativeSetDouble__:
+
+
+
+nativeSetDouble
+---------------
+
+.. _io_realm_internal_UncheckedRow_nativeSetDouble_long__long__double_:
+
+.. _io_realm_internal_UncheckedRow_nativeSetDouble_long_long_double_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native **void** nativeSetDouble (**long** nativeRowPtr,
+                                               **long** columnKey,
+                                               **double** value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeSetFloat:
+
+.. _nativeSetFloat__:
+
+.. _UncheckedRow_nativeSetFloat:
+
+.. _UncheckedRow_nativeSetFloat__:
+
+.. _io_realm_internal_UncheckedRow_nativeSetFloat:
+
+.. _io_realm_internal_UncheckedRow_nativeSetFloat__:
+
+
+
+nativeSetFloat
+--------------
+
+.. _io_realm_internal_UncheckedRow_nativeSetFloat_long__long__float_:
+
+.. _io_realm_internal_UncheckedRow_nativeSetFloat_long_long_float_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native **void** nativeSetFloat (**long** nativeRowPtr,
+                                              **long** columnKey,
+                                              **float** value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeSetLink:
+
+.. _nativeSetLink__:
+
+.. _UncheckedRow_nativeSetLink:
+
+.. _UncheckedRow_nativeSetLink__:
+
+.. _io_realm_internal_UncheckedRow_nativeSetLink:
+
+.. _io_realm_internal_UncheckedRow_nativeSetLink__:
+
+
+
+nativeSetLink
+-------------
+
+.. _io_realm_internal_UncheckedRow_nativeSetLink_long__long__long_:
+
+.. _io_realm_internal_UncheckedRow_nativeSetLink_long_long_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native **void** nativeSetLink (**long** nativeRowPtr,
+                                             **long** columnKey,
+                                             **long** value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeSetLong:
+
+.. _nativeSetLong__:
+
+.. _UncheckedRow_nativeSetLong:
+
+.. _UncheckedRow_nativeSetLong__:
+
+.. _io_realm_internal_UncheckedRow_nativeSetLong:
+
+.. _io_realm_internal_UncheckedRow_nativeSetLong__:
+
+
+
+nativeSetLong
+-------------
+
+.. _io_realm_internal_UncheckedRow_nativeSetLong_long__long__long_:
+
+.. _io_realm_internal_UncheckedRow_nativeSetLong_long_long_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native **void** nativeSetLong (**long** nativeRowPtr,
+                                             **long** columnKey,
+                                             **long** value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeSetNull:
+
+.. _nativeSetNull__:
+
+.. _UncheckedRow_nativeSetNull:
+
+.. _UncheckedRow_nativeSetNull__:
+
+.. _io_realm_internal_UncheckedRow_nativeSetNull:
+
+.. _io_realm_internal_UncheckedRow_nativeSetNull__:
+
+
+
+nativeSetNull
+-------------
+
+.. _io_realm_internal_UncheckedRow_nativeSetNull_long__long_:
+
+.. _io_realm_internal_UncheckedRow_nativeSetNull_long_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native **void** nativeSetNull (**long** nativeRowPtr,
+                                             **long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeSetObjectId:
+
+.. _nativeSetObjectId__:
+
+.. _UncheckedRow_nativeSetObjectId:
+
+.. _UncheckedRow_nativeSetObjectId__:
+
+.. _io_realm_internal_UncheckedRow_nativeSetObjectId:
+
+.. _io_realm_internal_UncheckedRow_nativeSetObjectId__:
+
+
+
+nativeSetObjectId
+-----------------
+
+.. _io_realm_internal_UncheckedRow_nativeSetObjectId_long__long__String_:
+
+.. _io_realm_internal_UncheckedRow_nativeSetObjectId_long_long_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native **void** nativeSetObjectId (**long** nativePtr,
+                                                 **long** columnKey,
+                                                 `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeSetRealmAny:
+
+.. _nativeSetRealmAny__:
+
+.. _UncheckedRow_nativeSetRealmAny:
+
+.. _UncheckedRow_nativeSetRealmAny__:
+
+.. _io_realm_internal_UncheckedRow_nativeSetRealmAny:
+
+.. _io_realm_internal_UncheckedRow_nativeSetRealmAny__:
+
+
+
+nativeSetRealmAny
+-----------------
+
+.. _io_realm_internal_UncheckedRow_nativeSetRealmAny_long__long__long_:
+
+.. _io_realm_internal_UncheckedRow_nativeSetRealmAny_long_long_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native **void** nativeSetRealmAny (**long** nativeRowPtr,
+                                                 **long** columnKey,
+                                                 **long** nativePtr)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeSetString:
+
+.. _nativeSetString__:
+
+.. _UncheckedRow_nativeSetString:
+
+.. _UncheckedRow_nativeSetString__:
+
+.. _io_realm_internal_UncheckedRow_nativeSetString:
+
+.. _io_realm_internal_UncheckedRow_nativeSetString__:
+
+
+
+nativeSetString
+---------------
+
+.. _io_realm_internal_UncheckedRow_nativeSetString_long__long__String_:
+
+.. _io_realm_internal_UncheckedRow_nativeSetString_long_long_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native **void** nativeSetString (**long** nativeRowPtr,
+                                               **long** columnKey,
+                                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeSetTimestamp:
+
+.. _nativeSetTimestamp__:
+
+.. _UncheckedRow_nativeSetTimestamp:
+
+.. _UncheckedRow_nativeSetTimestamp__:
+
+.. _io_realm_internal_UncheckedRow_nativeSetTimestamp:
+
+.. _io_realm_internal_UncheckedRow_nativeSetTimestamp__:
+
+
+
+nativeSetTimestamp
+------------------
+
+.. _io_realm_internal_UncheckedRow_nativeSetTimestamp_long__long__long_:
+
+.. _io_realm_internal_UncheckedRow_nativeSetTimestamp_long_long_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native **void** nativeSetTimestamp (**long** nativeRowPtr,
+                                                  **long** columnKey,
+                                                  **long** dateTimeValue)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeSetUUID:
+
+.. _nativeSetUUID__:
+
+.. _UncheckedRow_nativeSetUUID:
+
+.. _UncheckedRow_nativeSetUUID__:
+
+.. _io_realm_internal_UncheckedRow_nativeSetUUID:
+
+.. _io_realm_internal_UncheckedRow_nativeSetUUID__:
+
+
+
+nativeSetUUID
+-------------
+
+.. _io_realm_internal_UncheckedRow_nativeSetUUID_long__long__String_:
+
+.. _io_realm_internal_UncheckedRow_nativeSetUUID_long_long_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected native **void** nativeSetUUID (**long** nativePtr,
+                                             **long** columnKey,
+                                             `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nullifyLink:
+
+.. _nullifyLink__:
+
+.. _UncheckedRow_nullifyLink:
+
+.. _UncheckedRow_nullifyLink__:
+
+.. _io_realm_internal_UncheckedRow_nullifyLink:
+
+.. _io_realm_internal_UncheckedRow_nullifyLink__:
+
+
+
+nullifyLink
+-----------
+
+.. _io_realm_internal_UncheckedRow_nullifyLink_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** nullifyLink (**long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setBinaryByteArray:
+
+.. _setBinaryByteArray__:
+
+.. _UncheckedRow_setBinaryByteArray:
+
+.. _UncheckedRow_setBinaryByteArray__:
+
+.. _io_realm_internal_UncheckedRow_setBinaryByteArray:
+
+.. _io_realm_internal_UncheckedRow_setBinaryByteArray__:
+
+
+
+setBinaryByteArray
+------------------
+
+.. _io_realm_internal_UncheckedRow_setBinaryByteArray_long__byte[]_:
+
+.. _io_realm_internal_UncheckedRow_setBinaryByteArray_long_byte_:
+
+.. _io_realm_internal_UncheckedRow_setBinaryByteArray_long__byte_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setBinaryByteArray (**long** columnKey,
+                                        **byte[]** data)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setBoolean:
+
+.. _setBoolean__:
+
+.. _UncheckedRow_setBoolean:
+
+.. _UncheckedRow_setBoolean__:
+
+.. _io_realm_internal_UncheckedRow_setBoolean:
+
+.. _io_realm_internal_UncheckedRow_setBoolean__:
+
+
+
+setBoolean
+----------
+
+.. _io_realm_internal_UncheckedRow_setBoolean_long__boolean_:
+
+.. _io_realm_internal_UncheckedRow_setBoolean_long_boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setBoolean (**long** columnKey,
+                                **boolean** value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setDate:
+
+.. _setDate__:
+
+.. _UncheckedRow_setDate:
+
+.. _UncheckedRow_setDate__:
+
+.. _io_realm_internal_UncheckedRow_setDate:
+
+.. _io_realm_internal_UncheckedRow_setDate__:
+
+
+
+setDate
+-------
+
+.. _io_realm_internal_UncheckedRow_setDate_long__Date_:
+
+.. _io_realm_internal_UncheckedRow_setDate_long_Date_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setDate (**long** columnKey,
+                             `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  date)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setDecimal128:
+
+.. _setDecimal128__:
+
+.. _UncheckedRow_setDecimal128:
+
+.. _UncheckedRow_setDecimal128__:
+
+.. _io_realm_internal_UncheckedRow_setDecimal128:
+
+.. _io_realm_internal_UncheckedRow_setDecimal128__:
+
+
+
+setDecimal128
+-------------
+
+.. _io_realm_internal_UncheckedRow_setDecimal128_long__Decimal128_:
+
+.. _io_realm_internal_UncheckedRow_setDecimal128_long_Decimal128_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setDecimal128 (**long** columnKey,
+                                   **Decimal128 (?)** value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setDouble:
+
+.. _setDouble__:
+
+.. _UncheckedRow_setDouble:
+
+.. _UncheckedRow_setDouble__:
+
+.. _io_realm_internal_UncheckedRow_setDouble:
+
+.. _io_realm_internal_UncheckedRow_setDouble__:
+
+
+
+setDouble
+---------
+
+.. _io_realm_internal_UncheckedRow_setDouble_long__double_:
+
+.. _io_realm_internal_UncheckedRow_setDouble_long_double_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setDouble (**long** columnKey,
+                               **double** value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setFloat:
+
+.. _setFloat__:
+
+.. _UncheckedRow_setFloat:
+
+.. _UncheckedRow_setFloat__:
+
+.. _io_realm_internal_UncheckedRow_setFloat:
+
+.. _io_realm_internal_UncheckedRow_setFloat__:
+
+
+
+setFloat
+--------
+
+.. _io_realm_internal_UncheckedRow_setFloat_long__float_:
+
+.. _io_realm_internal_UncheckedRow_setFloat_long_float_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setFloat (**long** columnKey,
+                              **float** value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setLink:
+
+.. _setLink__:
+
+.. _UncheckedRow_setLink:
+
+.. _UncheckedRow_setLink__:
+
+.. _io_realm_internal_UncheckedRow_setLink:
+
+.. _io_realm_internal_UncheckedRow_setLink__:
+
+
+
+setLink
+-------
+
+.. _io_realm_internal_UncheckedRow_setLink_long__long_:
+
+.. _io_realm_internal_UncheckedRow_setLink_long_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setLink (**long** columnKey,
+                             **long** value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setLong:
+
+.. _setLong__:
+
+.. _UncheckedRow_setLong:
+
+.. _UncheckedRow_setLong__:
+
+.. _io_realm_internal_UncheckedRow_setLong:
+
+.. _io_realm_internal_UncheckedRow_setLong__:
+
+
+
+setLong
+-------
+
+.. _io_realm_internal_UncheckedRow_setLong_long__long_:
+
+.. _io_realm_internal_UncheckedRow_setLong_long_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setLong (**long** columnKey,
+                             **long** value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setNull:
+
+.. _setNull__:
+
+.. _UncheckedRow_setNull:
+
+.. _UncheckedRow_setNull__:
+
+.. _io_realm_internal_UncheckedRow_setNull:
+
+.. _io_realm_internal_UncheckedRow_setNull__:
+
+
+
+setNull
+-------
+
+.. _io_realm_internal_UncheckedRow_setNull_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setNull (**long** columnKey)
+   
+   * - Sets null to a row pointer.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``columnKey`` - column key.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setObjectId:
+
+.. _setObjectId__:
+
+.. _UncheckedRow_setObjectId:
+
+.. _UncheckedRow_setObjectId__:
+
+.. _io_realm_internal_UncheckedRow_setObjectId:
+
+.. _io_realm_internal_UncheckedRow_setObjectId__:
+
+
+
+setObjectId
+-----------
+
+.. _io_realm_internal_UncheckedRow_setObjectId_long__ObjectId_:
+
+.. _io_realm_internal_UncheckedRow_setObjectId_long_ObjectId_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setObjectId (**long** columnKey,
+                                 **ObjectId (?)** value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setRealmAny:
+
+.. _setRealmAny__:
+
+.. _UncheckedRow_setRealmAny:
+
+.. _UncheckedRow_setRealmAny__:
+
+.. _io_realm_internal_UncheckedRow_setRealmAny:
+
+.. _io_realm_internal_UncheckedRow_setRealmAny__:
+
+
+
+setRealmAny
+-----------
+
+.. _io_realm_internal_UncheckedRow_setRealmAny_long__long_:
+
+.. _io_realm_internal_UncheckedRow_setRealmAny_long_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setRealmAny (**long** columnKey,
+                                 **long** realmAnyNativePtr)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setString:
+
+.. _setString__:
+
+.. _UncheckedRow_setString:
+
+.. _UncheckedRow_setString__:
+
+.. _io_realm_internal_UncheckedRow_setString:
+
+.. _io_realm_internal_UncheckedRow_setString__:
+
+
+
+setString
+---------
+
+.. _io_realm_internal_UncheckedRow_setString_long__String_:
+
+.. _io_realm_internal_UncheckedRow_setString_long_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setString (**long** columnKey,
+                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
+   
+   * - Sets a string value to a row pointer.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``columnKey`` - column key.
+          
+          
+          
+       - ``value`` - the value to to a row
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setUUID:
+
+.. _setUUID__:
+
+.. _UncheckedRow_setUUID:
+
+.. _UncheckedRow_setUUID__:
+
+.. _io_realm_internal_UncheckedRow_setUUID:
+
+.. _io_realm_internal_UncheckedRow_setUUID__:
+
+
+
+setUUID
+-------
+
+.. _io_realm_internal_UncheckedRow_setUUID_long__UUID_:
+
+.. _io_realm_internal_UncheckedRow_setUUID_long_UUID_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setUUID (**long** columnKey,
+                             `UUID <https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html>`__  value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

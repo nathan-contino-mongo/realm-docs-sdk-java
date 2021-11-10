@@ -1,0 +1,376 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class ObserverPairList
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_internal_ObserverPairList:
+
+
+
+io.realm.internal
+=================
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+An ObserverPairList holds a list of ObserverPairs. An :ref:`ObserverPair <io_realm_internal_ObserverPairList_ObserverPair>`  is pair containing an observer and a listener. The observer is the object to react to the changes through the listener. The observer is saved as a weak reference in the pair to control the life cycle of the listener. When the observer gets GCed, the corresponding pair will be removed from the list. So DO NOT keep a strong reference to the observer in the subclass of listener since it will cause leaks!
+
+This class is not thread safe and it is not supposed to be.
+
+
+
+
+Constructors
+============
+
+
+
+- ``io.realm.internal.ObserverPairList()`` 
+
+
+
+
+Nested Class Summary
+====================
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Class and Description
+   
+   * - ``public abstract static`` 
+     - ``io.realm.internal.ObserverPairList.ObserverPair`` 
+   
+   * - ``public static interface`` 
+     - ``io.realm.internal.ObserverPairList.Callback`` 
+   
+   
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public **void**
+     - 
+       :ref:`add <io_realm_internal_ObserverPairList_add_T_>`  (**T (?)** pair)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`clear <io_realm_internal_ObserverPairList_clear__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`foreach <io_realm_internal_ObserverPairList_foreach_ObserverPairList_Callback_T__>`  (:ref:`io.realm.internal.ObserverPairList.Callback\<T> <io_realm_internal_ObserverPairList_Callback>`  callback)
+       
+       Iterate every valid pair in the list and call the callback on it.
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`isEmpty <io_realm_internal_ObserverPairList_isEmpty__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`remove <io_realm_internal_ObserverPairList_remove_S__U_>`  <**S (?)** , **U (?)** >(**S (?)** observer,
+                            **U (?)** listener)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **int**
+     - 
+       :ref:`size <io_realm_internal_ObserverPairList_size__>`  ()
+       
+       
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+
+
+
+
+Method Detail
+=============
+
+.. _add:
+
+.. _add__:
+
+.. _ObserverPairList_add:
+
+.. _ObserverPairList_add__:
+
+.. _io_realm_internal_ObserverPairList_add:
+
+.. _io_realm_internal_ObserverPairList_add__:
+
+
+
+add
+----
+
+.. _io_realm_internal_ObserverPairList_add_T_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** add (**T (?)** pair)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _clear:
+
+.. _clear__:
+
+.. _ObserverPairList_clear:
+
+.. _ObserverPairList_clear__:
+
+
+
+clear
+-----
+
+.. _io_realm_internal_ObserverPairList_clear__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** clear ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _foreach:
+
+.. _foreach__:
+
+.. _ObserverPairList_foreach:
+
+.. _ObserverPairList_foreach__:
+
+.. _io_realm_internal_ObserverPairList_foreach:
+
+.. _io_realm_internal_ObserverPairList_foreach__:
+
+
+
+foreach
+-------
+
+.. _io_realm_internal_ObserverPairList_foreach_ObserverPairList_Callback_T__:
+
+.. _io_realm_internal_ObserverPairList_foreach_Callback_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** foreach (:ref:`io.realm.internal.ObserverPairList.Callback\<T> <io_realm_internal_ObserverPairList_Callback>`  callback)
+   
+   * - Iterate every valid pair in the list and call the callback on it. The pair with GCed observer will be removed and callback won't be executed. Before executing the callback, a strong reference to the observer will be kept and passed to the callback in case the observer gets GCed before callback returns.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``callback`` - to be executed on the pair.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _isEmpty:
+
+.. _isEmpty__:
+
+.. _ObserverPairList_isEmpty:
+
+.. _ObserverPairList_isEmpty__:
+
+
+
+isEmpty
+-------
+
+.. _io_realm_internal_ObserverPairList_isEmpty__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** isEmpty ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _remove:
+
+.. _remove__:
+
+.. _ObserverPairList_remove:
+
+.. _ObserverPairList_remove__:
+
+.. _io_realm_internal_ObserverPairList_remove:
+
+.. _io_realm_internal_ObserverPairList_remove__:
+
+
+
+remove
+------
+
+.. _io_realm_internal_ObserverPairList_remove_S__U_:
+
+.. _io_realm_internal_ObserverPairList_remove_S_U_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** remove <**S (?)** , **U (?)** >(**S (?)** observer,
+                            **U (?)** listener)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _size:
+
+.. _size__:
+
+.. _ObserverPairList_size:
+
+.. _ObserverPairList_size__:
+
+
+
+size
+----
+
+.. _io_realm_internal_ObserverPairList_size__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **int** size ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

@@ -1,0 +1,3383 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class OsResults
+^^^^^^^^^^^^^^^
+
+.. _io_realm_internal_OsResults:
+
+
+
+io.realm.internal
+=================
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+*Implemented interfaces:*
+
+
+
+- :ref:`io.realm.internal.NativeObject <io_realm_internal_NativeObject>` 
+- :ref:`io.realm.internal.ObservableCollection <io_realm_internal_ObservableCollection>` 
+
+
+Java wrapper of Object Store Results class. It is the backend of binding's query results and back links.
+
+
+Nested Class Summary
+====================
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Class and Description
+   
+   * - ``public abstract static`` 
+     - ``io.realm.internal.OsResults.Iterator`` 
+   
+   * - ``public abstract static`` 
+     - ``io.realm.internal.OsResults.ListIterator`` 
+   
+   * - ``public static final`` 
+     - ``io.realm.internal.OsResults.Aggregate`` 
+   
+   * - ``public static final`` 
+     - ``io.realm.internal.OsResults.Mode`` 
+   
+   
+
+
+Field Summary
+=============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Field and Description
+   
+   * - ``protected boolean`` 
+       
+       
+     - ``loaded`` 
+       
+       
+   
+   * - ``protected final io.realm.internal.ObserverPairList<io.realm.internal.ObservableCollection.CollectionObserverPair>`` 
+       
+       
+     - ``observerPairs`` 
+       
+       
+   
+   * - ``public static final byte`` 
+       
+       
+     - ``AGGREGATE_FUNCTION_MINIMUM`` 
+       
+       
+   
+   * - ``public static final byte`` 
+       
+       
+     - ``AGGREGATE_FUNCTION_MAXIMUM`` 
+       
+       
+   
+   * - ``public static final byte`` 
+       
+       
+     - ``AGGREGATE_FUNCTION_AVERAGE`` 
+       
+       
+   
+   * - ``public static final byte`` 
+       
+       
+     - ``AGGREGATE_FUNCTION_SUM`` 
+       
+       
+   
+   * - ``public static final byte`` 
+       
+       
+     - ``MODE_EMPTY`` 
+       
+       
+   
+   * - ``public static final byte`` 
+       
+       
+     - ``MODE_TABLE`` 
+       
+       
+   
+   * - ``public static final byte`` 
+       
+       
+     - ``MODE_LIST`` 
+       
+       
+   
+   * - ``public static final byte`` 
+       
+       
+     - ``MODE_QUERY`` 
+       
+       
+   
+   * - ``public static final byte`` 
+       
+       
+     - ``MODE_TABLEVIEW`` 
+       
+       
+   
+   
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addListener <io_realm_internal_OsResults_addListener_T__RealmChangeListener_T__>`  <**T (?)** >(**T (?)** observer,
+                                 :ref:`io.realm.RealmChangeListener\<T> <io_realm_RealmChangeListener>`  listener)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`addListener <io_realm_internal_OsResults_addListener_T__OrderedRealmCollectionChangeListener_T__>`  <**T (?)** >(**T (?)** observer,
+                                 :ref:`io.realm.OrderedRealmCollectionChangeListener\<T> <io_realm_OrderedRealmCollectionChangeListener>`  listener)
+       
+       
+       
+       
+       
+   
+   * - 
+       public `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__ 
+     - 
+       :ref:`aggregateDate <io_realm_internal_OsResults_aggregateDate_OsResults_Aggregate__long_>`  (:ref:`OsResults.Aggregate <io_realm_internal_OsResults_Aggregate>`  aggregateMethod,
+                                   **long** columnIndex)
+       
+       
+       
+       
+       
+   
+   * - 
+       public `Number <https://docs.oracle.com/javase/7/docs/api/java/lang/Number.html>`__ 
+     - 
+       :ref:`aggregateNumber <io_realm_internal_OsResults_aggregateNumber_OsResults_Aggregate__long_>`  (:ref:`OsResults.Aggregate <io_realm_internal_OsResults_Aggregate>`  aggregateMethod,
+                                       **long** columnKey)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`clear <io_realm_internal_OsResults_clear__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`contains <io_realm_internal_OsResults_contains_UncheckedRow_>`  (:ref:`UncheckedRow <io_realm_internal_UncheckedRow>`  row)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static :ref:`OsResults <io_realm_internal_OsResults>` 
+     - 
+       :ref:`createForBacklinks <io_realm_internal_OsResults_createForBacklinks_OsSharedRealm__UncheckedRow__Table__String_>`  (:ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  realm,
+                                                    :ref:`UncheckedRow <io_realm_internal_UncheckedRow>`  row,
+                                                    :ref:`Table <io_realm_internal_Table>`  srcTable,
+                                                    `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  srcFieldName)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static :ref:`OsResults <io_realm_internal_OsResults>` 
+     - 
+       :ref:`createFromMap <io_realm_internal_OsResults_createFromMap_OsSharedRealm__long_>`  (:ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  sharedRealm,
+                                               **long** resultsPtr)
+       
+       
+       
+       
+       
+   
+   * - 
+       public static :ref:`OsResults <io_realm_internal_OsResults>` 
+     - 
+       :ref:`createFromQuery <io_realm_internal_OsResults_createFromQuery_OsSharedRealm__TableQuery_>`  (:ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  sharedRealm,
+                                                 :ref:`TableQuery <io_realm_internal_TableQuery>`  query)
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`OsResults <io_realm_internal_OsResults>` 
+     - 
+       :ref:`createSnapshot <io_realm_internal_OsResults_createSnapshot__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`delete <io_realm_internal_OsResults_delete_long_>`  (**long** index)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`deleteFirst <io_realm_internal_OsResults_deleteFirst__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`deleteLast <io_realm_internal_OsResults_deleteLast__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`OsResults <io_realm_internal_OsResults>` 
+     - 
+       :ref:`distinct <io_realm_internal_OsResults_distinct_OsKeyPathMapping__String[]_>`  (:ref:`OsKeyPathMapping <io_realm_internal_objectstore_OsKeyPathMapping>`  mapping,
+                                   `java.lang.String[] <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldNames)
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`UncheckedRow <io_realm_internal_UncheckedRow>` 
+     - 
+       :ref:`firstUncheckedRow <io_realm_internal_OsResults_firstUncheckedRow__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`OsResults <io_realm_internal_OsResults>` 
+     - 
+       :ref:`freeze <io_realm_internal_OsResults_freeze_OsSharedRealm_>`  (:ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  frozenRealm)
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`OsResults.Mode <io_realm_internal_OsResults_Mode>` 
+     - 
+       :ref:`getMode <io_realm_internal_OsResults_getMode__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`getNativeFinalizerPtr <io_realm_internal_OsResults_getNativeFinalizerPtr__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`getNativePtr <io_realm_internal_OsResults_getNativePtr__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`Table <io_realm_internal_Table>` 
+     - 
+       :ref:`getTable <io_realm_internal_OsResults_getTable__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`UncheckedRow <io_realm_internal_UncheckedRow>` 
+     - 
+       :ref:`getUncheckedRow <io_realm_internal_OsResults_getUncheckedRow_int_>`  (**int** index)
+       
+       
+       
+       
+       
+   
+   * - 
+       public `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+     - 
+       :ref:`getValue <io_realm_internal_OsResults_getValue_int_>`  (**int** index)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **int**
+     - 
+       :ref:`indexOf <io_realm_internal_OsResults_indexOf_UncheckedRow_>`  (:ref:`UncheckedRow <io_realm_internal_UncheckedRow>`  row)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`isLoaded <io_realm_internal_OsResults_isLoaded__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`isValid <io_realm_internal_OsResults_isValid__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`UncheckedRow <io_realm_internal_UncheckedRow>` 
+     - 
+       :ref:`lastUncheckedRow <io_realm_internal_OsResults_lastUncheckedRow__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`load <io_realm_internal_OsResults_load__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       protected static native **long**
+     - 
+       :ref:`nativeCreateResults <io_realm_internal_OsResults_nativeCreateResults_long__long_>`  (**long** sharedRealmNativePtr,
+                                                          **long** queryNativePtr)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`notifyChangeListeners <io_realm_internal_OsResults_notifyChangeListeners_long_>`  (**long** nativeChangeSetPtr)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`removeAllListeners <io_realm_internal_OsResults_removeAllListeners__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`removeListener <io_realm_internal_OsResults_removeListener_T__RealmChangeListener_T__>`  <**T (?)** >(**T (?)** observer,
+                                    :ref:`io.realm.RealmChangeListener\<T> <io_realm_RealmChangeListener>`  listener)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`removeListener <io_realm_internal_OsResults_removeListener_T__OrderedRealmCollectionChangeListener_T__>`  <**T (?)** >(**T (?)** observer,
+                                    :ref:`io.realm.OrderedRealmCollectionChangeListener\<T> <io_realm_OrderedRealmCollectionChangeListener>`  listener)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setBlob <io_realm_internal_OsResults_setBlob_String__byte[]_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                             **byte[]** value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setBoolean <io_realm_internal_OsResults_setBoolean_String__boolean_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                **boolean** value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setBooleanList <io_realm_internal_OsResults_setBooleanList_String__RealmList_Boolean__>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                    :ref:`io.realm.RealmList\<java.lang.Boolean> <io_realm_RealmList>`  list)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setByteArrayList <io_realm_internal_OsResults_setByteArrayList_String__RealmList_byte[]__>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                      :ref:`io.realm.RealmList\<byte[]> <io_realm_RealmList>`  list)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setByteList <io_realm_internal_OsResults_setByteList_String__RealmList_Byte__>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                 :ref:`io.realm.RealmList\<java.lang.Byte> <io_realm_RealmList>`  list)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setDate <io_realm_internal_OsResults_setDate_String__Date_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                             `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  timestamp)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setDateList <io_realm_internal_OsResults_setDateList_String__RealmList_Date__>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                 :ref:`io.realm.RealmList\<java.util.Date> <io_realm_RealmList>`  list)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setDecimal128 <io_realm_internal_OsResults_setDecimal128_String__Decimal128_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                   **Decimal128 (?)** value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setDecimal128List <io_realm_internal_OsResults_setDecimal128List_String__RealmList_Decimal128__>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                       :ref:`io.realm.RealmList\<Decimal128> <io_realm_RealmList>`  list)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setDouble <io_realm_internal_OsResults_setDouble_String__double_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                               **double** value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setDoubleList <io_realm_internal_OsResults_setDoubleList_String__RealmList_Double__>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                   :ref:`io.realm.RealmList\<java.lang.Double> <io_realm_RealmList>`  list)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setFloat <io_realm_internal_OsResults_setFloat_String__float_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                              **float** value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setFloatList <io_realm_internal_OsResults_setFloatList_String__RealmList_Float__>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                  :ref:`io.realm.RealmList\<java.lang.Float> <io_realm_RealmList>`  list)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setInt <io_realm_internal_OsResults_setInt_String__long_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                            **long** value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setIntegerList <io_realm_internal_OsResults_setIntegerList_String__RealmList_Integer__>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                    :ref:`io.realm.RealmList\<java.lang.Integer> <io_realm_RealmList>`  list)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setLongList <io_realm_internal_OsResults_setLongList_String__RealmList_Long__>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                 :ref:`io.realm.RealmList\<java.lang.Long> <io_realm_RealmList>`  list)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setModelList <io_realm_internal_OsResults_setModelList_String__RealmList_RealmModel__>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                  :ref:`io.realm.RealmList\<io.realm.RealmModel> <io_realm_RealmList>`  list)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setNull <io_realm_internal_OsResults_setNull_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setObject <io_realm_internal_OsResults_setObject_String__Row_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                               :ref:`Row <io_realm_internal_Row>`  row)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setObjectId <io_realm_internal_OsResults_setObjectId_String__ObjectId_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                 **ObjectId (?)** value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setObjectIdList <io_realm_internal_OsResults_setObjectIdList_String__RealmList_ObjectId__>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                     :ref:`io.realm.RealmList\<ObjectId> <io_realm_RealmList>`  list)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setShortList <io_realm_internal_OsResults_setShortList_String__RealmList_Short__>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                  :ref:`io.realm.RealmList\<java.lang.Short> <io_realm_RealmList>`  list)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setString <io_realm_internal_OsResults_setString_String__String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setStringList <io_realm_internal_OsResults_setStringList_String__RealmList_String__>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                   :ref:`io.realm.RealmList\<java.lang.String> <io_realm_RealmList>`  list)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setUUID <io_realm_internal_OsResults_setUUID_String__UUID_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                             `UUID <https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html>`__  value)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`setUUIDList <io_realm_internal_OsResults_setUUIDList_String__RealmList_UUID__>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                 :ref:`io.realm.RealmList\<java.util.UUID> <io_realm_RealmList>`  list)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **long**
+     - 
+       :ref:`size <io_realm_internal_OsResults_size__>`  ()
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`OsResults <io_realm_internal_OsResults>` 
+     - 
+       :ref:`sort <io_realm_internal_OsResults_sort_OsKeyPathMapping__String[]__Sort[]_>`  (:ref:`OsKeyPathMapping <io_realm_internal_objectstore_OsKeyPathMapping>`  mapping,
+                               `java.lang.String[] <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldNames,
+                               :ref:`io.realm.Sort[] <io_realm_Sort>`  sortOrders)
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`OsResults <io_realm_internal_OsResults>` 
+     - 
+       :ref:`sort <io_realm_internal_OsResults_sort_OsKeyPathMapping__String__Sort_>`  (:ref:`OsKeyPathMapping <io_realm_internal_objectstore_OsKeyPathMapping>`  mapping,
+                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                               :ref:`Sort <io_realm_Sort>`  sortOrder)
+       
+       
+       
+       
+       
+   
+   * - 
+       public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - 
+       :ref:`toJSON <io_realm_internal_OsResults_toJSON_int_>`  (**int** maxDepth)
+       
+       
+       
+       
+       
+   
+   * - 
+       public :ref:`TableQuery <io_realm_internal_TableQuery>` 
+     - 
+       :ref:`where <io_realm_internal_OsResults_where__>`  ()
+       
+       
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+
+
+
+
+Field Detail
+============
+
+.. _io_realm_internal_OsResults_loaded:
+
+
+
+``loaded`` 
+-----------
+
+
+.. _io_realm_internal_OsResults_observerPairs:
+
+
+
+``observerPairs`` 
+------------------
+
+
+.. _io_realm_internal_OsResults_AGGREGATE_FUNCTION_MINIMUM:
+
+
+
+``AGGREGATE_FUNCTION_MINIMUM`` 
+-------------------------------
+
+
+.. _io_realm_internal_OsResults_AGGREGATE_FUNCTION_MAXIMUM:
+
+
+
+``AGGREGATE_FUNCTION_MAXIMUM`` 
+-------------------------------
+
+
+.. _io_realm_internal_OsResults_AGGREGATE_FUNCTION_AVERAGE:
+
+
+
+``AGGREGATE_FUNCTION_AVERAGE`` 
+-------------------------------
+
+
+.. _io_realm_internal_OsResults_AGGREGATE_FUNCTION_SUM:
+
+
+
+``AGGREGATE_FUNCTION_SUM`` 
+---------------------------
+
+
+.. _io_realm_internal_OsResults_MODE_EMPTY:
+
+
+
+``MODE_EMPTY`` 
+---------------
+
+
+.. _io_realm_internal_OsResults_MODE_TABLE:
+
+
+
+``MODE_TABLE`` 
+---------------
+
+
+.. _io_realm_internal_OsResults_MODE_LIST:
+
+
+
+``MODE_LIST`` 
+--------------
+
+
+.. _io_realm_internal_OsResults_MODE_QUERY:
+
+
+
+``MODE_QUERY`` 
+---------------
+
+
+.. _io_realm_internal_OsResults_MODE_TABLEVIEW:
+
+
+
+``MODE_TABLEVIEW`` 
+-------------------
+
+
+
+
+Method Detail
+=============
+
+.. _addListener:
+
+.. _addListener__:
+
+.. _OsResults_addListener:
+
+.. _OsResults_addListener__:
+
+.. _io_realm_internal_OsResults_addListener:
+
+.. _io_realm_internal_OsResults_addListener__:
+
+
+
+addListener
+-----------
+
+.. _io_realm_internal_OsResults_addListener_T__RealmChangeListener_T__:
+
+.. _io_realm_internal_OsResults_addListener_T_RealmChangeListener_:
+
+.. _io_realm_internal_OsResults_addListener_T__RealmChangeListener_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addListener <**T (?)** >(**T (?)** observer,
+                                 :ref:`io.realm.RealmChangeListener\<T> <io_realm_RealmChangeListener>`  listener)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_internal_OsResults_addListener_T__OrderedRealmCollectionChangeListener_T__:
+
+.. _io_realm_internal_OsResults_addListener_T_OrderedRealmCollectionChangeListener_:
+
+.. _io_realm_internal_OsResults_addListener_T__OrderedRealmCollectionChangeListener_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** addListener <**T (?)** >(**T (?)** observer,
+                                 :ref:`io.realm.OrderedRealmCollectionChangeListener\<T> <io_realm_OrderedRealmCollectionChangeListener>`  listener)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _aggregateDate:
+
+.. _aggregateDate__:
+
+.. _OsResults_aggregateDate:
+
+.. _OsResults_aggregateDate__:
+
+.. _io_realm_internal_OsResults_aggregateDate:
+
+.. _io_realm_internal_OsResults_aggregateDate__:
+
+
+
+aggregateDate
+-------------
+
+.. _io_realm_internal_OsResults_aggregateDate_OsResults_Aggregate__long_:
+
+.. _io_realm_internal_OsResults_aggregateDate_Aggregate_long_:
+
+.. _io_realm_internal_OsResults_aggregateDate_Aggregate__long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  aggregateDate (:ref:`OsResults.Aggregate <io_realm_internal_OsResults_Aggregate>`  aggregateMethod,
+                                   **long** columnIndex)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _aggregateNumber:
+
+.. _aggregateNumber__:
+
+.. _OsResults_aggregateNumber:
+
+.. _OsResults_aggregateNumber__:
+
+.. _io_realm_internal_OsResults_aggregateNumber:
+
+.. _io_realm_internal_OsResults_aggregateNumber__:
+
+
+
+aggregateNumber
+---------------
+
+.. _io_realm_internal_OsResults_aggregateNumber_OsResults_Aggregate__long_:
+
+.. _io_realm_internal_OsResults_aggregateNumber_Aggregate_long_:
+
+.. _io_realm_internal_OsResults_aggregateNumber_Aggregate__long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `Number <https://docs.oracle.com/javase/7/docs/api/java/lang/Number.html>`__  aggregateNumber (:ref:`OsResults.Aggregate <io_realm_internal_OsResults_Aggregate>`  aggregateMethod,
+                                       **long** columnKey)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _clear:
+
+.. _clear__:
+
+.. _OsResults_clear:
+
+.. _OsResults_clear__:
+
+
+
+clear
+-----
+
+.. _io_realm_internal_OsResults_clear__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** clear ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _contains:
+
+.. _contains__:
+
+.. _OsResults_contains:
+
+.. _OsResults_contains__:
+
+.. _io_realm_internal_OsResults_contains:
+
+.. _io_realm_internal_OsResults_contains__:
+
+
+
+contains
+--------
+
+.. _io_realm_internal_OsResults_contains_UncheckedRow_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** contains (:ref:`UncheckedRow <io_realm_internal_UncheckedRow>`  row)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _createForBacklinks:
+
+.. _createForBacklinks__:
+
+.. _OsResults_createForBacklinks:
+
+.. _OsResults_createForBacklinks__:
+
+.. _io_realm_internal_OsResults_createForBacklinks:
+
+.. _io_realm_internal_OsResults_createForBacklinks__:
+
+
+
+createForBacklinks
+------------------
+
+.. _io_realm_internal_OsResults_createForBacklinks_OsSharedRealm__UncheckedRow__Table__String_:
+
+.. _io_realm_internal_OsResults_createForBacklinks_OsSharedRealm_UncheckedRow_Table_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`OsResults <io_realm_internal_OsResults>`  createForBacklinks (:ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  realm,
+                                                    :ref:`UncheckedRow <io_realm_internal_UncheckedRow>`  row,
+                                                    :ref:`Table <io_realm_internal_Table>`  srcTable,
+                                                    `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  srcFieldName)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _createFromMap:
+
+.. _createFromMap__:
+
+.. _OsResults_createFromMap:
+
+.. _OsResults_createFromMap__:
+
+.. _io_realm_internal_OsResults_createFromMap:
+
+.. _io_realm_internal_OsResults_createFromMap__:
+
+
+
+createFromMap
+-------------
+
+.. _io_realm_internal_OsResults_createFromMap_OsSharedRealm__long_:
+
+.. _io_realm_internal_OsResults_createFromMap_OsSharedRealm_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`OsResults <io_realm_internal_OsResults>`  createFromMap (:ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  sharedRealm,
+                                               **long** resultsPtr)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _createFromQuery:
+
+.. _createFromQuery__:
+
+.. _OsResults_createFromQuery:
+
+.. _OsResults_createFromQuery__:
+
+.. _io_realm_internal_OsResults_createFromQuery:
+
+.. _io_realm_internal_OsResults_createFromQuery__:
+
+
+
+createFromQuery
+---------------
+
+.. _io_realm_internal_OsResults_createFromQuery_OsSharedRealm__TableQuery_:
+
+.. _io_realm_internal_OsResults_createFromQuery_OsSharedRealm_TableQuery_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public static :ref:`OsResults <io_realm_internal_OsResults>`  createFromQuery (:ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  sharedRealm,
+                                                 :ref:`TableQuery <io_realm_internal_TableQuery>`  query)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _createSnapshot:
+
+.. _createSnapshot__:
+
+.. _OsResults_createSnapshot:
+
+.. _OsResults_createSnapshot__:
+
+
+
+createSnapshot
+--------------
+
+.. _io_realm_internal_OsResults_createSnapshot__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`OsResults <io_realm_internal_OsResults>`  createSnapshot ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _delete:
+
+.. _delete__:
+
+.. _OsResults_delete:
+
+.. _OsResults_delete__:
+
+.. _io_realm_internal_OsResults_delete:
+
+.. _io_realm_internal_OsResults_delete__:
+
+
+
+delete
+------
+
+.. _io_realm_internal_OsResults_delete_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** delete (**long** index)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _deleteFirst:
+
+.. _deleteFirst__:
+
+.. _OsResults_deleteFirst:
+
+.. _OsResults_deleteFirst__:
+
+
+
+deleteFirst
+-----------
+
+.. _io_realm_internal_OsResults_deleteFirst__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** deleteFirst ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _deleteLast:
+
+.. _deleteLast__:
+
+.. _OsResults_deleteLast:
+
+.. _OsResults_deleteLast__:
+
+
+
+deleteLast
+----------
+
+.. _io_realm_internal_OsResults_deleteLast__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** deleteLast ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _distinct:
+
+.. _distinct__:
+
+.. _OsResults_distinct:
+
+.. _OsResults_distinct__:
+
+.. _io_realm_internal_OsResults_distinct:
+
+.. _io_realm_internal_OsResults_distinct__:
+
+
+
+distinct
+--------
+
+.. _io_realm_internal_OsResults_distinct_OsKeyPathMapping__String[]_:
+
+.. _io_realm_internal_OsResults_distinct_OsKeyPathMapping_String_:
+
+.. _io_realm_internal_OsResults_distinct_OsKeyPathMapping__String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`OsResults <io_realm_internal_OsResults>`  distinct (:ref:`OsKeyPathMapping <io_realm_internal_objectstore_OsKeyPathMapping>`  mapping,
+                                   `java.lang.String[] <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldNames)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _firstUncheckedRow:
+
+.. _firstUncheckedRow__:
+
+.. _OsResults_firstUncheckedRow:
+
+.. _OsResults_firstUncheckedRow__:
+
+
+
+firstUncheckedRow
+-----------------
+
+.. _io_realm_internal_OsResults_firstUncheckedRow__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`UncheckedRow <io_realm_internal_UncheckedRow>`  firstUncheckedRow ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _freeze:
+
+.. _freeze__:
+
+.. _OsResults_freeze:
+
+.. _OsResults_freeze__:
+
+.. _io_realm_internal_OsResults_freeze:
+
+.. _io_realm_internal_OsResults_freeze__:
+
+
+
+freeze
+------
+
+.. _io_realm_internal_OsResults_freeze_OsSharedRealm_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`OsResults <io_realm_internal_OsResults>`  freeze (:ref:`OsSharedRealm <io_realm_internal_OsSharedRealm>`  frozenRealm)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getMode:
+
+.. _getMode__:
+
+.. _OsResults_getMode:
+
+.. _OsResults_getMode__:
+
+
+
+getMode
+-------
+
+.. _io_realm_internal_OsResults_getMode__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`OsResults.Mode <io_realm_internal_OsResults_Mode>`  getMode ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getNativeFinalizerPtr:
+
+.. _getNativeFinalizerPtr__:
+
+.. _OsResults_getNativeFinalizerPtr:
+
+.. _OsResults_getNativeFinalizerPtr__:
+
+
+
+getNativeFinalizerPtr
+---------------------
+
+.. _io_realm_internal_OsResults_getNativeFinalizerPtr__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** getNativeFinalizerPtr ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getNativePtr:
+
+.. _getNativePtr__:
+
+.. _OsResults_getNativePtr:
+
+.. _OsResults_getNativePtr__:
+
+
+
+getNativePtr
+------------
+
+.. _io_realm_internal_OsResults_getNativePtr__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** getNativePtr ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getTable:
+
+.. _getTable__:
+
+.. _OsResults_getTable:
+
+.. _OsResults_getTable__:
+
+
+
+getTable
+--------
+
+.. _io_realm_internal_OsResults_getTable__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`Table <io_realm_internal_Table>`  getTable ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getUncheckedRow:
+
+.. _getUncheckedRow__:
+
+.. _OsResults_getUncheckedRow:
+
+.. _OsResults_getUncheckedRow__:
+
+.. _io_realm_internal_OsResults_getUncheckedRow:
+
+.. _io_realm_internal_OsResults_getUncheckedRow__:
+
+
+
+getUncheckedRow
+---------------
+
+.. _io_realm_internal_OsResults_getUncheckedRow_int_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`UncheckedRow <io_realm_internal_UncheckedRow>`  getUncheckedRow (**int** index)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _getValue:
+
+.. _getValue__:
+
+.. _OsResults_getValue:
+
+.. _OsResults_getValue__:
+
+.. _io_realm_internal_OsResults_getValue:
+
+.. _io_realm_internal_OsResults_getValue__:
+
+
+
+getValue
+--------
+
+.. _io_realm_internal_OsResults_getValue_int_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  getValue (**int** index)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _indexOf:
+
+.. _indexOf__:
+
+.. _OsResults_indexOf:
+
+.. _OsResults_indexOf__:
+
+.. _io_realm_internal_OsResults_indexOf:
+
+.. _io_realm_internal_OsResults_indexOf__:
+
+
+
+indexOf
+-------
+
+.. _io_realm_internal_OsResults_indexOf_UncheckedRow_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **int** indexOf (:ref:`UncheckedRow <io_realm_internal_UncheckedRow>`  row)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _isLoaded:
+
+.. _isLoaded__:
+
+.. _OsResults_isLoaded:
+
+.. _OsResults_isLoaded__:
+
+
+
+isLoaded
+--------
+
+.. _io_realm_internal_OsResults_isLoaded__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** isLoaded ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _isValid:
+
+.. _isValid__:
+
+.. _OsResults_isValid:
+
+.. _OsResults_isValid__:
+
+
+
+isValid
+-------
+
+.. _io_realm_internal_OsResults_isValid__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** isValid ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _lastUncheckedRow:
+
+.. _lastUncheckedRow__:
+
+.. _OsResults_lastUncheckedRow:
+
+.. _OsResults_lastUncheckedRow__:
+
+
+
+lastUncheckedRow
+----------------
+
+.. _io_realm_internal_OsResults_lastUncheckedRow__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`UncheckedRow <io_realm_internal_UncheckedRow>`  lastUncheckedRow ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _load:
+
+.. _load__:
+
+.. _OsResults_load:
+
+.. _OsResults_load__:
+
+
+
+load
+----
+
+.. _io_realm_internal_OsResults_load__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** load ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _nativeCreateResults:
+
+.. _nativeCreateResults__:
+
+.. _OsResults_nativeCreateResults:
+
+.. _OsResults_nativeCreateResults__:
+
+.. _io_realm_internal_OsResults_nativeCreateResults:
+
+.. _io_realm_internal_OsResults_nativeCreateResults__:
+
+
+
+nativeCreateResults
+-------------------
+
+.. _io_realm_internal_OsResults_nativeCreateResults_long__long_:
+
+.. _io_realm_internal_OsResults_nativeCreateResults_long_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    protected static native **long** nativeCreateResults (**long** sharedRealmNativePtr,
+                                                          **long** queryNativePtr)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _notifyChangeListeners:
+
+.. _notifyChangeListeners__:
+
+.. _OsResults_notifyChangeListeners:
+
+.. _OsResults_notifyChangeListeners__:
+
+.. _io_realm_internal_OsResults_notifyChangeListeners:
+
+.. _io_realm_internal_OsResults_notifyChangeListeners__:
+
+
+
+notifyChangeListeners
+---------------------
+
+.. _io_realm_internal_OsResults_notifyChangeListeners_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** notifyChangeListeners (**long** nativeChangeSetPtr)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _removeAllListeners:
+
+.. _removeAllListeners__:
+
+.. _OsResults_removeAllListeners:
+
+.. _OsResults_removeAllListeners__:
+
+
+
+removeAllListeners
+------------------
+
+.. _io_realm_internal_OsResults_removeAllListeners__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** removeAllListeners ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _removeListener:
+
+.. _removeListener__:
+
+.. _OsResults_removeListener:
+
+.. _OsResults_removeListener__:
+
+.. _io_realm_internal_OsResults_removeListener:
+
+.. _io_realm_internal_OsResults_removeListener__:
+
+
+
+removeListener
+--------------
+
+.. _io_realm_internal_OsResults_removeListener_T__RealmChangeListener_T__:
+
+.. _io_realm_internal_OsResults_removeListener_T_RealmChangeListener_:
+
+.. _io_realm_internal_OsResults_removeListener_T__RealmChangeListener_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** removeListener <**T (?)** >(**T (?)** observer,
+                                    :ref:`io.realm.RealmChangeListener\<T> <io_realm_RealmChangeListener>`  listener)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_internal_OsResults_removeListener_T__OrderedRealmCollectionChangeListener_T__:
+
+.. _io_realm_internal_OsResults_removeListener_T_OrderedRealmCollectionChangeListener_:
+
+.. _io_realm_internal_OsResults_removeListener_T__OrderedRealmCollectionChangeListener_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** removeListener <**T (?)** >(**T (?)** observer,
+                                    :ref:`io.realm.OrderedRealmCollectionChangeListener\<T> <io_realm_OrderedRealmCollectionChangeListener>`  listener)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setBlob:
+
+.. _setBlob__:
+
+.. _OsResults_setBlob:
+
+.. _OsResults_setBlob__:
+
+.. _io_realm_internal_OsResults_setBlob:
+
+.. _io_realm_internal_OsResults_setBlob__:
+
+
+
+setBlob
+-------
+
+.. _io_realm_internal_OsResults_setBlob_String__byte[]_:
+
+.. _io_realm_internal_OsResults_setBlob_String_byte_:
+
+.. _io_realm_internal_OsResults_setBlob_String__byte_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setBlob (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                             **byte[]** value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setBoolean:
+
+.. _setBoolean__:
+
+.. _OsResults_setBoolean:
+
+.. _OsResults_setBoolean__:
+
+.. _io_realm_internal_OsResults_setBoolean:
+
+.. _io_realm_internal_OsResults_setBoolean__:
+
+
+
+setBoolean
+----------
+
+.. _io_realm_internal_OsResults_setBoolean_String__boolean_:
+
+.. _io_realm_internal_OsResults_setBoolean_String_boolean_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setBoolean (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                **boolean** value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setBooleanList:
+
+.. _setBooleanList__:
+
+.. _OsResults_setBooleanList:
+
+.. _OsResults_setBooleanList__:
+
+.. _io_realm_internal_OsResults_setBooleanList:
+
+.. _io_realm_internal_OsResults_setBooleanList__:
+
+
+
+setBooleanList
+--------------
+
+.. _io_realm_internal_OsResults_setBooleanList_String__RealmList_Boolean__:
+
+.. _io_realm_internal_OsResults_setBooleanList_String_RealmList_:
+
+.. _io_realm_internal_OsResults_setBooleanList_String__RealmList_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setBooleanList (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                    :ref:`io.realm.RealmList\<java.lang.Boolean> <io_realm_RealmList>`  list)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setByteArrayList:
+
+.. _setByteArrayList__:
+
+.. _OsResults_setByteArrayList:
+
+.. _OsResults_setByteArrayList__:
+
+.. _io_realm_internal_OsResults_setByteArrayList:
+
+.. _io_realm_internal_OsResults_setByteArrayList__:
+
+
+
+setByteArrayList
+----------------
+
+.. _io_realm_internal_OsResults_setByteArrayList_String__RealmList_byte[]__:
+
+.. _io_realm_internal_OsResults_setByteArrayList_String_RealmList_:
+
+.. _io_realm_internal_OsResults_setByteArrayList_String__RealmList_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setByteArrayList (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                      :ref:`io.realm.RealmList\<byte[]> <io_realm_RealmList>`  list)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setByteList:
+
+.. _setByteList__:
+
+.. _OsResults_setByteList:
+
+.. _OsResults_setByteList__:
+
+.. _io_realm_internal_OsResults_setByteList:
+
+.. _io_realm_internal_OsResults_setByteList__:
+
+
+
+setByteList
+-----------
+
+.. _io_realm_internal_OsResults_setByteList_String__RealmList_Byte__:
+
+.. _io_realm_internal_OsResults_setByteList_String_RealmList_:
+
+.. _io_realm_internal_OsResults_setByteList_String__RealmList_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setByteList (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                 :ref:`io.realm.RealmList\<java.lang.Byte> <io_realm_RealmList>`  list)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setDate:
+
+.. _setDate__:
+
+.. _OsResults_setDate:
+
+.. _OsResults_setDate__:
+
+.. _io_realm_internal_OsResults_setDate:
+
+.. _io_realm_internal_OsResults_setDate__:
+
+
+
+setDate
+-------
+
+.. _io_realm_internal_OsResults_setDate_String__Date_:
+
+.. _io_realm_internal_OsResults_setDate_String_Date_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setDate (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                             `Date <https://docs.oracle.com/javase/7/docs/api/java/util/Date.html>`__  timestamp)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setDateList:
+
+.. _setDateList__:
+
+.. _OsResults_setDateList:
+
+.. _OsResults_setDateList__:
+
+.. _io_realm_internal_OsResults_setDateList:
+
+.. _io_realm_internal_OsResults_setDateList__:
+
+
+
+setDateList
+-----------
+
+.. _io_realm_internal_OsResults_setDateList_String__RealmList_Date__:
+
+.. _io_realm_internal_OsResults_setDateList_String_RealmList_:
+
+.. _io_realm_internal_OsResults_setDateList_String__RealmList_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setDateList (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                 :ref:`io.realm.RealmList\<java.util.Date> <io_realm_RealmList>`  list)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setDecimal128:
+
+.. _setDecimal128__:
+
+.. _OsResults_setDecimal128:
+
+.. _OsResults_setDecimal128__:
+
+.. _io_realm_internal_OsResults_setDecimal128:
+
+.. _io_realm_internal_OsResults_setDecimal128__:
+
+
+
+setDecimal128
+-------------
+
+.. _io_realm_internal_OsResults_setDecimal128_String__Decimal128_:
+
+.. _io_realm_internal_OsResults_setDecimal128_String_Decimal128_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setDecimal128 (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                   **Decimal128 (?)** value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setDecimal128List:
+
+.. _setDecimal128List__:
+
+.. _OsResults_setDecimal128List:
+
+.. _OsResults_setDecimal128List__:
+
+.. _io_realm_internal_OsResults_setDecimal128List:
+
+.. _io_realm_internal_OsResults_setDecimal128List__:
+
+
+
+setDecimal128List
+-----------------
+
+.. _io_realm_internal_OsResults_setDecimal128List_String__RealmList_Decimal128__:
+
+.. _io_realm_internal_OsResults_setDecimal128List_String_RealmList_:
+
+.. _io_realm_internal_OsResults_setDecimal128List_String__RealmList_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setDecimal128List (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                       :ref:`io.realm.RealmList\<Decimal128> <io_realm_RealmList>`  list)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setDouble:
+
+.. _setDouble__:
+
+.. _OsResults_setDouble:
+
+.. _OsResults_setDouble__:
+
+.. _io_realm_internal_OsResults_setDouble:
+
+.. _io_realm_internal_OsResults_setDouble__:
+
+
+
+setDouble
+---------
+
+.. _io_realm_internal_OsResults_setDouble_String__double_:
+
+.. _io_realm_internal_OsResults_setDouble_String_double_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setDouble (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                               **double** value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setDoubleList:
+
+.. _setDoubleList__:
+
+.. _OsResults_setDoubleList:
+
+.. _OsResults_setDoubleList__:
+
+.. _io_realm_internal_OsResults_setDoubleList:
+
+.. _io_realm_internal_OsResults_setDoubleList__:
+
+
+
+setDoubleList
+-------------
+
+.. _io_realm_internal_OsResults_setDoubleList_String__RealmList_Double__:
+
+.. _io_realm_internal_OsResults_setDoubleList_String_RealmList_:
+
+.. _io_realm_internal_OsResults_setDoubleList_String__RealmList_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setDoubleList (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                   :ref:`io.realm.RealmList\<java.lang.Double> <io_realm_RealmList>`  list)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setFloat:
+
+.. _setFloat__:
+
+.. _OsResults_setFloat:
+
+.. _OsResults_setFloat__:
+
+.. _io_realm_internal_OsResults_setFloat:
+
+.. _io_realm_internal_OsResults_setFloat__:
+
+
+
+setFloat
+--------
+
+.. _io_realm_internal_OsResults_setFloat_String__float_:
+
+.. _io_realm_internal_OsResults_setFloat_String_float_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setFloat (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                              **float** value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setFloatList:
+
+.. _setFloatList__:
+
+.. _OsResults_setFloatList:
+
+.. _OsResults_setFloatList__:
+
+.. _io_realm_internal_OsResults_setFloatList:
+
+.. _io_realm_internal_OsResults_setFloatList__:
+
+
+
+setFloatList
+------------
+
+.. _io_realm_internal_OsResults_setFloatList_String__RealmList_Float__:
+
+.. _io_realm_internal_OsResults_setFloatList_String_RealmList_:
+
+.. _io_realm_internal_OsResults_setFloatList_String__RealmList_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setFloatList (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                  :ref:`io.realm.RealmList\<java.lang.Float> <io_realm_RealmList>`  list)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setInt:
+
+.. _setInt__:
+
+.. _OsResults_setInt:
+
+.. _OsResults_setInt__:
+
+.. _io_realm_internal_OsResults_setInt:
+
+.. _io_realm_internal_OsResults_setInt__:
+
+
+
+setInt
+------
+
+.. _io_realm_internal_OsResults_setInt_String__long_:
+
+.. _io_realm_internal_OsResults_setInt_String_long_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setInt (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                            **long** value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setIntegerList:
+
+.. _setIntegerList__:
+
+.. _OsResults_setIntegerList:
+
+.. _OsResults_setIntegerList__:
+
+.. _io_realm_internal_OsResults_setIntegerList:
+
+.. _io_realm_internal_OsResults_setIntegerList__:
+
+
+
+setIntegerList
+--------------
+
+.. _io_realm_internal_OsResults_setIntegerList_String__RealmList_Integer__:
+
+.. _io_realm_internal_OsResults_setIntegerList_String_RealmList_:
+
+.. _io_realm_internal_OsResults_setIntegerList_String__RealmList_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setIntegerList (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                    :ref:`io.realm.RealmList\<java.lang.Integer> <io_realm_RealmList>`  list)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setLongList:
+
+.. _setLongList__:
+
+.. _OsResults_setLongList:
+
+.. _OsResults_setLongList__:
+
+.. _io_realm_internal_OsResults_setLongList:
+
+.. _io_realm_internal_OsResults_setLongList__:
+
+
+
+setLongList
+-----------
+
+.. _io_realm_internal_OsResults_setLongList_String__RealmList_Long__:
+
+.. _io_realm_internal_OsResults_setLongList_String_RealmList_:
+
+.. _io_realm_internal_OsResults_setLongList_String__RealmList_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setLongList (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                 :ref:`io.realm.RealmList\<java.lang.Long> <io_realm_RealmList>`  list)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setModelList:
+
+.. _setModelList__:
+
+.. _OsResults_setModelList:
+
+.. _OsResults_setModelList__:
+
+.. _io_realm_internal_OsResults_setModelList:
+
+.. _io_realm_internal_OsResults_setModelList__:
+
+
+
+setModelList
+------------
+
+.. _io_realm_internal_OsResults_setModelList_String__RealmList_RealmModel__:
+
+.. _io_realm_internal_OsResults_setModelList_String_RealmList_:
+
+.. _io_realm_internal_OsResults_setModelList_String__RealmList_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setModelList (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                  :ref:`io.realm.RealmList\<io.realm.RealmModel> <io_realm_RealmList>`  list)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setNull:
+
+.. _setNull__:
+
+.. _OsResults_setNull:
+
+.. _OsResults_setNull__:
+
+.. _io_realm_internal_OsResults_setNull:
+
+.. _io_realm_internal_OsResults_setNull__:
+
+
+
+setNull
+-------
+
+.. _io_realm_internal_OsResults_setNull_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setNull (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setObject:
+
+.. _setObject__:
+
+.. _OsResults_setObject:
+
+.. _OsResults_setObject__:
+
+.. _io_realm_internal_OsResults_setObject:
+
+.. _io_realm_internal_OsResults_setObject__:
+
+
+
+setObject
+---------
+
+.. _io_realm_internal_OsResults_setObject_String__Row_:
+
+.. _io_realm_internal_OsResults_setObject_String_Row_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setObject (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                               :ref:`Row <io_realm_internal_Row>`  row)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setObjectId:
+
+.. _setObjectId__:
+
+.. _OsResults_setObjectId:
+
+.. _OsResults_setObjectId__:
+
+.. _io_realm_internal_OsResults_setObjectId:
+
+.. _io_realm_internal_OsResults_setObjectId__:
+
+
+
+setObjectId
+-----------
+
+.. _io_realm_internal_OsResults_setObjectId_String__ObjectId_:
+
+.. _io_realm_internal_OsResults_setObjectId_String_ObjectId_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setObjectId (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                 **ObjectId (?)** value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setObjectIdList:
+
+.. _setObjectIdList__:
+
+.. _OsResults_setObjectIdList:
+
+.. _OsResults_setObjectIdList__:
+
+.. _io_realm_internal_OsResults_setObjectIdList:
+
+.. _io_realm_internal_OsResults_setObjectIdList__:
+
+
+
+setObjectIdList
+---------------
+
+.. _io_realm_internal_OsResults_setObjectIdList_String__RealmList_ObjectId__:
+
+.. _io_realm_internal_OsResults_setObjectIdList_String_RealmList_:
+
+.. _io_realm_internal_OsResults_setObjectIdList_String__RealmList_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setObjectIdList (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                     :ref:`io.realm.RealmList\<ObjectId> <io_realm_RealmList>`  list)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setShortList:
+
+.. _setShortList__:
+
+.. _OsResults_setShortList:
+
+.. _OsResults_setShortList__:
+
+.. _io_realm_internal_OsResults_setShortList:
+
+.. _io_realm_internal_OsResults_setShortList__:
+
+
+
+setShortList
+------------
+
+.. _io_realm_internal_OsResults_setShortList_String__RealmList_Short__:
+
+.. _io_realm_internal_OsResults_setShortList_String_RealmList_:
+
+.. _io_realm_internal_OsResults_setShortList_String__RealmList_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setShortList (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                  :ref:`io.realm.RealmList\<java.lang.Short> <io_realm_RealmList>`  list)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setString:
+
+.. _setString__:
+
+.. _OsResults_setString:
+
+.. _OsResults_setString__:
+
+.. _io_realm_internal_OsResults_setString:
+
+.. _io_realm_internal_OsResults_setString__:
+
+
+
+setString
+---------
+
+.. _io_realm_internal_OsResults_setString_String__String_:
+
+.. _io_realm_internal_OsResults_setString_String_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setString (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setStringList:
+
+.. _setStringList__:
+
+.. _OsResults_setStringList:
+
+.. _OsResults_setStringList__:
+
+.. _io_realm_internal_OsResults_setStringList:
+
+.. _io_realm_internal_OsResults_setStringList__:
+
+
+
+setStringList
+-------------
+
+.. _io_realm_internal_OsResults_setStringList_String__RealmList_String__:
+
+.. _io_realm_internal_OsResults_setStringList_String_RealmList_:
+
+.. _io_realm_internal_OsResults_setStringList_String__RealmList_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setStringList (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                   :ref:`io.realm.RealmList\<java.lang.String> <io_realm_RealmList>`  list)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setUUID:
+
+.. _setUUID__:
+
+.. _OsResults_setUUID:
+
+.. _OsResults_setUUID__:
+
+.. _io_realm_internal_OsResults_setUUID:
+
+.. _io_realm_internal_OsResults_setUUID__:
+
+
+
+setUUID
+-------
+
+.. _io_realm_internal_OsResults_setUUID_String__UUID_:
+
+.. _io_realm_internal_OsResults_setUUID_String_UUID_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setUUID (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                             `UUID <https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html>`__  value)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _setUUIDList:
+
+.. _setUUIDList__:
+
+.. _OsResults_setUUIDList:
+
+.. _OsResults_setUUIDList__:
+
+.. _io_realm_internal_OsResults_setUUIDList:
+
+.. _io_realm_internal_OsResults_setUUIDList__:
+
+
+
+setUUIDList
+-----------
+
+.. _io_realm_internal_OsResults_setUUIDList_String__RealmList_UUID__:
+
+.. _io_realm_internal_OsResults_setUUIDList_String_RealmList_:
+
+.. _io_realm_internal_OsResults_setUUIDList_String__RealmList_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** setUUIDList (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                                 :ref:`io.realm.RealmList\<java.util.UUID> <io_realm_RealmList>`  list)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _size:
+
+.. _size__:
+
+.. _OsResults_size:
+
+.. _OsResults_size__:
+
+
+
+size
+----
+
+.. _io_realm_internal_OsResults_size__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **long** size ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _sort:
+
+.. _sort__:
+
+.. _OsResults_sort:
+
+.. _OsResults_sort__:
+
+.. _io_realm_internal_OsResults_sort:
+
+.. _io_realm_internal_OsResults_sort__:
+
+
+
+sort
+----
+
+.. _io_realm_internal_OsResults_sort_OsKeyPathMapping__String[]__Sort[]_:
+
+.. _io_realm_internal_OsResults_sort_OsKeyPathMapping_String_Sort_:
+
+.. _io_realm_internal_OsResults_sort_OsKeyPathMapping__String__Sort_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`OsResults <io_realm_internal_OsResults>`  sort (:ref:`OsKeyPathMapping <io_realm_internal_objectstore_OsKeyPathMapping>`  mapping,
+                               `java.lang.String[] <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldNames,
+                               :ref:`io.realm.Sort[] <io_realm_Sort>`  sortOrders)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _io_realm_internal_OsResults_sort_OsKeyPathMapping__String__Sort_:
+
+.. _io_realm_internal_OsResults_sort_OsKeyPathMapping_String_Sort_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`OsResults <io_realm_internal_OsResults>`  sort (:ref:`OsKeyPathMapping <io_realm_internal_objectstore_OsKeyPathMapping>`  mapping,
+                               `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  fieldName,
+                               :ref:`Sort <io_realm_Sort>`  sortOrder)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _toJSON:
+
+.. _toJSON__:
+
+.. _OsResults_toJSON:
+
+.. _OsResults_toJSON__:
+
+.. _io_realm_internal_OsResults_toJSON:
+
+.. _io_realm_internal_OsResults_toJSON__:
+
+
+
+toJSON
+------
+
+.. _io_realm_internal_OsResults_toJSON_int_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  toJSON (**int** maxDepth)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+.. _where:
+
+.. _where__:
+
+.. _OsResults_where:
+
+.. _OsResults_where__:
+
+
+
+where
+-----
+
+.. _io_realm_internal_OsResults_where__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`TableQuery <io_realm_internal_TableQuery>`  where ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
