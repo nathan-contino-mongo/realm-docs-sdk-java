@@ -1,0 +1,254 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class Push
+^^^^^^^^^^
+
+.. _io_realm_mongodb_push_Push:
+
+
+
+io.realm.mongodb.push
+=====================
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+The Push client allows to register/deregister for push notifications from a client app.
+
+
+Constructors
+============
+
+
+
+- ``io.realm.mongodb.push.Push(OsPush)`` 
+
+
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public **void**
+     - 
+       :ref:`registerDevice <io_realm_mongodb_push_Push_registerDevice_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  registrationToken)
+       
+       Registers the given FCM registration token with the currently logged in user's device on MongoDB Realm.
+       
+       
+       
+   
+   * - 
+       public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` 
+     - 
+       :ref:`registerDeviceAsync <io_realm_mongodb_push_Push_registerDeviceAsync_String__App_Callback_Void__>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  registrationToken,
+                                                   :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>`  callback)
+       
+       Registers the given FCM registration token with the currently logged in user's device on MongoDB Realm.
+       
+       
+       
+   
+   * - 
+       public **void**
+     - 
+       :ref:`deregisterDevice <io_realm_mongodb_push_Push_deregisterDevice__>`  ()
+       
+       Deregisters the FCM registration token bound to the currently logged in user's device on MongoDB Realm.
+       
+       
+       
+   
+   * - 
+       public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>` 
+     - 
+       :ref:`deregisterDeviceAsync <io_realm_mongodb_push_Push_deregisterDeviceAsync_App_Callback_Void__>`  (:ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>`  callback)
+       
+       Deregisters the FCM registration token bound to the currently logged in user's device on MongoDB Realm.
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+
+
+
+
+Method Detail
+=============
+
+
+
+registerDevice
+--------------
+
+.. _io_realm_mongodb_push_Push_registerDevice_String_:
+
+.. _io_realm_mongodb_push_Push_registerDevice_String_:
+
+.. _io_realm_mongodb_push_Push_registerDevice_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** registerDevice (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  registrationToken)
+   
+   * - Registers the given FCM registration token with the currently logged in user's device on MongoDB Realm.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``registrationToken`` - The registration token to register.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+registerDeviceAsync
+-------------------
+
+.. _io_realm_mongodb_push_Push_registerDeviceAsync_String__App_Callback_Void__:
+
+.. _io_realm_mongodb_push_Push_registerDeviceAsync_String_Callback_:
+
+.. _io_realm_mongodb_push_Push_registerDeviceAsync_String__App_Callback_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`  registerDeviceAsync (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  registrationToken,
+                                                   :ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>`  callback)
+   
+   * - Registers the given FCM registration token with the currently logged in user's device on MongoDB Realm.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``registrationToken`` - The registration token to register.
+          
+          
+          
+       - ``callback`` - The callback used when the device has been registered or the call failed - it will always happen on the same thread as this method was called on.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+deregisterDevice
+----------------
+
+.. _io_realm_mongodb_push_Push_deregisterDevice__:
+
+.. _io_realm_mongodb_push_Push_deregisterDevice__:
+
+.. _io_realm_mongodb_push_Push_deregisterDevice__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **void** deregisterDevice ()
+   
+   * - Deregisters the FCM registration token bound to the currently logged in user's device on MongoDB Realm.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+deregisterDeviceAsync
+---------------------
+
+.. _io_realm_mongodb_push_Push_deregisterDeviceAsync_App_Callback_Void__:
+
+.. _io_realm_mongodb_push_Push_deregisterDeviceAsync_Callback_:
+
+.. _io_realm_mongodb_push_Push_deregisterDeviceAsync_App_Callback_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`  deregisterDeviceAsync (:ref:`io.realm.mongodb.App.Callback\<java.lang.Void> <io_realm_mongodb_App_Callback>`  callback)
+   
+   * - Deregisters the FCM registration token bound to the currently logged in user's device on MongoDB Realm.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``callback`` - The callback used when the device has been registered or the call failed - it will always happen on the same thread as this method was called on.
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

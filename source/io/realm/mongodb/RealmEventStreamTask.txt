@@ -1,0 +1,144 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Interface RealmEventStreamTask
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_mongodb_RealmEventStreamTask:
+
+
+
+io.realm.mongodb
+================
+
+*Implemented interfaces:*
+
+
+
+- :ref:`io.realm.RealmAsyncTask <io_realm_RealmAsyncTask>` 
+
+
+The RealmEventStreamTask is a specific version of :ref:`RealmAsyncTask <io_realm_RealmAsyncTask>`  that provides a blocking mechanism to work with asynchronous operations carried out against MongoDB Realm that yield stream results.
+
+
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public :ref:`BaseChangeEvent <io_realm_mongodb_mongo_events_BaseChangeEvent>` 
+     - 
+       :ref:`getNext <io_realm_mongodb_RealmEventStreamTask_getNext__>`  ()
+       
+       Blocks the thread on which the call is made until the result of the operation arrives.
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`isOpen <io_realm_mongodb_RealmEventStreamTask_isOpen__>`  ()
+       
+       Whether or not the stream is currently open.
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+Method Detail
+=============
+
+
+
+getNext
+-------
+
+.. _io_realm_mongodb_RealmEventStreamTask_getNext__:
+
+.. _io_realm_mongodb_RealmEventStreamTask_getNext__:
+
+.. _io_realm_mongodb_RealmEventStreamTask_getNext__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`BaseChangeEvent <io_realm_mongodb_mongo_events_BaseChangeEvent>`  getNext ()
+   
+   * - Blocks the thread on which the call is made until the result of the operation arrives.
+       
+       
+       
+       
+       
+       
+       
+       
+       **Throws**
+       
+       - :ref:`AppException <io_realm_mongodb_AppException>`  - if the server raises an error
+          
+          
+          
+       - `IOException <https://docs.oracle.com/javase/7/docs/api/java/io/IOException.html>`__  - if something is wrong with the input stream
+          
+          
+          
+       
+       
+       
+       
+       
+   
+   
+
+
+isOpen
+------
+
+.. _io_realm_mongodb_RealmEventStreamTask_isOpen__:
+
+.. _io_realm_mongodb_RealmEventStreamTask_isOpen__:
+
+.. _io_realm_mongodb_RealmEventStreamTask_isOpen__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** isOpen ()
+   
+   * - Whether or not the stream is currently open.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+

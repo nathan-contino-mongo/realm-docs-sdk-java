@@ -1,0 +1,252 @@
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+
+Class CollectionChange
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. _io_realm_rx_CollectionChange:
+
+
+
+io.realm.rx
+===========
+
+`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+Container wrapping the result of a :ref:`io.realm.OrderedRealmCollectionChangeListener <io_realm_OrderedRealmCollectionChangeListener>`  being triggered.
+
+This is used by :ref:`RealmResults.asChangesetObservable() <io_realm_RealmResults_asChangesetObservable__>` } and :ref:`RealmList.asChangesetObservable() <io_realm_RealmList_asChangesetObservable__>`  as RxJava is only capable of emitting one item, not multiple.
+
+
+
+
+
+
+Constructors
+============
+
+
+
+- ``io.realm.rx.CollectionChange(E, OrderedCollectionChangeSet)`` 
+
+
+
+
+Method Summary
+==============
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Modifier and Type
+     - Method and Description
+   
+   * - 
+       public **E (?)**
+     - 
+       :ref:`getCollection <io_realm_rx_CollectionChange_getCollection__>`  ()
+       
+       Returns the collection that was updated.
+       
+       
+       
+   
+   * - 
+       public :ref:`OrderedCollectionChangeSet <io_realm_OrderedCollectionChangeSet>` 
+     - 
+       :ref:`getChangeset <io_realm_rx_CollectionChange_getChangeset__>`  ()
+       
+       Returns the changeset describing the update.
+       
+       
+       
+   
+   * - 
+       public **boolean**
+     - 
+       :ref:`equals <io_realm_rx_CollectionChange_equals_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
+       
+       
+       
+       
+       
+   
+   * - 
+       public **int**
+     - 
+       :ref:`hashCode <io_realm_rx_CollectionChange_hashCode__>`  ()
+       
+       
+       
+       
+       
+   
+   
+
+
+Inherited Methods
+=================
+
+
+
+- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+   
+   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   
+   
+
+
+
+
+Method Detail
+=============
+
+
+
+getCollection
+-------------
+
+.. _io_realm_rx_CollectionChange_getCollection__:
+
+.. _io_realm_rx_CollectionChange_getCollection__:
+
+.. _io_realm_rx_CollectionChange_getCollection__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **E (?)** getCollection ()
+   
+   * - Returns the collection that was updated.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+getChangeset
+------------
+
+.. _io_realm_rx_CollectionChange_getChangeset__:
+
+.. _io_realm_rx_CollectionChange_getChangeset__:
+
+.. _io_realm_rx_CollectionChange_getChangeset__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public :ref:`OrderedCollectionChangeSet <io_realm_OrderedCollectionChangeSet>`  getChangeset ()
+   
+   * - Returns the changeset describing the update.This will be ``null``  the first time the stream emits the collection as well as when a asynchronous query is loaded for the first time.
+       
+       
+       
+        
+       
+       .. code-block:: java
+       
+          
+           // Example
+           realm.where(Person.class).findAllAsync().asChangesetObservable()
+             .subscribe(new Consumer<CollectionChange>() {
+              @Override
+               public void accept(CollectionChange item) throws Exception {
+                 item.getChangeset(); // Will return null the first two times
+             }
+           });
+           
+       
+       
+        
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+equals
+------
+
+.. _io_realm_rx_CollectionChange_equals_Object_:
+
+.. _io_realm_rx_CollectionChange_equals_Object_:
+
+.. _io_realm_rx_CollectionChange_equals_Object_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+hashCode
+--------
+
+.. _io_realm_rx_CollectionChange_hashCode__:
+
+.. _io_realm_rx_CollectionChange_hashCode__:
+
+.. _io_realm_rx_CollectionChange_hashCode__:
+
+.. list-table::
+   :header-rows: 1
+   
+   * -    public **int** hashCode ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
