@@ -97,14 +97,19 @@ Constructors
    
    * - Constructor and Description
    
-   * - :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  (**int** mapSize)
+   * -  |   :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  (
+        |      **int** mapSize
+        |   )
        
        Create a new, empty instance
        
        
        
    
-   * - :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  (:ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  src, **boolean** mutable)
+   * -  |   :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  (
+        |      :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  src, 
+        |      **boolean** mutable
+        |   )
        
        Create an exact copy of the passed instance.
        
@@ -141,7 +146,12 @@ Method Summary
    * - 
        protected final **void**
      - 
-       :ref:`addBacklinkDetails <io_realm_internal_ColumnInfo_addBacklinkDetails_OsSchemaInfo__String__String__String_>`  (:ref:`OsSchemaInfo <io_realm_internal_OsSchemaInfo>`  schemaInfo, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  javaFieldName, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  sourceTableName, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  sourceJavaFieldName)
+        |   :ref:`addBacklinkDetails <io_realm_internal_ColumnInfo_addBacklinkDetails_OsSchemaInfo__String__String__String_>`  (
+        |      :ref:`OsSchemaInfo <io_realm_internal_OsSchemaInfo>`  schemaInfo, 
+        |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  javaFieldName, 
+        |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  sourceTableName, 
+        |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  sourceJavaFieldName
+        |   )
        
        Add a new backlink to the indexMap.
        
@@ -151,7 +161,11 @@ Method Summary
    * - 
        protected final **long**
      - 
-       :ref:`addColumnDetails <io_realm_internal_ColumnInfo_addColumnDetails_String__String__OsObjectSchemaInfo_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  javaFieldName, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  internalColumnName, :ref:`OsObjectSchemaInfo <io_realm_internal_OsObjectSchemaInfo>`  objectSchemaInfo)
+        |   :ref:`addColumnDetails <io_realm_internal_ColumnInfo_addColumnDetails_String__String__OsObjectSchemaInfo_>`  (
+        |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  javaFieldName, 
+        |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  internalColumnName, 
+        |      :ref:`OsObjectSchemaInfo <io_realm_internal_OsObjectSchemaInfo>`  objectSchemaInfo
+        |   )
        
        Add a new column to the indexMap.
        
@@ -161,7 +175,10 @@ Method Summary
    * - 
        protected abstract **void**
      - 
-       :ref:`copy <io_realm_internal_ColumnInfo_copy_ColumnInfo__ColumnInfo_>`  (:ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  src, :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  dst)
+        |   :ref:`copy <io_realm_internal_ColumnInfo_copy_ColumnInfo__ColumnInfo_>`  (
+        |      :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  src, 
+        |      :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  dst
+        |   )
        
        Make ``dst``  into an exact copy of ``src`` .
        
@@ -173,7 +190,9 @@ Method Summary
    * - 
        protected abstract :ref:`ColumnInfo <io_realm_internal_ColumnInfo>` 
      - 
-       :ref:`copy <io_realm_internal_ColumnInfo_copy_boolean_>`  (**boolean** mutable)
+        |   :ref:`copy <io_realm_internal_ColumnInfo_copy_boolean_>`  (
+        |      **boolean** mutable
+        |   )
        
        Create a new object that is an exact copy of ``src`` .
        
@@ -185,7 +204,9 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`copyFrom <io_realm_internal_ColumnInfo_copyFrom_ColumnInfo_>`  (:ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  src)
+        |   :ref:`copyFrom <io_realm_internal_ColumnInfo_copyFrom_ColumnInfo_>`  (
+        |      :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  src
+        |   )
        
        Makes this ColumnInfo an exact copy of ``src`` .
        
@@ -197,7 +218,9 @@ Method Summary
    * - 
        public :ref:`ColumnInfo.ColumnDetails <io_realm_internal_ColumnInfo_ColumnDetails>` 
      - 
-       :ref:`getColumnDetails <io_realm_internal_ColumnInfo_getColumnDetails_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  javaFieldName)
+        |   :ref:`getColumnDetails <io_realm_internal_ColumnInfo_getColumnDetails_String_>`  (
+        |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  javaFieldName
+        |   )
        
        Returns the :ref:`ColumnDetails <io_realm_internal_ColumnInfo_ColumnDetails>` , in the described table, of the named column.
        
@@ -209,7 +232,9 @@ Method Summary
    * - 
        public **long**
      - 
-       :ref:`getColumnKey <io_realm_internal_ColumnInfo_getColumnKey_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  javaFieldName)
+        |   :ref:`getColumnKey <io_realm_internal_ColumnInfo_getColumnKey_String_>`  (
+        |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  javaFieldName
+        |   )
        
        Returns the column key, in the described table, for the named column.
        
@@ -219,7 +244,7 @@ Method Summary
    * - 
        public `Map <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__ 
      - 
-       :ref:`getColumnKeysMap <io_realm_internal_ColumnInfo_getColumnKeysMap__>`  ()
+        |   :ref:`getColumnKeysMap <io_realm_internal_ColumnInfo_getColumnKeysMap__>`  ()
        
        Returns the `Map <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  that is the implementation for this object.
        
@@ -231,7 +256,9 @@ Method Summary
    * - 
        public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
      - 
-       :ref:`getInternalFieldName <io_realm_internal_ColumnInfo_getInternalFieldName_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  javaFieldName)
+        |   :ref:`getInternalFieldName <io_realm_internal_ColumnInfo_getInternalFieldName_String_>`  (
+        |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  javaFieldName
+        |   )
        
        Returns the internal field name that corresponds to the name found in the Java model class.
        
@@ -241,7 +268,7 @@ Method Summary
    * - 
        public final **boolean**
      - 
-       :ref:`isMutable <io_realm_internal_ColumnInfo_isMutable__>`  ()
+        |   :ref:`isMutable <io_realm_internal_ColumnInfo_isMutable__>`  ()
        
        Get the mutability state of the instance.
        
@@ -251,7 +278,7 @@ Method Summary
    * - 
        public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
      - 
-       :ref:`toString <io_realm_internal_ColumnInfo_toString__>`  ()
+        |   :ref:`toString <io_realm_internal_ColumnInfo_toString__>`  ()
        
        
        
@@ -285,7 +312,9 @@ Constructor Detail
 .. list-table::
    :header-rows: 1
    
-   * -    protected  ColumnInfo (**int** mapSize)
+   * -  |   protected  ColumnInfo (
+        |      **int** mapSize
+        |   )
    
    * - Create a new, empty instance
        
@@ -316,7 +345,10 @@ Constructor Detail
 .. list-table::
    :header-rows: 1
    
-   * -    protected  ColumnInfo (:ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  src, **boolean** mutable)
+   * -  |   protected  ColumnInfo (
+        |      :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  src, 
+        |      **boolean** mutable
+        |   )
    
    * - Create an exact copy of the passed instance.
        
@@ -365,7 +397,12 @@ addBacklinkDetails
 .. list-table::
    :header-rows: 1
    
-   * -    protected final **void** addBacklinkDetails (:ref:`OsSchemaInfo <io_realm_internal_OsSchemaInfo>`  schemaInfo, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  javaFieldName, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  sourceTableName, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  sourceJavaFieldName)
+   * -  |   protected final **void** addBacklinkDetails (
+        |      :ref:`OsSchemaInfo <io_realm_internal_OsSchemaInfo>`  schemaInfo, 
+        |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  javaFieldName, 
+        |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  sourceTableName, 
+        |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  sourceJavaFieldName
+        |   )
    
    * - Add a new backlink to the indexMap. **For use only by subclasses!**. Must be called from within the subclass constructor, to maintain the effectively-final contract.
        
@@ -423,7 +460,11 @@ addColumnDetails
 .. list-table::
    :header-rows: 1
    
-   * -    protected final **long** addColumnDetails (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  javaFieldName, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  internalColumnName, :ref:`OsObjectSchemaInfo <io_realm_internal_OsObjectSchemaInfo>`  objectSchemaInfo)
+   * -  |   protected final **long** addColumnDetails (
+        |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  javaFieldName, 
+        |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  internalColumnName, 
+        |      :ref:`OsObjectSchemaInfo <io_realm_internal_OsObjectSchemaInfo>`  objectSchemaInfo
+        |   )
    
    * - Add a new column to the indexMap.**For use only in subclass constructors!**. Must be called from within the subclass constructor, to maintain the effectively-final contract.
        
@@ -483,7 +524,10 @@ copy
 .. list-table::
    :header-rows: 1
    
-   * -    protected abstract **void** copy (:ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  src, :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  dst)
+   * -  |   protected abstract **void** copy (
+        |      :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  src, 
+        |      :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  dst
+        |   )
    
    * - Make ``dst``  into an exact copy of ``src`` . Intended for use only by subclasses. NOTE: there is no protection against calling this method with an "immutable" instance as dst!
        
@@ -518,7 +562,9 @@ copy
 .. list-table::
    :header-rows: 1
    
-   * -    protected abstract :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  copy (**boolean** mutable)
+   * -  |   protected abstract :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  copy (
+        |      **boolean** mutable
+        |   )
    
    * - Create a new object that is an exact copy of ``src`` . This is the generic factory for ColumnInfo objects. Subclasses are expected to override it with a proxy to a copy constructor.
        
@@ -562,7 +608,9 @@ copyFrom
 .. list-table::
    :header-rows: 1
    
-   * -    public **void** copyFrom (:ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  src)
+   * -  |   public **void** copyFrom (
+        |      :ref:`ColumnInfo <io_realm_internal_ColumnInfo>`  src
+        |   )
    
    * - Makes this ColumnInfo an exact copy of ``src`` .
        
@@ -618,7 +666,9 @@ getColumnDetails
 .. list-table::
    :header-rows: 1
    
-   * -    public :ref:`ColumnInfo.ColumnDetails <io_realm_internal_ColumnInfo_ColumnDetails>`  getColumnDetails (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  javaFieldName)
+   * -  |   public :ref:`ColumnInfo.ColumnDetails <io_realm_internal_ColumnInfo_ColumnDetails>`  getColumnDetails (
+        |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  javaFieldName
+        |   )
    
    * - Returns the :ref:`ColumnDetails <io_realm_internal_ColumnInfo_ColumnDetails>` , in the described table, of the named column.
        
@@ -654,7 +704,9 @@ getColumnKey
 .. list-table::
    :header-rows: 1
    
-   * -    public **long** getColumnKey (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  javaFieldName)
+   * -  |   public **long** getColumnKey (
+        |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  javaFieldName
+        |   )
    
    * - Returns the column key, in the described table, for the named column.
        
@@ -690,7 +742,7 @@ getColumnKeysMap
 .. list-table::
    :header-rows: 1
    
-   * -    public `Map <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  getColumnKeysMap ()
+   * -  |   public `Map <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  getColumnKeysMap ()
    
    * - Returns the `Map <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__  that is the implementation for this object. 
        
@@ -726,7 +778,9 @@ getInternalFieldName
 .. list-table::
    :header-rows: 1
    
-   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getInternalFieldName (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  javaFieldName)
+   * -  |   public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getInternalFieldName (
+        |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  javaFieldName
+        |   )
    
    * - Returns the internal field name that corresponds to the name found in the Java model class.
        
@@ -770,7 +824,7 @@ isMutable
 .. list-table::
    :header-rows: 1
    
-   * -    public final **boolean** isMutable ()
+   * -  |   public final **boolean** isMutable ()
    
    * - Get the mutability state of the instance.
        
@@ -806,7 +860,7 @@ toString
 .. list-table::
    :header-rows: 1
    
-   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  toString ()
+   * -  |   public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  toString ()
    
    * - 
        

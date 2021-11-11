@@ -33,7 +33,7 @@ Constructors
    
    * - Constructor and Description
    
-   * - :ref:`NetworkRequest <io_realm_internal_network_NetworkRequest>`  ()
+   * -  |   :ref:`NetworkRequest <io_realm_internal_network_NetworkRequest>`  ()
        
        
        
@@ -55,7 +55,9 @@ Method Summary
    * - 
        protected abstract **void**
      - 
-       :ref:`execute <io_realm_internal_network_NetworkRequest_execute_NetworkRequest_T__>`  (:ref:`io.realm.internal.network.NetworkRequest\<T> <io_realm_internal_network_NetworkRequest>`  callback)
+        |   :ref:`execute <io_realm_internal_network_NetworkRequest_execute_NetworkRequest_T__>`  (
+        |      :ref:`io.realm.internal.network.NetworkRequest\<T> <io_realm_internal_network_NetworkRequest>`  callback
+        |   )
        
        Responsible for doing the network request by calling the relevant ObjectStore method.
        
@@ -65,7 +67,9 @@ Method Summary
    * - 
        protected abstract **T (?)**
      - 
-       :ref:`mapSuccess <io_realm_internal_network_NetworkRequest_mapSuccess_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  result)
+        |   :ref:`mapSuccess <io_realm_internal_network_NetworkRequest_mapSuccess_Object_>`  (
+        |      `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  result
+        |   )
        
        In the case of a successful request.
        
@@ -75,7 +79,11 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`onError <io_realm_internal_network_NetworkRequest_onError_String__int__String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  nativeErrorCategory, **int** nativeErrorCode, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  errorMessage)
+        |   :ref:`onError <io_realm_internal_network_NetworkRequest_onError_String__int__String_>`  (
+        |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  nativeErrorCategory, 
+        |      **int** nativeErrorCode, 
+        |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  errorMessage
+        |   )
        
        Request failed.
        
@@ -85,7 +93,9 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`onSuccess <io_realm_internal_network_NetworkRequest_onSuccess_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  result)
+        |   :ref:`onSuccess <io_realm_internal_network_NetworkRequest_onSuccess_Object_>`  (
+        |      `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  result
+        |   )
        
        Request was successful.
        
@@ -95,7 +105,7 @@ Method Summary
    * - 
        public **T (?)**
      - 
-       :ref:`resultOrThrow <io_realm_internal_network_NetworkRequest_resultOrThrow__>`  ()
+        |   :ref:`resultOrThrow <io_realm_internal_network_NetworkRequest_resultOrThrow__>`  ()
        
        Run the network request and wait for the result.
        
@@ -130,7 +140,7 @@ Constructor Detail
 .. list-table::
    :header-rows: 1
    
-   * -    public  NetworkRequest ()
+   * -  |   public  NetworkRequest ()
    
    * - 
        
@@ -167,7 +177,9 @@ execute
 .. list-table::
    :header-rows: 1
    
-   * -    protected abstract **void** execute (:ref:`io.realm.internal.network.NetworkRequest\<T> <io_realm_internal_network_NetworkRequest>`  callback)
+   * -  |   protected abstract **void** execute (
+        |      :ref:`io.realm.internal.network.NetworkRequest\<T> <io_realm_internal_network_NetworkRequest>`  callback
+        |   )
    
    * - Responsible for doing the network request by calling the relevant ObjectStore method.
        
@@ -201,7 +213,9 @@ mapSuccess
 .. list-table::
    :header-rows: 1
    
-   * -    protected abstract **T (?)** mapSuccess (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  result)
+   * -  |   protected abstract **T (?)** mapSuccess (
+        |      `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  result
+        |   )
    
    * - In the case of a successful request. Map the return value back to the type expected by top-level consumers.
        
@@ -237,7 +251,11 @@ onError
 .. list-table::
    :header-rows: 1
    
-   * -    public **void** onError (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  nativeErrorCategory, **int** nativeErrorCode, `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  errorMessage)
+   * -  |   public **void** onError (
+        |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  nativeErrorCategory, 
+        |      **int** nativeErrorCode, 
+        |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  errorMessage
+        |   )
    
    * - Request failed. Will be called by the ObjectStore completion handler.
        
@@ -275,7 +293,9 @@ onSuccess
 .. list-table::
    :header-rows: 1
    
-   * -    public **void** onSuccess (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  result)
+   * -  |   public **void** onSuccess (
+        |      `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  result
+        |   )
    
    * - Request was successful. Will be called by the ObjectStore completion handler.
        
@@ -315,7 +335,7 @@ resultOrThrow
 .. list-table::
    :header-rows: 1
    
-   * -    public **T (?)** resultOrThrow ()
+   * -  |   public **T (?)** resultOrThrow ()
    
    * - Run the network request and wait for the result. If the request was a success, the result is returned. If not, an error occurred and it will be thrown as an AppException.
        

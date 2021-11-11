@@ -31,7 +31,7 @@ Constructors
    
    * - Constructor and Description
    
-   * - :ref:`NetworkStateReceiver <io_realm_internal_network_NetworkStateReceiver>`  ()
+   * -  |   :ref:`NetworkStateReceiver <io_realm_internal_network_NetworkStateReceiver>`  ()
        
        
        
@@ -68,7 +68,9 @@ Method Summary
    * - 
        public static **void**
      - 
-       :ref:`addListener <io_realm_internal_network_NetworkStateReceiver_addListener_NetworkStateReceiver_ConnectionListener_>`  (:ref:`NetworkStateReceiver.ConnectionListener <io_realm_internal_network_NetworkStateReceiver_ConnectionListener>`  listener)
+        |   :ref:`addListener <io_realm_internal_network_NetworkStateReceiver_addListener_NetworkStateReceiver_ConnectionListener_>`  (
+        |      :ref:`NetworkStateReceiver.ConnectionListener <io_realm_internal_network_NetworkStateReceiver_ConnectionListener>`  listener
+        |   )
        
        Add a listener to be notified about any network changes.
        
@@ -78,7 +80,9 @@ Method Summary
    * - 
        public static **boolean**
      - 
-       :ref:`isOnline <io_realm_internal_network_NetworkStateReceiver_isOnline_Context_>`  (**Context (?)** context)
+        |   :ref:`isOnline <io_realm_internal_network_NetworkStateReceiver_isOnline_Context_>`  (
+        |      **Context (?)** context
+        |   )
        
        Attempt to detect if a device is online and can transmit or receive data.
        
@@ -88,7 +92,10 @@ Method Summary
    * - 
        public **void**
      - 
-       :ref:`onReceive <io_realm_internal_network_NetworkStateReceiver_onReceive_Context__Intent_>`  (**Context (?)** context, **Intent (?)** intent)
+        |   :ref:`onReceive <io_realm_internal_network_NetworkStateReceiver_onReceive_Context__Intent_>`  (
+        |      **Context (?)** context, 
+        |      **Intent (?)** intent
+        |   )
        
        
        
@@ -98,7 +105,9 @@ Method Summary
    * - 
        public static synchronized **void**
      - 
-       :ref:`removeListener <io_realm_internal_network_NetworkStateReceiver_removeListener_NetworkStateReceiver_ConnectionListener_>`  (:ref:`NetworkStateReceiver.ConnectionListener <io_realm_internal_network_NetworkStateReceiver_ConnectionListener>`  listener)
+        |   :ref:`removeListener <io_realm_internal_network_NetworkStateReceiver_removeListener_NetworkStateReceiver_ConnectionListener_>`  (
+        |      :ref:`NetworkStateReceiver.ConnectionListener <io_realm_internal_network_NetworkStateReceiver_ConnectionListener>`  listener
+        |   )
        
        Removes a network listener.
        
@@ -133,7 +142,7 @@ Constructor Detail
 .. list-table::
    :header-rows: 1
    
-   * -    public  NetworkStateReceiver ()
+   * -  |   public  NetworkStateReceiver ()
    
    * - 
        
@@ -170,7 +179,9 @@ addListener
 .. list-table::
    :header-rows: 1
    
-   * -    public static **void** addListener (:ref:`NetworkStateReceiver.ConnectionListener <io_realm_internal_network_NetworkStateReceiver_ConnectionListener>`  listener)
+   * -  |   public static **void** addListener (
+        |      :ref:`NetworkStateReceiver.ConnectionListener <io_realm_internal_network_NetworkStateReceiver_ConnectionListener>`  listener
+        |   )
    
    * - Add a listener to be notified about any network changes. This method is thread safe.IMPORTANT: Not removing it again will result in major leaks.
        
@@ -214,7 +225,9 @@ isOnline
 .. list-table::
    :header-rows: 1
    
-   * -    public static **boolean** isOnline (**Context (?)** context)
+   * -  |   public static **boolean** isOnline (
+        |      **Context (?)** context
+        |   )
    
    * - Attempt to detect if a device is online and can transmit or receive data. This method is thread safe.An emulator is always considered online, as \`getActiveNetworkInfo()\` does not report the correct value.
        
@@ -260,7 +273,10 @@ onReceive
 .. list-table::
    :header-rows: 1
    
-   * -    public **void** onReceive (**Context (?)** context, **Intent (?)** intent)
+   * -  |   public **void** onReceive (
+        |      **Context (?)** context, 
+        |      **Intent (?)** intent
+        |   )
    
    * - 
        
@@ -300,7 +316,9 @@ removeListener
 .. list-table::
    :header-rows: 1
    
-   * -    public static synchronized **void** removeListener (:ref:`NetworkStateReceiver.ConnectionListener <io_realm_internal_network_NetworkStateReceiver_ConnectionListener>`  listener)
+   * -  |   public static synchronized **void** removeListener (
+        |      :ref:`NetworkStateReceiver.ConnectionListener <io_realm_internal_network_NetworkStateReceiver_ConnectionListener>`  listener
+        |   )
    
    * - Removes a network listener. This method is thread safe.
        
