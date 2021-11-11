@@ -36,9 +36,9 @@ Enum Constant Summary
    
    * - Enum Constant and Description
    
-   * - :ref:`DISCONNECTED <io_realm_mongodb_sync_ConnectionState_DISCONNECTED>` 
+   * - :ref:`CONNECTED <io_realm_mongodb_sync_ConnectionState_CONNECTED>` 
        
-       No connection to the server exists.
+       A connection was successfully established to the server.
        
        
        
@@ -50,9 +50,9 @@ Enum Constant Summary
        
        
    
-   * - :ref:`CONNECTED <io_realm_mongodb_sync_ConnectionState_CONNECTED>` 
+   * - :ref:`DISCONNECTED <io_realm_mongodb_sync_ConnectionState_DISCONNECTED>` 
        
-       A connection was successfully established to the server.
+       No connection to the server exists.
        
        
        
@@ -105,18 +105,18 @@ Enum Constant Detail
 ====================
 
 
-.. _io_realm_mongodb_sync_ConnectionState_DISCONNECTED:
+.. _io_realm_mongodb_sync_ConnectionState_CONNECTED:
 
-.. _ConnectionState_DISCONNECTED:
+.. _ConnectionState_CONNECTED:
 
 
 
-``DISCONNECTED`` 
------------------
+``CONNECTED`` 
+--------------
 
 public static final :ref:`ConnectionState <io_realm_mongodb_sync_ConnectionState>` 
 
-No connection to the server exists. No data is being transferred even if the session is :ref:`SyncSession.State.ACTIVE <io_realm_mongodb_sync_SyncSession_State_ACTIVE>` . If the connection entered this state due to an error, this error will be reported to the :ref:`SyncSession.ErrorHandler <io_realm_mongodb_sync_SyncSession_ErrorHandler>` .
+A connection was successfully established to the server. If the SyncSession is :ref:`SyncSession.State.ACTIVE <io_realm_mongodb_sync_SyncSession_State_ACTIVE>`  data will now be transferred between the device and the server.
 
 
 
@@ -139,18 +139,18 @@ A connection is currently in progress of being established. If successful the ne
 
 
 
-.. _io_realm_mongodb_sync_ConnectionState_CONNECTED:
+.. _io_realm_mongodb_sync_ConnectionState_DISCONNECTED:
 
-.. _ConnectionState_CONNECTED:
+.. _ConnectionState_DISCONNECTED:
 
 
 
-``CONNECTED`` 
---------------
+``DISCONNECTED`` 
+-----------------
 
 public static final :ref:`ConnectionState <io_realm_mongodb_sync_ConnectionState>` 
 
-A connection was successfully established to the server. If the SyncSession is :ref:`SyncSession.State.ACTIVE <io_realm_mongodb_sync_SyncSession_State_ACTIVE>`  data will now be transferred between the device and the server.
+No connection to the server exists. No data is being transferred even if the session is :ref:`SyncSession.State.ACTIVE <io_realm_mongodb_sync_SyncSession_State_ACTIVE>` . If the connection entered this state due to an error, this error will be reported to the :ref:`SyncSession.ErrorHandler <io_realm_mongodb_sync_SyncSession_ErrorHandler>` .
 
 
 

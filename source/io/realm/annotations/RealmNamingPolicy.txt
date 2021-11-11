@@ -176,9 +176,9 @@ Enum Constant Summary
    
    * - Enum Constant and Description
    
-   * - :ref:`NO_POLICY <io_realm_annotations_RealmNamingPolicy_NO_POLICY>` 
+   * - :ref:`CAMEL_CASE <io_realm_annotations_RealmNamingPolicy_CAMEL_CASE>` 
        
-       No policy is applied.
+       The name in the Java model class is converted to camelCase, i.e.
        
        
        
@@ -190,9 +190,18 @@ Enum Constant Summary
        
        
    
-   * - :ref:`CAMEL_CASE <io_realm_annotations_RealmNamingPolicy_CAMEL_CASE>` 
+   * - :ref:`LOWER_CASE_WITH_UNDERSCORES <io_realm_annotations_RealmNamingPolicy_LOWER_CASE_WITH_UNDERSCORES>` 
        
-       The name in the Java model class is converted to camelCase, i.e.
+       The name in the Java model class is converted lowercase with each word separated by ``_`` .
+       
+       
+       
+       
+       
+   
+   * - :ref:`NO_POLICY <io_realm_annotations_RealmNamingPolicy_NO_POLICY>` 
+       
+       No policy is applied.
        
        
        
@@ -200,15 +209,6 @@ Enum Constant Summary
    * - :ref:`PASCAL_CASE <io_realm_annotations_RealmNamingPolicy_PASCAL_CASE>` 
        
        The name in the Java model class is converted to PascalCase, i.e.
-       
-       
-       
-   
-   * - :ref:`LOWER_CASE_WITH_UNDERSCORES <io_realm_annotations_RealmNamingPolicy_LOWER_CASE_WITH_UNDERSCORES>` 
-       
-       The name in the Java model class is converted lowercase with each word separated by ``_`` .
-       
-       
        
        
        
@@ -261,6 +261,57 @@ Enum Constant Detail
 ====================
 
 
+.. _io_realm_annotations_RealmNamingPolicy_CAMEL_CASE:
+
+.. _RealmNamingPolicy_CAMEL_CASE:
+
+
+
+``CAMEL_CASE`` 
+---------------
+
+public static final :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` 
+
+The name in the Java model class is converted to camelCase, i.e. all words are joined together with the first letter in the first word lower cased, and the first letter of all subsequent words upper cased. This is the standard naming schema in Java, Kotlin, Swift and JavaScript.Examples: "firstName", "FirstName", "mFirstName", "FIRST_NAME", "First$Name" all becomes "firstName".
+
+
+
+
+
+.. _io_realm_annotations_RealmNamingPolicy_IDENTITY:
+
+.. _RealmNamingPolicy_IDENTITY:
+
+
+
+``IDENTITY`` 
+-------------
+
+public static final :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` 
+
+The name in the Java model class is used as is internally.
+
+
+
+.. _io_realm_annotations_RealmNamingPolicy_LOWER_CASE_WITH_UNDERSCORES:
+
+.. _RealmNamingPolicy_LOWER_CASE_WITH_UNDERSCORES:
+
+
+
+``LOWER_CASE_WITH_UNDERSCORES`` 
+--------------------------------
+
+public static final :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` 
+
+The name in the Java model class is converted lowercase with each word separated by ``_`` . This is the default naming scheme in C++.
+
+Examples: "firstName", "FirstName", "mFirstName", "FIRST_NAME", "First$Name" all becomes "first_name".
+
+
+
+
+
 .. _io_realm_annotations_RealmNamingPolicy_NO_POLICY:
 
 .. _RealmNamingPolicy_NO_POLICY:
@@ -284,38 +335,6 @@ This policy is the default.
 
 
 
-.. _io_realm_annotations_RealmNamingPolicy_IDENTITY:
-
-.. _RealmNamingPolicy_IDENTITY:
-
-
-
-``IDENTITY`` 
--------------
-
-public static final :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` 
-
-The name in the Java model class is used as is internally.
-
-
-
-.. _io_realm_annotations_RealmNamingPolicy_CAMEL_CASE:
-
-.. _RealmNamingPolicy_CAMEL_CASE:
-
-
-
-``CAMEL_CASE`` 
----------------
-
-public static final :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` 
-
-The name in the Java model class is converted to camelCase, i.e. all words are joined together with the first letter in the first word lower cased, and the first letter of all subsequent words upper cased. This is the standard naming schema in Java, Kotlin, Swift and JavaScript.Examples: "firstName", "FirstName", "mFirstName", "FIRST_NAME", "First$Name" all becomes "firstName".
-
-
-
-
-
 .. _io_realm_annotations_RealmNamingPolicy_PASCAL_CASE:
 
 .. _RealmNamingPolicy_PASCAL_CASE:
@@ -328,25 +347,6 @@ The name in the Java model class is converted to camelCase, i.e. all words are j
 public static final :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` 
 
 The name in the Java model class is converted to PascalCase, i.e. all words are joined together with the first letter of all words upper cased. This is the default naming scheme in .NET.Examples: "firstName", "FirstName", "mFirstName", "FIRST_NAME", "First$Name" all becomes "FirstName".
-
-
-
-
-
-.. _io_realm_annotations_RealmNamingPolicy_LOWER_CASE_WITH_UNDERSCORES:
-
-.. _RealmNamingPolicy_LOWER_CASE_WITH_UNDERSCORES:
-
-
-
-``LOWER_CASE_WITH_UNDERSCORES`` 
---------------------------------
-
-public static final :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` 
-
-The name in the Java model class is converted lowercase with each word separated by ``_`` . This is the default naming scheme in C++.
-
-Examples: "firstName", "FirstName", "mFirstName", "FIRST_NAME", "First$Name" all becomes "first_name".
 
 
 

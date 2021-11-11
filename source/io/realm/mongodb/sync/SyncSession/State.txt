@@ -48,13 +48,6 @@ Enum Constant Summary
    
    * - Enum Constant and Description
    
-   * - :ref:`INACTIVE <io_realm_mongodb_sync_SyncSession_State_INACTIVE>` 
-       
-       This is the initial state.
-       
-       
-       
-   
    * - :ref:`ACTIVE <io_realm_mongodb_sync_SyncSession_State_ACTIVE>` 
        
        The Realm is open and data will be synchronized between the device and the server if the underlying connection is :ref:`ConnectionState.CONNECTED <io_realm_mongodb_sync_ConnectionState_CONNECTED>` .
@@ -67,6 +60,13 @@ Enum Constant Summary
    * - :ref:`DYING <io_realm_mongodb_sync_SyncSession_State_DYING>` 
        
        The Realm was closed, but still contains data that needs to be synchronized to the server.
+       
+       
+       
+   
+   * - :ref:`INACTIVE <io_realm_mongodb_sync_SyncSession_State_INACTIVE>` 
+       
+       This is the initial state.
        
        
        
@@ -126,23 +126,6 @@ Enum Constant Detail
 ====================
 
 
-.. _io_realm_mongodb_sync_SyncSession_State_INACTIVE:
-
-.. _SyncSession_State_INACTIVE:
-
-
-
-``INACTIVE`` 
--------------
-
-public static final :ref:`SyncSession.State <io_realm_mongodb_sync_SyncSession_State>` 
-
-This is the initial state. The session is closed. No data is being synchronized. The session will automatically transition to :ref:`ACTIVE <io_realm_mongodb_sync_SyncSession_State_ACTIVE>`  when a Realm is opened.
-
-
-
-
-
 .. _io_realm_mongodb_sync_SyncSession_State_ACTIVE:
 
 .. _SyncSession_State_ACTIVE:
@@ -176,6 +159,23 @@ The session will remain in this state until the Realm is closed. In which case i
 public static final :ref:`SyncSession.State <io_realm_mongodb_sync_SyncSession_State>` 
 
 The Realm was closed, but still contains data that needs to be synchronized to the server. The session will attempt to upload all local data before going :ref:`INACTIVE <io_realm_mongodb_sync_SyncSession_State_INACTIVE>` .
+
+
+
+
+
+.. _io_realm_mongodb_sync_SyncSession_State_INACTIVE:
+
+.. _SyncSession_State_INACTIVE:
+
+
+
+``INACTIVE`` 
+-------------
+
+public static final :ref:`SyncSession.State <io_realm_mongodb_sync_SyncSession_State>` 
+
+This is the initial state. The session is closed. No data is being synchronized. The session will automatically transition to :ref:`ACTIVE <io_realm_mongodb_sync_SyncSession_State_ACTIVE>`  when a Realm is opened.
 
 
 

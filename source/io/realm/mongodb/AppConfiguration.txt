@@ -60,25 +60,17 @@ Field Summary
    * - public static final `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
        
        
-     - :ref:`DEFAULT_BASE_URL <io_realm_mongodb_AppConfiguration_DEFAULT_BASE_URL>` 
+     - :ref:`DEFAULT_AUTHORIZATION_HEADER_NAME <io_realm_mongodb_AppConfiguration_DEFAULT_AUTHORIZATION_HEADER_NAME>` 
        
-       The default url for MongoDB Realm applications.
-       
-   
-   * - public static final **long**
-       
-       
-     - :ref:`DEFAULT_REQUEST_TIMEOUT <io_realm_mongodb_AppConfiguration_DEFAULT_REQUEST_TIMEOUT>` 
-       
-       The default request timeout for network requests towards MongoDB Realm in seconds.
+       The default header name used to carry authorization data when making network requests towards MongoDB Realm.
        
    
    * - public static final `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
        
        
-     - :ref:`DEFAULT_AUTHORIZATION_HEADER_NAME <io_realm_mongodb_AppConfiguration_DEFAULT_AUTHORIZATION_HEADER_NAME>` 
+     - :ref:`DEFAULT_BASE_URL <io_realm_mongodb_AppConfiguration_DEFAULT_BASE_URL>` 
        
-       The default header name used to carry authorization data when making network requests towards MongoDB Realm.
+       The default url for MongoDB Realm applications.
        
    
    * - public static final **CodecRegistry (?)**
@@ -89,6 +81,14 @@ Field Summary
        Default BSON codec registry for encoding/decoding arguments and results to/from MongoDB Realm backend.This will encode/decode most primitive types, list and map types and BsonValues.
        
        
+       
+   
+   * - public static final **long**
+       
+       
+     - :ref:`DEFAULT_REQUEST_TIMEOUT <io_realm_mongodb_AppConfiguration_DEFAULT_REQUEST_TIMEOUT>` 
+       
+       The default request timeout for network requests towards MongoDB Realm in seconds.
        
    
    * - public static final `Map <https://docs.oracle.com/javase/7/docs/api/java/util/Map.html>`__ 
@@ -263,6 +263,16 @@ Inherited Methods
 Field Detail
 ============
 
+.. _io_realm_mongodb_AppConfiguration_DEFAULT_AUTHORIZATION_HEADER_NAME:
+
+
+
+``DEFAULT_AUTHORIZATION_HEADER_NAME`` 
+--------------------------------------
+
+The default header name used to carry authorization data when making network requests towards MongoDB Realm.
+
+
 .. _io_realm_mongodb_AppConfiguration_DEFAULT_BASE_URL:
 
 
@@ -285,40 +295,6 @@ The default url for MongoDB Realm applications.
    
    
 
-
-
-.. _io_realm_mongodb_AppConfiguration_DEFAULT_REQUEST_TIMEOUT:
-
-
-
-``DEFAULT_REQUEST_TIMEOUT`` 
-----------------------------
-
-The default request timeout for network requests towards MongoDB Realm in seconds.
-
-
-.. seealso::
-
-
-   
-   - :ref:`Builder.requestTimeout(long, TimeUnit) <io_realm_mongodb_AppConfiguration_Builder_requestTimeout_long__TimeUnit_>` 
-      
-      
-      
-   
-   
-   
-
-
-
-.. _io_realm_mongodb_AppConfiguration_DEFAULT_AUTHORIZATION_HEADER_NAME:
-
-
-
-``DEFAULT_AUTHORIZATION_HEADER_NAME`` 
---------------------------------------
-
-The default header name used to carry authorization data when making network requests towards MongoDB Realm.
 
 
 .. _io_realm_mongodb_AppConfiguration_DEFAULT_BSON_CODEC_REGISTRY:
@@ -362,6 +338,30 @@ Default BSON codec registry for encoding/decoding arguments and results to/from 
       
       
    - **DocumentCodecProvider (?)**
+      
+      
+      
+   
+   
+   
+
+
+
+.. _io_realm_mongodb_AppConfiguration_DEFAULT_REQUEST_TIMEOUT:
+
+
+
+``DEFAULT_REQUEST_TIMEOUT`` 
+----------------------------
+
+The default request timeout for network requests towards MongoDB Realm in seconds.
+
+
+.. seealso::
+
+
+   
+   - :ref:`Builder.requestTimeout(long, TimeUnit) <io_realm_mongodb_AppConfiguration_Builder_requestTimeout_long__TimeUnit_>` 
       
       
       

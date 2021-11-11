@@ -42,6 +42,13 @@ Enum Constant Summary
    
    * - Enum Constant and Description
    
+   * - :ref:`ERROR <io_realm_OrderedCollectionChangeSet_State_ERROR>` 
+       
+       This state is used if some error occurred on the background evaluating the query.
+       
+       
+       
+   
    * - :ref:`INITIAL <io_realm_OrderedCollectionChangeSet_State_INITIAL>` 
        
        This state is used first time the callback is invoked.
@@ -52,13 +59,6 @@ Enum Constant Summary
    * - :ref:`UPDATE <io_realm_OrderedCollectionChangeSet_State_UPDATE>` 
        
        This state is used for every subsequent update after the first.
-       
-       
-       
-   
-   * - :ref:`ERROR <io_realm_OrderedCollectionChangeSet_State_ERROR>` 
-       
-       This state is used if some error occurred on the background evaluating the query.
        
        
        
@@ -111,6 +111,23 @@ Enum Constant Detail
 ====================
 
 
+.. _io_realm_OrderedCollectionChangeSet_State_ERROR:
+
+.. _OrderedCollectionChangeSet_State_ERROR:
+
+
+
+``ERROR`` 
+----------
+
+public static final :ref:`OrderedCollectionChangeSet.State <io_realm_OrderedCollectionChangeSet_State>` 
+
+This state is used if some error occurred on the background evaluating the query.For local and fully synchronized Realms, this state should only be encountered if the Realm could not be succesfully opened in the background,.
+
+
+
+
+
 .. _io_realm_OrderedCollectionChangeSet_State_INITIAL:
 
 .. _OrderedCollectionChangeSet_State_INITIAL:
@@ -138,23 +155,6 @@ This state is used first time the callback is invoked. The query will have compl
 public static final :ref:`OrderedCollectionChangeSet.State <io_realm_OrderedCollectionChangeSet_State>` 
 
 This state is used for every subsequent update after the first.
-
-
-
-.. _io_realm_OrderedCollectionChangeSet_State_ERROR:
-
-.. _OrderedCollectionChangeSet_State_ERROR:
-
-
-
-``ERROR`` 
-----------
-
-public static final :ref:`OrderedCollectionChangeSet.State <io_realm_OrderedCollectionChangeSet_State>` 
-
-This state is used if some error occurred on the background evaluating the query.For local and fully synchronized Realms, this state should only be encountered if the Realm could not be succesfully opened in the background,.
-
-
 
 
 
