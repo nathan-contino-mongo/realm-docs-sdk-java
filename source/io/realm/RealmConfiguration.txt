@@ -69,8 +69,8 @@ Constructors
         |      **long** schemaVersion, 
         |      :ref:`RealmMigration <io_realm_RealmMigration>`  migration, 
         |      **boolean** deleteRealmIfMigrationNeeded, 
-        |      :ref:`OsRealmConfig.Durability <io_realm_internal_OsRealmConfig_Durability>`  durability, 
-        |      :ref:`RealmProxyMediator <io_realm_internal_RealmProxyMediator>`  schemaMediator, 
+        |      **OsRealmConfig.Durability (?)** durability, 
+        |      **RealmProxyMediator (?)** schemaMediator, 
         |      :ref:`RxObservableFactory <io_realm_rx_RxObservableFactory>`  rxObservableFactory, 
         |      :ref:`FlowFactory <io_realm_coroutines_FlowFactory>`  flowFactory, 
         |      :ref:`Realm.Transaction <io_realm_Realm_Transaction>`  initialDataTransaction, 
@@ -122,7 +122,7 @@ Field Summary
        
        
    
-   * - protected static final :ref:`RealmProxyMediator <io_realm_internal_RealmProxyMediator>` 
+   * - protected static final **RealmProxyMediator (?)**
        
        
      - :ref:`DEFAULT_MODULE_MEDIATOR <io_realm_RealmConfiguration_DEFAULT_MODULE_MEDIATOR>` 
@@ -142,7 +142,7 @@ Method Summary
    * - Modifier and Type
      - Method and Description
    
-   * - protected static :ref:`RealmProxyMediator <io_realm_internal_RealmProxyMediator>` 
+   * - protected static **RealmProxyMediator (?)**
      -  |   :ref:`createSchemaMediator <io_realm_RealmConfiguration_createSchemaMediator_Set_Object___Set_Class___extends_RealmModel____boolean_>`  (
         |      `java.util.Set\<java.lang.Object> <https://docs.oracle.com/javase/7/docs/api/java/util/Set.html>`__  modules, 
         |      `java.util.Set\<java.lang.Class\<? extends io.realm.RealmModel>> <https://docs.oracle.com/javase/7/docs/api/java/util/Set.html>`__  debugSchema, 
@@ -168,7 +168,7 @@ Method Summary
      -  |   :ref:`forRecovery <io_realm_RealmConfiguration_forRecovery_String__byte[]__RealmProxyMediator_>`  (
         |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  canonicalPath, 
         |      **byte[]** encryptionKey, 
-        |      :ref:`RealmProxyMediator <io_realm_internal_RealmProxyMediator>`  schemaMediator
+        |      **RealmProxyMediator (?)** schemaMediator
         |   )
        
        
@@ -184,7 +184,7 @@ Method Summary
        
        
    
-   * - public :ref:`OsRealmConfig.Durability <io_realm_internal_OsRealmConfig_Durability>` 
+   * - public **OsRealmConfig.Durability (?)**
      -  |   :ref:`getDurability <io_realm_RealmConfiguration_getDurability__>`  ()
        
        
@@ -278,7 +278,7 @@ Method Summary
        
        
    
-   * - protected :ref:`RealmProxyMediator <io_realm_internal_RealmProxyMediator>` 
+   * - protected **RealmProxyMediator (?)**
      -  |   :ref:`getSchemaMediator <io_realm_RealmConfiguration_getSchemaMediator__>`  ()
        
        Returns the mediator instance of schema which is defined by this configuration.
@@ -425,8 +425,8 @@ Constructor Detail
         |      **long** schemaVersion, 
         |      :ref:`RealmMigration <io_realm_RealmMigration>`  migration, 
         |      **boolean** deleteRealmIfMigrationNeeded, 
-        |      :ref:`OsRealmConfig.Durability <io_realm_internal_OsRealmConfig_Durability>`  durability, 
-        |      :ref:`RealmProxyMediator <io_realm_internal_RealmProxyMediator>`  schemaMediator, 
+        |      **OsRealmConfig.Durability (?)** durability, 
+        |      **RealmProxyMediator (?)** schemaMediator, 
         |      :ref:`RxObservableFactory <io_realm_rx_RxObservableFactory>`  rxObservableFactory, 
         |      :ref:`FlowFactory <io_realm_coroutines_FlowFactory>`  flowFactory, 
         |      :ref:`Realm.Transaction <io_realm_Realm_Transaction>`  initialDataTransaction, 
@@ -475,7 +475,7 @@ createSchemaMediator
 .. list-table::
    :header-rows: 1
    
-   * -  |   protected static :ref:`RealmProxyMediator <io_realm_internal_RealmProxyMediator>`  createSchemaMediator (
+   * -  |   protected static **RealmProxyMediator (?)** createSchemaMediator (
         |      `java.util.Set\<java.lang.Object> <https://docs.oracle.com/javase/7/docs/api/java/util/Set.html>`__  modules, 
         |      `java.util.Set\<java.lang.Class\<? extends io.realm.RealmModel>> <https://docs.oracle.com/javase/7/docs/api/java/util/Set.html>`__  debugSchema, 
         |      **boolean** excludeDebugSchema
@@ -560,7 +560,7 @@ forRecovery
    * -  |   protected static :ref:`RealmConfiguration <io_realm_RealmConfiguration>`  forRecovery (
         |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  canonicalPath, 
         |      **byte[]** encryptionKey, 
-        |      :ref:`RealmProxyMediator <io_realm_internal_RealmProxyMediator>`  schemaMediator
+        |      **RealmProxyMediator (?)** schemaMediator
         |   )
    
    * - 
@@ -633,7 +633,7 @@ getDurability
 .. list-table::
    :header-rows: 1
    
-   * -  |   public :ref:`OsRealmConfig.Durability <io_realm_internal_OsRealmConfig_Durability>`  getDurability ()
+   * -  |   public **OsRealmConfig.Durability (?)** getDurability ()
    
    * - 
        
@@ -1051,7 +1051,7 @@ getSchemaMediator
 .. list-table::
    :header-rows: 1
    
-   * -  |   protected :ref:`RealmProxyMediator <io_realm_internal_RealmProxyMediator>`  getSchemaMediator ()
+   * -  |   protected **RealmProxyMediator (?)** getSchemaMediator ()
    
    * - Returns the mediator instance of schema which is defined by this configuration.
        
