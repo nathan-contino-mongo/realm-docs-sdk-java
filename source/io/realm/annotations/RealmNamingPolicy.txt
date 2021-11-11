@@ -218,10 +218,8 @@ Method Summary
    * - Modifier and Type
      - Method and Description
    
-   * - 
-       public static :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` 
-     - 
-        |   :ref:`valueOf <io_realm_annotations_RealmNamingPolicy_valueOf_String_>`  (
+   * - public static :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` 
+     -  |   :ref:`valueOf <io_realm_annotations_RealmNamingPolicy_valueOf_String_>`  (
         |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name
         |   )
        
@@ -230,10 +228,8 @@ Method Summary
        
        
    
-   * - 
-       public static :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` 
-     - 
-        |   :ref:`values <io_realm_annotations_RealmNamingPolicy_values__>`  ()
+   * - public static :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` 
+     -  |   :ref:`values <io_realm_annotations_RealmNamingPolicy_values__>`  ()
        
        
        
@@ -268,14 +264,14 @@ Enum Constant Detail
 
 public static final :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` 
 
-No policy is applied. This policy will not override any policy set on a parent element, e.g.
- if set in {@link RealmClass#fieldNamingPolicy}, the module policy will still apply to field
- names.
- <p>
- If two modules disagree on the policy and one of them is {@code NO_POLICY}, the other will
- be chosen without an error being thrown.
- <p>
- This policy is the default.
+No policy is applied. This policy will not override any policy set on a parent element, e.g. if set in :ref:`RealmClass.fieldNamingPolicy <io_realm_annotations_RealmClass_fieldNamingPolicy>` , the module policy will still apply to field names.
+
+If two modules disagree on the policy and one of them is ``NO_POLICY`` , the other will be chosen without an error being thrown.
+
+
+
+This policy is the default.
+
 
 .. _io_realm_annotations_RealmNamingPolicy_IDENTITY:
 
@@ -289,7 +285,6 @@ No policy is applied. This policy will not override any policy set on a parent e
 public static final :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` 
 
 The name in the Java model class is used as is internally.
-
 .. _io_realm_annotations_RealmNamingPolicy_CAMEL_CASE:
 
 .. _RealmNamingPolicy_CAMEL_CASE:
@@ -301,13 +296,8 @@ The name in the Java model class is used as is internally.
 
 public static final :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` 
 
-The name in the Java model class is converted to camelCase, i.e. all words are joined
- together with the first letter in the first word lower cased, and the first letter of
- all subsequent words upper cased. This is the standard naming schema in Java, Kotlin, Swift
- and JavaScript.
- <p>
- Examples: "firstName", "FirstName", "mFirstName", "FIRST_NAME", "First$Name" all becomes
- "firstName".
+The name in the Java model class is converted to camelCase, i.e. all words are joined together with the first letter in the first word lower cased, and the first letter of all subsequent words upper cased. This is the standard naming schema in Java, Kotlin, Swift and JavaScript.Examples: "firstName", "FirstName", "mFirstName", "FIRST_NAME", "First$Name" all becomes "firstName".
+
 
 .. _io_realm_annotations_RealmNamingPolicy_PASCAL_CASE:
 
@@ -320,12 +310,8 @@ The name in the Java model class is converted to camelCase, i.e. all words are j
 
 public static final :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` 
 
-The name in the Java model class is converted to PascalCase, i.e. all words are joined
- together with the first letter of all words upper cased. This is the default naming scheme
- in .NET.
- <p>
- Examples: "firstName", "FirstName", "mFirstName", "FIRST_NAME", "First$Name" all becomes
- "FirstName".
+The name in the Java model class is converted to PascalCase, i.e. all words are joined together with the first letter of all words upper cased. This is the default naming scheme in .NET.Examples: "firstName", "FirstName", "mFirstName", "FIRST_NAME", "First$Name" all becomes "FirstName".
+
 
 .. _io_realm_annotations_RealmNamingPolicy_LOWER_CASE_WITH_UNDERSCORES:
 
@@ -338,11 +324,10 @@ The name in the Java model class is converted to PascalCase, i.e. all words are 
 
 public static final :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` 
 
-The name in the Java model class is converted lowercase with each word separated by {@code _}.
- This is the default naming scheme in C++.
- <p>
- Examples: "firstName", "FirstName", "mFirstName", "FIRST_NAME", "First$Name" all becomes
- "first_name".
+The name in the Java model class is converted lowercase with each word separated by ``_`` . This is the default naming scheme in C++.
+
+Examples: "firstName", "FirstName", "mFirstName", "FIRST_NAME", "First$Name" all becomes "first_name".
+
 
 
 
