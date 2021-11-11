@@ -141,6 +141,8 @@ This is the initial state. The session is closed. No data is being synchronized.
 
 
 
+
+
 .. _io_realm_mongodb_sync_SyncSession_State_ACTIVE:
 
 .. _SyncSession_State_ACTIVE:
@@ -155,6 +157,8 @@ public static final :ref:`SyncSession.State <io_realm_mongodb_sync_SyncSession_S
 The Realm is open and data will be synchronized between the device and the server if the underlying connection is :ref:`ConnectionState.CONNECTED <io_realm_mongodb_sync_ConnectionState_CONNECTED>` .
 
 The session will remain in this state until the Realm is closed. In which case it will become :ref:`DYING <io_realm_mongodb_sync_SyncSession_State_DYING>` .
+
+
 
 
 
@@ -175,6 +179,8 @@ The Realm was closed, but still contains data that needs to be synchronized to t
 
 
 
+
+
 .. _io_realm_mongodb_sync_SyncSession_State_WAITING_FOR_ACCESS_TOKEN:
 
 .. _SyncSession_State_WAITING_FOR_ACCESS_TOKEN:
@@ -189,6 +195,8 @@ public static final :ref:`SyncSession.State <io_realm_mongodb_sync_SyncSession_S
 The user is attempting to synchronize data but needs a valid access token to do so. Realm will either use a cached token or automatically try to acquire one based on the current users login. This requires a network connection.Data cannot be synchronized in this state.
 
 Once a valid token is acquired, the session will transition to :ref:`ACTIVE <io_realm_mongodb_sync_SyncSession_State_ACTIVE>` .
+
+
 
 
 
@@ -234,6 +242,8 @@ valueOf
        
    
    
+
+
 .. _values:
 
 .. _values__:
@@ -270,4 +280,6 @@ values
        
    
    
+
+
 
