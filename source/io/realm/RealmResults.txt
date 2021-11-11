@@ -21,9 +21,9 @@ io.realm
  | 		`java.util.AbstractCollection <https://docs.oracle.com/javase/7/docs/api/java/util/AbstractCollection.html>`__ 
  | 					`java.util.AbstractList <https://docs.oracle.com/javase/7/docs/api/java/util/AbstractList.html>`__ 
  | 								**io.realm.OrderedRealmCollectionImpl (?)**
-
-
  | 											io.realm.RealmResults
+
+
 This class holds all the matches of a :ref:`RealmQuery <io_realm_RealmQuery>`  for a given Realm. The objects are not copied from the Realm to the RealmResults list, but are just referenced from the RealmResult instead. This saves memory and increases speed.
 
 RealmResults are live views, which means that if it is on an **Looper (?)** thread, it will automatically update its query results after a transaction has been committed. If on a non-looper thread, **Realm.refresh() (?)** must be called to update the results.

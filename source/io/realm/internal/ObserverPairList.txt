@@ -18,9 +18,9 @@ io.realm.internal
 =================
 
 `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
-
-
  | 		io.realm.internal.ObserverPairList
+
+
 An ObserverPairList holds a list of ObserverPairs. An :ref:`ObserverPair <io_realm_internal_ObserverPairList_ObserverPair>`  is pair containing an observer and a listener. The observer is the object to react to the changes through the listener. The observer is saved as a weak reference in the pair to control the life cycle of the listener. When the observer gets GCed, the corresponding pair will be removed from the list. So DO NOT keep a strong reference to the observer in the subclass of listener since it will cause leaks!
 
 This class is not thread safe and it is not supposed to be.
