@@ -17,8 +17,11 @@ Class FindIterable
 io.realm.mongodb.mongo.iterable
 ===============================
 
-:ref:`io.realm.mongodb.mongo.iterable.MongoIterable <io_realm_mongodb_mongo_iterable_MongoIterable>` 
- | 		`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+ | `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+ | 		:ref:`io.realm.mongodb.mongo.iterable.MongoIterable <io_realm_mongodb_mongo_iterable_MongoIterable>` 
+ | 					io.realm.mongodb.mongo.iterable.FindIterable
+
 
 Specific iterable for :ref:`io.realm.mongodb.mongo.MongoCollection.find() <io_realm_mongodb_mongo_MongoCollection_find__>`  operations.
 
@@ -28,11 +31,24 @@ Specific iterable for :ref:`io.realm.mongodb.mongo.MongoCollection.find() <io_re
 Constructors
 ============
 
-
-
-- ``io.realm.mongodb.mongo.iterable.FindIterable(ThreadPoolExecutor, <any>, CodecRegistry, Class<ResultT>)`` 
-
-
+.. list-table::
+   :header-rows: 1
+   
+   * - Constructor and Description
+   
+   * - |   :ref:`FindIterable <io_realm_mongodb_mongo_iterable_FindIterable>`  (
+       |      `ThreadPoolExecutor <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ThreadPoolExecutor.html>`__  threadPoolExecutor, 
+       |      **io.realm.internal.objectstore.OsMongoCollection<?> (?)** osMongoCollection, 
+       |      **CodecRegistry (?)** codecRegistry, 
+       |      `java.lang.Class\<ResultT> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  resultClass
+       |   )
+       
+       
+       
+       
+       
+   
+   
 
 
 Method Summary
@@ -44,40 +60,40 @@ Method Summary
    * - Modifier and Type
      - Method and Description
    
-   * - 
-       public :ref:`FindIterable <io_realm_mongodb_mongo_iterable_FindIterable>` 
-     - 
-       :ref:`filter <io_realm_mongodb_mongo_iterable_FindIterable_filter_Bson_>`  (**Bson (?)** filter)
+   * - public :ref:`FindIterable <io_realm_mongodb_mongo_iterable_FindIterable>` 
+     - |   :ref:`filter <io_realm_mongodb_mongo_iterable_FindIterable_filter_Bson_>`  (
+       |      **Bson (?)** filter
+       |   )
        
        Sets the query filter to apply to the query.
        
        
        
    
-   * - 
-       public :ref:`FindIterable <io_realm_mongodb_mongo_iterable_FindIterable>` 
-     - 
-       :ref:`limit <io_realm_mongodb_mongo_iterable_FindIterable_limit_int_>`  (**int** limit)
+   * - public :ref:`FindIterable <io_realm_mongodb_mongo_iterable_FindIterable>` 
+     - |   :ref:`limit <io_realm_mongodb_mongo_iterable_FindIterable_limit_int_>`  (
+       |      **int** limit
+       |   )
        
        Sets the limit to apply.
        
        
        
    
-   * - 
-       public :ref:`FindIterable <io_realm_mongodb_mongo_iterable_FindIterable>` 
-     - 
-       :ref:`projection <io_realm_mongodb_mongo_iterable_FindIterable_projection_Bson_>`  (**Bson (?)** projection)
+   * - public :ref:`FindIterable <io_realm_mongodb_mongo_iterable_FindIterable>` 
+     - |   :ref:`projection <io_realm_mongodb_mongo_iterable_FindIterable_projection_Bson_>`  (
+       |      **Bson (?)** projection
+       |   )
        
        Sets a document describing the fields to return for all matching documents.
        
        
        
    
-   * - 
-       public :ref:`FindIterable <io_realm_mongodb_mongo_iterable_FindIterable>` 
-     - 
-       :ref:`sort <io_realm_mongodb_mongo_iterable_FindIterable_sort_Bson_>`  (**Bson (?)** sort)
+   * - public :ref:`FindIterable <io_realm_mongodb_mongo_iterable_FindIterable>` 
+     - |   :ref:`sort <io_realm_mongodb_mongo_iterable_FindIterable_sort_Bson_>`  (
+       |      **Bson (?)** sort
+       |   )
        
        Sets the sort criteria to apply to the query.
        
@@ -92,14 +108,41 @@ Inherited Methods
 
 
 
-- Methods inherited from interface :ref:`io.realm.mongodb.mongo.iterable.MongoIterable <io_realm_mongodb_mongo_iterable_MongoIterable>` : 
+- Methods inherited from class `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+- Methods inherited from class :ref:`io.realm.mongodb.mongo.iterable.MongoIterable <io_realm_mongodb_mongo_iterable_MongoIterable>` : ``iterator`` , ``first`` 
+
+
+
+
+Constructor Detail
+==================
+
+.. _FindIterable:
+
+.. _FindIterable__:
+
+.. _io_realm_mongodb_mongo_iterable_FindIterable:
+
+.. _io_realm_mongodb_mongo_iterable_FindIterable__:
+
+.. list-table::
+   :header-rows: 1
    
-   ``iterator`` , ``first`` 
+   * -  |   public  FindIterable (
+       |      `ThreadPoolExecutor <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ThreadPoolExecutor.html>`__  threadPoolExecutor, 
+       |      **io.realm.internal.objectstore.OsMongoCollection<?> (?)** osMongoCollection, 
+       |      **CodecRegistry (?)** codecRegistry, 
+       |      `java.lang.Class\<ResultT> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  resultClass
+       |   )
    
-   
-- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
-   
-   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   * - 
+       
+       
+       
+       
+       
+       
+       
    
    
 
@@ -109,6 +152,18 @@ Inherited Methods
 Method Detail
 =============
 
+.. _filter:
+
+.. _filter__:
+
+.. _FindIterable_filter:
+
+.. _FindIterable_filter__:
+
+.. _io_realm_mongodb_mongo_iterable_FindIterable_filter:
+
+.. _io_realm_mongodb_mongo_iterable_FindIterable_filter__:
+
 
 
 filter
@@ -116,14 +171,16 @@ filter
 
 .. _io_realm_mongodb_mongo_iterable_FindIterable_filter_Bson_:
 
-.. _io_realm_mongodb_mongo_iterable_FindIterable_filter_Bson_:
+.. _filter_Bson_:
 
-.. _io_realm_mongodb_mongo_iterable_FindIterable_filter_Bson_:
+.. _FindIterable_filter_Bson_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public :ref:`FindIterable <io_realm_mongodb_mongo_iterable_FindIterable>`  filter (**Bson (?)** filter)
+   * - |   public :ref:`FindIterable <io_realm_mongodb_mongo_iterable_FindIterable>`  filter (
+       |      **Bson (?)** filter
+       |   )
    
    * - Sets the query filter to apply to the query.
        
@@ -149,19 +206,35 @@ filter
    
 
 
+.. _limit:
+
+.. _limit__:
+
+.. _FindIterable_limit:
+
+.. _FindIterable_limit__:
+
+.. _io_realm_mongodb_mongo_iterable_FindIterable_limit:
+
+.. _io_realm_mongodb_mongo_iterable_FindIterable_limit__:
+
+
+
 limit
 -----
 
 .. _io_realm_mongodb_mongo_iterable_FindIterable_limit_int_:
 
-.. _io_realm_mongodb_mongo_iterable_FindIterable_limit_int_:
+.. _limit_int_:
 
-.. _io_realm_mongodb_mongo_iterable_FindIterable_limit_int_:
+.. _FindIterable_limit_int_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public :ref:`FindIterable <io_realm_mongodb_mongo_iterable_FindIterable>`  limit (**int** limit)
+   * - |   public :ref:`FindIterable <io_realm_mongodb_mongo_iterable_FindIterable>`  limit (
+       |      **int** limit
+       |   )
    
    * - Sets the limit to apply.
        
@@ -187,19 +260,35 @@ limit
    
 
 
+.. _projection:
+
+.. _projection__:
+
+.. _FindIterable_projection:
+
+.. _FindIterable_projection__:
+
+.. _io_realm_mongodb_mongo_iterable_FindIterable_projection:
+
+.. _io_realm_mongodb_mongo_iterable_FindIterable_projection__:
+
+
+
 projection
 ----------
 
 .. _io_realm_mongodb_mongo_iterable_FindIterable_projection_Bson_:
 
-.. _io_realm_mongodb_mongo_iterable_FindIterable_projection_Bson_:
+.. _projection_Bson_:
 
-.. _io_realm_mongodb_mongo_iterable_FindIterable_projection_Bson_:
+.. _FindIterable_projection_Bson_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public :ref:`FindIterable <io_realm_mongodb_mongo_iterable_FindIterable>`  projection (**Bson (?)** projection)
+   * - |   public :ref:`FindIterable <io_realm_mongodb_mongo_iterable_FindIterable>`  projection (
+       |      **Bson (?)** projection
+       |   )
    
    * - Sets a document describing the fields to return for all matching documents.
        
@@ -225,19 +314,35 @@ projection
    
 
 
+.. _sort:
+
+.. _sort__:
+
+.. _FindIterable_sort:
+
+.. _FindIterable_sort__:
+
+.. _io_realm_mongodb_mongo_iterable_FindIterable_sort:
+
+.. _io_realm_mongodb_mongo_iterable_FindIterable_sort__:
+
+
+
 sort
 ----
 
 .. _io_realm_mongodb_mongo_iterable_FindIterable_sort_Bson_:
 
-.. _io_realm_mongodb_mongo_iterable_FindIterable_sort_Bson_:
+.. _sort_Bson_:
 
-.. _io_realm_mongodb_mongo_iterable_FindIterable_sort_Bson_:
+.. _FindIterable_sort_Bson_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public :ref:`FindIterable <io_realm_mongodb_mongo_iterable_FindIterable>`  sort (**Bson (?)** sort)
+   * - |   public :ref:`FindIterable <io_realm_mongodb_mongo_iterable_FindIterable>`  sort (
+       |      **Bson (?)** sort
+       |   )
    
    * - Sets the sort criteria to apply to the query.
        
@@ -261,4 +366,6 @@ sort
        
    
    
+
+
 

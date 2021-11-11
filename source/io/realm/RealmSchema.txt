@@ -17,7 +17,10 @@ Class RealmSchema
 io.realm
 ========
 
-`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+ | `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+ | 		io.realm.RealmSchema
+
 
 Class for interacting with the Realm schema. This makes it possible to inspect, add, delete and change the classes in the Realm.:ref:`Realm.getSchema() <io_realm_Realm_getSchema__>`  returns an immutable ``RealmSchema``  which can only be used for inspecting. Use :ref:`DynamicRealm.getSchema() <io_realm_DynamicRealm_getSchema__>`  to get a mutable schema.
 
@@ -51,10 +54,51 @@ Method Summary
    * - Modifier and Type
      - Method and Description
    
-   * - 
-       public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` 
-     - 
-       :ref:`get <io_realm_RealmSchema_get_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
+   * - public **boolean**
+     - |   :ref:`contains <io_realm_RealmSchema_contains_String_>`  (
+       |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className
+       |   )
+       
+       Checks if a given class already exists in the schema.
+       
+       
+       
+   
+   * - public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` 
+     - |   :ref:`create <io_realm_RealmSchema_create_String_>`  (
+       |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className
+       |   )
+       
+       Adds a new class to the Realm.
+       
+       
+       
+   
+   * - public **void**
+     - |   :ref:`createKeyPathMapping <io_realm_RealmSchema_createKeyPathMapping__>`  ()
+       
+       Create the underlying keypath mapping.
+       
+       
+       
+   
+   * - public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` 
+     - |   :ref:`createWithPrimaryKeyField <io_realm_RealmSchema_createWithPrimaryKeyField_String__String__Class_____FieldAttribute____>`  (
+       |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className, 
+       |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  primaryKeyFieldName, 
+       |      `java.lang.Class\<?> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  fieldType, 
+       |      :ref:`io.realm.FieldAttribute[] <io_realm_FieldAttribute>`  attributes
+       |   )
+       
+       Adds a new class to the Realm with a primary key field defined.
+       
+       
+       
+   
+   * - public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` 
+     - |   :ref:`get <io_realm_RealmSchema_get_String_>`  (
+       |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className
+       |   )
        
        Returns the :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`  for a given class.
        
@@ -63,10 +107,8 @@ Method Summary
        
        
    
-   * - 
-       public abstract `Set <https://docs.oracle.com/javase/7/docs/api/java/util/Set.html>`__ 
-     - 
-       :ref:`getAll <io_realm_RealmSchema_getAll__>`  ()
+   * - public abstract `Set <https://docs.oracle.com/javase/7/docs/api/java/util/Set.html>`__ 
+     - |   :ref:`getAll <io_realm_RealmSchema_getAll__>`  ()
        
        Returns the :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` s for all RealmObject classes that can be saved in this Realm.
        
@@ -75,76 +117,33 @@ Method Summary
        
        
    
-   * - 
-       public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` 
-     - 
-       :ref:`create <io_realm_RealmSchema_create_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
-       
-       Adds a new class to the Realm.
+   * - protected final **ColumnInfo (?)**
+     - |   :ref:`getColumnInfo <io_realm_RealmSchema_getColumnInfo_String_>`  (
+       |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className
+       |   )
        
        
-       
-   
-   * - 
-       public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` 
-     - 
-       :ref:`createWithPrimaryKeyField <io_realm_RealmSchema_createWithPrimaryKeyField_String__String__Class_____FieldAttribute____>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className,
-                                                                     `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  primaryKeyFieldName,
-                                                                     `java.lang.Class\<?> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  fieldType,
-                                                                     :ref:`io.realm.FieldAttribute[] <io_realm_FieldAttribute>`  attributes)
-       
-       Adds a new class to the Realm with a primary key field defined.
        
        
        
    
-   * - 
-       public abstract **void**
-     - 
-       :ref:`remove <io_realm_RealmSchema_remove_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
+   * - public abstract **void**
+     - |   :ref:`remove <io_realm_RealmSchema_remove_String_>`  (
+       |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className
+       |   )
        
        Removes a class from the Realm.
        
        
        
    
-   * - 
-       public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` 
-     - 
-       :ref:`rename <io_realm_RealmSchema_rename_String__String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  oldClassName,
-                                                  `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  newClassName)
+   * - public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` 
+     - |   :ref:`rename <io_realm_RealmSchema_rename_String__String_>`  (
+       |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  oldClassName, 
+       |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  newClassName
+       |   )
        
        Renames a class already in the Realm.
-       
-       
-       
-   
-   * - 
-       public **boolean**
-     - 
-       :ref:`contains <io_realm_RealmSchema_contains_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
-       
-       Checks if a given class already exists in the schema.
-       
-       
-       
-   
-   * - 
-       protected final **ColumnInfo (?)**
-     - 
-       :ref:`getColumnInfo <io_realm_RealmSchema_getColumnInfo_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
-       
-       
-       
-       
-       
-   
-   * - 
-       public **void**
-     - 
-       :ref:`createKeyPathMapping <io_realm_RealmSchema_createKeyPathMapping__>`  ()
-       
-       Create the underlying keypath mapping.
        
        
        
@@ -157,11 +156,7 @@ Inherited Methods
 
 
 
-- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
-   
-   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
-   
-   
+- Methods inherited from class `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
 
 
 
@@ -169,32 +164,50 @@ Inherited Methods
 Method Detail
 =============
 
+.. _contains:
+
+.. _contains__:
+
+.. _RealmSchema_contains:
+
+.. _RealmSchema_contains__:
+
+.. _io_realm_RealmSchema_contains:
+
+.. _io_realm_RealmSchema_contains__:
 
 
-get
-----
 
-.. _io_realm_RealmSchema_get_String_:
+contains
+--------
 
-.. _io_realm_RealmSchema_get_String_:
+.. _io_realm_RealmSchema_contains_java_lang_String_:
 
-.. _io_realm_RealmSchema_get_String_:
+.. _io_realm_RealmSchema_contains_String_:
+
+.. _contains_java_lang_String_:
+
+.. _contains_String_:
+
+.. _RealmSchema_contains_java_lang_String_:
+
+.. _RealmSchema_contains_String_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`  get (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
+   * - |   public **boolean** contains (
+       |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className
+       |   )
    
-   * - Returns the :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`  for a given class. If this :ref:`RealmSchema <io_realm_RealmSchema>`  is immutable, an immutable :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`  will be returned. Otherwise, it returns an mutable :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` .
-       
-       
+   * - Checks if a given class already exists in the schema.
        
        
        
        
        **Parameters**
        
-       - ``className`` - name of the class
+       - ``className`` - class name to check.
           
           
           
@@ -211,51 +224,41 @@ get
    
 
 
-getAll
-------
+.. _create:
 
-.. _io_realm_RealmSchema_getAll__:
+.. _create__:
 
-.. _io_realm_RealmSchema_getAll__:
+.. _RealmSchema_create:
 
-.. _io_realm_RealmSchema_getAll__:
+.. _RealmSchema_create__:
 
-.. list-table::
-   :header-rows: 1
-   
-   * -    public abstract `Set <https://docs.oracle.com/javase/7/docs/api/java/util/Set.html>`__  getAll ()
-   
-   * - Returns the :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` s for all RealmObject classes that can be saved in this Realm. If this :ref:`RealmSchema <io_realm_RealmSchema>`  is immutable, an immutable :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`  set will be returned. Otherwise, it returns an mutable :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`  set.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
+.. _io_realm_RealmSchema_create:
+
+.. _io_realm_RealmSchema_create__:
+
 
 
 create
 ------
 
-.. _io_realm_RealmSchema_create_String_:
+.. _io_realm_RealmSchema_create_java_lang_String_:
 
 .. _io_realm_RealmSchema_create_String_:
 
-.. _io_realm_RealmSchema_create_String_:
+.. _create_java_lang_String_:
+
+.. _create_String_:
+
+.. _RealmSchema_create_java_lang_String_:
+
+.. _RealmSchema_create_String_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`  create (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
+   * - |   public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`  create (
+       |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className
+       |   )
    
    * - Adds a new class to the Realm.
        
@@ -291,22 +294,360 @@ create
    
 
 
+.. _createKeyPathMapping:
+
+.. _createKeyPathMapping__:
+
+.. _RealmSchema_createKeyPathMapping:
+
+.. _RealmSchema_createKeyPathMapping__:
+
+.. _io_realm_RealmSchema_createKeyPathMapping:
+
+.. _io_realm_RealmSchema_createKeyPathMapping__:
+
+
+
+createKeyPathMapping
+--------------------
+
+.. list-table::
+   :header-rows: 1
+   
+   * - |   public **void** createKeyPathMapping ()
+   
+   * - Create the underlying keypath mapping. Should only be called by typed Realms.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+.. _createWithPrimaryKeyField:
+
+.. _createWithPrimaryKeyField__:
+
+.. _RealmSchema_createWithPrimaryKeyField:
+
+.. _RealmSchema_createWithPrimaryKeyField__:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField__:
+
+
+
 createWithPrimaryKeyField
 -------------------------
 
-.. _io_realm_RealmSchema_createWithPrimaryKeyField_String__String__Class_____FieldAttribute____:
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_java_lang_String_java_lang_String_java_lang_Class_io_realm_FieldAttribute_:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_java_lang_String__java_lang_String__java_lang_Class__io_realm_FieldAttribute_:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_java_lang_String_java_lang_String_java_lang_Class_FieldAttribute_:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_java_lang_String__java_lang_String__java_lang_Class__FieldAttribute_:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_java_lang_String_java_lang_String_java_lang_Class_FieldAttribute____:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_java_lang_String__java_lang_String__java_lang_Class__FieldAttribute____:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_java_lang_String_java_lang_String_Class_io_realm_FieldAttribute_:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_java_lang_String__java_lang_String__Class__io_realm_FieldAttribute_:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_java_lang_String_java_lang_String_Class_FieldAttribute_:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_java_lang_String__java_lang_String__Class__FieldAttribute_:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_java_lang_String_java_lang_String_Class_FieldAttribute____:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_java_lang_String__java_lang_String__Class__FieldAttribute____:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_java_lang_String_String_java_lang_Class_io_realm_FieldAttribute_:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_java_lang_String__String__java_lang_Class__io_realm_FieldAttribute_:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_java_lang_String_String_java_lang_Class_FieldAttribute_:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_java_lang_String__String__java_lang_Class__FieldAttribute_:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_java_lang_String_String_java_lang_Class_FieldAttribute____:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_java_lang_String__String__java_lang_Class__FieldAttribute____:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_java_lang_String_String_Class_io_realm_FieldAttribute_:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_java_lang_String__String__Class__io_realm_FieldAttribute_:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_java_lang_String_String_Class_FieldAttribute_:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_java_lang_String__String__Class__FieldAttribute_:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_java_lang_String_String_Class_FieldAttribute____:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_java_lang_String__String__Class__FieldAttribute____:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_String_java_lang_String_java_lang_Class_io_realm_FieldAttribute_:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_String__java_lang_String__java_lang_Class__io_realm_FieldAttribute_:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_String_java_lang_String_java_lang_Class_FieldAttribute_:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_String__java_lang_String__java_lang_Class__FieldAttribute_:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_String_java_lang_String_java_lang_Class_FieldAttribute____:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_String__java_lang_String__java_lang_Class__FieldAttribute____:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_String_java_lang_String_Class_io_realm_FieldAttribute_:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_String__java_lang_String__Class__io_realm_FieldAttribute_:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_String_java_lang_String_Class_FieldAttribute_:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_String__java_lang_String__Class__FieldAttribute_:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_String_java_lang_String_Class_FieldAttribute____:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_String__java_lang_String__Class__FieldAttribute____:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_String_String_java_lang_Class_io_realm_FieldAttribute_:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_String__String__java_lang_Class__io_realm_FieldAttribute_:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_String_String_java_lang_Class_FieldAttribute_:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_String__String__java_lang_Class__FieldAttribute_:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_String_String_java_lang_Class_FieldAttribute____:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_String__String__java_lang_Class__FieldAttribute____:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_String_String_Class_io_realm_FieldAttribute_:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_String__String__Class__io_realm_FieldAttribute_:
 
 .. _io_realm_RealmSchema_createWithPrimaryKeyField_String_String_Class_FieldAttribute_:
 
 .. _io_realm_RealmSchema_createWithPrimaryKeyField_String__String__Class__FieldAttribute_:
 
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_String_String_Class_FieldAttribute____:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_String__String__Class__FieldAttribute____:
+
+.. _createWithPrimaryKeyField_java_lang_String_java_lang_String_java_lang_Class_io_realm_FieldAttribute_:
+
+.. _createWithPrimaryKeyField_java_lang_String__java_lang_String__java_lang_Class__io_realm_FieldAttribute_:
+
+.. _createWithPrimaryKeyField_java_lang_String_java_lang_String_java_lang_Class_FieldAttribute_:
+
+.. _createWithPrimaryKeyField_java_lang_String__java_lang_String__java_lang_Class__FieldAttribute_:
+
+.. _createWithPrimaryKeyField_java_lang_String_java_lang_String_java_lang_Class_FieldAttribute____:
+
+.. _createWithPrimaryKeyField_java_lang_String__java_lang_String__java_lang_Class__FieldAttribute____:
+
+.. _createWithPrimaryKeyField_java_lang_String_java_lang_String_Class_io_realm_FieldAttribute_:
+
+.. _createWithPrimaryKeyField_java_lang_String__java_lang_String__Class__io_realm_FieldAttribute_:
+
+.. _createWithPrimaryKeyField_java_lang_String_java_lang_String_Class_FieldAttribute_:
+
+.. _createWithPrimaryKeyField_java_lang_String__java_lang_String__Class__FieldAttribute_:
+
+.. _createWithPrimaryKeyField_java_lang_String_java_lang_String_Class_FieldAttribute____:
+
+.. _createWithPrimaryKeyField_java_lang_String__java_lang_String__Class__FieldAttribute____:
+
+.. _createWithPrimaryKeyField_java_lang_String_String_java_lang_Class_io_realm_FieldAttribute_:
+
+.. _createWithPrimaryKeyField_java_lang_String__String__java_lang_Class__io_realm_FieldAttribute_:
+
+.. _createWithPrimaryKeyField_java_lang_String_String_java_lang_Class_FieldAttribute_:
+
+.. _createWithPrimaryKeyField_java_lang_String__String__java_lang_Class__FieldAttribute_:
+
+.. _createWithPrimaryKeyField_java_lang_String_String_java_lang_Class_FieldAttribute____:
+
+.. _createWithPrimaryKeyField_java_lang_String__String__java_lang_Class__FieldAttribute____:
+
+.. _createWithPrimaryKeyField_java_lang_String_String_Class_io_realm_FieldAttribute_:
+
+.. _createWithPrimaryKeyField_java_lang_String__String__Class__io_realm_FieldAttribute_:
+
+.. _createWithPrimaryKeyField_java_lang_String_String_Class_FieldAttribute_:
+
+.. _createWithPrimaryKeyField_java_lang_String__String__Class__FieldAttribute_:
+
+.. _createWithPrimaryKeyField_java_lang_String_String_Class_FieldAttribute____:
+
+.. _createWithPrimaryKeyField_java_lang_String__String__Class__FieldAttribute____:
+
+.. _createWithPrimaryKeyField_String_java_lang_String_java_lang_Class_io_realm_FieldAttribute_:
+
+.. _createWithPrimaryKeyField_String__java_lang_String__java_lang_Class__io_realm_FieldAttribute_:
+
+.. _createWithPrimaryKeyField_String_java_lang_String_java_lang_Class_FieldAttribute_:
+
+.. _createWithPrimaryKeyField_String__java_lang_String__java_lang_Class__FieldAttribute_:
+
+.. _createWithPrimaryKeyField_String_java_lang_String_java_lang_Class_FieldAttribute____:
+
+.. _createWithPrimaryKeyField_String__java_lang_String__java_lang_Class__FieldAttribute____:
+
+.. _createWithPrimaryKeyField_String_java_lang_String_Class_io_realm_FieldAttribute_:
+
+.. _createWithPrimaryKeyField_String__java_lang_String__Class__io_realm_FieldAttribute_:
+
+.. _createWithPrimaryKeyField_String_java_lang_String_Class_FieldAttribute_:
+
+.. _createWithPrimaryKeyField_String__java_lang_String__Class__FieldAttribute_:
+
+.. _createWithPrimaryKeyField_String_java_lang_String_Class_FieldAttribute____:
+
+.. _createWithPrimaryKeyField_String__java_lang_String__Class__FieldAttribute____:
+
+.. _createWithPrimaryKeyField_String_String_java_lang_Class_io_realm_FieldAttribute_:
+
+.. _createWithPrimaryKeyField_String__String__java_lang_Class__io_realm_FieldAttribute_:
+
+.. _createWithPrimaryKeyField_String_String_java_lang_Class_FieldAttribute_:
+
+.. _createWithPrimaryKeyField_String__String__java_lang_Class__FieldAttribute_:
+
+.. _createWithPrimaryKeyField_String_String_java_lang_Class_FieldAttribute____:
+
+.. _createWithPrimaryKeyField_String__String__java_lang_Class__FieldAttribute____:
+
+.. _createWithPrimaryKeyField_String_String_Class_io_realm_FieldAttribute_:
+
+.. _createWithPrimaryKeyField_String__String__Class__io_realm_FieldAttribute_:
+
+.. _createWithPrimaryKeyField_String_String_Class_FieldAttribute_:
+
+.. _createWithPrimaryKeyField_String__String__Class__FieldAttribute_:
+
+.. _createWithPrimaryKeyField_String_String_Class_FieldAttribute____:
+
+.. _createWithPrimaryKeyField_String__String__Class__FieldAttribute____:
+
+.. _RealmSchema_createWithPrimaryKeyField_java_lang_String_java_lang_String_java_lang_Class_io_realm_FieldAttribute_:
+
+.. _RealmSchema_createWithPrimaryKeyField_java_lang_String__java_lang_String__java_lang_Class__io_realm_FieldAttribute_:
+
+.. _RealmSchema_createWithPrimaryKeyField_java_lang_String_java_lang_String_java_lang_Class_FieldAttribute_:
+
+.. _RealmSchema_createWithPrimaryKeyField_java_lang_String__java_lang_String__java_lang_Class__FieldAttribute_:
+
+.. _RealmSchema_createWithPrimaryKeyField_java_lang_String_java_lang_String_java_lang_Class_FieldAttribute____:
+
+.. _RealmSchema_createWithPrimaryKeyField_java_lang_String__java_lang_String__java_lang_Class__FieldAttribute____:
+
+.. _RealmSchema_createWithPrimaryKeyField_java_lang_String_java_lang_String_Class_io_realm_FieldAttribute_:
+
+.. _RealmSchema_createWithPrimaryKeyField_java_lang_String__java_lang_String__Class__io_realm_FieldAttribute_:
+
+.. _RealmSchema_createWithPrimaryKeyField_java_lang_String_java_lang_String_Class_FieldAttribute_:
+
+.. _RealmSchema_createWithPrimaryKeyField_java_lang_String__java_lang_String__Class__FieldAttribute_:
+
+.. _RealmSchema_createWithPrimaryKeyField_java_lang_String_java_lang_String_Class_FieldAttribute____:
+
+.. _RealmSchema_createWithPrimaryKeyField_java_lang_String__java_lang_String__Class__FieldAttribute____:
+
+.. _RealmSchema_createWithPrimaryKeyField_java_lang_String_String_java_lang_Class_io_realm_FieldAttribute_:
+
+.. _RealmSchema_createWithPrimaryKeyField_java_lang_String__String__java_lang_Class__io_realm_FieldAttribute_:
+
+.. _RealmSchema_createWithPrimaryKeyField_java_lang_String_String_java_lang_Class_FieldAttribute_:
+
+.. _RealmSchema_createWithPrimaryKeyField_java_lang_String__String__java_lang_Class__FieldAttribute_:
+
+.. _RealmSchema_createWithPrimaryKeyField_java_lang_String_String_java_lang_Class_FieldAttribute____:
+
+.. _RealmSchema_createWithPrimaryKeyField_java_lang_String__String__java_lang_Class__FieldAttribute____:
+
+.. _RealmSchema_createWithPrimaryKeyField_java_lang_String_String_Class_io_realm_FieldAttribute_:
+
+.. _RealmSchema_createWithPrimaryKeyField_java_lang_String__String__Class__io_realm_FieldAttribute_:
+
+.. _RealmSchema_createWithPrimaryKeyField_java_lang_String_String_Class_FieldAttribute_:
+
+.. _RealmSchema_createWithPrimaryKeyField_java_lang_String__String__Class__FieldAttribute_:
+
+.. _RealmSchema_createWithPrimaryKeyField_java_lang_String_String_Class_FieldAttribute____:
+
+.. _RealmSchema_createWithPrimaryKeyField_java_lang_String__String__Class__FieldAttribute____:
+
+.. _RealmSchema_createWithPrimaryKeyField_String_java_lang_String_java_lang_Class_io_realm_FieldAttribute_:
+
+.. _RealmSchema_createWithPrimaryKeyField_String__java_lang_String__java_lang_Class__io_realm_FieldAttribute_:
+
+.. _RealmSchema_createWithPrimaryKeyField_String_java_lang_String_java_lang_Class_FieldAttribute_:
+
+.. _RealmSchema_createWithPrimaryKeyField_String__java_lang_String__java_lang_Class__FieldAttribute_:
+
+.. _RealmSchema_createWithPrimaryKeyField_String_java_lang_String_java_lang_Class_FieldAttribute____:
+
+.. _RealmSchema_createWithPrimaryKeyField_String__java_lang_String__java_lang_Class__FieldAttribute____:
+
+.. _RealmSchema_createWithPrimaryKeyField_String_java_lang_String_Class_io_realm_FieldAttribute_:
+
+.. _RealmSchema_createWithPrimaryKeyField_String__java_lang_String__Class__io_realm_FieldAttribute_:
+
+.. _RealmSchema_createWithPrimaryKeyField_String_java_lang_String_Class_FieldAttribute_:
+
+.. _RealmSchema_createWithPrimaryKeyField_String__java_lang_String__Class__FieldAttribute_:
+
+.. _RealmSchema_createWithPrimaryKeyField_String_java_lang_String_Class_FieldAttribute____:
+
+.. _RealmSchema_createWithPrimaryKeyField_String__java_lang_String__Class__FieldAttribute____:
+
+.. _RealmSchema_createWithPrimaryKeyField_String_String_java_lang_Class_io_realm_FieldAttribute_:
+
+.. _RealmSchema_createWithPrimaryKeyField_String__String__java_lang_Class__io_realm_FieldAttribute_:
+
+.. _RealmSchema_createWithPrimaryKeyField_String_String_java_lang_Class_FieldAttribute_:
+
+.. _RealmSchema_createWithPrimaryKeyField_String__String__java_lang_Class__FieldAttribute_:
+
+.. _RealmSchema_createWithPrimaryKeyField_String_String_java_lang_Class_FieldAttribute____:
+
+.. _RealmSchema_createWithPrimaryKeyField_String__String__java_lang_Class__FieldAttribute____:
+
+.. _RealmSchema_createWithPrimaryKeyField_String_String_Class_io_realm_FieldAttribute_:
+
+.. _RealmSchema_createWithPrimaryKeyField_String__String__Class__io_realm_FieldAttribute_:
+
+.. _RealmSchema_createWithPrimaryKeyField_String_String_Class_FieldAttribute_:
+
+.. _RealmSchema_createWithPrimaryKeyField_String__String__Class__FieldAttribute_:
+
+.. _RealmSchema_createWithPrimaryKeyField_String_String_Class_FieldAttribute____:
+
+.. _RealmSchema_createWithPrimaryKeyField_String__String__Class__FieldAttribute____:
+
+.. _io_realm_RealmSchema_createWithPrimaryKeyField_String__String__Class_____FieldAttribute____:
+
 .. list-table::
    :header-rows: 1
    
-   * -    public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`  createWithPrimaryKeyField (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className,
-                                                                     `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  primaryKeyFieldName,
-                                                                     `java.lang.Class\<?> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  fieldType,
-                                                                     :ref:`io.realm.FieldAttribute[] <io_realm_FieldAttribute>`  attributes)
+   * - |   public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`  createWithPrimaryKeyField (
+       |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className, 
+       |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  primaryKeyFieldName, 
+       |      `java.lang.Class\<?> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  fieldType, 
+       |      :ref:`io.realm.FieldAttribute[] <io_realm_FieldAttribute>`  attributes
+       |   )
    
    * - Adds a new class to the Realm with a primary key field defined.
        
@@ -358,19 +699,195 @@ createWithPrimaryKeyField
    
 
 
-remove
-------
+.. _get:
 
-.. _io_realm_RealmSchema_remove_String_:
+.. _get__:
 
-.. _io_realm_RealmSchema_remove_String_:
+.. _RealmSchema_get:
 
-.. _io_realm_RealmSchema_remove_String_:
+.. _RealmSchema_get__:
+
+.. _io_realm_RealmSchema_get:
+
+.. _io_realm_RealmSchema_get__:
+
+
+
+get
+----
+
+.. _io_realm_RealmSchema_get_java_lang_String_:
+
+.. _io_realm_RealmSchema_get_String_:
+
+.. _get_java_lang_String_:
+
+.. _get_String_:
+
+.. _RealmSchema_get_java_lang_String_:
+
+.. _RealmSchema_get_String_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public abstract **void** remove (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
+   * - |   public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`  get (
+       |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className
+       |   )
+   
+   * - Returns the :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`  for a given class. If this :ref:`RealmSchema <io_realm_RealmSchema>`  is immutable, an immutable :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`  will be returned. Otherwise, it returns an mutable :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` .
+       
+       
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``className`` - name of the class
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+.. _getAll:
+
+.. _getAll__:
+
+.. _RealmSchema_getAll:
+
+.. _RealmSchema_getAll__:
+
+.. _io_realm_RealmSchema_getAll:
+
+.. _io_realm_RealmSchema_getAll__:
+
+
+
+getAll
+------
+
+.. list-table::
+   :header-rows: 1
+   
+   * - |   public abstract `Set <https://docs.oracle.com/javase/7/docs/api/java/util/Set.html>`__  getAll ()
+   
+   * - Returns the :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>` s for all RealmObject classes that can be saved in this Realm. If this :ref:`RealmSchema <io_realm_RealmSchema>`  is immutable, an immutable :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`  set will be returned. Otherwise, it returns an mutable :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`  set.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+.. _getColumnInfo:
+
+.. _getColumnInfo__:
+
+.. _RealmSchema_getColumnInfo:
+
+.. _RealmSchema_getColumnInfo__:
+
+.. _io_realm_RealmSchema_getColumnInfo:
+
+.. _io_realm_RealmSchema_getColumnInfo__:
+
+
+
+getColumnInfo
+-------------
+
+.. _io_realm_RealmSchema_getColumnInfo_java_lang_String_:
+
+.. _io_realm_RealmSchema_getColumnInfo_String_:
+
+.. _getColumnInfo_java_lang_String_:
+
+.. _getColumnInfo_String_:
+
+.. _RealmSchema_getColumnInfo_java_lang_String_:
+
+.. _RealmSchema_getColumnInfo_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * - |   protected final **ColumnInfo (?)** getColumnInfo (
+       |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className
+       |   )
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+.. _remove:
+
+.. _remove__:
+
+.. _RealmSchema_remove:
+
+.. _RealmSchema_remove__:
+
+.. _io_realm_RealmSchema_remove:
+
+.. _io_realm_RealmSchema_remove__:
+
+
+
+remove
+------
+
+.. _io_realm_RealmSchema_remove_java_lang_String_:
+
+.. _io_realm_RealmSchema_remove_String_:
+
+.. _remove_java_lang_String_:
+
+.. _remove_String_:
+
+.. _RealmSchema_remove_java_lang_String_:
+
+.. _RealmSchema_remove_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * - |   public abstract **void** remove (
+       |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className
+       |   )
    
    * - Removes a class from the Realm. All data will be removed. Removing a class while other classes point to it will throw an `IllegalStateException <https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html>`__ . Removes those classes or fields first.
        
@@ -408,20 +925,78 @@ remove
    
 
 
+.. _rename:
+
+.. _rename__:
+
+.. _RealmSchema_rename:
+
+.. _RealmSchema_rename__:
+
+.. _io_realm_RealmSchema_rename:
+
+.. _io_realm_RealmSchema_rename__:
+
+
+
 rename
 ------
 
-.. _io_realm_RealmSchema_rename_String__String_:
+.. _io_realm_RealmSchema_rename_java_lang_String_java_lang_String_:
+
+.. _io_realm_RealmSchema_rename_java_lang_String__java_lang_String_:
+
+.. _io_realm_RealmSchema_rename_java_lang_String_String_:
+
+.. _io_realm_RealmSchema_rename_java_lang_String__String_:
+
+.. _io_realm_RealmSchema_rename_String_java_lang_String_:
+
+.. _io_realm_RealmSchema_rename_String__java_lang_String_:
 
 .. _io_realm_RealmSchema_rename_String_String_:
 
 .. _io_realm_RealmSchema_rename_String__String_:
 
+.. _rename_java_lang_String_java_lang_String_:
+
+.. _rename_java_lang_String__java_lang_String_:
+
+.. _rename_java_lang_String_String_:
+
+.. _rename_java_lang_String__String_:
+
+.. _rename_String_java_lang_String_:
+
+.. _rename_String__java_lang_String_:
+
+.. _rename_String_String_:
+
+.. _rename_String__String_:
+
+.. _RealmSchema_rename_java_lang_String_java_lang_String_:
+
+.. _RealmSchema_rename_java_lang_String__java_lang_String_:
+
+.. _RealmSchema_rename_java_lang_String_String_:
+
+.. _RealmSchema_rename_java_lang_String__String_:
+
+.. _RealmSchema_rename_String_java_lang_String_:
+
+.. _RealmSchema_rename_String__java_lang_String_:
+
+.. _RealmSchema_rename_String_String_:
+
+.. _RealmSchema_rename_String__String_:
+
 .. list-table::
    :header-rows: 1
    
-   * -    public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`  rename (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  oldClassName,
-                                                  `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  newClassName)
+   * - |   public abstract :ref:`RealmObjectSchema <io_realm_RealmObjectSchema>`  rename (
+       |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  oldClassName, 
+       |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  newClassName
+       |   )
    
    * - Renames a class already in the Realm.
        
@@ -461,100 +1036,4 @@ rename
    
 
 
-contains
---------
-
-.. _io_realm_RealmSchema_contains_String_:
-
-.. _io_realm_RealmSchema_contains_String_:
-
-.. _io_realm_RealmSchema_contains_String_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **boolean** contains (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
-   
-   * - Checks if a given class already exists in the schema.
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``className`` - class name to check.
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-
-
-getColumnInfo
--------------
-
-.. _io_realm_RealmSchema_getColumnInfo_String_:
-
-.. _io_realm_RealmSchema_getColumnInfo_String_:
-
-.. _io_realm_RealmSchema_getColumnInfo_String_:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    protected final **ColumnInfo (?)** getColumnInfo (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  className)
-   
-   * - 
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-
-
-createKeyPathMapping
---------------------
-
-.. _io_realm_RealmSchema_createKeyPathMapping__:
-
-.. _io_realm_RealmSchema_createKeyPathMapping__:
-
-.. _io_realm_RealmSchema_createKeyPathMapping__:
-
-.. list-table::
-   :header-rows: 1
-   
-   * -    public **void** createKeyPathMapping ()
-   
-   * - Create the underlying keypath mapping. Should only be called by typed Realms.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
 

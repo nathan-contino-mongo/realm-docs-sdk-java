@@ -17,7 +17,10 @@ Class CollectionChange
 io.realm.rx
 ===========
 
-`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+ | `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+ | 		io.realm.rx.CollectionChange
+
 
 Container wrapping the result of a :ref:`io.realm.OrderedRealmCollectionChangeListener <io_realm_OrderedRealmCollectionChangeListener>`  being triggered.
 
@@ -31,11 +34,22 @@ This is used by :ref:`RealmResults.asChangesetObservable() <io_realm_RealmResult
 Constructors
 ============
 
-
-
-- ``io.realm.rx.CollectionChange(E, OrderedCollectionChangeSet)`` 
-
-
+.. list-table::
+   :header-rows: 1
+   
+   * - Constructor and Description
+   
+   * - |   :ref:`CollectionChange <io_realm_rx_CollectionChange>`  (
+       |      **E (?)** collection, 
+       |      :ref:`OrderedCollectionChangeSet <io_realm_OrderedCollectionChangeSet>`  changeset
+       |   )
+       
+       Constructor for a CollectionChange.
+       
+       
+       
+   
+   
 
 
 Method Summary
@@ -47,40 +61,34 @@ Method Summary
    * - Modifier and Type
      - Method and Description
    
-   * - 
-       public **E (?)**
-     - 
-       :ref:`getCollection <io_realm_rx_CollectionChange_getCollection__>`  ()
+   * - public **boolean**
+     - |   :ref:`equals <io_realm_rx_CollectionChange_equals_Object_>`  (
+       |      `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o
+       |   )
        
-       Returns the collection that was updated.
+       
        
        
        
    
-   * - 
-       public :ref:`OrderedCollectionChangeSet <io_realm_OrderedCollectionChangeSet>` 
-     - 
-       :ref:`getChangeset <io_realm_rx_CollectionChange_getChangeset__>`  ()
+   * - public :ref:`OrderedCollectionChangeSet <io_realm_OrderedCollectionChangeSet>` 
+     - |   :ref:`getChangeset <io_realm_rx_CollectionChange_getChangeset__>`  ()
        
        Returns the changeset describing the update.
        
        
        
    
-   * - 
-       public **boolean**
-     - 
-       :ref:`equals <io_realm_rx_CollectionChange_equals_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
+   * - public **E (?)**
+     - |   :ref:`getCollection <io_realm_rx_CollectionChange_getCollection__>`  ()
        
-       
+       Returns the collection that was updated.
        
        
        
    
-   * - 
-       public **int**
-     - 
-       :ref:`hashCode <io_realm_rx_CollectionChange_hashCode__>`  ()
+   * - public **int**
+     - |   :ref:`hashCode <io_realm_rx_CollectionChange_hashCode__>`  ()
        
        
        
@@ -95,9 +103,50 @@ Inherited Methods
 
 
 
-- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+- Methods inherited from class `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+
+
+
+
+Constructor Detail
+==================
+
+.. _CollectionChange:
+
+.. _CollectionChange__:
+
+.. _io_realm_rx_CollectionChange:
+
+.. _io_realm_rx_CollectionChange__:
+
+.. list-table::
+   :header-rows: 1
    
-   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   * -  |   public  CollectionChange (
+       |      **E (?)** collection, 
+       |      :ref:`OrderedCollectionChangeSet <io_realm_OrderedCollectionChangeSet>`  changeset
+       |   )
+   
+   * - Constructor for a CollectionChange.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``collection`` - the collection that changed.
+          
+          
+          
+       - ``changeset`` - the changeset describing the change.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
 
@@ -107,23 +156,43 @@ Inherited Methods
 Method Detail
 =============
 
+.. _equals:
+
+.. _equals__:
+
+.. _CollectionChange_equals:
+
+.. _CollectionChange_equals__:
+
+.. _io_realm_rx_CollectionChange_equals:
+
+.. _io_realm_rx_CollectionChange_equals__:
 
 
-getCollection
--------------
 
-.. _io_realm_rx_CollectionChange_getCollection__:
+equals
+------
 
-.. _io_realm_rx_CollectionChange_getCollection__:
+.. _io_realm_rx_CollectionChange_equals_java_lang_Object_:
 
-.. _io_realm_rx_CollectionChange_getCollection__:
+.. _io_realm_rx_CollectionChange_equals_Object_:
+
+.. _equals_java_lang_Object_:
+
+.. _equals_Object_:
+
+.. _CollectionChange_equals_java_lang_Object_:
+
+.. _CollectionChange_equals_Object_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public **E (?)** getCollection ()
+   * - |   public **boolean** equals (
+       |      `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o
+       |   )
    
-   * - Returns the collection that was updated.
+   * - 
        
        
        
@@ -133,25 +202,37 @@ getCollection
        
        
        
+       
+       **Overrides**
+       
+       ``equals`` in class `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
        
        
    
    
+
+
+.. _getChangeset:
+
+.. _getChangeset__:
+
+.. _CollectionChange_getChangeset:
+
+.. _CollectionChange_getChangeset__:
+
+.. _io_realm_rx_CollectionChange_getChangeset:
+
+.. _io_realm_rx_CollectionChange_getChangeset__:
+
 
 
 getChangeset
 ------------
 
-.. _io_realm_rx_CollectionChange_getChangeset__:
-
-.. _io_realm_rx_CollectionChange_getChangeset__:
-
-.. _io_realm_rx_CollectionChange_getChangeset__:
-
 .. list-table::
    :header-rows: 1
    
-   * -    public :ref:`OrderedCollectionChangeSet <io_realm_OrderedCollectionChangeSet>`  getChangeset ()
+   * - |   public :ref:`OrderedCollectionChangeSet <io_realm_OrderedCollectionChangeSet>`  getChangeset ()
    
    * - Returns the changeset describing the update.This will be ``null``  the first time the stream emits the collection as well as when a asynchronous query is loaded for the first time.
        
@@ -191,21 +272,29 @@ getChangeset
    
 
 
-equals
-------
+.. _getCollection:
 
-.. _io_realm_rx_CollectionChange_equals_Object_:
+.. _getCollection__:
 
-.. _io_realm_rx_CollectionChange_equals_Object_:
+.. _CollectionChange_getCollection:
 
-.. _io_realm_rx_CollectionChange_equals_Object_:
+.. _CollectionChange_getCollection__:
+
+.. _io_realm_rx_CollectionChange_getCollection:
+
+.. _io_realm_rx_CollectionChange_getCollection__:
+
+
+
+getCollection
+-------------
 
 .. list-table::
    :header-rows: 1
    
-   * -    public **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
+   * - |   public **E (?)** getCollection ()
    
-   * - 
+   * - Returns the collection that was updated.
        
        
        
@@ -219,21 +308,29 @@ equals
        
    
    
+
+
+.. _hashCode:
+
+.. _hashCode__:
+
+.. _CollectionChange_hashCode:
+
+.. _CollectionChange_hashCode__:
+
+.. _io_realm_rx_CollectionChange_hashCode:
+
+.. _io_realm_rx_CollectionChange_hashCode__:
+
 
 
 hashCode
 --------
 
-.. _io_realm_rx_CollectionChange_hashCode__:
-
-.. _io_realm_rx_CollectionChange_hashCode__:
-
-.. _io_realm_rx_CollectionChange_hashCode__:
-
 .. list-table::
    :header-rows: 1
    
-   * -    public **int** hashCode ()
+   * - |   public **int** hashCode ()
    
    * - 
        
@@ -246,7 +343,13 @@ hashCode
        
        
        
+       **Overrides**
+       
+       ``hashCode`` in class `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+       
        
    
    
+
+
 

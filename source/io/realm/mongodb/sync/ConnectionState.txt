@@ -17,8 +17,11 @@ Enum ConnectionState
 io.realm.mongodb.sync
 =====================
 
-`java.lang.Enum <https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html>`__ 
- | 		`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+ | `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+ | 		`java.lang.Enum <https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html>`__ 
+ | 					io.realm.mongodb.sync.ConnectionState
+
 
 Enum describing the states of the underlying connection used by a :ref:`SyncSession <io_realm_mongodb_sync_SyncSession>` .
 
@@ -31,23 +34,25 @@ Enum Constant Summary
 .. list-table::
    :header-rows: 1
    
-   * - Enum Constant
-     - Description
+   * - Enum Constant and Description
    
-   * - :ref:`DISCONNECTED <io_realm_mongodb_sync_ConnectionState_DISCONNECTED>` 
-     - No connection to the server exists.
+   * - :ref:`CONNECTED <io_realm_mongodb_sync_ConnectionState_CONNECTED>` 
+       
+       A connection was successfully established to the server.
        
        
        
    
    * - :ref:`CONNECTING <io_realm_mongodb_sync_ConnectionState_CONNECTING>` 
-     - A connection is currently in progress of being established.
+       
+       A connection is currently in progress of being established.
        
        
        
    
-   * - :ref:`CONNECTED <io_realm_mongodb_sync_ConnectionState_CONNECTED>` 
-     - A connection was successfully established to the server.
+   * - :ref:`DISCONNECTED <io_realm_mongodb_sync_ConnectionState_DISCONNECTED>` 
+       
+       No connection to the server exists.
        
        
        
@@ -64,20 +69,18 @@ Method Summary
    * - Modifier and Type
      - Method and Description
    
-   * - 
-       public static :ref:`ConnectionState <io_realm_mongodb_sync_ConnectionState>` 
-     - 
-       :ref:`values <io_realm_mongodb_sync_ConnectionState_values__>`  ()
+   * - public static :ref:`ConnectionState <io_realm_mongodb_sync_ConnectionState>` 
+     - |   :ref:`valueOf <io_realm_mongodb_sync_ConnectionState_valueOf_String_>`  (
+       |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name
+       |   )
        
        
        
        
        
    
-   * - 
-       public static :ref:`ConnectionState <io_realm_mongodb_sync_ConnectionState>` 
-     - 
-       :ref:`valueOf <io_realm_mongodb_sync_ConnectionState_valueOf_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+   * - public static :ref:`ConnectionState <io_realm_mongodb_sync_ConnectionState>` 
+     - |   :ref:`values <io_realm_mongodb_sync_ConnectionState_values__>`  ()
        
        
        
@@ -92,16 +95,8 @@ Inherited Methods
 
 
 
-- Methods inherited from interface `java.lang.Enum <https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html>`__ : 
-   
-   ``name`` , ``ordinal`` , ``toString`` , ``equals`` , ``hashCode`` , ``clone`` , ``compareTo`` , ``getDeclaringClass`` , ``valueOf`` , ``finalize`` 
-   
-   
-- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
-   
-   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
-   
-   
+- Methods inherited from class `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+- Methods inherited from class `java.lang.Enum <https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html>`__ : ``name`` , ``ordinal`` , ``toString`` , ``equals`` , ``hashCode`` , ``clone`` , ``compareTo`` , ``getDeclaringClass`` , ``valueOf`` , ``finalize`` 
 
 
 
@@ -109,34 +104,6 @@ Inherited Methods
 Enum Constant Detail
 ====================
 
-.. _io_realm_mongodb_sync_ConnectionState_DISCONNECTED:
-
-.. _ConnectionState_DISCONNECTED:
-
-
-
-``DISCONNECTED`` 
------------------
-
-public static final :ref:`ConnectionState <io_realm_mongodb_sync_ConnectionState>` 
-
-No connection to the server exists. No data is being transferred even if the session
- is {@link SyncSession.State#ACTIVE}. If the connection entered this state due to an error, this
- error will be reported to the {@link SyncSession.ErrorHandler}.
-
-.. _io_realm_mongodb_sync_ConnectionState_CONNECTING:
-
-.. _ConnectionState_CONNECTING:
-
-
-
-``CONNECTING`` 
----------------
-
-public static final :ref:`ConnectionState <io_realm_mongodb_sync_ConnectionState>` 
-
-A connection is currently in progress of being established. If successful the next
- state is {@link #CONNECTED}. If the connection fails it will be {@link #DISCONNECTED}.
 
 .. _io_realm_mongodb_sync_ConnectionState_CONNECTED:
 
@@ -149,59 +116,85 @@ A connection is currently in progress of being established. If successful the ne
 
 public static final :ref:`ConnectionState <io_realm_mongodb_sync_ConnectionState>` 
 
-A connection was successfully established to the server. If the SyncSession is {@link SyncSession.State#ACTIVE}
- data will now be transferred between the device and the server.
+A connection was successfully established to the server. If the SyncSession is :ref:`SyncSession.State.ACTIVE <io_realm_mongodb_sync_SyncSession_State_ACTIVE>`  data will now be transferred between the device and the server.
+
+
+
+
+
+.. _io_realm_mongodb_sync_ConnectionState_CONNECTING:
+
+.. _ConnectionState_CONNECTING:
+
+
+
+``CONNECTING`` 
+---------------
+
+public static final :ref:`ConnectionState <io_realm_mongodb_sync_ConnectionState>` 
+
+A connection is currently in progress of being established. If successful the next state is :ref:`CONNECTED <io_realm_mongodb_sync_ConnectionState_CONNECTED>` . If the connection fails it will be :ref:`DISCONNECTED <io_realm_mongodb_sync_ConnectionState_DISCONNECTED>` .
+
+
+
+
+
+.. _io_realm_mongodb_sync_ConnectionState_DISCONNECTED:
+
+.. _ConnectionState_DISCONNECTED:
+
+
+
+``DISCONNECTED`` 
+-----------------
+
+public static final :ref:`ConnectionState <io_realm_mongodb_sync_ConnectionState>` 
+
+No connection to the server exists. No data is being transferred even if the session is :ref:`SyncSession.State.ACTIVE <io_realm_mongodb_sync_SyncSession_State_ACTIVE>` . If the connection entered this state due to an error, this error will be reported to the :ref:`SyncSession.ErrorHandler <io_realm_mongodb_sync_SyncSession_ErrorHandler>` .
+
+
+
 
 
 
 Method Detail
 =============
 
+.. _valueOf:
 
+.. _valueOf__:
 
-values
-------
+.. _ConnectionState_valueOf:
 
-.. _io_realm_mongodb_sync_ConnectionState_values__:
+.. _ConnectionState_valueOf__:
 
-.. _io_realm_mongodb_sync_ConnectionState_values__:
+.. _io_realm_mongodb_sync_ConnectionState_valueOf:
 
-.. _io_realm_mongodb_sync_ConnectionState_values__:
+.. _io_realm_mongodb_sync_ConnectionState_valueOf__:
 
-.. list-table::
-   :header-rows: 1
-   
-   * -    public static :ref:`ConnectionState <io_realm_mongodb_sync_ConnectionState>`  values ()
-   
-   * - 
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
 
 
 valueOf
 -------
 
-.. _io_realm_mongodb_sync_ConnectionState_valueOf_String_:
+.. _io_realm_mongodb_sync_ConnectionState_valueOf_java_lang_String_:
 
 .. _io_realm_mongodb_sync_ConnectionState_valueOf_String_:
 
-.. _io_realm_mongodb_sync_ConnectionState_valueOf_String_:
+.. _valueOf_java_lang_String_:
+
+.. _valueOf_String_:
+
+.. _ConnectionState_valueOf_java_lang_String_:
+
+.. _ConnectionState_valueOf_String_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public static :ref:`ConnectionState <io_realm_mongodb_sync_ConnectionState>`  valueOf (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+   * - |   public static :ref:`ConnectionState <io_realm_mongodb_sync_ConnectionState>`  valueOf (
+       |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name
+       |   )
    
    * - 
        
@@ -217,4 +210,44 @@ valueOf
        
    
    
+
+
+.. _values:
+
+.. _values__:
+
+.. _ConnectionState_values:
+
+.. _ConnectionState_values__:
+
+.. _io_realm_mongodb_sync_ConnectionState_values:
+
+.. _io_realm_mongodb_sync_ConnectionState_values__:
+
+
+
+values
+------
+
+.. list-table::
+   :header-rows: 1
+   
+   * - |   public static :ref:`ConnectionState <io_realm_mongodb_sync_ConnectionState>`  values ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
 

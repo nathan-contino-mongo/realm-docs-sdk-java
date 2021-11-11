@@ -17,9 +17,12 @@ Error RealmError
 io.realm.exceptions
 ===================
 
-`java.lang.Error <https://docs.oracle.com/javase/7/docs/api/java/lang/Error.html>`__ 
+
+ | `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
  | 		`java.lang.Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__ 
- | 					`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+ | 					`java.lang.Error <https://docs.oracle.com/javase/7/docs/api/java/lang/Error.html>`__ 
+ | 								io.realm.exceptions.RealmError
+
 
 RealmError is Realm specific Error used when unrecoverable problems happen in the underlying storage engine. An RealmError should never be caught or ignored. By doing so, the Realm could possibly get corrupted.
 
@@ -27,11 +30,21 @@ RealmError is Realm specific Error used when unrecoverable problems happen in th
 Constructors
 ============
 
-
-
-- ``io.realm.exceptions.RealmError(String)`` 
-
-
+.. list-table::
+   :header-rows: 1
+   
+   * - Constructor and Description
+   
+   * - |   :ref:`RealmError <io_realm_exceptions_RealmError>`  (
+       |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  detailMessage
+       |   )
+       
+       
+       
+       
+       
+   
+   
 
 
 Inherited Methods
@@ -39,19 +52,38 @@ Inherited Methods
 
 
 
-- Methods inherited from interface `java.lang.Error <https://docs.oracle.com/javase/7/docs/api/java/lang/Error.html>`__ : 
+- Methods inherited from class `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+- Methods inherited from class `java.lang.Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__ : ``getMessage`` , ``getLocalizedMessage`` , ``getCause`` , ``initCause`` , ``toString`` , ``printStackTrace`` , ``printStackTrace`` , ``printStackTrace`` , ``fillInStackTrace`` , ``getStackTrace`` , ``setStackTrace`` , ``addSuppressed`` , ``getSuppressed`` 
+
+
+
+
+Constructor Detail
+==================
+
+.. _RealmError:
+
+.. _RealmError__:
+
+.. _io_realm_exceptions_RealmError:
+
+.. _io_realm_exceptions_RealmError__:
+
+.. list-table::
+   :header-rows: 1
    
+   * -  |   public  RealmError (
+       |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  detailMessage
+       |   )
    
-   
-   
-- Methods inherited from interface `java.lang.Throwable <https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html>`__ : 
-   
-   ``getMessage`` , ``getLocalizedMessage`` , ``getCause`` , ``initCause`` , ``toString`` , ``printStackTrace`` , ``printStackTrace`` , ``printStackTrace`` , ``fillInStackTrace`` , ``getStackTrace`` , ``setStackTrace`` , ``addSuppressed`` , ``getSuppressed`` 
-   
-   
-- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
-   
-   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   * - 
+       
+       
+       
+       
+       
+       
+       
    
    
 

@@ -17,7 +17,10 @@ Class ObjectChange
 io.realm.rx
 ===========
 
-`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+ | `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+ | 		io.realm.rx.ObjectChange
+
 
 Container wrapping the result of a :ref:`io.realm.RealmObjectChangeListener <io_realm_RealmObjectChangeListener>`  being triggered.
 
@@ -31,11 +34,22 @@ This is used by :ref:`RealmObject.asChangesetObservable() <io_realm_RealmObject_
 Constructors
 ============
 
-
-
-- ``io.realm.rx.ObjectChange(E, ObjectChangeSet)`` 
-
-
+.. list-table::
+   :header-rows: 1
+   
+   * - Constructor and Description
+   
+   * - |   :ref:`ObjectChange <io_realm_rx_ObjectChange>`  (
+       |      **E (?)** object, 
+       |      :ref:`ObjectChangeSet <io_realm_ObjectChangeSet>`  changeset
+       |   )
+       
+       Constructor for a ObjectChange.
+       
+       
+       
+   
+   
 
 
 Method Summary
@@ -47,50 +61,42 @@ Method Summary
    * - Modifier and Type
      - Method and Description
    
-   * - 
-       public **E (?)**
-     - 
-       :ref:`getObject <io_realm_rx_ObjectChange_getObject__>`  ()
+   * - public **boolean**
+     - |   :ref:`equals <io_realm_rx_ObjectChange_equals_Object_>`  (
+       |      `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o
+       |   )
        
        
        
        
        
    
-   * - 
-       public :ref:`ObjectChangeSet <io_realm_ObjectChangeSet>` 
-     - 
-       :ref:`getChangeset <io_realm_rx_ObjectChange_getChangeset__>`  ()
+   * - public :ref:`ObjectChangeSet <io_realm_ObjectChangeSet>` 
+     - |   :ref:`getChangeset <io_realm_rx_ObjectChange_getChangeset__>`  ()
        
        Returns the changeset describing the update.
        
        
        
    
-   * - 
-       public **boolean**
-     - 
-       :ref:`equals <io_realm_rx_ObjectChange_equals_Object_>`  (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
+   * - public **E (?)**
+     - |   :ref:`getObject <io_realm_rx_ObjectChange_getObject__>`  ()
        
        
        
        
        
    
-   * - 
-       public **int**
-     - 
-       :ref:`hashCode <io_realm_rx_ObjectChange_hashCode__>`  ()
+   * - public **int**
+     - |   :ref:`hashCode <io_realm_rx_ObjectChange_hashCode__>`  ()
        
        
        
        
        
    
-   * - 
-       public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
-     - 
-       :ref:`toString <io_realm_rx_ObjectChange_toString__>`  ()
+   * - public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - |   :ref:`toString <io_realm_rx_ObjectChange_toString__>`  ()
        
        
        
@@ -105,9 +111,50 @@ Inherited Methods
 
 
 
-- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
+- Methods inherited from class `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+
+
+
+
+Constructor Detail
+==================
+
+.. _ObjectChange:
+
+.. _ObjectChange__:
+
+.. _io_realm_rx_ObjectChange:
+
+.. _io_realm_rx_ObjectChange__:
+
+.. list-table::
+   :header-rows: 1
    
-   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+   * -  |   public  ObjectChange (
+       |      **E (?)** object, 
+       |      :ref:`ObjectChangeSet <io_realm_ObjectChangeSet>`  changeset
+       |   )
+   
+   * - Constructor for a ObjectChange.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``object`` - the object that was updated.
+          
+          
+          
+       - ``changeset`` - the changeset describing the update.
+          
+          
+          
+       
+       
+       
+       
+       
    
    
 
@@ -117,21 +164,41 @@ Inherited Methods
 Method Detail
 =============
 
+.. _equals:
+
+.. _equals__:
+
+.. _ObjectChange_equals:
+
+.. _ObjectChange_equals__:
+
+.. _io_realm_rx_ObjectChange_equals:
+
+.. _io_realm_rx_ObjectChange_equals__:
 
 
-getObject
----------
 
-.. _io_realm_rx_ObjectChange_getObject__:
+equals
+------
 
-.. _io_realm_rx_ObjectChange_getObject__:
+.. _io_realm_rx_ObjectChange_equals_java_lang_Object_:
 
-.. _io_realm_rx_ObjectChange_getObject__:
+.. _io_realm_rx_ObjectChange_equals_Object_:
+
+.. _equals_java_lang_Object_:
+
+.. _equals_Object_:
+
+.. _ObjectChange_equals_java_lang_Object_:
+
+.. _ObjectChange_equals_Object_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public **E (?)** getObject ()
+   * - |   public **boolean** equals (
+       |      `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o
+       |   )
    
    * - 
        
@@ -144,24 +211,36 @@ getObject
        
        
        
+       **Overrides**
+       
+       ``equals`` in class `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+       
        
    
    
 
 
+.. _getChangeset:
+
+.. _getChangeset__:
+
+.. _ObjectChange_getChangeset:
+
+.. _ObjectChange_getChangeset__:
+
+.. _io_realm_rx_ObjectChange_getChangeset:
+
+.. _io_realm_rx_ObjectChange_getChangeset__:
+
+
+
 getChangeset
 ------------
-
-.. _io_realm_rx_ObjectChange_getChangeset__:
-
-.. _io_realm_rx_ObjectChange_getChangeset__:
-
-.. _io_realm_rx_ObjectChange_getChangeset__:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public :ref:`ObjectChangeSet <io_realm_ObjectChangeSet>`  getChangeset ()
+   * - |   public :ref:`ObjectChangeSet <io_realm_ObjectChangeSet>`  getChangeset ()
    
    * - Returns the changeset describing the update.This will be ``null``  the first time the stream emits the object as well as when a asynchronous query is loaded for the first time.
        
@@ -201,19 +280,27 @@ getChangeset
    
 
 
-equals
-------
+.. _getObject:
 
-.. _io_realm_rx_ObjectChange_equals_Object_:
+.. _getObject__:
 
-.. _io_realm_rx_ObjectChange_equals_Object_:
+.. _ObjectChange_getObject:
 
-.. _io_realm_rx_ObjectChange_equals_Object_:
+.. _ObjectChange_getObject__:
+
+.. _io_realm_rx_ObjectChange_getObject:
+
+.. _io_realm_rx_ObjectChange_getObject__:
+
+
+
+getObject
+---------
 
 .. list-table::
    :header-rows: 1
    
-   * -    public **boolean** equals (`Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__  o)
+   * - |   public **E (?)** getObject ()
    
    * - 
        
@@ -229,21 +316,29 @@ equals
        
    
    
+
+
+.. _hashCode:
+
+.. _hashCode__:
+
+.. _ObjectChange_hashCode:
+
+.. _ObjectChange_hashCode__:
+
+.. _io_realm_rx_ObjectChange_hashCode:
+
+.. _io_realm_rx_ObjectChange_hashCode__:
+
 
 
 hashCode
 --------
 
-.. _io_realm_rx_ObjectChange_hashCode__:
-
-.. _io_realm_rx_ObjectChange_hashCode__:
-
-.. _io_realm_rx_ObjectChange_hashCode__:
-
 .. list-table::
    :header-rows: 1
    
-   * -    public **int** hashCode ()
+   * - |   public **int** hashCode ()
    
    * - 
        
@@ -256,24 +351,36 @@ hashCode
        
        
        
+       **Overrides**
+       
+       ``hashCode`` in class `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+       
        
    
    
+
+
+.. _toString:
+
+.. _toString__:
+
+.. _ObjectChange_toString:
+
+.. _ObjectChange_toString__:
+
+.. _io_realm_rx_ObjectChange_toString:
+
+.. _io_realm_rx_ObjectChange_toString__:
+
 
 
 toString
 --------
 
-.. _io_realm_rx_ObjectChange_toString__:
-
-.. _io_realm_rx_ObjectChange_toString__:
-
-.. _io_realm_rx_ObjectChange_toString__:
-
 .. list-table::
    :header-rows: 1
    
-   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  toString ()
+   * - |   public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  toString ()
    
    * - 
        
@@ -286,7 +393,13 @@ toString
        
        
        
+       **Overrides**
+       
+       ``toString`` in class `Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+       
        
    
    
+
+
 

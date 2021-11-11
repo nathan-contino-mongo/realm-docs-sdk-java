@@ -17,8 +17,11 @@ Enum RealmNamingPolicy
 io.realm.annotations
 ====================
 
-`java.lang.Enum <https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html>`__ 
- | 		`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+ | `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+ | 		`java.lang.Enum <https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html>`__ 
+ | 					io.realm.annotations.RealmNamingPolicy
+
 
 This enum defines the possible ways class and field names can be mapped from what is used in Java to the name used internally in the Realm file.Examples where this is useful:
 
@@ -40,17 +43,17 @@ This enum defines the possible ways class and field names can be mapped from wha
 
 Depending on where the policy is applied, it will have slightly different semantics:
 
-- If applied to **RealmModule.classNamingPolicy (?)** all classes part of that module will be affected. If a class is part of multiple modules, the same naming policy must be applied to both modules, otherwise an error will be thrown.
+- If applied to :ref:`RealmModule.classNamingPolicy <io_realm_annotations_RealmModule_classNamingPolicy>`  all classes part of that module will be affected. If a class is part of multiple modules, the same naming policy must be applied to both modules, otherwise an error will be thrown.
    
    
    
    
-- If applied to **RealmModule.fieldNamingPolicy (?)** all persistable fields in all classes part of this module will be affected.
+- If applied to :ref:`RealmModule.fieldNamingPolicy <io_realm_annotations_RealmModule_fieldNamingPolicy>`  all persistable fields in all classes part of this module will be affected.
    
    
    
    
-- If applied to **RealmClass.fieldNamingPolicy (?)** all fields in that class will be affected. This will override any field naming policy specified on a module.
+- If applied to :ref:`RealmClass.fieldNamingPolicy <io_realm_annotations_RealmClass_fieldNamingPolicy>`  all fields in that class will be affected. This will override any field naming policy specified on a module.
    
    
    
@@ -171,37 +174,41 @@ Enum Constant Summary
 .. list-table::
    :header-rows: 1
    
-   * - Enum Constant
-     - Description
+   * - Enum Constant and Description
    
-   * - :ref:`NO_POLICY <io_realm_annotations_RealmNamingPolicy_NO_POLICY>` 
-     - No policy is applied.
+   * - :ref:`CAMEL_CASE <io_realm_annotations_RealmNamingPolicy_CAMEL_CASE>` 
+       
+       The name in the Java model class is converted to camelCase, i.e.
        
        
        
    
    * - :ref:`IDENTITY <io_realm_annotations_RealmNamingPolicy_IDENTITY>` 
-     - The name in the Java model class is used as is internally.
        
-       
-       
-   
-   * - :ref:`CAMEL_CASE <io_realm_annotations_RealmNamingPolicy_CAMEL_CASE>` 
-     - The name in the Java model class is converted to camelCase, i.e.
-       
-       
-       
-   
-   * - :ref:`PASCAL_CASE <io_realm_annotations_RealmNamingPolicy_PASCAL_CASE>` 
-     - The name in the Java model class is converted to PascalCase, i.e.
+       The name in the Java model class is used as is internally.
        
        
        
    
    * - :ref:`LOWER_CASE_WITH_UNDERSCORES <io_realm_annotations_RealmNamingPolicy_LOWER_CASE_WITH_UNDERSCORES>` 
-     - The name in the Java model class is converted lowercase with each word separated by ``_`` .
+       
+       The name in the Java model class is converted lowercase with each word separated by ``_`` .
        
        
+       
+       
+       
+   
+   * - :ref:`NO_POLICY <io_realm_annotations_RealmNamingPolicy_NO_POLICY>` 
+       
+       No policy is applied.
+       
+       
+       
+   
+   * - :ref:`PASCAL_CASE <io_realm_annotations_RealmNamingPolicy_PASCAL_CASE>` 
+       
+       The name in the Java model class is converted to PascalCase, i.e.
        
        
        
@@ -218,20 +225,18 @@ Method Summary
    * - Modifier and Type
      - Method and Description
    
-   * - 
-       public static :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` 
-     - 
-       :ref:`values <io_realm_annotations_RealmNamingPolicy_values__>`  ()
+   * - public static :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` 
+     - |   :ref:`valueOf <io_realm_annotations_RealmNamingPolicy_valueOf_String_>`  (
+       |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name
+       |   )
        
        
        
        
        
    
-   * - 
-       public static :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` 
-     - 
-       :ref:`valueOf <io_realm_annotations_RealmNamingPolicy_valueOf_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+   * - public static :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` 
+     - |   :ref:`values <io_realm_annotations_RealmNamingPolicy_values__>`  ()
        
        
        
@@ -246,16 +251,8 @@ Inherited Methods
 
 
 
-- Methods inherited from interface `java.lang.Enum <https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html>`__ : 
-   
-   ``name`` , ``ordinal`` , ``toString`` , ``equals`` , ``hashCode`` , ``clone`` , ``compareTo`` , ``getDeclaringClass`` , ``valueOf`` , ``finalize`` 
-   
-   
-- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
-   
-   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
-   
-   
+- Methods inherited from class `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
+- Methods inherited from class `java.lang.Enum <https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html>`__ : ``name`` , ``ordinal`` , ``toString`` , ``equals`` , ``hashCode`` , ``clone`` , ``compareTo`` , ``getDeclaringClass`` , ``valueOf`` , ``finalize`` 
 
 
 
@@ -263,25 +260,23 @@ Inherited Methods
 Enum Constant Detail
 ====================
 
-.. _io_realm_annotations_RealmNamingPolicy_NO_POLICY:
 
-.. _RealmNamingPolicy_NO_POLICY:
+.. _io_realm_annotations_RealmNamingPolicy_CAMEL_CASE:
+
+.. _RealmNamingPolicy_CAMEL_CASE:
 
 
 
-``NO_POLICY`` 
---------------
+``CAMEL_CASE`` 
+---------------
 
 public static final :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` 
 
-No policy is applied. This policy will not override any policy set on a parent element, e.g.
- if set in {@link RealmClass#fieldNamingPolicy}, the module policy will still apply to field
- names.
- <p>
- If two modules disagree on the policy and one of them is {@code NO_POLICY}, the other will
- be chosen without an error being thrown.
- <p>
- This policy is the default.
+The name in the Java model class is converted to camelCase, i.e. all words are joined together with the first letter in the first word lower cased, and the first letter of all subsequent words upper cased. This is the standard naming schema in Java, Kotlin, Swift and JavaScript.Examples: "firstName", "FirstName", "mFirstName", "FIRST_NAME", "First$Name" all becomes "firstName".
+
+
+
+
 
 .. _io_realm_annotations_RealmNamingPolicy_IDENTITY:
 
@@ -296,42 +291,7 @@ public static final :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPol
 
 The name in the Java model class is used as is internally.
 
-.. _io_realm_annotations_RealmNamingPolicy_CAMEL_CASE:
 
-.. _RealmNamingPolicy_CAMEL_CASE:
-
-
-
-``CAMEL_CASE`` 
----------------
-
-public static final :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` 
-
-The name in the Java model class is converted to camelCase, i.e. all words are joined
- together with the first letter in the first word lower cased, and the first letter of
- all subsequent words upper cased. This is the standard naming schema in Java, Kotlin, Swift
- and JavaScript.
- <p>
- Examples: "firstName", "FirstName", "mFirstName", "FIRST_NAME", "First$Name" all becomes
- "firstName".
-
-.. _io_realm_annotations_RealmNamingPolicy_PASCAL_CASE:
-
-.. _RealmNamingPolicy_PASCAL_CASE:
-
-
-
-``PASCAL_CASE`` 
-----------------
-
-public static final :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` 
-
-The name in the Java model class is converted to PascalCase, i.e. all words are joined
- together with the first letter of all words upper cased. This is the default naming scheme
- in .NET.
- <p>
- Examples: "firstName", "FirstName", "mFirstName", "FIRST_NAME", "First$Name" all becomes
- "FirstName".
 
 .. _io_realm_annotations_RealmNamingPolicy_LOWER_CASE_WITH_UNDERSCORES:
 
@@ -344,62 +304,93 @@ The name in the Java model class is converted to PascalCase, i.e. all words are 
 
 public static final :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` 
 
-The name in the Java model class is converted lowercase with each word separated by {@code _}.
- This is the default naming scheme in C++.
- <p>
- Examples: "firstName", "FirstName", "mFirstName", "FIRST_NAME", "First$Name" all becomes
- "first_name".
+The name in the Java model class is converted lowercase with each word separated by ``_`` . This is the default naming scheme in C++.
+
+Examples: "firstName", "FirstName", "mFirstName", "FIRST_NAME", "First$Name" all becomes "first_name".
+
+
+
+
+
+.. _io_realm_annotations_RealmNamingPolicy_NO_POLICY:
+
+.. _RealmNamingPolicy_NO_POLICY:
+
+
+
+``NO_POLICY`` 
+--------------
+
+public static final :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` 
+
+No policy is applied. This policy will not override any policy set on a parent element, e.g. if set in :ref:`RealmClass.fieldNamingPolicy <io_realm_annotations_RealmClass_fieldNamingPolicy>` , the module policy will still apply to field names.
+
+If two modules disagree on the policy and one of them is ``NO_POLICY`` , the other will be chosen without an error being thrown.
+
+
+
+This policy is the default.
+
+
+
+
+
+.. _io_realm_annotations_RealmNamingPolicy_PASCAL_CASE:
+
+.. _RealmNamingPolicy_PASCAL_CASE:
+
+
+
+``PASCAL_CASE`` 
+----------------
+
+public static final :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>` 
+
+The name in the Java model class is converted to PascalCase, i.e. all words are joined together with the first letter of all words upper cased. This is the default naming scheme in .NET.Examples: "firstName", "FirstName", "mFirstName", "FIRST_NAME", "First$Name" all becomes "FirstName".
+
+
+
 
 
 
 Method Detail
 =============
 
+.. _valueOf:
 
+.. _valueOf__:
 
-values
-------
+.. _RealmNamingPolicy_valueOf:
 
-.. _io_realm_annotations_RealmNamingPolicy_values__:
+.. _RealmNamingPolicy_valueOf__:
 
-.. _io_realm_annotations_RealmNamingPolicy_values__:
+.. _io_realm_annotations_RealmNamingPolicy_valueOf:
 
-.. _io_realm_annotations_RealmNamingPolicy_values__:
+.. _io_realm_annotations_RealmNamingPolicy_valueOf__:
 
-.. list-table::
-   :header-rows: 1
-   
-   * -    public static :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>`  values ()
-   
-   * - 
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
 
 
 valueOf
 -------
 
-.. _io_realm_annotations_RealmNamingPolicy_valueOf_String_:
+.. _io_realm_annotations_RealmNamingPolicy_valueOf_java_lang_String_:
 
 .. _io_realm_annotations_RealmNamingPolicy_valueOf_String_:
 
-.. _io_realm_annotations_RealmNamingPolicy_valueOf_String_:
+.. _valueOf_java_lang_String_:
+
+.. _valueOf_String_:
+
+.. _RealmNamingPolicy_valueOf_java_lang_String_:
+
+.. _RealmNamingPolicy_valueOf_String_:
 
 .. list-table::
    :header-rows: 1
    
-   * -    public static :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>`  valueOf (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name)
+   * - |   public static :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>`  valueOf (
+       |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  name
+       |   )
    
    * - 
        
@@ -415,4 +406,44 @@ valueOf
        
    
    
+
+
+.. _values:
+
+.. _values__:
+
+.. _RealmNamingPolicy_values:
+
+.. _RealmNamingPolicy_values__:
+
+.. _io_realm_annotations_RealmNamingPolicy_values:
+
+.. _io_realm_annotations_RealmNamingPolicy_values__:
+
+
+
+values
+------
+
+.. list-table::
+   :header-rows: 1
+   
+   * - |   public static :ref:`RealmNamingPolicy <io_realm_annotations_RealmNamingPolicy>`  values ()
+   
+   * - 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
 

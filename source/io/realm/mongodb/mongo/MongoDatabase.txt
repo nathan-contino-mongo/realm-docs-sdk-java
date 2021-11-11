@@ -17,7 +17,10 @@ Class MongoDatabase
 io.realm.mongodb.mongo
 ======================
 
-`java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+
+ | `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
+ | 		io.realm.mongodb.mongo.MongoDatabase
+
 
 The RemoteMongoDatabase provides access to its **Document (?)** :ref:`MongoCollection <io_realm_mongodb_mongo_MongoCollection>` s.
 
@@ -33,33 +36,31 @@ Method Summary
    * - Modifier and Type
      - Method and Description
    
-   * - 
-       public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
-     - 
-       :ref:`getName <io_realm_mongodb_mongo_MongoDatabase_getName__>`  ()
+   * - public :ref:`MongoCollection <io_realm_mongodb_mongo_MongoCollection>` 
+     - |   :ref:`getCollection <io_realm_mongodb_mongo_MongoDatabase_getCollection_String__Class_DocumentT__>`  <**DocumentT (?)** >(
+       |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  collectionName, 
+       |      `java.lang.Class\<DocumentT> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  documentClass
+       |   )
        
-       Gets the name of the database.
+       Gets a collection, with a specific default document class.
        
        
        
    
-   * - 
-       public :ref:`MongoCollection <io_realm_mongodb_mongo_MongoCollection>` 
-     - 
-       :ref:`getCollection <io_realm_mongodb_mongo_MongoDatabase_getCollection_String_>`  (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  collectionName)
+   * - public :ref:`MongoCollection <io_realm_mongodb_mongo_MongoCollection>` 
+     - |   :ref:`getCollection <io_realm_mongodb_mongo_MongoDatabase_getCollection_String_>`  (
+       |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  collectionName
+       |   )
        
        Gets a collection.
        
        
        
    
-   * - 
-       public :ref:`MongoCollection <io_realm_mongodb_mongo_MongoCollection>` 
-     - 
-       :ref:`getCollection <io_realm_mongodb_mongo_MongoDatabase_getCollection_String__Class_DocumentT__>`  <**DocumentT (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  collectionName,
-                                              `java.lang.Class\<DocumentT> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  documentClass)
+   * - public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__ 
+     - |   :ref:`getName <io_realm_mongodb_mongo_MongoDatabase_getName__>`  ()
        
-       Gets a collection, with a specific default document class.
+       Gets the name of the database.
        
        
        
@@ -72,11 +73,7 @@ Inherited Methods
 
 
 
-- Methods inherited from interface `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : 
-   
-   ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
-   
-   
+- Methods inherited from class `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
 
 
 
@@ -84,85 +81,80 @@ Inherited Methods
 Method Detail
 =============
 
+.. _getCollection:
 
+.. _getCollection__:
 
-getName
--------
+.. _MongoDatabase_getCollection:
 
-.. _io_realm_mongodb_mongo_MongoDatabase_getName__:
+.. _MongoDatabase_getCollection__:
 
-.. _io_realm_mongodb_mongo_MongoDatabase_getName__:
+.. _io_realm_mongodb_mongo_MongoDatabase_getCollection:
 
-.. _io_realm_mongodb_mongo_MongoDatabase_getName__:
+.. _io_realm_mongodb_mongo_MongoDatabase_getCollection__:
 
-.. list-table::
-   :header-rows: 1
-   
-   * -    public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getName ()
-   
-   * - Gets the name of the database.
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
 
 
 getCollection
 -------------
 
-.. _io_realm_mongodb_mongo_MongoDatabase_getCollection_String_:
+.. _io_realm_mongodb_mongo_MongoDatabase_getCollection_java_lang_String_java_lang_Class_:
 
-.. _io_realm_mongodb_mongo_MongoDatabase_getCollection_String_:
+.. _io_realm_mongodb_mongo_MongoDatabase_getCollection_java_lang_String__java_lang_Class_:
 
-.. _io_realm_mongodb_mongo_MongoDatabase_getCollection_String_:
+.. _io_realm_mongodb_mongo_MongoDatabase_getCollection_java_lang_String_Class_:
 
-.. list-table::
-   :header-rows: 1
-   
-   * -    public :ref:`MongoCollection <io_realm_mongodb_mongo_MongoCollection>`  getCollection (`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  collectionName)
-   
-   * - Gets a collection.
-       
-       
-       
-       
-       **Parameters**
-       
-       - ``collectionName`` - the name of the collection to return
-          
-          
-          
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   
-   
-.. _io_realm_mongodb_mongo_MongoDatabase_getCollection_String__Class_DocumentT__:
+.. _io_realm_mongodb_mongo_MongoDatabase_getCollection_java_lang_String__Class_:
+
+.. _io_realm_mongodb_mongo_MongoDatabase_getCollection_String_java_lang_Class_:
+
+.. _io_realm_mongodb_mongo_MongoDatabase_getCollection_String__java_lang_Class_:
 
 .. _io_realm_mongodb_mongo_MongoDatabase_getCollection_String_Class_:
 
 .. _io_realm_mongodb_mongo_MongoDatabase_getCollection_String__Class_:
 
+.. _getCollection_java_lang_String_java_lang_Class_:
+
+.. _getCollection_java_lang_String__java_lang_Class_:
+
+.. _getCollection_java_lang_String_Class_:
+
+.. _getCollection_java_lang_String__Class_:
+
+.. _getCollection_String_java_lang_Class_:
+
+.. _getCollection_String__java_lang_Class_:
+
+.. _getCollection_String_Class_:
+
+.. _getCollection_String__Class_:
+
+.. _MongoDatabase_getCollection_java_lang_String_java_lang_Class_:
+
+.. _MongoDatabase_getCollection_java_lang_String__java_lang_Class_:
+
+.. _MongoDatabase_getCollection_java_lang_String_Class_:
+
+.. _MongoDatabase_getCollection_java_lang_String__Class_:
+
+.. _MongoDatabase_getCollection_String_java_lang_Class_:
+
+.. _MongoDatabase_getCollection_String__java_lang_Class_:
+
+.. _MongoDatabase_getCollection_String_Class_:
+
+.. _MongoDatabase_getCollection_String__Class_:
+
+.. _io_realm_mongodb_mongo_MongoDatabase_getCollection_String__Class_DocumentT__:
+
 .. list-table::
    :header-rows: 1
    
-   * -    public :ref:`MongoCollection <io_realm_mongodb_mongo_MongoCollection>`  getCollection <**DocumentT (?)** >(`String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  collectionName,
-                                              `java.lang.Class\<DocumentT> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  documentClass)
+   * - |   public :ref:`MongoCollection <io_realm_mongodb_mongo_MongoCollection>`  getCollection <**DocumentT (?)** >(
+       |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  collectionName, 
+       |      `java.lang.Class\<DocumentT> <https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html>`__  documentClass
+       |   )
    
    * - Gets a collection, with a specific default document class.
        
@@ -200,4 +192,85 @@ getCollection
        
    
    
+.. _io_realm_mongodb_mongo_MongoDatabase_getCollection_java_lang_String_:
+
+.. _io_realm_mongodb_mongo_MongoDatabase_getCollection_String_:
+
+.. _getCollection_java_lang_String_:
+
+.. _getCollection_String_:
+
+.. _MongoDatabase_getCollection_java_lang_String_:
+
+.. _MongoDatabase_getCollection_String_:
+
+.. list-table::
+   :header-rows: 1
+   
+   * - |   public :ref:`MongoCollection <io_realm_mongodb_mongo_MongoCollection>`  getCollection (
+       |      `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  collectionName
+       |   )
+   
+   * - Gets a collection.
+       
+       
+       
+       
+       **Parameters**
+       
+       - ``collectionName`` - the name of the collection to return
+          
+          
+          
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
+.. _getName:
+
+.. _getName__:
+
+.. _MongoDatabase_getName:
+
+.. _MongoDatabase_getName__:
+
+.. _io_realm_mongodb_mongo_MongoDatabase_getName:
+
+.. _io_realm_mongodb_mongo_MongoDatabase_getName__:
+
+
+
+getName
+-------
+
+.. list-table::
+   :header-rows: 1
+   
+   * - |   public `String <https://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`__  getName ()
+   
+   * - Gets the name of the database.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   
+   
+
+
 
