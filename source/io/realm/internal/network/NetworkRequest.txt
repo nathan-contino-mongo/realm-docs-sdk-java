@@ -20,6 +20,8 @@ io.realm.internal.network
 `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
  | 		:ref:`io.realm.internal.objectstore.OsJavaNetworkTransport.NetworkTransportJNIResultCallback <io_realm_internal_objectstore_OsJavaNetworkTransport_NetworkTransportJNIResultCallback>` 
 
+
+ | 					io.realm.internal.network.NetworkRequest
 Class wrapping the back-and-forth required by the Network Transport layer in ObjectStore. This class wraps the request itself as well as handles the completion block triggered by ObjectStore. That API exposed by this class is synchronous, but the callbacks from ObjectStore will happen on a thread determined by the :ref:`OsJavaNetworkTransport <io_realm_internal_objectstore_OsJavaNetworkTransport>`  implementation. In release builds, this is :ref:`OkHttpNetworkTransport <io_realm_internal_network_OkHttpNetworkTransport>`  which run on a special Looper thread.
 
 

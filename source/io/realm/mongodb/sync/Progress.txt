@@ -19,6 +19,8 @@ io.realm.mongodb.sync
 
 `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ 
 
+
+ | 		io.realm.mongodb.sync.Progress
 Class used to encapsulate progress notifications when either downloading or uploading Realm data. Each instance of this class is an immutable snapshot of the current progress.If the :ref:`ProgressListener <io_realm_mongodb_sync_ProgressListener>`  was registered with :ref:`ProgressMode.INDEFINITELY <io_realm_mongodb_sync_ProgressMode_INDEFINITELY>` , the progress reported by :ref:`getFractionTransferred() <io_realm_mongodb_sync_Progress_getFractionTransferred__>`  can both increase and decrease since more changes might be added while the progres listener is registered. This means it is possible for one notification to report ``true``  for :ref:`isTransferComplete() <io_realm_mongodb_sync_Progress_isTransferComplete__>` , and then on the next event report ``false`` .
 
 
