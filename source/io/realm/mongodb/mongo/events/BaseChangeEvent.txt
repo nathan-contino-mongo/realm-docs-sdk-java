@@ -25,17 +25,6 @@ io.realm.mongodb.mongo.events
 Represents the set of properties that exist on all MongoDB realm change events produced by watch streams in this SDK. Other change event types inherit from this type.
 
 
-Constructors
-============
-
-.. list-table::
-   :header-rows: 1
-   
-   * - Constructor and Description
-   
-   
-
-
 Nested Class Summary
 ====================
 
@@ -62,7 +51,9 @@ Method Summary
      - Method and Description
    
    * - public **BsonDocument (?)**
-     - |   :ref:`getDocumentKey <io_realm_mongodb_mongo_events_BaseChangeEvent_getDocumentKey__>`  ()
+     - | :ref:`getDocumentKey <io_realm_mongodb_mongo_events_BaseChangeEvent_getDocumentKey>` ()
+       | 
+       
        
        The unique identifier for the document that was actually changed.
        
@@ -70,7 +61,9 @@ Method Summary
        
    
    * - public **DocumentT (?)**
-     - |   :ref:`getFullDocument <io_realm_mongodb_mongo_events_BaseChangeEvent_getFullDocument__>`  ()
+     - | :ref:`getFullDocument <io_realm_mongodb_mongo_events_BaseChangeEvent_getFullDocument>` ()
+       | 
+       
        
        The full document at some point after the change has been applied.
        
@@ -78,7 +71,9 @@ Method Summary
        
    
    * - public :ref:`BaseChangeEvent.OperationType <io_realm_mongodb_mongo_events_BaseChangeEvent_OperationType>` 
-     - |   :ref:`getOperationType <io_realm_mongodb_mongo_events_BaseChangeEvent_getOperationType__>`  ()
+     - | :ref:`getOperationType <io_realm_mongodb_mongo_events_BaseChangeEvent_getOperationType>` ()
+       | 
+       
        
        Returns the operation type of the change that triggered the change event.
        
@@ -86,7 +81,9 @@ Method Summary
        
    
    * - public :ref:`UpdateDescription <io_realm_mongodb_mongo_events_UpdateDescription>` 
-     - |   :ref:`getUpdateDescription <io_realm_mongodb_mongo_events_BaseChangeEvent_getUpdateDescription__>`  ()
+     - | :ref:`getUpdateDescription <io_realm_mongodb_mongo_events_BaseChangeEvent_getUpdateDescription>` ()
+       | 
+       
        
        In the case of an update, the description of which fields have been added, removed or updated.
        
@@ -94,7 +91,9 @@ Method Summary
        
    
    * - public **boolean**
-     - |   :ref:`hasUncommittedWrites <io_realm_mongodb_mongo_events_BaseChangeEvent_hasUncommittedWrites__>`  ()
+     - | :ref:`hasUncommittedWrites <io_realm_mongodb_mongo_events_BaseChangeEvent_hasUncommittedWrites>` ()
+       | 
+       
        
        Indicates a local change event that has not yet been synchronized with a remote data store.
        
@@ -102,7 +101,9 @@ Method Summary
        
    
    * - public abstract **BsonDocument (?)**
-     - |   :ref:`toBsonDocument <io_realm_mongodb_mongo_events_BaseChangeEvent_toBsonDocument__>`  ()
+     - | :ref:`toBsonDocument <io_realm_mongodb_mongo_events_BaseChangeEvent_toBsonDocument>` ()
+       | 
+       
        
        Converts the change event to a BSON representation, as it would look on a MongoDB realm change stream, or a Realm compact watch stream.
        
@@ -119,11 +120,6 @@ Inherited Methods
 
 - Methods inherited from class `java.lang.Object <https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html>`__ : ``getClass`` , ``hashCode`` , ``equals`` , ``clone`` , ``toString`` , ``notify`` , ``notifyAll`` , ``wait`` , ``wait`` , ``wait`` , ``finalize`` 
 
-
-
-
-Constructor Detail
-==================
 
 
 
@@ -150,7 +146,11 @@ getDocumentKey
 .. list-table::
    :header-rows: 1
    
-   * - |   public **BsonDocument (?)** getDocumentKey ()
+   * - | public **BsonDocument (?)** :ref:`getDocumentKey <io_realm_mongodb_mongo_events_BaseChangeEvent_getDocumentKey>` ()
+       | 
+       
+       
+       
    
    * - The unique identifier for the document that was actually changed.
        
@@ -188,7 +188,11 @@ getFullDocument
 .. list-table::
    :header-rows: 1
    
-   * - |   public **DocumentT (?)** getFullDocument ()
+   * - | public **DocumentT (?)** :ref:`getFullDocument <io_realm_mongodb_mongo_events_BaseChangeEvent_getFullDocument>` ()
+       | 
+       
+       
+       
    
    * - The full document at some point after the change has been applied.
        
@@ -226,7 +230,11 @@ getOperationType
 .. list-table::
    :header-rows: 1
    
-   * - |   public :ref:`BaseChangeEvent.OperationType <io_realm_mongodb_mongo_events_BaseChangeEvent_OperationType>`  getOperationType ()
+   * - | public :ref:`BaseChangeEvent.OperationType <io_realm_mongodb_mongo_events_BaseChangeEvent_OperationType>`  :ref:`getOperationType <io_realm_mongodb_mongo_events_BaseChangeEvent_getOperationType>` ()
+       | 
+       
+       
+       
    
    * - Returns the operation type of the change that triggered the change event.
        
@@ -264,7 +272,11 @@ getUpdateDescription
 .. list-table::
    :header-rows: 1
    
-   * - |   public :ref:`UpdateDescription <io_realm_mongodb_mongo_events_UpdateDescription>`  getUpdateDescription ()
+   * - | public :ref:`UpdateDescription <io_realm_mongodb_mongo_events_UpdateDescription>`  :ref:`getUpdateDescription <io_realm_mongodb_mongo_events_BaseChangeEvent_getUpdateDescription>` ()
+       | 
+       
+       
+       
    
    * - In the case of an update, the description of which fields have been added, removed or updated.
        
@@ -302,7 +314,11 @@ hasUncommittedWrites
 .. list-table::
    :header-rows: 1
    
-   * - |   public **boolean** hasUncommittedWrites ()
+   * - | public **boolean** :ref:`hasUncommittedWrites <io_realm_mongodb_mongo_events_BaseChangeEvent_hasUncommittedWrites>` ()
+       | 
+       
+       
+       
    
    * - Indicates a local change event that has not yet been synchronized with a remote data store. Used only for the sync use case.
        
@@ -340,7 +356,11 @@ toBsonDocument
 .. list-table::
    :header-rows: 1
    
-   * - |   public abstract **BsonDocument (?)** toBsonDocument ()
+   * - | public abstract **BsonDocument (?)** :ref:`toBsonDocument <io_realm_mongodb_mongo_events_BaseChangeEvent_toBsonDocument>` ()
+       | 
+       
+       
+       
    
    * - Converts the change event to a BSON representation, as it would look on a MongoDB realm change stream, or a Realm compact watch stream.
        
